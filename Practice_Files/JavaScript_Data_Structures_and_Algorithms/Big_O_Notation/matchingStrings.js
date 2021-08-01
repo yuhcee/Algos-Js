@@ -33,12 +33,19 @@ console.log(occurenceOf(query, array)); */
 
 function matchingStrings(strings, queries) {
   // Write your code here
-  function occurenceOf(value, array) {
-    return array.filter((item) => item === value).length;
-  }
-  const output = queries.map((query) => occurenceOf(query, strings));
+  const stringObjectCounter = {};
+  let output = [];
 
-  return output;
+  for (const item of strings) {
+    stringObjectCounter[item] = ++stringObjectCounter[item] || 1;
+  }
+
+  for (const query of queries) {
+    query in stringObjectCounter
+      ? output.push(stringObjectCounter[query])
+      : output.push(0);
+  }
+  return output.join();
 }
 
 const strings = ['ab', 'ab', 'abc'];
