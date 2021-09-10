@@ -14,11 +14,11 @@ function validAnagram(string1, string2) {
     if (!letterCount[alphabet]) {
       return false;
     } else {
-      letterCount[alphabet] - 1;
+      letterCount[alphabet] -= 1;
     }
   }
 
   return true;
 }
 
-console.log(validAnagram('', ''));
+console.log(validAnagram('a', 'a'));
