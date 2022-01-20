@@ -31,7 +31,7 @@ function minimumNumber(n: number, password: string) {
 console.log(minimumNumber(4, '1z2!'));
 console.log(minimumNumber(4, '1zA!'));
 console.log(minimumNumber(5, 'A98#+'));
-console.log(minimumNumber(5, '#**#*')); 
+console.log(minimumNumber(5, '#**#*'));
 console.log(minimumNumber(4, '4700'));
 console.log(minimumNumber(11, '#HackerRank'));
 console.log(minimumNumber(6, 'VkmBAd'));

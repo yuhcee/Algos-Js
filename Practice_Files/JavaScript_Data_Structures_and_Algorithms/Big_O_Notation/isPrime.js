@@ -1,3 +1,12 @@
+// import prime from 'prime';
+
+var primeNumbers = [];
+var input = 12;
+
+for (let index = 2; index < input; index++) {
+  isPrime(index) ? primeNumbers.push(index) : '';
+}
+
 function isPrime(num) {
   var prime = num != 1; // Everything but 1 can be prime
   for (var i = 2; i < num; i++) {
@@ -9,4 +18,5 @@ function isPrime(num) {
   return prime;
 }
 
-console.log(isPrime(17));
+console.log(isPrime(9));
+console.log(primeNumbers);

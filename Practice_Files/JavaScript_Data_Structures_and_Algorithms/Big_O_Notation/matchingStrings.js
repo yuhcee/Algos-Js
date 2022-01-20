@@ -52,3 +52,5 @@ const strings = ['ab', 'ab', 'abc'];
 const queries = ['ab', 'abc', 'bc'];
 
 console.log(matchingStrings(strings, queries));
+
+

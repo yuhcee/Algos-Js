@@ -1,4 +1,4 @@
-function validAnagram(string1, string2) {
+/* function validAnagram(string1, string2) {
   if (string1.length !== string2.length) {
     return false;
   }
@@ -21,4 +21,43 @@ function validAnagram(string1, string2) {
   return true;
 }
 
-console.log(validAnagram('a', 'a'));
+console.log(validAnagram('a', 'a')); */
+
+function frequencyCounter(arrOrStrings) {
+  const extractUniqueLetters = arrOrStrings.map((str) => Array.from(new Set(str)).join(''));
+  const uniqueLetters = Array.from(new Set(extractUniqueLetters.join('')));
+  const result = [];
+  
+  for(let str of arrOrStrings ) {
+    let letterCount = countOccurence(str)
+    for (let alphabet of uniqueLetters) {
+      if (letterCount[alphabet] === 2) {
+        result.push(str);
+      }
+    }
+  }
+}
+
+function countOccurence(stringValue) {
+  let letterCount = {};
+
+  for (let letter of stringValue) {
+    !(letter in letterCount)
+      ? (letterCount[letter] = 1)
+      : letterCount[letter]++;
+  }
+  return letterCount;
+}
+
+console.log(
+  frequencyCounter([
+    'asdf',
+    'fdas',
+    'asds',
+    'dfm',
+    'dfaa',
+    'aaaa',
+    'aabb',
+    'aaabb',
+  ])
+);
