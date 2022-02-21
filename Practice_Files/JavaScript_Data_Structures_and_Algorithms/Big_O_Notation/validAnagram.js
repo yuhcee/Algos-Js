@@ -61,3 +61,18 @@ console.log(
     'aaabb',
   ])
 );
+
+
+class Sum {
+  constructor() {
+    this.value = 0;
+  }
+  sum(value) {
+    this.value = this.value + value;
+    return this;
+  }
+}
+
+const sum = new Sum()
+
+console.log(sum.sum(1).sum(2).sum(3))
