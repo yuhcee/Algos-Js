@@ -65,7 +65,7 @@ const numCourses = 4,
         [3, 1],
         [3, 2],
     ];
-console.log(findOrder(numCourses, prerequisites));
+console.log(findOrder(numCourses, prerequisites)); // output [0, 1, 2, 3] or [0, 2, 1, 3]
 
 const numCourses2 = 2,
     prerequisites2 = [[0, 1]]; // Output: [1,0]
@@ -73,50 +73,6 @@ const numCourses3 = 2,
     prerequisites3 = [
         [0, 1],
         [1, 0],
-    ]; // Output: [1,0]
+    ]; // Output: []
 console.log(findOrder(numCourses2, prerequisites2));
 console.log(findOrder(numCourses3, prerequisites3));
-
-/* const visited = new Set();
-const depart = new Array(numCourses).fill(0);
-const topSort = [];
-const graph = buildGraph(numCourses, prerequisites);
-
-for (let node in graph) {
-    if (!visited.has(String(node))) {
-      if (hasPath(graph, node, visited, depart, topSort)) return [];
-    }
-}
-
-return topSort;
-// };
-
-const hasPath = (graph, node, visited, depart, topSort) => {
-visited.add(String(node));
-
-for (let neighbor of graph[node]) {
-    if (!visited.has(String(neighbor))) {
-        visited.add(String(neighbor));
-        if(hasPath(graph, neighbor, visited, depart, topSort)) return true;
-    }
-    if(depart[neighbor] === 0) return true;
-}
-
-depart[node]++;
-topSort.push(node);
-return false;
-};
-
-const buildGraph = (n, edges) => {
-const graph = {};
-
-for (let i = 0; i < n; i++) {
-    graph[i] = [];
-}
-
-for (let edge of edges) {
-    const [a, b] = edge;
-    graph[a].push(b);
-}
-return graph;
-}; */
