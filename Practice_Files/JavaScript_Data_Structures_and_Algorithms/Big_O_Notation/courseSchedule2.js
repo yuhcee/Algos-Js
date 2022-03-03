@@ -14,18 +14,33 @@
 // Topolgical sort must work on a directed Graph and Acyclic graph
 const findOrder = (numCourses, prerequisites) => {
     const graph = buildGraph(numCourses, prerequisites);
-    
     const visited = new Set();
     const topSort = [];
     const depart = new Array(numCourses).fill(0);
 
     for (let node in graph) {
-        if (!visited(String(node))) {
+        if (!visited.has(String(node))) {
+            visited.add(String(node));
             if (hasPath(graph, node, visited, depart, topSort)) return [];
         }
     }
 
     return topSort;
+};
+
+const hasPath = (graph, node, visited, depart, topSort) => {
+    for (let neighbor of graph[node]) {
+        if (!visited.has(String(neighbor))) {
+            visited.add(String(neighbor));
+            if (hasPath(graph, neighbor, visited, depart, topSort)) return true;
+        } else {
+            if (depart[neighbor] === 0) return true;
+        }
+    }
+
+    depart[node]++;
+    topSort.push(node);
+    return false;
 };
 
 const buildGraph = (n, edges) => {
@@ -40,7 +55,6 @@ const buildGraph = (n, edges) => {
 
         graph[a].push(b);
     }
-
     return graph;
 };
 
@@ -51,12 +65,17 @@ const numCourses = 4,
         [3, 1],
         [3, 2],
     ];
-// console.log(findOrder(numCourses, prerequisites));
+console.log(findOrder(numCourses, prerequisites));
 
 const numCourses2 = 2,
-    prerequisites2 = [[0, 1]]; // Output: [0,1]
-// console.log(findOrder(numCourses, prerequisites));
+    prerequisites2 = [[0, 1]]; // Output: [1,0]
+const numCourses3 = 2,
+    prerequisites3 = [
+        [0, 1],
+        [1, 0],
+    ]; // Output: [1,0]
 console.log(findOrder(numCourses2, prerequisites2));
+console.log(findOrder(numCourses3, prerequisites3));
 
 /* const visited = new Set();
 const depart = new Array(numCourses).fill(0);
