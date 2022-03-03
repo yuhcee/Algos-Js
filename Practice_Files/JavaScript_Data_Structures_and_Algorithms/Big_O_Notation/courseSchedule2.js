@@ -15,6 +15,17 @@
 const findOrder = (numCourses, prerequisites) => {
     const graph = buildGraph(numCourses, prerequisites);
     
+    const visited = new Set();
+    const topSort = [];
+    const depart = new Array(numCourses).fill(0);
+
+    for (let node in graph) {
+        if (!visited(String(node))) {
+            if (hasPath(graph, node, visited, depart, topSort)) return [];
+        }
+    }
+
+    return topSort;
 };
 
 const buildGraph = (n, edges) => {
