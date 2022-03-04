@@ -12,6 +12,16 @@
  */
 const canFinish = function (numCourses, prerequisites) {
     const graph = buildGraph(numCourses, prerequisites);
+    const depart = new Array(numCourses).fill(0);
+    const visited = new Set();
+
+    for (let node in graph) {
+        if (!visited.has(String(node))) {
+            visited.add(String(node));
+            if (hasPath(graph, node, visited, depart)) return false;
+        }
+    }
+    return true;
 };
 
 const buildGraph = (n, edges) => {
