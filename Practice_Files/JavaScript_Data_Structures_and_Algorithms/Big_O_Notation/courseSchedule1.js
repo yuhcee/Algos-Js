@@ -32,7 +32,7 @@ const hasPath = (graph, node, visited, depart) => {
         }
         if (depart[neighbor] === 0) return true;
     }
-    depart[node]++
+    depart[node]++;
     return false;
 };
 
@@ -51,3 +51,28 @@ const buildGraph = (n, edges) => {
 
     return graph;
 };
+
+const numCourses = 20,
+    prerequisites = [
+        [0, 10],
+        [3, 18],
+        [5, 5],
+        [6, 11],
+        [11, 14],
+        [13, 1],
+        [15, 1],
+        [17, 4],
+    ]; // false
+
+const numCourses1 = 2,
+    prerequisites1 = [
+        [1, 0],
+        [0, 1],
+    ]; // false
+
+const numCourses2 = 2,
+    prerequisites2 = [[1, 0]]; // true
+
+console.log(canFinish(numCourses, prerequisites));
+console.log(canFinish(numCourses1, prerequisites1));
+console.log(canFinish(numCourses2, prerequisites2));
