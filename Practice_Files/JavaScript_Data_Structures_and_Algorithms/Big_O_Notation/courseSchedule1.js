@@ -24,6 +24,18 @@ const canFinish = function (numCourses, prerequisites) {
     return true;
 };
 
+const hasPath = (graph, node, visited, depart) => {
+    for (let neighbor of graph[node]) {
+        if (!visited.has(String(neighbor))) {
+            visited.add(String(neighbor));
+            if (hasPath(graph, neighbor, visited, depart)) return true;
+        }
+        if (depart[neighbor] === 0) return true;
+    }
+    depart[node]++
+    return false;
+};
+
 const buildGraph = (n, edges) => {
     const graph = {};
 
