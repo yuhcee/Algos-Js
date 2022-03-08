@@ -32,3 +32,11 @@ const Trie = function () {
 Trie.prototype.insert = function (word) {
     this.words.push(word);
 };
+
+/**
+ * @param {string} word
+ * @return {boolean}
+ */
+Trie.prototype.search = function (word) {
+    this.words.includes(word);
+};
