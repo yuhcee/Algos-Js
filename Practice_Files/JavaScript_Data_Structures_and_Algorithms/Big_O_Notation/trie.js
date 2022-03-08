@@ -24,3 +24,11 @@
 const Trie = function () {
     this.words = [];
 };
+
+/**
+ * @param {string} word
+ * @return {void}
+ */
+Trie.prototype.insert = function (word) {
+    this.words.push(word);
+};
