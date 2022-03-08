@@ -31,6 +31,7 @@ const Trie = function () {
  */
 Trie.prototype.insert = function (word) {
     this.words.push(word);
+    return null;
 };
 
 /**
@@ -38,7 +39,7 @@ Trie.prototype.insert = function (word) {
  * @return {boolean}
  */
 Trie.prototype.search = function (word) {
-    this.words.includes(word);
+    return this.words.includes(word);
 };
 
 /**
@@ -46,5 +47,14 @@ Trie.prototype.search = function (word) {
  * @return {boolean}
  */
 Trie.prototype.startsWith = function (prefix) {
-    this.words.filter((word) => (word.startsWith(prefix) ? true : false));
+    return this.words.filter((word) => (word.startsWith(prefix) ? true : false));
 };
+
+const trie = new Trie();
+console.log(trie.insert('apple'));
+console.log(trie.search('apple')); // return True
+console.log(trie.search('app')); // return False
+console.log(trie.startsWith('app')); // return True
+console.log(trie.startsWith('appo')); // return False
+console.log(trie.insert('app'));
+console.log(trie.search('app'));
