@@ -40,3 +40,11 @@ Trie.prototype.insert = function (word) {
 Trie.prototype.search = function (word) {
     this.words.includes(word);
 };
+
+/**
+ * @param {string} prefix
+ * @return {boolean}
+ */
+Trie.prototype.startsWith = function (prefix) {
+    this.words.filter((word) => (word.startsWith(prefix) ? true : false));
+};
