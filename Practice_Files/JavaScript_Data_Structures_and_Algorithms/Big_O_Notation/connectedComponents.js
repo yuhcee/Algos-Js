@@ -13,7 +13,7 @@
 const countComponents = (n, edges) => {
     const graph = buildGraph(n, edges);
     const visited = new Set();
-    const count = 0;
+    let count = 0;
 
     for (let node in graph) {
         if (!visited.has(String(node))) {
@@ -22,6 +22,17 @@ const countComponents = (n, edges) => {
     }
 
     return count;
+};
+
+const hasPath = (graph, node, visited) => {
+    if (visited.has(String(node))) return false;
+    visited.add(String(node));
+
+    for (let neighbor of graph[node]) {
+        hasPath(graph, neighbor, visited);
+    }
+
+    return true;
 };
 
 const buildGraph = (n, edges) => {
@@ -33,7 +44,7 @@ const buildGraph = (n, edges) => {
 
     for (let edge of edges) {
         const [a, b] = edge;
-        graph[a].pus(b);
+        graph[a].push(b);
         graph[b].push(a);
     }
 
