@@ -12,6 +12,16 @@
 
 const countComponents = (n, edges) => {
     const graph = buildGraph(n, edges);
+    const visited = new Set();
+    const count = 0;
+
+    for (let node in graph) {
+        if (!visited.has(String(node))) {
+            if (hasPath(graph, node, visited)) count += 1;
+        }
+    }
+
+    return count;
 };
 
 const buildGraph = (n, edges) => {
