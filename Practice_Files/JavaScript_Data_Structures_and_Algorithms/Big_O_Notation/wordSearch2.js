@@ -20,7 +20,9 @@ Trie.prototype.insert = function (word) {
     }
 };
 
-Trie.prototype.search;
+Trie.prototype.search = function (word) {
+    return this.words.has(word);
+};
 
 const findWords = (board, words) => {
     return words.filter((word) => exist(board, word) && word);
