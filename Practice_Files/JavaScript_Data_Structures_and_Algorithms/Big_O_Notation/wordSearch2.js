@@ -15,7 +15,12 @@ const Trie = function () {
 
 Trie.prototype.insert = function (word) {
     this.words.add(word);
+    for (let i = 0; i <= word.length; i++) {
+        this.prefixes.add(word.substring(0, i));
+    }
 };
+
+Trie.prototype.search;
 
 const findWords = (board, words) => {
     return words.filter((word) => exist(board, word) && word);
