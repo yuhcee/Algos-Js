@@ -29,13 +29,11 @@ Trie.prototype.startsWith = function (prefix) {
 };
 
 const findWords = (board, words) => {
-    return words.filter((word) => exist(board, word) && word);
-};
+    const trie = new Trie();
 
-const exist = (board, word) => {
     for (let r = 0; r < board.length; r++) {
         for (let c = 0; c < board[0].length; c++) {
-            if (board[r][c] === word.charAt(0) && explore(board, r, c, word) === true) return true;
+            if (trie.startsWith(board[r][c]) && explore(board, r, c, word) === true) return true;
         }
     }
     return false;
