@@ -8,10 +8,14 @@
  * @return {string[]} words
  */
 
-const Trie = function(){
-    const words = new Set();
-    const prefixes = new Set();
-}
+const Trie = function () {
+    this.words = new Set();
+    this.prefixes = new Set();
+};
+
+Trie.prototype.insert = function (word) {
+    this.words.add(word);
+};
 
 const findWords = (board, words) => {
     return words.filter((word) => exist(board, word) && word);
@@ -746,4 +750,3 @@ const board1 = [
         'aaaaaaaazz',
     ];
 // console.log(findWords(board1, words1));
-
