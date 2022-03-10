@@ -24,6 +24,10 @@ Trie.prototype.search = function (word) {
     return this.words.has(word);
 };
 
+Trie.prototype.startsWith = function (prefix) {
+    return this.prefixes.has(prefix);
+};
+
 const findWords = (board, words) => {
     return words.filter((word) => exist(board, word) && word);
 };
