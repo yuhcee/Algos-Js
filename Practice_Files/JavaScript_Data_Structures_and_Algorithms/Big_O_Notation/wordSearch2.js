@@ -18,6 +18,7 @@ Trie.prototype.insert = function (word) {
     for (let i = 0; i <= word.length; i++) {
         this.prefixes.add(word.substring(0, i));
     }
+    return null;
 };
 
 Trie.prototype.search = function (word) {
@@ -30,28 +31,48 @@ Trie.prototype.startsWith = function (prefix) {
 
 const findWords = (board, words) => {
     const trie = new Trie();
+    const result = [];
+    const visited = new Set();
+
+    for (let word of words) {
+        trie.insert(word);
+    }
 
     for (let r = 0; r < board.length; r++) {
         for (let c = 0; c < board[0].length; c++) {
-            if (trie.startsWith(board[r][c]) && explore(board, r, c, word) === true) return true;
+            if (trie.startsWith(board[r][c])) {
+                explore(board, r, c, result, visited, trie);
+            }
         }
     }
-    return false;
+    return result;
 };
 
-const explore = (board, r, c, word, index = 0) => {
-    if (index >= word.length) return true;
-
+const explore = (board, r, c, result, visited, trie, word = '') => {
     const rowInbounds = 0 <= r && r < board.length;
     const colInbounds = 0 <= c && c < board[0].length;
 
-    if (!rowInbounds || !colInbounds || board[r][c] !== word.charAt(index)) return false;
+    if (!rowInbounds || !colInbounds || board[r][c] === '$') return false;
+    
+    if (!trie.startsWith(word)) return false;
+
+    word += board[r][c];
+
+    if (trie.search(word) && !visited.has(word)) {
+        result.push(word);
+        visited.add(word);
+    }
 
     let temp = board[r][c];
     board[r][c] = '$';
-    const found = explore(board, r + 1, c, word, index + 1) || explore(board, r, c + 1, word, index + 1) || explore(board, r - 1, c, word, index + 1) || explore(board, r, c - 1, word, index + 1);
+
+    const found = explore(board, r + 1, c, result, visited, trie, word);
+    explore(board, r, c + 1, result, visited, trie, word);
+    explore(board, r - 1, c, result, visited, trie, word);
+    explore(board, r, c - 1, result, visited, trie, word);
 
     board[r][c] = temp;
+    word = word.substring(0, word.length - 1);
 
     return found;
 };
@@ -64,7 +85,7 @@ const board = [
     ],
     words = ['oath', 'pea', 'eat', 'rain'];
 
-// console.log(findWords(board, words));
+console.log(findWords(board, words));
 
 const board1 = [
         ['m', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'],
