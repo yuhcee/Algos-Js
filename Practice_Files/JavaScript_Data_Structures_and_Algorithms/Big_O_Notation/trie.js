@@ -22,7 +22,7 @@
  * Init Trie Class
  */
 const Trie = function () {
-    this.words = [];
+    this.words = new Set();
 };
 
 /**
@@ -30,7 +30,7 @@ const Trie = function () {
  * @return {void}
  */
 Trie.prototype.insert = function (word) {
-    this.words.push(word);
+    this.words.add(word);
     return null;
 };
 
@@ -39,7 +39,7 @@ Trie.prototype.insert = function (word) {
  * @return {boolean}
  */
 Trie.prototype.search = function (word) {
-    return this.words.includes(word);
+    return this.words.has(word);
 };
 
 /**
@@ -47,7 +47,7 @@ Trie.prototype.search = function (word) {
  * @return {boolean}
  */
 Trie.prototype.startsWith = function (prefix) {
-    return this.words.filter((word) => (word.startsWith(prefix) ? true : false));
+    return [...this.words].filter((word) => (word.startsWith(prefix) ? true : false));
 };
 
 const trie = new Trie();
