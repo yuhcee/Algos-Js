@@ -42,7 +42,7 @@ const board = [
     ],
     word = 'ABCB';
 
-    const board2 = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],
+const board2 = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],
     word2 ="ABCCED";
 
 console.log(exist(board, word));
