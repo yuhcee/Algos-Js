@@ -6,10 +6,10 @@ function frequencyCounter(arrOfStrings) {
     for (let letter of arrOfStrings) {
         for (let i = 0; i < letter.length; i++) {
             let char = letter[i];
-            charObject[char] = charObject[char] + 1 || 0;
+            charObject[char] = charObject[char] + 1 || charObject[char];
         }
     }
-    return Object.keys(charObject).filter((key) => charObject[key] <= 4);
+    return Object.keys(charObject).filter((key) => charObject[key] <= 2);
 }
 
 console.log(frequencyCounter(['asdf', 'fdas', 'asds', 'dfm', 'dfaa', 'aaaa', 'aabb', 'aaabb']));
