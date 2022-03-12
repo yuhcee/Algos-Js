@@ -1,26 +1,15 @@
 function frequencyCounter(arrOfStrings) {
     const extractUniqueLetters = arrOfStrings.map((str) => [...new Set(str)].join(''));
     const uniqueLetters = [...new Set(extractUniqueLetters.join(''))];
-    const result = [];
+    const charObject = uniqueLetters.reduce((a, v) => ({ ...a, [v]: 0 }), {});
 
-    for (let str of arrOfStrings) {
-        let letterCount = countOccurence(str);
-        for (let alphabet of uniqueLetters) {
-            if (letterCount[alphabet] === 2) {
-                result.push(str);
-            }
+    for (let letter of arrOfStrings) {
+        for (let i = 0; i < letter.length; i++) {
+            let char = letter[i];
+            charObject[char] = charObject[char] + 1 || 0;
         }
     }
-}
-
-function countOccurence(stringValue) {
-    let letterCount = {};
-
-    for (let letter of stringValue) {
-        letterCount[letter] = letterCount[letter]++ || 1;
-    }
-    console.log(letterCount);
-    return letterCount;
+    return Object.keys(charObject).filter((key) => charObject[key] <= 4);
 }
 
 console.log(frequencyCounter(['asdf', 'fdas', 'asds', 'dfm', 'dfaa', 'aaaa', 'aabb', 'aaabb']));
