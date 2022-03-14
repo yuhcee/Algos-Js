@@ -32,7 +32,12 @@ const explore = (grid, r, c, visited) => {
     if (visited.has(pos)) return 0;
     visited.add(pos);
 
-    
+    explore(grid, r + 1, c, visited);
+    explore(grid, r - 1, c, visited);
+    explore(grid, r, c + 1, visited);
+    explore(grid, r, c - 1, visited);
+
+    return 1;
 };
 const grid = [
     ['1', '1', '1', '1', '0'],
