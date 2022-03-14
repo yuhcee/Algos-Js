@@ -28,7 +28,21 @@ function getDistance(graph, nodeA) {
   }
 }
 
+function buildGraph(edges) {
+  const graph = {};
 
+  for (let edge of edges) {
+    const [a, b] = edge;
+    
+    graph[a] = graph[a] || [];
+    graph[b] = graph[b] || [];
+
+    graph[a].push(b);
+    graph[b].push(a);
+  }
+
+  return graph;
+}
 
 const roads = [
   ['R', 'L'],
