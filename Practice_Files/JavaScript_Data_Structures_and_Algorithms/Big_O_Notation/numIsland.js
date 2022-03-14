@@ -6,23 +6,34 @@
  * @param {string [][]} grid 
  * @returns {number} number
  */
+ const numIslands = (grid) => {
+    const visited = new Set();
+    let count = 0;
+
+    for (let r = 0; r < grid.length; r += 1) {
+        for (let c = 0; c < grid[0].length; c += 1) {
+            if (explore(grid, r, c, visited)) count += 1;
+        }
+    }
+
+    return count;
+};
 
 
 const grid = [
-    ["1","1","1","1","0"],
-    ["1","1","0","1","0"],
-    ["1","1","0","0","0"],
-    ["0","0","0","0","0"]
-  ]
+    ['1', '1', '1', '1', '0'],
+    ['1', '1', '0', '1', '0'],
+    ['1', '1', '0', '0', '0'],
+    ['0', '0', '0', '0', '0'],
+];
 //   Output: 1
 console.log(numIslands(grid));
 
-
 const grid2 = [
-    ["1","1","0","0","0"],
-    ["1","1","0","0","0"],
-    ["0","0","1","0","0"],
-    ["0","0","0","1","1"]
-  ]
+    ['1', '1', '0', '0', '0'],
+    ['1', '1', '0', '0', '0'],
+    ['0', '0', '1', '0', '0'],
+    ['0', '0', '0', '1', '1'],
+];
 //   Output: 3
 console.log(numIslands(grid2));
