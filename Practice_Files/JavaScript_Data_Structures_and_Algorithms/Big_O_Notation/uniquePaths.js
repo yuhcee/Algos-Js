@@ -22,16 +22,30 @@ const uniquePathsIII = (grid) => {
 
     for (let r = 0; r < rows; r += 1) {
         for (let c = 0; c < cols; c += 1) {
-            let cell = grid[r][c];
-            if (cell === 0) traversable++;
-            if (cell === 1) (startRow = r), (startCol = c);
+            if (grid[r][c] === 0) traversable++;
+            else if (grid[r][c] === 1) (startRow = r), (startCol = c);
         }
     }
-    dfs(grid, startRow, startCol, result, traversable);
+    dfs(startRow, startCol);
     return result;
+
+    function dfs(r, c) {
+        const rowInbounds = 0 <= r && r < rows;
+        const colInbounds = 0 <= c && c < cols;
+
+        if (!rowInbounds || !colInbounds || grid[r][c] < 0) return;
+        if (grid[r][c] === 2) return (result += !traversable);
+
+        (grid[r][c] = -2), (traversable -= 1);
+
+        dfs(r + 1, c);
+        dfs(r - 1, c);
+        dfs(r, c + 1);
+        dfs(r, c - 1);
+
+        (grid[r][c] = 0), (traversable += 1);
+    }
 };
-
-
 
 const grid = [
         [1, 0, 0, 0],
@@ -47,3 +61,6 @@ const grid = [
         [0, 1],
         [2, 0],
     ]; //Output: 0
+console.log(uniquePathsIII(grid));
+// console.log(uniquePathsIII(grid1));
+// console.log(uniquePathsIII(grid2));
