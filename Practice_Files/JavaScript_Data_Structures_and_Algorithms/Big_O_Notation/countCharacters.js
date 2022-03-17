@@ -10,4 +10,28 @@
  * @param {string} chars
  * @return {number}
  */
-const countCharacters = (words, chars) => {};
+const countCharacters = (words, chars) => {
+    let count = 0,
+        oldChars = chars,
+        isGood = true;
+
+    for (let word of words) {
+        let letters = word.split('');
+
+        while (letters.length > 0) {
+            let char = letters.pop();
+
+            if (chars.includes(char)) chars = chars.replace(char, '');
+            else {
+                isGood = false;
+                break;
+            }
+        }
+        if (isGood) count += word.length;
+        chars = oldChars;
+        isGood = true;
+    }
+
+    return count;
+};
+
