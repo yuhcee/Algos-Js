@@ -35,3 +35,30 @@ const countCharacters = (words, chars) => {
     return count;
 };
 
+const words = ['cat', 'bt', 'hat', 'tree'],
+    chars = 'atach';
+console.log(countCharacters(words, chars));
+const words2 = [
+        'dyiclysmffuhibgfvapygkorkqllqlvokosagyelotobicwcmebnpznjbirzrzsrtzjxhsfpiwyfhzyonmuabtlwin',
+        'ndqeyhhcquplmznwslewjzuyfgklssvkqxmqjpwhrshycmvrb',
+        'ulrrbpspyudncdlbkxkrqpivfftrggemkpyjl',
+        'boygirdlggnh',
+        'xmqohbyqwagkjzpyawsydmdaattthmuvjbzwpyopyafphx',
+        'nulvimegcsiwvhwuiyednoxpugfeimnnyeoczuzxgxbqjvegcxeqnjbwnbvowastqhojepisusvsidhqmszbrnynkyop',
+        'hiefuovybkpgzygprmndrkyspoiyapdwkxebgsmodhzpx',
+        'juldqdzeskpffaoqcyyxiqqowsalqumddcufhouhrskozhlmobiwzxnhdkidr',
+        'lnnvsdcrvzfmrvurucrzlfyigcycffpiuoo',
+        'oxgaskztzroxuntiwlfyufddl',
+        'tfspedteabxatkaypitjfkhkkigdwdkctqbczcugripkgcyfezpuklfqfcsccboarbfbjfrkxp',
+        'qnagrpfzlyrouolqquytwnwnsqnmuzphne',
+        'eeilfdaookieawrrbvtnqfzcricvhpiv',
+        'sisvsjzyrbdsjcwwygdnxcjhzhsxhpceqz',
+        'yhouqhjevqxtecomahbwoptzlkyvjexhzcbccusbjjdgcfzlkoqwiwue',
+        'hwxxighzvceaplsycajkhynkhzkwkouszwaiuzqcleyflqrxgjsvlegvupzqijbornbfwpefhxekgpuvgiyeudhncv',
+        'cpwcjwgbcquirnsazumgjjcltitmeyfaudbnbqhflvecjsupjmgwfbjo',
+        'teyygdmmyadppuopvqdodaczob',
+        'qaeowuwqsqffvibrtxnjnzvzuuonrkwpysyxvkijemmpdmtnqxwekbpfzs',
+        'qqxpxpmemkldghbmbyxpkwgkaykaerhmwwjonrhcsubchs',
+    ],
+    chars2 = 'usdruypficfbpfbivlrhutcgvyjenlxzeovdyjtgvvfdjzcmikjraspdfp';
+    console.log(countCharacters(words2, chars2));
