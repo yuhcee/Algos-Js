@@ -35,6 +35,10 @@ const countCharacters = (words, chars) => {
     return count;
 };
 
+const countCharacters = (words, chars) => {
+    
+}
+
 const words = ['cat', 'bt', 'hat', 'tree'],
     chars = 'atach';
 console.log(countCharacters(words, chars));
