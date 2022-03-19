@@ -10,7 +10,7 @@
  * @param {string} chars
  * @return {number}
  */
-const countCharacters = (words, chars) => {
+/* const countCharacters = (words, chars) => {
     let count = 0,
         oldChars = chars,
         isGood = true;
@@ -33,14 +33,34 @@ const countCharacters = (words, chars) => {
     }
 
     return count;
-};
+}; */
 
 const countCharacters = (words, chars) => {
-    
-}
+    let result = 0,
+        isGood = true,
+        oldChars = chars;
+
+    for (let word of words) {
+        for (let i = 0; i < word.length; i++) {
+            let char = word[i];
+
+            if (chars.includes(char)) {
+                chars = chars.replace(char, '');
+            } else {
+                isGood = false;
+                break;
+            }
+        }
+        if (isGood) result += word.length;
+
+        chars = oldChars;
+        isGood = true;
+    }
+    return result;
+};
 
 const words = ['cat', 'bt', 'hat', 'tree'],
-    chars = 'atach';
+    chars = 'atach'; // output 6
 console.log(countCharacters(words, chars));
 const words2 = [
         'dyiclysmffuhibgfvapygkorkqllqlvokosagyelotobicwcmebnpznjbirzrzsrtzjxhsfpiwyfhzyonmuabtlwin',
@@ -65,4 +85,4 @@ const words2 = [
         'qqxpxpmemkldghbmbyxpkwgkaykaerhmwwjonrhcsubchs',
     ],
     chars2 = 'usdruypficfbpfbivlrhutcgvyjenlxzeovdyjtgvvfdjzcmikjraspdfp';
-    console.log(countCharacters(words2, chars2));
+// console.log(countCharacters(words2, chars2)); // output 0
