@@ -3,7 +3,12 @@
  * The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or
  * vertically neighboring. The same letter cell may not be used more than once.
  */
-
+const dirs = [
+    [0, 1],
+    [1, 0],
+    [0, -1],
+    [-1, 0],
+];
 const exist = function (board, word) {
     for (let r = 0; r < board.length; r += 1) {
         for (let c = 0; c < board[r].length; c += 1) {
@@ -25,14 +30,16 @@ const explore = (board, r, c, word, index = 0) => {
     let temp = board[r][c];
     board[r][c] = '';
 
-    const found = explore(board, r + 1, c, word, index + 1) || 
-                  explore(board, r - 1, c, word, index + 1) || 
-                  explore(board, r, c + 1, word, index + 1) || 
-                  explore(board, r, c - 1, word, index + 1);
+    for (let [dR, dC] of dirs) {
+        let found = explore(board, r + dR, c + dC, word, index + 1);
+        if (found) return found;
+    }
+
+    //const found =  explore(board, r + 1, c, word, index + 1) || explore(board, r - 1, c, word, index + 1) || explore(board, r, c + 1, word, index + 1) || explore(board, r, c - 1, word, index + 1);
 
     board[r][c] = temp;
 
-    return found;
+    // return found;
 };
 
 const board = [
@@ -40,10 +47,14 @@ const board = [
         ['S', 'F', 'C', 'S'],
         ['A', 'D', 'E', 'E'],
     ],
-    word = 'ABCB';
+    word = 'ABCB'; // false
 
-const board2 = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],
-    word2 ="ABCCED";
+const board2 = [
+        ['A', 'B', 'C', 'E'],
+        ['S', 'F', 'C', 'S'],
+        ['A', 'D', 'E', 'E'],
+    ],
+    word2 = 'ABCCED'; // true
 
 console.log(exist(board, word));
 console.log(exist(board2, word2));
