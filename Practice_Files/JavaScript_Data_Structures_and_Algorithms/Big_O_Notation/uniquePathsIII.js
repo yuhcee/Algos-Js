@@ -12,7 +12,7 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const uniquePathsIII = (grid) => {
+/* const uniquePathsIII = (grid) => {
     let result = 0,
         traversable = 1,
         startRow,
@@ -45,7 +45,11 @@ const uniquePathsIII = (grid) => {
 
         (grid[r][c] = 0), (traversable += 1);
     }
-};
+}; */
+
+const uniquePathsIII = (grid) => {
+
+}
 
 const grid = [
         [1, 0, 0, 0],
