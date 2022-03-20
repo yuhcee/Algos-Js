@@ -10,12 +10,12 @@
 const checkValid = (matrix) => {
     const size = matrix.length;
 
-    for (let r = 0; r < size; r += 1) {
+    for (let r = 0; r < size; r++) {
         const rowSet = new Set();
         const colSet = new Set();
-        for (let c = 0; c < size; c += 1) {
+        for (let c = 0; c < size; c++) {
             const row = matrix[r][c];
-            const col = matrix[r][c];
+            const col = matrix[c][r];
 
             if (rowSet.has(row)) return false;
             if (colSet.has(col)) return false;
@@ -24,7 +24,6 @@ const checkValid = (matrix) => {
             colSet.add(col);
         }
     }
-
     return true;
 };
 
