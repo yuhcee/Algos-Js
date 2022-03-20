@@ -47,9 +47,24 @@
     }
 }; */
 
+const dirs = [
+    [0, 1],
+    [1, 0],
+    [-1, 0],
+    [0, -1],
+];
 const uniquePathsIII = (grid) => {
+    let traversable = 1,
+        count = 0,
+        sx,
+        sy,
+        rows = grid.length,
+        cols = grid[0].length;
 
-}
+    for (let r = 0; r < rows; r += 1) {
+        for (let r = 0; r < rows; r += 1) {}
+    }
+};
 
 const grid = [
         [1, 0, 0, 0],
