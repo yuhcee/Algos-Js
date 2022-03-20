@@ -62,7 +62,25 @@ const uniquePathsIII = (grid) => {
         cols = grid[0].length;
 
     for (let r = 0; r < rows; r += 1) {
-        for (let r = 0; r < rows; r += 1) {}
+        for (let r = 0; r < rows; r += 1) {
+            if (grid[r][c] === 0) traversable++;
+            else if (grid[r][c] === 1) {
+                (sx = r), (sy = c);
+            }
+        }
+    }
+
+    dfs(sx, sy);
+
+    return count;
+
+    function dfs(r, c) {
+        if (0 > r || r > rows || 0 > c || c > cols || grid[r][c] < 0) return;
+
+        if (grid[r][c] === 2) return (count += !traversable);
+        (grid[r][c] = -2), (traversable -= 1);
+
+        
     }
 };
 
