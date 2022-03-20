@@ -80,7 +80,11 @@ const uniquePathsIII = (grid) => {
         if (grid[r][c] === 2) return (count += !traversable);
         (grid[r][c] = -2), (traversable -= 1);
 
-        
+        for (let [dR, dC] of dirs) {
+            dfs(r + dR, c + dC);
+        }
+
+        (grid[r][c] = 0), (traversable += 1);
     }
 };
 
