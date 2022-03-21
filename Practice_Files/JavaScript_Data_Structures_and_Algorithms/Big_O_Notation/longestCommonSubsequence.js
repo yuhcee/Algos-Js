@@ -11,7 +11,7 @@ A **common subsequence** of two strings is a subsequence that is common to both 
  * @return {number} number
  */
 
-var longestCommonSubsequence = function (text1, text2) {
+/* var longestCommonSubsequence = function (text1, text2) {
     const exploreLCS = (i, j, memo = {}) => {
         let key = `${i},${j}`;
         if (key in memo) return memo[key];
@@ -26,6 +26,26 @@ var longestCommonSubsequence = function (text1, text2) {
         return memo[key];
     };
     return exploreLCS(0, 0);
+}; */
+
+const longestCommonSubsequence = (text1, text2) => {
+    const exploreLCS = (i = 0, j = 0, memo = {}) => {
+        let key = `${i},${j}`;
+
+        if (key in memo) return memo[key];
+
+        if (i >= text1.length || j >= text2.length) {
+            return 0;
+        } else if (text1[i] === text2[j]) {
+            memo[key] = 1 + exploreLCS(i + 1, j + 1, memo);
+        } else {
+            memo[key] = Math.max(exploreLCS(i + 1, j, memo), exploreLCS(i, j + 1, memo));
+        }
+
+        return memo[key];
+    };
+
+    return exploreLCS();
 };
 
 console.log(longestCommonSubsequence('abcedf', 'aced')); // 4
