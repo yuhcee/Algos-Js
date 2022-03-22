@@ -12,6 +12,7 @@ const findMaxLength = (nums1, nums2) => {
     const memo = Array(nums1.length + 1)
         .fill()
         .map((_) => Array(nums2.length + 1).fill(0));
+
     let maxAns = 0;
 
     for (let i = 1; i <= nums1.length; i += 1) {
@@ -31,4 +32,4 @@ console.log(findMaxLength(nums1, nums2));
 
 const numsi = [0, 0, 0, 0, 0],
     numsj = [0, 0, 0, 0, 0]; // Output: 5
-console.log(findMaxLength(numsi, numsj));
+// console.log(findMaxLength(numsi, numsj));
