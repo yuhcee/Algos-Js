@@ -25,3 +25,21 @@ const diagonalSum = (mat) => {
     }
 };
 
+const mat = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]; // Output: 25
+
+const mat1 = [
+    [1, 1, 1, 1],
+    [1, 1, 1, 1],
+    [1, 1, 1, 1],
+    [1, 1, 1, 1],
+]; // Output: 8
+
+const mat2 = [[5]]; // Output: 5
+
+console.log(diagonalSum(mat));
+console.log(diagonalSum(mat1));
+console.log(diagonalSum(mat2));
