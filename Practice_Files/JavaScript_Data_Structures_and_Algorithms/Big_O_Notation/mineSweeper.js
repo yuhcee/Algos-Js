@@ -38,7 +38,7 @@ const updateBoard = (board, click) => {
         numCols = board[0].length,
         [r, c] = click;
 
-    updateBoard(r, c);
+    update(r, c);
 
     return board;
 
@@ -88,3 +88,14 @@ const board = [
         ['E', 'E', 'E', 'E', 'E'],
     ],
     click = [3, 0]; // Output: [["B","1","E","1","B"],["B","1","M","1","B"],["B","1","1","1","B"],["B","B","B","B","B"]]
+
+const board1 = [
+        ['B', '1', 'E', '1', 'B'],
+        ['B', '1', 'M', '1', 'B'],
+        ['B', '1', '1', '1', 'B'],
+        ['B', 'B', 'B', 'B', 'B'],
+    ],
+    click1 = [1, 2]; // Output: [["B","1","E","1","B"],["B","1","X","1","B"],["B","1","1","1","B"],["B","B","B","B","B"]]
+
+console.log(updateBoard(board, click));
+console.log(updateBoard(board1, click1));
