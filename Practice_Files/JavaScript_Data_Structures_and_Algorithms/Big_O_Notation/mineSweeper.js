@@ -48,23 +48,35 @@ const updateBoard = (board, click) => {
             board[r][c] = 'X';
             return;
         }
-    }
 
-    // getting the count of mines adjacent to the cell
-    let mineCount = 0;
-    for (let i = 0; i < directions.length; ++i) {
-        const [x, y] = directions[i];
-        if (r + x < 0 || r + x >= numRows || c + y < 0 || c + y >= numCols) {
-            continue;
+        // getting the count of mines adjacent to the cell
+        let mineCount = 0;
+        for (let i = 0; i < directions.length; ++i) {
+            const [x, y] = directions[i];
+            if (r + x < 0 || r + x >= numRows || c + y < 0 || c + y >= numCols) {
+                continue;
+            }
+            if (board[r + x][c + y] === 'M') {
+                ++mineCount;
+            }
         }
-        if (board[r + x][c + y] === 'M') {
-            ++mineCount;
-        }
-    }
 
-    // if there are mines adjacent to the cell, set the value and return, as the adjacent mines will not be revealed
-    if(mineCount > 0) {
-        board[r][c] = mineCount.toString();
-        return;
+        // if there are mines adjacent to the cell, set the value and return, as the adjacent mines will not be revealed
+        if (mineCount > 0) {
+            board[r][c] = mineCount.toString();
+            return;
+        }
+
+        // else, set the cell as 'B' and continue to go depth wise - all the empty cells ('E') adjacent to it
+        board[r][c] = 'B';
+        for (let i = 0; i < directions.length; ++i) {
+            const [x, y] = directions[i];
+            if (r + x < 0 || r + x >= numRows || c + y < 0 || c + y >= numCols) {
+                continue;
+            }
+            if (board[r + x][c + y] === 'E') {
+                update(r + x, c + y);
+            }
+        }
     }
 };
