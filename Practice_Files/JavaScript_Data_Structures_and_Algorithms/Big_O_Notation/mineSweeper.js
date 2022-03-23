@@ -49,4 +49,16 @@ const updateBoard = (board, click) => {
             return;
         }
     }
+
+    // getting the count of mines adjacent to the cell
+    let mineCount = 0;
+    for (let i = 0; i < directions.length; ++i) {
+        const [x, y] = directions[i];
+        if (r + x < 0 || r + x >= numRows || c + y < 0 || c + y >= numCols) {
+            continue;
+        }
+        if (board[r + x][c + y] === 'M') {
+            ++mineCount;
+        }
+    }
 };
