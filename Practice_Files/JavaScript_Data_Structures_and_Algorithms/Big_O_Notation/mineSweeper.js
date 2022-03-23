@@ -22,4 +22,23 @@ You are also given an integer array `click` where `click = [clickr, clickc]` rep
  * @param {number[]} click
  * @return {character[][]}
  */
-const updateBoard = (board, click) => {};
+
+const directions = [
+    [0, 1],
+    [0, -1],
+    [1, 0],
+    [-1, 0],
+    [1, 1],
+    [-1, -1],
+    [1, -1],
+    [-1, 1],
+];
+const updateBoard = (board, click) => {
+    const numRows = board.length,
+        numCols = board[0].length,
+        [r, c] = click;
+
+    updateBoard(r, c);
+
+    return board;
+};
