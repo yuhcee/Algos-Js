@@ -23,8 +23,16 @@ var minPairSum = function (nums) {
         r = nums.length - 1;
 
     while (l < r) {
-        (max = Math), max(max, nums[l] + nums[r]);
+        max = Math.max(max, nums[l] + nums[r]);
+        l++;
+        r--;
     }
 
     return max;
 };
+
+const nums = [3, 5, 2, 3]; // Output: 7
+const nums1 = [3, 5, 4, 2, 4, 6]; // Output: 8
+
+console.log(minPairSum(nums));
+console.log(minPairSum(nums1));
