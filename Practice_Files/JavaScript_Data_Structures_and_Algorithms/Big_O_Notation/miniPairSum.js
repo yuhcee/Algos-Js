@@ -16,4 +16,9 @@
  */
 var minPairSum = function (nums) {
     nums.sort((a, b) => a - b);
+
+    let max = 0;
+
+
+    return max;
 };
