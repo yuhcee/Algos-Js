@@ -34,8 +34,8 @@ var getBiggestThree = function (grid) {
     }
 
     for (let side = 1; side <= small / 2; side++) {
-        for (let row = 0; row <= grid.length - side * 2; row++) {
-            for (let col = side; col <= grid[0].length - side; col++) {
+        for (let row = 0; row < grid.length - side * 2; row++) {
+            for (let col = side; col < grid[0].length - side; col++) {
                 let area = calcAreaAt(row, col, side);
 
                 if (!best.includes(area)) {
@@ -49,11 +49,16 @@ var getBiggestThree = function (grid) {
         }
     }
 
-    const calcAreaAt = (i, j, sideLength) => {
+    function calcAreaAt(i, j, sideLength) {
         let res = 0;
 
+        for (let g = 0; g < sideLength; g++) res += grid[i++][j++];
+        for (let g = 0; g < sideLength; g++) res += grid[i++][j--];
+        for (let g = 0; g < sideLength; g++) res += grid[i--][j--];
+        for (let g = 0; g < sideLength; g++) res += grid[i--][j++];
+
         return res;
-    };
+    }
 
     return best.sort((a, b) => b - a);
 };
