@@ -21,7 +21,17 @@ var getBiggestThree = function (grid) {
     let small = Math.min(grid.length, grid[0].length),
         best = [];
 
-        
+    for (let row of grid) {
+        for (let el of row) {
+            if (!best.includes(el)) {
+                best.push(el);
+                if (best.length > 3) {
+                    best.sort((a, b) => b - a);
+                    best.pop();
+                }
+            }
+        }
+    }
 
-    best.sort((a, b) => b - a);
+    return best.sort((a, b) => b - a);
 };
