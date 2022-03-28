@@ -35,9 +35,15 @@ const minPairsSum = (nums) => {
     nums.sort((a, b) => a - b);
 
     let l = 0,
-        r = nums.length - 1;
+        r = nums.length - 1,
+        max = 0;
 
-        
+        while(l < r) {
+            max = Math.max(max, nums[l] + nums[r]);
+
+            l++;
+            r--;
+        }
 };
 
 const nums = [3, 5, 2, 3]; // Output: 7
