@@ -14,7 +14,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var minPairSum = function (nums) {
+/* var minPairSum = function (nums) {
     nums.sort((a, b) => a - b);
 
     let max = 0;
@@ -29,9 +29,9 @@ var minPairSum = function (nums) {
     }
 
     return max;
-};
+}; */
 
-const minPairsSum = (nums) => {
+const minPairSum = (nums) => {
     nums.sort((a, b) => a - b);
 
     let l = 0,
@@ -44,6 +44,8 @@ const minPairsSum = (nums) => {
             l++;
             r--;
         }
+
+        return max;
 };
 
 const nums = [3, 5, 2, 3]; // Output: 7
