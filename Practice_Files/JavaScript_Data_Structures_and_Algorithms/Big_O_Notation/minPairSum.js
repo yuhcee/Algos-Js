@@ -31,7 +31,7 @@ var minPairSum = function (nums) {
     return max;
 };
 
-const miniPairsSum = (nums) => {
+const minPairsSum = (nums) => {
 };
 
 const nums = [3, 5, 2, 3]; // Output: 7
