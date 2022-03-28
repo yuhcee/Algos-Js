@@ -32,6 +32,8 @@ var minPairSum = function (nums) {
 };
 
 const minPairsSum = (nums) => {
+    nums.sort((a, b) => a - b);
+
 };
 
 const nums = [3, 5, 2, 3]; // Output: 7
