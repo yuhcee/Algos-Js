@@ -23,16 +23,6 @@ You are also given an integer array `click` where `click = [clickr, clickc]` rep
  * @return {character[][]}
  */
 
-const directions = [
-    [0, 1],
-    [0, -1],
-    [1, 0],
-    [-1, 0],
-    [1, 1],
-    [-1, -1],
-    [1, -1],
-    [-1, 1],
-];
 const updateBoard = (board, click) => {
     const numRows = board.length,
         numCols = board[0].length,
@@ -80,6 +70,16 @@ const updateBoard = (board, click) => {
         }
     }
 };
+const directions = [
+    [0, 1],
+    [0, -1],
+    [1, 0],
+    [-1, 0],
+    [1, 1],
+    [-1, -1],
+    [1, -1],
+    [-1, 1],
+];
 
 const board = [
         ['E', 'E', 'E', 'E', 'E'],
