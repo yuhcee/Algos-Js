@@ -20,14 +20,20 @@ const getBiggestThree = (grid) => {
     let smal = Math.min(grid.length, grid[0].length),
         best = [];
 
-    
+    for (let row of grid)
+        for (let el of row)
+            if (!best.includes(el)) {
+                best.push(el);
+                if (best.length > 3) {
+                    best.sort((a, b) => b - a);
+                    best.pop();
+                }
+            }
 
     
 
     return best.sort((a, b) => b - a);
 };
-
-
 const grid = [
     [3, 4, 5, 1, 3],
     [3, 3, 4, 2, 3],
