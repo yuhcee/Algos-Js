@@ -16,7 +16,7 @@
  * @param {number[][]} grid
  * @return {number[]}
  */
-var getBiggestThree = function (grid) {
+const getBiggestThree = (grid) => {
     let smal = Math.min(grid.length, grid[0].length),
         best = [];
 
@@ -26,6 +26,8 @@ var getBiggestThree = function (grid) {
 
     return best.sort((a, b) => b - a);
 };
+
+
 const grid = [
     [3, 4, 5, 1, 3],
     [3, 3, 4, 2, 3],
