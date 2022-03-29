@@ -17,7 +17,14 @@
  * @return {number[]}
  */
 var getBiggestThree = function (grid) {
+    let smal = Math.min(grid.length, grid[0].length),
+        best = [];
+
     
+
+    
+
+    return best.sort((a, b) => b - a);
 };
 const grid = [
     [3, 4, 5, 1, 3],
