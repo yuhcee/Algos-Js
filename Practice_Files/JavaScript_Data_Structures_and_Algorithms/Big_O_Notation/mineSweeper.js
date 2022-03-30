@@ -51,7 +51,11 @@ const updateBoard = (board, click) => {
             }
         }
 
-        
+        // if there are mines adjacent to the cell, set the value and return, as the adjacent mines will not be revealed
+        if (mineCount > 0) {
+            board[r][c] = mineCount.toString();
+            return;
+        }
     }
 };
 const directions = [
