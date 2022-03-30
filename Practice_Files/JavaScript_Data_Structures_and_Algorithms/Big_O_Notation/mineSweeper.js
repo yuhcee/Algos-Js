@@ -56,6 +56,18 @@ const updateBoard = (board, click) => {
             board[r][c] = mineCount.toString();
             return;
         }
+
+        // else, set the cell as 'B' and continue to go depth wise - all the empty cells ('E') adjacent to it
+        board[r][c] = 'B';
+        for (let i = 0; i < directions.length; ++i) {
+            const [x, y] = directions[i];
+            if (r + x < 0 || r + x >= numRows || c + y < 0 || c + y >= numCols) {
+                continue;
+            }
+            if (board[r + x][c + y] === 'E') {
+                update(r + x, c + y);
+            }
+        }
     }
 };
 const directions = [
