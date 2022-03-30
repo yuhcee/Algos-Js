@@ -31,6 +31,14 @@ const updateBoard = (board, click) => {
     update(r, c);
 
     return board;
+
+    function update(r, c) {
+        // if an unrevealed mine, set it to 'X'
+        if (board[r][c] === 'M') {
+            board[r][c] = 'X';
+            return;
+        }
+    }
 };
 const directions = [
     [0, 1],
