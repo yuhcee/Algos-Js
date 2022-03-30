@@ -24,7 +24,13 @@ You are also given an integer array `click` where `click = [clickr, clickc]` rep
  */
 
 const updateBoard = (board, click) => {
-    
+    const numRows = board.length,
+        numCols = board[0].length,
+        [r, c] = click;
+
+    update(r, c);
+
+    return board;
 };
 const directions = [
     [0, 1],
