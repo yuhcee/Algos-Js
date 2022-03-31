@@ -15,5 +15,7 @@
  * @return {number}
  */
 const countGoodSubstrings = (s) => {
-    
+    let res = 0;
+
+    return res;
 };
