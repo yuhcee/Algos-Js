@@ -29,3 +29,8 @@ const countGoodSubstrings = (s) => {
 
     return res;
 };
+
+const s = 'xyzzaz'; // Output: 1
+const s1 = 'aababcabc'; // Output: 4
+console.log(countGoodSubstrings(s));
+console.log(countGoodSubstrings(s1));
