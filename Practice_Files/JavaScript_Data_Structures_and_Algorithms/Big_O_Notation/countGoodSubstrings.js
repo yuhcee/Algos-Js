@@ -19,6 +19,9 @@ const countGoodSubstrings = (s) => {
 
     for (let i = 0; i < s.length - 2; i++) {
         let set = new Set();
+
+        for (let j = i; j < i + 3; j++ ) {
+        }
     }
 
     return res;
