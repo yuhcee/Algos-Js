@@ -39,6 +39,7 @@ const hasPath = (graph, node, visited, depart, topSort) => {
 
     depart[node]++;
     topSort.push(node);
+    
     return false;
 };
 
