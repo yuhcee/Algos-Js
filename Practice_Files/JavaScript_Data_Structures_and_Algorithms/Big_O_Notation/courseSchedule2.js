@@ -13,19 +13,7 @@
 
 // Topolgical sort must work on a directed Graph and Acyclic graph
 const findOrder = (numCourses, prerequisites) => {
-    const graph = buildGraph(numCourses, prerequisites);
-    const visited = new Set();
-    const topSort = [];
-    const depart = new Array(numCourses).fill(0);
-
-    for (let node in graph) {
-        if (!visited.has(String(node))) {
-            visited.add(String(node));
-            if (hasPath(graph, node, visited, depart, topSort)) return [];
-        }
-    }
-
-    return topSort;
+    
 };
 
 const hasPath = (graph, node, visited, depart, topSort) => {
