@@ -24,7 +24,6 @@ const findOrder = (numCourses, prerequisites) => {
             if (hasPath(graph, node, visited, depart, topSort)) return [];
         }
     }
-
     return topSort;
 };
 
