@@ -39,7 +39,7 @@ const hasPath = (graph, node, visited, depart, topSort) => {
 
     depart[node]++;
     topSort.push(node);
-    
+
     return false;
 };
 
@@ -65,7 +65,6 @@ const numCourses = 4,
         [3, 1],
         [3, 2],
     ];
-console.log(findOrder(numCourses, prerequisites)); // output [0, 1, 2, 3] or [0, 2, 1, 3]
 
 const numCourses2 = 2,
     prerequisites2 = [[0, 1]]; // Output: [1,0]
@@ -74,5 +73,6 @@ const numCourses3 = 2,
         [0, 1],
         [1, 0],
     ]; // Output: []
+console.log(findOrder(numCourses, prerequisites)); // output [0, 1, 2, 3] or [0, 2, 1, 3]
 console.log(findOrder(numCourses2, prerequisites2));
 console.log(findOrder(numCourses3, prerequisites3));
