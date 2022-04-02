@@ -53,7 +53,7 @@ const explore = (board, r, c, result, visited, trie, word = '') => {
     const colInbounds = 0 <= c && c < board[0].length;
 
     if (!rowInbounds || !colInbounds || board[r][c] === '$') return false;
-    
+
     if (!trie.startsWith(word)) return false;
 
     word += board[r][c];
