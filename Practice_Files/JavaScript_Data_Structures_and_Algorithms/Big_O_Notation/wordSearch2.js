@@ -1,13 +1,3 @@
-/**
- * Given an m x n board of characters and a list of strings words, return *all* words on the board.
- * Each word must be constructed from letters of sequentially **adjacent cells**, where adjacent cells are
- * horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
- *
- * @param {character[][]} board
- * @param {string[]} words
- * @return {string[]} words
- */
-
 const Trie = function () {
     this.words = new Set();
     this.prefixes = new Set();
@@ -28,6 +18,16 @@ Trie.prototype.search = function (word) {
 Trie.prototype.startsWith = function (prefix) {
     return this.prefixes.has(prefix);
 };
+
+/**
+ * Given an m x n board of characters and a list of strings words, return *all* words on the board.
+ * Each word must be constructed from letters of sequentially **adjacent cells**, where adjacent cells are
+ * horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
+ *
+ * @param {character[][]} board
+ * @param {string[]} words
+ * @return {string[]} words
+ */
 
 const findWords = (board, words) => {
     const trie = new Trie();
