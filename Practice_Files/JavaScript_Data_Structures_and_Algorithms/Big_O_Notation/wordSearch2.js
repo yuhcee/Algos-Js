@@ -38,7 +38,14 @@ const findWords = (board, words) => {
         trie.insert(word);
     }
 
-    
+    for (let r = 0; r < board.length; r++) {
+        for (let c = 0; c < board[0].length; c++) {
+            if (trie.startsWith(board[r][c])) {
+                explore(board, r, c, result, visited, trie);
+            }
+        }
+    }
+    return result;
 };
 
 const explore = (board, r, c, result, visited, trie, word = '') => {
