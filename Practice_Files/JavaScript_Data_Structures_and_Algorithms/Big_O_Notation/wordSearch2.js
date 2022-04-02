@@ -11,6 +11,11 @@ Trie.prototype.insert = function (word) {
     return null;
 };
 
+Trie.prototype.search = function (word) {
+    return this.words.has(word);
+};
+
+
 /**
  * Given an m x n board of characters and a list of strings words, return *all* words on the board.
  * Each word must be constructed from letters of sequentially **adjacent cells**, where adjacent cells are
