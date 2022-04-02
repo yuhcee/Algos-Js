@@ -30,16 +30,15 @@ Trie.prototype.startsWith = function (prefix) {
  */
 
 const findWords = (board, words) => {
-    
+    const trie = new Trie();
+    const result = [];
+    const visited = new Set();
 
-    for (let r = 0; r < board.length; r++) {
-        for (let c = 0; c < board[0].length; c++) {
-            if (trie.startsWith(board[r][c])) {
-                explore(board, r, c, result, visited, trie);
-            }
-        }
+    for (let word of words) {
+        trie.insert(word);
     }
-    return result;
+
+    
 };
 
 const explore = (board, r, c, result, visited, trie, word = '') => {
