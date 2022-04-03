@@ -8,4 +8,6 @@
  * @param {string} s
  * @return {boolean}
  */
-const validPalindrome = (s) => {};
+const validPalindrome = (s) => {
+    if(checkPalindrome(s)) return true;
+};
