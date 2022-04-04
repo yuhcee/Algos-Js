@@ -51,6 +51,16 @@ const nextPermutation = (nums) => {
         //swap value of first index and second index
         [nums[second_index], nums[first_index]] = [nums[first_index], nums[second_index]];
 
-        
+        //reverse values after first index till last index
+        let lower_value = first_index + 1;
+        let higher_value = last_index;
+
+        while (lower_value < higher_value) {
+            [nums[lower_value], nums[higher_value]] = [nums[higher_value], nums[lower_value]];
+            lower_value++;
+            higher_value--;
+        }
+
+        return nums;
     }
 };
