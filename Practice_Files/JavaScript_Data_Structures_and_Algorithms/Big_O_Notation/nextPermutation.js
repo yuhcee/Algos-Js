@@ -37,5 +37,8 @@ const nextPermutation = (nums) => {
         }
     }
 
-    
+    //if we dont get first index we will just reverse the array
+    if (first_index < 0) {
+        nums.reverse();
+    }
 };
