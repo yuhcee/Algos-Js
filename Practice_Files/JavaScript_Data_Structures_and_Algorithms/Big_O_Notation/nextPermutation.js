@@ -30,5 +30,12 @@ const nextPermutation = (nums) => {
     let first_index;
     let second_index;
 
+    // get the first index
+    for (first_index = last_index - 1; first_index >= 0; first_index--) {
+        if (nums[first_index] < nums[first_index + 1]) {
+            break;
+        }
+    }
+
     
 };
