@@ -40,5 +40,14 @@ const nextPermutation = (nums) => {
     //if we dont get first index we will just reverse the array
     if (first_index < 0) {
         nums.reverse();
+    } else {
+        //get second index from last
+        for (second_index = last_index; second_index > first_index; second_index--) {
+            if (nums[second_index] > nums[first_index]) {
+                break;
+            }
+        }
+
+        
     }
 };
