@@ -48,6 +48,9 @@ const nextPermutation = (nums) => {
             }
         }
 
+        //swap value of first index and second index
+        [nums[second_index], nums[first_index]] = [nums[first_index], nums[second_index]];
+
         
     }
 };
