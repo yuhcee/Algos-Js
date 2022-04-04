@@ -64,3 +64,11 @@ const nextPermutation = (nums) => {
         return nums;
     }
 };
+
+const nums = [1, 2, 3]; // Output: [1,3,2]
+const nums2 = [3, 2, 1]; // Output: [1,2,3]
+const nums3 = [1, 1, 5]; // Output: [1,5,1]
+
+// console.log(nextPermutation(nums));
+console.log(nextPermutation(nums2));
+// console.log(nextPermutation(nums3));
