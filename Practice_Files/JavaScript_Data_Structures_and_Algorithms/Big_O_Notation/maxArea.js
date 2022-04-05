@@ -19,4 +19,11 @@ var maxArea = function (height) {
         maxArea = 0;
 
         maxArea = (Math.min(height[left], height[right]) * (right - left));
+
+        do{
+            if(height[left] < height[right] ) ++left;
+            else{--right;}
+            let product = Math.min(height[left], height[right]) * (right - left);
+            maxArea = Math.max(maxArea, product);
+        }
 };
