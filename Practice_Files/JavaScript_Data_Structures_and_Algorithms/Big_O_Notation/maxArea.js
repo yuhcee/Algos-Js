@@ -18,12 +18,15 @@ var maxArea = function (height) {
         right = height.length - 1,
         maxArea = 0;
 
-        maxArea = (Math.min(height[left], height[right]) * (right - left));
+    maxArea = Math.min(height[left], height[right]) * (right - left);
 
-        do{
-            if(height[left] < height[right] ) ++left;
-            else{--right;}
-            let product = Math.min(height[left], height[right]) * (right - left);
-            maxArea = Math.max(maxArea, product);
+    do {
+        if (height[left] < height[right]) ++left;
+        else {
+            --right;
         }
+        let product = Math.min(height[left], height[right]) * (right - left);
+        maxArea = Math.max(maxArea, product);
+    } while (left < right);
+    return maxArea;
 };
