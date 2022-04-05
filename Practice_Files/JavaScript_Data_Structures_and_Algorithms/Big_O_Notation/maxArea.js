@@ -30,3 +30,7 @@ var maxArea = function (height) {
     } while (left < right);
     return maxArea;
 };
+
+const height = [1, 1]; // Output: 1
+
+console.log(maxArea(height));
