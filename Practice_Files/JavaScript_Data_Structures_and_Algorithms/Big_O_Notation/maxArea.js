@@ -17,4 +17,6 @@ var maxArea = function (height) {
     let left = 0,
         right = height.length - 1,
         maxArea = 0;
+
+        maxArea = (Math.min(height[left], height[right]) * (right - left));
 };
