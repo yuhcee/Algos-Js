@@ -25,6 +25,11 @@ const maxArea = (height) => {
         let currentArea = Math.min(height[left], height[right]) * right - left;
         // update the maxArea
         maxArea = Math.max(maxArea, currentArea);
+        // decide direction to move the pointer
+        if (left < right) leff++;
+        else {
+            right--;
+        }
     }
 };
 
