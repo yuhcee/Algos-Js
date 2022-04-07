@@ -13,7 +13,12 @@
  * @param {number[]} height
  * @return {number}
  */
-const maxArea = (height) => {};
+const maxArea = (height) => {
+    // initialize maxArea to zero
+    let maxArea = 0,
+        left = 0,
+        right = height.length - 1;
+};
 
 const height = [1, 1]; // Output: 1
 const height2 = [1, 8, 6, 2, 5, 4, 8, 3, 7]; // Output: 49
