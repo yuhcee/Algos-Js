@@ -22,18 +22,21 @@ const maxArea = (height) => {
     // initialize two-pointers
     while (left < right) {
         // calculate currentArea
-        let currentArea = Math.min(height[left], height[right]) * right - left;
+        let currentArea = Math.min(height[left], height[right]) * (right - left);
         // update the maxArea
         maxArea = Math.max(maxArea, currentArea);
         // decide direction to move the pointer
-        if (left < right) leff++;
+        if (left < right) left++;
         else {
             right--;
         }
     }
+    // return maxArea;
+    return maxArea;
 };
 
 const height = [1, 1]; // Output: 1
 const height2 = [1, 8, 6, 2, 5, 4, 8, 3, 7]; // Output: 49
 
 console.log(maxArea(height));
+console.log(maxArea(height2));
