@@ -18,6 +18,11 @@ const maxArea = (height) => {
     let maxArea = 0,
         left = 0,
         right = height.length - 1;
+
+    // initialize two-pointers 
+    while(left < right) {
+        
+    }
 };
 
 const height = [1, 1]; // Output: 1
