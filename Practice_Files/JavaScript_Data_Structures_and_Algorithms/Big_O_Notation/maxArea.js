@@ -19,9 +19,10 @@ const maxArea = (height) => {
         left = 0,
         right = height.length - 1;
 
-    // initialize two-pointers 
-    while(left < right) {
-        
+    // initialize two-pointers
+    while (left < right) {
+        // calculate currentArea
+        let currentArea = Math.min(height[left], height[right]) * right - left;
     }
 };
 
