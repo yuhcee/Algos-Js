@@ -23,6 +23,8 @@ const maxArea = (height) => {
     while (left < right) {
         // calculate currentArea
         let currentArea = Math.min(height[left], height[right]) * right - left;
+        // update the maxArea
+        maxArea = Math.max(maxArea, currentArea);
     }
 };
 
