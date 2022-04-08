@@ -20,7 +20,10 @@ const lastStoneWeight = function (stones) {
         // sort the remaining stones in descending order
         stones.sort((a, b) => b - a);
 
-        // smash the first and second stone and assign the remaining value to the first index
+        // smash the first and second stones, two largest and assign the remaining value to the first index
         stones[1] = stones[0] - stones[1];
+
+        // shift the array to get rid of the 0th index
+        stones.shift()
     }
 };
