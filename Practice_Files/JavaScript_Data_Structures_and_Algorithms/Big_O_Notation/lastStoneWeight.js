@@ -16,5 +16,8 @@
  */
 const lastStoneWeight = function (stones) {
     // implement a queue-like logic
-    while (stones.length > 1) {}
+    while (stones.length > 1) {
+        // sort the remaining stones in descending order
+        stones.sort((a, b) => b - a);
+    }
 };
