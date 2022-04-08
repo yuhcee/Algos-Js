@@ -24,6 +24,8 @@ const lastStoneWeight = function (stones) {
         stones[1] = stones[0] - stones[1];
 
         // shift the array to get rid of the 0th index
-        stones.shift()
+        stones.shift();
     }
+    // return the 0 index,the remaining stone left
+    return stones[0];
 };
