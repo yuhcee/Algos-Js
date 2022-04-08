@@ -29,3 +29,9 @@ const lastStoneWeight = function (stones) {
     // return the 0 index,the remaining stone left
     return stones[0];
 };
+
+const stones = [2,7,4,1,8,1] // Output: 1
+const stones2 = [1] // Output: 1
+
+console.log(lastStoneWeight(stones));
+console.log(lastStoneWeight(stones2));
