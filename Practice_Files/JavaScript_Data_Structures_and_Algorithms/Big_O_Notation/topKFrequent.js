@@ -12,4 +12,9 @@
 const topKFrequent = (nums, k) => {
     //  ! init map to count frequency
     const map = new Map();
+
+    // iterate through nums and update frequency
+    for (let num of nums) {
+        map.set(num, map.get(num) + 1 || 1);
+    }
 };
