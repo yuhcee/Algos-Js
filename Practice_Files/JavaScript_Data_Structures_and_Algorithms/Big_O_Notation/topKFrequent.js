@@ -17,4 +17,7 @@ const topKFrequent = (nums, k) => {
     for (let num of nums) {
         map.set(num, map.get(num) + 1 || 1);
     }
+
+    // convert the num and its frequency to array
+    const result = Array.from(map);
 };
