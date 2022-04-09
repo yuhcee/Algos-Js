@@ -23,4 +23,7 @@ const topKFrequent = (nums, k) => {
 
     // sort array by frequency
     result.sort((a, b) => b[1] - a[1]);
+
+    // slice array using k and return result
+    return result.slice(0, k).map((val) => val[0]);
 };
