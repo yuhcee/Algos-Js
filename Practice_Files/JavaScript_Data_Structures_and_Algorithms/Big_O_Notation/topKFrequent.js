@@ -28,6 +28,10 @@
     return result.slice(0, k).map((val) => val[0]);
 }; */
 
+const topKFrequent = (nums, k) => {
+    // init numCount object to store num frequency
+    const numCount = {};
+}
 /* const nums = [1, 1, 1, 2, 2, 3],
     k = 2; // Output: [1, 2];
 const nums2 = [1],
