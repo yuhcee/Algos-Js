@@ -45,3 +45,8 @@ const calPoints = (ops) => {
     const sum = scores.reduce((prev, curr) => prev + curr);
     return sum;
 };
+
+const ops = ['5', '2', 'C', 'D', '+']; // Output: 30
+const ops2 = ['5', '-2', '4', 'C', 'D', '9', '+', '+']; // Output: 27
+console.log(calPoints(ops));
+console.log(calPoints(ops2));
