@@ -41,4 +41,7 @@ const calPoints = (ops) => {
                 break;
         }
     }
+    // sum all the scores on the record
+    const sum = scores.reduce((prev, curr) => prev + curr);
+    return sum;
 };
