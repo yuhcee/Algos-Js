@@ -31,7 +31,12 @@
 const topKFrequent = (nums, k) => {
     // init numCount object to store num frequency
     const numCount = {};
-}
+
+    // set num as key and count frequency
+    for (let num of nums) {
+        numCount[num] = numCount[num] + 1 || 1;
+    }
+};
 /* const nums = [1, 1, 1, 2, 2, 3],
     k = 2; // Output: [1, 2];
 const nums2 = [1],
