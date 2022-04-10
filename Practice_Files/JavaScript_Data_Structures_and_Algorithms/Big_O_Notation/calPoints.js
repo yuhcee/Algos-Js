@@ -24,6 +24,21 @@ const calPoints = (ops) => {
 
     // iterate through ops
     for (let op of ops) {
-        
+        // apply record based on op
+        switch (op) {
+            case 'C':
+                scores.pop();
+                break;
+            case '+':
+                scores.push(scores[scores.length - 1] + scores[scores.length - 2]);
+                break;
+            case 'D':
+                scores.push(scores[scores.length - 1] * 2);
+                break;
+
+            default:
+                scores.push(+op);
+                break;
+        }
     }
 };
