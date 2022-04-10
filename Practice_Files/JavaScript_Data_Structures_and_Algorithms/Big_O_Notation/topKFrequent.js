@@ -40,7 +40,8 @@ const topKFrequent = (nums, k) => {
     // convert object to array and store in result
     const result = Object.entries(numCount);
 
-    
+    // sort array based on frequency
+    result.sort((a, b) => b[1] - a[1]);
 };
 /* const nums = [1, 1, 1, 2, 2, 3],
     k = 2; // Output: [1, 2];
