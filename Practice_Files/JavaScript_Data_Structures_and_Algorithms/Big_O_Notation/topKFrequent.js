@@ -36,6 +36,11 @@ const topKFrequent = (nums, k) => {
     for (let num of nums) {
         numCount[num] = numCount[num] + 1 || 1;
     }
+
+    // convert object to array and store in result
+    const result = Object.entries(numCount);
+
+    
 };
 /* const nums = [1, 1, 1, 2, 2, 3],
     k = 2; // Output: [1, 2];
