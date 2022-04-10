@@ -19,5 +19,6 @@
  * @return {number}
  */
 const calPoints = (ops) => {
-
+    // init scores array
+    const scores = [];
 };
