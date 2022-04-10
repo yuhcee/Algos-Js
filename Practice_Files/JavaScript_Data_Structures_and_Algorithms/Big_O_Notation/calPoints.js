@@ -21,4 +21,9 @@
 const calPoints = (ops) => {
     // init scores array
     const scores = [];
+
+    // iterate through ops
+    for (let op of ops) {
+        
+    }
 };
