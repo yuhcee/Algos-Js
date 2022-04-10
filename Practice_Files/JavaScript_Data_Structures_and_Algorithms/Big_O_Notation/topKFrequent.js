@@ -42,6 +42,9 @@ const topKFrequent = (nums, k) => {
 
     // sort array based on frequency
     result.sort((a, b) => b[1] - a[1]);
+
+    // Slice k most frequent nums and return first element from each array index
+    return result.slice(0, k).map((el) => el[0]);
 };
 /* const nums = [1, 1, 1, 2, 2, 3],
     k = 2; // Output: [1, 2];
