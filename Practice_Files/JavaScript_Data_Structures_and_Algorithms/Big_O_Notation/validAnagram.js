@@ -12,6 +12,10 @@ function validAnagram() {
     // extract params from native function arguments
     let [str1, str2] = arguments;
 
+    if (str1.length !== str2.length) {
+        return false;
+    }
+
     // iterate through str1
     for (let char of str1) {
         // check if char exists in str2
@@ -23,4 +27,12 @@ function validAnagram() {
             return false;
         }
     }
+
+    return true;
 }
+
+console.log(validAnagram('', ''));
+console.log(validAnagram('', 'ab'));
+console.log(validAnagram('aaz', 'zaz'));
+console.log(validAnagram('awesome', 'awesom'));
+console.log(validAnagram('cat', 'act'));
