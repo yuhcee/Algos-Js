@@ -30,5 +30,6 @@ const shiftGrid = (grid, k) => {
         }
     }
 
-    
+    // return recylced grid
+    return grid;
 };
