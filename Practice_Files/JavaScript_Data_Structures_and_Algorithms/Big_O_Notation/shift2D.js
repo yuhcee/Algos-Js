@@ -18,8 +18,17 @@
 const shiftGrid = (grid, k) => {
     // repeat rotaion for K times
     for (; k > 0; k--) {
-        
+        let previous = grid[grid.length - 1][grid[0].length - 1];
+
+        // implement array simulation
+        for (let row = 0; row < grid.length; row++) {
+            for (let col = 0; col < grid[0].length; col++) {
+                let current = grid[row][col];
+
+                [grid[row][col], previous] = [previous, current];
+            }
+        }
     }
 
-    return grid
+    
 };
