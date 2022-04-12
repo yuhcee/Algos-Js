@@ -10,10 +10,13 @@
 
 function validAnagram() {
     // extract params from native function arguments
-    const [str1, str2] = arguments;
+    let [str1, str2] = arguments;
 
     // iterate through str1
     for (let char of str1){
-        
+        // check if char exists in str2
+        if(str2.includes(char)){
+            
+        }
     }
 }
