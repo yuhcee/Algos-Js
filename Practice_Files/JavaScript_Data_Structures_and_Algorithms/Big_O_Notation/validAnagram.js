@@ -1,15 +1,11 @@
-function frequencyCounter(arrOfStrings) {
-    const extractUniqueLetters = arrOfStrings.map((str) => [...new Set(str)].join(''));
-    const uniqueLetters = [...new Set(extractUniqueLetters.join(''))];
-    const charObject = uniqueLetters.reduce((a, v) => ({ ...a, [v]: 0 }), {});
+/**
+ * ** validAnagram**
+ *
+ * Given two strings, write a function to determine if the second string is an anagram of the first.
+ * An anagram is a word, phrase or name, formed by rearranging the letters of another, such as *cinema*,
+ * formed from *iceman*
+ *
+ * Return *true if words are anagram of the other, if not, return false.*
+ */
 
-    for (let letter of arrOfStrings) {
-        for (let i = 0; i < letter.length; i++) {
-            let char = letter[i];
-            charObject[char] = charObject[char] + 1 || charObject[char];
-        }
-    }
-    return Object.keys(charObject).filter((key) => charObject[key] <= 2);
-}
-
-console.log(frequencyCounter(['asdf', 'fdas', 'asds', 'dfm', 'dfaa', 'aaaa', 'aabb', 'aaabb']));
+function validAnagram() {}
