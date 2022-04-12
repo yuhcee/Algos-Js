@@ -8,4 +8,7 @@
  * Return *true if words are anagram of the other, if not, return false.*
  */
 
-function validAnagram() {}
+function validAnagram() {
+    // extract params from native function arguments
+    const [str1, str2] = arguments;
+}
