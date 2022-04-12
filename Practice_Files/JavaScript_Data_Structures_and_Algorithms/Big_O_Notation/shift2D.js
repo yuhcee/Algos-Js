@@ -33,3 +33,44 @@ const shiftGrid = (grid, k) => {
     // return recylced grid
     return grid;
 };
+
+const grid = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+    ],
+    k = 1;
+/* Output: [
+    [9, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+]; */
+
+const grid2 = [
+        [3, 8, 1, 9],
+        [19, 7, 2, 5],
+        [4, 6, 11, 10],
+        [12, 0, 21, 13],
+    ],
+    k2 = 4;
+/* Output: [
+    [12, 0, 21, 13],
+    [3, 8, 1, 9],
+    [19, 7, 2, 5],
+    [4, 6, 11, 10],
+]; */
+
+const grid3 = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+    ],
+    k3 = 9;
+/* Output: [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]; */
+console.log(shiftGrid(grid, k));
+console.log(shiftGrid(grid2, k2));
+console.log(shiftGrid(grid3, k3));
