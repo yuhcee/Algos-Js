@@ -18,6 +18,9 @@ function validAnagram() {
         if (str2.includes(char)) {
             // replace with empty space and reassign to str2
             str2 = str2.replace(char, '');
+        } else {
+            // char is not found, return false
+            return false;
         }
     }
 }
