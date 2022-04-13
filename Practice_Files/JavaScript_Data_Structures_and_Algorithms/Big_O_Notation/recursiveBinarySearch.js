@@ -24,3 +24,6 @@ const recursiveBinarySearch = (list, target) => {
         return recursiveBinarySearch(list.slice(0, midPoint), target);
     }
 };
+
+console.log(recursiveBinarySearch([-3, -2, -1, 0, 1, 2, 3], 6)); // false
+console.log(recursiveBinarySearch([-3, -2, -1, 0, 1, 2, 3], -1)); // true
