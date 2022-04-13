@@ -49,4 +49,9 @@ const validAnagramWithFrequencyCounter = (first, second) => {
         // if letter exist, increment to 1, otherwise set to 1
         lookup[letter] = lookup[letter] + 1 || 1;
     }
+
+    // iterate through second word and subtract occurrence
+    for (let letter of second) {
+        
+    }
 };
