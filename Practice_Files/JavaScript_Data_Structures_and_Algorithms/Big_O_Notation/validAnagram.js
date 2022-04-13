@@ -40,4 +40,7 @@ console.log(validAnagram('cat', 'act'));
 const validAnagramWithFrequencyCounter = (first, second) => {
     // if words length are not equal, return false
     if (first.length !== second.length) return false;
+
+    // init a lookup object
+    const lookup = {};
 };
