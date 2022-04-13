@@ -12,4 +12,9 @@ const sumZero = (arr) => {
     // init multiple pointers
     let left = 0,
         right = arr.length - 1;
+
+    while (left < right) {
+        // sum the current values
+        let sum = arr[left] + arr[right];
+    }
 };
