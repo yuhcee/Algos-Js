@@ -31,11 +31,11 @@ function validAnagram() {
     return true;
 }
 
-console.log(validAnagram('', ''));
+/* console.log(validAnagram('', ''));
 console.log(validAnagram('', 'ab'));
 console.log(validAnagram('aaz', 'zaz'));
 console.log(validAnagram('awesome', 'awesom'));
-console.log(validAnagram('cat', 'act'));
+console.log(validAnagram('cat', 'act')); */
 
 const validAnagramWithFrequencyCounter = (first, second) => {
     // if words length are not equal, return false
@@ -53,6 +53,16 @@ const validAnagramWithFrequencyCounter = (first, second) => {
     // iterate through second word and subtract occurrence
     for (let letter of second) {
         // if letter does not exist or is zero, return false
-        if (!(letter in lookup)) return false;
+        if (!lookup[letter]) return false;
+        // else subtract 1 from the value 
+        lookup[letter] -= 1;
     }
+
+    return true;
 };
+
+/* console.log(validAnagramWithFrequencyCounter('', ''));
+console.log(validAnagramWithFrequencyCounter('', 'ab'));
+console.log(validAnagramWithFrequencyCounter('aaz', 'zaz'));
+console.log(validAnagramWithFrequencyCounter('awesome', 'awesom'));
+console.log(validAnagramWithFrequencyCounter('cat', 'act')); */
