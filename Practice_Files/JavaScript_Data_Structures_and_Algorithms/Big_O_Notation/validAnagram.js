@@ -52,6 +52,7 @@ const validAnagramWithFrequencyCounter = (first, second) => {
 
     // iterate through second word and subtract occurrence
     for (let letter of second) {
-        
+        // if letter does not exist or is zero, return false
+        if (!(letter in lookup)) return false;
     }
 };
