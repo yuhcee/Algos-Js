@@ -36,3 +36,5 @@ console.log(validAnagram('', 'ab'));
 console.log(validAnagram('aaz', 'zaz'));
 console.log(validAnagram('awesome', 'awesom'));
 console.log(validAnagram('cat', 'act'));
+
+const validAnagramWithFrequencyCounter = (first, second) => {};
