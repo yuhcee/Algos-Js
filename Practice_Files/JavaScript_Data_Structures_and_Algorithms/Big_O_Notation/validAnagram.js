@@ -45,7 +45,8 @@ const validAnagramWithFrequencyCounter = (first, second) => {
     const lookup = {};
 
     // iterate through first word and count occurrence
-    for (let letter of first){
-        
+    for (let letter of first) {
+        // if letter exist, increment to 1, otherwise set to 1
+        lookup[letter] = lookup[letter] + 1 || 1;
     }
 };
