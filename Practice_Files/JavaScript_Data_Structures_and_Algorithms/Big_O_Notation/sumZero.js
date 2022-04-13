@@ -19,5 +19,11 @@ const sumZero = (arr) => {
 
         // if sum is zero, return the values
         if (sum === 0) return [arr[left], arr[right]];
+
+        // Decide the direction to move the pointer based on sum
+        if (sum > 0) right--;
+        else {
+            left++;
+        }
     }
 };
