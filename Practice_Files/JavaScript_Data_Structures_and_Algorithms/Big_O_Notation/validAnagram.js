@@ -61,8 +61,8 @@ const validAnagramWithFrequencyCounter = (first, second) => {
     return true;
 };
 
-/* console.log(validAnagramWithFrequencyCounter('', ''));
+console.log(validAnagramWithFrequencyCounter('', ''));
 console.log(validAnagramWithFrequencyCounter('', 'ab'));
 console.log(validAnagramWithFrequencyCounter('aaz', 'zaz'));
 console.log(validAnagramWithFrequencyCounter('awesome', 'awesom'));
-console.log(validAnagramWithFrequencyCounter('cat', 'act')); */
+console.log(validAnagramWithFrequencyCounter('cat', 'act'));
