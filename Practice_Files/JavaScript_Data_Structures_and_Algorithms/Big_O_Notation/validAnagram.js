@@ -37,4 +37,7 @@ console.log(validAnagram('aaz', 'zaz'));
 console.log(validAnagram('awesome', 'awesom'));
 console.log(validAnagram('cat', 'act'));
 
-const validAnagramWithFrequencyCounter = (first, second) => {};
+const validAnagramWithFrequencyCounter = (first, second) => {
+    // if words length are not equal, return false
+    if (first.length !== second.length) return false;
+};
