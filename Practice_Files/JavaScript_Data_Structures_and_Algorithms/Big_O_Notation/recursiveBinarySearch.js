@@ -15,5 +15,9 @@ const recursiveBinarySearch = (list, target) => {
     let midPoint = Math.floor(list.length / 2);
     // if value at midpoint is equal to target, return true
     if (list[midPoint] === target) return true;
+    // if value at midpoint is less than target, slice from midpoint + 1 to end
+    if (list[midPoint] < target) {
+        return recursiveBinarySearch(list.slice(midPoint + 1), target);
+    }
 
 };
