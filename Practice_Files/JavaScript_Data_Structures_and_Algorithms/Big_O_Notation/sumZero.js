@@ -16,5 +16,8 @@ const sumZero = (arr) => {
     while (left < right) {
         // sum the current values
         let sum = arr[left] + arr[right];
+
+        // if sum is zero, return the values
+        if (sum === 0) return [arr[left], arr[right]];
     }
 };
