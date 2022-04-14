@@ -22,3 +22,6 @@ const countUniqueValues = (arr) => {
     return i + 1;
 };
 
+
+console.log(countUniqueValues([1, 1, 1, 1, 1, 2]));
+console.log(countUniqueValues([]));
