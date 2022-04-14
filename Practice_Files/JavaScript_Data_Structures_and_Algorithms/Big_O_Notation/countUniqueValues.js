@@ -23,6 +23,24 @@ const countUniqueValues = (arr) => {
 };
 
 console.log(countUniqueValues([1, 1, 1, 1, 1, 2]));
-console.log(countUniqueValues([-3,-2, 1, 1, 1, 1, 2]));
+console.log(countUniqueValues([-3, -2, 1, 1, 1, 1, 2]));
 console.log(countUniqueValues([-1, 0, 1, 1, 1, 2, 4, 7, 7]));
 console.log(countUniqueValues([]));
+
+// FrequencyCounter
+function areThereDuplicates() {
+    const vals = Array.from(arguments);
+
+    let collection = {};
+    for (let el of vals) {
+        collection[el] = collection[el] + 1 || 1;
+    }
+    for (let v of vals) {
+        if (collection[v] > 1) return true;
+    }
+    return false;
+}
+
+console.log(areThereDuplicates(1, 2, 3));
+console.log(areThereDuplicates(1, 2, 2));
+console.log(areThereDuplicates('a', 'b', 'c', 'a'));
