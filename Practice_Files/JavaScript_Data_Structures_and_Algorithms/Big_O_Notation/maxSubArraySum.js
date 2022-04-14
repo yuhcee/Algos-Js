@@ -23,5 +23,27 @@ const maxSubArraySum = (arr, n) => {
     }
     return max;
 };
-console.log(maxSubArraySum([1, 2, 3, 4, 5, 6], 4));
+console.log(maxSubArraySum([1, 2, 3, 4, 5, 6], 2));
 console.log(maxSubArraySum([], 4));
+
+const maxSubArrSum = (arr, n) => {
+    let maxSum = 0,
+        tempSum = 0;
+
+    if (arr.length < n) return null;
+
+    for (let i = 0; i < n; i++) {
+        maxSum += arr[i];
+    }
+
+    tempSum = maxSum;
+    
+    for (let j = n; j < arr.length; j++) {
+        tempSum = tempSum - arr[j - n] + arr[j];
+        maxSum = Math.max(maxSum, tempSum);
+    }
+
+    return maxSum;
+};
+console.log(maxSubArrSum([1, 2, 3, 4, 5, 6], 2));
+console.log(maxSubArrSum([], 4));
