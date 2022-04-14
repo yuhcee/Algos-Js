@@ -13,5 +13,15 @@ const maxSubArraySum = (arr, n) => {
     // check if arr is not empty
     if (arr.length === 0) return null;
 
-    
+    let max = -Infinity;
+    for (let i = 0; i < arr.length - n + 1; i++) {
+        let temp = 0;
+        for (let j = 0; j < n; j++) {
+            temp += arr[i + j];
+        }
+        max = Math.max(max, temp);
+    }
+    return max;
 };
+console.log(maxSubArraySum([1, 2, 3, 4, 5, 6], 4));
+console.log(maxSubArraySum([], 4));
