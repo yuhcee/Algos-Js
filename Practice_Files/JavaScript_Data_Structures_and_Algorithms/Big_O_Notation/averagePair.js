@@ -30,4 +30,7 @@ function averagePair(arr, target) {
             j--;
         }
     }
+
+    // return false, if not matches found
+    return false;
 }
