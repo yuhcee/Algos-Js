@@ -12,6 +12,12 @@
 function averagePair(arr, target) {
     // return false, if array length is less than target average
     if (arr.length < target) return false;
+
+    // init multiple pointers
+    let i = 0,
+        j = arr.length - 1;
+
+    
 }
 
 
