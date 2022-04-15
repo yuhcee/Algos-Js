@@ -22,5 +22,8 @@ function isSubsequence() {
         if (first[i] === second[j]) i++;
         // return true, if first pointer equals length to indicate all exists
         if (i === first.length) return true;
+        j++;
     }
+    // return false
+    return false;
 }
