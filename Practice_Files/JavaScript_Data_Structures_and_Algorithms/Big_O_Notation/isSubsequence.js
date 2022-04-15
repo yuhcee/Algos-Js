@@ -16,4 +16,9 @@ function isSubsequence() {
     // init two pointers
     let i = 0,
         j = 0;
+
+    while (j < second.length) {
+        // move the first char index if they match with second char
+        if (first[i] === second[j]) i++;
+    }
 }
