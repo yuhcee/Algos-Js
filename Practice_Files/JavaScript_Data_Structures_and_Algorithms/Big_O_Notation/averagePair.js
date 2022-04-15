@@ -17,7 +17,15 @@ function averagePair(arr, target) {
     let i = 0,
         j = arr.length - 1;
 
-    
+        while (i < j) {
+            let pairAvg = (arr[i] + arr[j]) / 2;
+
+            // return true, if current pair average matches the target
+            if (pairAvg === target) {
+                return true;
+            }
+            
+        }
 }
 
 
