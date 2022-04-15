@@ -20,5 +20,7 @@ function isSubsequence() {
     while (j < second.length) {
         // move the first char index if they match with second char
         if (first[i] === second[j]) i++;
+        // return true, if first pointer equals length to indicate all exists
+        if (i === first.length) return true;
     }
 }
