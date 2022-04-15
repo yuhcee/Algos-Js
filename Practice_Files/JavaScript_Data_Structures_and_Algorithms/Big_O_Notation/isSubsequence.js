@@ -9,4 +9,9 @@
  * 
  * Return *true if characters of the first string exist in their right ordering in the second string*.
  */
-function isSubsequence() {}
+function isSubsequence() {
+    // destructure variables from params arguments
+    const [first, second] = arguments;
+
+
+}
