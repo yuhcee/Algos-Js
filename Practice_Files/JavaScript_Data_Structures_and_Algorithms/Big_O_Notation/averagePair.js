@@ -10,7 +10,8 @@
  * @returns
  */
 function averagePair(arr, target) {
-    
+    // return false, if array length is less than target average
+    if (arr.length < target) return false;
 }
 
 
