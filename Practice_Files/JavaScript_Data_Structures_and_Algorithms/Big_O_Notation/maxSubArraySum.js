@@ -33,6 +33,7 @@ const maxSubArrSum = (arr, n) => {
     // init function variables
     let maxSum = 0,
         tempSum = 0;
+    let { max } = Math;
 
     let i = 0;
     // sum up consecutive integers of n
@@ -48,6 +49,9 @@ const maxSubArrSum = (arr, n) => {
     for (let j = n; j < arr.length; j++) {
         // subtract first element from tempSum, and add current
         tempSum = tempSum - arr[j - n] + arr[j];
-
+        // select maxSum
+        maxSum = max(maxSum, tempSum);
     }
+
+    return maxSum;
 };
