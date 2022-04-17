@@ -55,3 +55,10 @@ const maxSubArrSum = (arr, n) => {
 
     return maxSum;
 };
+
+console.log(maxSubArrSum([1, 2, 3, 4, 5, 6], 2));
+console.log(maxSubArrSum([-3, 4, 0, -2, 6, -1], 2));
+console.log(maxSubArrSum([1, 4, 2, 10, 23, 3, 1, 0, 20, 6], 4));
+console.log(maxSubArrSum([100, 200, 300, 400], 2));
+console.log(maxSubArrSum([], 4));
+console.log(maxSubArrSum([2, 3], 3));
