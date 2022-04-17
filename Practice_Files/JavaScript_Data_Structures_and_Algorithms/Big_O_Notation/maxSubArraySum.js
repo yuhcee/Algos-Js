@@ -33,4 +33,11 @@ const maxSubArrSum = (arr, n) => {
     // init function variables
     let maxSum = 0,
         tempSum = 0;
+
+    let i = 0;
+    // sum up consecutive integers of n
+    while (i < n) {
+        maxSum += arr[i];
+        i++;
+    }
 };
