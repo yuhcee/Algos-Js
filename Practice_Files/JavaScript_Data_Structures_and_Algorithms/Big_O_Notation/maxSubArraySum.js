@@ -27,6 +27,7 @@ console.log(maxSubArraySum([1, 2, 3, 4, 5, 6], 2));
 console.log(maxSubArraySum([], 4));
 
 const maxSubArrSum = (arr, n) => {
-    
+    // if array length is less than target, return null
+    if(arr.length < n) return null;
 };
 
