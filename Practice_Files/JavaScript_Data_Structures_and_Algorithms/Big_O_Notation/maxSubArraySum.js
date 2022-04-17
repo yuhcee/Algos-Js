@@ -46,6 +46,8 @@ const maxSubArrSum = (arr, n) => {
 
     // loop thru arr n times
     for (let j = n; j < arr.length; j++) {
-        
+        // subtract first element from tempSum, and add current
+        tempSum = tempSum - arr[j - n] + arr[j];
+
     }
 };
