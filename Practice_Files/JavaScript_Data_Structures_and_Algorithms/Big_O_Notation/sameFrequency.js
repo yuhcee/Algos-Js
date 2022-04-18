@@ -11,9 +11,14 @@ function sameFrequency() {
     const firstNum = String(first),
         secondNum = String(second);
 
-        // return false, if params are not same length
-        if (firstNum.length !== secondNum.length) return false;
+    // return false, if params are not same length
+    if (firstNum.length !== secondNum.length) return false;
 
     // init a counts object
     const counts = {};
+
+    // count occurence of first integer
+    for (let d of firstNum) {
+        counts[d] = counts[d] + 1 || 1;
+    }
 }
