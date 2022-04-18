@@ -29,3 +29,8 @@ function sameFrequency() {
 
     return true;
 }
+
+console.log(sameFrequency(182, 821));
+console.log(sameFrequency(148290, 849021));
+console.log(sameFrequency(182, 201));
+console.log(sameFrequency(182, 21));
