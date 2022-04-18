@@ -10,7 +10,10 @@ function sameFrequency() {
     // Stringify integers
     const firstNum = String(first),
         secondNum = String(second);
-        
+
+        // return false, if params are not same length
+        if (firstNum.length !== secondNum.length) return false;
+
     // init a counts object
     const counts = {};
 }
