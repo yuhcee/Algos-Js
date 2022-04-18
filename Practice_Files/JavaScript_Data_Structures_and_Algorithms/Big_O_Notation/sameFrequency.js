@@ -21,4 +21,11 @@ function sameFrequency() {
     for (let d of firstNum) {
         counts[d] = counts[d] + 1 || 1;
     }
+
+    // check if occurence is same in second integer
+    for (let s of secondNum) {
+        if (!counts[s]) return false;
+    }
+
+    return true;
 }
