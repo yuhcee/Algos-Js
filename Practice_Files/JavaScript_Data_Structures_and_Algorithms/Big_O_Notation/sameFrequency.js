@@ -5,8 +5,12 @@
  */
 function sameFrequency() {
     // destructure parameters from arguments
-    const [first, second] = arguments;
+    let [first, second] = arguments;
 
+    // Stringify integers
+    const firstNum = String(first),
+        secondNum = String(second);
+        
     // init a counts object
     const counts = {};
 }
