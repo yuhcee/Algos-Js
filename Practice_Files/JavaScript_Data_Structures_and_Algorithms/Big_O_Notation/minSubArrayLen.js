@@ -36,4 +36,6 @@ const minSubArrayLen = (nums, sum) => {
             break;
         }
     }
+    // return minLen
+    return minLen === Infinity ? 0 : minLen;
 };
