@@ -17,7 +17,12 @@ const minSubArrayLen = (nums, sum) => {
     const { min } = Math;
 
     // begin sliding window
-    while(start < nums.length){
-
+    while (start < nums.length) {
+        // if current window doesn't add up to the given sum then
+        if (total < sum && end < nums.length) {
+            total += nums[end];
+            // move the window to right
+            end++;
+        }
     }
 };
