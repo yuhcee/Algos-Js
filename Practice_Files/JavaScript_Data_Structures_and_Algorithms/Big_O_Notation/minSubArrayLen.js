@@ -28,7 +28,7 @@ const minSubArrayLen = (nums, sum) => {
         else if (total >= sum) {
             minLen = min(minLen, end - start);
             // we can shrink the window
-            total -= num[start];
+            total -= nums[start];
             start++;
         }
         // current total less than required total but we reach the end, need this or else we'll be in an infinite loop
@@ -39,3 +39,11 @@ const minSubArrayLen = (nums, sum) => {
     // return minLen
     return minLen === Infinity ? 0 : minLen;
 };
+
+console.log(minSubArrayLen([], 2));
+console.log(minSubArrayLen([1, 2, 3, 4], 7));
+console.log(minSubArrayLen([2, 1, 6, 5, 4], 9));
+console.log(minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 39));
+console.log(minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 55));
+console.log(minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 95));
+console.log(minSubArrayLen([3, 1, 7, 11, 2, 9, 8, 21, 62, 33, 19], 52));
