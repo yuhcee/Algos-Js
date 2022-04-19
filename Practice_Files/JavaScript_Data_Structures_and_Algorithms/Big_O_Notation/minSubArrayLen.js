@@ -23,13 +23,17 @@ const minSubArrayLen = (nums, sum) => {
             total += nums[end];
             // move the window to right
             end++;
-        } 
+        }
         // if current window adds up to at least the sum given then
         else if (total >= sum) {
             minLen = min(minLen, end - start);
-            // we can shrink the window 
+            // we can shrink the window
             total -= num[start];
             start++;
+        }
+        // current total less than required total but we reach the end, need this or else we'll be in an infinite loop
+        else {
+            break;
         }
     }
 };
