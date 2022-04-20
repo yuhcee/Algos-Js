@@ -22,6 +22,8 @@ const undirectedPath = (edges, nodeA, nodeB) => {
     while (stack.length > 0) {
         const node = stack.pop();
         
+        // if current node is equal to nodeB, return true - found
+        if (node === nodeB) return true;
     }
 };
 
