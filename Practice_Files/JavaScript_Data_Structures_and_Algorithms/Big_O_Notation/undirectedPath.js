@@ -27,7 +27,10 @@ const undirectedPath = (edges, nodeA, nodeB) => {
 
         // iterate through neigbhors of current node
         for (let neighbor of graph[node]){
+            // check if neighbor is visited already
+            if(!visited.has(neighbor)){
 
+            }
         }
     }
 };
