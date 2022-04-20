@@ -18,7 +18,11 @@ const undirectedPath = (edges, nodeA, nodeB) => {
     const visited = new Set(nodeA);
     const stack = [nodeA];
 
-    
+    // begin DFS
+    while (stack.length > 0) {
+        const node = stack.pop();
+        
+    }
 };
 
 // build graph on the edges
