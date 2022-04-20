@@ -12,9 +12,12 @@
  * @param {*} nodeB
  */
 
-// Iterative Approach
+// Iterative Approach - DFS
 const undirectedPath = (edges, nodeA, nodeB) => {
     const graph = buildGraph(edges);
+    const visited = new Set(nodeA);
+    const stack = [nodeA];
+
     
 };
 
