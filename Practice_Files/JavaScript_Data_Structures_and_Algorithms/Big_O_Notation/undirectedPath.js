@@ -35,6 +35,7 @@ const undirectedPath = (edges, nodeA, nodeB) => {
             }
         }
     }
+    return false;
 };
 
 // build graph on the edges
@@ -51,3 +52,21 @@ const buildGraph = (edges) => {
 
     return graph;
 };
+
+const edges = [
+    ['i', 'j'],
+    ['k', 'i'],
+    ['m', 'k'],
+    ['k', 'l'],
+    ['o', 'n'],
+];
+const edges1 = [
+    ['i', 'j'],
+    ['k', 'i'],
+    ['m', 'k'],
+    ['k', 'l'],
+    ['o', 'n'],
+];
+
+console.log(undirectedPath(edges, 'j', 'm')); // -> true
+console.log(undirectedPath(edges1, 'k', 'o')); // -> false
