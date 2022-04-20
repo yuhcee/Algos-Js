@@ -24,6 +24,11 @@ const undirectedPath = (edges, nodeA, nodeB) => {
         
         // if current node is equal to nodeB, return true - found
         if (node === nodeB) return true;
+
+        // iterate through neigbhors of current node
+        for (let neighbor of graph[node]){
+
+        }
     }
 };
 
