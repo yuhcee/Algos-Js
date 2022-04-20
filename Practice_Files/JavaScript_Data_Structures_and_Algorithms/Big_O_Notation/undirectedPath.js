@@ -13,7 +13,7 @@
  */
 
 // Iterative Approach - DFS
-const undirectedPath = (edges, nodeA, nodeB) => {
+/* const undirectedPath = (edges, nodeA, nodeB) => {
     const graph = buildGraph(edges);
     const visited = new Set(nodeA);
     const stack = [nodeA];
@@ -36,10 +36,10 @@ const undirectedPath = (edges, nodeA, nodeB) => {
         }
     }
     return false;
-};
+}; */
 
 // build graph on the edges
-const buildGraph = (edges) => {
+/* const buildGraph = (edges) => {
     const graph = {};
 
     for (const [a, b] of edges) {
@@ -51,7 +51,13 @@ const buildGraph = (edges) => {
     }
 
     return graph;
-};
+}; */
+
+
+// Recursive Approach
+const undirectedPath = (edges, nodeA, nodeB) => {
+    
+}
 
 const edges = [
     ['i', 'j'],
@@ -70,3 +76,4 @@ const edges1 = [
 
 console.log(undirectedPath(edges, 'j', 'm')); // -> true
 console.log(undirectedPath(edges1, 'k', 'o')); // -> false
+
