@@ -21,15 +21,17 @@ const undirectedPath = (edges, nodeA, nodeB) => {
     // begin DFS
     while (stack.length > 0) {
         const node = stack.pop();
-        
+
         // if current node is equal to nodeB, return true - found
         if (node === nodeB) return true;
 
         // iterate through neigbhors of current node
-        for (let neighbor of graph[node]){
+        for (let neighbor of graph[node]) {
             // check if neighbor is visited already
-            if(!visited.has(neighbor)){
-
+            if (!visited.has(neighbor)) {
+                // visit and push node to stack
+                visited.add(neighbor);
+                stack.push(neighbor);
             }
         }
     }
