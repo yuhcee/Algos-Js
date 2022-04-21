@@ -19,10 +19,7 @@ function findLongestSubstring(str) {
         if (seen[char]) {
             start = max(start, seen[char]);
         }
-        
+        //index - beginning of substring + 1 (to include current in count)
+        longest = max(longest, i - start + 1);
     }
-
-   
 }
-
-
