@@ -21,3 +21,11 @@ const MyHashSet = function () {
 MyHashSet.prototype.add = function (key) {
     this.hashSet.add(key);
 };
+
+/** 
+ * @param {number} key
+ * @return {void}
+ */
+ MyHashSet.prototype.remove = function(key) {
+    this.hashSet.delete(key);
+};
