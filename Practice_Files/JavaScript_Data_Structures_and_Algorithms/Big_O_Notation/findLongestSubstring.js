@@ -25,4 +25,6 @@ function findLongestSubstring(str) {
         // store the index of the next char so as to not double count
         seen[char] = i + 1;
     }
+    // return longest SubString
+    return longest;
 }
