@@ -22,18 +22,28 @@ MyHashSet.prototype.add = function (key) {
     this.hashSet.add(key);
 };
 
-/** 
+/**
  * @param {number} key
  * @return {void}
  */
- MyHashSet.prototype.remove = function(key) {
+MyHashSet.prototype.remove = function (key) {
     this.hashSet.delete(key);
 };
 
-/** 
+/**
  * @param {number} key
  * @return {boolean}
  */
- MyHashSet.prototype.contains = function(key) {
+MyHashSet.prototype.contains = function (key) {
     return this.hashSet.has(key);
 };
+
+const myHashSet = new MyHashSet();
+myHashSet.add(1);
+myHashSet.add(2); // set = [1, 2]
+console.log(myHashSet.contains(1)); // return True
+console.log(myHashSet.contains(3)); // return False, (not found)
+myHashSet.add(2); // set = [1, 2]
+console.log(myHashSet.contains(2)); // return True
+myHashSet.remove(2); // set = [1]
+console.log(myHashSet.contains(2)); // return False, (already removed)
