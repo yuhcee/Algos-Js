@@ -28,3 +28,11 @@ function findLongestSubstring(str) {
     // return longest SubString
     return longest;
 }
+
+console.log(findLongestSubstring('rithmschool'));
+console.log(findLongestSubstring('awesome'));
+console.log(findLongestSubstring('combs'));
+console.log(findLongestSubstring('alibaba'));
+console.log(findLongestSubstring('alba'));
+console.log(findLongestSubstring('aba'));
+console.log(findLongestSubstring('bb'));
