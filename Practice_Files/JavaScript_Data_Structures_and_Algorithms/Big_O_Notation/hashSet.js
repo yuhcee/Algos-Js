@@ -29,3 +29,11 @@ MyHashSet.prototype.add = function (key) {
  MyHashSet.prototype.remove = function(key) {
     this.hashSet.delete(key);
 };
+
+/** 
+ * @param {number} key
+ * @return {boolean}
+ */
+ MyHashSet.prototype.contains = function(key) {
+    return this.hashSet.has(key);
+};
