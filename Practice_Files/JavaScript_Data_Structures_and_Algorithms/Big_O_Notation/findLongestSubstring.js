@@ -11,4 +11,18 @@ function findLongestSubstring(str) {
         start = 0,
         seen = {},
         { max } = Math;
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+
+        // check if char has been seen before
+        if (seen[char]) {
+            start = max(start, seen[char]);
+        }
+        
+    }
+
+   
 }
+
+
