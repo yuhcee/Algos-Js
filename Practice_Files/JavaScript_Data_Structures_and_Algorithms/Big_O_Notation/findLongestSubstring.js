@@ -21,5 +21,8 @@ function findLongestSubstring(str) {
         }
         //index - beginning of substring + 1 (to include current in count)
         longest = max(longest, i - start + 1);
+
+        // store the index of the next char so as to not double count
+        seen[char] = i + 1;
     }
 }
