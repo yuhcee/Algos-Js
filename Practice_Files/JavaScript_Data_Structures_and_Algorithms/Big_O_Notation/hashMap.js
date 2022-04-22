@@ -25,3 +25,11 @@
  MyHashMap.prototype.put = function(key, value) {
     this.map[key] = value;
 };
+
+/** 
+ * @param {number} key
+ * @return {number}
+ */
+ MyHashMap.prototype.get = function(key) {
+    return this.map[key] != undefined ? this.map[key] : - 1;
+};
