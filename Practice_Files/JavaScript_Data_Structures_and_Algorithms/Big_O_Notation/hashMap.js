@@ -11,3 +11,7 @@
  * - `void remove(key)` removes the key and its corresponding `value` if the map contains the mapping for the
  * `key`.
  */
+
+ var MyHashMap = function() {
+    this.map = {};
+};
