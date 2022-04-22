@@ -33,3 +33,10 @@
  MyHashMap.prototype.get = function(key) {
     return this.map[key] != undefined ? this.map[key] : - 1;
 };
+/** 
+ * @param {number} key
+ * @return {void}
+ */
+ MyHashMap.prototype.remove = function(key) {
+    delete this.map[key] ;
+};
