@@ -15,3 +15,13 @@
  var MyHashMap = function() {
     this.map = {};
 };
+
+
+/** 
+ * @param {number} key 
+ * @param {number} value
+ * @return {void}
+ */
+ MyHashMap.prototype.put = function(key, value) {
+    this.map[key] = value;
+};
