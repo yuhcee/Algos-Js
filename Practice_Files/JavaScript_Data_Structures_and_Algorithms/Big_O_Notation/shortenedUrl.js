@@ -15,3 +15,8 @@
  * guaranteed that the given `shortUrl` was encoded by the same object.
  *
  */
+
+let codeDb = new Map(),
+    urlDb = new Map();
+const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+const BASE_URL = 'http://tinyurl.com/';
