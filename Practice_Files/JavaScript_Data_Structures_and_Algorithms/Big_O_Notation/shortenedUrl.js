@@ -28,4 +28,24 @@ const getCode = () => {
         .join('');
 };
 
+/**
+ * Encodes a URL to a shortened URL.
+ *
+ * @param {string} longUrl
+ * @return {string}
+ */
+const encode = (longUrl) => {
+    let code = getCode();
+
+    while (codeDb.has(code)) code = getCode();
+
+    codeDb.set(code, longUrl);
+
+    const shortUrl = BASE_URL + code;
+
+    urlDb.set(shortUrl, longUrl);
+
+    return shortUrl;
+};
+
 console.log(getCode());
