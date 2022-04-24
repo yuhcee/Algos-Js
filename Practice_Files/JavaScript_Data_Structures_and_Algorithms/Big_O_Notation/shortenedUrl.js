@@ -49,11 +49,19 @@ const encode = (longUrl) => {
 };
 
 /**
-   * Decodes a shortened URL to its original URL.
-   *
-   * @param {string} shortUrl
-   * @return {string}
-   */
- const decode = (shortUrl) => urlDb.get(shortUrl);
+ * Decodes a shortened URL to its original URL.
+ *
+ * @param {string} shortUrl
+ * @return {string}
+ */
+const decode = (shortUrl) => urlDb.get(shortUrl);
 
-console.log(getCode());
+/**
+ * Your functions will be called as such:
+ * decode(encode(url));
+ */
+
+const url = 'https://leetcode.com/problems/design-tinyurl';
+// Output: 'https://leetcode.com/problems/design-tinyurl';
+
+console.log(decode(encode(url)));
