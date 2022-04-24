@@ -48,4 +48,12 @@ const encode = (longUrl) => {
     return shortUrl;
 };
 
+/**
+   * Decodes a shortened URL to its original URL.
+   *
+   * @param {string} shortUrl
+   * @return {string}
+   */
+ const decode = (shortUrl) => urlDb.get(shortUrl);
+
 console.log(getCode());
