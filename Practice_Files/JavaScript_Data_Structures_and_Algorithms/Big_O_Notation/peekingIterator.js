@@ -33,3 +33,22 @@ PeekingIterator.prototype.peek = function () {
     }
     return this.peekedValue;
 };
+
+/**
+ * @return {number}
+ */
+PeekingIterator.prototype.next = function () {
+    if (this.peekedValue !== null) {
+        let toReturn = this.peekedValue;
+        this.peekedValue = null;
+        return toReturn;
+    }
+
+    if (!this.iter.hasNext()) {
+        return 'No value found';
+    }
+
+    return this.iter.next();
+};
+
+
