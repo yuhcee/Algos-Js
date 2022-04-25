@@ -18,7 +18,7 @@
 
 var PeekingIterator = function (iterator) {
     this.iter = iterator;
-    this.peekedValue = nulll;
+    this.peekedValue = null;
 };
 
 /**
@@ -57,3 +57,23 @@ PeekingIterator.prototype.next = function () {
 PeekingIterator.prototype.hasNext = function () {
     return this.peekedValue !== null || this.iter.hasNext();
 };
+
+/**
+ * Your PeekingIterator object will be instantiated and called as such:
+ * var obj = new PeekingIterator(arr)
+ * var param_1 = obj.peek()
+ * var param_2 = obj.next()
+ * var param_3 = obj.hasNext()
+ */
+
+//  ["PeekingIterator", "next", "peek", "next", "next", "hasNext"]
+//  [[[1, 2, 3]], [], [], [], [], []]
+//  Output [null, 1, 2, 2, 3, false]
+
+//  Explanation
+const peekingIterator = new PeekingIterator([1, 2, 3]); // [1,2,3]
+peekingIterator.next(); // return 1, the pointer moves to the next element [1,2,3].
+peekingIterator.peek(); // return 2, the pointer does not move [1,2,3].
+peekingIterator.next(); // return 2, the pointer moves to the next element [1,2,3]
+peekingIterator.next(); // return 3, the pointer moves to the next element [1,2,3]
+peekingIterator.hasNext(); // return False
