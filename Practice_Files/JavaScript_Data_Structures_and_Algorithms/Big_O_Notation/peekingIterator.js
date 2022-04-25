@@ -51,4 +51,9 @@ PeekingIterator.prototype.next = function () {
     return this.iter.next();
 };
 
-
+/**
+ * @return {boolean}
+ */
+PeekingIterator.prototype.hasNext = function () {
+    return this.peekedValue !== null || this.iter.hasNext();
+};
