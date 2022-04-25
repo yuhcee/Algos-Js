@@ -16,4 +16,7 @@
  * @param {Iterator} iterator
  */
 
-var PeekingIterator = function (iterator) {};
+var PeekingIterator = function (iterator) {
+    this.iter = iterator;
+    this.peekedValue = nulll;
+};
