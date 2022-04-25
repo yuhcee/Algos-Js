@@ -13,8 +13,8 @@ const minSubArrayLen = (nums, sum) => {
     let start = 0,
         end = 0,
         total = 0,
-        minLen = Infinity;
-    const { min } = Math;
+        minLen = Infinity,
+        { min } = Math;
 
     // begin sliding window
     while (start < nums.length) {
