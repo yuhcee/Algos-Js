@@ -20,3 +20,16 @@ var PeekingIterator = function (iterator) {
     this.iter = iterator;
     this.peekedValue = nulll;
 };
+
+/**
+ * @return {number}
+ */
+PeekingIterator.prototype.peek = function () {
+    if (this.peekedValue !== null) {
+        if (!this.iter.hasNext()) {
+            return 'No value found';
+        }
+        this.peekedValue = this.iter.next();
+    }
+    return this.peekedValue;
+};
