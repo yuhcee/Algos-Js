@@ -22,6 +22,9 @@ const smallestStringWithSwaps = (s, pairs) => {
         graph[b].push(a);
     }
 
+    for (let [a, b] of pairs) {
+        hasPath(graph, a, b, visited);
+    }
 };
 
 const buildGraph = (n) => {
@@ -41,6 +44,8 @@ const hasPath = (graph, src, dst, visited) => {
     visited.add(src);
 
     for (let neighbor of graph[src]) {
-        hasPath(graph, neighbor, dst, visited);
+        if (hasPath(graph, neighbor, dst, visited)) return true;
     }
+
+    return false;
 };
