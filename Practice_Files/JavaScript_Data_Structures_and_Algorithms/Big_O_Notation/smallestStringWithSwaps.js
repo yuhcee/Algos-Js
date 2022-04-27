@@ -14,6 +14,7 @@
  */
 const smallestStringWithSwaps = (s, pairs) => {
     let n = s.length,
+        idx = [],
         visited = new Set(),
         graph = buildGraph(n);
 
@@ -23,8 +24,12 @@ const smallestStringWithSwaps = (s, pairs) => {
     }
 
     for (let [a, b] of pairs) {
-        hasPath(graph, a, b, visited);
+        if (hasPath(graph, a, b, visited)) {
+            idx.push(s[a]);
+        }
     }
+
+    return idx.join('');
 };
 
 const buildGraph = (n) => {
