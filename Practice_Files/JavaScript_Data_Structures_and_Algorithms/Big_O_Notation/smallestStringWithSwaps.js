@@ -14,7 +14,15 @@
  */
 const smallestStringWithSwaps = (s, pairs) => {
     let n = s.length,
-        visited = new Set();
+        visited = new Set(),
+        graph = buildGraph(n);
+
+    for (let [a, b] of pairs) {
+        graph[a].push(b);
+        graph[b].push(a);
+    }
+
+    
 };
 
 const buildGraph = (n) => {
