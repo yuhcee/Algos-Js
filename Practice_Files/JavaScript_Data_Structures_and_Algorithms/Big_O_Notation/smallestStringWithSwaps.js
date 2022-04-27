@@ -12,7 +12,10 @@
  * @param {number[][]} pairs
  * @return {string}
  */
-const smallestStringWithSwaps = (s, pairs) => {};
+const smallestStringWithSwaps = (s, pairs) => {
+    let n = s.length,
+        visited = new Set();
+};
 
 const buildGraph = (n) => {
     const graph = {};
