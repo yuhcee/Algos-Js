@@ -39,4 +39,22 @@ var minimumEffortPath = function (h) {
             }
         }
     }
+
+    // dfs to check whether the bottom-right cell is reachable at the current effort
+    function check(i, j, k) {
+        if (i === n - 1 && j === m - 1) {
+            return true;
+        }
+
+        v[i * m + j] = true;
+
+        for (const [x, y] of DIR) {
+            if (h[i + x] && h[i + x][j + y] && !v[(i + x) * m + j + y] && Math.abs(h[i + x][j + y] - h[i][j]) <= k) {
+                if (check(i + x, j + y, k)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 };
