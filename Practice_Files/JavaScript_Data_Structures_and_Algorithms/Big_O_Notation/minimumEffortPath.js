@@ -71,5 +71,28 @@ var minimumEffortPath = function (h) {
     }
 
     // return maximum effort required
-    return check(0,0,min) ? min : max;
+    return check(0, 0, min) ? min : max;
 };
+
+const heights = [
+    [1, 2, 2],
+    [3, 8, 2],
+    [5, 3, 5],
+]; // Output: 2
+
+const heights1 = [
+    [1, 2, 3],
+    [3, 8, 4],
+    [5, 3, 5],
+]; // Output: 1
+
+const heights2 = [
+    [1, 2, 1, 1, 1],
+    [1, 2, 1, 2, 1],
+    [1, 2, 1, 2, 1],
+    [1, 2, 1, 2, 1],
+    [1, 1, 1, 2, 1],
+]; // Output: 0
+console.log(minimumEffortPath(heights));
+console.log(minimumEffortPath(heights1));
+console.log(minimumEffortPath(heights2));
