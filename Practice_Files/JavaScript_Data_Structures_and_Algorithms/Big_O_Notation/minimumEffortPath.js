@@ -69,4 +69,7 @@ var minimumEffortPath = function (h) {
             min = mid;
         }
     }
+
+    // return maximum effort required
+    return check(0,0,min) ? min : max;
 };
