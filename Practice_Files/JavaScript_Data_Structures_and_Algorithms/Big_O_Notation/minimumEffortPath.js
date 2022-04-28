@@ -27,4 +27,16 @@ var minimumEffortPath = function (h) {
     let v = [],
         min = 0,
         max = 0;
+
+    // finding max value for effort
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < m; j++) {
+            if (h[i][j - 1]) {
+                max = Math.max(max, Math.abs(h[i][j] - h[i][j - 1]));
+            }
+            if (h[i - 1]) {
+                max = Math.max(max, Math.abs(h[i][j] - h[i - 1][j]));
+            }
+        }
+    }
 };
