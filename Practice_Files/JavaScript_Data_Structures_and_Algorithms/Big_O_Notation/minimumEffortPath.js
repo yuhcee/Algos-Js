@@ -57,4 +57,16 @@ var minimumEffortPath = function (h) {
         }
         return false;
     }
+
+    // binary search for minimum effort value
+    while (min < max - 1) {
+        let mid = Math.floor((max + min) / 2);
+        v = [];
+
+        if (check(0, 0, mid)) {
+            max = mid;
+        } else {
+            min = mid;
+        }
+    }
 };
