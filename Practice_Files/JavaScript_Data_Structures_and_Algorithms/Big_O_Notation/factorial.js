@@ -4,4 +4,8 @@
  * (*4!*) is equal to 24, because 4 * 3 * 2 * 1 equals 24. **factorial zero (0!) is always 1**.
  */
 
-const factorial = (num) => {};
+const factorial = (num) => {
+    if (num === 0) return 1;
+
+    return num * factorial(num - 1);
+};
