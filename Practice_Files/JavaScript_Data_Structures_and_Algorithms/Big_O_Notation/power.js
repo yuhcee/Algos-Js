@@ -12,4 +12,7 @@ const power = (base, exponent) => {
     return base * power(base, exponent - 1);
 };
 
-
+console.log(power(2, 0));
+console.log(power(2, 2));
+console.log(power(2, 4));
+console.log(power(2, 10));
