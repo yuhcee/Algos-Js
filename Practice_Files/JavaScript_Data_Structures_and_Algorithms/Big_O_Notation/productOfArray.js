@@ -10,3 +10,14 @@ const productOfArray = (arr) => {
 };
 
 console.log(productOfArray([1, 2, 3]));
+
+function productOfArrayRecursive() {
+    const [arr] = arguments;
+
+    if (arr.length === 0) return 1;
+
+    return arr[0] * productOfArrayRecursive(arr.slice(1));
+}
+
+console.log(productOfArrayRecursive([1, 2, 3]));
+console.log(productOfArrayRecursive([1, 2, 2, 3]));
