@@ -34,12 +34,12 @@ const isBipartite = (graph) => {
 
 const traverse = (graph, visited, index, vertex = graph[index], set = 'A') => {
     // Bail out if vertex already covered
-    if (visited[vertex] !== undefined) {
+    if (visited[index] !== undefined) {
         return;
     }
 
     // Set vertex color
-    visited[vertex] = set;
+    visited[index] = set;
 
     // Array to store colors of adjacent vertices
     const covered = [];
@@ -49,7 +49,7 @@ const traverse = (graph, visited, index, vertex = graph[index], set = 'A') => {
 
         // Bail out if adjacent vertex already covered but do store its corresponding color
         if (visited[value] !== undefined) {
-            covered.push(value);
+            covered.push(visited[value]);
             continue;
         }
         // Traverse adjacent vertex with alternate color
@@ -61,3 +61,19 @@ const traverse = (graph, visited, index, vertex = graph[index], set = 'A') => {
         visited[index] = null;
     }
 };
+
+const graph = [
+    [1, 2, 3],
+    [0, 2],
+    [0, 1, 3],
+    [0, 2],
+]; // Output: false
+// console.log(isBipartite(graph));
+
+const graph1 = [
+    [1, 3],
+    [0, 2],
+    [1, 3],
+    [0, 2],
+]; // Output: true
+console.log(isBipartite(graph1));
