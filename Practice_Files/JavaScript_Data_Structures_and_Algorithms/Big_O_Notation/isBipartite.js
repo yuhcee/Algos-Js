@@ -50,7 +50,10 @@ const traverse = (graph, visited, index, vertex = graph[index], set = 'A') => {
         // Bail out if adjacent vertex already covered but do store its corresponding color
         if (visited[value] !== undefined) {
             covered.push(value);
+            continue;
         }
-        continue;
+        // Traverse adjacent vertex with alternate color
+        traverse(graph, visited, value, graph[value], set === 'A' ? 'B' : 'A');
     }
+
 };
