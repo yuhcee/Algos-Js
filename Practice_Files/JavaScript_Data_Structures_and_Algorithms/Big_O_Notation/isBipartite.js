@@ -31,3 +31,10 @@ const isBipartite = (graph) => {
     // Check if any vertex is not colored
     return !Object.values(visited).some((value) => value === null);
 };
+
+const traverse = (graph, visited, index, vertex = graph[index], set = 'A') => {
+    // Bail out if vertex already covered
+    if (visited[vertex] !== undefined) {
+        return;
+    }
+};
