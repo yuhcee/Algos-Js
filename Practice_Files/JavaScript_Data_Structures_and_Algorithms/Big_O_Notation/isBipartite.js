@@ -22,5 +22,9 @@
 const isBipartite = (graph) => {
     // Map for storing vertices with their corresponding colors
     const visited = {};
-    
+
+    // Traverse graph vertices one by one
+    for (let index = 0; index < graph.length; index++) {
+        traverse(graph, visited, index);
+    }
 };
