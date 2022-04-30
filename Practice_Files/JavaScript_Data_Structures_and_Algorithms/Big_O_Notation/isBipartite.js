@@ -56,4 +56,8 @@ const traverse = (graph, visited, index, vertex = graph[index], set = 'A') => {
         traverse(graph, visited, value, graph[value], set === 'A' ? 'B' : 'A');
     }
 
+    // If adjacent vertices are already colored with 2 colors (2 sets), set to null
+    if (new Set(covered).size === 2) {
+        visited[index] = null;
+    }
 };
