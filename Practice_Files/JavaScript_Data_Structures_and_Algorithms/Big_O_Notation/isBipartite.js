@@ -37,4 +37,9 @@ const traverse = (graph, visited, index, vertex = graph[index], set = 'A') => {
     if (visited[vertex] !== undefined) {
         return;
     }
+
+    // Set vertex color
+    visited[vertex] = set;
+
+    
 };
