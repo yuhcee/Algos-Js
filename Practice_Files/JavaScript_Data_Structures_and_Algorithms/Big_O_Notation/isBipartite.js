@@ -41,5 +41,6 @@ const traverse = (graph, visited, index, vertex = graph[index], set = 'A') => {
     // Set vertex color
     visited[vertex] = set;
 
-    
+    // Array to store colors of adjacent vertices
+    const covered = [];
 };
