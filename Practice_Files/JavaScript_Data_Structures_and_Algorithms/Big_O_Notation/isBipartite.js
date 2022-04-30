@@ -27,4 +27,7 @@ const isBipartite = (graph) => {
     for (let index = 0; index < graph.length; index++) {
         traverse(graph, visited, index);
     }
+
+    // Check if any vertex is not colored
+    return !Object.values(visited).some((value) => value === null);
 };
