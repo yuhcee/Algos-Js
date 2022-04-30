@@ -19,4 +19,8 @@
  * @param {number[][]} graph
  * @return {boolean}
  */
-const isBipartite = (graph) => {};
+const isBipartite = (graph) => {
+    // Map for storing vertices with their corresponding colors
+    const visited = {};
+    
+};
