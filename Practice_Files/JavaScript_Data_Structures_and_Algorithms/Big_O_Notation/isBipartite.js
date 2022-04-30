@@ -43,4 +43,14 @@ const traverse = (graph, visited, index, vertex = graph[index], set = 'A') => {
 
     // Array to store colors of adjacent vertices
     const covered = [];
+
+    for (let i = 0; i < vertex.length; i++) {
+        let value = vertex[i];
+
+        // Bail out if adjacent vertex already covered but do store its corresponding color
+        if (visited[value] !== undefined) {
+            covered.push(value);
+        }
+        continue;
+    }
 };
