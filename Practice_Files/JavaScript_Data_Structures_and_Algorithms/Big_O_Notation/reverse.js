@@ -11,3 +11,13 @@ const reverse = (str) => {
 
 console.log(reverse('awesome'));
 console.log(reverse('akankwe'));
+
+const reverseRecursive = (str) => {
+    if (str.length <= 1) return str;
+
+    return reverseRecursive(str.slice(1)) + str[0];
+};
+
+
+console.log(reverseRecursive('awesome'));
+console.log(reverseRecursive('akankwe'));
