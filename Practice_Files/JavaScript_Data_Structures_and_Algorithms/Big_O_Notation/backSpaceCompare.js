@@ -11,4 +11,19 @@
  * @return {boolean}
  */
 const backspaceCompare = (s, t) => {
+    return buildString(s) === buildString(t);
 };
+
+const buildString = (str) => {
+    const characters = [];
+
+    for (let char of str) {
+        if (char !== '#') characters.push(char);
+        else if (characters.length > 0) {
+            characters.pop();
+        }
+    }
+
+    return characters.join('');
+};
+
