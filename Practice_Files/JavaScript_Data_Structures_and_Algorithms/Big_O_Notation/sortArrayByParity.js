@@ -15,10 +15,15 @@ const sortArrayByParity = (nums) => {
     for (let i = 0; i < nums.length; i++) {
         let num = nums[i];
         if (num % 2 === 0) {
-            [num, oddIdx] = [oddIdx, num];
+            [nums[i], nums[oddIdx]] = [nums[oddIdx], num];
             oddIdx++;
         }
     }
-
     return nums;
+
 };
+
+const nums = [0] // Output: [0]
+const nums1 = [3, 1, 2, 4]; // Output: [2,4,3,1]
+console.log(sortArrayByParity(nums));
+console.log(sortArrayByParity(nums1));
