@@ -27,3 +27,13 @@ const buildString = (str) => {
     return characters.join('');
 };
 
+const s = 'ab#c',
+    t = 'ad#c'; // Output: true;
+const s1 = 'ab##',
+    t1 = 'c#d#'; // Output: true
+const s2 = 'a#c',
+    t2 = 'b'; //  Output: false
+
+console.log(backspaceCompare(s, t));
+console.log(backspaceCompare(s1, t1));
+console.log(backspaceCompare(s2, t2));
