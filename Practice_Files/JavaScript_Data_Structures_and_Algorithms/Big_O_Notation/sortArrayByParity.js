@@ -9,7 +9,8 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-const sortArrayByParity = (nums) => {
+
+/* const sortArrayByParity = (nums) => {
     let oddIdx = 0;
 
     for (let i = 0; i < nums.length; i++) {
@@ -21,9 +22,26 @@ const sortArrayByParity = (nums) => {
     }
     return nums;
 
+}; */
+
+const sortArrayByParity = (nums) => {
+    let t = 0,
+        ans = [];
+
+    for (let i = 0; i < nums.length; i++)
+        if (nums[i] % 2 === 0) {
+            ans[t++] = nums[i];
+        }
+
+    for (let i = 0; i < nums.length; i++)
+        if (nums[i] % 2 === 1) {
+            ans[t++] = nums[i];
+        }
+
+    return ans;
 };
 
-const nums = [0] // Output: [0]
+const nums = [0]; // Output: [0]
 const nums1 = [3, 1, 2, 4]; // Output: [2,4,3,1]
 console.log(sortArrayByParity(nums));
 console.log(sortArrayByParity(nums1));
