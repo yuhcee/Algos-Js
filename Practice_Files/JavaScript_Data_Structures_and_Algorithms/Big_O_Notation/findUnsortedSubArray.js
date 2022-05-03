@@ -26,4 +26,6 @@ var findUnsortedSubarray = function (nums) {
             end = max(end, i);
         }
     }
+
+    return end <= start ? 0 : end - start + 1;
 };
