@@ -11,7 +11,12 @@
  */
 var findUnsortedSubarray = function (nums) {
     // copy array and sort
-    const sortedNumsCopy = [...arr].sort((a, b) => a - b);
+    const sortedNumsCopy = [...nums].sort((a, b) => a - b);
 
-    
+    // start two pointers
+    let start = nums.length - 1,
+        end = 0,
+        { max, min } = Math;
+
+        
 };
