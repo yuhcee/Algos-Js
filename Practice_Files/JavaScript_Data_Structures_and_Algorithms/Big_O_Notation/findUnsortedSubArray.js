@@ -10,5 +10,8 @@
  * @return {number}
  */
 var findUnsortedSubarray = function (nums) {
+    // copy array and sort
+    const sortedNumsCopy = [...arr].sort((a, b) => a - b);
+
     
 };
