@@ -18,5 +18,8 @@ var findUnsortedSubarray = function (nums) {
         end = 0,
         { max, min } = Math;
 
+    // loop through array to compare values of sortedNums and nums
+    for(let i = 0; i < nums.length; i++){
         
+    }
 };
