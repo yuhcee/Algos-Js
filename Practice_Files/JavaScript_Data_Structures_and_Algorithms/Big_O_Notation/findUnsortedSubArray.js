@@ -19,7 +19,11 @@ var findUnsortedSubarray = function (nums) {
         { max, min } = Math;
 
     // loop through array to compare values of sortedNums and nums
-    for(let i = 0; i < nums.length; i++){
-        
+    for (let i = 0; i < nums.length; i++) {
+        // if value of num and sorted num is not equal, we assign the index value to start and end pointer
+        if (nums[i] !== sortedNumsCopy[i]) {
+            start = min(start, i);
+            end = max(end, i);
+        }
     }
 };
