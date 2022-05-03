@@ -14,4 +14,6 @@ const capitalizedWords = (arr) => {
 };
 
 let words = ['i', 'am', 'learning', 'recursion'];
+let words1 = ['i', 'am', 'growing', 'everyday'];
 console.log(capitalizedWords(words)); // ['I', 'AM', 'LEARNING', 'RECURSION']
+console.log(capitalizedWords(words1)); // ['I', 'AM', 'GROWING', 'EVERYDAY']
