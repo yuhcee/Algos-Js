@@ -15,7 +15,7 @@
  * @return {number}
  */
 const maxOperations = (nums, k) => {
-    const map = new Map();
+    /* const map = new Map();
     let count = 0;
 
     for (let i = 0; i < nums.length; i++) {
@@ -29,8 +29,9 @@ const maxOperations = (nums, k) => {
             map.set(num, map.get(num) + 1 || 1);
         }
     }
-    console.log(map);
-    return count;
+    return count; */
+
+    // Two pointers solution
 };
 const nums = [1, 2, 2, 1, 1, 1, 4],
     k = 3;
