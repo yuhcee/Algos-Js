@@ -27,3 +27,22 @@ const recursiveBinarySearch = (list, target) => {
 
 console.log(recursiveBinarySearch([-3, -2, -1, 0, 1, 2, 3], 6)); // false
 console.log(recursiveBinarySearch([-3, -2, -1, 0, 1, 2, 3], -1)); // true
+
+const binarySearch = (list, target) => {
+    let start = 0,
+        end = list.length,
+        mid = Math.floor((start + end) / 2);
+
+    while (target !== list[mid] && start <= end) {
+        if (target > list[mid]) start = mid + 1;
+        else end = mid - 1;
+        mid = Math.floor((end + start) / 2);
+    }
+
+    return list[mid] === target ? mid : -1;
+};
+
+console.log(binarySearch([1, 2, 3, 4, 5], 2));
+console.log(binarySearch([1, 2, 3, 4, 5], 3));
+console.log(binarySearch([1, 2, 3, 4, 5], 5));
+console.log(binarySearch([1, 2, 3, 4, 5], 6));
