@@ -31,8 +31,27 @@ const maxOperations = (nums, k) => {
     }
     return count; */
 
-    // Two pointers solution
+    // +++++++++++++ Two pointers solution +++++++++++++++++
+
+    let left = 0,
+        right = nums.length - 1,
+        count = 0;
+
+    nums.sort((a, b) => a - b);
+
+    while (left < right) {
+        if (nums[left] + nums[right] > k) right--;
+        else if (nums[left] + nums[right] < k) left++;
+        else {
+            left++;
+            right--;
+            count++;
+        }
+    }
+
+    return count;
 };
+
 const nums = [1, 2, 2, 1, 1, 1, 4],
     k = 3;
 const nums1 = [2, 5, 4, 4, 1, 3, 4, 4, 1, 4, 4, 1, 2, 1, 2, 2, 3, 2, 4, 2],
