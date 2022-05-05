@@ -1,9 +1,14 @@
 const bubbleSort = (arr) => {
     for (let i = arr.length - 1; i > 0; i--) {
+        let noSwaps = true;
         for (let j = 0; j < i; j++) {
             if (arr[j] > arr[j + 1]) {
                 swap(arr, j, j + 1);
+                noSwaps = false;
             }
+        }
+        if (noSwaps) {
+            break;
         }
     }
     return arr;
@@ -17,4 +22,4 @@ const swap = (arr, idx1, idx2) => {
     return arr;
 };
 
-console.log(bubbleSort([7, 1, 5, 3, 10, 0, 2, 4, 6, 9, 8]));
+console.log(bubbleSort([0, 1, 3, 4, 5, 7, 6, 9, 2]));
