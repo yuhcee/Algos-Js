@@ -19,7 +19,7 @@ const removeDuplicates = (s, k) => {
     const stack = [];
 
     for (let char of s) {
-        if (stack.length === 0 || stack.at(-1) !== char) {
+        if (stack.length === 0 || stack.at(-1).char !== char) {
             stack.push({ char, count: 1 });
             continue;
         }
@@ -29,5 +29,13 @@ const removeDuplicates = (s, k) => {
         if (stack.at(-1).count === k) stack.pop();
     }
 
+
     return stack.map(({ char, count }) => char.repeat(count)).join('');
 };
+
+const s = 'abcd',
+    k = 2; // Output: 'abcd';
+const s1 = 'deeedbbcccbdaa',
+    k1 = 3; // Output: "aa"
+// console.log(removeDuplicates(s, k));
+console.log(removeDuplicates(s1, k1));
