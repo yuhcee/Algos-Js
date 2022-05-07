@@ -26,3 +26,11 @@ var find132pattern = (nums) => {
 
     return false;
 };
+
+const nums = [1, 2, 3, 4]; // Output: false
+const nums1 = [3, 1, 4, 2]; // Output: true
+const nums2 = [-1, 3, 2, 0]; // Output: true;
+
+console.log(find132pattern(nums));
+console.log(find132pattern(nums1));
+console.log(find132pattern(nums2));
