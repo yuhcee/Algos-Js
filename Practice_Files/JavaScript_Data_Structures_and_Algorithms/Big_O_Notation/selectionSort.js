@@ -3,5 +3,10 @@ const selectionSort = (arr) => {
     // Store the first number as the smallest you've seen so far.
     let smallest = arr[0];
 
+    for(let i = 1; i < arr.length - 1; i++){
+        // Compare this item to the next item in the arr until you find a smaller number
+        if(smallest > arr[i]){
     
+        }
+    }
 };
