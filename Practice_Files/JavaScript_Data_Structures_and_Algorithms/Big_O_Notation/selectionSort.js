@@ -6,15 +6,18 @@ const selectionSort = (arr) => {
         for (let j = i + 1; j < arr.length; j++) {
             // Compare this item to the next item in the arr until you find a smaller number
             if (arr[smallest] > arr[j]) {
-                // if a smaller number is found, designate that number to be the new minimum, and continue till the end.
+                // if a smaller number is found, designate that number(index) to be the new minimum, and continue till the end.
                 smallest = j;
             }
-            // if the minimun is not the value(index) you initially began with, swap the two values
-            if (smallest !== i) {
-                temp = arr[i];
-                arr[i] = arr[smallest];
-                arr[smallest] = temp;
-            }
+        }
+        // if the minimun is not the value(index) you initially began with, swap the two values
+        if (smallest !== i) {
+            temp = arr[i];
+            arr[i] = arr[smallest];
+            arr[smallest] = temp;
         }
     }
+    return arr;
 };
+
+console.log(selectionSort([2, 0, 34, 22, 10, 19, 17]));
