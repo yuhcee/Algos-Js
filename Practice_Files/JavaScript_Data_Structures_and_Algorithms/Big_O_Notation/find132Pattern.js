@@ -8,17 +8,14 @@
  * @return {boolean}
  */
 var find132pattern = (nums) => {
-    let arr = [];
-
-    let negative = -Infinity;
+    let arr = [],
+        minimum = -Infinity;
 
     for (let i = nums.length - 1; i >= 0; i--) {
-        if (nums[i] < negative) {
-            return true;
-        }
+        if (nums[i] < minimum) return true;
 
-        while (arr.length > 0 && nums[i] > arr[arr.length - 1]) {
-            negative = arr.pop();
+        while (arr.length > 0 && nums[i] > arr.at(-1)) {
+            minimum = arr.pop();
         }
 
         arr.push(nums[i]);
@@ -34,4 +31,3 @@ const nums2 = [-1, 3, 2, 0]; // Output: true;
 console.log(find132pattern(nums));
 console.log(find132pattern(nums1));
 console.log(find132pattern(nums2));
-
