@@ -12,6 +12,19 @@
  */
 const letterCombinations = (digits) => {
     const letters = buildCharacters();
+
+    return digits.split('').reduce((prev, digit) => {
+        if (prev.length === 0) return letters[digit];
+
+        const res = [];
+
+        for (let l0 of prev) {
+            for (let l1 of letter[digit]) {
+                res.push(`${l0}${l1}`);
+            }
+        }
+        return res;
+    }, []);
 };
 
 const buildCharacters = () => {
