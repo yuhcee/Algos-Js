@@ -19,7 +19,7 @@ const letterCombinations = (digits) => {
         const res = [];
 
         for (let l0 of prev) {
-            for (let l1 of letter[digit]) {
+            for (let l1 of letters[digit]) {
                 res.push(`${l0}${l1}`);
             }
         }
@@ -40,4 +40,9 @@ const buildCharacters = () => {
 
     return graph;
 };
-console.log(buildCharacters());
+const digits = '23'; // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+const digits1 = ''; // Output: []
+const digits2 = '2'; // Output: ['a', 'b', 'c'];
+console.log(letterCombinations(digits));
+console.log(letterCombinations(digits1));
+console.log(letterCombinations(digits2));
