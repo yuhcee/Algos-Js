@@ -39,4 +39,8 @@ const combinationSum3 = (k, n) => {
             else break; // no need of checking numbers larger than remainig sum
         }
     }
+
+    recursive(n, k, 1, []);
+    // return result
+    return result;
 };
