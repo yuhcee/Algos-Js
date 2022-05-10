@@ -23,5 +23,11 @@ const combinationSum3 = (k, n) => {
     // sum is the remaining sum to be matched
     // count is the remaining count of numbers we need to include
     // start is the least number higher than the last added number
-    function recursive(sum, count, start, arr) {}
+    function recursive(sum, count, start, arr) {
+        // complete sum has been matched and all count has been exhausted
+        if (sum === 0 && count === 0) {
+            result.push([...arr]);
+            return;
+        }
+    }
 };
