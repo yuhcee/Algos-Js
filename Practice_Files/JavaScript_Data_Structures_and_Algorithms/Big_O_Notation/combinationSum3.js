@@ -33,5 +33,10 @@ const combinationSum3 = (k, n) => {
         // count has been exhausted but sum couldn't be matched
         // OR all remaining numbers are larger than remaining sum
         if (count === 0 || start > sum) return;
+
+        for (let i = start; i <= max; i++) {
+            if (i <= sum) recursive(sum - i, count - 1, i + 1, [...arr, i]);
+            else break; // no need of checking numbers larger than remainig sum
+        }
     }
 };
