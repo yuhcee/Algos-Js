@@ -29,5 +29,9 @@ const combinationSum3 = (k, n) => {
             result.push([...arr]);
             return;
         }
+
+        // count has been exhausted but sum couldn't be matched
+        // OR all remaining numbers are larger than remaining sum
+        if (count === 0 || start > sum) return;
     }
 };
