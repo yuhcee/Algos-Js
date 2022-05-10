@@ -16,7 +16,12 @@
  */
 const combinationSum3 = (k, n) => {
     // ensure digits is not larger than the number
-	let max = n >= 9 ? 9 : n;
+    let max = n >= 9 ? 9 : n;
     // init arr to return result
     let result = [];
+
+    // sum is the remaining sum to be matched
+    // count is the remaining count of numbers we need to include
+    // start is the least number higher than the last added number
+    function recursive(sum, count, start, arr) {}
 };
