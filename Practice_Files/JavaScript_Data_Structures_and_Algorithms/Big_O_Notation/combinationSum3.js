@@ -44,3 +44,30 @@ const combinationSum3 = (k, n) => {
     // return result
     return result;
 };
+
+const k = 3,
+    n = 7; // Output: [[1, 2, 4]];
+/* Explanation:
+1 + 2 + 4 = 7
+There are no other valid combinations. */
+
+const k1 = 3,
+    n1 = 9;
+/* Output: [
+    [1, 2, 6],
+    [1, 3, 5],
+    [2, 3, 4],
+]; */
+/* Explanation:
+1 + 2 + 6 = 9
+1 + 3 + 5 = 9
+2 + 3 + 4 = 9
+There are no other valid combinations. */
+const k2 = 4,
+    n2 = 1; // Output: []
+/* Explanation: There are no valid combinations.
+Using 4 different numbers in the range [1,9], the smallest sum we can get is 1+2+3+4 = 10 and since 10 > 1, there are no valid combination. */
+
+console.log(combinationSum3(k, n));
+console.log(combinationSum3(k1, n1));
+console.log(combinationSum3(k2, n2));
