@@ -14,4 +14,7 @@
  * @param {number} n
  * @return {number[][]}
  */
-const combinationSum3 = (k, n) => {};
+const combinationSum3 = (k, n) => {
+    // ensure digits is not larger than the number
+	let max = n >= 9 ? 9 : n;
+};
