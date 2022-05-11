@@ -7,7 +7,6 @@ const insertionSort = (arr) => {
             arr[j] = currentVal;
         }
     }
-
     return arr;
 };
 
