@@ -11,23 +11,24 @@
  * @return {string[]}
  */
 const letterCombinations = (digits) => {
-    const letters = buildCharacters();
+    const letters = { 2: ['a', 'b', 'c'], 3: ['d', 'e', 'f'], 4: ['g', 'h', 'i'], 5: ['j', 'k', 'l'], 6: ['m', 'n', 'o'], 7: ['p', 'q', 'r', 's'], 8: ['t', 'u', 'v'], 9: ['w', 'x', 'y', 'z'] };
 
     return digits.split('').reduce((prev, digit) => {
         if (prev.length === 0) return letters[digit];
 
-        const res = [];
+        let res = [];
 
         for (let l0 of prev) {
             for (let l1 of letters[digit]) {
                 res.push(`${l0}${l1}`);
             }
         }
+
         return res;
     }, []);
 };
 
-const buildCharacters = () => {
+/* const buildCharacters = () => {
     const graph = {};
     const chars = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
@@ -37,9 +38,9 @@ const buildCharacters = () => {
             graph[i] = chars.splice(0, 4);
         }
     }
-
     return graph;
-};
+}; */
+
 const digits = '23'; // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 const digits1 = ''; // Output: []
 const digits2 = '2'; // Output: ['a', 'b', 'c'];
