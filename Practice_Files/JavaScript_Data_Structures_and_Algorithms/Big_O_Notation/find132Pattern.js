@@ -8,16 +8,15 @@
  * @return {boolean}
  */
 var find132pattern = (nums) => {
-    let arr = [],
-        minimum = -Infinity;
+    let smallest = -Infinity,
+        arr = [];
 
     for (let i = nums.length - 1; i >= 0; i--) {
-        if (nums[i] < minimum) return true;
+        if (nums[i] < smallest) return true;
 
         while (arr.length > 0 && nums[i] > arr.at(-1)) {
-            minimum = arr.pop();
+            smallest = arr.pop();
         }
-
         arr.push(nums[i]);
     }
 
