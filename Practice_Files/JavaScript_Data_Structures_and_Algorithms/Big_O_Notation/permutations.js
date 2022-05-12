@@ -9,17 +9,17 @@
  */
 const permuteUnique = (nums) => {
     const sorted = nums.sort((a, b) => a - b),
-        permutataions = [];
+        permutations = [];
 
     const recurse = (arr, permutation) => {
-        if (!arr.length) return permutataions.push(permutation);
+        if (!arr.length) return permutations.push(permutation);
 
         let previous = -Infinity;
 
         for (let i = 0; i < arr.length; i++) {
             if (previous === arr[i]) continue;
 
-            let newArr = arr.slice(0, i).concat(arr.slice(0 + 1));
+            let newArr = arr.slice(0, i).concat(arr.slice(i + 1));
             recurse(newArr, [...permutation, arr[i]]);
 
             previous = arr[i];
@@ -27,5 +27,24 @@ const permuteUnique = (nums) => {
     };
     recurse(sorted, []);
 
-    return permutataions;
+    return permutations;
 };
+
+const nums = [1, 1, 2];
+/* Output:
+[[1,1,2],
+ [1,2,1],
+ [2,1,1]] */
+
+const nums1 = [1, 2, 3];
+/* Output: [
+    [1, 2, 3],
+    [1, 3, 2],
+    [2, 1, 3],
+    [2, 3, 1],
+    [3, 1, 2],
+    [3, 2, 1],
+]; */
+
+console.log(permuteUnique(nums));
+console.log(permuteUnique(nums1));
