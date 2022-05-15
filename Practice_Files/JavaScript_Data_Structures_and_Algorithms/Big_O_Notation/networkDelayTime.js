@@ -16,12 +16,10 @@
 const networkDelayTime = (times, n, k) => {
     // Initially we assume the time-taken to reach each node is a large value. Math.min() --> without any args will be large val (Infinity).
     let nodes = new Array(n).fill(Math.min());
-    nodes;
 
     // K is staring node where we get the signal initally.So we dont have to wait for it.
     // since its array we assign k-1(index) as 0.
     nodes[k - 1] = 0;
-    console.log(nodes);
 
     // iterate until we have found actual time for the signal
     let shouldComputeTime = true;
@@ -48,7 +46,6 @@ const networkDelayTime = (times, n, k) => {
             }
         }
     }
-    nodes;
     // the max value will be time taken to reach since its the last node
     let maxTimeToLastNode = Math.max(...nodes);
     // sometimes we wouldnt have recomputed again In that case there is no chance the signal would reach the end node so return -1
