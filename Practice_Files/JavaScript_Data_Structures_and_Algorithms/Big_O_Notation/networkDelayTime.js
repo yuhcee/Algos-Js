@@ -34,6 +34,9 @@ const networkDelayTime = (times, n, k) => {
             // decrementing because we need to access our actualTimeTaken array(index-based)
             src -= 1;
             target -= 1;
+
+            // if source itself is large, it means we havent found a way to reach the source so just continue with next nodes
+            if (nodes[src] === Math.min()) continue;
         }
     }
 };
