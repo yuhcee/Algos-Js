@@ -48,9 +48,11 @@ const networkDelayTime = (times, n, k) => {
             }
         }
     }
-    nodes
+    nodes;
     // the max value will be time taken to reach since its the last node
     let maxTimeToLastNode = Math.max(...nodes);
+    // sometimes we wouldnt have recomputed again In that case there is no chance the signal would reach the end node so return -1
+    return maxTimeToLastNode === Infinity ? -1 : maxTimeToLastNode;
 };
 
 const times = [
@@ -60,5 +62,14 @@ const times = [
     ],
     n = 4,
     k = 2; // Output: 2;
+const times1 = [[1, 2, 1]],
+    n1 = 2,
+    k1 = 1; // Output: 1
+
+const times2 = [[1, 2, 1]],
+    n2 = 2,
+    k2 = 2; // Output: -1;
 
 console.log(networkDelayTime(times, n, k));
+console.log(networkDelayTime(times1, n1, k1));
+console.log(networkDelayTime(times2, n2, k2));
