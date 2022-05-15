@@ -48,6 +48,9 @@ const networkDelayTime = (times, n, k) => {
             }
         }
     }
+    nodes
+    // the max value will be time taken to reach since its the last node
+    let maxTimeToLastNode = Math.max(...nodes);
 };
 
 const times = [
