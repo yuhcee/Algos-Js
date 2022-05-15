@@ -37,6 +37,15 @@ const networkDelayTime = (times, n, k) => {
 
             // if source itself is large, it means we havent found a way to reach the source so just continue with next nodes
             if (nodes[src] === Math.min()) continue;
+
+            // if not checking if time taken to reach target is lesser than what we assumed in our array
+            /* If so, then change its time to correct time and now we need to iterate again from beginning in the next cycle
+			because we have changed a time and now we need to recompute according to this time. */
+            if (nodes[target] > nodes[src] + timeTaken) {
+                nodes[target] = nodes[src] + timeTaken;
+                // we need to recompute again as we did changes to a particular node's time
+                shouldComputeTime = true;
+            }
         }
     }
 };
