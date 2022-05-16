@@ -1,9 +1,9 @@
 /**
- * *31. Next Permutation*
+ * **31. Next Permutation**
  *
- * A permutation of an array of integers is an arrangement of its members into a sequence or linear order.
+ * A **permutation** of an array of integers is an arrangement of its members into a sequence or linear order.
  *
- * For example, for arr = [1,2,3], the following are considered permutations of arr: [12,3], [1,3,2], [3,1,2], [2,3,1].
+ * For example, for `arr = [1,2,3]`, the following are considered permutations of arr: `[1,2,3]`, `[1,3,2]`, `[3,1,2]`, `[2,3,1]`.
  *
  * The next permutation of an array of integers is the next lexicographically greater
  * permutation of its integer. More formally, if all the permutations of the array are
@@ -39,7 +39,7 @@ const nextPermutation = (nums) => {
 
     //if we dont get first index we will just reverse the array
     if (first_index < 0) {
-        nums.reverse();
+        return nums.reverse();
     } else {
         //get second index from last
         for (second_index = last_index; second_index > first_index; second_index--) {
