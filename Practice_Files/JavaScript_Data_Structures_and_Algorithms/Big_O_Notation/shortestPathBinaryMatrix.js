@@ -67,3 +67,21 @@ const shortestPathBinaryMatrix = (grid) => {
     }
     return -1;
 };
+
+const grid = [
+    [0, 0, 0],
+    [1, 1, 0],
+    [1, 1, 0],
+]; // Output: 4
+const grid1 = [
+    [1, 0, 0],
+    [1, 1, 0],
+    [1, 1, 0],
+]; // Output: -1
+const grid2 = [
+    [0, 1],
+    [1, 0],
+]; // Output: 2
+console.log(shortestPathBinaryMatrix(grid));
+console.log(shortestPathBinaryMatrix(grid1));
+console.log(shortestPathBinaryMatrix(grid2));
