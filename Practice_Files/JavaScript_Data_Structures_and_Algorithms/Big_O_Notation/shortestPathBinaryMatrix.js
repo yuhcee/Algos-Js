@@ -61,6 +61,9 @@ const shortestPathBinaryMatrix = (grid) => {
                 }
             }
         }
-        
+        if (nextTasks.length > 0) {
+            queue.push(nextTasks);
+        }
     }
+    return -1;
 };
