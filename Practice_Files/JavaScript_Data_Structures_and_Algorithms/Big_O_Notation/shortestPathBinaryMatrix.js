@@ -41,6 +41,13 @@ const shortestPathBinaryMatrix = (grid) => {
     while (queue.length > 0) {
         const tasks = queue.pop(),
             nextTasks = [];
-            
+        distance += 1;
+
+        for (let [x, y] of tasks) {
+            for (let [dirX, dirY] of dirs) {
+                const x2 = x + dirX;
+                const y2 = y + dirY;
+            }
+        }
     }
 };
