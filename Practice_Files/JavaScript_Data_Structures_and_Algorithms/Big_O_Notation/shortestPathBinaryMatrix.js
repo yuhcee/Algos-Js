@@ -23,4 +23,24 @@ const shortestPathBinaryMatrix = (grid) => {
 
     // if only one open cell, return 1
     if (n === 0 && grid[0][0] === 0) return 1;
+
+    const queue = [[[0, 0]]],
+        dirs = [
+            [-1, 0],
+            [0, -1],
+            [-1, -1],
+            [-1, 1],
+            [1, 0],
+            [0, 1],
+            [1, 1],
+            [1, -1],
+        ];
+    grid[0][0] = 1;
+    let distance = 0;
+
+    while (queue.length > 0) {
+        const tasks = queue.pop(),
+            nextTasks = [];
+            
+    }
 };
