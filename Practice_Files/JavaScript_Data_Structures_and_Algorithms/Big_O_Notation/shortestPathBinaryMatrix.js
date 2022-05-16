@@ -47,7 +47,20 @@ const shortestPathBinaryMatrix = (grid) => {
             for (let [dirX, dirY] of dirs) {
                 const x2 = x + dirX;
                 const y2 = y + dirY;
+
+                if (x2 >= 0 && y2 >= 0 && x2 <= n && y2 <= n) {
+                    if (grid[y2][x2] !== 1) {
+                        nextTasks.push([x2, y2]);
+
+                        grid[y2][x2] = 1;
+
+                        if (x2 === n && y2 === n) {
+                            return distance + 1;
+                        }
+                    }
+                }
             }
         }
+        
     }
 };
