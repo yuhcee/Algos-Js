@@ -20,4 +20,7 @@ const shortestPathBinaryMatrix = (grid) => {
 
     // return -1 if there's no movements
     if (grid[0][0] || grid[n][n]) return -1;
+
+    // if only one open cell, return 1
+    if (n === 0 && grid[0][0] === 0) return 1;
 };
