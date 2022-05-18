@@ -70,3 +70,13 @@ const buildAdjList = (n, connections) => {
 
     return adj;
 };
+
+const n = 4,
+    connections = [
+        [0, 1],
+        [1, 2],
+        [2, 0],
+        [1, 3],
+    ];
+// Output: [[1, 3]];
+console.log(criticalConnections(n, connections));
