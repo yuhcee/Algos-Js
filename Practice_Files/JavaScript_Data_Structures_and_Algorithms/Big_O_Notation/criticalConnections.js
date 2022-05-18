@@ -30,7 +30,21 @@ const criticalConnections = (n, connections) => {
         
         discovery[i] = min[i] = distance++;
         
-        
+        for (const v of adj[i]) {
+            if (!visited[v]) {
+                parent[v] = i;
+                
+                traverse(v);
+                
+                min[i] = Math.min(min[i], min[v]);
+                
+                if (min[v] > discovery[i]) {
+                    results.push([i, v]);
+                }
+            } else if (v !== parent[i]) {
+                min[i]  = Math.min(min[i], discovery[v]);
+            }
+        }
     }
 };
 
