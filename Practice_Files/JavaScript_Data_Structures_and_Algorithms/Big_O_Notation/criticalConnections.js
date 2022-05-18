@@ -15,3 +15,18 @@
  * @return {number[][]}
  */
 const criticalConnections = (n, connections) => {};
+
+const buildAdjList = (n, connections) => {
+    const adj = [];
+
+    for (let i = 0; i < n; i++) {
+        adj[i] = [];
+    }
+
+    for (let [a, b] of connections) {
+        adj[a].push(b);
+        adj[b].push(a);
+    }
+
+    return adj;
+};
