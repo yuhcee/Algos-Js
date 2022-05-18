@@ -14,7 +14,19 @@
  * @param {number[][]} connections
  * @return {number[][]}
  */
-const criticalConnections = (n, connections) => {};
+const criticalConnections = (n, connections) => {
+    const adj = buildAdjList(n, connections);
+
+    const visited = Array(n).fill(false);
+    const discovery = Array(n).fill(0);
+    const min = Array(n).fill(0);
+    const parent = Array(n).fill(-1);
+    const results = [];
+
+    let distance = 1;
+
+    
+};
 
 const buildAdjList = (n, connections) => {
     const adj = [];
