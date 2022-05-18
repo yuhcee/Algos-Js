@@ -27,25 +27,33 @@ const criticalConnections = (n, connections) => {
 
     function traverse(i) {
         visited[i] = true;
-        
+
         discovery[i] = min[i] = distance++;
-        
+
         for (const v of adj[i]) {
             if (!visited[v]) {
                 parent[v] = i;
-                
+
                 traverse(v);
-                
+
                 min[i] = Math.min(min[i], min[v]);
-                
+
                 if (min[v] > discovery[i]) {
                     results.push([i, v]);
                 }
             } else if (v !== parent[i]) {
-                min[i]  = Math.min(min[i], discovery[v]);
+                min[i] = Math.min(min[i], discovery[v]);
             }
         }
     }
+
+    for (let i = 0; i < n; i++) {
+        if (!visited[i]) {
+            traverse(i);
+        }
+    }
+
+    return results;
 };
 
 const buildAdjList = (n, connections) => {
