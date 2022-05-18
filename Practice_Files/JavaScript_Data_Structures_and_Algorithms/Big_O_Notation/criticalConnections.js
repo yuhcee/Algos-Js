@@ -25,7 +25,13 @@ const criticalConnections = (n, connections) => {
 
     let distance = 1;
 
-    
+    function traverse(i) {
+        visited[i] = true;
+        
+        discovery[i] = min[i] = distance++;
+        
+        
+    }
 };
 
 const buildAdjList = (n, connections) => {
