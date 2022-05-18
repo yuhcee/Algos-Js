@@ -79,4 +79,7 @@ const n = 4,
         [1, 3],
     ];
 // Output: [[1, 3]];
-console.log(criticalConnections(n, connections));
+const n1 = 2,
+    connections1 = [[0, 1]];
+// Output: [[0,1]]
+console.log(criticalConnections(n1, connections1));
