@@ -14,4 +14,18 @@ const longestIncreasingPath = (matrix) => {
     const cols = matrix[0].length;
 
     let cache = [];
+    let res = 0,
+        { max } = Math;
+
+    for (let i = 0; i < cols.length; i++) {
+        cache.push([]);
+    }
+
+    for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+            res = max(move(row, col, undefined, cache, rows, cols));
+        }
+    }
 };
+
+
