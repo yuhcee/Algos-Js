@@ -20,7 +20,7 @@ const uniquePathsWithObstacles = (obstacleGrid) => {
     const C = obstacleGrid[0].length;
 
     const explore = (r, c, memo = {}) => {
-        if (obstacleGrid[r] === undefined || obstacleGrid[r][c] === undefined || obstacleGrid[r][c] === 1) return 1;
+        if (obstacleGrid[r] === undefined || obstacleGrid[r][c] === undefined || obstacleGrid[r][c] === 1) return 0;
 
         if (r === R - 1 && c === C - 1) return 1;
 
@@ -37,3 +37,18 @@ const uniquePathsWithObstacles = (obstacleGrid) => {
     return explore(0, 0);
 };
 
+const obstacleGrid = [
+    [0, 0, 0],
+    [0, 1, 0],
+    [0, 0, 0],
+]; // Output: 2
+/* Explanation: There is one obstacle in the middle of the 3x3 grid above.
+There are two ways to reach the bottom-right corner:
+1. Right -> Right -> Down -> Down
+2. Down -> Down -> Right -> Right */
+const obstacleGrid1 = [
+    [0, 1],
+    [0, 0],
+]; // Output: 1
+console.log(uniquePathsWithObstacles(obstacleGrid));
+console.log(uniquePathsWithObstacles(obstacleGrid1));
