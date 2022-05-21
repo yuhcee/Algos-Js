@@ -15,4 +15,25 @@
  * @param {number[][]} obstacleGrid
  * @return {number}
  */
-const uniquePathsWithObstacles = (obstacleGrid) => {};
+const uniquePathsWithObstacles = (obstacleGrid) => {
+    const R = obstacleGrid.length;
+    const C = obstacleGrid[0].length;
+
+    const explore = (r, c, memo = {}) => {
+        if (obstacleGrid[r] === undefined || obstacleGrid[r][c] === undefined || obstacleGrid[r][c] === 1) return 1;
+
+        if (r === R - 1 && c === C - 1) return 1;
+
+        let key = r + ',' + c;
+        if (key in memo) return memo[key];
+
+        if (obstacleGrid[r][c] === 0) {
+            memo[key] = explore(r + 1, c, memo) + explore(r, c + 1, memo);
+        }
+
+        return memo[key];
+    };
+
+    return explore(0, 0);
+};
+
