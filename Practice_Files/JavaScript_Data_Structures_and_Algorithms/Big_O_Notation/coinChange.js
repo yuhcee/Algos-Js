@@ -27,3 +27,11 @@ var coinChange = (coins, amount) => {
 
     return ans === Number.MAX_VALUE ? -1 : ans;
 };
+
+const coins = [1, 2, 5],
+    amount = 11; // Output: 3
+// Explanation: 11 = 5 + 5 + 1
+const coins1 = [2],
+    amount1 = 3; // Output: -1;
+const coins2 = [1],
+    amount2 = 0; // Output: 0;
