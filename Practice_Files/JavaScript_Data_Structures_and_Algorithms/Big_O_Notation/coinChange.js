@@ -35,3 +35,7 @@ const coins1 = [2],
     amount1 = 3; // Output: -1;
 const coins2 = [1],
     amount2 = 0; // Output: 0;
+
+console.log(coinChange(coins, amount));
+console.log(coinChange(coins1, amount1));
+console.log(coinChange(coins2, amount2));``
