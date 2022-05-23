@@ -16,7 +16,7 @@ const countSubstrings = (s) => {
     let count = 0;
 
     for (let i = 0; i < len; i++) {
-        dp[i] = Array(n).fill(false);
+        dp[i] = Array(len).fill(false);
         dp[i][i] = true;
         count++;
     }
@@ -33,5 +33,14 @@ const countSubstrings = (s) => {
         }
     }
 
-    return count
+    return count;
 };
+const s = 'abc';
+// Output: 3
+// Explanation: Three palindromic strings: "a", "b", "c".
+console.log(countSubstrings(s));
+
+const s1 = "aaa"
+// Output: 6
+// Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
+console.log(countSubstrings(s1));
