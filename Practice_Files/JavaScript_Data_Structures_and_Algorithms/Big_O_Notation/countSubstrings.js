@@ -14,4 +14,10 @@ const countSubstrings = (s) => {
     const len = s.length;
     const dp = [];
     let count = 0;
+
+    for (let i = 0; i < len; i++) {
+        dp[i] = Array(n).fill(false);
+        dp[i][i] = true;
+        count++;
+    }
 };
