@@ -20,4 +20,18 @@ const countSubstrings = (s) => {
         dp[i][i] = true;
         count++;
     }
+
+    for (let j = 1; j < len; j++) {
+        const rowEnd = len - j;
+        for (let row = 0, col = j; row < rowEnd; row++, col++) {
+            if (s.charAt(row) === s.charAt(col)) {
+                if (j === 1 || dp[row + 1][col - 1] === true) {
+                    dp[row][col] = true;
+                    count++;
+                }
+            }
+        }
+    }
+
+    return count
 };
