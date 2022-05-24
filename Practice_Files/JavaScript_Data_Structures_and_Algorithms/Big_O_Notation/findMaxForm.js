@@ -13,5 +13,11 @@
  * @return {number}
  */
 const findMaxForm = (S, M, N) => {
-    let dp = Array.from({length:M+1},() => new Uint8Array(N+1));
+    let dp = Array.from({ length: M + 1 }, () => new Uint8Array(N + 1));
+
+    for (let i = 0; i < S.length; i++) {
+        let str = S[i],
+            zeros = 0,
+            ones = 0;
+    }
 };
