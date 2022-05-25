@@ -18,6 +18,15 @@ const maxEnvelopes = (envelopes) => {
     const len = envelopes.length;
     // sort by width
     envelopes.sort((a, b) => (a[0] === b[0] ? b[1] - a[1] : a[0] - b[0]));
+    envelopes
+
+    // lis
+    let dp = [envelopes[0][1]];
+    dp
+
+    for(let i = 1; i < len; i++){
+        
+    }
 };
 const envelopes = [
     [5, 4],
