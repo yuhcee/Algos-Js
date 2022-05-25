@@ -15,7 +15,6 @@
  * @return {number}
  */
 const maxEnvelopes = (envelopes) => {};
-
 const envelopes = [
     [5, 4],
     [6, 4],
