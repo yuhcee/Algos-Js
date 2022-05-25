@@ -10,7 +10,7 @@
 
 // Using Stack
 const longestValidParentheses = (s) => {
-    const max = 0,
+    let max = 0,
         stack = [];
     stack.push(-1);
 
@@ -27,3 +27,12 @@ const longestValidParentheses = (s) => {
     }
     return max;
 };
+
+const s = '(()';
+// Output: 2
+// Explanation: The longest valid parentheses substring is "()".
+console.log(longestValidParentheses(s));
+const s1 = ')()())';
+// Output: 4
+// Explanation: The longest valid parentheses substring is "()()".
+console.log(longestValidParentheses(s1));
