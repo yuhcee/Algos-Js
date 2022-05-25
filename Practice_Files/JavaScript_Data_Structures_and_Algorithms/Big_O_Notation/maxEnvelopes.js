@@ -14,7 +14,11 @@
  * @param {number[][]} envelopes
  * @return {number}
  */
-const maxEnvelopes = (envelopes) => {};
+const maxEnvelopes = (envelopes) => {
+    const len = envelopes.length;
+    // sort by width
+    envelopes.sort((a, b) => (a[0] === b[0] ? b[1] - a[1] : a[0] - b[0]));
+};
 const envelopes = [
     [5, 4],
     [6, 4],
