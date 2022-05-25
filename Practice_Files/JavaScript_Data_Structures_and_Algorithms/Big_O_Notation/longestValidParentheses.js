@@ -9,7 +9,7 @@
  */
 
 // Using Stack
-/* const longestValidParentheses = (s) => {
+const longestValidParentheses = (s) => {
     let max = 0,
         stack = [];
     stack.push(-1);
@@ -26,10 +26,10 @@
         }
     }
     return max;
-}; */
+};
 
 // Using Dynamic Programming
-function longestValidParentheses(s) {
+/* function longestValidParentheses(s) {
     // maxLength variable is used to monitor the maximum length of the valid substring
     // every time we fall in condition a. or b.
     // by using it we don't need to find the maximum value in the resulting dp array
@@ -52,7 +52,7 @@ function longestValidParentheses(s) {
         }
     }
     return maxLength;
-}
+} */
 
 const s = '(()';
 // Output: 2
