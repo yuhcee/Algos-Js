@@ -29,3 +29,7 @@ const n = 00000000000000000000000000001011;
 // Output: 3;
 // Explanation: The input binary string 00000000000000000000000000001011 has a total of three '1' bits.
 console.log(hammingWeight(n));
+const n1 = 00000000000000000000000010000000;
+// Output: 1
+// Explanation: The input binary string 00000000000000000000000010000000 has a total of one '1' bit.
+console.log(hammingWeight(n1));
