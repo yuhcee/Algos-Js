@@ -15,4 +15,6 @@
  * @param {number} n - a positive integer
  * @return {number}
  */
-const hammingWeight = (n) => {};
+const hammingWeight = (n) => {
+    let sum = 0;
+};
