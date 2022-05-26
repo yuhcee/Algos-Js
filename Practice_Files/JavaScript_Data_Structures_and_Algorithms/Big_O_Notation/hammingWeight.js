@@ -20,8 +20,12 @@ const hammingWeight = (n) => {
 
     while (n !== 0) {
         sum++;
-        n &= (n - 1);
+        n &= n - 1;
     }
 
     return sum;
 };
+const n = 00000000000000000000000000001011;
+// Output: 3;
+// Explanation: The input binary string 00000000000000000000000000001011 has a total of three '1' bits.
+console.log(hammingWeight(n));
