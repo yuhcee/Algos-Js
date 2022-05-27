@@ -23,3 +23,7 @@ const numberOfSteps = (num) => {
     return steps;
 };
 
+console.log(numberOfSteps(14));
+console.log(numberOfSteps(8));
+console.log(numberOfSteps(123));
+console.log(numberOfSteps(54038));
