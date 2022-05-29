@@ -24,3 +24,8 @@ const maxProduct = (words) => {
     }
     return res;
 };
+
+const words = ['abcw', 'baz', 'foo', 'bar', 'xtfn', 'abcdef'];
+// Output: 16;
+// Explanation: The two words can be "abcw", "xtfn".
+console.log(maxProduct(words));
