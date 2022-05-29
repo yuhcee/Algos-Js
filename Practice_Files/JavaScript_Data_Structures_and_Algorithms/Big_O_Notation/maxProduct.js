@@ -31,5 +31,9 @@ const words = ['abcw', 'baz', 'foo', 'bar', 'xtfn', 'abcdef'];
 console.log(maxProduct(words));
 const words1 = ['a', 'ab', 'abc', 'd', 'cd', 'bcd', 'abcd'];
 // Output: 4;
+// Explanation: The two words can be "ab", "cd".
 console.log(maxProduct(words1));
-
+const words2 = ['a', 'aa', 'aaa', 'aaaa'];
+// Output: 0;
+// Explanation: No such pair of words.
+console.log(maxProduct(words2));
