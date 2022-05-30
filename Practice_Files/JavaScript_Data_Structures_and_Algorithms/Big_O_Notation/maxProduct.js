@@ -73,3 +73,7 @@ const words4 = ['a', 'ab', 'abc', 'd', 'cd', 'bcd', 'abcd'];
 // Output: 4;
 // Explanation: The two words can be "ab", "cd".
 console.log(maxProductFC(words4));
+const words6 = ['a', 'aa', 'aaa', 'aaaa'];
+// Output: 0;
+// Explanation: No such pair of words.
+console.log(maxProductFC(words6));
