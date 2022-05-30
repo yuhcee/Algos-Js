@@ -37,3 +37,57 @@ const words2 = ['a', 'aa', 'aaa', 'aaaa'];
 // Output: 0;
 // Explanation: No such pair of words.
 console.log(maxProduct(words2));
+
+
+// Solution #2: Array of Letters' Occurrence
+// var maxProduct = function(words) {
+//     const bits = words.map(word => {
+//         let bits = new Int8Array(26);
+//         for (let letter of word) bits[letter.charCodeAt(0) - 97] = 1;
+		
+//         return bits;
+//     });
+    
+//     const shareCommonLetter = (bits1, bits2) => {
+//         for (let i = 0; i < 26; i++)
+//             if (bits1[i] && bits2[i]) return true;
+        
+//         return false;
+//     };
+    
+//     let res = 0;
+//     for (let i = 0; i < words.length - 1; i++) {
+//         for (let j = i + 1; j < words.length; j++) {
+//             if (!shareCommonLetter(bits[i], bits[j])) {
+//                 let prod = words[i].length * words[j].length;
+//                 if (prod > res) res = prod;
+//             }
+//         }            
+//     }
+    
+//     return res;
+// };
+
+// Solution #3: Bitwise
+// var maxProduct = function(words) {
+//     // map every word to bits(occurence of letters)
+//     // "abc" or "aabbcc" => 111(7)
+//     // "bcd" => 1110(14)
+//     const bits = words.map(word => {
+//         let bits = 0;
+//         for (let letter of word) 
+//             bits |= 1 << (letter.charCodeAt(0) - 97);
+        
+//         return bits;
+//     });
+    
+//     let res = 0;
+//     for (let i = 0; i < words.length - 1; i++) {
+//         for (let j = i + 1; j < words.length; j++) {
+//             let prod = words[i].length * words[j].length;
+//             // when bits[i] & bits[j] > 0, words[i] and words[j] share common letters
+//             if (prod > res && !(bits[i] & bits[j])) res = prod;
+//         }            
+//     }
+//     return res;
+// };
