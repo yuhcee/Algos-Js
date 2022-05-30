@@ -46,5 +46,11 @@ var maxProduct = function (words) {
         return bits;
     });
 
+    const shareCommonLetter = (bits1, bits2) => {
+        for (let i = 0; i < 26; i++) if (bits1[i] && bits2[i]) return true;
+
+        return false;
+    };
+
     
 };
