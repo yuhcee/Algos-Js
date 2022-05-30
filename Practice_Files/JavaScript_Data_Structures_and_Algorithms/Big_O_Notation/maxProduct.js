@@ -39,7 +39,7 @@ const words2 = ['a', 'aa', 'aaa', 'aaaa'];
 console.log(maxProduct(words2));
 
 // Solution #2: Array of Letters' Occurrence
-var maxProduct = function (words) {
+var maxProductFC = function (words) {
     const bits = words.map((word) => {
         let bits = new Int8Array(26);
         for (let letter of word) bits[letter.charCodeAt(0) - 97] = 1;
@@ -64,3 +64,8 @@ var maxProduct = function (words) {
 
     return res;
 };
+
+const words3 = ['abcw', 'baz', 'foo', 'bar', 'xtfn', 'abcdef'];
+// Output: 16;
+// Explanation: The two words can be "abcw", "xtfn".
+console.log(maxProductFC(words3));
