@@ -69,3 +69,7 @@ const words3 = ['abcw', 'baz', 'foo', 'bar', 'xtfn', 'abcdef'];
 // Output: 16;
 // Explanation: The two words can be "abcw", "xtfn".
 console.log(maxProductFC(words3));
+const words4 = ['a', 'ab', 'abc', 'd', 'cd', 'bcd', 'abcd'];
+// Output: 4;
+// Explanation: The two words can be "ab", "cd".
+console.log(maxProductFC(words4));
