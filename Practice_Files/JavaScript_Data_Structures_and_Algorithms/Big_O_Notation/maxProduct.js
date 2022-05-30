@@ -52,5 +52,15 @@ var maxProduct = function (words) {
         return false;
     };
 
-    
+    let res = 0;
+    for (let i = 0; i < words.length - 1; i++) {
+        for (let j = i + 1; j < words.length; j++) {
+            if (!shareCommonLetter(bits[i], bits[j])) {
+                let prod = words[i].length * words[j].length;
+                if (prod > res) res = prod;
+            }
+        }
+    }
+
+    return res;
 };
