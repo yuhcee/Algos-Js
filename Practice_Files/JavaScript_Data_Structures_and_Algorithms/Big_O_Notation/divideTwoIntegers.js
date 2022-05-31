@@ -32,6 +32,12 @@ const divide = (dividend, divisor) => {
     // Sign of result
     const sign = (dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0) ? -1 : 1;
 
+    // Quotient
+    let quotient = 0;
+    // Take the absolute value
+    let absoluteDividend = Math.abs(dividend);
+    let absoluteDivisor = Math.abs(divisor);
+
     
 };
 
