@@ -56,6 +56,8 @@ const divide = (dividend, divisor) => {
 
         // Add the number of times we shifted to the quotient
         quotient += 1 << (shift - 1);
+        // Update the dividend for the next iteration
+        absoluteDividend -= absoluteDivisor << (shift - 1);
     }
 };
 
