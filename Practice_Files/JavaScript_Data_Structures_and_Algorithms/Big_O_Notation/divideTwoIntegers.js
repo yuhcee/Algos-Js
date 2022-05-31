@@ -38,7 +38,9 @@ const divide = (dividend, divisor) => {
     let absoluteDividend = Math.abs(dividend);
     let absoluteDivisor = Math.abs(divisor);
 
-    
+    // Loop until the  dividend is greater than divisor
+    while (absoluteDividend >= absoluteDivisor) {
+    }
 };
 
 const dividend = 10,
