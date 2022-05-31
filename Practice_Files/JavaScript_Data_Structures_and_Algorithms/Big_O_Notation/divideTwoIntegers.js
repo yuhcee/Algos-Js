@@ -24,3 +24,9 @@ const dividend = 10,
 // Output: 3;
 // Explanation: 10/3 = 3.33333.. which is truncated to 3.
 console.log(divide(dividend, divisor));
+
+const dividend1 = 7,
+    divisor1 = -3;
+// Output: -2;
+// Explanation: 7/-3 = -2.33333.. which is truncated to -2.
+console.log(divide(dividend1, divisor1));
