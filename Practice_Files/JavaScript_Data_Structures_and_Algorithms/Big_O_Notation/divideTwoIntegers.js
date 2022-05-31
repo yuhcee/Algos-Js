@@ -29,6 +29,9 @@ const divide = (dividend, divisor) => {
         return 1;
     }
 
+    // Sign of result
+    const sign = (dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0) ? -1 : 1;
+
     
 };
 
