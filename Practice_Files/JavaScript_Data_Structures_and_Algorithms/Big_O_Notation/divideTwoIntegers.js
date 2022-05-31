@@ -44,6 +44,16 @@ const divide = (dividend, divisor) => {
         // how many times we can double the number
         let shift = 0;
         let shiftedDivisor = absoluteDivisor;
+        while (absoluteDividend >= shiftedDivisor) {
+            shift++;
+            shiftedDivisor = absoluteDivisor << shift;
+
+            // To handle overflow using left shift operator in JS
+            if (shiftedDivisor < 0) {
+                break;
+            }
+        }
+
     }
 };
 
