@@ -40,6 +40,10 @@ const divide = (dividend, divisor) => {
 
     // Loop until the  dividend is greater than divisor
     while (absoluteDividend >= absoluteDivisor) {
+        // This represents the number of bits shifted or
+        // how many times we can double the number
+        let shift = 0;
+        let shiftedDivisor = absoluteDivisor;
     }
 };
 
