@@ -59,6 +59,7 @@ const divide = (dividend, divisor) => {
         // Update the dividend for the next iteration
         absoluteDividend -= absoluteDivisor << (shift - 1);
     }
+    return sign === -1 ? -quotient : quotient;
 };
 
 const dividend = 10,
