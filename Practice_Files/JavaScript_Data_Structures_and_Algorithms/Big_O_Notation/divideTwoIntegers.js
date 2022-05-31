@@ -17,7 +17,20 @@
  * @param {number} divisor
  * @return {number}
  */
-const divide = (dividend, divisor) => {};
+const divide = (dividend, divisor) => {
+    const MAX = 2147483647;
+    const MIN = -2147483648;
+
+    // Check for overflow
+    if (divisor === 0 || (dividend === MIN && divisor === -1)) {
+        return MAX;
+    }
+    if (divisor === dividend) {
+        return 1;
+    }
+
+    
+};
 
 const dividend = 10,
     divisor = 3;
