@@ -28,3 +28,9 @@ const s = '00110110',
 // Output: true;
 // Explanation: The binary codes of length 2 are "00", "01", "10" and "11". They can be all found as substrings at indices 0, 1, 3 and 2 respectively.
 console.log(hasAllCodes(s, k));
+
+const s1 = '0110',
+    k1 = 1;
+// Output: true;
+// Explanation: The binary codes of length 1 are "0" and "1", it is clear that both exist as a substring.
+console.log(hasAllCodes(s1, k1));
