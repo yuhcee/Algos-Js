@@ -34,3 +34,8 @@ const s1 = '0110',
 // Output: true;
 // Explanation: The binary codes of length 1 are "0" and "1", it is clear that both exist as a substring.
 console.log(hasAllCodes(s1, k1));
+const s2 = '0110',
+    k2 = 2;
+// Output: false;
+// Explanation: The binary code "00" is of length 2 and does not exist in the array.
+console.log(hasAllCodes(s2, k2));
