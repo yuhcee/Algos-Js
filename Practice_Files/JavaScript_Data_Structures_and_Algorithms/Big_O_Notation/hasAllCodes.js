@@ -17,6 +17,9 @@ const hasAllCodes = (s, k) => {
         if (!got.has(a)) {
             got.add(a);
             need--;
+            // return when found all occurrences
+            if (need === 0) return true;
         }
     }
+    return false;
 };
