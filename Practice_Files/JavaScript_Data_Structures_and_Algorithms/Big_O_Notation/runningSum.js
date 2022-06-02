@@ -23,3 +23,7 @@ const nums1 = [1, 1, 1, 1, 1];
 // Output: [1, 2, 3, 4, 5];
 // Explanation: Running sum is obtained as follows: [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1].
 console.log(runningSum(nums1));
+
+const nums2 = [3, 1, 2, 10, 1];
+// Output: [3,4,6,16,17]
+console.log(runningSum(nums2));
