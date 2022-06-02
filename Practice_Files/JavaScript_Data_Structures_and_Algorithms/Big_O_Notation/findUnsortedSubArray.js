@@ -29,3 +29,10 @@ var findUnsortedSubarray = function (nums) {
 
     return end <= start ? 0 : end - start + 1;
 };
+
+const nums = [2, 6, 4, 8, 10, 9, 15]; // Output: 5
+const nums1 = [1, 2, 3, 4]; // Output: 0
+const nums2 = [1]; // Output: 0
+console.log(findUnsortedSubarray(nums));
+console.log(findUnsortedSubarray(nums1));
+console.log(findUnsortedSubarray(nums2));
