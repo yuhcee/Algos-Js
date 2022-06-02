@@ -12,7 +12,7 @@ const hasAllCodes = (s, k) => {
     let need = 1 << k;
     let got = new Set();
 
-    for (let i = 0; i < s.length; i++) {
+    for (let i = k; i < s.length; i++) {
         let a = s.substring(i - k, i);
         if (!got.has(a)) {
             got.add(a);
