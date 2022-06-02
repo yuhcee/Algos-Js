@@ -20,10 +20,10 @@ const combinationSum3 = (k, n) => {
     // init arr to return result
     let result = [];
 
-    // sum is the remaining sum to be matched
     // count is the remaining count of numbers we need to include
+    // sum is the remaining sum to be matched
     // start is the least number higher than the last added number
-    function recursive(sum, count, start, arr) {
+    function recursive(count, sum, start, arr) {
         // complete sum has been matched and all count has been exhausted
         if (sum === 0 && count === 0) {
             result.push([...arr]);
@@ -35,12 +35,12 @@ const combinationSum3 = (k, n) => {
         if (count === 0 || start > sum) return;
 
         for (let i = start; i <= max; i++) {
-            if (i <= sum) recursive(sum - i, count - 1, i + 1, [...arr, i]);
+            if (i <= sum) recursive(count - 1, sum - i, i + 1, [...arr, i]);
             else break; // no need of checking numbers larger than remainig sum
         }
     }
 
-    recursive(n, k, 1, []);
+    recursive(k, n, 1, []);
     // return result
     return result;
 };
@@ -69,5 +69,5 @@ const k2 = 4,
 Using 4 different numbers in the range [1,9], the smallest sum we can get is 1+2+3+4 = 10 and since 10 > 1, there are no valid combination. */
 
 console.log(combinationSum3(k, n));
-console.log(combinationSum3(k1, n1));
-console.log(combinationSum3(k2, n2));
+// console.log(combinationSum3(k1, n1));
+// console.log(combinationSum3(k2, n2));
