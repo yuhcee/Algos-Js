@@ -22,7 +22,7 @@ const transpose = (matrix) => {
         // iterate through cols
         for (let c = 0; c < cols; c++) {
             // check if col exist in output, else set to empty arr
-            if (output[c]) output[c] = [];
+            if (!output[c]) output[c] = [];
             // transpose array
             output[c][r] = matrix[r][c];
         }
@@ -45,4 +45,3 @@ const matrix1 = [
 ];
 // Output: [[1,4],[2,5],[3,6]]
 console.log(transpose(matrix1));
-
