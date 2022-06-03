@@ -23,6 +23,8 @@ const transpose = (matrix) => {
         for (let c = 0; c < cols; c++) {
             // check if col exist in output, else set to empty arr
             if (output[c]) output[c] = [];
+            // transpose array
+            output[c][r] = matrix[r][c];
         }
     }
 };
