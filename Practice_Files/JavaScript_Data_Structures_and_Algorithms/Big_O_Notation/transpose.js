@@ -11,5 +11,8 @@
  */
 const transpose = (matrix) => {
     // init rows
-    let rows = matrix.length;
+    const rows = matrix.length,
+    // init cols
+          cols = matrix[0].length,
+
 }
