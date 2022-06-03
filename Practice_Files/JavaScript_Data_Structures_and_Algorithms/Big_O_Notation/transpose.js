@@ -17,11 +17,12 @@ const transpose = (matrix) => {
         // init output
         output = [];
 
-        // iterate through rows
+    // iterate through rows
     for (let r = 0; r < rows; r++) {
         // iterate through cols
         for (let c = 0; c < cols; c++) {
-
+            // check if col exist in output, else set to empty arr
+            if (output[c]) output[c] = [];
         }
     }
 };
