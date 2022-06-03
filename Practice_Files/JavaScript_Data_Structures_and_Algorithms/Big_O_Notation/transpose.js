@@ -27,4 +27,6 @@ const transpose = (matrix) => {
             output[c][r] = matrix[r][c];
         }
     }
+    // return output arr
+    return output;
 };
