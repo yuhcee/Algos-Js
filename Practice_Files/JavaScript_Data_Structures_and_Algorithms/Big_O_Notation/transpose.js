@@ -19,6 +19,9 @@ const transpose = (matrix) => {
 
         // iterate through rows
     for (let r = 0; r < rows; r++) {
+        // iterate through cols
+        for (let c = 0; c < cols; c++) {
 
+        }
     }
 };
