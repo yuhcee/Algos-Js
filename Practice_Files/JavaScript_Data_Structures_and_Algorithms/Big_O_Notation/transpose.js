@@ -39,3 +39,10 @@ const matrix = [
 // Output: [[1,4,7],[2,5,8],[3,6,9]]
 console.log(transpose(matrix));
 
+const matrix1 = [
+    [1, 2, 3],
+    [4, 5, 6],
+];
+// Output: [[1,4],[2,5],[3,6]]
+console.log(transpose(matrix1));
+
