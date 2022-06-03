@@ -9,4 +9,7 @@
  * @param {number[][]} matrix
  * @return {number[][]}
  */
-const transpose = (matrix) => {}
+const transpose = (matrix) => {
+    // init rows
+    let rows = matrix.length;
+}
