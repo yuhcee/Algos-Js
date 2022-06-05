@@ -12,4 +12,10 @@
  * @param {number} n
  * @return {string[][]}
  */
-const solveNQueens = (n) => {};
+const solveNQueens = (n) => {
+    const solutions = [];
+    
+    const cols = new Set();
+    const posDiag = new Set();
+    const negDiag = new Set();
+};
