@@ -18,4 +18,6 @@ const solveNQueens = (n) => {
     const cols = new Set();
     const posDiag = new Set();
     const negDiag = new Set();
+
+    const board = Array.from({ length: n }, () => new Array(n).fill('.'));
 };
