@@ -54,3 +54,7 @@ const solveNQueens = (n) => {
 const n = 4;
 // Output: [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
 console.log(solveNQueens(n));
+
+const n1 = 1;
+// Output: [["Q"]]
+console.log(solveNQueens(n1));
