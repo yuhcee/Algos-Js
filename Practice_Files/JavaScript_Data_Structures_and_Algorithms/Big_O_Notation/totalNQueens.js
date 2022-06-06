@@ -29,6 +29,10 @@ const totalNQueens = (n) => {
             negDiag.add(row - col);
 
             computePositionForRow(row + 1);
+
+            cols.delete(col);
+            posDiag.delete(row + col);
+            negDiag.delete(row - col);
         }
     }
 };
