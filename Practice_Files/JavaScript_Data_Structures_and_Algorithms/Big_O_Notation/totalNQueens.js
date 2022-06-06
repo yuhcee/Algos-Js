@@ -35,4 +35,6 @@ const totalNQueens = (n) => {
             negDiag.delete(row - col);
         }
     }
+    computePositionForRow(0);
+    return solutionCount;
 };
