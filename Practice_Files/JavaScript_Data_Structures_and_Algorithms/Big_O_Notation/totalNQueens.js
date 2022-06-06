@@ -9,4 +9,11 @@
  * @param {number} n
  * @return {number}
  */
-const totalNQueens = (n) => {};
+const totalNQueens = (n) => {
+    const col = new Set(),
+        posDiag = new Set(),
+        negDiag = newSet();
+    let solutionCount = 0;
+
+    
+};
