@@ -23,6 +23,12 @@ const totalNQueens = (n) => {
 
         for (let col = 0; col < n; col += 1) {
             if (cols.has(col) || posDiag.has(row + col) || negDiag.has(row - col)) continue;
+
+            cols.add(col);
+            posDiag.add(row + col);
+            negDiag.add(row - col);
+
+            computePositionForRow(row + 1);
         }
     }
 };
