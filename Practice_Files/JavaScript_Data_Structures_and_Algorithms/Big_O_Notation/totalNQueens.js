@@ -15,5 +15,10 @@ const totalNQueens = (n) => {
         negDiag = newSet();
     let solutionCount = 0;
 
-    
+    function computePositionForRow(row) {
+        if (row === n) {
+            solutionCount += 1;
+            return;
+        }
+    }
 };
