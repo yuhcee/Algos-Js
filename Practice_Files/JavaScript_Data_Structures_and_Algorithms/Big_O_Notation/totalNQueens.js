@@ -12,7 +12,7 @@
 const totalNQueens = (n) => {
     const cols = new Set(),
         posDiag = new Set(),
-        negDiag = newSet();
+        negDiag = new Set();
     let solutionCount = 0;
 
     function computePositionForRow(row) {
@@ -41,3 +41,6 @@ const totalNQueens = (n) => {
 
 const n = 4; // Output: 2
 console.log(totalNQueens(n));
+
+const n1 = 1; // Output: 1
+console.log(totalNQueens(n1));
