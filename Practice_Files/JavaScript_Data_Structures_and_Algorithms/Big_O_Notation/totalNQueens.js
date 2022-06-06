@@ -10,7 +10,7 @@
  * @return {number}
  */
 const totalNQueens = (n) => {
-    const col = new Set(),
+    const cols = new Set(),
         posDiag = new Set(),
         negDiag = newSet();
     let solutionCount = 0;
@@ -19,6 +19,10 @@ const totalNQueens = (n) => {
         if (row === n) {
             solutionCount += 1;
             return;
+        }
+
+        for (let col = 0; col < n; col += 1) {
+            if (cols.has(col) || posDiag.has(row + col) || negDiag.has(row - col)) continue;
         }
     }
 };
