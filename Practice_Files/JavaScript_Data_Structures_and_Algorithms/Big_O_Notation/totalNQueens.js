@@ -38,3 +38,6 @@ const totalNQueens = (n) => {
     computePositionForRow(0);
     return solutionCount;
 };
+
+const n = 4; // Output: 2
+console.log(totalNQueens(n));
