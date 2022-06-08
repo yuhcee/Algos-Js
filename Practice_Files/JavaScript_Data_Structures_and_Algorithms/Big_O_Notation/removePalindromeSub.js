@@ -23,3 +23,9 @@ const s = 'ababa';
 // Output: 1;
 // Explanation: s is already a palindrome, so its entirety can be removed in a single step.
 console.log(removePalindromeSub(s));
+
+const s1 = 'abb';
+// Output: 2
+// Explanation: "abb" -> "bb" -> "".
+// Remove palindromic subsequence "a" then "bb".
+console.log(removePalindromeSub(s1));
