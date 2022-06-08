@@ -29,3 +29,9 @@ const s1 = 'abb';
 // Explanation: "abb" -> "bb" -> "".
 // Remove palindromic subsequence "a" then "bb".
 console.log(removePalindromeSub(s1));
+
+const s2 = 'baabb';
+// Output: 2
+// Explanation: "baabb" -> "b" -> "".
+// Remove palindromic subsequence "baab" then "b".
+console.log(removePalindromeSub(s2));
