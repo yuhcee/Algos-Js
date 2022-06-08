@@ -16,4 +16,6 @@
  * @param {string} s
  * @return {number}
  */
-const removePalindromeSub = (s) => {};
+const removePalindromeSub = (s) => {
+    return s === s.split('').reverse().join('') ? 1 : 2;
+};
