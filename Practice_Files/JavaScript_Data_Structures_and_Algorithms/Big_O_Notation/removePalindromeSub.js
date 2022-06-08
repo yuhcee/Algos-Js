@@ -19,3 +19,7 @@
 const removePalindromeSub = (s) => {
     return s === s.split('').reverse().join('') ? 1 : 2;
 };
+const s = 'ababa';
+// Output: 1;
+// Explanation: s is already a palindrome, so its entirety can be removed in a single step.
+console.log(removePalindromeSub(s));
