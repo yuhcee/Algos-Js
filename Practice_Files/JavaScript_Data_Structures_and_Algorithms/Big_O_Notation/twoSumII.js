@@ -56,3 +56,9 @@ const numbers1 = [2, 3, 4],
 // Output: [1, 3];
 // Explanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].
 console.log(twoSum(numbers1, target1));
+
+const numbers2 = [-1, 0],
+    target2 = -1;
+// Output: [1, 2];
+// Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
+console.log(twoSum(numbers2, target2));
