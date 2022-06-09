@@ -32,6 +32,8 @@ const twoSum = (numbers, target) => {
         let currentSum = numbers[start] + numbers[end];
         // if the currentSum is equal to target
         if (currentSum === target) {
+            // add 1 to their current respective indices and return the result as array
+            return [start + 1, end + 1];
         }
     }
 };
