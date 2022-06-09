@@ -39,5 +39,9 @@ const twoSum = (numbers, target) => {
         else if (currentSum < target) {
             start++;
         }
+        // else, currentSum is greater - we move the end index down
+        else {
+            end--;
+        }
     }
 };
