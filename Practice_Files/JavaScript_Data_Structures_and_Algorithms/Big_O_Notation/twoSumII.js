@@ -18,4 +18,11 @@
  * @param {number} target
  * @return {number[]}
  */
-const twoSum = (numbers, target) => {};
+
+// =============== TWO-POINTERS SOLUTION =================
+
+const twoSum = (numbers, target) => {
+    // initialize two pointers, one at a start index, and the other at end index
+    let start = 0,
+        end = numbers.length;
+};
