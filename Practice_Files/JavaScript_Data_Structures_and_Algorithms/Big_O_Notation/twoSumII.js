@@ -27,5 +27,8 @@ const twoSum = (numbers, target) => {
         end = numbers.length;
 
     // loop, while the pointers have not met in the middle
-    while (start < end) {}
+    while (start < end) {
+        // calculate the small number at start index with the larger number at the end index as currentSum
+        let currentSum = numbers[start] + numbers[end];
+    }
 };
