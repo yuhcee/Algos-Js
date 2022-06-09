@@ -30,5 +30,8 @@ const twoSum = (numbers, target) => {
     while (start < end) {
         // calculate the small number at start index with the larger number at the end index as currentSum
         let currentSum = numbers[start] + numbers[end];
+        // if the currentSum is equal to target
+        if (currentSum === target) {
+        }
     }
 };
