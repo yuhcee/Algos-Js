@@ -44,9 +44,15 @@ const twoSum = (numbers, target) => {
             end--;
         }
     }
+    return [-1];
 };
 const numbers = [2, 7, 11, 15],
     target = 9;
 // Output: [1, 2];
 // Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].
 console.log(twoSum(numbers, target));
+const numbers1 = [2, 3, 4],
+    target1 = 6;
+// Output: [1, 3];
+// Explanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].
+console.log(twoSum(numbers1, target1));
