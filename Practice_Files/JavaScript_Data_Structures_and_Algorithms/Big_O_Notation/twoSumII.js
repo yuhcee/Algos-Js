@@ -35,5 +35,9 @@ const twoSum = (numbers, target) => {
             // add 1 to their current respective indices and return the result as array
             return [start + 1, end + 1];
         }
+        // else if the currentSum is less than target, we move the start index up
+        else if (currentSum < target) {
+            start++;
+        }
     }
 };
