@@ -25,4 +25,7 @@ const twoSum = (numbers, target) => {
     // initialize two pointers, one at a start index, and the other at end index
     let start = 0,
         end = numbers.length;
+
+    // loop, while the pointers have not met in the middle
+    while (start < end) {}
 };
