@@ -21,7 +21,7 @@
 
 // =============== TWO-POINTERS SOLUTION =================
 
-const twoSum = (numbers, target) => {
+/* const twoSum = (numbers, target) => {
     // initialize two pointers, one at a start index, and the other at end index
     let start = 0,
         end = numbers.length;
@@ -46,6 +46,26 @@ const twoSum = (numbers, target) => {
     }
     return [-1];
 };
+ */
+// ================== HASH MAP SOLUTION =====================
+
+var twoSum = function (numbers, target) {
+    // initialize map to store numbers we have seen
+    let seen = new Map();
+
+    // iterate through numbers array
+    for (let i = 0; i < numbers.length; i++) {
+        // get the difference from subtracting current number from the target
+        let difference = target - numbers[i];
+
+        // if we have seen this difference before, return its value and the current number index + 1 as array
+        if (seen.has(difference)) return [seen.get(difference), i + 1];
+
+        // set the current number in the map and its value as its index + 1
+        seen.set(numbers[i], i + 1);
+    }
+};
+
 const numbers = [2, 7, 11, 15],
     target = 9;
 // Output: [1, 2];
