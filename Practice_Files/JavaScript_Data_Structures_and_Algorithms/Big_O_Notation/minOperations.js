@@ -57,3 +57,9 @@ const nums1 = [5, 6, 7, 8, 9],
     x1 = 4;
 Output: -1;
 console.log(minOperations(nums1, x1));
+
+const nums2 = [3, 2, 20, 1, 1, 3],
+    x2 = 10;
+Output: 5;
+// Explanation: The optimal solution is to remove the last three elements and the first two elements (5 operations in total) to reduce x to zero.
+console.log(minOperations(nums2, x2));
