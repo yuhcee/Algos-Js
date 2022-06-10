@@ -16,4 +16,7 @@ const minOperations = (nums, x) => {
     // get totalSum of nums
     const numsSum = nums.reduce((acc, val) => acc + val, 0);
     if (numsSum < x) return -1;
+
+    // init targetSum
+    const targetSum = numsSum - x;
 };
