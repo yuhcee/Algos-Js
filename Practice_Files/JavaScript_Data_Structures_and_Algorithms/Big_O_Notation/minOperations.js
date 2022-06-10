@@ -36,7 +36,10 @@ const minOperations = (nums, x) => {
             currSum -= nums[left];
             left += 1;
         }
+
+        // if currSum === targetSum, set maxWindow
+        if (currSum === targetSum && maxWindow < right - left) {
+            maxWindow = right - left;
+        }
     }
 };
-
-
