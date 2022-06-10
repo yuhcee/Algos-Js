@@ -42,4 +42,7 @@ const minOperations = (nums, x) => {
             maxWindow = right - left;
         }
     }
+
+    // return result
+    return maxWindow === -Infinity ? -1 : nums.length - maxWindow;
 };
