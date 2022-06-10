@@ -46,3 +46,9 @@ const minOperations = (nums, x) => {
     // return result
     return maxWindow === -Infinity ? -1 : nums.length - maxWindow;
 };
+
+const nums = [1, 1, 4, 2, 3],
+    x = 5;
+// Output: 2;
+// Explanation: The optimal solution is to remove the last two elements to reduce x to zero.
+console.log(minOperations(nums, x));
