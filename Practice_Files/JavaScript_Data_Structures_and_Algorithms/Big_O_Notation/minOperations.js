@@ -26,10 +26,17 @@ const minOperations = (nums, x) => {
     let currSum = 0;
     let maxWindow = -Infinity;
 
-    // while right less than nums length, increment currSum
+    // while right less than nums length, increment right
     while (right < nums.length) {
         currSum += nums[right];
         right += 1;
-        
+
+        // while currSum > targetSum, increment left
+        while (currSum > targetSum) {
+            currSum -= nums[left];
+            left += 1;
+        }
     }
 };
+
+
