@@ -19,4 +19,10 @@ const minOperations = (nums, x) => {
 
     // init targetSum
     const targetSum = numsSum - x;
+
+    // init local vars
+    let left = 0;
+    let right = 0;
+    let currSum = 0;
+    let maxWindow = -Infinity;
 };
