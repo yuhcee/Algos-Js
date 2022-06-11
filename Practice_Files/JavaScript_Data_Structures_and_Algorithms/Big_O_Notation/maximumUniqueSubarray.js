@@ -17,5 +17,11 @@ const maximumUniqueSubarray = (nums) => {
     let windowSum = 0;
     let maxSum = 0;
     let left = 0;
-    let right = 0
+    let right = 0;
+    
+    while (right < nums.length) {
+        if (!windowElems[nums[right]]) {
+            windowElems[nums[right]] = 0;
+        }
+    }
 };
