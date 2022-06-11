@@ -18,10 +18,12 @@ const maximumUniqueSubarray = (nums) => {
     let maxSum = 0;
     let left = 0;
     let right = 0;
-    
+
     while (right < nums.length) {
         if (!windowElems[nums[right]]) {
             windowElems[nums[right]] = 0;
         }
+        windowElems[nums[right]] += 1;
+        windowSum += nums[right];
     }
 };
