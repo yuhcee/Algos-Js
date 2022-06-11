@@ -31,5 +31,11 @@ const maximumUniqueSubarray = (nums) => {
             windowSum -= nums[left];
             left += 1;
         }
+
+        right += 1;
+
+        if (windowSum > maxSum) {
+            maxSum = windowSum;
+        }
     }
 };
