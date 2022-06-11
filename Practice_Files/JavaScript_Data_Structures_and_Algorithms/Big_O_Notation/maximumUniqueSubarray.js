@@ -41,3 +41,10 @@ const maximumUniqueSubarray = (nums) => {
 
     return maxSum;
 };
+
+const nums = [4, 2, 4, 5, 6];
+// Output: 17;
+// Explanation: The optimal subarray here is [2,4,5,6].
+
+console.log(maximumUniqueSubarray(nums));
+``
