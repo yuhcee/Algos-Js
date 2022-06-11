@@ -38,4 +38,6 @@ const maximumUniqueSubarray = (nums) => {
             maxSum = windowSum;
         }
     }
+
+    return maxSum;
 };
