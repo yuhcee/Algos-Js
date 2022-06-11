@@ -51,3 +51,6 @@ const nums1 = [5, 2, 1, 2, 5, 2, 1, 2, 5];
 // Output: 8;
 // Explanation: The optimal subarray here is [5,2,1] or [1,2,5].
 console.log(maximumUniqueSubarray(nums1));
+const nums2 = [5, 2, 1, 2, 5, 2, 1, 2, 5, 9, 20, 78];
+// Output: 115;
+console.log(maximumUniqueSubarray(nums2));
