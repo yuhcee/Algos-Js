@@ -12,4 +12,10 @@
  * @param {number[]} nums
  * @return {number}
  */
-const maximumUniqueSubarray = (nums) => {};
+const maximumUniqueSubarray = (nums) => {
+    const windowElems = {};
+    let windowSum = 0;
+    let maxSum = 0;
+    let left = 0;
+    let right = 0
+};
