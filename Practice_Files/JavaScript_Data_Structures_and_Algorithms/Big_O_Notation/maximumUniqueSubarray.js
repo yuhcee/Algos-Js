@@ -25,5 +25,11 @@ const maximumUniqueSubarray = (nums) => {
         }
         windowElems[nums[right]] += 1;
         windowSum += nums[right];
+
+        while (windowElems[nums[right]] > 1) {
+            windowElems[nums[left]] -= 1;
+            windowSum -= nums[left];
+            left += 1;
+        }
     }
 };
