@@ -10,7 +10,7 @@
  */
 const minimumTotal = (triangle) => {
     for (let i = triangle.length - 1; i > 0; i--) {
-        
+        const row = triangle[i];
     }
 };
 
