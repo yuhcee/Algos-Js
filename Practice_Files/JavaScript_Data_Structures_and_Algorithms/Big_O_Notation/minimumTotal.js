@@ -27,3 +27,7 @@ Input: triangle = [[2], [3, 4], [6, 5, 7], [4, 1, 8, 3]];
 4 1 8 3
 The minimum path sum from top to bottom is 2 + 3 + 5 + 1 = 11 (underlined above). */
 console.log(minimumTotal(triangle));
+
+const triangle1 = [[-10]];
+// Output: -10
+console.log(minimumTotal(triangle1));
