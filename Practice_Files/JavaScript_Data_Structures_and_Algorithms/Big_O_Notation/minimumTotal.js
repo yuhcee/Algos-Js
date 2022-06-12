@@ -15,4 +15,5 @@ const minimumTotal = (triangle) => {
             triangle[i - 1][j] += Math.min(row[j], row[j + 1]);
         }
     }
+    return triangle[0];
 };
