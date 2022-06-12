@@ -11,6 +11,9 @@
 const minimumTotal = (triangle) => {
     for (let i = triangle.length - 1; i > 0; i--) {
         const row = triangle[i];
+        for (let j = 0; j < row.length - 1; j++) {
+            
+        }
     }
 };
 
