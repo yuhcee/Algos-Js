@@ -23,7 +23,8 @@ const minDistance = (w1, w2) => {
             // less 1
             const [r1, r2] = [i - 1, j - 1];
 
-            
+            // set dp
+            dp[i][j] = w1[r1] === w2[r2] ? dp[r1][r2] + 1 : Math.max(dp[r1][j], dp[i][r2]);
         }
     }
 };
