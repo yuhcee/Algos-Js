@@ -41,3 +41,8 @@ const word10 = 'leetcode',
     word20 = 'etco';
 // Output: 4;
 console.log(minDistance(word10, word20));
+
+const word11 = 'code',
+    word21 = 'olde';
+// Output: 2;
+console.log(minDistance(word11, word21));
