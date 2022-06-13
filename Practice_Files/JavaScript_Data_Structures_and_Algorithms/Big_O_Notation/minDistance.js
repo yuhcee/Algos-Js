@@ -10,4 +10,7 @@
  * @param {string} word2
  * @return {number}
  */
-const minDistance = (w1, w2) => {};
+const minDistance = (w1, w2) => {
+     // set length
+     const [n1, n2] = [w1.length, w2.length]
+};
