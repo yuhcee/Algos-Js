@@ -31,3 +31,8 @@ const minDistance = (w1, w2) => {
     // calculate
     return n1 + n2 - dp[n1][n2] * 2;
 };
+
+const word1 = 'sea',
+    word2 = 'eat';
+// Output: 2
+// Explanation: You need one step to make "sea" to "ea" and another step to make "eat" to "ea".
