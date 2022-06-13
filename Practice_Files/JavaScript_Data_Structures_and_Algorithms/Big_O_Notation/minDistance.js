@@ -20,7 +20,10 @@ const minDistance = (w1, w2) => {
     // 2d loop
     for (let i = 1; i <= n1; i++) {
         for (let j = 1; j <= n2; j++) {
-          
+            // less 1
+            const [r1, r2] = [i - 1, j - 1];
+
+            
         }
     }
 };
