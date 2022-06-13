@@ -36,3 +36,8 @@ const word1 = 'sea',
     word2 = 'eat';
 // Output: 2
 // Explanation: You need one step to make "sea" to "ea" and another step to make "eat" to "ea".
+console.log(minDistance(word1, word2));
+const word10 = 'leetcode',
+    word20 = 'etco';
+// Output: 4;
+console.log(minDistance(word10, word20));
