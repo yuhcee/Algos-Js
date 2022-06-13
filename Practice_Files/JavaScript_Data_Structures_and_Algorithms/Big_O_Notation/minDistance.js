@@ -16,4 +16,11 @@ const minDistance = (w1, w2) => {
 
     // set dp
     const dp = [...new Array(n1 + 1)].map(() => new Array(n2 + 1).fill(0));
+
+    // 2d loop
+    for (let i = 1; i <= n1; i++) {
+        for (let j = 1; j <= n2; j++) {
+          
+        }
+    }
 };
