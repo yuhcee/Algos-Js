@@ -11,6 +11,9 @@
  * @return {number}
  */
 const minDistance = (w1, w2) => {
-     // set length
-     const [n1, n2] = [w1.length, w2.length]
+    // set length
+    const [n1, n2] = [w1.length, w2.length];
+
+    // set dp
+    const dp = [...new Array(n1 + 1)].map(() => new Array(n2 + 1).fill(0));
 };
