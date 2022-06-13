@@ -27,4 +27,7 @@ const minDistance = (w1, w2) => {
             dp[i][j] = w1[r1] === w2[r2] ? dp[r1][r2] + 1 : Math.max(dp[r1][j], dp[i][r2]);
         }
     }
+
+    // calculate
+    return n1 + n2 - dp[n1][n2] * 2;
 };
