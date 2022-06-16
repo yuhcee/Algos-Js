@@ -19,4 +19,6 @@
  * @param {string[]} words
  * @return {number}
  */
-const longestStrChain = (words) => {};
+const longestStrChain = (words) => {
+    let map = {};
+};
