@@ -29,6 +29,9 @@ const longestStrChain = (words) => {
 
         for (let i = 0; i < word.length; i++) {
             let prev = word.slice(0, i) + word.slice(i + 1);
+
+            count = Math.max(count, map([prev] || 0) + 1);
         }
     }
+
 };
