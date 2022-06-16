@@ -32,6 +32,7 @@ const longestStrChain = (words) => {
 
             count = Math.max(count, map([prev] || 0) + 1);
         }
+        map[word] = count;
     }
 
 };
