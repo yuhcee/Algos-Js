@@ -41,5 +41,9 @@ const longestStrChain = (words) => {
 const words = ['a', 'b', 'ba', 'bca', 'bda', 'bdca'];
 // Output: 4;
 // Explanation: One of the longest word chains is ["a","ba","bda","bdca"].
-
 console.log(longestStrChain(words));
+
+const words1 = ['xbc', 'pcxbcf', 'xb', 'cxbc', 'pcxbc'];
+// Output: 5;
+// Explanation: All the words can be put in a word chain ["xb", "xbc", "cxbc", "pcxbc", "pcxbcf"].
+console.log(longestStrChain(words1));
