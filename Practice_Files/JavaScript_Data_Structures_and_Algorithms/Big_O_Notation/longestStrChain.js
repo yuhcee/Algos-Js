@@ -30,10 +30,16 @@ const longestStrChain = (words) => {
         for (let i = 0; i < word.length; i++) {
             let prev = word.slice(0, i) + word.slice(i + 1);
 
-            count = Math.max(count, map([prev] || 0) + 1);
+            count = Math.max(count, (map[prev] || 0) + 1);
         }
         map[word] = count;
     }
 
     return Math.max(...Object.values(map));
 };
+
+const words = ['a', 'b', 'ba', 'bca', 'bda', 'bdca'];
+// Output: 4;
+// Explanation: One of the longest word chains is ["a","ba","bda","bdca"].
+
+console.log(longestStrChain(words));
