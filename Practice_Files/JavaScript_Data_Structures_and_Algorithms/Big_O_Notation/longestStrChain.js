@@ -47,3 +47,9 @@ const words1 = ['xbc', 'pcxbcf', 'xb', 'cxbc', 'pcxbc'];
 // Output: 5;
 // Explanation: All the words can be put in a word chain ["xb", "xbc", "cxbc", "pcxbc", "pcxbcf"].
 console.log(longestStrChain(words1));
+
+const words2 = ['abcd', 'dbqca'];
+// Output: 1;
+// Explanation: The trivial word chain ["abcd"] is one of the longest word chains.
+// ["abcd","dbqca"] is not a valid word chain because the ordering of the letters is changed.
+console.log(longestStrChain(words2));
