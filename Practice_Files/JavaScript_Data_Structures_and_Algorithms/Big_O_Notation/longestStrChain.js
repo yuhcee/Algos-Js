@@ -25,6 +25,8 @@ const longestStrChain = (words) => {
     words.sort((a, b) => a.length - b.length);
 
     for (let word of words) {
+        let count = 0;
+
         
     }
 };
