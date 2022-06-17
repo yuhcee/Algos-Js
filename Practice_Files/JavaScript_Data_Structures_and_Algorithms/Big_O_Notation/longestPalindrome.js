@@ -6,4 +6,7 @@
  * @param {string} s
  * @return {string}
  */
-const longestPalindrome = (s) => {};
+const longestPalindrome = (s) => {
+    let longest = s[0];
+    
+};
