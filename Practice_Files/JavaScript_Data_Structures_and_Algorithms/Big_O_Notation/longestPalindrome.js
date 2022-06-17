@@ -8,5 +8,12 @@
  */
 const longestPalindrome = (s) => {
     let longest = s[0];
-    
+
+    const isPalindrome = (l, r) => {
+        while (l >= 0 && r < s.length && s[l] === s[r]) {
+            if (r - l + 1 > longest.length) longest = s.substring(l, r + 1);
+            l--;
+            r++;
+        }
+    };
 };
