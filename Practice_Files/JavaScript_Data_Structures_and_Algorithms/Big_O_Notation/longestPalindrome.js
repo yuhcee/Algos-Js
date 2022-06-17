@@ -30,3 +30,7 @@ const s = 'babad';
 // Explanation: "aba" is also a valid answer.
 
 console.log(longestPalindrome(s));
+
+const s1 = 'cbbd';
+// Output: 'bb';
+console.log(longestPalindrome(s1));
