@@ -24,3 +24,9 @@ const longestPalindrome = (s) => {
 
     return longest;
 };
+
+const s = 'babad';
+// Output: 'bab';
+// Explanation: "aba" is also a valid answer.
+
+console.log(longestPalindrome(s));
