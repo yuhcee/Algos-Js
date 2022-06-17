@@ -16,4 +16,9 @@ const longestPalindrome = (s) => {
             r++;
         }
     };
+
+    for (let i = 0; i < s.length; i++) {
+        isPalindrome(i, i);
+        isPalindrome(i, i + 1);
+    }
 };
