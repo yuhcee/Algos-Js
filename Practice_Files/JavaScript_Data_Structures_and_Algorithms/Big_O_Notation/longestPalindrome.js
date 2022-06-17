@@ -21,4 +21,6 @@ const longestPalindrome = (s) => {
         isPalindrome(i, i);
         isPalindrome(i, i + 1);
     }
+
+    return longest;
 };
