@@ -23,6 +23,7 @@ const WordFilter = (words) => {
             const prefix = word.slice(0, j + 1);
             for (let k = 0; k < len; k++) {
                 const suffix = word.slice(k);
+                this.trie.set(prefix + '#' + suffix, i);
             }
         }
     }
