@@ -34,7 +34,10 @@ const WordFilter = (words) => {
  * @param {string} suffix
  * @return {number}
  */
-WordFilter.prototype.f = function (prefix, suffix) {};
+WordFilter.prototype.f = function (prefix, suffix) {
+    let target = prefix + '#' + suffix;
+    return this.trie.has(target) ? this.trie.get(target) : -1;
+};
 /**
  * Your WordFilter object will be instantiated and called as such:
  * var obj = new WordFilter(words)
