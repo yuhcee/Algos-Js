@@ -16,6 +16,11 @@ const WordFilter = (words) => {
     this.trie = new Map();
 
     for (let i = 0; i < words.length; i++) {
-        const word = words[i];
+        const word = words[i],
+            len = word.length;
+
+        for (let j = 0; j < len; j++) {
+            const prefix = word.slice(0, j + 1);
+        }
     }
 };
