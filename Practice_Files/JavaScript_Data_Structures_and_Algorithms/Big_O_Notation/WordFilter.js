@@ -12,4 +12,6 @@
  *
  * @param {string[]} words
  */
-const WordFilter = (words) => {};
+const WordFilter = (words) => {
+    this.trie = new Map();
+};
