@@ -14,4 +14,8 @@
  */
 const WordFilter = (words) => {
     this.trie = new Map();
+
+    for (let i = 0; i < words.length; i++) {
+        const word = words[i];
+    }
 };
