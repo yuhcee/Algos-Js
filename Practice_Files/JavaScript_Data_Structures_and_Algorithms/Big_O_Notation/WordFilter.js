@@ -21,6 +21,9 @@ const WordFilter = (words) => {
 
         for (let j = 0; j < len; j++) {
             const prefix = word.slice(0, j + 1);
+            for (let k = 0; k < len; k++) {
+                const suffix = word.slice(k);
+            }
         }
     }
 };
