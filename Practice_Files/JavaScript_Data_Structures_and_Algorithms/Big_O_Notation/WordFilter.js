@@ -50,3 +50,12 @@ const words = ['apple'],
 var obj = new WordFilter(words);
 var param_1 = obj.f(prefix, suffix);
 console.log(param_1);
+
+
+const words1 = ['apple'],
+    prefix1 = 'a',
+    suffix1 = 's';
+
+var obj2 = new WordFilter(words1);
+var param_2 = obj2.f(prefix1, suffix1);
+console.log(param_2);
