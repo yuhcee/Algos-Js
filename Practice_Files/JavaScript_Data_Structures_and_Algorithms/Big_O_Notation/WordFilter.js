@@ -12,7 +12,7 @@
  *
  * @param {string[]} words
  */
-const WordFilter = (words) => {
+var WordFilter = function (words) {
     this.trie = new Map();
 
     for (let i = 0; i < words.length; i++) {
@@ -43,3 +43,10 @@ WordFilter.prototype.f = function (prefix, suffix) {
  * var obj = new WordFilter(words)
  * var param_1 = obj.f(prefix,suffix)
  */
+const words = ['apple'],
+    prefix = 'a',
+    suffix = 'e';
+
+var obj = new WordFilter(words);
+var param_1 = obj.f(prefix, suffix);
+console.log(param_1);
