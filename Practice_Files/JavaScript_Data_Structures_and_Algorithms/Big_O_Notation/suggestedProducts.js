@@ -17,4 +17,8 @@
  */
 const suggestedProducts = (products, searchWord) => {
     products.sort((a, b) => a - b);
+    let res = [];
+    for(let i = 0; i < products.length; i++) {
+        
+    }
 };
