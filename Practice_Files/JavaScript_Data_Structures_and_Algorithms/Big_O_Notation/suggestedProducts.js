@@ -49,3 +49,8 @@ const products2 = ['bags', 'baggage', 'banner', 'box', 'cloths'],
     searchWord2 = 'bags';
 /* Output: [['baggage', 'bags', 'banner'], ['baggage', 'bags', 'banner'], ['baggage', 'bags'], ['bags']]; */
 console.log(suggestedProducts(products2, searchWord2));
+
+const products3 = ['bans', 'bondage', 'band', 'bond', 'dress'],
+    searchWord3 = 'bans';
+/* Output: [ [ 'bans', 'bondage', 'band' ], [ 'bans', 'band' ] ] */
+console.log(suggestedProducts(products3, searchWord3));
