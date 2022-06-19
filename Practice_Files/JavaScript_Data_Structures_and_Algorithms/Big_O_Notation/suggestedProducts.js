@@ -40,3 +40,8 @@ After typing m and mo all products match and we show user ["mobile","moneypot","
 After typing mou, mous and mouse the system suggests ["mouse","mousepad"] */
 console.log(suggestedProducts(products, searchWord));
 
+const products1 = ['havana'],
+    searchWord1 = 'havana';
+// Output: [['havana'], ['havana'], ['havana'], ['havana'], ['havana'], ['havana']];
+console.log(suggestedProducts(products1, searchWord1));
+
