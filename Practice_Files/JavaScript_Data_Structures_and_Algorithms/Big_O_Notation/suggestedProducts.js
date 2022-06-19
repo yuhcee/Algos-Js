@@ -15,4 +15,6 @@
  * @param {string} searchWord
  * @return {string[][]}
  */
-const suggestedProducts = (products, searchWord) => {};
+const suggestedProducts = (products, searchWord) => {
+    products.sort((a, b) => a - b);
+};
