@@ -18,7 +18,8 @@
 const suggestedProducts = (products, searchWord) => {
     products.sort((a, b) => a - b);
     let res = [];
-    for(let i = 0; i < products.length; i++) {
-        
+    for (let i = 0; i < products.length; i++) {
+        // filtering the product on each search so that we can compare one current char only
+        products = products.filter((p) => p[i] === searchWord[i]);
     }
 };
