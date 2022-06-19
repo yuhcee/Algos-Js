@@ -21,5 +21,6 @@ const suggestedProducts = (products, searchWord) => {
     for (let i = 0; i < products.length; i++) {
         // filtering the product on each search so that we can compare one current char only
         products = products.filter((p) => p[i] === searchWord[i]);
+        res.push(products.slice(0, 3));
     }
 };
