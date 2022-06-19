@@ -23,4 +23,5 @@ const suggestedProducts = (products, searchWord) => {
         products = products.filter((p) => p[i] === searchWord[i]);
         res.push(products.slice(0, 3));
     }
+    return res;
 };
