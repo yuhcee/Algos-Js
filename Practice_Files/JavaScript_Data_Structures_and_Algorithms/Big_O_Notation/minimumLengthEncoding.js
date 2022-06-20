@@ -21,6 +21,7 @@ const minimumLengthEncoding = (words) => {
     for (const word of words) {
         for (let i = 1; i < word.length; i++) {
             const piece = word.slice(k);
+            set.delete(piece);
         }
     }
 };
