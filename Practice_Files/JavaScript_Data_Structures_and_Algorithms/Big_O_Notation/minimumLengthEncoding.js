@@ -24,4 +24,6 @@ const minimumLengthEncoding = (words) => {
             set.delete(piece);
         }
     }
+    let ans = 0;
+    
 };
