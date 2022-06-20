@@ -37,3 +37,8 @@ words[0] = "time", the substring of s starting from indices[0] = 0 to the next '
 words[1] = "me", the substring of s starting from indices[1] = 2 to the next '#' is underlined in "time#bell#"
 words[2] = "bell", the substring of s starting from indices[2] = 5 to the next '#' is underlined in "time#bell#" */
 console.log(minimumLengthEncoding(words));
+
+const words1 = ['t'];
+// Output: 2;
+// Explanation: A valid encoding would be s = "t#" and indices = [0].
+console.log(minimumLengthEncoding(words1));
