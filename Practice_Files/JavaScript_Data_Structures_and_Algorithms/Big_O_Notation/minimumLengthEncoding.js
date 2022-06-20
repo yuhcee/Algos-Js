@@ -17,5 +17,8 @@
  */
 const minimumLengthEncoding = (words) => {
     const set = new Set(words);
-    
+
+    for(const word of words) {
+
+    }
 };
