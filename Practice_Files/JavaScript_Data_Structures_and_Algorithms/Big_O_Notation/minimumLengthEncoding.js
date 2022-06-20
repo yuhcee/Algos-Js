@@ -20,13 +20,20 @@ const minimumLengthEncoding = (words) => {
 
     for (const word of words) {
         for (let i = 1; i < word.length; i++) {
-            const piece = word.slice(k);
+            const piece = word.slice(i);
             set.delete(piece);
         }
     }
     let ans = 0;
     for (const word of set) {
         ans += word.length + 1;
-        
     }
+    return ans;
 };
+const words = ['time', 'me', 'bell'];
+// Output: 10;
+/* Explanation: A valid encoding would be s = "time#bell#" and indices = [0, 2, 5].
+words[0] = "time", the substring of s starting from indices[0] = 0 to the next '#' is underlined in "time#bell#"
+words[1] = "me", the substring of s starting from indices[1] = 2 to the next '#' is underlined in "time#bell#"
+words[2] = "bell", the substring of s starting from indices[2] = 5 to the next '#' is underlined in "time#bell#" */
+console.log(minimumLengthEncoding(words));
