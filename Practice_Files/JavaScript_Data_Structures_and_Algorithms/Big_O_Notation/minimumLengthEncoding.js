@@ -25,5 +25,7 @@ const minimumLengthEncoding = (words) => {
         }
     }
     let ans = 0;
-    
+    for (const word of set) {
+
+    }
 };
