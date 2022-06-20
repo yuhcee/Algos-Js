@@ -15,4 +15,7 @@
  * @param {string[]} words
  * @return {number}
  */
-const minimumLengthEncoding = (words) => {};
+const minimumLengthEncoding = (words) => {
+    const set = new Set(words);
+    
+};
