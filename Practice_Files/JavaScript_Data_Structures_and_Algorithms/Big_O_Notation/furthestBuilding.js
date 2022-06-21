@@ -22,4 +22,7 @@
  * @param {number} ladders
  * @return {number}
  */
-const furthestBuilding = (heights, bricks, ladders) => {};
+const furthestBuilding = (heights, bricks, ladders) => {
+    let len = heights.length,
+        queue = [];
+};
