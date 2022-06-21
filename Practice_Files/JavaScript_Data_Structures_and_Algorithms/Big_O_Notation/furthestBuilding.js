@@ -79,6 +79,8 @@ const heights2 = [14, 3, 19, 3],
     ladders2 = 0;
 // Output: 3;
 console.log(furthestBuilding(heights2, bricks2, ladders2));
+
+// ====================OPTIMAL SOLUTION WITH TRIE =============================
 /* var furthestBuilding = function(H, B, L) {
     let len = H.length - 1, heap = [,]
     const heapify = val => {
