@@ -25,4 +25,9 @@
 const furthestBuilding = (heights, bricks, ladders) => {
     let len = heights.length,
         queue = [];
+
+    for (let i = 1; i < len; i++) {
+        let diff = heights[i] - heights[i - 1];
+        if (diff <= 0) continue;
+    }
 };
