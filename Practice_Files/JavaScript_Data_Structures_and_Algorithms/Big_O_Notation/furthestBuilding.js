@@ -32,5 +32,11 @@ const furthestBuilding = (heights, bricks, ladders) => {
 
         add(queue, diff);
         if (queue.length <= ladders) continue;
+
+        bricks -= queue[0];
+        if (bricks < 0) return i - 1;
+        queue.shift();
     }
+
+    return len - 1;
 };
