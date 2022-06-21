@@ -71,9 +71,14 @@ console.log(furthestBuilding(heights, bricks, ladders));
 const heights1 = [4, 12, 2, 7, 3, 18, 20, 3, 19],
     bricks1 = 10,
     ladders1 = 2;
-Output: 7;
+// Output: 7;
 console.log(furthestBuilding(heights1, bricks1, ladders1));
-// console.log(furthestBuilding(heights2, bricks2, ladders2));
+
+const heights2 = [14, 3, 19, 3],
+    bricks2 = 17,
+    ladders2 = 0;
+// Output: 3;
+console.log(furthestBuilding(heights2, bricks2, ladders2));
 /* var furthestBuilding = function(H, B, L) {
     let len = H.length - 1, heap = [,]
     const heapify = val => {
