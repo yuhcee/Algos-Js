@@ -40,3 +40,17 @@ const furthestBuilding = (heights, bricks, ladders) => {
 
     return len - 1;
 };
+
+/**
+ * @param {Array} queue
+ * @param {Number} num
+ */
+const add = (queue, num) => {
+    for (let i = 0; i < queue.length; i++) {
+        if (queue[i] > num) {
+            queue.splice(i, 0, num);
+            return;
+        }
+    }
+    queue.push(num);
+};
