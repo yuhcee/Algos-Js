@@ -67,7 +67,12 @@ const heights = [4, 2, 7, 6, 9, 14, 12],
 It is impossible to go beyond building 4 because you do not have any more bricks or ladders. */
 
 console.log(furthestBuilding(heights, bricks, ladders));
-// console.log(furthestBuilding(heights1, bricks1, ladders1));
+
+const heights1 = [4, 12, 2, 7, 3, 18, 20, 3, 19],
+    bricks1 = 10,
+    ladders1 = 2;
+Output: 7;
+console.log(furthestBuilding(heights1, bricks1, ladders1));
 // console.log(furthestBuilding(heights2, bricks2, ladders2));
 /* var furthestBuilding = function(H, B, L) {
     let len = H.length - 1, heap = [,]
