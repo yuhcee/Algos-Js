@@ -12,4 +12,5 @@
 const findKthLargest = (nums, k) => {
     nums.sort((a, b) => a - b);
 
+    return nums.at(-k);
 };
