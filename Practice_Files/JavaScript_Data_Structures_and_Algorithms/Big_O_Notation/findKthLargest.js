@@ -22,5 +22,10 @@ console.log(findKthLargest(nums, k));
 
 const nums1 = [3, 2, 3, 1, 2, 4, 5, 5, 6],
     k1 = 4;
-Output: 4;
+// Output: 4;
 console.log(findKthLargest(nums1, k1));
+
+const nums2 = [3, 1, 2, 4, 5, 6, 9, 7],
+    k2 = 4;
+// Output: 5;
+console.log(findKthLargest(nums2, k2));
