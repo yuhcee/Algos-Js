@@ -19,7 +19,10 @@ const scheduleCourse = (courses) => {
     let time = 0,
         count = 0;
 
-        for (let i = 0; i < courses.length; i++) {
-            
+    for (let i = 0; i < courses.length; i++) {
+        if (time + courses[i][0] <= courses[i][1]) {
+            time += courses[i][0];
+            courses[count++] = courses[i];
         }
+    }
 };
