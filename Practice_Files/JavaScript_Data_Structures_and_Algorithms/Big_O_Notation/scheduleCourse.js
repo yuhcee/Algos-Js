@@ -25,6 +25,9 @@ const scheduleCourse = (courses) => {
             courses[count++] = courses[i];
         } else {
             let maxIndex = i;
+            for (let j = 0; j < count; j++) {
+                
+            }
         }
     }
 };
