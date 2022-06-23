@@ -13,4 +13,7 @@
  * @param {number[][]} courses
  * @return {number}
  */
-const scheduleCourse = (courses) => {};
+const scheduleCourse = (courses) => {
+    // sort courses by last day
+    courses.sort((a, b) => a[1] - b[1]);
+};
