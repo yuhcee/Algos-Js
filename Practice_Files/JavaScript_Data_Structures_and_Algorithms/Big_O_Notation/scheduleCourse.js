@@ -26,7 +26,7 @@ const scheduleCourse = (courses) => {
         } else {
             let maxIndex = i;
             for (let j = 0; j < count; j++) {
-                
+                if (courses[j][0] > courses[maxIndex][0]) maxIndex = j;
             }
         }
     }
