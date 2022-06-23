@@ -52,3 +52,7 @@ Second, take the 3rd course, it costs 1000 days so you will finish it on the 110
 Third, take the 2nd course, it costs 200 days so you will finish it on the 1300th day. 
 The 4th course cannot be taken now, since you will finish it on the 3300th day, which exceeds the closed date. */
 console.log(scheduleCourse(courses));
+
+const courses1 = [[1, 2]];
+// Output: 1
+console.log(scheduleCourse(courses1));
