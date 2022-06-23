@@ -23,6 +23,8 @@ const scheduleCourse = (courses) => {
         if (time + courses[i][0] <= courses[i][1]) {
             time += courses[i][0];
             courses[count++] = courses[i];
+        } else {
+            let maxIndex = i;
         }
     }
 };
