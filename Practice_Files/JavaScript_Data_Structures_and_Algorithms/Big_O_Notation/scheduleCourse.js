@@ -16,4 +16,6 @@
 const scheduleCourse = (courses) => {
     // sort courses by last day
     courses.sort((a, b) => a[1] - b[1]);
+    let time = 0,
+        count = 0;
 };
