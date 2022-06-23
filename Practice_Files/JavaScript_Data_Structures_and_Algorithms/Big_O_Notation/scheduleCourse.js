@@ -56,3 +56,9 @@ console.log(scheduleCourse(courses));
 const courses1 = [[1, 2]];
 // Output: 1
 console.log(scheduleCourse(courses1));
+const courses2 = [
+    [3, 2],
+    [4, 3],
+];
+// Output: 0
+console.log(scheduleCourse(courses2));
