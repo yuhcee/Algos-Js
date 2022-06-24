@@ -30,4 +30,8 @@ const isPossible = (target) => {
     for (let i = 0; i < target.length; i++) {
         if (i !== index) total += target[i];
     }
+
+    // If total=1,it means only one element was remaining apart from max and its value is 1 return true
+    // eg target=[10,1] we started with [1,1] so next steps would be [2,1]->[3,1]->...[10,1] we can make sure it leads to target
+    if (total === 1) return true;
 };
