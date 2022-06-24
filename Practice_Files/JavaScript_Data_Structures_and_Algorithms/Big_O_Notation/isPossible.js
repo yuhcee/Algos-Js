@@ -17,5 +17,10 @@ const isPossible = (target) => {
     let max = 0,
         index = -1;
 
-    
+    for (let i = target.length - 1; i >= 0; i--) {
+        if (target[i] > max) {
+            max = target[i];
+            index = i;
+        }
+    }
 };
