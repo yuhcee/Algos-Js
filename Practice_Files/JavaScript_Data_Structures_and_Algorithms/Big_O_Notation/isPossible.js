@@ -34,4 +34,6 @@ const isPossible = (target) => {
     // If total=1,it means only one element was remaining apart from max and its value is 1 return true
     // eg target=[10,1] we started with [1,1] so next steps would be [2,1]->[3,1]->...[10,1] we can make sure it leads to target
     if (total === 1) return true;
+    // max should be greater than remaining nums sum OR if total is 0 it would lead to infinite loop( num%0 === NaN) so return false
+    if (max <= total || total === 0) return false;
 };
