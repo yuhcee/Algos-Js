@@ -52,3 +52,7 @@ const target = [9, 3, 5];
 [1, 3, 5], sum = 9 choose index 0
 [9, 3, 5] Done */
 console.log(isPossible(target));
+const target1 = [1, 1, 1, 2];
+// Output: false
+// Explanation: Impossible to create target array from [1,1,1,1].
+console.log(isPossible(target1));
