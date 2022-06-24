@@ -23,7 +23,11 @@ const isPossible = (target) => {
             index = i;
         }
     }
-
     // if max itself is 1 return true
     if (max === 1) return true;
+
+    let total = 0;
+    for (let i = 0; i < target.length; i++) {
+        if (i !== index) total += target[i];
+    }
 };
