@@ -13,4 +13,9 @@
  * @param {number[]} target
  * @return {boolean}
  */
-const isPossible = (target) => {};
+const isPossible = (target) => {
+    let max = 0,
+        index = -1;
+
+    
+};
