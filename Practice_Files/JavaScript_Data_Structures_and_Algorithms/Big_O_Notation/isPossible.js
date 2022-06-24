@@ -23,4 +23,7 @@ const isPossible = (target) => {
             index = i;
         }
     }
+
+    // if max itself is 1 return true
+    if (max === 1) return true;
 };
