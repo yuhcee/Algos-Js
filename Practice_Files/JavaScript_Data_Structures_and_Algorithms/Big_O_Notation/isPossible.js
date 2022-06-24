@@ -56,3 +56,7 @@ const target1 = [1, 1, 1, 2];
 // Output: false
 // Explanation: Impossible to create target array from [1,1,1,1].
 console.log(isPossible(target1));
+
+const target2 = [8,5]
+// Output: true
+console.log(isPossible(target2));
