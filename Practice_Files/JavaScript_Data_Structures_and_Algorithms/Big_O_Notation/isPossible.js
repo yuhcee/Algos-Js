@@ -40,4 +40,6 @@ const isPossible = (target) => {
     max = max % total;
     if (max < 1) return false; // it should not be less than 1
     target[index] = max;
+
+    return isPossible(target);
 };
