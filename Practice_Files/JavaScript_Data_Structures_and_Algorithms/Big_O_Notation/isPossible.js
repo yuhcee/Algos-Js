@@ -36,4 +36,8 @@ const isPossible = (target) => {
     if (total === 1) return true;
     // max should be greater than remaining nums sum OR if total is 0 it would lead to infinite loop( num%0 === NaN) so return false
     if (max <= total || total === 0) return false;
+
+    max = max % total;
+    if (max < 1) return false; // it should not be less than 1
+    target[index] = max;
 };
