@@ -35,4 +35,5 @@ const checkPossibility = (nums) => {
             return option1 || option2;
         }
     }
+    return true;
 };
