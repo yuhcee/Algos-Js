@@ -37,3 +37,8 @@ const checkPossibility = (nums) => {
     }
     return true;
 };
+
+const nums = [4, 2, 3];
+// Output: true
+// Explanation: You could modify the first 4 to 1 to get a non-decreasing array.
+console.log(checkPossibility(nums));
