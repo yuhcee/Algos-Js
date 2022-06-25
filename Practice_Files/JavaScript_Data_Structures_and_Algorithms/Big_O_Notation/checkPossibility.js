@@ -31,7 +31,8 @@ const checkPossibility = (nums) => {
             // option 2
             nums[i + 1] = nums[i];
             const option2 = isNonDecreasing(nums);
-            
+
+            return option1 || option2;
         }
     }
 };
