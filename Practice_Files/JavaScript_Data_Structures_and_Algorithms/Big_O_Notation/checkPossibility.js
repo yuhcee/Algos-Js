@@ -24,6 +24,9 @@ const checkPossibility = (nums) => {
             // option 1
             nums[i] = nums[i + 1];
             const option1 = isNonDecreasing(nums);
+
+            // reset
+            num[i] = currentValue;
         }
     }
 };
