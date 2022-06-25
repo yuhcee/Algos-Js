@@ -20,6 +20,10 @@ const checkPossibility = (nums) => {
     for (let i = 0; i < nums.length - 1; i++) {
         if (nums[i] > nums[i + 1]) {
             const currentValue = nums[i];
+
+            // option 1
+            nums[i] = nums[i + 1];
+            const option1 = isNonDecreasing(nums);
         }
     }
 };
