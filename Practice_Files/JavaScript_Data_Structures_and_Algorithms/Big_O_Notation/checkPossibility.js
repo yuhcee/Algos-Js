@@ -9,4 +9,11 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-const checkPossibility = (nums) => {};
+const checkPossibility = (nums) => {
+    function isNonDecreasing(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > arr[i + 1]) return false;
+        }
+        return true;
+    }
+};
