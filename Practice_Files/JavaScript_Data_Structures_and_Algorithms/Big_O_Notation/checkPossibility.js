@@ -17,7 +17,9 @@ const checkPossibility = (nums) => {
         return true;
     }
 
-    for (let i = 0; i < nums.length -1; i++) {
-
+    for (let i = 0; i < nums.length - 1; i++) {
+        if (nums[i] > nums[i + 1]) {
+            const currentValue = nums[i];
+        }
     }
 };
