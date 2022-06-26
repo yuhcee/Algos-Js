@@ -29,4 +29,6 @@ const SearchingChallenge = (strArr) => {
         .join(',');
 };
 
-
+const strArr = ['X:-1', 'Y:1', 'X:-4', 'B:3', 'X:5'];
+// Output: B:3,Y:1
+console.log(SearchingChallenge(strArr));
