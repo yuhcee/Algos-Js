@@ -25,7 +25,8 @@ const SearchingChallenge = (strArr) => {
                 return `${key}:${value}`;
             }
         })
-        
+        .filter((val) => val !== undefined)
+        .join(',');
 };
 
 
