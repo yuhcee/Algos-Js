@@ -16,8 +16,11 @@ const SearchingChallenge = (strArr) => {
 
     for (const pairs of strArr) {
         const [key, value] = pairs.split(':');
-        map.set(key, map.get(key) + Number(value) || Number(value));
+        map.set(key, map.get(key) ? map.get(key) + Number(value) : Number(value));
     }
-
-    
+    return Array.from(map)
+        .sort()
+        
 };
+
+
