@@ -10,28 +10,11 @@
  * have a value of `0` after being summed up.
  */
 
-function SearchingChallenge(strArr) {
+const SearchingChallenge = (strArr) => {
     // code goes here
     const map = {};
 
-    for (let element of strArr) {
-        const [key, value] = element.split(':');
-
-        map[key] = map[key] !== undefined ? (map[key] += Number(value)) : Number(value) || 0;
+    for (const pairs of strArr) {
+        const [key, value] = pairs.split(':');
     }
-    const data = Object.keys(map)
-        .sort()
-        .map((key) => {
-            if (map[key] !== 0) {
-                return `${key}:${map[key]}`;
-            }
-        });
-
-    return data.filter((elem) => elem !== undefined).join(',');
-}
-
-const strArr = ['X:-1', 'Y:1', 'X:-4', 'B:3', 'X:5'];
-// Output: B:3,Y:1
-
-const strArr1 = ['Z:0', 'A:-1'];
-// Output: A:-1
+};
