@@ -12,9 +12,12 @@
 
 const SearchingChallenge = (strArr) => {
     // code goes here
-    const map = {};
+    const map = new Map();
 
     for (const pairs of strArr) {
         const [key, value] = pairs.split(':');
+        map.set(key, map.get(key) + Number(value) || Number(value));
     }
+
+    
 };
