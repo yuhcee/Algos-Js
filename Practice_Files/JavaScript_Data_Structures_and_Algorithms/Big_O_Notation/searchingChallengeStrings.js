@@ -20,6 +20,11 @@ const SearchingChallenge = (strArr) => {
     }
     return Array.from(map)
         .sort()
+        .map(([key, value]) => {
+            if (map.get(key) !== 0) {
+                return `${key}:${value}`;
+            }
+        })
         
 };
 
