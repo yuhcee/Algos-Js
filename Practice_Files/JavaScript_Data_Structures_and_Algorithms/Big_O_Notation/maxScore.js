@@ -28,4 +28,5 @@ const maxScore = (cardPoints, k) => {
         right += 1;
         currSum += cardPoints[right];
     }
+    return maxSum;
 };
