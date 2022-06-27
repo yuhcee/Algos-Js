@@ -15,5 +15,7 @@
  */
 const maxScore = (cardPoints, k) => {
     const fullSum = cardPoints.reduce((sum, points) => sum + points, 0);
-
+    let maxSum = 0;
+    let left = 0;
+    let right = cardPoints.length - 1 - k;
 };
