@@ -14,5 +14,6 @@
  * @return {number}
  */
 const maxScore = (cardPoints, k) => {
-    
+    const fullSum = cardPoints.reduce((sum, points) => sum + points, 0);
+
 };
