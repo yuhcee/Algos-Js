@@ -30,3 +30,10 @@ const maxScore = (cardPoints, k) => {
     }
     return maxSum;
 };
+
+const cardPoints = [1, 2, 3, 4, 5, 6, 1],
+    k = 3;
+// Output: 12
+/* Explanation: After the first step, your score will always be 1. However, choosing the rightmost card first will maximize your total score. The optimal strategy is to take the three cards on the right, giving a final score of 1 + 6 + 5 = 12. */
+
+console.log(maxScore(cardPoints, k));
