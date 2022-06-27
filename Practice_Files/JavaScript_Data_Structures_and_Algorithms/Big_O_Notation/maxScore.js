@@ -42,3 +42,8 @@ const cardPoints1 = [2, 2, 2],
 // Output: 4
 // Explanation: Regardless of which two cards you take, your score will always be 4.
 console.log(maxScore(cardPoints1, k1));
+
+const cardPoints2 = [9, 7, 7, 9, 7, 7, 9],
+    k2 = 7;
+// Output: 55
+// Explanation: You have to take all the cards. Your score is the sum of points of all cards.
