@@ -1,5 +1,5 @@
 /**
- * There are several cards arranged in a row, and each card has an associated **number of 
+ * There are several cards arranged in a row, and each card has an associated **number of
  * points**. The points are given in the integer array `cardPoints`.
  *
  * In one step, you can take one card from the beginning or from the end of the row. You have to
@@ -20,5 +20,12 @@ const maxScore = (cardPoints, k) => {
     let right = cardPoints.length - 1 - k;
     let currSum = cardPoints.slice(left, right + 1).reduce((sum, points) => sum + points, 0);
 
-    while (right <= cardPoints.length - 1) {}
+    while (right <= cardPoints.length - 1) {
+        maxSum = Math.max(maxSum, fullSum - currSum);
+
+        currSum -= cardPoints[left];
+        left += 1;
+        right += 1;
+        currSum += cardPoints[right];
+    }
 };
