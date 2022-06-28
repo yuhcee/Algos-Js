@@ -39,6 +39,9 @@ function StringChallengeII(strArr) {
             }
             hashSet[code(s[start])]--;
             start++;
+        }else {
+            if (end < s.length) hashSet[code(s[end])]++;
+            end++;
         }
     }
 }
