@@ -16,7 +16,7 @@
 
 function StringChallengeII(strArr) {
     // code goes here
-    const [N, K] = strArr.split('');
+    const [N, K] = strArr;
 
     let A = 'A'.charCodeAt(0),
         n = 'z'.charCodeAt(0) - A + 1,
@@ -37,12 +37,17 @@ function StringChallengeII(strArr) {
                 min = length;
                 res = [start, end];
             }
-            hashSet[code(s[start])]--;
+            hashSet[code(N[start])]--;
             start++;
         } else {
-            if (end < s.length) hashSet[code(s[end])]++;
+            if (end < N.length) hashSet[code(N[end])]++;
             end++;
         }
     }
-    return min === Infinity ? '' : s.slice(res[0], res[1]);
+    return min === Infinity ? '' : N.slice(res[0], res[1]);
 }
+
+const strArr = ['aaabaaddae', 'aed'];
+// Output : dae
+console.log(StringChallengeII(strArr));
+
