@@ -39,9 +39,10 @@ function StringChallengeII(strArr) {
             }
             hashSet[code(s[start])]--;
             start++;
-        }else {
+        } else {
             if (end < s.length) hashSet[code(s[end])]++;
             end++;
         }
     }
+    return min === Infinity ? '' : s.slice(res[0], res[1]);
 }
