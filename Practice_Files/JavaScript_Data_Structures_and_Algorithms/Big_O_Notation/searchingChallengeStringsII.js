@@ -37,6 +37,8 @@ function StringChallengeII(strArr) {
                 min = length;
                 res = [start, end];
             }
+            hashSet[code(s[start])]--;
+            start++;
         }
     }
 }
