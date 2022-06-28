@@ -20,6 +20,9 @@ function StringChallengeII(strArr) {
 
     let A = 'A'.charCodeAt(0),
         n = 'z'.charCodeAt(0) - A + 1,
-        min = Infinity,
+        hashSet = Array(n).fill(0),
         res = [];
+
+    for (const char of K) hashSet[char.charCodeAt(0) - A]--;
+
 }
