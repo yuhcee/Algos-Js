@@ -50,4 +50,6 @@ function StringChallengeII(strArr) {
 const strArr = ['aaabaaddae', 'aed'];
 // Output : dae
 console.log(StringChallengeII(strArr));
-
+const strArr1 = ['aabdccdbcacd', 'aad'];
+// Output : aabd
+console.log(StringChallengeII(strArr1));
