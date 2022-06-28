@@ -16,7 +16,10 @@
 
 function StringChallengeII(strArr) {
     // code goes here
-    const [N, K] = strArr.split("");
+    const [N, K] = strArr.split('');
 
-    
+    let A = 'A'.charCodeAt(0),
+        n = 'z'.charCodeAt(0) - A + 1,
+        min = Infinity,
+        res = [];
 }
