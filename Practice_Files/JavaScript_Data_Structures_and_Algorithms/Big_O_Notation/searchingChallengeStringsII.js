@@ -30,5 +30,13 @@ function StringChallengeII(strArr) {
         end = 0,
         min = Infinity;
 
-        
+    while (end <= N.length) {
+        if (hashSet.every((val) => val >= 0)) {
+            let length = end - start;
+            if (length < min) {
+                min = length;
+                res = [start, end];
+            }
+        }
+    }
 }
