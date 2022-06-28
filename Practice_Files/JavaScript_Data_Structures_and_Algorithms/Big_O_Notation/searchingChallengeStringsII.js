@@ -24,5 +24,6 @@ function StringChallengeII(strArr) {
         res = [];
 
     for (const char of K) hashSet[char.charCodeAt(0) - A]--;
+    const code = (char) => char.charCodeAt(0) - A;
 
 }
