@@ -16,4 +16,7 @@
 
 function StringChallengeII(strArr) {
     // code goes here
+    const [N, K] = strArr.split("");
+
+    
 }
