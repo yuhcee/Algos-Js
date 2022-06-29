@@ -11,4 +11,10 @@
  * @param {string} s
  * @return {number}
  */
-const minDeletions = (s) => {};
+const minDeletions = (s) => {
+    const charMap = {};
+
+    for (const char of s) {
+        charMap[s] = charMap[s] += 1 || 1;
+    }
+};
