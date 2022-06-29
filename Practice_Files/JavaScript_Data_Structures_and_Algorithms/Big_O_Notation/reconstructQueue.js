@@ -22,4 +22,6 @@ const reconstructQueue = (people) => {
         // modify result index with people k
         result.splice(k, 0, [height, k]);
     }
+
+    return result;
 };
