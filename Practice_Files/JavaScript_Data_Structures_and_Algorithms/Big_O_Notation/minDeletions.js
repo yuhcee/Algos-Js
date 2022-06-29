@@ -30,6 +30,9 @@ const minDeletions = (s) => {
         }
         used.add(notUsed);
     });
+    return result;
 };
-
-console.log(minDeletions('aab'));
+const s = "aab"
+// Output: 0
+// Explanation: s is already good.
+console.log(minDeletions(s));
