@@ -15,6 +15,21 @@ const minDeletions = (s) => {
     const charMap = {};
 
     for (const char of s) {
-        charMap[s] = charMap[s] += 1 || 1;
+        charMap[char] = charMap[char] + 1 || 1;
     }
+
+    let used = new Set(),
+        result = 0;
+
+    Object.entries(charMap).forEach(([char, count]) => {
+        let notUsed = count;
+
+        if (used.has(notUsed) && notUsed !== 0) {
+            result += 1;
+            notUsed -= 1;
+        }
+        used.add(notUsed);
+    });
 };
+
+console.log(minDeletions('aab'));
