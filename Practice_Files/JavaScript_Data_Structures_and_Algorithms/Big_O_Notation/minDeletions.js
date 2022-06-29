@@ -22,13 +22,13 @@ const minDeletions = (s) => {
         result = 0;
 
     Object.entries(charMap).forEach(([char, count]) => {
-        let notUsed = count;
+        let notUsedCount = count;
 
-        if (used.has(notUsed) && notUsed !== 0) {
+        while (used.has(notUsedCount) && notUsedCount !== 0) {
             result += 1;
-            notUsed -= 1;
+            notUsedCount -= 1;
         }
-        used.add(notUsed);
+        used.add(notUsedCount);
     });
     return result;
 };
@@ -42,3 +42,9 @@ const s1 = 'aaabbbcc';
 /* Explanation: You can delete two 'b's resulting in the good string "aaabcc".
 Another way it to delete one 'b' and one 'c' resulting in the good string "aaabbc". */
 console.log(minDeletions(s1));
+
+const s2 = 'ceabaacb';
+// Output: 2
+/* Explanation: You can delete both 'c's resulting in the good string "eabaab".
+Note that we only care about characters that are still in the string at the end (i.e. frequency of 0 is ignored). */
+console.log(minDeletions(s2));
