@@ -44,3 +44,14 @@ Person 4 has height 4 with four people taller or the same height in front, which
 Person 5 has height 7 with one person taller or the same height in front, which is person 1.
 Hence [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] is the reconstructed queue. */
 console.log(reconstructQueue(people));
+
+const people1 = [
+    [6, 0],
+    [5, 0],
+    [4, 0],
+    [3, 2],
+    [2, 2],
+    [1, 4],
+];
+// Output: [[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]]
+console.log(reconstructQueue(people1));
