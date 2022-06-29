@@ -32,7 +32,13 @@ const minDeletions = (s) => {
     });
     return result;
 };
-const s = "aab"
+const s = 'aab';
 // Output: 0
 // Explanation: s is already good.
 console.log(minDeletions(s));
+
+const s1 = 'aaabbbcc';
+// Output: 2
+/* Explanation: You can delete two 'b's resulting in the good string "aaabcc".
+Another way it to delete one 'b' and one 'c' resulting in the good string "aaabbc". */
+console.log(minDeletions(s1));
