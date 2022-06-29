@@ -19,6 +19,7 @@ const reconstructQueue = (people) => {
 
     // loop through sorted people
     for (const [height, k] of people) {
-        
+        // modify result index with people k
+        result.splice(k, 0, [height, k]);
     }
 };
