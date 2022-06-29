@@ -18,19 +18,19 @@ const minDeletions = (s) => {
         charMap[char] = charMap[char] + 1 || 1;
     }
 
-    let used = new Set(),
-        result = 0;
+    let seen = new Set(),
+        deleteCount = 0;
 
-    Object.entries(charMap).forEach(([char, count]) => {
-        let notUsedCount = count;
+    Object.values(charMap).forEach((count) => {
+        let notSeenCount = count;
 
-        while (used.has(notUsedCount) && notUsedCount !== 0) {
-            result += 1;
-            notUsedCount -= 1;
+        while (seen.has(notSeenCount) && notSeenCount !== 0) {
+            deleteCount += 1;
+            notSeenCount -= 1;
         }
-        used.add(notUsedCount);
+        seen.add(notSeenCount);
     });
-    return result;
+    return deleteCount;
 };
 const s = 'aab';
 // Output: 0
