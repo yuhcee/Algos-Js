@@ -11,4 +11,9 @@
  * @param {number[]} nums
  * @return {number}
  */
-const minMoves2 = (nums) => {};
+
+// Aprroach 1: Sorting With Median
+
+const minMoves2 = (nums) => {
+    nums.sort((a, b) => a - b);
+};
