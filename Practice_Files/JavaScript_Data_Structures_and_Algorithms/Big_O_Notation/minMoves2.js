@@ -16,4 +16,7 @@
 
 const minMoves2 = (nums) => {
     nums.sort((a, b) => a - b);
+
+    let operations = 0,
+        median = nums[Math.floor(nums.length / 2)];
 };
