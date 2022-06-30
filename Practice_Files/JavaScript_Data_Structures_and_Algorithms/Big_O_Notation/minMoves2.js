@@ -50,3 +50,10 @@ const minMoves22 = (nums) => {
     }
     return sum;
 };
+
+const nums2 = [1, 2, 3];
+console.log(minMoves22(nums2));
+
+const nums3 = [1, 10, 2, 9];
+// Output: 16
+console.log(minMoves22(nums3));
