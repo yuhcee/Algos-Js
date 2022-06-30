@@ -21,4 +21,6 @@ const minMoves2 = (nums) => {
         median = nums[Math.floor(nums.length / 2)];
 
     for (const num of nums) operations += Math.abs(median - num);
+
+    return operations;
 };
