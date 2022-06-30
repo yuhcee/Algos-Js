@@ -34,3 +34,19 @@ console.log(minMoves2(nums));
 const nums1 = [1, 10, 2, 9];
 // Output: 16
 console.log(minMoves2(nums1));
+
+// Approach 2: Sorting Without Median
+
+const minMoves22 = (nums) => {
+    nums.sort((a, b) => a - b);
+    let left = 0,
+        right = nums.length - 1,
+        sum = 0;
+
+    while (left < right) {
+        sum += nums[right] - nums[left];
+        left++;
+        right--;
+    }
+    return sum;
+};
