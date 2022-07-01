@@ -16,5 +16,9 @@
  * @param {number[][]} boxTypes
  * @param {number} truckSize
  * @return {number}
+ *
  */
-const maximumUnits = (boxTypes, truckSize) => {};
+const maximumUnits = (boxTypes, truckSize) => {
+    // sort boxes by units in descending order
+    boxTypes.sort((a, b) => b[1] - a[1]);
+};
