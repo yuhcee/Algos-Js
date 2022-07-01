@@ -21,8 +21,15 @@
 const maximumUnits = (boxTypes, truckSize) => {
     // sort boxes by units in descending order
     boxTypes.sort((a, b) => b[1] - a[1]);
+    let unitCount = 0;
 
+    // loop through boxTypes and set boxCount
     for (const [box, units] of boxTypes) {
         let boxCount = Math.min(truckSize, box);
+        // update unitCount
+        unitCount += units * boxCount;
+        truckSize -= boxCount;
+
+        if (truckSize <= 0) break;
     }
 };
