@@ -50,4 +50,12 @@ You can take all the boxes of the first and second types, and one box of the thi
 The total number of units will be = (1 * 3) + (2 * 2) + (1 * 1) = 8. */
 console.log(maximumUnits(boxTypes, truckSize));
 
-
+const boxTypes1 = [
+        [5, 10],
+        [2, 5],
+        [4, 7],
+        [3, 9],
+    ],
+    truckSize1 = 10;
+// Output: 91
+console.log(maximumUnits(boxTypes1, truckSize1));
