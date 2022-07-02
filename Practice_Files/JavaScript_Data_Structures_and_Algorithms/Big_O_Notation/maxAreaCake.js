@@ -19,5 +19,11 @@
  * @return {number}
  */
 const maxAreaCake = (h, w, horizontalCuts, verticalCuts) => {
+    // init limit as BigInt
     const limit = BigInt(1e9 + 7);
+
+    // function to get max area
+    const getMaxArea = (arr, size) => {
+
+    }
 };
