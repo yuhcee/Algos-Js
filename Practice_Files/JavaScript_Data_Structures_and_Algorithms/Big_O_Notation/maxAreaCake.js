@@ -44,3 +44,11 @@ const maxAreaCake = (h, w, horizontalCuts, verticalCuts) => {
 
     return (maxHeight * maxWidth) % limit;
 };
+
+const h = 5,
+    w = 4,
+    horizontalCuts = [1, 2, 4],
+    verticalCuts = [1, 3];
+// Output: 4
+/* Explanation: The figure above represents the given rectangular cake. Red lines are the horizontal and vertical cuts. After you cut the cake, the green piece of cake has the maximum area. */
+console.log(maxAreaCake(h, w, horizontalCuts, verticalCuts));
