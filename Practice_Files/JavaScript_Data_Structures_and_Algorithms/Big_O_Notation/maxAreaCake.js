@@ -31,7 +31,11 @@ const maxAreaCake = (h, w, horizontalCuts, verticalCuts) => {
         // iterate through arr and get max diff of two consecutive elements
         for (let i = 1; i < arr.length; i++) {
             // update max if necessary
-            max = Math.max(max, arr[i] - arr[i - 1]);
+            const diff = arr[i] - arr[i - 1];
+            max = Math.max(max, diff);
         }
+
+        // return max difference as BigInt
+        return BigInt(max);
     };
 };
