@@ -24,6 +24,7 @@ const maxAreaCake = (h, w, horizontalCuts, verticalCuts) => {
 
     // function to get max area
     const getMaxArea = (arr, size) => {
-
-    }
+        // sort array in ascensding order
+        arr.sort((a, b) => a - b);
+    };
 };
