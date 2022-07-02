@@ -26,5 +26,7 @@ const maxAreaCake = (h, w, horizontalCuts, verticalCuts) => {
     const getMaxArea = (arr, size) => {
         // sort array in ascensding order
         arr.sort((a, b) => a - b);
+        // init max as larger of bottom and edge of arr
+        max = Math.max(arr[0], size - arr.at(-1));
     };
 };
