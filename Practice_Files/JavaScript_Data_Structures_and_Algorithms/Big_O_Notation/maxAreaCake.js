@@ -52,3 +52,11 @@ const h = 5,
 // Output: 4
 /* Explanation: The figure above represents the given rectangular cake. Red lines are the horizontal and vertical cuts. After you cut the cake, the green piece of cake has the maximum area. */
 console.log(maxAreaCake(h, w, horizontalCuts, verticalCuts));
+
+const h1 = 5,
+    w1 = 4,
+    horizontalCuts1 = [3, 1],
+    verticalCuts1 = [1];
+// Output: 6
+/* Explanation: The figure above represents the given rectangular cake. Red lines are the horizontal and vertical cuts. After you cut the cake, the green and yellow pieces of cake have the maximum area. */
+console.log(maxAreaCake(h1, w1, horizontalCuts1, verticalCuts1));
