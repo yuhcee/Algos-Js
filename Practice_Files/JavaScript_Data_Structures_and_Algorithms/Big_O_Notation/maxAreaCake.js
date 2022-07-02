@@ -22,15 +22,16 @@ const maxAreaCake = (h, w, horizontalCuts, verticalCuts) => {
     // init limit as BigInt
     const limit = BigInt(1e9 + 7);
 
-    // function to get max area
-    const getMaxArea = (arr, size) => {
+    // function to get max Difference
+    const getMaxDiff = (arr, size) => {
         // sort array in ascensding order
         arr.sort((a, b) => a - b);
         // init max as larger of bottom and edge of arr
         max = Math.max(arr[0], size - arr.at(-1));
         // iterate through arr and get max diff of two consecutive elements
         for (let i = 1; i < arr.length; i++) {
-            
+            // update max if necessary
+            max = Math.max(max, arr[i] - arr[i - 1]);
         }
     };
 };
