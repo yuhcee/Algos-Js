@@ -28,5 +28,9 @@ const maxAreaCake = (h, w, horizontalCuts, verticalCuts) => {
         arr.sort((a, b) => a - b);
         // init max as larger of bottom and edge of arr
         max = Math.max(arr[0], size - arr.at(-1));
+        // iterate through arr and get max diff of two consecutive elements
+        for (let i = 1; i < arr.length; i++) {
+            
+        }
     };
 };
