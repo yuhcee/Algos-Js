@@ -18,4 +18,6 @@
  * @param {number[]} verticalCuts
  * @return {number}
  */
-const maxAreaCake = (h, w, horizontalCuts, verticalCuts) => {};
+const maxAreaCake = (h, w, horizontalCuts, verticalCuts) => {
+    const limit = BigInt(1e9 + 7);
+};
