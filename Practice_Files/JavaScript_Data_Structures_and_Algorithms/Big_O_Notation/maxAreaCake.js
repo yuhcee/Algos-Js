@@ -38,4 +38,9 @@ const maxAreaCake = (h, w, horizontalCuts, verticalCuts) => {
         // return max difference as BigInt
         return BigInt(max);
     };
+
+    const maxHeight = getMaxDiff(horizontalCuts, h);
+    const maxWidth = getMaxDiff(verticalCuts, w);
+
+    
 };
