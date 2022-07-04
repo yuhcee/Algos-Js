@@ -26,4 +26,8 @@ const wiggleMaxLength = (nums) => {
 
     let up = 0,
         down = 0;
+
+    for (let i = 1; i < nums.length; i += 1) {
+        
+    }
 };
