@@ -48,3 +48,6 @@ const nums2 = [1, 17, 5, 10, 13, 15, 10, 5, 16, 8];
 /* Explanation: There are several subsequences that achieve this length.
 One is [1, 17, 10, 13, 10, 16, 8] with differences (16, -7, 3, -3, 6, -8). */
 console.log(wiggleMaxLength(nums2));
+const nums3 = [1,2,3,4,5,6,7,8,9]
+// Output: 2
+console.log(wiggleMaxLength(nums3));
