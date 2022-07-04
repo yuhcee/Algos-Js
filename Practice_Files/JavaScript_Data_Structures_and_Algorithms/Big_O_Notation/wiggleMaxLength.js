@@ -28,6 +28,7 @@ const wiggleMaxLength = (nums) => {
         down = 0;
 
     for (let i = 1; i < nums.length; i += 1) {
-        
+        // if elem is greater than prev, it wiggles up
+        if (nums[i] > nums[i - 1]) up = down + 1;
     }
 };
