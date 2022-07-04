@@ -20,4 +20,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const wiggleMaxLength = (nums) => {};
+const wiggleMaxLength = (nums) => {
+    // return nums length if less than 2
+    if (nums.length < 2) return nums.length;
+};
