@@ -23,4 +23,7 @@
 const wiggleMaxLength = (nums) => {
     // return nums length if less than 2
     if (nums.length < 2) return nums.length;
+
+    let up = 0,
+        down = 0;
 };
