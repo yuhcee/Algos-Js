@@ -24,8 +24,8 @@ const wiggleMaxLength = (nums) => {
     // return nums length if less than 2
     if (nums.length < 2) return nums.length;
 
-    let up = 0,
-        down = 0;
+    let up = 1,
+        down = 1;
 
     for (let i = 1; i < nums.length; i += 1) {
         // if elem is greater than prev, it wiggles up
@@ -37,3 +37,8 @@ const wiggleMaxLength = (nums) => {
     // return max of up or down
     return Math.max(up, down);
 };
+
+const nums = [1, 7, 4, 9, 2, 5];
+// Output: 6
+// Explanation: The entire sequence is a wiggle sequence with differences (6, -3, 5, -7, 3).
+console.log(wiggleMaxLength(nums));
