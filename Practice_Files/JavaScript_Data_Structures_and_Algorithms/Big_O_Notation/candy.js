@@ -35,4 +35,6 @@ const candy = (ratings) => {
             candies[i - 1] = candies[i] + 1;
         }
     }
+    // Return the total candies held by all children
+    return candies.reduce((acc, val) => acc + val);
 };
