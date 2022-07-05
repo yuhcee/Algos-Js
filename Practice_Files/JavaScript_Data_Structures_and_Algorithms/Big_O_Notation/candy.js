@@ -17,4 +17,9 @@ const candy = (ratings) => {
     const len = ratings.length,
         // Create a separate array to keep track of candy, start each child at 1 candy.
         candies = Array(len).fill(1);
+
+        // Go through left to right.
+    for (let i = 0; i < len - 1; i++) {
+        
+    }
 };
