@@ -1,6 +1,6 @@
 /**
- * **
- * 135. Candy**
+ * **135. Candy**
+ *
  * There are `n` children standing in a line. Each child is assigned a rating value given in the integer array `ratings`.
  *
  * You are giving candies to these children subjected to the following requirements:
@@ -38,3 +38,10 @@ const candy = (ratings) => {
     // Return the total candies held by all children
     return candies.reduce((acc, val) => acc + val);
 };
+
+const ratings = [1, 0, 2];
+// Output: 5
+// Explanation: You can allocate to the first, second and third child with 2, 1, 2 candies respectively.
+console.log(candy(ratings));
+
+
