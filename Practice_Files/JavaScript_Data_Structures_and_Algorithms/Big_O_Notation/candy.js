@@ -28,5 +28,10 @@ const candy = (ratings) => {
     }
 
     // Go through right to left.
-    for (let i = len - 1; i > 0; i--) {}
+    for (let i = len - 1; i > 0; i--) {
+        // If the child to the left is ranked higher and has the same or fewer candies than the current child
+        if(rating[i] < ratings[i - 1] && candies[i] >= candies[i - 1]) {
+
+        }
+    }
 };
