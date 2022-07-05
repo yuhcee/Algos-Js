@@ -13,4 +13,8 @@
  * @param {number[]} ratings
  * @return {number}
  */
-const candy = (ratings) => {};
+const candy = (ratings) => {
+    const len = ratings.length,
+        // Create a separate array to keep track of candy, start each child at 1 candy.
+        candies = Array(len).fill(1);
+};
