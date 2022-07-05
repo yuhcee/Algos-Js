@@ -22,6 +22,8 @@ const candy = (ratings) => {
     for (let i = 0; i < len - 1; i++) {
         // if the child on the right is ranked higher
         if (ratings[i] < ratings[i + 1]) {
+            // that child gets 1 candy extra
+            candies[i + 1] = candies[i] + 1;
         }
     }
 };
