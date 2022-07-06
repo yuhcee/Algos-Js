@@ -17,4 +17,9 @@ const longestConsecutive = (nums) => {
 
     // sort arr in ascending order
     nums.sort((a, b) => a - b);
+
+    // iterate through nums arr
+    for (let i = 1; i < nums.length; i++) {
+        
+    }
 };
