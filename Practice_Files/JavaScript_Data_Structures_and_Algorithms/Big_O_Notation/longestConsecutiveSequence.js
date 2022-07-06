@@ -23,9 +23,13 @@ const longestConsecutive = (nums) => {
         // if two consecutive elems are not same
         if (nums[i] !== nums[i - 1]) {
             // check if their diff is equal to 1, ie consecutive
-            if(nums[i] === nums[i - 1] + 1) {
+            if (nums[i] === nums[i - 1] + 1) {
                 // if they're equal, update currentStreak
                 currentStreak += 1;
+            } else {
+                // update the longestStreak, restart another streak
+                longestStreak = Math.max(longestStreak, currentStreak);
+                currentStreak = 1;
             }
         }
     }
