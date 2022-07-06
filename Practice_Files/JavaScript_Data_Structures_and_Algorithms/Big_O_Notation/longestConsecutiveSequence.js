@@ -45,3 +45,7 @@ console.log(longestConsecutive(nums));
 const nums1 = [0, 3, 7, 2, 5, 8, 4, 6, 0, 1];
 // Output: 9
 console.log(longestConsecutive(nums1));
+
+const nums2 = [3, 7, 2, 8, 4, 6, 1, 9, 10];
+// Output: 5
+console.log(longestConsecutive(nums2));
