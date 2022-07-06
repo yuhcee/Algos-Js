@@ -33,4 +33,6 @@ const longestConsecutive = (nums) => {
             }
         }
     }
+    // return the maximum consecutive Streak
+    return Math.max(longestStreak, currentStreak);
 };
