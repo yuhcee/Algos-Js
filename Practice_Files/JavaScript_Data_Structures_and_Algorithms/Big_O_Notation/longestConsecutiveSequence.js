@@ -22,6 +22,10 @@ const longestConsecutive = (nums) => {
     for (let i = 1; i < nums.length; i++) {
         // if two consecutive elems are not same
         if (nums[i] !== nums[i - 1]) {
+            // check if their diff is equal to 1, ie consecutive
+            if(nums[i] === nums[i - 1] + 1) {
+
+            }
         }
     }
 };
