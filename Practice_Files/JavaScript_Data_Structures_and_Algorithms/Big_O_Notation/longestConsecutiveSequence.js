@@ -11,4 +11,9 @@
 const longestConsecutive = (nums) => {
     // take care of empty array
     if (nums.length < 1) return nums.length;
+
+    let currentStreak = 1,
+        longestStreak = 1;
+
+    
 };
