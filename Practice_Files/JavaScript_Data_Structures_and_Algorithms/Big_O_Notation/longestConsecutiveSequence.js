@@ -24,7 +24,8 @@ const longestConsecutive = (nums) => {
         if (nums[i] !== nums[i - 1]) {
             // check if their diff is equal to 1, ie consecutive
             if(nums[i] === nums[i - 1] + 1) {
-
+                // if they're equal, update currentStreak
+                currentStreak += 1;
             }
         }
     }
