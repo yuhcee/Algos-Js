@@ -46,3 +46,11 @@ const s1 = 'aabcc',
     s3 = 'aadbbcbcac';
 // Output: true
 console.log(isInterleave(s1, s2, s3));
+
+const s11 = 'aabcc',
+    s22 = 'dbbca',
+    s33 = 'aadbbbaccc';
+// Output: false
+console.log(isInterleave(s11, s22, s33));
+
+
