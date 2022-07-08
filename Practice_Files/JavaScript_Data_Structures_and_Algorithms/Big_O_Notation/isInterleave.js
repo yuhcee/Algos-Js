@@ -40,3 +40,9 @@ const isInterleave = (s1, s2, s3) => {
 
     return solve();
 };
+
+const s1 = 'aabcc',
+    s2 = 'dbbca',
+    s3 = 'aadbbcbcac';
+// Output: true
+console.log(isInterleave(s1, s2, s3));
