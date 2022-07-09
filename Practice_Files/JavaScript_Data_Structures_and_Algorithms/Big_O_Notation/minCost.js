@@ -28,4 +28,9 @@
 const minCost = function (houses, cost, m, n, target) {
     // Maximum cost possible plus 1
     const MAX_COST = 1000001;
+
+    const findMinCost = function (houses, cost, targetCount, currIndex = 0, neighborhoodCount = 0, prevHouseColor = 0, memo = {}) {
+        // init memoization key
+        const key = `${currIndex},${neighborhoodCount},${prevHouseColor}`;
+    };
 };
