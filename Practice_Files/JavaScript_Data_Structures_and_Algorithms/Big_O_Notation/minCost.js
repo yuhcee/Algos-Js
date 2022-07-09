@@ -2,7 +2,8 @@
  * **1473. Paint House III**
  *
  * There is a row of `m` houses in a small city, each house must be painted with one of the `n` colors
- * (labeled from `1` to `n`), some houses that have been painted last summer should not be painted again.
+ * (labeled from `1` to `n`), some houses that have been painted last summer should not be painted
+ * again.
  *
  * A neighborhood is a maximal group of continuous houses that are painted with the same color.
  *
@@ -24,4 +25,7 @@
  * @param {number} target
  * @return {number}
  */
-const minCost = function (houses, cost, m, n, target) {};
+const minCost = function (houses, cost, m, n, target) {
+    // Maximum cost possible plus 1
+    const MAX_COST = 1000001;
+};
