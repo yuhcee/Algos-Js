@@ -74,3 +74,19 @@ const minCost = function (houses, cost, m, n, target) {
 
     return answer === MAX_COST ? -1 : answer;
 };
+const houses = [0, 0, 0, 0, 0],
+    cost = [
+        [1, 10],
+        [10, 1],
+        [10, 1],
+        [1, 10],
+        [5, 1],
+    ],
+    m = 5,
+    n = 2,
+    target = 3;
+// Output: 9
+/* Explanation: Paint houses of this way [1,2,2,1,1]
+This array contains target = 3 neighborhoods, [{1}, {2,2}, {1,1}].
+Cost of paint all houses (1 + 1 + 1 + 1 + 5) = 9. */
+console.log(minCost(houses, cost, m, n, target));
