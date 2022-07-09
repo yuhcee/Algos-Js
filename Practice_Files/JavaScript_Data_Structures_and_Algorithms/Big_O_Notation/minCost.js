@@ -44,8 +44,16 @@ const minCost = function (houses, cost, m, n, target) {
         }
 
         // We have already calculated the answer so no need to go into recursion
-        if(key in memo) {
+        if (key in memo) {
             return memo[key];
+        }
+
+        let minCost = MAX_COST;
+        
+        // if the house is already painted, update the values accordingly
+        if (houses[currIndex] !== 0) {
+            let newNeighborhoodCount = neighborhoodCount + (houses[currIndex] !== prevHouseColor ? 1 : 0);
+            minCost = findMinCost(houses, cost, targetCount, currIndex + 1, newNeighborhoodCount, houses[currIndex], memo);
         }
     };
 };
