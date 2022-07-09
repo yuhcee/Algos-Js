@@ -65,5 +65,12 @@ const minCost = function (houses, cost, m, n, target) {
                 minCost = Math.min(minCost, currCost);
             }
         }
+
+        // Return the minimum cost and also storing it for future reference(memoization)
+        return (memo[key] = minCost);
     };
+
+    let answer = findMinCost(houses, cost, target);
+
+    return answer === MAX_COST ? -1 : answer;
 };
