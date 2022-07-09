@@ -32,5 +32,10 @@ const minCost = function (houses, cost, m, n, target) {
     const findMinCost = function (houses, cost, targetCount, currIndex = 0, neighborhoodCount = 0, prevHouseColor = 0, memo = {}) {
         // init memoization key
         const key = `${currIndex},${neighborhoodCount},${prevHouseColor}`;
+
+        if (currIndex === houses.length) {
+            // if all houses are traversed, check if the neighbor count is as expected or not
+            return neighborhoodCount === targetCount ? 0 : MAX_COST;
+        }
     };
 };
