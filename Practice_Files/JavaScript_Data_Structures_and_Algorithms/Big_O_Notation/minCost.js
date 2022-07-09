@@ -121,3 +121,33 @@ const houses2 = [3, 1, 2, 3],
 // Output: -1;
 /* Explanation: Houses are already painted with a total of 4 neighborhoods [{3},{1},{2},{3}] different of target = 3. */
 console.log(minCost(houses2, cost2, m2, n2, target2));
+
+// =========================== SOLUTION USING MAP ==============================
+const minCost1 = function (houses, cost, m, n, target) {
+    
+    const MAX_VALUE = 1000001;
+    const memo = new Map();
+
+    function helper(i, prevCol, groups) {
+        if (groups > target) return MAX_VALUE;
+
+        if (i == m) return groups == target ? 0 : MAX_VALUE;
+
+        const key = `${i}-${prevCol}-${groups}`;
+
+        if (memo.has(key)) return memo.get(key);
+
+        let ans = MAX_VALUE;
+
+        if (houses[i] != 0) ans = Math.min(ans, helper(i + 1, houses[i], prevCol == houses[i] ? groups : groups + 1));
+        else for (let j = 0; j < n; j++) ans = Math.min(ans, cost[i][j] + helper(i + 1, j + 1, prevCol == j + 1 ? groups : groups + 1));
+
+        memo.set(key, ans);
+
+        return ans;
+    }
+
+    const ans = helper(0, 0, 0);
+
+    return ans == MAX_VALUE ? -1 : ans;
+};
