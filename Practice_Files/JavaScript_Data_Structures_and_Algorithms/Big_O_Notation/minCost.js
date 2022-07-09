@@ -42,5 +42,10 @@ const minCost = function (houses, cost, m, n, target) {
             // if the neighborhoods are more than the threshold, we can have target neighborhoods
             return MAX_COST;
         }
+
+        // We have already calculated the answer so no need to go into recursion
+        if(key in memo) {
+            return memo[key];
+        }
     };
 };
