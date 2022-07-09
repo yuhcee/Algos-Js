@@ -90,3 +90,20 @@ const houses = [0, 0, 0, 0, 0],
 This array contains target = 3 neighborhoods, [{1}, {2,2}, {1,1}].
 Cost of paint all houses (1 + 1 + 1 + 1 + 5) = 9. */
 console.log(minCost(houses, cost, m, n, target));
+
+const houses1 = [0, 2, 1, 2, 0],
+    cost1 = [
+        [1, 10],
+        [10, 1],
+        [10, 1],
+        [1, 10],
+        [5, 1],
+    ],
+    m1 = 5,
+    n1 = 2,
+    target1 = 3;
+// Output: 11
+/* Explanation: Some houses are already painted, Paint the houses of this way [2,2,1,2,2]
+This array contains target = 3 neighborhoods, [{2,2}, {1}, {2,2}]. 
+Cost of paint the first and last house (10 + 1) = 11. */
+console.log(minCost(houses1, cost1, m1, n1, target1));
