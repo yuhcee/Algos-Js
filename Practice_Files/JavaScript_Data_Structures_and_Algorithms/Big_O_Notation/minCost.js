@@ -37,5 +37,10 @@ const minCost = function (houses, cost, m, n, target) {
             // if all houses are traversed, check if the neighbor count is as expected or not
             return neighborhoodCount === targetCount ? 0 : MAX_COST;
         }
+
+        if (neighborhoodCount > targetCount) {
+            // if the neighborhoods are more than the threshold, we can have target neighborhoods
+            return MAX_COST;
+        }
     };
 };
