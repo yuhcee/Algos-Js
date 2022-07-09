@@ -49,11 +49,21 @@ const minCost = function (houses, cost, m, n, target) {
         }
 
         let minCost = MAX_COST;
-        
+
         // if the house is already painted, update the values accordingly
         if (houses[currIndex] !== 0) {
             let newNeighborhoodCount = neighborhoodCount + (houses[currIndex] !== prevHouseColor ? 1 : 0);
             minCost = findMinCost(houses, cost, targetCount, currIndex + 1, newNeighborhoodCount, houses[currIndex], memo);
+        } else {
+            let totalColors = cost[0].length;
+
+            // If the house is not painted, try every possible color and store the minimum of cost
+            for (let color = 1; color <= totalColors; color++) {
+                let newNeighborhoodCount = neighborhoodCount + (color !== prevHouseColor ? 1 : 0);
+
+                let currCost = cost[currIndex][color - 1] + findMinCost(houses, cost, targetCount, currIndex + 1, newNeighborhoodCount, color, memo);
+                minCost = Math.min(minCost, currCost);
+            }
         }
     };
 };
