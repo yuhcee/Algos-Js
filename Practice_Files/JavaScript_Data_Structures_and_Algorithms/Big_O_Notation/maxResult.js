@@ -46,3 +46,9 @@ const nums = [1, -1, -2, 4, -7, 3],
 // Output: 7
 /* Explanation: You can choose your jumps forming the subsequence [1,-1,4,3] (underlined above). The sum is 7. */
 console.log(maxResult(nums, k));
+
+const nums1 = [10, -5, -2, 4, 0, 3],
+    k1 = 3;
+// Output: 17
+/* Explanation: You can choose your jumps forming the subsequence [10,4,3] (underlined above). The sum is 17. */
+console.log(maxResult(nums1, k1));
