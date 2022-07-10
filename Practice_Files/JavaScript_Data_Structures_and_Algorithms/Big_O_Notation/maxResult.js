@@ -29,6 +29,8 @@ const maxResult = (nums, k) => {
 
         if (monoDequeue.length > 0 && i - k > monoDequeue[0]) monoDequeue.shift();
 
-        
+        score += dp[monoDequeue[0]];
+
+        dp[i] = score;
     }
 };
