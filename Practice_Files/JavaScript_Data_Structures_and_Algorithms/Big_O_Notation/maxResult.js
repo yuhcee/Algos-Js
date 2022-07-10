@@ -32,5 +32,9 @@ const maxResult = (nums, k) => {
         score += dp[monoDequeue[0]];
 
         dp[i] = score;
+
+        while (monoDequeue.length > 0 && dp[monoDequeue.at(-1)] < score) {
+            monoDequeue.pop();
+        }
     }
 };
