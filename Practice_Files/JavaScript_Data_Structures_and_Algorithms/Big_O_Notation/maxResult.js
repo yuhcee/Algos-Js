@@ -17,5 +17,9 @@
  * @return {number}
  */
 const maxResult = (nums, k) => {
+    const len = nums.length,
+        dp = Array(len).fill(0);
+    dp[0] = nums[0];
+
     
 };
