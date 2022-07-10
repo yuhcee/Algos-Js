@@ -52,3 +52,8 @@ const nums1 = [10, -5, -2, 4, 0, 3],
 // Output: 17
 /* Explanation: You can choose your jumps forming the subsequence [10,4,3] (underlined above). The sum is 17. */
 console.log(maxResult(nums1, k1));
+
+const nums2 = [1, -5, -20, 4, -1, 3, -6, -3],
+    k2 = 2;
+// Output: 0
+console.log(maxResult(nums2, k2));
