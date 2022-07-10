@@ -38,4 +38,11 @@ const maxResult = (nums, k) => {
         }
         monoDequeue.push(i);
     }
+
+    return dp[len - 1];
 };
+const nums = [1, -1, -2, 4, -7, 3],
+    k = 2;
+// Output: 7
+/* Explanation: You can choose your jumps forming the subsequence [1,-1,4,3] (underlined above). The sum is 7. */
+console.log(maxResult(nums, k));
