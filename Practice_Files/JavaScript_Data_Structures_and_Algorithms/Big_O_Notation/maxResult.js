@@ -20,9 +20,15 @@ const maxResult = (nums, k) => {
     const len = nums.length,
         dp = Array(len).fill(0);
     dp[0] = nums[0];
-    
+
     const monoDequeue = [];
     monoDequeue.push(0);
 
-    
+    for (let i = 1; i < len; i++) {
+        let score = nums[i];
+
+        if (monoDequeue.length > 0 && i - k > monoDequeue[0]) monoDequeue.shift();
+
+        
+    }
 };
