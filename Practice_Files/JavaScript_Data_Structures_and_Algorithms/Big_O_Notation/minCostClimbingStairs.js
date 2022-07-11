@@ -26,5 +26,6 @@ const minCostClimbingStairs = (cost) => {
         // apply the recurrence relation
         minimumCost[i] = Math.min(takeOneStep, takeTwoSteps);
     }
-
+    // The final element in minimumCost refers to the top floor
+    return minimumCost.at(-1);
 };
