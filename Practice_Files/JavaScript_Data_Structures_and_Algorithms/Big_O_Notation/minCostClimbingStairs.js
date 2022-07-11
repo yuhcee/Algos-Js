@@ -16,4 +16,15 @@ const minCostClimbingStairs = (cost) => {
     // This is because we can treat the "top floor" as a step to reach
     let len = cost.length,
         minimumCost = Array(len + 1).fill(0);
+
+    // Start iteration from step 2, since the minimum cost of reaching
+    // step 0 and step 1 is 0
+    for (let i = 2; i < minimumCost.length; i++) {
+        let takeOneStep = minimumCost[i - 1] + cost[i - 1];
+        let takeTwoSteps = minimumCost[i - 2] + cost[i - 2];
+
+       
+    }
+
+    
 };
