@@ -23,8 +23,8 @@ const minCostClimbingStairs = (cost) => {
         let takeOneStep = minimumCost[i - 1] + cost[i - 1];
         let takeTwoSteps = minimumCost[i - 2] + cost[i - 2];
 
-       
+        // apply the recurrence relation
+        minimumCost[i] = Math.min(takeOneStep, takeTwoSteps);
     }
 
-    
 };
