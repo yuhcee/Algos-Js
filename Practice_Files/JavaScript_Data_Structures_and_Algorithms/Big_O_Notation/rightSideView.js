@@ -54,3 +54,7 @@ console.log(rightSideView(root));
 const root1 = [1, null, 3];
 // Output: [1,3]
 console.log(rightSideView(root1));
+
+const root2 = [];
+// Output: []
+console.log(rightSideView(root2));
