@@ -36,5 +36,10 @@ var rightSideView = (root) => {
 
         // add its value to the rightSide arr
         rightSide.push(last.val);
+
+        for (let node of nodes) {
+            if (node.left) newNodes.push(node.left);
+            if (node.right) newNodes.push(node.right);
+        }
     }
 };
