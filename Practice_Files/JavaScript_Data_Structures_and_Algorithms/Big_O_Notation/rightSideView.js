@@ -20,5 +20,6 @@
  */
 
 var rightSideView = (root) => {
-    
+    // return empty array if root is null
+    if (!root) return [];
 };
