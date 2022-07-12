@@ -58,3 +58,19 @@ console.log(rightSideView(root1));
 const root2 = [];
 // Output: []
 console.log(rightSideView(root2));
+
+// ===================== ADD RECURSIVE SOLUTION =======================
+// var rightSideView = (root, level = 0, res = []) => {
+//     if (root === null) {
+//         return res
+//     }
+
+//     if (level >= res.length) {
+//         res.push(root.val)
+//     }
+
+//     rightSideView(root.right, level + 1, res)
+//     rightSideView(root.left, level + 1, res)
+
+//     return res
+// }
