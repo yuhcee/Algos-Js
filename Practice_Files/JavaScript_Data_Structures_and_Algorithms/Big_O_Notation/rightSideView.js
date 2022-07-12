@@ -50,3 +50,7 @@ var rightSideView = (root) => {
 const root = [1, 2, 3, null, 5, null, 4];
 // Output: [1,3,4]
 console.log(rightSideView(root));
+
+const root1 = [1, null, 3];
+// Output: [1,3]
+console.log(rightSideView(root1));
