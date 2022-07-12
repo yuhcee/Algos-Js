@@ -41,5 +41,9 @@ var rightSideView = (root) => {
             if (node.left) newNodes.push(node.left);
             if (node.right) newNodes.push(node.right);
         }
+
+        if (newNodes > 0) queue.push(newNodes);
     }
+
+    return rightSide;
 };
