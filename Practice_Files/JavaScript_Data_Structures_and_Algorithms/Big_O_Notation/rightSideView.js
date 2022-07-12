@@ -22,4 +22,12 @@
 var rightSideView = (root) => {
     // return empty array if root is null
     if (!root) return [];
+
+    const rightSide = [],
+        queue = [[root]];
+
+    // start BFS
+    while(queue.length > 0) {
+
+    }
 };
