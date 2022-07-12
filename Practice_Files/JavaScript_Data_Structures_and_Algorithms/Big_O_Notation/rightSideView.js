@@ -27,7 +27,12 @@ var rightSideView = (root) => {
         queue = [[root]];
 
     // start BFS
-    while(queue.length > 0) {
+    while (queue.length > 0) {
+        const nodes = queue.pop(),
+            newNodes = [];
+
+        // get the last element at curr level
+        const last = nodes.at(-1);
 
     }
 };
