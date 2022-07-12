@@ -44,6 +44,9 @@ var rightSideView = (root) => {
 
         if (newNodes > 0) queue.push(newNodes);
     }
-
+    console.log(rightSide);
     return rightSide;
 };
+const root = [1, 2, 3, null, 5, null, 4];
+// Output: [1,3,4]
+console.log(rightSideView(root));
