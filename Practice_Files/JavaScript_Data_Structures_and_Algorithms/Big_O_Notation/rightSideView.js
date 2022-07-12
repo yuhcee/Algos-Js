@@ -34,5 +34,7 @@ var rightSideView = (root) => {
         // get the last element at curr level
         const last = nodes.at(-1);
 
+        // add its value to the rightSide arr
+        rightSide.push(last.val);
     }
 };
