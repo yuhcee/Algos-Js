@@ -26,4 +26,11 @@ const makesquare = (matchsticks) => {
 
     // sort arr in reverse order to catch lesser sides earlier
     matchsticks.sort((a, b) => b - a);
+
+    const solve = (x = 0) => {
+        // check if allsides are equal
+        if (x === len) return sides.every((side) => side === sideLen);
+
+
+    };
 };
