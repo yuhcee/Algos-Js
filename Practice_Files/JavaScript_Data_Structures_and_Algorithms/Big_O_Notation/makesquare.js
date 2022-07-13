@@ -19,4 +19,8 @@ const makesquare = (matchsticks) => {
 
     // get length of each side
     const sideLen = perimeter / 4;
+
+    // find a way to divide the array in 4 group of sum side length
+    const sides = Array(4).fill(0),
+        len = matchsticks.length;
 };
