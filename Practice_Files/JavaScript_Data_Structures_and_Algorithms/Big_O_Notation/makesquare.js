@@ -31,6 +31,15 @@ const makesquare = (matchsticks) => {
         // check if allsides are equal
         if (x === len) return sides.every((side) => side === sideLen);
 
-
+        // calculate sides
+        for (let i = 0; i < 4; i++) {
+            if (sides[i] + matchsticks[x] > sideLen) continue;
+            sides[i] += matchsticks[x];
+            if (solve(x + 1)) return true;
+            sides[i] -= matchsticks[x];
+        }
+        return false;
     };
+
+    return solve();
 };
