@@ -23,4 +23,7 @@ const makesquare = (matchsticks) => {
     // find a way to divide the array in 4 group of sum side length
     const sides = Array(4).fill(0),
         len = matchsticks.length;
+
+    // sort arr in reverse order to catch lesser sides earlier
+    matchsticks.sort((a, b) => b - a);
 };
