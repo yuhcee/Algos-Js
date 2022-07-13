@@ -43,3 +43,7 @@ const makesquare = (matchsticks) => {
 
     return solve();
 };
+const matchsticks = [1, 1, 2, 2, 2];
+// Output: true
+// Explanation: You can form a square with length 2, one side of the square came two sticks with length 1.
+console.log(makesquare(matchsticks));
