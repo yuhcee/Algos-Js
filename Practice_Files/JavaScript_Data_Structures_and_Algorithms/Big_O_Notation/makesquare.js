@@ -14,4 +14,6 @@ const makesquare = (matchsticks) => {
     // get perimeter
     const perimeter = matchsticks.reduce((a, b) => a + b);
 
+    // check if all sides are equal
+    if (perimeter % 4 !== 0 || matchsticks.length < 4) return false;
 };
