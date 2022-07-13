@@ -47,3 +47,8 @@ const matchsticks = [1, 1, 2, 2, 2];
 // Output: true
 // Explanation: You can form a square with length 2, one side of the square came two sticks with length 1.
 console.log(makesquare(matchsticks));
+
+const matchsticks1 = [3, 3, 3, 3, 4];
+// Output: false
+// Explanation: You cannot find a way to form a square with all the matchsticks.
+console.log(makesquare(matchsticks1));
