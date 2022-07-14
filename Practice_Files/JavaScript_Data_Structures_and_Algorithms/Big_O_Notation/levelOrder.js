@@ -33,6 +33,10 @@ const levelOrder = (root) => {
             // take first element of queue, push val to last array of levels
             const node = queue.shift();
             levels.at(-1).push(node.val);
+            // push left and right node if encountered
+            node.left && queue.push(node.left);
+            node.right && queue.push(node.right);
         }
     }
+    return levels;
 };
