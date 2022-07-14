@@ -22,4 +22,9 @@ const levelOrder = (root) => {
     // initialize queue and levels
     const queue = [root],
         levels = [];
+
+        // start BFS traversal
+    while(queue.length > 0) {
+
+    }
 };
