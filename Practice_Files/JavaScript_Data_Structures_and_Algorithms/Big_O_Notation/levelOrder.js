@@ -41,6 +41,10 @@ const levelOrder = (root) => {
     return levels;
 };
 
-const root = [3,9,20,null,null,15,7]
+const root = [3, 9, 20, null, null, 15, 7];
 // Output: [[3],[9,20],[15,7]]
 console.log(levelOrder(root));
+
+const root1 = [1];
+// Output: [[1]]
+console.log(levelOrder(root1));
