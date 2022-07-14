@@ -18,4 +18,8 @@
 const levelOrder = (root) => {
     // check if root is empty
     if (!root) return [];
+
+    // initialize queue and levels
+    const queue = [root],
+        levels = [];
 };
