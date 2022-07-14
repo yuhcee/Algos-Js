@@ -12,4 +12,6 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const maxAreaOfIsland = function (grid) {};
+const maxAreaOfIsland = function (grid) {
+    let maxArea = 0;
+};
