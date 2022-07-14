@@ -24,11 +24,11 @@ var rightSideView = (root) => {
     if (!root) return [];
 
     const rightSide = [],
-        queue = [[root]];
+        stack = [[root]];
 
-    // start BFS
-    while (queue.length > 0) {
-        const nodes = queue.pop(),
+    // start DFS
+    while (stack.length > 0) {
+        const nodes = stack.pop(),
             newNodes = [];
 
         // get the last element at curr level
@@ -42,7 +42,7 @@ var rightSideView = (root) => {
             if (node.right) newNodes.push(node.right);
         }
 
-        if (newNodes > 0) queue.push(newNodes);
+        if (newNodes > 0) stack.push(newNodes);
     }
     console.log(rightSide);
     return rightSide;
