@@ -14,4 +14,9 @@
  */
 const maxAreaOfIsland = function (grid) {
     let maxArea = 0;
+
+    // traverse grid
+    for (let r = 0; r < grid.length; r++) {
+        for (let c = 0; c < grid[0].length; c++) {}
+    }
 };
