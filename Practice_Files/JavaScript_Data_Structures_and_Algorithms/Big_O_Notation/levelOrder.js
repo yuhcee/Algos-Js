@@ -48,3 +48,7 @@ console.log(levelOrder(root));
 const root1 = [1];
 // Output: [[1]]
 console.log(levelOrder(root1));
+
+const root2 = []
+// Output: []
+console.log(levelOrder(root2));
