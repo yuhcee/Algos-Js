@@ -30,7 +30,9 @@ const levelOrder = (root) => {
 
         // loop through curr queue length
         for (let i = 0; i < len; i++) {
-            
+            // take first element of queue, push val to last array of levels
+            const node = queue.shift();
+            levels.at(-1).push(node.val);
         }
     }
 };
