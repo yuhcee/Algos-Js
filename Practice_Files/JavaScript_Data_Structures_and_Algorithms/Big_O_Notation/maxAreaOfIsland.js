@@ -12,10 +12,10 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const maxAreaOfIsland = function (grid) {
+const maxAreaOfIsland = (grid) => {
     let maxArea = 0;
 
-    // traverse grid
+    traverse grid
     for (let r = 0; r < grid.length; r++) {
         for (let c = 0; c < grid[0].length; c++) {
             // update max area as you go
@@ -23,7 +23,7 @@ const maxAreaOfIsland = function (grid) {
         }
     }
 
-    const explore = (r, c) => {
+    function explore(r, c) {
         // check out of bounds
         if (grid[r] === undefined || grid[r][c] === undefined) return 0;
 
@@ -40,6 +40,21 @@ const maxAreaOfIsland = function (grid) {
         max += findMax(r, c - 1);
 
         return max;
-    };
+    }
+    return maxArea;
 };
-return maxArea;
+
+const grid = [
+    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+    [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
+    [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+];
+// Output: 6
+// Explanation: The answer is not 11, because the island must be connected 4-directionally.
+console.log('w');
+console.log(maxAreaOfIsland(grid));
