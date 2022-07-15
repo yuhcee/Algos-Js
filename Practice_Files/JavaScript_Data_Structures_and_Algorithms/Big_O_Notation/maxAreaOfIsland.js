@@ -32,7 +32,12 @@ const maxAreaOfIsland = function (grid) {
         // start from position
         grid[r][c] = 0;
 
+        // explore num of island
         let max = 1;
+        max += findMax(r + 1, c);
+        max += findMax(r - 1, c);
+        max += findMax(r, c + 1);
+        max += findMax(r, c - 1);
 
         return max;
     };
