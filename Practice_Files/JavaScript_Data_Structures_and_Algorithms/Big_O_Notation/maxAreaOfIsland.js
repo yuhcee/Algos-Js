@@ -19,15 +19,22 @@ const maxAreaOfIsland = function (grid) {
     for (let r = 0; r < grid.length; r++) {
         for (let c = 0; c < grid[0].length; c++) {
             // update max area as you go
-            maxArea = Math.max(maxArea, findMax(r, c));
+            maxArea = Math.max(maxArea, explore(r, c));
         }
     }
 
-    const findMax = (r, c) => {
+    const explore = (r, c) => {
         // check out of bounds
         if (grid[r] === undefined || grid[r][c] === undefined) return 0;
 
         if (grid[r][c] === 0) return 0;
+
+        // start from position
+        grid[r][c] = 0;
+
+        let max = 1;
+
+        return max;
     };
 };
 return maxArea;
