@@ -15,7 +15,7 @@
 const maxAreaOfIsland = (grid) => {
     let maxArea = 0;
 
-    traverse grid
+    // traverse grid
     for (let r = 0; r < grid.length; r++) {
         for (let c = 0; c < grid[0].length; c++) {
             // update max area as you go
@@ -58,3 +58,7 @@ const grid = [
 // Explanation: The answer is not 11, because the island must be connected 4-directionally.
 console.log('w');
 console.log(maxAreaOfIsland(grid));
+
+const grid1 = [[0, 0, 0, 0, 0, 0, 0, 0]];
+// Output: 0
+console.log(maxAreaOfIsland(grid1));
