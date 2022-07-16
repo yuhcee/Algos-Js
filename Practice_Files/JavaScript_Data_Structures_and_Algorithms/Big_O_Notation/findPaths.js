@@ -21,5 +21,10 @@ const findPaths = (m, n, maxMove, startRow, startColumn, memo = {}) => {
     const MOD = 1e9 + 7,
         key = `${maxMove},${startRow},${startColumn}`;
 
-    
+    const rowInbounds = startRow > 0 && startRow < m;
+    const colInbounds = startColumn > 0 && startColumn < n;
+
+    // check out of bounds
+    if (!rowInbounds || !colInbounds || maxMove === 0) return 1;
+
 };
