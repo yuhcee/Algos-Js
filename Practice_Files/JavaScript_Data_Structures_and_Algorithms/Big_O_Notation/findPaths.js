@@ -27,4 +27,8 @@ const findPaths = (m, n, maxMove, startRow, startColumn, memo = {}) => {
     // check out of bounds
     if (!rowInbounds || !colInbounds || maxMove === 0) return 1;
 
+    // return key if already found
+    if (key in memo) return memo[key];
+
+    
 };
