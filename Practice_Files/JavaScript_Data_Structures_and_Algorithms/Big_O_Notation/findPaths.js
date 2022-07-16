@@ -24,7 +24,7 @@ const findPaths = (m, n, maxMove, startRow, startColumn, memo = {}) => {
     const rowInbounds = startRow >= 0 && startRow < m;
     const colInbounds = startColumn >= 0 && startColumn < n;
     const out = !rowInbounds || !colInbounds;
-    
+
     // check out of bounds
     if (out || maxMove === 0) return +out;
 
@@ -40,3 +40,11 @@ const findPaths = (m, n, maxMove, startRow, startColumn, memo = {}) => {
 
     return (memo[key] = move % MOD);
 };
+
+const m = 2,
+    n = 2,
+    maxMove = 2,
+    startRow = 0,
+    startColumn = 0;
+// Output: 6
+console.log(findPaths(m, n, maxMove, startRow, startColumn));
