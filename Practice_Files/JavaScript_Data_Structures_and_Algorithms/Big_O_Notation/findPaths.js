@@ -30,5 +30,12 @@ const findPaths = (m, n, maxMove, startRow, startColumn, memo = {}) => {
     // return key if already found
     if (key in memo) return memo[key];
 
-    
+    // traverse grid
+    const move =
+        findPaths(m, n, maxMove - 1, startRow + 1, startColumn, memo) +
+        findPaths(m, n, maxMove - 1, startRow - 1, startColumn, memo) +
+        findPaths(m, n, maxMove - 1, startRow, startColumn - 1, memo) +
+        findPaths(m, n, maxMove - 1, startRow, startColumn + 1, memo);
+
+    return (memo[key] = move % MOD);
 };
