@@ -54,7 +54,7 @@ const validAnagramWithFrequencyCounter = (first, second) => {
     for (let letter of second) {
         // if letter does not exist or is zero, return false
         if (!lookup[letter]) return false;
-        // else subtract 1 from the value 
+        // else subtract 1 from the value
         lookup[letter] -= 1;
     }
 
