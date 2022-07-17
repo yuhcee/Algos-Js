@@ -1,8 +1,8 @@
 /**
  * **1354. Construct Target Array With Multiple Sums**
  *
- * You are given an array `target` of n integers. From a starting array `arr` consisting of `n` 1's, you may perform the
- * following procedure :
+ * You are given an array `target` of n integers. From a starting array `arr` consisting of `n` 
+ * 1's, you may perform the following procedure :
  *
  * - let `x` be the sum of all elements currently in your array.
  * - choose index `i`, such that `0 <= i < n` and set the value of `arr` at index `i` to `x`.
