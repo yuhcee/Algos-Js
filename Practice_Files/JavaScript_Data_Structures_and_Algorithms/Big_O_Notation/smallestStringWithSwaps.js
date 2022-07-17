@@ -12,45 +12,79 @@
  * @param {number[][]} pairs
  * @return {string}
  */
-const smallestStringWithSwaps = (s, pairs) => {
-    let n = s.length,
-        idx = [],
-        visited = new Set(),
-        graph = buildGraph(n);
-
-    for (let [a, b] of pairs) {
-        graph[a].push(b);
-        graph[b].push(a);
-    }
-
-    for (let [a, b] of pairs) {
-        if (hasPath(graph, a, b, visited)) {
-            idx.push(s[a]);
-        }
-    }
-
-    return idx.join('');
-};
-
-const buildGraph = (n) => {
+const buildGraph = (n, pairs) => {
     const graph = {};
 
     for (let i = 0; i < n; i++) {
         graph[i] = [];
     }
 
+    for (let [a, b] of pairs) {
+        graph[a].push(b);
+        graph[b].push(a);
+    }
     return graph;
 };
+const smallestStringWithSwaps = (s, pairs) => {
+    let n = s.length;
+    let graph = buildGraph(n, pairs);
+    let adj = new Array(n);
 
-const hasPath = (graph, src, dst, visited) => {
-    if (src === dst) return true;
-    if (visited.has(src)) return false;
+    for (let i = 0; i < n; i++) adj[i] = [];
+    adj;
+    graph;
 
-    visited.add(src);
-
-    for (let neighbor of graph[src]) {
-        if (hasPath(graph, neighbor, dst, visited)) return true;
+    for (let [a, b] of pairs) {
+        adj[a].push(b);
+        adj[b].push(a);
     }
+    adj;
+    graph;
 
-    return false;
+    let visited = new Array(n).fill(false);
+    let visitedSet = new Set()
+
+    visited;
+    visitedSet
+
+    let ans = new Array(n);
+    let str, idx;
+
+    let dfs = (node) => {
+        visited[node] = true;
+        idx.push(node);
+        str.push(s[node]);
+
+        for (let next of adj[node]) {
+            next
+            console.log(adj[node])
+            if (!visited[next]) dfs(next);
+        }
+        idx
+        str
+    };
+    
+    for (let i = 0; i < n; i++) {
+        visited
+        if (!visited[i]) {
+            str = [];
+            idx = [];
+            dfs(i);
+            idx.sort((a, b) => a - b);
+            str.sort();
+
+            for (let j = 0; j < str.length; j++) {
+                ans[idx[j]] = str[j];
+            }
+        }
+    }
+    return ans.join('');
 };
+
+const s = 'dcab',
+    pairs = [
+        [0, 3],
+        [1, 2],
+    ]; // Output: "bacd"
+
+console.log(smallestStringWithSwaps(s, pairs));
