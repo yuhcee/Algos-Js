@@ -53,7 +53,12 @@ const numSubmatrixSumTarget = function (matrix, target) {
 
                 // add subarrays which sum up to (currSum - target)
                 map.get(currSum - target) || 0;
+
+                // save current prefix sum
+                map.set(currSum, (map.get(currSum) || 0) + 1);
             }
         }
     }
+
+    return count;
 };
