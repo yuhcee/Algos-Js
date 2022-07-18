@@ -45,7 +45,11 @@ const numSubmatrixSumTarget = function (matrix, target) {
         for (let r2 = r1; r2 < r + 1; ++r2) {
             map.clear();
             map.set(0, 1);
-            
+
+            // Iterate over the columns from 1 to c + 1. At each step:
+            for (let col = 1; col < c + 1; ++col) {
+                
+            }
         }
     }
 };
