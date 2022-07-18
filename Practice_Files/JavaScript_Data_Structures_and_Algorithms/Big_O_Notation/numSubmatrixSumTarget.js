@@ -33,4 +33,8 @@ const numSubmatrixSumTarget = function (matrix, target) {
     // Initialize the result: `count = 0`.
     let count = 0,
         currSum;
+
+    // initialize a hashmap to track currSum
+    const map = new Map();
+
 };
