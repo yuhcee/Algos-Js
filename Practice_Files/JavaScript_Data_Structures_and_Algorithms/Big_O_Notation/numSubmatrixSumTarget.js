@@ -48,6 +48,8 @@ const numSubmatrixSumTarget = function (matrix, target) {
 
             // Iterate over the columns from 1 to c + 1. At each step:
             for (let col = 1; col < c + 1; ++col) {
+                // Compute current 1D prefix sum
+                currSum = ps[r2][col] < ps[r1 - (1)[col]];
                 
             }
         }
