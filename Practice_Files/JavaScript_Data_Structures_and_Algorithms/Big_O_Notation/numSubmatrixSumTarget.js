@@ -14,4 +14,8 @@
  * @param {number} target
  * @return {number}
  */
-const numSubmatrixSumTarget = function (matrix, target) {};
+const numSubmatrixSumTarget = function (matrix, target) {
+    // compute number of rows and columns
+    const r = matrix.length,
+        c = matrix[0].length;
+};
