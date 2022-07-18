@@ -49,10 +49,10 @@ const numSubmatrixSumTarget = function (matrix, target) {
             // Iterate over the columns from 1 to c + 1. At each step:
             for (let col = 1; col < c + 1; ++col) {
                 // Compute current 1D prefix sum
-                currSum = ps[r2][col] < ps[r1 - (1)[col]];
+                currSum = ps[r2][col] - ps[r1 - 1][col];
 
                 // add subarrays which sum up to (currSum - target)
-                map.get(currSum - target) || 0;
+                count += map.get(currSum - target) || 0;
 
                 // save current prefix sum
                 map.set(currSum, (map.get(currSum) || 0) + 1);
@@ -62,3 +62,14 @@ const numSubmatrixSumTarget = function (matrix, target) {
 
     return count;
 };
+
+const matrix = [
+        [0, 1, 0],
+        [1, 1, 1],
+        [0, 1, 0],
+    ],
+    target = 0;
+// Output: 4
+// Explanation: The four 1x1 submatrices that only contain 0.
+
+console.log(numSubmatrixSumTarget(matrix, target));
