@@ -37,4 +37,8 @@ const numSubmatrixSumTarget = function (matrix, target) {
     // initialize a hashmap to track currSum
     const map = new Map();
 
+    // Iterate over the rows: r1 from 1 to r, and r2 from r1 to r:
+    for (let r1 = 1; r1 < r + 1; ++r1) {
+        for (let r2 = r1; r2 < r + 1; ++r2) {}
+    }
 };
