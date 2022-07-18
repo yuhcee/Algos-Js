@@ -38,7 +38,14 @@ const numSubmatrixSumTarget = function (matrix, target) {
     const map = new Map();
 
     // Iterate over the rows: r1 from 1 to r, and r2 from r1 to r:
+    // reduce 2D problem to 1D one
+    // by fixing two rows r1 and r2 and
+    // computing 1D prefix sum for all matrices using [r1..r2] rows
     for (let r1 = 1; r1 < r + 1; ++r1) {
-        for (let r2 = r1; r2 < r + 1; ++r2) {}
+        for (let r2 = r1; r2 < r + 1; ++r2) {
+            map.clear();
+            map.set(0, 1);
+            
+        }
     }
 };
