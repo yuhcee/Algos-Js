@@ -83,3 +83,7 @@ const matrix1 = [
 // Explanation: The two 1x2 submatrices, plus the two 2x1 submatrices, plus the 2x2 submatrix.
 console.log(numSubmatrixSumTarget(matrix1, target1));
 
+const matrix2 = [[904]],
+    target2 = 0;
+// Output: 0
+console.log(numSubmatrixSumTarget(matrix2, target2));
