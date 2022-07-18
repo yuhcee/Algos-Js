@@ -50,7 +50,9 @@ const numSubmatrixSumTarget = function (matrix, target) {
             for (let col = 1; col < c + 1; ++col) {
                 // Compute current 1D prefix sum
                 currSum = ps[r2][col] < ps[r1 - (1)[col]];
-                
+
+                // add subarrays which sum up to (currSum - target)
+                map.get(currSum - target) || 0;
             }
         }
     }
