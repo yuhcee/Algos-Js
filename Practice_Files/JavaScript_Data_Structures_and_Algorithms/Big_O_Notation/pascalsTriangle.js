@@ -12,4 +12,9 @@
 const generate = (numRows) => {
     // initialize triangle with base case, first row is always 1
     const triangle = [[1]];
+
+    // start row from 1
+    for (let row = 1; row < numRows; row++) {
+
+    }
 };
