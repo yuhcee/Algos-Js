@@ -15,7 +15,7 @@ const generate = (numRows) => {
 
     // start row from 1
     for (let row = 1; row < numRows; row++) {
-        // initialize currRow and get prevRow
+        // initialize currRow with first element as always 1, and get prevRow
         const currRow = [1],
             prevRow = triangle[row - 1];
 
@@ -25,5 +25,10 @@ const generate = (numRows) => {
         for (let col = 1; col < prevRow.length; col++) {
             currRow[col] = prevRow[col - 1] + prevRow[col];
         }
+
+        // The last row element is always 1.
+        currRow.add(1);
+        triangle.push(currRow);
     }
+    return triangle;
 };
