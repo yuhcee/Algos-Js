@@ -27,8 +27,11 @@ const generate = (numRows) => {
         }
 
         // The last row element is always 1.
-        currRow.add(1);
+        currRow.push(1);
         triangle.push(currRow);
     }
     return triangle;
 };
+const numRows = 5;
+// Output: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+console.log(generate(numRows));
