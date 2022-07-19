@@ -16,7 +16,14 @@ const generate = (numRows) => {
     // start row from 1
     for (let row = 1; row < numRows; row++) {
         // initialize currRow and get prevRow
-        const currRow = [],
+        const currRow = [1],
             prevRow = triangle[row - 1];
+
+        // Each triangle element (other than the first and last of each row)
+        // is equal to the sum of the elements above-and-to-the-left and
+        // above-and-to-the-right.
+        for (let col = 1; col < prevRow.length; col++) {
+            currRow[col] = prevRow[col - 1] + prevRow[col];
+        }
     }
 };
