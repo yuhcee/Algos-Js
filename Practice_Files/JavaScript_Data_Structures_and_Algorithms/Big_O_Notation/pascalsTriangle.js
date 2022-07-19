@@ -15,6 +15,8 @@ const generate = (numRows) => {
 
     // start row from 1
     for (let row = 1; row < numRows; row++) {
-
+        // initialize currRow and get prevRow
+        const currRow = [],
+            prevRow = triangle[row - 1];
     }
 };
