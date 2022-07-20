@@ -14,5 +14,14 @@
  * @return {number}
  */
 const numMatchingSubseq =  (s, words) =>{
-    
+    // loop over each word in the words array
+    // for a word to be a possible substring
+    // of the relative order permutations of s
+    // each letter in the word must also appear
+    // sequentially, though not adjacently
+
+    let matches = 0;
+
+    for (const word of words) {
+    }
 };
