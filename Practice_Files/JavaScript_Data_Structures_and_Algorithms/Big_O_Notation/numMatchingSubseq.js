@@ -60,3 +60,8 @@ const s = 'abcde',
 // Output: 3
 // Explanation: There are three strings in words that are a subsequence of s: "a", "acd", "ace".
 console.log(numMatchingSubseq(s, words));
+
+const s1 = 'dsahjpjauf',
+    words1 = ['ahjpjau', 'ja', 'ahbwzgqnuk', 'tnmlanowax'];
+// Output: 2
+console.log(numMatchingSubseq(s1, words1));
