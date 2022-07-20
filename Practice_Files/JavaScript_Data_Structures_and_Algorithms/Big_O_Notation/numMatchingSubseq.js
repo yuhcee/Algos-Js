@@ -33,6 +33,14 @@ const numMatchingSubseq = (s, words) => {
             // as our starting point, which JS very
             // conveniently provides as a parameter of indexOf
             const currentIndex = s.indexOf(char, lastIndex + 1);
+
+            // if the index of current char is greater than the last
+            // index we observed, then the sequence persists and
+            // we can continue
+            if (currentIndex > lastIndex) {
+                match++;
+                lastIndex = currentIndex;
+            }
         }
     }
 };
