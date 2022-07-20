@@ -27,7 +27,6 @@ const numMatchingSubseq = (s, words) => {
         let match = 0;
 
         for (const char of word) {
-            const char = word.charAt(i);
             // we can search for the position of the
             // current char using the lastIndex observed
             // as our starting point, which JS very
@@ -53,4 +52,11 @@ const numMatchingSubseq = (s, words) => {
             matches++;
         }
     }
+    return matches;
 };
+
+const s = 'abcde',
+    words = ['a', 'bb', 'acd', 'ace'];
+// Output: 3
+// Explanation: There are three strings in words that are a subsequence of s: "a", "acd", "ace".
+console.log(numMatchingSubseq(s, words));
