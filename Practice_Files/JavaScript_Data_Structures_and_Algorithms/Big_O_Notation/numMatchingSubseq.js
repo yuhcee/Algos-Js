@@ -46,5 +46,11 @@ const numMatchingSubseq = (s, words) => {
                 break;
             }
         }
+        // lastly, we know a valid subsequent is found if the
+        // number of local matches found is equal to the length
+        // of our word
+        if (match == word.length) {
+            matches++;
+        }
     }
 };
