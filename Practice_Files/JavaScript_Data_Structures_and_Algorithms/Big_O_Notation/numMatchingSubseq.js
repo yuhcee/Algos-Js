@@ -13,7 +13,7 @@
  * @param {string[]} words
  * @return {number}
  */
-const numMatchingSubseq =  (s, words) =>{
+const numMatchingSubseq = (s, words) => {
     // loop over each word in the words array
     // for a word to be a possible substring
     // of the relative order permutations of s
@@ -23,5 +23,11 @@ const numMatchingSubseq =  (s, words) =>{
     let matches = 0;
 
     for (const word of words) {
+        let lastIndex = -1;
+        let match = 0;
+
+        for (const char of word) {
+            const char = word.charAt(i);
+        }
     }
 };
