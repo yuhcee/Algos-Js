@@ -28,6 +28,11 @@ const numMatchingSubseq = (s, words) => {
 
         for (const char of word) {
             const char = word.charAt(i);
+            // we can search for the position of the
+            // current char using the lastIndex observed
+            // as our starting point, which JS very
+            // conveniently provides as a parameter of indexOf
+            const currentIndex = s.indexOf(char, lastIndex + 1);
         }
     }
 };
