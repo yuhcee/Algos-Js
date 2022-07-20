@@ -65,3 +65,46 @@ const s1 = 'dsahjpjauf',
     words1 = ['ahjpjau', 'ja', 'ahbwzgqnuk', 'tnmlanowax'];
 // Output: 2
 console.log(numMatchingSubseq(s1, words1));
+
+// <<=====<< +++++++++++++++++++ SOLUTION USING MAP ++++++++++++++++++++++++ >>====>>
+
+const numMatchingSubseqMap = (s, words) => {
+    var result = 0;
+
+    for (let word of words) {
+        if (isSubsequence(word, s, new Map())) {
+            result++;
+        }
+    }
+    return result;
+};
+
+const isSubsequence = (word, string, map) => {
+    //you can use any method to determine the substring but I used indexOf()
+    if (map.has(word)) return map.get(word); //this one line of code helps the time complexity so much
+    let index = -1;
+    for (const char of word) {
+        // what this loop does is that is uses the indexOf() function to check for a valid index of the
+        // character in word. if the character in word doesn't exist in string it will return -1. We can also pass
+        // in a second parameter that gives the function a starting point so that it won't consider indexes
+        // that we have already considered. No repeats
+        index = string.indexOf(char, index + 1);
+        if (index === -1) {
+            map.set(word, false);
+            return false;
+        }
+    }
+    map.set(word, true);
+    return true;
+};
+
+const sM = 'abcde',
+    wordsM = ['a', 'bb', 'acd', 'ace'];
+// Output: 3
+// Explanation: There are three strings in words that are a subsequence of s: "a", "acd", "ace".
+console.log(numMatchingSubseqMap(sM, wordsM));
+
+const s1M = 'dsahjpjauf',
+    words1M = ['ahjpjau', 'ja', 'ahbwzgqnuk', 'tnmlanowax'];
+// Output: 2
+console.log(numMatchingSubseqMap(s1M, words1M));
