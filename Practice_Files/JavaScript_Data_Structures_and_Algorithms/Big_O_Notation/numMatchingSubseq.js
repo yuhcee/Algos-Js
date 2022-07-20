@@ -40,6 +40,10 @@ const numMatchingSubseq = (s, words) => {
             if (currentIndex > lastIndex) {
                 match++;
                 lastIndex = currentIndex;
+            } else {
+                // otherwise, no such instance of the current char
+                // exists after the last chars index
+                break;
             }
         }
     }
