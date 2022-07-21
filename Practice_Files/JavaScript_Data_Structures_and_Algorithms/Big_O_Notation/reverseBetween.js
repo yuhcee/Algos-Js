@@ -29,4 +29,8 @@ const reverseBetween = function (head, left, right) {
         currNode = currNode.next;
         count++;
     }
+    // The two pointers that will fix the final connections.
+    let prevLeftNode = prevNode;
+    let leftNode = currNode;
+    prevNode = null;
 };
