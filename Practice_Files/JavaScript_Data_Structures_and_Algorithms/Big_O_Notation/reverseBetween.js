@@ -50,3 +50,9 @@ const reverseBetween = function (head, left, right) {
 
     return left === 1 ? prevNode : head;
 };
+
+const head = [1, 2, 3, 4, 5],
+    left = 2,
+    right = 4;
+// Output: [1,4,3,2,5]
+console.log(reverseBetween(head, left, right));
