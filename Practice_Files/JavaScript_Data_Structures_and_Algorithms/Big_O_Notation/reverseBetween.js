@@ -17,5 +17,16 @@
  * @return {ListNode}
  */
 const reverseBetween = function (head, left, right) {
-    
+    let currNode = head,
+        prevNode = null,
+        nextNode = null,
+        count = 1;
+
+    // Move the two pointers until they reach the proper starting point
+    // in the list.
+    while (count < left) {
+        prevNode = currNode;
+        currNode = currNode.next;
+        count++;
+    }
 };
