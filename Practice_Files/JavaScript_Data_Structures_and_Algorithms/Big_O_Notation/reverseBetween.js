@@ -42,4 +42,11 @@ const reverseBetween = function (head, left, right) {
         currNode = nextNode;
         count++;
     }
+
+    // Adjust the final connections as explained in the algorithm
+    if (prevLeftNode != null) prevLeftNode.next = prevNode;
+
+    leftNode.next = currNode;
+
+    return left === 1 ? prevNode : head;
 };
