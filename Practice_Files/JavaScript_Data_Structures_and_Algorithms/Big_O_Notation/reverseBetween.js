@@ -33,4 +33,13 @@ const reverseBetween = function (head, left, right) {
     let prevLeftNode = prevNode;
     let leftNode = currNode;
     prevNode = null;
+
+    // Iteratively reverse the nodes until count equals right.
+    while (count <= right) {
+        nextNode = currNode.next;
+        currNode.next = prevNode;
+        prevNode = currNode;
+        currNode = nextNode;
+        count++;
+    }
 };
