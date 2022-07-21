@@ -56,3 +56,9 @@ const head = [1, 2, 3, 4, 5],
     right = 4;
 // Output: [1,4,3,2,5]
 console.log(reverseBetween(head, left, right));
+
+const head1 = [5],
+    left1 = 1,
+    right1 = 1;
+// Output: [5]
+console.log(reverseBetween(head1, left1, right1));
