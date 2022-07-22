@@ -27,16 +27,16 @@ const partition = (head, x) => {
 
     let before = beforeHead; // first halves where nodes < x
     let after = afterHead; // second halves where nodes >= x
-    
+
     let curr = head;
 
-    while(curr) {
+    while (curr) {
         // If the original list node is lesser than the given x,
         // assign it to the before list.
-        if(curr.val < x) {
+        if (curr.val < x) {
             before.next = curr;
-            before = before.next
-        }else {
+            before = before.next;
+        } else {
             // If the original list node is greater or equal to the given x,
             // assign it to the after list.
             after.next = curr;
@@ -51,4 +51,6 @@ const partition = (head, x) => {
     // Once all the nodes are correctly assigned to the two lists,
     // combine them to form a single list which would be returned.
     before.next = afterHead.next; // connect first halves to second halves
+
+    return beforeHead.next; // return all halves combined
 };
