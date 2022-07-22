@@ -45,4 +45,6 @@ const partition = (head, x) => {
         // move ahead in the original list
         curr = curr.next;
     }
+    // Last node of "after" list would also be ending node of the reformed list
+    after.next = null;
 };
