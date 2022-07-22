@@ -42,6 +42,7 @@ const partition = (head, x) => {
             after.next = curr;
             after = after.next;
         }
-        
+        // move ahead in the original list
+        curr = curr.next;
     }
 };
