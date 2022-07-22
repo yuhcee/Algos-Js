@@ -59,3 +59,8 @@ const head = [1, 4, 3, 2, 5, 2],
     x = 3;
 // Output: [1,2,2,4,3,5]
 console.log(partition(head));
+
+const head1 = [2, 1],
+    x1 = 2;
+// Output: [1,2]
+console.log(partition(head1));
