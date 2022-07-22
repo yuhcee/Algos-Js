@@ -29,4 +29,13 @@ const partition = (head, x) => {
     let after = afterHead; // second halves where nodes >= x
     
     let curr = head;
+
+    while(curr) {
+        // If the original list node is lesser than the given x,
+        // assign it to the before list.
+        if(curr.val < x) {
+            before.next = curr;
+            before = before.next
+        }
+    }
 };
