@@ -24,4 +24,9 @@ const partition = (head, x) => {
     // All of these are initialized with the dummy nodes created.
     let beforeHead = new ListNode(0);
     let afterHead = new ListNode(0);
+
+    let before = beforeHead; // first halves where nodes < x
+    let after = afterHead; // second halves where nodes >= x
+    
+    let curr = head;
 };
