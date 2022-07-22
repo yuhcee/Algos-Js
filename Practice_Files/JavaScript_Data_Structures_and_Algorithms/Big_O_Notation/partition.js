@@ -47,4 +47,8 @@ const partition = (head, x) => {
     }
     // Last node of "after" list would also be ending node of the reformed list
     after.next = null;
+
+    // Once all the nodes are correctly assigned to the two lists,
+    // combine them to form a single list which would be returned.
+    before.next = afterHead.next; // connect first halves to second halves
 };
