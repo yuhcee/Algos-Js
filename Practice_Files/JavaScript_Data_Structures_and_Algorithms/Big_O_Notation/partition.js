@@ -36,6 +36,12 @@ const partition = (head, x) => {
         if(curr.val < x) {
             before.next = curr;
             before = before.next
+        }else {
+            // If the original list node is greater or equal to the given x,
+            // assign it to the after list.
+            after.next = curr;
+            after = after.next;
         }
+        
     }
 };
