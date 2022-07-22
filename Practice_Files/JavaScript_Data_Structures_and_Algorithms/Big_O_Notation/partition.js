@@ -18,4 +18,10 @@
  * @param {number} x
  * @return {ListNode}
  */
-const partition = (head, x) => {};
+const partition = (head, x) => {
+    // before and after are the two pointers used to create the two list
+    // beforeHead and afterHead are used to save the heads of the two lists.
+    // All of these are initialized with the dummy nodes created.
+    let beforeHead = new ListNode(0);
+    let afterHead = new ListNode(0);
+};
