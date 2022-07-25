@@ -42,3 +42,8 @@ const nums1 = [5, 7, 7, 8, 8, 10],
     target1 = 6;
 // Output: [-1,-1]
 console.log(searchRange(nums1, target1));
+
+const nums2 = [],
+    target2 = 0;
+// Output: [-1,-1]
+console.log(searchRange(nums2, target2));
