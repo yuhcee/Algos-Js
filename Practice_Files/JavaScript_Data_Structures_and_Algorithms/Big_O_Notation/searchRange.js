@@ -23,5 +23,10 @@ const searchRange = (nums, target) => {
         if (nums[start] === target && firstIndex < 0) {
             firstIndex = start;
         }
+         // check for last match and resassign lastIndex
+        if (nums[end] === target && lastIndex < 0) {
+            lastIndex = end;
+        }
     }
+
 };
