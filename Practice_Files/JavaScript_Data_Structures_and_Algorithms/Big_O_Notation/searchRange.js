@@ -18,5 +18,10 @@ const searchRange = (nums, target) => {
     let start = 0,
         end = nums.length - 1;
 
-    
+    while ((firstIndex < 0 || lastIndex < 0) && end >= 0) {
+        // check for first match and resassign firstIndex
+        if (nums[start] === target && firstIndex < 0) {
+            firstIndex = start;
+        }
+    }
 };
