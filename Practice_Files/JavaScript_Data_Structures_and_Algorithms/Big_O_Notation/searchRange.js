@@ -11,4 +11,12 @@
  * @param {number} target
  * @return {number[]}
  */
-const searchRange = (nums, target) => {};
+const searchRange = (nums, target) => {
+    let firstIndex = -1,
+        lastIndex = -1;
+    // initialize two pointers indices
+    let start = 0,
+        end = nums.length - 1;
+
+    
+};
