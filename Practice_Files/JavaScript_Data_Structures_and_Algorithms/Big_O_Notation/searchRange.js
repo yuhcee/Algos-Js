@@ -34,6 +34,11 @@ const searchRange = (nums, target) => {
     return [firstIndex, lastIndex];
 };
 
-const nums = [5,7,7,8,8,10], target = 8
+const nums = [5, 7, 7, 8, 8, 10],
+    target = 8;
 // Output: [3,4]
 console.log(searchRange(nums, target));
+const nums1 = [5, 7, 7, 8, 8, 10],
+    target1 = 6;
+// Output: [-1,-1]
+console.log(searchRange(nums1, target1));
