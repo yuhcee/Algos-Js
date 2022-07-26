@@ -30,6 +30,9 @@ const lowestCommonAncestor = (root, p, q) => {
 
     // get left node
     const left = lowestCommonAncestor(root.left, p, q);
+    // get right node
+    const right = lowestCommonAncestor(root.right, p, q);
+
 };
 console.log(lowestCommonAncestor([3, 5, 1, 6, 2, 0, 8, null, null, 7, 4], 5, 1)); // 3
 console.log(lowestCommonAncestor([3, 5, 1, 6, 2, 0, 8, null, null, 7, 4], 5, 4)); // 5
