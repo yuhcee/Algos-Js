@@ -40,7 +40,7 @@ const lowestCommonAncestor = (root, p, q) => {
     } else if (left) {
         return left;
     }
-    
+    return null;
 };
 console.log(lowestCommonAncestor([3, 5, 1, 6, 2, 0, 8, null, null, 7, 4], 5, 1)); // 3
 console.log(lowestCommonAncestor([3, 5, 1, 6, 2, 0, 8, null, null, 7, 4], 5, 4)); // 5
