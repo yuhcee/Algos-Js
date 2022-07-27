@@ -30,7 +30,7 @@ const flatten = (root) => {
 
         // For a leaf node, we simply return the
         // node as is
-        if (node.left === null && node.right === null) return root;
+        if (node.left === null && node.right === null) return node;
 
         //Recursively flatten the left subtree
         let leftTail = flattenTree(node.left);
@@ -51,3 +51,6 @@ const flatten = (root) => {
         return rightTail === null ? leftTail : rightTail;
     }
 };
+const root = [1, 2, 5, 3, 4, null, 6];
+// Output: [1,null,2,null,3,null,4,null,5,null,6]
+console.log(flatten(root));
