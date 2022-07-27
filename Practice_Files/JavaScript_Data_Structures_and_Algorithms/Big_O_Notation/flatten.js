@@ -36,5 +36,14 @@ const flatten = (root) => {
         let leftTail = flattenTree(node.left);
         //Recursively flatten the right subtree
         let rightTail = flattenTree(node.right);
+
+        // If there was a left subtree, we shuffle the connections
+        // around so that there is nothing on the left side
+        // anymore.
+        if (leftTail !== null) {
+            leftTail.right = node.right;
+            node.right = node.left;
+            node.left = null;
+        }
     }
 };
