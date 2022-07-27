@@ -34,5 +34,7 @@ const flatten = (root) => {
 
         //Recursively flatten the left subtree
         let leftTail = flattenTree(node.left);
+        //Recursively flatten the right subtree
+        let rightTail = flattenTree(node.right);
     }
 };
