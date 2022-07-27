@@ -45,5 +45,9 @@ const flatten = (root) => {
             node.right = node.left;
             node.left = null;
         }
+
+        // We need to return the "rightmost" node after we are
+        // done wiring the new connections.
+        return rightTail === null ? leftTail : rightTail;
     }
 };
