@@ -58,3 +58,7 @@ console.log(flatten(root));
 const root1 = [];
 // Output: []
 console.log(flatten(root1));
+
+const root2 = [0];
+// Output: [0]
+console.log(flatten(root2));
