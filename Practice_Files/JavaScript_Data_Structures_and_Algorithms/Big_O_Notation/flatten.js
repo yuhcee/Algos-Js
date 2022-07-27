@@ -22,4 +22,10 @@
  * @return {void} Do not return anything, modify root in-place instead.
  */
 const flatten = (root) => {
+    return flattenTree(root);
+
+    function flattenTree(node) {
+        // Handle the null scenario
+        if (node === null) return null;
+    }
 };
