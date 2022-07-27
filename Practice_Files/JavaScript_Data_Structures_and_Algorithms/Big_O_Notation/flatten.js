@@ -27,5 +27,9 @@ const flatten = (root) => {
     function flattenTree(node) {
         // Handle the null scenario
         if (node === null) return null;
+
+        // For a leaf node, we simply return the
+        // node as is
+        if (node.left === null && node.right === null) return root;
     }
 };
