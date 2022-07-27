@@ -54,3 +54,7 @@ const flatten = (root) => {
 const root = [1, 2, 5, 3, 4, null, 6];
 // Output: [1,null,2,null,3,null,4,null,5,null,6]
 console.log(flatten(root));
+
+const root1 = [];
+// Output: []
+console.log(flatten(root1));
