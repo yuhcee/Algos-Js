@@ -44,4 +44,7 @@ const words = ['abc', 'deq', 'mee', 'aqq', 'dkd', 'ccc'],
 "ccc" does not match the pattern because {a -> c, b -> c, ...} is not a permutation, since a and b map to the same letter. */
 console.log(findAndReplacePattern(words, pattern));
 
-
+const words1 = ['a', 'b', 'c'],
+    pattern1 = 'a';
+// Output: ['a', 'b', 'c'];
+console.log(findAndReplacePattern(words1, pattern1));
