@@ -14,4 +14,26 @@
  * @param {string} pattern
  * @return {string[]}
  */
-var findAndReplacePattern = function (words, pattern) {};
+var findAndReplacePattern = function (words, pattern) {
+    const getPattern = (s, memo = {}) => {
+        let id = 0;
+        const res = [];
+
+        for (let i = 0; i < s.length; i++) {
+            const char = s[i];
+
+            if (memo[char] === undefined) {
+                memo[char] = ++id;
+            }
+
+            res.push(memo[char]);
+        }
+
+        return res.join(',');
+    };
+
+    const match = getPattern(pattern);
+
+    return words.filter((word) => getPattern(word) === match);
+};
+
