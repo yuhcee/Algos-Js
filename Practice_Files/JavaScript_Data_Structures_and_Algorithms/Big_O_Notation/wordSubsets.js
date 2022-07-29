@@ -47,3 +47,8 @@ const words1 = ['amazon', 'apple', 'facebook', 'google', 'leetcode'],
     words2 = ['e', 'o'];
 // Output: ["facebook","google","leetcode"]
 console.log(wordSubsets(words1, words2));
+
+const words11 = ['amazon', 'apple', 'facebook', 'google', 'leetcode'],
+    words22 = ['l', 'e'];
+// Output: ['apple', 'google', 'leetcode'];
+console.log(wordSubsets(words11, words22));
