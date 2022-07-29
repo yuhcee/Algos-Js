@@ -24,4 +24,21 @@ var wordSubsets = function (words1, words2) {
         for (i = 0; i < word.length; i++) count[word.charCodeAt(i) - 97]++;
         return count;
     }
+
+    let main = Array(26).fill(0),
+        res = [],
+        temp,
+        i = 0;
+
+    for (let w of words2) {
+        temp = counter(w);
+        for (i = 0; i < 26; i++) main[i] = Math.max(main[i], temp[i]);
+    }
+
+    for (let s of words1) {
+        temp = counter(s);
+        for (i = 0; i < 26; i++) if (main[i] > temp[i]) break;
+        if (i == 26) res.push(s);
+    }
+    return res;
 };
