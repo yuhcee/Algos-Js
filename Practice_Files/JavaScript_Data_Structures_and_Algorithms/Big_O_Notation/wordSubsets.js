@@ -17,4 +17,11 @@
  * @param {string[]} words2
  * @return {string[]}
  */
-var wordSubsets = function (words1, words2) {};
+var wordSubsets = function (words1, words2) {
+    function counter(word) {
+        let count = Array(26).fill(0);
+
+        for (i = 0; i < word.length; i++) count[word.charCodeAt(i) - 97]++;
+        return count;
+    }
+};
