@@ -26,3 +26,10 @@ var NumArray = function (nums) {
         this.add(i, nums[i]);
     }
 };
+
+NumArray.prototype.add = function (idx, val) {
+    while (idx < this.len) {
+        this.bit[idx] += val;
+        idx = idx | (idx + 1);
+    }
+};
