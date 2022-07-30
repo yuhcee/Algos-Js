@@ -52,3 +52,11 @@ NumArray.prototype.sum = function (idx) {
     }
     return res;
 };
+/**
+ * @param {number} left
+ * @param {number} right
+ * @return {number}
+ */
+NumArray.prototype.sumRange = function (left, right) {
+    return this.sum(right) - this.sum(left - 1);
+};
