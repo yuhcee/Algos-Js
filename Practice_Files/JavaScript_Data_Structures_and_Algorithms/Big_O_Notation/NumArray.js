@@ -60,3 +60,20 @@ NumArray.prototype.sum = function (idx) {
 NumArray.prototype.sumRange = function (left, right) {
     return this.sum(right) - this.sum(left - 1);
 };
+/**
+ * Your NumArray object will be instantiated and called as such:
+ * var obj = new NumArray(nums)
+ * obj.update(index,val)
+ * var param_2 = obj.sumRange(left,right)
+ */
+
+/* ["NumArray", "sumRange", "update", "sumRange"]
+[[[1, 3, 5]], [0, 2], [1, 2], [0, 2]]
+Output
+[null, 9, null, 8] */
+
+/* Explanation
+NumArray numArray = new NumArray([1, 3, 5]);
+numArray.sumRange(0, 2); // return 1 + 3 + 5 = 9
+numArray.update(1, 2);   // nums = [1, 2, 5]
+numArray.sumRange(0, 2); // return 1 + 2 + 5 = 8 */
