@@ -33,3 +33,14 @@ NumArray.prototype.add = function (idx, val) {
         idx = idx | (idx + 1);
     }
 };
+
+/**
+ * @param {number} index
+ * @param {number} val
+ * @return {void}
+ */
+NumArray.prototype.update = function (index, val) {
+    let delta = val - this.nums[index];
+    this.nums[index] = val;
+    this.add(index, delta);
+};
