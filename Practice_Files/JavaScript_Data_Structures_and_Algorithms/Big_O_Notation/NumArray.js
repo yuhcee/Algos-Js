@@ -44,3 +44,11 @@ NumArray.prototype.update = function (index, val) {
     this.nums[index] = val;
     this.add(index, delta);
 };
+NumArray.prototype.sum = function (idx) {
+    let res = 0;
+    while (idx >= 0) {
+        res += this.bit[idx];
+        idx = (idx & (idx + 1)) - 1;
+    }
+    return res;
+};
