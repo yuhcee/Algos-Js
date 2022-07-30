@@ -16,4 +16,13 @@
  *
  * @param {number[]} nums
  */
-var NumArray = function (nums) {};
+var NumArray = function (nums) {
+    this.len = nums.length;
+    this.nums = nums;
+    this.bit = new Array(this.len).fill(0);
+
+    // Build Tree
+    for (let i = 0; i < this.len; i++) {
+        this.add(i, nums[i]);
+    }
+};
