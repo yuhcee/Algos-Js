@@ -23,3 +23,8 @@ const uniquePaths = (m, n, memo = {}) => {
 
     return memo[key];
 };
+
+const m = 3,
+    n = 7;
+// Output: 28
+console.log(uniquePaths(m, n));
