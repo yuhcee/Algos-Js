@@ -28,3 +28,11 @@ const m = 3,
     n = 7;
 // Output: 28
 console.log(uniquePaths(m, n));
+const m1 = 3,
+    n1 = 2;
+// Output: 3
+/* Explanation: From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
+1. Right -> Down -> Down
+2. Down -> Down -> Right
+3. Down -> Right -> Down */
+console.log(uniquePaths(m1, n1));
