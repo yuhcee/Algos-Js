@@ -25,3 +25,8 @@ const matrix = [
 // Output: 13
 // Explanation: The elements in the matrix are [1,5,9,10,11,12,13,13,15], and the 8th smallest number is 13
 console.log(kthSmallest(matrix, k));
+
+const matrix1 = [[-5]],
+    k1 = 1;
+// Output: -5
+console.log(kthSmallest(matrix1, k1));
