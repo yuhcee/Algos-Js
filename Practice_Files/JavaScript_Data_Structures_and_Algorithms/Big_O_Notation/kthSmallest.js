@@ -30,3 +30,7 @@ const matrix1 = [[-5]],
     k1 = 1;
 // Output: -5
 console.log(kthSmallest(matrix1, k1));
+
+const matrix2 = [[-5], [45], [3, 14], [7, 6]],
+    k2 = 4;
+console.log(kthSmallest(matrix2, k2));
