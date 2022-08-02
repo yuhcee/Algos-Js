@@ -31,3 +31,7 @@ const p = 2,
 // Output: 2
 // Explanation: The ray meets receptor 2 the first time it gets reflected back to the left wall.
 console.log(mirrorReflection(p, q));
+const p1 = 3,
+    q1 = 1;
+// Output: 1;
+console.log(mirrorReflection(p1, q1));
