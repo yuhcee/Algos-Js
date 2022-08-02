@@ -18,4 +18,10 @@
 
 const f = (a, b) => (b ? f(b, a % b) : a);
 
-var mirrorReflection = function (p, q) {};
+var mirrorReflection = function (p, q) {
+    if (p & 1) return q & 1 ? 1 : 0;
+    if (q & 1) return 2;
+
+    const g = f(p, q);
+    return mirrorReflection((p /= g), (q /= g));
+};
