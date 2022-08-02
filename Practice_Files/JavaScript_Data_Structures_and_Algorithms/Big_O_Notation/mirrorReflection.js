@@ -25,3 +25,9 @@ var mirrorReflection = function (p, q) {
     const g = f(p, q);
     return mirrorReflection((p /= g), (q /= g));
 };
+
+const p = 2,
+    q = 1;
+// Output: 2
+// Explanation: The ray meets receptor 2 the first time it gets reflected back to the left wall.
+console.log(mirrorReflection(p, q));
