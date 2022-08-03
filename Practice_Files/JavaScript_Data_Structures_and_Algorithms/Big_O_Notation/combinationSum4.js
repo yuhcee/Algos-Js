@@ -14,4 +14,19 @@ var combinationSum4 = function (nums, target) {
     nums.sort((a, b) => a - b);
     // init dp array
     const dp = new Array(target).fill(-1);
+
+    const solve = (n = 0) => {
+        if (target == n) return 1;
+
+        if (dp[n] != -1) return dp[n];
+
+        let ways = 0;
+        nums.forEach((num, idx) => {
+            if (num <= target - n) {
+                ways += solve(n + nums[idx]);
+            }
+        });
+        return (dp[n] = ways);
+    };
+    return solve();
 };
