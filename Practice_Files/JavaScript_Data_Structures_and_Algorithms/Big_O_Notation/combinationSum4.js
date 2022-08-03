@@ -12,4 +12,6 @@
 var combinationSum4 = function (nums, target) {
     // sort nums array
     nums.sort((a, b) => a - b);
+    // init dp array
+    const dp = new Array(target).fill(-1);
 };
