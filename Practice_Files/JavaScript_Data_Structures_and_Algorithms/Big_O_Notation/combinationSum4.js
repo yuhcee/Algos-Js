@@ -9,4 +9,7 @@
  * @param {number} target
  * @return {number}
  */
-var combinationSum4 = function (nums, target) {};
+var combinationSum4 = function (nums, target) {
+    // sort nums array
+    nums.sort((a, b) => a - b);
+};
