@@ -44,3 +44,7 @@ The possible combination ways are:
 (3, 1)
 Note that different sequences are counted as different combinations. */
 console.log(combinationSum4(nums, target));
+const nums1 = [9],
+    target1 = 3;
+// Output: 0
+console.log(combinationSum4(nums1, target1));
