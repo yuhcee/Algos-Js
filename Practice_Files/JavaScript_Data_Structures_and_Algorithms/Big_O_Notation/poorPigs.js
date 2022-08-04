@@ -10,7 +10,8 @@
  * simultaneously and will take no time. Each pig can feed from any number of buckets, and each bucket can 
  * be fed from by any number of pigs.
  * - Wait for `minutesToDie` minutes. You may **not** feed any other pigs during this time.
- * - After `minutesToDie` minutes have passed, any pigs that have been fed the poisonous bucket will die, and all others will survive.
+ * - After `minutesToDie` minutes have passed, any pigs that have been fed the poisonous bucket will die, 
+ * and all others will survive.
  * Repeat this process until you run out of time.
  * 
  * Given `buckets`, `minutesToDie`, and `minutesToTest`, return *the **minimum** number of pigs needed to figure out which bucket is poisonous within the allotted time*.
@@ -22,5 +23,9 @@
  * @return {number}
  */
 var poorPigs = function (buckets, minutesToDie, minutesToTest) {
-    
+    let answer = 1;
+    let n = (minutesToTest / minutesToDie) >> 0;
+    n += 1;
+
+    return Math.ceil(Math.log(buckets) / Math.log(n));
 };
