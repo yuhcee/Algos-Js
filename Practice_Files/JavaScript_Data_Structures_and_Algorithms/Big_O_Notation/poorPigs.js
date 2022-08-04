@@ -29,3 +29,17 @@ var poorPigs = function (buckets, minutesToDie, minutesToTest) {
 
     return Math.ceil(Math.log(buckets) / Math.log(n));
 };
+const buckets = 4,
+    minutesToDie = 15,
+    minutesToTest = 15;
+
+// Output: 2
+/* Explanation: We can determine the poisonous bucket as follows:
+At time 0, feed the first pig buckets 1 and 2, and feed the second pig buckets 2 and 3.
+At time 15, there are 4 possible outcomes:
+- If only the first pig dies, then bucket 1 must be poisonous.
+- If only the second pig dies, then bucket 3 must be poisonous.
+- If both pigs die, then bucket 2 must be poisonous.
+- If neither pig dies, then bucket 4 must be poisonous. */
+
+console.log(poorPigs(buckets, minutesToDie, minutesToTest));
