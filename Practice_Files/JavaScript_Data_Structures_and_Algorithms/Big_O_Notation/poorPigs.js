@@ -43,3 +43,16 @@ At time 15, there are 4 possible outcomes:
 - If neither pig dies, then bucket 4 must be poisonous. */
 
 console.log(poorPigs(buckets, minutesToDie, minutesToTest));
+
+const buckets1 = 4,
+    minutesToDie1 = 15,
+    minutesToTest1 = 30;
+/* Output: 2
+Explanation: We can determine the poisonous bucket as follows:
+At time 0, feed the first pig bucket 1, and feed the second pig bucket 2.
+At time 15, there are 2 possible outcomes:
+- If either pig dies, then the poisonous bucket is the one it was fed.
+- If neither pig dies, then feed the first pig bucket 3, and feed the second pig bucket 4.
+At time 30, one of the two pigs must die, and the poisonous bucket is the one it was fed. */
+
+console.log(poorPigs(buckets1, minutesToDie1, minutesToTest1));
