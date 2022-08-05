@@ -54,3 +54,8 @@ var countVowelPermutation = function (n) {
 
     return res % MOD;
 };
+
+const n = 1;
+// Output: 5
+// Explanation: All possible strings are: "a", "e", "i" , "o" and "u".
+console.log(countVowelPermutation(n));
