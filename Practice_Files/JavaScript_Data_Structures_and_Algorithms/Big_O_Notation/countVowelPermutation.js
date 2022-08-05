@@ -28,4 +28,29 @@ var countVowelPermutation = function (n) {
     const memo = {};
 
     let res = 0;
+
+    function dfs(currLetter, remainingCount) {
+        const cacheKey = `${currLetter},${remainingCount}`;
+        if (cacheKey in memo) return memo[cacheKey];
+
+        if (remainingCount === 0) {
+            return 1;
+        }
+
+        const nextLetters = adj[currLetter];
+
+        let count = 0;
+
+        for (const letter of nextLetters) {
+            count = (count + dfs(letter, remainingCount - 1)) % MOD;
+        }
+
+        return (memo[cacheKey] = count);
+    }
+
+    for (const key in adj) {
+        res += dfs(key, n - 1);
+    }
+
+    return res % MOD;
 };
