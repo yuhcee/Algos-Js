@@ -15,4 +15,12 @@
  * @param {number} n
  * @return {number}
  */
-var countVowelPermutation = function (n) {};
+var countVowelPermutation = function (n) {
+    const adj = {
+        a: ['e'],
+        e: ['a', 'i'],
+        i: ['a', 'e', 'o', 'u'],
+        o: ['i', 'u'],
+        u: ['a'],
+    };
+};
