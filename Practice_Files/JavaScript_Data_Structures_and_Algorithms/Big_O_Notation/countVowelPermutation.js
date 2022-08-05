@@ -23,4 +23,9 @@ var countVowelPermutation = function (n) {
         o: ['i', 'u'],
         u: ['a'],
     };
+
+    const MOD = Math.pow(10, 9) + 7;
+    const memo = {};
+
+    let res = 0;
 };
