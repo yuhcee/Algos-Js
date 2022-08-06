@@ -33,6 +33,10 @@ const nums = [10, 9, 2, 5, 3, 7, 101, 18];
 // Output: 4
 // Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
 console.log(lengthOfLIS(nums));
-const nums1 = [0,1,0,3,2,3]
+const nums1 = [0, 1, 0, 3, 2, 3];
 // Output: 4
 console.log(lengthOfLIS(nums1));
+
+const nums2 = [7, 7, 7, 7, 7, 7, 7];
+// Output: 1
+console.log(lengthOfLIS(nums2));
