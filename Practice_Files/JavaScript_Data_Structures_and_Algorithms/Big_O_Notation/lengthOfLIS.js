@@ -23,5 +23,8 @@ var lengthOfLIS = function (nums) {
         }
     }
 
-    
+    let longest = 0;
+    for (let c of dp) longest = Math.max(longest, c);
+
+    return longest;
 };
