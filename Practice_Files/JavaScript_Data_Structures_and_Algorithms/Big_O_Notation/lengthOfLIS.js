@@ -10,4 +10,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var lengthOfLIS = function (nums) {};
+var lengthOfLIS = function (nums) {
+    // init dp array
+    const dp = Array(nums.length).fill(1);
+};
