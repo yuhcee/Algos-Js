@@ -30,9 +30,10 @@ var numFactoredBinaryTrees = function (arr) {
             // found first factor
             const firstFactor = arr[j];
             const secondFactor = num / firstFactor;
-            
+            if (dp[secondFactor])
+            // second factor exists as well
+              
           }
         }
       }
-      
 };
