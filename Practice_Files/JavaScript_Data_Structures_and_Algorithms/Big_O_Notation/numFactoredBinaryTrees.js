@@ -32,7 +32,7 @@ var numFactoredBinaryTrees = function (arr) {
             const secondFactor = num / firstFactor;
             if (dp[secondFactor])
             // second factor exists as well
-              
+              dp[num] += dp[firstFactor] * dp[secondFactor]; // adding the combination of trees of both the factors
           }
         }
       }
