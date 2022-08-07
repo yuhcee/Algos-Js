@@ -17,6 +17,8 @@ var numFactoredBinaryTrees = function (arr) {
     const dp = {};
     const mod = 10 ** 9 + 7;
 
-    // sorting the nums is increasing order
-    arr.sort((a, b) => a - b); 
+    // sorting the nums in increasing order
+    arr.sort((a, b) => a - b);
+    // every num would at least have a tree with itself as the root and nothing else
+    for (let num of arr) dp[num] = 1;
 };
