@@ -26,7 +26,13 @@ var numFactoredBinaryTrees = function (arr) {
         const num = arr[i];
         // for a given num, we'll try to find the factor pairs which are present in the arr
         for (let j = i - 1; j >= 0; j--) {
-          
+          if (num % arr[j] === 0) {
+            // found first factor
+            const firstFactor = arr[j];
+            const secondFactor = num / firstFactor;
+            
+          }
         }
       }
+      
 };
