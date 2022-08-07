@@ -26,15 +26,19 @@ var numFactoredBinaryTrees = function (arr) {
         const num = arr[i];
         // for a given num, we'll try to find the factor pairs which are present in the arr
         for (let j = i - 1; j >= 0; j--) {
-          if (num % arr[j] === 0) {
-            // found first factor
-            const firstFactor = arr[j];
-            const secondFactor = num / firstFactor;
-            if (dp[secondFactor])
-            // second factor exists as well
-              dp[num] += dp[firstFactor] * dp[secondFactor]; // adding the combination of trees of both the factors
-          }
+            if (num % arr[j] === 0) {
+                // found first factor
+                const firstFactor = arr[j];
+                const secondFactor = num / firstFactor;
+                if (dp[secondFactor])
+                    // second factor exists as well
+                    dp[num] += dp[firstFactor] * dp[secondFactor]; // adding the combination of trees of both the factors
+            }
         }
-      }
-      return Object.values(dp).reduce((acc, val) => acc + val) % mod;
+    }
+    return Object.values(dp).reduce((acc, val) => acc + val) % mod;
 };
+const arr = [2, 4];
+// Output: 3
+// Explanation: We can make these trees: [2], [4], [4, 2, 2]
+console.log(numFactoredBinaryTrees(arr));
