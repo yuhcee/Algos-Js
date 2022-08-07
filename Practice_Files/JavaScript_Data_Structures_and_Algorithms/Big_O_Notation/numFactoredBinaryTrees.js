@@ -12,4 +12,8 @@
  * @param {number[]} arr
  * @return {number}
  */
-var numFactoredBinaryTrees = function (arr) {};
+var numFactoredBinaryTrees = function (arr) {
+    // hosts the number of possible trees for a given num
+    const dp = {};
+    const mod = 10 ** 9 + 7;
+};
