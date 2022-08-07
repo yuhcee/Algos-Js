@@ -16,4 +16,7 @@ var numFactoredBinaryTrees = function (arr) {
     // hosts the number of possible trees for a given num
     const dp = {};
     const mod = 10 ** 9 + 7;
+
+    // sorting the nums is increasing order
+    arr.sort((a, b) => a - b); 
 };
