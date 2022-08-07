@@ -36,4 +36,5 @@ var numFactoredBinaryTrees = function (arr) {
           }
         }
       }
+      return Object.values(dp).reduce((acc, val) => acc + val) % mod;
 };
