@@ -21,4 +21,12 @@ var numFactoredBinaryTrees = function (arr) {
     arr.sort((a, b) => a - b);
     // every num would at least have a tree with itself as the root and nothing else
     for (let num of arr) dp[num] = 1;
+
+    for (let i = 0; i < arr.length; i++) {
+        const num = arr[i];
+        // for a given num, we'll try to find the factor pairs which are present in the arr
+        for (let j = i - 1; j >= 0; j--) {
+          
+        }
+      }
 };
