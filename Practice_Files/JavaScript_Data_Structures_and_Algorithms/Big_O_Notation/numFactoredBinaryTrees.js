@@ -42,3 +42,8 @@ const arr = [2, 4];
 // Output: 3
 // Explanation: We can make these trees: [2], [4], [4, 2, 2]
 console.log(numFactoredBinaryTrees(arr));
+
+const arr1 = [2, 4, 5, 10];
+// Output: 7
+// Explanation: We can make these trees: [2], [4], [5], [10], [4, 2, 2], [10, 2, 5], [10, 5, 2].
+console.log(numFactoredBinaryTrees(arr1));
