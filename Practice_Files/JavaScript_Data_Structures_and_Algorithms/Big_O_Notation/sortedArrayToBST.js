@@ -33,4 +33,6 @@ var sortedArrayToBST = function (nums) {
 
         return node;
     }
+
+    return create(0, nums.length - 1);
 };
