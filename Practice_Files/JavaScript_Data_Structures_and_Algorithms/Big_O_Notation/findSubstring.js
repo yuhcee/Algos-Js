@@ -45,4 +45,15 @@ let search = function (s, wordCounts, i, used, matched) {
     return false;
 };
 
-const findSubstring = function (s, words) {};
+const findSubstring = function (s, words) {
+    let wordCounts = new Map();
+
+    // initialize wordCounts
+    totalCount = 0;
+    for (var word of w) {
+        if (wordCounts.has(word)) wordCounts.set(word, wordCounts.get(word) + 1);
+        else wordCounts.set(word, 1);
+        totalCount++;
+    }
+    wordLength = w[0].length;
+};
