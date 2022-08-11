@@ -19,4 +19,8 @@
  * @return {number[]}
  */
 
+ var wordLength, totalCount;
+
+ let search = function(s, wordCounts, i, used, matched) {}
+
 const findSubstring = function (s, words) {};
