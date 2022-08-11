@@ -50,12 +50,12 @@ const findSubstring = function (s, words) {
 
     // initialize wordCounts
     totalCount = 0;
-    for (var word of w) {
+    for (var word of words) {
         if (wordCounts.has(word)) wordCounts.set(word, wordCounts.get(word) + 1);
         else wordCounts.set(word, 1);
         totalCount++;
     }
-    wordLength = w[0].length;
+    wordLength = words[0].length;
 
     let result = [];
 
@@ -68,3 +68,12 @@ const findSubstring = function (s, words) {
 
     return result;
 };
+
+const s = 'barfoothefoobarman',
+    words = ['foo', 'bar'];
+// Output: [0,9]
+/* Explanation: Since words.length == 2 and words[i].length == 3, the concatenated substring has to be of length 6.
+The substring starting at 0 is "barfoo". It is the concatenation of ["bar","foo"] which is a permutation of words.
+The substring starting at 9 is "foobar". It is the concatenation of ["foo","bar"] which is a permutation of words.
+The output order does not matter. Returning [9,0] is fine too. */
+console.log(findSubstring(s, words));
