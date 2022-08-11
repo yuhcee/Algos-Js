@@ -56,4 +56,15 @@ const findSubstring = function (s, words) {
         totalCount++;
     }
     wordLength = w[0].length;
+
+    let result = [];
+
+    // search at every offset
+    for (var i = 0; i < s.length; i++) {
+        if (search(s, wordCounts, i, new Map(), 0)) {
+            result.push(i);
+        }
+    }
+
+    return result;
 };
