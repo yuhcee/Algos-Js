@@ -26,4 +26,14 @@ const findLadders = function (beginWord, endWord, wordList) {
         return c == 1;
     };
 
+    // dictionary to help us search words faster
+    // and to trackback what word was used
+    let dict = new Set(wordList);
+    if (dict.has(endWord) == false) return [];
+
+    dict.delete(beginWord);
+    let queue = [beginWord];
+    let paths = [];
+
+    
 };
