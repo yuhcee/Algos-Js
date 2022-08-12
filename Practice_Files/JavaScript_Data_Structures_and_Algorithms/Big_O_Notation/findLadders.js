@@ -71,5 +71,22 @@ const findLadders = function (beginWord, endWord, wordList) {
     // scanned all but did not see endWord in paths
     if (!reached) return [];
 
-    
+    // now, every path we choose in the paths
+    // will lead us back to the beginning
+    // so just try to traverse backward from end to begin
+    // via the connected words
+    let ans = [[endWord]];
+    for (let level = paths.length - 1; level >= 0; level--) {
+        let alen = ans.length;
+        for (let a = 0; a < alen; a++) {
+            let p = ans.shift();
+            let last = p[0];
+            for (let word of paths[level]) {
+                if (!connected(last, word)) continue;
+                ans.push([word, ...p]);
+            }
+        }
+    }
+
+    return ans;
 };
