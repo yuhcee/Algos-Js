@@ -99,3 +99,10 @@ const beginWord = 'hit',
 "hit" -> "hot" -> "dot" -> "dog" -> "cog"
 "hit" -> "hot" -> "lot" -> "log" -> "cog" */
 console.log(findLadders(beginWord, endWord, wordList));
+
+const beginWord1 = 'hit',
+    endWord1 = 'cog',
+    wordList1 = ['hot', 'dot', 'dog', 'lot', 'log'];
+// Output: []
+// Explanation: The endWord "cog" is not in wordList, therefore there is no valid transformation sequence.
+console.log(findLadders(beginWord1, endWord1, wordList1));
