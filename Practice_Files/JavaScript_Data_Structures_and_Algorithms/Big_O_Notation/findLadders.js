@@ -68,6 +68,8 @@ const findLadders = function (beginWord, endWord, wordList) {
         }
     }
 
+    // scanned all but did not see endWord in paths
+    if (!reached) return [];
 
-    return ans;
+    
 };
