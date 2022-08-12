@@ -17,8 +17,8 @@
  * @return {string[][]}
  */
 const findLadders = function (beginWord, endWord, wordList) {
-     // to check if two words can connect
-     let connected = (a, b) => {
+    // to check if two words can connect
+    let connected = (a, b) => {
         let c = 0;
         for (let i = 0; i < a.length && c < 2; i++) {
             if (a[i] !== b[i]) c++;
@@ -90,3 +90,12 @@ const findLadders = function (beginWord, endWord, wordList) {
 
     return ans;
 };
+
+const beginWord = 'hit',
+    endWord = 'cog',
+    wordList = ['hot', 'dot', 'dog', 'lot', 'log', 'cog'];
+// Output: [["hit","hot","dot","dog","cog"],["hit","hot","lot","log","cog"]]
+/* Explanation: There are 2 shortest transformation sequences:
+"hit" -> "hot" -> "dot" -> "dog" -> "cog"
+"hit" -> "hot" -> "lot" -> "log" -> "cog" */
+console.log(findLadders(beginWord, endWord, wordList));
