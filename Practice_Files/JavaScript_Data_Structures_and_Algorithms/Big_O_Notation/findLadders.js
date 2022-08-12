@@ -35,5 +35,39 @@ const findLadders = function (beginWord, endWord, wordList) {
     let queue = [beginWord];
     let paths = [];
 
-    
+    // find all ways from beginning
+    // level by level, until reach end at a level
+    let reached = false;
+    while (queue.length && !reached) {
+        // update points of paths for this level
+        paths.push(queue.slice());
+
+        // access whole level
+        let qlen = queue.length;
+        for (let i = 0; i < qlen && !reached; i++) {
+            // get the words in the record from the previous level
+            let from = queue.shift();
+            for (let to of dict) {
+                // check if those word can connect to any word in dict
+                if (connected(from, to) == false) continue;
+
+                // if yes,
+                // and one of them is endWord then we can stop from here
+                if (to == endWord) {
+                    reached = true;
+                    break;
+                }
+
+                // otherwise,
+                // update words for this level
+                queue.push(to);
+
+                // and delete "to" from dict to prevent a cycle
+                dict.delete(to);
+            }
+        }
+    }
+
+
+    return ans;
 };
