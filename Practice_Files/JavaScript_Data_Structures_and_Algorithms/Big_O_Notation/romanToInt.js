@@ -50,3 +50,9 @@ const s = 'III';
 // Output: 3
 // Explanation: III = 3.
 console.log(romanToInt(s));
+
+const s1 = 'LVIII';
+// Output: 58
+// Explanation: L = 50, V= 5, III = 3.
+console.log(romanToInt(s1));
+
