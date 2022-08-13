@@ -56,3 +56,7 @@ const s1 = 'LVIII';
 // Explanation: L = 50, V= 5, III = 3.
 console.log(romanToInt(s1));
 
+const s2 = 'MCMXCIV';
+// Output: 1994
+// Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+console.log(romanToInt(s2));
