@@ -35,8 +35,8 @@ var romanToInt = (s) => {
 
     for (let i = 0, n = s.length; i < n; i++) {
         const n = intMap[s[i]];
-        const nextInt = intMap[s[i+1]];
-    
+        const nextInt = intMap[s[i + 1]];
+
         if (n < nextInt) {
             result += nextInt - n;
             i++;
@@ -45,3 +45,8 @@ var romanToInt = (s) => {
 
     return result;
 };
+
+const s = 'III';
+// Output: 3
+// Explanation: III = 3.
+console.log(romanToInt(s));
