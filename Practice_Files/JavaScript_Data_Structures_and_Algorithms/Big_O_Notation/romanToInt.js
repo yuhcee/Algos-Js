@@ -34,7 +34,13 @@ var romanToInt = (s) => {
     let result = 0;
 
     for (let i = 0, n = s.length; i < n; i++) {
-        
+        const n = intMap[s[i]];
+        const nextInt = intMap[s[i+1]];
+    
+        if (n < nextInt) {
+            result += nextInt - n;
+            i++;
+        } else result += n;
     }
 
 };
