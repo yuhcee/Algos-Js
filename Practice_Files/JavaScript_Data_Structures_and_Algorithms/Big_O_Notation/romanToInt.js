@@ -43,4 +43,5 @@ var romanToInt = (s) => {
         } else result += n;
     }
 
+    return result;
 };
