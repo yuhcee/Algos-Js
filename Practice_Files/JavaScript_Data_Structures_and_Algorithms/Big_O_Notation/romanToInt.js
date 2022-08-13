@@ -30,4 +30,11 @@ var romanToInt = (s) => {
         D: 500,
         M: 1000,
     };
+
+    let result = 0;
+
+    for (let i = 0, n = s.length; i < n; i++) {
+        
+    }
+
 };
