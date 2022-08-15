@@ -24,3 +24,7 @@ console.log(firstUniqChar(s));
 const s1 = 'loveleetcode';
 // Output: 2
 console.log(firstUniqChar(s1));
+
+const s2 = 'aabb';
+// Output: -1
+console.log(firstUniqChar(s2));
