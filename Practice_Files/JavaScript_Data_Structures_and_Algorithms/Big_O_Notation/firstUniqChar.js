@@ -8,5 +8,9 @@
  * @return {number}
  */
 const firstUniqChar = function (s) {
+    for (let i = 0, n = s.length; i < n; i++) {
+       
+    }
     
+
 };
