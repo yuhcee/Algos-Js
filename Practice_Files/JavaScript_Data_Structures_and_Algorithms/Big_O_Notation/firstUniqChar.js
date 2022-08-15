@@ -20,3 +20,7 @@ const firstUniqChar = function (s) {
 const s = 'leetcode';
 // Output: 0
 console.log(firstUniqChar(s));
+
+const s1 = 'loveleetcode';
+// Output: 2
+console.log(firstUniqChar(s1));
