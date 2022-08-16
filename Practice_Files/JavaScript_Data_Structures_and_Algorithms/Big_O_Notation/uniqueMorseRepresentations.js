@@ -58,18 +58,18 @@ function uniqueMorseRepresentations(words) {
     const map = {};
     const set = new Set();
 
-    for(let i = 0; i < words.length; i++) {
-        let encryptedWord = "";
+    for (let i = 0; i < words.length; i++) {
+        let encryptedWord = '';
 
         for (let l = 0; l < words[i].length; l++) {
             const character = words[i][l];
-            
+
             encryptedWord += morseCode[character];
         }
 
         set.add(encryptedWord);
 
-        if(!map[encryptedWord]) {
+        if (!map[encryptedWord]) {
             map[encryptedWord] = 0;
         }
 
@@ -79,8 +79,7 @@ function uniqueMorseRepresentations(words) {
     return set.size;
 }
 
-
-const words = ["gin","zen","gig","msg"]
+const words = ['gin', 'zen', 'gig', 'msg'];
 // Output: 2
 /* Explanation: The transformation of each word is:
 "gin" -> "--...-."
@@ -89,3 +88,7 @@ const words = ["gin","zen","gig","msg"]
 "msg" -> "--...--."
 There are 2 different transformations: "--...-." and "--...--.". */
 console.log(uniqueMorseRepresentations(words));
+
+const words1 = ['a'];
+// Output: 1
+console.log(uniqueMorseRepresentations(words1));
