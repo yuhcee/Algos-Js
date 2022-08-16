@@ -58,5 +58,23 @@ function uniqueMorseRepresentations(words) {
     const map = {};
     const set = new Set();
 
-    
+    for(let i = 0; i < words.length; i++) {
+        let encryptedWord = "";
+
+        for (let l = 0; l < words[i].length; l++) {
+            const character = words[i][l];
+            
+            encryptedWord += morseCode[character];
+        }
+
+        set.add(encryptedWord);
+
+        if(!map[encryptedWord]) {
+            map[encryptedWord] = 0;
+        }
+
+        map[encryptedWord]++;
+    }
+
+    return set.size;
 }
