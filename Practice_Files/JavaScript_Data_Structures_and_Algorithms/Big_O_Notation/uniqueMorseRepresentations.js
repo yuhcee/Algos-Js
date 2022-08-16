@@ -55,5 +55,8 @@ const morseCode = {
 };
 
 function uniqueMorseRepresentations(words) {
+    const map = {};
+    const set = new Set();
+
     
 }
