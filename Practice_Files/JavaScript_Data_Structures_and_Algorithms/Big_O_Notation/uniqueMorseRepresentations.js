@@ -78,3 +78,14 @@ function uniqueMorseRepresentations(words) {
 
     return set.size;
 }
+
+
+const words = ["gin","zen","gig","msg"]
+// Output: 2
+/* Explanation: The transformation of each word is:
+"gin" -> "--...-."
+"zen" -> "--...-."
+"gig" -> "--...--."
+"msg" -> "--...--."
+There are 2 different transformations: "--...-." and "--...--.". */
+console.log(uniqueMorseRepresentations(words));
