@@ -30,3 +30,21 @@ MyCalendar.prototype.book = function (start, end) {
     this.val.push([start, end]);
     return true;
 };
+
+/**
+ * Your MyCalendar object will be instantiated and called as such:
+ * var obj = new MyCalendar()
+ * var param_1 = obj.book(start,end)
+ */
+
+
+const input = ["MyCalendar", "book", "book", "book"]
+[[], [10, 20], [15, 25], [20, 30]]
+// Output
+// [null, true, false, true]
+
+/* Explanation
+MyCalendar myCalendar = new MyCalendar();
+myCalendar.book(10, 20); // return True
+myCalendar.book(15, 25); // return False, It can not be booked because time 15 is already booked by another event.
+myCalendar.book(20, 30); // return True, The event can be booked, as the first event takes every time less than 20, but not including 20. */
