@@ -23,4 +23,10 @@ var MyCalendar = function () {
  * @param {number} end
  * @return {boolean}
  */
-MyCalendar.prototype.book = function (start, end) {};
+MyCalendar.prototype.book = function (start, end) {
+    for (let book of this.val) {
+        if (end > book[0] && start < book[1]) return false;
+    }
+    this.val.push([start, end]);
+    return true;
+};
