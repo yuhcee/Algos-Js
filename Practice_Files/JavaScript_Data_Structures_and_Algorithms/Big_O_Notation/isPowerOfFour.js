@@ -7,14 +7,22 @@
  * @param {number} n
  * @return {boolean}
  */
+
+// ============== ITERATIVE APPROACH ==================
 // const isPowerOfFour = function (n) {
 //     if (n === 0) return false;
 //     while (n % 4 === 0) n /= 4;
 //     return n === 1;
 // };
 
+// ============== MATH APPROACH ====================
+// const isPowerOfFour = function (n) {
+//     return n > 0 && (Math.log(n) / Math.log(2)) % 2 === 0;
+// };
+
+// ============= BIT MANIPULATION APPROACH =========
 const isPowerOfFour = function (n) {
-    return n > 0 && (Math.log(n) / Math.log(2)) % 2 === 0;
+    return (n > 0 ) && ((n & (n - 1))  === 0) && ( n % 3 === 1);
 };
 
 const n = 16;
