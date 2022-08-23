@@ -25,4 +25,7 @@ var isPalindromeLinkedList = function (head) {
 
     // reverse vals array
     const l1 = [...vals].reverse();
+
+    // compare array to check if its palindrome
+    return JSON.stringify(l1) === JSON.stringify(vals);
 };
