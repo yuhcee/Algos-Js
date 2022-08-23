@@ -16,5 +16,10 @@
 var isPalindromeLinkedList = function (head) {
     // init an empty array to store values
     const vals = [];
-    
+
+    // loop through linked list and copy the values into vals array
+    while (head) {
+        vals.push(head.val);
+        head = head.next;
+    }
 };
