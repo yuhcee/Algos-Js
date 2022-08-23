@@ -29,3 +29,8 @@ var isPalindromeLinkedList = function (head) {
     // compare array to check if its palindrome
     return JSON.stringify(l1) === JSON.stringify(vals);
 };
+
+const head = [1, 2, 2, 1];
+// Output: true
+console.log(isPalindromeLinkedList(head));
+
