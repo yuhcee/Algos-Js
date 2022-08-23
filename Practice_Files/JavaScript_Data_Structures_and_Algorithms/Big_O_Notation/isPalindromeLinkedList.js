@@ -22,4 +22,7 @@ var isPalindromeLinkedList = function (head) {
         vals.push(head.val);
         head = head.next;
     }
+
+    // reverse vals array
+    const l1 = [...vals].reverse();
 };
