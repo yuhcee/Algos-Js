@@ -21,3 +21,7 @@ console.log(isPowerOfThree(n));
 const n1 = 0;
 // Output: false
 console.log(isPowerOfThree(n1));
+
+const n2 = 9;
+// Output: true
+console.log(isPowerOfThree(n2));
