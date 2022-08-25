@@ -23,3 +23,8 @@ const canConstruct = function (ransomNote, magazine) {
 
     return isGood;
 };
+
+const ransomNote = 'a',
+    magazine = 'b';
+// Output: false
+console.log(canConstruct(ransomNote, magazine));
