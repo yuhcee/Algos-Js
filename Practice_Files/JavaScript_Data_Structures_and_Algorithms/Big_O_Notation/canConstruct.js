@@ -33,3 +33,8 @@ const ransomNote1 = 'aa',
     magazine1 = 'ab';
 // Output: false
 console.log(canConstruct(ransomNote1, magazine1));
+
+const ransomNote2 = 'aa',
+    magazine2 = 'aab';
+// Output: true
+console.log(canConstruct(ransomNote2, magazine2));
