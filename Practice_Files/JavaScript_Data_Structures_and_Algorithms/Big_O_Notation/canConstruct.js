@@ -1,13 +1,25 @@
 /**
  * **383. Ransom Note**
- * 
- * Given two strings `ransomNote` and `magazine`, return *`true` if `ransomNote` can be constructed by using 
+ *
+ * Given two strings `ransomNote` and `magazine`, return *`true` if `ransomNote` can be constructed by using
  * the letters from `magazine` and false otherwise*.
- * 
+ *
  * Each letter in `magazine` can only be used once in `ransomNote`.
- * 
+ *
  * @param {string} ransomNote
  * @param {string} magazine
  * @return {boolean}
  */
-const canConstruct = function (ransomNote, magazine) {};
+const canConstruct = function (ransomNote, magazine) {
+    let isGood = true;
+
+    for (let char of ransomNote) {
+        if (magazine.includes(char)) magazine = magazine.replace(char, '');
+        else {
+            isGood = false;
+            break;
+        }
+    }
+
+    return isGood;
+};
