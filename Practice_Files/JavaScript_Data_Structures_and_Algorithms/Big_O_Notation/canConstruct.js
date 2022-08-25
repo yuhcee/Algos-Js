@@ -28,3 +28,8 @@ const ransomNote = 'a',
     magazine = 'b';
 // Output: false
 console.log(canConstruct(ransomNote, magazine));
+
+const ransomNote1 = 'aa',
+    magazine1 = 'ab';
+// Output: false
+console.log(canConstruct(ransomNote1, magazine1));
