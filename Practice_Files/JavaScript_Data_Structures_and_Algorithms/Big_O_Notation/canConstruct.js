@@ -10,18 +10,38 @@
  * @param {string} magazine
  * @return {boolean}
  */
+// const canConstruct = function (ransomNote, magazine) {
+//     let isGood = true;
+
+//     for (let char of ransomNote) {
+//         if (magazine.includes(char)) magazine = magazine.replace(char, '');
+//         else {
+//             isGood = false;
+//             break;
+//         }
+//     }
+
+//     return isGood;
+// };
+
+// ========== Hash Map Solution ============
+
 const canConstruct = function (ransomNote, magazine) {
-    let isGood = true;
+    const charCounter = {};
+
+    for (let char of magazine) {
+        charCounter[char] = charCounter[char] + 1 || 1;
+    }
 
     for (let char of ransomNote) {
-        if (magazine.includes(char)) magazine = magazine.replace(char, '');
-        else {
-            isGood = false;
-            break;
+        if (charCounter[char]) {
+            charCounter[char]--;
+        } else {
+            return false;
         }
     }
 
-    return isGood;
+    return true;
 };
 
 const ransomNote = 'a',
