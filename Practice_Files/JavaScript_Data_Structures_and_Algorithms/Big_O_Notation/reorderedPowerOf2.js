@@ -10,3 +10,8 @@
  * @return {boolean}
  */
 const reorderedPowerOf2 = function (n) {};
+
+const n = 1;
+// Output: true
+console.log(reorderedPowerOf2(n));
+
