@@ -12,6 +12,16 @@
 const reorderedPowerOf2 = function (n) {
     const orig = convert(n);
 
+    let num = 1;
+
+    while (num <= 1e9) {
+        const str = convert(num);
+
+        if (str === orig) return true;
+        num <<= 1;
+    }
+    return false;
+
     function convert(num) {
         return num.toString().split('').sort().join('');
     }
@@ -24,3 +34,5 @@ console.log(reorderedPowerOf2(n));
 const n1 = 10;
 // Output: false
 console.log(reorderedPowerOf2(n1));
+
+
