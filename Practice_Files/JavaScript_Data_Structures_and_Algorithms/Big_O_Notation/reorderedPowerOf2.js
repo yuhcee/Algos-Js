@@ -9,12 +9,17 @@
  * @param {number} n
  * @return {boolean}
  */
-const reorderedPowerOf2 = function (n) {};
+const reorderedPowerOf2 = function (n) {
+    const orig = convert(n);
+
+    function convert(num) {
+        return num.toString().split('').sort().join('');
+    }
+};
 
 const n = 1;
 // Output: true
 console.log(reorderedPowerOf2(n));
-
 
 const n1 = 10;
 // Output: false
