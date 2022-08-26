@@ -35,4 +35,6 @@ const n1 = 10;
 // Output: false
 console.log(reorderedPowerOf2(n1));
 
-
+const n2 = 128;
+// Output: true
+console.log(reorderedPowerOf2(n2));
