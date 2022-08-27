@@ -10,4 +10,11 @@
  * @param {number} k
  * @return {number}
  */
-const maxSumSubmatrix = function (matrix, k) {};
+const maxSumSubmatrix = function (matrix, k) {
+    const rowNums = matrix.length,
+        colNums = matrix[0].length;
+    let maxSum = -Infinity;
+
+    
+};
+
