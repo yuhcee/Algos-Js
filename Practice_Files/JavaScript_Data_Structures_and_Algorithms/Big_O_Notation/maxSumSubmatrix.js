@@ -15,6 +15,11 @@ const maxSumSubmatrix = function (matrix, k) {
         colNums = matrix[0].length;
     let maxSum = -Infinity;
 
-    
+    for (let l = 0; l < rowNums; l++) {
+        const dp = Array(colNums).fill(0);
+
+    }
+    return maxSum;
 };
+
 
