@@ -34,7 +34,20 @@ const maxSumSubmatrix = function (matrix, k) {
 
             // if max <= k take kadane's algorithm
             if (max <= k) maxSum = Math.max(max, maxSum);
-            
+            else {
+                // if max > k find the max subarray sum no larger than k
+                max = -Infinity;
+
+                for (let c = 0; c < colNums; c++) {
+                    sum = 0;
+
+                    for (let d = c; d < colNums; d++) {
+                        sum += dp[d];
+                        if (sum <= k) max = Math.max(sum, max);
+                    }
+                }
+                maxSum = Math.max(max, maxSum);
+            }
         }
     }
     return maxSum;
