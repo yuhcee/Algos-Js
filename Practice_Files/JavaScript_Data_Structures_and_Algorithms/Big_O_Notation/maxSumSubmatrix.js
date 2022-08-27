@@ -48,6 +48,7 @@ const maxSumSubmatrix = function (matrix, k) {
                 }
                 maxSum = Math.max(max, maxSum);
             }
+            if (maxSum === k) return k; // short circuit
         }
     }
     return maxSum;
