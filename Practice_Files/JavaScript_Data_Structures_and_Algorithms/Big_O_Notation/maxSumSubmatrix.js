@@ -31,6 +31,10 @@ const maxSumSubmatrix = function (matrix, k) {
                 sum += dp[c];
                 max = Math.max(max, sum);
             }
+
+            // if max <= k take kadane's algorithm
+            if (max <= k) maxSum = Math.max(max, maxSum);
+            
         }
     }
     return maxSum;
