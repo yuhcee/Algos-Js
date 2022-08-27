@@ -62,3 +62,8 @@ k = 2;
 // Output: 2
 /* Explanation: Because the sum of the blue rectangle [[0, 1], [-2, 3]] is 2, and 2 is the max number no larger than k (k = 2). */
 console.log(maxSumSubmatrix(matrix, k));
+
+const matrix1 = [[2, 2, -1]],
+k1 = 3;
+// Output: 3
+console.log(maxSumSubmatrix(matrix1, k1));
