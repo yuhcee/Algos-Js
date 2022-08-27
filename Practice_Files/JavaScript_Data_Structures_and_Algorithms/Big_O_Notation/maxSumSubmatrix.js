@@ -18,6 +18,17 @@ const maxSumSubmatrix = function (matrix, k) {
     for (let l = 0; l < rowNums; l++) {
         const dp = Array(colNums).fill(0);
 
+        for (let r = l; r < rowNums; r++) {
+            let sum = 0,
+                max = -Infinity;
+
+            for (let c = 0; c < colNums; c++) {
+                // build running dp array
+                dp[c] += matrix[r][c];
+
+                
+            }
+        }
     }
     return maxSum;
 };
