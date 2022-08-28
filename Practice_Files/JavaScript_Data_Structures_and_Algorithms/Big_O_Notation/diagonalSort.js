@@ -12,7 +12,14 @@
  * @param {number[][]} mat
  * @return {number[][]}
  */
-const diagonalSort = (mat) => {};
+const diagonalSort = (mat) => {
+    for (let row = 1; row < mat.length; row++) sortDiagonals(mat, row, 0);
+    for (let col = 0; col < mat[0].length; col++) sortDiagonals(mat, 0, col);
+
+    return mat;
+
+    
+};
 
 const mat = [
     [3, 3, 1, 1],
