@@ -12,6 +12,14 @@
  * @param {number[][]} mat
  * @return {number[][]}
  */
-const diagonalSort = (mat) => {
-    
-};
+const diagonalSort = (mat) => {};
+
+const mat = [
+    [3, 3, 1, 1],
+    [2, 2, 1, 2],
+    [1, 1, 1, 2],
+];
+// Output: [[1,1,1,1],[1,2,2,2],[1,2,3,3]]
+console.log(diagonalSort(mat));
+
+
