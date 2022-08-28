@@ -18,7 +18,11 @@ const diagonalSort = (mat) => {
 
     return mat;
 
-    
+    function sortDiagonals(mat, x, y) {
+        let diagonals = [];
+        let size = Math.min(mat.length - x, mat[0].length - y);
+
+    }
 };
 
 const mat = [
