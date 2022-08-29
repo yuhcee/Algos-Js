@@ -6,10 +6,18 @@
  * @param {string [][]} grid 
  * @returns {number} number
  */
- const numIslands = (grid) => {
-    
-};
+const numIslands = (grid) => {
+    const visited = new Set();
+    let count = 0;
 
+    for (let row = 0; r < grid.length; row++) {
+        for (let col = 0; col < grid.length; col++) {
+            if (explore(grid, row, col, visited)) count++;
+        }
+    }
+
+    return count;
+};
 
 const grid = [
     ['1', '1', '1', '1', '0'],
