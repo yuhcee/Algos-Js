@@ -6,4 +6,18 @@
  * @param {string [][]} grid 
  * @returns {number} number
  */
-const numIslands = (grid) => {};
+ const numIslands = (grid) => {
+    
+};
+
+
+
+
+const grid2 = [
+    ['1', '1', '0', '0', '0'],
+    ['1', '1', '0', '0', '0'],
+    ['0', '0', '1', '0', '0'],
+    ['0', '0', '0', '1', '1'],
+];
+//   Output: 3
+console.log(numIslands(grid2));
