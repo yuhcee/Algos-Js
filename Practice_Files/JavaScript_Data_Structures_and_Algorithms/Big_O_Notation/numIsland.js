@@ -10,7 +10,7 @@ const numIslands = (grid) => {
     const visited = new Set();
     let count = 0;
 
-    for (let row = 0; r < grid.length; row++) {
+    for (let row = 0; row < grid.length; row++) {
         for (let col = 0; col < grid.length; col++) {
             if (explore(grid, row, col, visited)) count++;
         }
@@ -25,8 +25,17 @@ const explore = (grid, r, c, visited) => {
 
     if (!rowInbounds || !colInbounds || grid[r][c] === '0') return 0;
 
-    
+    const pos = `${r},${c}`;
 
+    if (visited.has(pos)) return 0;
+    visited.add(pos);
+
+    explore(grid, r, c + 1, visited);
+    explore(grid, r, c - 1, visited);
+    explore(grid, r + 1, c, visited);
+    explore(grid, r - 1, c, visited);
+
+    return 1;
 };
 
 const grid = [
