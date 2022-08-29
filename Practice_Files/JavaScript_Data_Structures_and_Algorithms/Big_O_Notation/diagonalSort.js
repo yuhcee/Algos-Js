@@ -26,13 +26,15 @@ const diagonalSort = (mat) => {
         let diagonals = [];
         // init size
         let size = Math.min(mat.length - x, mat[0].length - y);
-
+        
         // sort diagonals array
         for (let i = 0; i < size; i++) diagonals.push(mat[i + x][i + y]);
         diagonals.sort((a, b) => a - b);
 
-        
+        // update diagonals array
+        for (let i = 0; i < size; i++) mat[i + x][i + y] = diagonals[i];
+
+        return diagonals;
     }
 };
-
 
