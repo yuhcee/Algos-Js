@@ -19,6 +19,16 @@ const numIslands = (grid) => {
     return count;
 };
 
+const explore = (grid, r, c, visited) => {
+    const rowInbounds = 0 <= r && r < grid.length;
+    const colInbounds = 0 <= c && c < grid[0].length;
+
+    if (!rowInbounds || !colInbounds || grid[r][c] === '0') return 0;
+
+    
+
+};
+
 const grid = [
     ['1', '1', '1', '1', '0'],
     ['1', '1', '0', '1', '0'],
