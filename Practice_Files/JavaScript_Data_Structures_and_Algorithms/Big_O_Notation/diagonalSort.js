@@ -24,7 +24,11 @@ const diagonalSort = (mat) => {
     function sortDiagonals(mat, x, y) {
         // init diagonals array
         let diagonals = [];
-        
+        // init size
+        let size = Math.min(mat.length - x, mat[0].length - y);
+
+       
     }
 };
+
 
