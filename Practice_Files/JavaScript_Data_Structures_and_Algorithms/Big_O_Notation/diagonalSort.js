@@ -15,6 +15,11 @@
 const diagonalSort = (mat) => {
     // sort rows
     for (let row = 1; row < mat.length; row++) sortDiagonals(mat, row, 0);
+    // sort cols
+    for (let col = 0; col < mat[0].length; col++) sortDiagonals(mat, 0, col);
+
+    return mat;
+
     
 };
 
