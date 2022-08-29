@@ -22,6 +22,8 @@ const diagonalSort = (mat) => {
 
     // init sortDiagonals func
     function sortDiagonals(mat, x, y) {
+        // init diagonals array
+        let diagonals = [];
         
     }
 };
