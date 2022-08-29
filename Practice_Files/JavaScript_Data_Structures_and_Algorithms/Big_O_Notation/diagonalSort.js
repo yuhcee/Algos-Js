@@ -20,7 +20,9 @@ const diagonalSort = (mat) => {
 
     return mat;
 
-    
+    // init sortDiagonals func
+    function sortDiagonals(mat, x, y) {
+        
+    }
 };
-
 
