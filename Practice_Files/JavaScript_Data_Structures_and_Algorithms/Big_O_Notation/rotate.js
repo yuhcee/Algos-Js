@@ -13,6 +13,9 @@
 const rotate = function (matrix) {
     // get matrix rows length
     const rows = matrix.length;
+    // get matrix columns length
+    const cols = matrix[0].length;
+
     
 };
 
