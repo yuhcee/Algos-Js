@@ -16,6 +16,13 @@ const rotate = function (matrix) {
     // get matrix columns length
     const cols = matrix[0].length;
 
+    // loop through matrix
+    for (let row = 0; row < rows; row += 1) {
+        for (let col = row; col < cols; col += 1) {
+          
+        }
+    }
+
     
 };
 
