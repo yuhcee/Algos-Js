@@ -26,7 +26,12 @@ const rotate = function (matrix) {
         }
     }
 
-    
+    for (let i = 0; i < rows; i++) {
+        // reverse
+        matrix[i].reverse();
+    }
+
+    return matrix;
 };
 
 
