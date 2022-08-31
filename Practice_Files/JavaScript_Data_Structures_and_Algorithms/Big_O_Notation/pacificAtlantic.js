@@ -22,4 +22,7 @@
 const pacificAtlantic = function (heights) {
     // if matrix is empty, return []
     if (!matrix.length) return [];
+    // get matrix rows and cols
+    const rows = matrix.length,
+        cols = matrix[0].length;
 };
