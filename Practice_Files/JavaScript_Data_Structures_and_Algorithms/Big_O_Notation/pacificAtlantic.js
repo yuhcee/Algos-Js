@@ -22,7 +22,7 @@
 const pacificAtlantic = function (heights) {
     // if matrix is empty, return []
     if (!matrix.length) return [];
-    
+
     // get matrix rows and cols
     const rowLength = matrix.length,
         colLength = matrix[0].length;
@@ -30,4 +30,11 @@ const pacificAtlantic = function (heights) {
     // init ocean sides
     const PACIFIC = matrix,
         ATLANTIC = [...matrix.map((row) => [...row])]; // deep clone
+
+    const output = [];
+
+    // explore DFS
+    function explore (r, c, grid) {
+
+    }
 };
