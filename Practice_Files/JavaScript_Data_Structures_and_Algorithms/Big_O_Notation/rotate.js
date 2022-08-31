@@ -10,4 +10,7 @@
  * @param {number[][]} matrix
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
-const rotate = function (matrix) {};
+const rotate = function (matrix) {
+    // get matrix rows length
+    const rows = matrix.length;
+};
