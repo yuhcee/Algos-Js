@@ -45,5 +45,14 @@ const pacificAtlantic = function (heights) {
     function explore(r, c, grid) {
         const val = grid[r][c];
         grid[r][c] = '#';
+
+        // check out of bounds
+        for (let [dr, dc] of DIRS) {
+            dr += r;
+            dc += c;
+            if (grid[dr] && grid[dr][dc] !== undefined && grid[dr][dc] !== '#' && arr[dr][dc] >= val) {
+                explore(dr, dc, grid);
+            }
+        }
     }
 };
