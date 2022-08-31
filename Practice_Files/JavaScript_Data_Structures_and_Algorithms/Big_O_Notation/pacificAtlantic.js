@@ -22,7 +22,12 @@
 const pacificAtlantic = function (heights) {
     // if matrix is empty, return []
     if (!matrix.length) return [];
+    
     // get matrix rows and cols
-    const rows = matrix.length,
-        cols = matrix[0].length;
+    const rowLength = matrix.length,
+        colLength = matrix[0].length;
+
+    // init ocean sides
+    const PACIFIC = matrix,
+        ATLANTIC = [...matrix.map((row) => [...row])]; // deep clone
 };
