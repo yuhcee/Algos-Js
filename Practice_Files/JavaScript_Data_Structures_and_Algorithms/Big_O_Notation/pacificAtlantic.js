@@ -31,10 +31,19 @@ const pacificAtlantic = function (heights) {
     const PACIFIC = matrix,
         ATLANTIC = [...matrix.map((row) => [...row])]; // deep clone
 
+    // init directions to explore
+    const DIRS = [
+        [1, 0],
+        [-1, 0],
+        [0, 1],
+        [0, -1],
+    ];
+
     const output = [];
 
     // explore DFS
-    function explore (r, c, grid) {
-
+    function explore(r, c, grid) {
+        const val = grid[r][c];
+        grid[r][c] = '#';
     }
 };
