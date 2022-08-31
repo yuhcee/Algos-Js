@@ -25,4 +25,9 @@ const rotate = function (matrix) {
             matrix[col][row] = temp;
         }
     }
+
+    for (let i = 0; i < rows; i++) {
+        // reverse
+        matrix[i].reverse();
+    }
 };
