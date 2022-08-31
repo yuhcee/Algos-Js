@@ -18,6 +18,11 @@ const rotate = function (matrix) {
 
     // loop through matrix
     for (let row = 0; row < rows; row += 1) {
-        for (let col = row; col < cols; col += 1) {}
+        for (let col = row; col < cols; col += 1) {
+            // transform
+            let temp = matrix[row][col];
+            matrix[row][col] = matrix[col][row];
+            matrix[col][row] = temp;
+        }
     }
 };
