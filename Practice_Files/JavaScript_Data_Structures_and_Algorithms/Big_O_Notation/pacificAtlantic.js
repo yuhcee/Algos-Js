@@ -21,15 +21,15 @@
  */
 const pacificAtlantic = function (heights) {
     // if matrix is empty, return []
-    if (!matrix.length) return [];
+    if (!heights.length) return [];
 
-    // get matrix rows and cols
-    const rowLength = matrix.length,
-        colLength = matrix[0].length;
+    // get heights rows and cols
+    const rowLength = heights.length,
+        colLength = heights[0].length;
 
     // init ocean sides
-    const PACIFIC = matrix,
-        ATLANTIC = [...matrix.map((row) => [...row])]; // deep clone
+    const PACIFIC = heights,
+        ATLANTIC = [...heights.map((row) => [...row])]; // deep clone
 
     // init directions to explore
     const DIRS = [
@@ -65,4 +65,12 @@ const pacificAtlantic = function (heights) {
         explore(r, colLength - 1, ATLANTIC); // right
         explore(r, 0, PACIFIC); // left
     }
+
+    for (let row = 0; row < rowLength; row++) {
+        for (let col = 0; col < colLength; col++) {
+            
+        }
+    }
+
+    return output;
 };
