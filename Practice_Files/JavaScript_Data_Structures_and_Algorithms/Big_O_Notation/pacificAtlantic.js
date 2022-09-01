@@ -103,3 +103,8 @@ const heights = [
 Note that there are other possible paths for these cells to flow to the Pacific and Atlantic oceans. */
 
 console.log(pacificAtlantic(heights));
+
+const heights1 = [[1]];
+// Output: [[0,0]]
+// Explanation: The water can flow from the only cell to the Pacific and Atlantic oceans.
+console.log(pacificAtlantic(heights1));
