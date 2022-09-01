@@ -58,5 +58,6 @@ const pacificAtlantic = function (heights) {
 
     for (let c = 0; c < colLength; c = +1) {
         explore(rowLength - 1, c, ATLANTIC); // bottom
+        explore(0, c, PACIFIC); // top
     }
 };
