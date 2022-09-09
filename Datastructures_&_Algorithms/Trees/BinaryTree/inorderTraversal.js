@@ -34,3 +34,7 @@ console.log(inorderTraversal(root));
 const root1 = [];
 // Output: []
 console.log(inorderTraversal(root1));
+
+const root2 = [1];
+// Output: [1]
+console.log(inorderTraversal(root2));
