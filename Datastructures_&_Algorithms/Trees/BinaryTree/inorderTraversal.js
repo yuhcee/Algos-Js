@@ -7,7 +7,9 @@
  * }
  */
 /**
+ * Given the `root` of a binary tree, return *the inorder traversal of its nodes' values*.
+ *
  * @param {TreeNode} root
  * @return {number[]}
  */
- const inorderTraversal = function (root) {};
+const inorderTraversal = function (root) {};
