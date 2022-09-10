@@ -34,3 +34,11 @@ const properties = [
 // Output: 0
 // Explanation: No character has strictly greater attack and defense than the other.
 console.log(numberOfWeakCharacters(properties));
+
+const properties1 = [
+    [2, 2],
+    [3, 3],
+];
+// Output: 1
+// Explanation: The first character is weak because the second character has a strictly greater attack and defense.
+console.log(numberOfWeakCharacters(properties1));
