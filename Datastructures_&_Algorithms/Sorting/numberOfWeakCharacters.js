@@ -25,3 +25,12 @@ const numberOfWeakCharacters = (properties, count = 0, max_d = 0) => {
         });
     return count;
 };
+
+const properties = [
+    [5, 5],
+    [6, 3],
+    [3, 6],
+];
+// Output: 0
+// Explanation: No character has strictly greater attack and defense than the other.
+console.log(numberOfWeakCharacters(properties));
