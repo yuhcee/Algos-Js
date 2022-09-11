@@ -28,6 +28,17 @@
  * @param {number[]} data
  * @return {boolean}
  */
+
+const myObj = {
+    0: 1,
+    110: 2,
+    1110: 3,
+    11110: 4,
+    111110: 5,
+    1111110: 6,
+    11111110: 7,
+    11111111: 8,
+};
 const validUtf8 = function (data) {
     let j = 0,
         count = 0;
@@ -55,3 +66,9 @@ const validUtf8 = function (data) {
 
     return true;
 };
+
+const data = [197, 130, 1];
+// Output: true
+/* Explanation: data represents the octet sequence: 11000101 10000010 00000001.
+It is a valid utf-8 encoding for a 2-bytes character followed by a 1-byte character. */
+console.log(validUtf8(data));
