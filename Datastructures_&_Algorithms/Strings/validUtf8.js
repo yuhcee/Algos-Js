@@ -28,4 +28,30 @@
  * @param {number[]} data
  * @return {boolean}
  */
-const validUtf8 = function (data) {};
+const validUtf8 = function (data) {
+    let j = 0,
+        count = 0;
+
+    while (j < data.length) {
+        let ele = data[j].toString(2);
+        ele = '00000000'.substring(ele.length) + ele;
+        if (ele.substring(0, 2) === '10') return false;
+
+        for (key in myObj) {
+            if (ele.startsWith(key)) count = myObj[key];
+        }
+
+        if (count > 4) return false;
+
+        for (var i = j + 1; i < j + count; i++) {
+            let elem = data[i];
+            if (elem === undefined) return false;
+            let val = elem.toString(2);
+            val = '00000000'.substring(val.length) + val;
+            if (val.substring(0, 2) !== '10') return false;
+        }
+        j = i;
+    }
+
+    return true;
+};
