@@ -86,6 +86,14 @@ var validUtf8_ = function (data) {
 
     for (let num of data) {
         let res = '';
+
+        // Convert to binary
+        for (let i = 0; i < 32; i++) {
+            res += String(num >>> 31);
+            num <<= 1;
+        }
+
+        
     }
 
     return bytes === 0;
