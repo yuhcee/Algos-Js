@@ -130,3 +130,11 @@ const data2 = [197, 130, 1];
 /* Explanation: data represents the octet sequence: 11000101 10000010 00000001.
 It is a valid utf-8 encoding for a 2-bytes character followed by a 1-byte character. */
 console.log(validUtf8_(data2));
+
+const data3 = [235, 140, 4];
+// Output: false
+/* Explanation: data represented the octet sequence: 11101011 10001100 00000100.
+The first 3 bits are all one's and the 4th bit is 0 means it is a 3-bytes character.
+The next byte is a continuation byte which starts with 10 and that's correct.
+But the second continuation byte does not start with 10, so it is invalid. */
+console.log(validUtf8_(data3));
