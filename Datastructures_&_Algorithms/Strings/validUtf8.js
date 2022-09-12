@@ -124,3 +124,9 @@ var validUtf8_ = function (data) {
 
     return bytes === 0;
 };
+
+const data2 = [197, 130, 1];
+// Output: true
+/* Explanation: data represents the octet sequence: 11000101 10000010 00000001.
+It is a valid utf-8 encoding for a 2-bytes character followed by a 1-byte character. */
+console.log(validUtf8_(data2));
