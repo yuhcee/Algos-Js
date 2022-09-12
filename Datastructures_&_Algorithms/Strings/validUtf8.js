@@ -112,7 +112,14 @@ var validUtf8_ = function (data) {
             if (bytes > 4 || bytes === 1) {
                 return false;
             }
-        } 
+        } else {
+            // Check if the first 2 bits of the binary representation of the number are 1 and 0
+            if (bin.slice(0, 2).localeCompare('10')) {
+                return false;
+            }
+        }
+
+        bytes--;
     }
 
     return bytes === 0;
