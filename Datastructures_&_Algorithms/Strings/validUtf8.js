@@ -104,10 +104,15 @@ var validUtf8_ = function (data) {
             }
             bytes = i;
 
-            
-        }
+            // 1 byte character
+            if (bytes === 0) {
+                continue;
+            }
 
-        bytes--;
+            if (bytes > 4 || bytes === 1) {
+                return false;
+            }
+        } 
     }
 
     return bytes === 0;
