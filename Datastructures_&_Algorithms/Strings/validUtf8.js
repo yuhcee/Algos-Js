@@ -96,7 +96,16 @@ var validUtf8_ = function (data) {
         // Store only the first 8 least significant bits
         const bin = [...res].splice(-8).join('');
 
-        
+        if (bytes === 0) {
+            // Count the number of 1's
+            let i = 0;
+            while (bin[i] && bin[i] !== '0') {
+                i++;
+            }
+            bytes = i;
+
+            
+        }
 
         bytes--;
     }
