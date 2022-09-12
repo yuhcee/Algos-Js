@@ -93,7 +93,12 @@ var validUtf8_ = function (data) {
             num <<= 1;
         }
 
+        // Store only the first 8 least significant bits
+        const bin = [...res].splice(-8).join('');
+
         
+
+        bytes--;
     }
 
     return bytes === 0;
