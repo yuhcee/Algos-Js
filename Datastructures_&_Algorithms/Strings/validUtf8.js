@@ -80,3 +80,13 @@ The first 3 bits are all one's and the 4th bit is 0 means it is a 3-bytes charac
 The next byte is a continuation byte which starts with 10 and that's correct.
 But the second continuation byte does not start with 10, so it is invalid. */
 console.log(validUtf8(data1));
+
+var validUtf8_ = function (data) {
+    let bytes = 0;
+
+    for (let num of data) {
+        let res = '';
+    }
+
+    return bytes === 0;
+};
