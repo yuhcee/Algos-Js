@@ -45,3 +45,9 @@ const bagOfTokensScore = function (tokens, power) {
 
     return max;
 };
+
+const tokens = [100],
+    power = 50;
+// Output: 0
+// Explanation: Playing the only token in the bag is impossible because you either have too little power or too little score.
+console.log(bagOfTokensScore(tokens, power));
