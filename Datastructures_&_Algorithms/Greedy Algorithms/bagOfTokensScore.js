@@ -51,3 +51,10 @@ const tokens = [100],
 // Output: 0
 // Explanation: Playing the only token in the bag is impossible because you either have too little power or too little score.
 console.log(bagOfTokensScore(tokens, power));
+
+const tokens1 = [100, 200],
+    power1 = 150;
+// Output: 1
+/* Explanation: Play the 0th token (100) face up, your power becomes 50 and score becomes 1.
+There is no need to play the 1st token since you cannot play it face up to add to your score. */
+console.log(bagOfTokensScore(tokens1, power1));
