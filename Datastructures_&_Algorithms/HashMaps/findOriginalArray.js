@@ -57,3 +57,8 @@ const changed1 = [6, 3, 0, 1];
 // Output: []
 // Explanation: changed is not a doubled array.
 console.log(findOriginalArray(changed1));
+
+const changed2 = [1];
+// Output: []
+// Explanation: changed is not a doubled array.
+console.log(findOriginalArray(changed2));
