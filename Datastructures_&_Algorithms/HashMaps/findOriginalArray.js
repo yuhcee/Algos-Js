@@ -52,3 +52,8 @@ const changed = [1, 3, 4, 2, 6, 8];
 Other original arrays could be [4,3,1] or [3,1,4]. */
 
 console.log(findOriginalArray(changed));
+
+const changed1 = [6, 3, 0, 1];
+// Output: []
+// Explanation: changed is not a doubled array.
+console.log(findOriginalArray(changed1));
