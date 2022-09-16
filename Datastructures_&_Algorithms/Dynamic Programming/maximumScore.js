@@ -45,3 +45,13 @@ const maximumScore = function (nums, multipliers) {
 
     return next[0];
 };
+
+const nums = [1, 2, 3],
+    multipliers = [3, 2, 1];
+// Output: 14
+/* Explanation: An optimal solution is as follows:
+- Choose from the end, [1,2,3], adding 3 * 3 = 9 to the score.
+- Choose from the end, [1,2], adding 2 * 2 = 4 to the score.
+- Choose from the end, [1], adding 1 * 1 = 1 to the score.
+The total score is 9 + 4 + 1 = 14. */
+console.log(maximumScore(nums, multipliers));
