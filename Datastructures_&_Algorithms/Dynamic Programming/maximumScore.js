@@ -17,4 +17,15 @@
  * @param {number[]} multipliers
  * @return {number}
  */
-const maximumScore = function (nums, multipliers) {};
+const maximumScore = function (nums, multipliers) {
+    const n = nums.length;
+    const m = multipliers.length;
+
+    if (m === 1) return Math.max(nums[0] * multipliers[0], nums[n - 1] * multipliers[0]);
+
+    let next = new Array(m).fill(0);
+
+    for (let start = 0; start < m; start += 1) {
+        next[start] = Math.max(multipliers[m - 1] * nums[start], multipliers[m - 1] * nums[n - m + start]);
+    }
+};
