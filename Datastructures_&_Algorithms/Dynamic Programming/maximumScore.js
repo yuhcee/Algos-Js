@@ -55,3 +55,15 @@ const nums = [1, 2, 3],
 - Choose from the end, [1], adding 1 * 1 = 1 to the score.
 The total score is 9 + 4 + 1 = 14. */
 console.log(maximumScore(nums, multipliers));
+
+
+const nums1 = [-5,-3,-3,-2,7,1], multipliers1 = [-10,-5,3,4,6]
+// Output: 102
+/* Explanation: An optimal solution is as follows:
+- Choose from the start, [-5,-3,-3,-2,7,1], adding -5 * -10 = 50 to the score.
+- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
+- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
+- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
+- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+The total score is 50 + 15 - 9 + 4 + 42 = 102. */
+console.log(maximumScore(nums1, multipliers1));
