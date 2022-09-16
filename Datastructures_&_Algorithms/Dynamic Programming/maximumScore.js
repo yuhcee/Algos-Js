@@ -28,4 +28,20 @@ const maximumScore = function (nums, multipliers) {
     for (let start = 0; start < m; start += 1) {
         next[start] = Math.max(multipliers[m - 1] * nums[start], multipliers[m - 1] * nums[n - m + start]);
     }
+
+    for (let i = m - 2; i >= 0; i -= 1) {
+        const current = new Array(m).fill(0);
+
+        for (let start = m - 1; start >= 0; start -= 1) {
+            const end = n - (i + 1) + start;
+            const takeStart = next[start + 1] + multipliers[i] * nums[start];
+            const takeEnd = next[start] + multipliers[i] * nums[end];
+
+            current[start] = Math.max(takeStart, takeEnd);
+        }
+
+        next = current;
+    }
+
+    return next[0];
 };
