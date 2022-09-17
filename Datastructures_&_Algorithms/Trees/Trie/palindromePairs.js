@@ -25,4 +25,22 @@ const palindromePairs = (words) => {
 
         return true;
     };
+
+    const insertReversed = (words) => {
+        for (let i = 0; i < words.length; i++) {
+            const word = words[i];
+            let node = root;
+
+            for (let j = word.length - 1; j >= 0; j--) {
+                const char = word[j];
+
+                if (!node[char]) node[char] = {};
+
+                node = node[char];
+            }
+
+            node.isEnd = true;
+            node.index = i;
+        }
+    };
 };
