@@ -43,4 +43,16 @@ const palindromePairs = (words) => {
             node.index = i;
         }
     };
+
+    // empty string forms palindrome w/ every palindrome in the list
+    const handleEmptyString = (root) => {
+        if (root.isEnd) {
+            for (let i = 0; i < words.length; i++) {
+                const validPalindrome = isPalindrome(words[i]);
+
+                if (root.index === i) continue;
+                if (validPalindrome) output.push([i, root.index]);
+            }
+        }
+    };
 };
