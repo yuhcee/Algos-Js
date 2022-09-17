@@ -55,4 +55,29 @@ const palindromePairs = (words) => {
             }
         }
     };
+
+    // case 2: if word shorter - get last prefix node given the word
+    // case 3: if word longer - check if suffix is valid palindrome, if not stop
+    const getLastPrefixNode = (word, i) => {
+        let node = root;
+
+        for (let j = 0; j < word.length; j++) {
+            const char = word[j];
+            const child = node[char];
+
+            // case 3: word is longer
+            // check if rest of the word form valid palindrome
+            if (!child) return;
+            if (child.isEnd && child.index !== i && j < word.length - 1) {
+                const suffix = word.slice(j + 1);
+                const validSuffix = isPalindrome(suffix);
+
+                if (validSuffix) output.push([i, child.index]);
+            }
+
+            node = node[char];
+        }
+
+        return node;
+    };
 };
