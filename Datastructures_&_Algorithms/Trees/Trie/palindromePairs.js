@@ -8,4 +8,21 @@
  * @param {string[]} words
  * @return {number[][]}
  */
-const palindromePairs = (words) => {};
+const palindromePairs = (words) => {
+    const root = {};
+    const output = [];
+
+    const isPalindrome = (word) => {
+        let L = 0;
+        let R = word.length - 1;
+
+        while (L < R) {
+            if (word[L] != word[R]) return false;
+
+            L++;
+            R--;
+        }
+
+        return true;
+    };
+};
