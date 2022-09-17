@@ -95,4 +95,15 @@ const palindromePairs = (words) => {
             findPalindromes(node[char], suffix + char, i);
         }
     };
+
+    insertReversed(words);
+    handleEmptyString(root);
+
+    for (let i = 0; i < words.length; i++) {
+        const lastPrefixNode = getLastPrefixNode(words[i], i);
+
+        if (lastPrefixNode) findPalindromes(lastPrefixNode, '', i);
+    }
+
+    return output;
 };
