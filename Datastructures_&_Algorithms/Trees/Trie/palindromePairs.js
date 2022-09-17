@@ -80,4 +80,19 @@ const palindromePairs = (words) => {
 
         return node;
     };
+
+    // starting from lastPrefixNode find valid palindromes AND traverse Trie
+    const findPalindromes = (node, suffix, i) => {
+        // case 1. same word length
+        if (node.isEnd && node.index !== i) {
+            const validSuffix = isPalindrome(suffix);
+
+            if (validSuffix) output.push([i, node.index]);
+        }
+
+        // case 2. word is shorter
+        for (const char in node) {
+            findPalindromes(node[char], suffix + char, i);
+        }
+    };
 };
