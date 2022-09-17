@@ -117,3 +117,7 @@ const words1 = ['bat', 'tab', 'cat'];
 // Output: [[0,1],[1,0]]
 // Explanation: The palindromes are ["battab","tabbat"]
 console.log(palindromePairs(words1));
+
+const words2 = ['a', ''];
+// Output: [[0,1],[1,0]]
+console.log(palindromePairs(words2));
