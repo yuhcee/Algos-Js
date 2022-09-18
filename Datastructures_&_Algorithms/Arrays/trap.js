@@ -7,4 +7,10 @@
  * @param {number[]} height
  * @return {number}
  */
-const trap = function (height) {};
+const trap = function (height) {
+    let left = 0,
+        right = height.length - 1,
+        trappedWater = 0,
+        leftMax = 0,
+        rightMax = 0;
+};
