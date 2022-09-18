@@ -13,4 +13,8 @@ const trap = function (height) {
         trappedWater = 0,
         leftMax = 0,
         rightMax = 0;
+
+    while (left <= right) {
+        
+    }
 };
