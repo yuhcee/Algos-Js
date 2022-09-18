@@ -15,6 +15,13 @@ const trap = function (height) {
         rightMax = 0;
 
     while (left <= right) {
-        
+        if (height[left] <= height[right]) {
+            if (height[left] > leftMax) {
+                leftMax = height[left];
+            } else {
+                trappedWater += leftMax - height[left];
+            }
+            left++;
+        }
     }
 };
