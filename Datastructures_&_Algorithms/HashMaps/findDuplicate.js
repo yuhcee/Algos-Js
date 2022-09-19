@@ -41,5 +41,11 @@ const findDuplicate = function (paths) {
         }
     }
 
-    
+    for (const entry in map) {
+        if (map[entry].length > 1) {
+            result.push(map[entry]);
+        }
+    }
+
+    return result;
 };
