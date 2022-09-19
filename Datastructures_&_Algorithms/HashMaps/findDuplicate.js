@@ -23,4 +23,23 @@
  * @param {string[]} paths
  * @return {string[][]}
  */
-const findDuplicate = function (paths) {};
+const findDuplicate = function (paths) {
+    const map = {},
+        result = [];
+
+    for (const path of paths) {
+        const [root, ...files] = path.split(' ');
+
+        for (const file of files) {
+            const [fileName, content] = file.split('(');
+
+            if (map[content]) {
+                map[content].push(`${root}/${fileName}`);
+            } else {
+                map[content] = [`${root}/${fileName}`];
+            }
+        }
+    }
+
+    
+};
