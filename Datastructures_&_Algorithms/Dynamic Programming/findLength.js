@@ -14,4 +14,16 @@ const findLength = function (nums1, nums2) {
         memo = Array(N)
             .fill()
             .map((_) => Array(M).fill(0));
+    let res = 0;
+
+    for (let i = 1; i <= nums1.length; i++) {
+        for (let j = 1; j <= nums2.length; j++) {
+            if (nums1[i - 1] === nums2[j - 1]) {
+                memo[i][j] = memo[i - 1][[j - 1]];
+                res = Math.max(res, memo[i][j]);
+            }
+        }
+    }
+
+    return res;
 };
