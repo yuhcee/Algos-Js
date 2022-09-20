@@ -33,3 +33,8 @@ const nums1 = [1, 2, 3, 2, 1],
 // Output: 3
 // Explanation: The repeated subarray with maximum length is [3,2,1].
 console.log(findLength(nums1, nums2));
+
+const nums11 = [0, 0, 0, 0, 0],
+    nums22 = [0, 0, 0, 0, 0];
+// Output: 5
+console.log(findLength(nums11, nums22));
