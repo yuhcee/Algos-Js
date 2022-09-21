@@ -13,5 +13,6 @@
  * @return {number[]}
  */
 const sumEvenAfterQueries = function (nums, queries) {
-    
+    // Sum of all the even numbers
+    let evenSum = nums.reduce((acc, curr) => (curr % 2 === 0 ? curr + acc : acc), 0);
 };
