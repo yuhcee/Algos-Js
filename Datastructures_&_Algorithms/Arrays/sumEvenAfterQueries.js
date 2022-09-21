@@ -56,3 +56,4 @@ console.log(sumEvenAfterQueries(nums, queries));
 const nums1 = [1],
     queries1 = [[4, 0]];
 // Output: [0]
+console.log(sumEvenAfterQueries(nums1, queries1));
