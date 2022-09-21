@@ -24,6 +24,9 @@ const sumEvenAfterQueries = function (nums, queries) {
         if (nums[ind] % 2 === 0) {
             evenSum -= nums[ind];
         }
+        // adding the query's value
+        nums[ind] += val;
+
        
     }
 
