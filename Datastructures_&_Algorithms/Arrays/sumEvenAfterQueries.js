@@ -27,7 +27,13 @@ const sumEvenAfterQueries = function (nums, queries) {
         // adding the query's value
         nums[ind] += val;
 
-       
+        // checking even/not after adding the query's value.
+        // If even, that would add up to our existing evenSum
+        if (nums[ind] % 2 === 0) {
+            evenSum += nums[ind];
+        }
+        res.push(evenSum);
     }
 
+    return res;
 };
