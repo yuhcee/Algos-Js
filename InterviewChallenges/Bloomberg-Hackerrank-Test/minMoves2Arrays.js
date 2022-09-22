@@ -26,6 +26,16 @@
  */
 
 const minMoves2 = (arr1, arr2) => {
+    let totalMoves = 0;
+
+    for (let i = 0; i < arr2.length; i++) {
+        let a = Array.from(String(arr1[i]), Number),
+            b = Array.from(String(arr2[i]), Number),
+            n = b.length;
+        totalMoves += getMoves(a, b, n);
+    }
+
     
 };
+
 
