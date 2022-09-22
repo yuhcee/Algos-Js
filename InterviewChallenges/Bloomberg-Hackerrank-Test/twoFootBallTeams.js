@@ -35,4 +35,19 @@ const counts = (teamA, teamB) => {
 
     return answer;
 };
+// teamA = [1, 2, 3]
+// teamB = [2, 4]
+/* Team A has played three matches and has scored
+teamA = [1, 2, 3] goals in each match respectively.
+Team B has played two matches and has scored
+teamB = [2, 4] goals in each match respectively.
+For 2 goals scored by team B in its first match,
+team A has 2 matches with scores 1 and 2. For 4
+goals scored by team B in its second match, team
+A has 3 matches with scores 1, 2 and 3. Hence,
+the answer is [2, 3].*/
 
+const teamA = [1, 2, 3],
+    teamB = [2, 4];
+
+console.log(counts(teamA, teamB));
