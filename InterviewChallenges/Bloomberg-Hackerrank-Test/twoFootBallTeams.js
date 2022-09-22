@@ -13,6 +13,26 @@
  * @returns number[]
  */
 const counts = (teamA, teamB) => {
-    
+    const answer = [];
+
+    teamA.sort((a, b) => a - b);
+
+    for (let score of teamB) {
+        let low = 0,
+            high = teamA.length - 1;
+
+        while (low <= high) {
+            let mid = Math.floor((low + high) / 2);
+
+            if (teamA[mid] > score) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        answer.push(low);
+    }
+
+    return answer;
 };
 
