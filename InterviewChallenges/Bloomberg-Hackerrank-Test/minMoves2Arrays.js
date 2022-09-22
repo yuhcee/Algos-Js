@@ -35,7 +35,20 @@ const minMoves2 = (arr1, arr2) => {
         totalMoves += getMoves(a, b, n);
     }
 
-    
+    function getMoves(a, b, n) {
+        let moves = 0;
+
+        for (let i = 0; i < n; i++) {
+            if (a[i] > b[i]) {
+                moves += Math.abs(a[i] - b[i]);
+            } else if (a[i] < b[i]) {
+                moves += Math.abs(a[i] - b[i]);
+            }
+        }
+        return moves;
+    }
+
+    return totalMoves;
 };
 
 
