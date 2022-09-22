@@ -55,3 +55,6 @@ const arr1 = [311],
     arr2 = [221];
 console.log(minMoves2(arr1, arr2));
 
+const arr11 = [123, 543],
+    arr22 = [321, 279];
+console.log(minMoves2(arr11, arr22));
