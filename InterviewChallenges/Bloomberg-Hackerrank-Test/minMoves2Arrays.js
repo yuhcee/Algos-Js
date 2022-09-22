@@ -51,4 +51,7 @@ const minMoves2 = (arr1, arr2) => {
     return totalMoves;
 };
 
+const arr1 = [311],
+    arr2 = [221];
+console.log(minMoves2(arr1, arr2));
 
