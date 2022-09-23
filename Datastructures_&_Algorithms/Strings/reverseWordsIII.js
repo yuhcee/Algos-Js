@@ -7,4 +7,12 @@
  * @param {string} s
  * @return {string}
  */
-const reverseWords = function (s) {};
+const reverseWords = function (s) {
+    let reverseString = '';
+
+    for (let i = s.length - 1; i >= 0; i--) {
+        reverseString += s[i];
+    }
+
+    return reverseString.split(' ').reverse().join(' ');
+};
