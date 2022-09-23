@@ -21,3 +21,7 @@ const s = "Let's take LeetCode contest";
 // Output: "s'teL ekat edoCteeL tsetnoc"
 
 console.log(reverseWords(s));
+
+const s1 = 'God Ding';
+// Output: "doG gniD"
+console.log(reverseWords(s1));
