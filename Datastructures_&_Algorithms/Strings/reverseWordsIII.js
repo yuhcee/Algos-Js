@@ -16,3 +16,8 @@ const reverseWords = function (s) {
 
     return reverseString.split(' ').reverse().join(' ');
 };
+
+const s = "Let's take LeetCode contest";
+// Output: "s'teL ekat edoCteeL tsetnoc"
+
+console.log(reverseWords(s));
