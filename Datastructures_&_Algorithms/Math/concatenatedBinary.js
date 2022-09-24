@@ -23,3 +23,9 @@ const n = 1;
 // Output: 1
 // Explanation: "1" in binary corresponds to the decimal value 1.
 console.log(concatenatedBinary(n));
+
+const n1 = 3;
+// Output: 27
+/* Explanation: In binary, 1, 2, and 3 corresponds to "1", "10", and "11".
+After concatenating them, we have "11011", which corresponds to the decimal value 27. */
+console.log(concatenatedBinary(n1));
