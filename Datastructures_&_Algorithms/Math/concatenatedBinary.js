@@ -18,3 +18,8 @@ const concatenatedBinary = function (n) {
 
     return ans;
 };
+
+const n = 1;
+// Output: 1
+// Explanation: "1" in binary corresponds to the decimal value 1.
+console.log(concatenatedBinary(n));
