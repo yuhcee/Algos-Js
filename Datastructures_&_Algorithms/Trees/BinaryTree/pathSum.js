@@ -47,3 +47,9 @@ const root = [5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1],
 5 + 4 + 11 + 2 = 22
 5 + 8 + 4 + 5 = 22 */
 console.log(pathSum(root, targetSum));
+
+const root1 = [1, 2, 3],
+    targetSum1 = 5;
+// Output: [];
+console.log(pathSum(root1, targetSum1));
+
