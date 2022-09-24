@@ -53,3 +53,7 @@ const root1 = [1, 2, 3],
 // Output: [];
 console.log(pathSum(root1, targetSum1));
 
+const root2 = [1, 2],
+    targetSum2 = 0;
+// Output: [];
+console.log(pathSum(root2, targetSum2));
