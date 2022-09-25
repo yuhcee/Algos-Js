@@ -38,3 +38,12 @@ MyCircularQueue.prototype.enQueue = function (value) {
     this.queue.push(value);
     return true;
 };
+
+/**
+ * @return {boolean}
+ */
+ MyCircularQueue.prototype.deQueue = function() {
+    if (this.isEmpty())return false;
+this.queue.shift();
+return true;
+};
