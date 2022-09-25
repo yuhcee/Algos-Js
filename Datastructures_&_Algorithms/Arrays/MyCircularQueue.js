@@ -24,4 +24,17 @@
  * @param {number} k
  */
 
-const MyCircularQueue = function (k) {};
+const MyCircularQueue = function (k) {
+    this.queue = [];
+    this.max = k;
+};
+
+/**
+ * @param {number} value
+ * @return {boolean}
+ */
+MyCircularQueue.prototype.enQueue = function (value) {
+    if (this.isFull()) return false;
+    this.queue.push(value);
+    return true;
+};
