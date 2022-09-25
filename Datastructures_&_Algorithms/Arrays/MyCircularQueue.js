@@ -71,3 +71,12 @@ MyCircularQueue.prototype.isEmpty = function () {
     if (this.queue.length == 0) return true;
     return false;
 };
+
+/**
+ * @return {boolean}
+ */
+MyCircularQueue.prototype.isFull = function () {
+    if (this.queue.length >= this.max) return true;
+
+    return false;
+};
