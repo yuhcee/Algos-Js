@@ -42,8 +42,16 @@ MyCircularQueue.prototype.enQueue = function (value) {
 /**
  * @return {boolean}
  */
- MyCircularQueue.prototype.deQueue = function() {
-    if (this.isEmpty())return false;
-this.queue.shift();
-return true;
+MyCircularQueue.prototype.deQueue = function () {
+    if (this.isEmpty()) return false;
+    this.queue.shift();
+    return true;
+};
+
+/**
+ * @return {number}
+ */
+MyCircularQueue.prototype.Front = function () {
+    if (this.isEmpty()) return -1;
+    return this.queue[0];
 };
