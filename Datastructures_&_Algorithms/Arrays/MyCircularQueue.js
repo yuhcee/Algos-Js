@@ -63,3 +63,11 @@ MyCircularQueue.prototype.Rear = function () {
     if (this.isEmpty()) return -1;
     return this.queue[this.queue.length - 1];
 };
+
+/**
+ * @return {boolean}
+ */
+MyCircularQueue.prototype.isEmpty = function () {
+    if (this.queue.length == 0) return true;
+    return false;
+};
