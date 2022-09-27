@@ -48,3 +48,7 @@ const dominoes = 'RR.L';
 // Output: "RR.L"
 // Explanation: The first domino expends no additional force on the second domino.
 console.log(pushDominoes(dominoes));
+
+const dominoes1 = '.L.R...LR..L..';
+// Output: "LL.RR.LLRRLL.."
+console.log(pushDominoes(dominoes1));
