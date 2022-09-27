@@ -44,3 +44,7 @@ const pushDominoes = function (dominoes) {
 
     return arr.slice(1, n - 1).join('');
 };
+const dominoes = 'RR.L';
+// Output: "RR.L"
+// Explanation: The first domino expends no additional force on the second domino.
+console.log(pushDominoes(dominoes));
