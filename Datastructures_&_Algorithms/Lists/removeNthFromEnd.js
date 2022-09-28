@@ -34,3 +34,9 @@ const head = [1, 2, 3, 4, 5],
     n = 2;
 // Output: [1,2,3,5]
 console.log(removeNthFromEnd(head, n));
+
+const head1 = [1],
+    n1 = 1;
+// Output: []
+console.log(removeNthFromEnd(head1, n1));
+
