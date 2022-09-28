@@ -40,3 +40,7 @@ const head1 = [1],
 // Output: []
 console.log(removeNthFromEnd(head1, n1));
 
+const head2 = [1, 2],
+    n2 = 1;
+// Output: [1]
+console.log(removeNthFromEnd(head2, n2));
