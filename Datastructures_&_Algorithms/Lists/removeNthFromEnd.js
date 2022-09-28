@@ -15,4 +15,17 @@
  * @param {number} n
  * @return {ListNode}
  */
-const removeNthFromEnd = function (head, n) {};
+const removeNthFromEnd = function (head, n) {
+    if (!head.next) return null;
+    var current = head;
+    var delay = head;
+
+    while (current) {
+        if (n < 0) delay = delay.next;
+        else n--;
+        current = current.next;
+    }
+    if ((delay === head) & (n === 0)) head = delay.next;
+    else delay.next = delay.next.next;
+    return head;
+};
