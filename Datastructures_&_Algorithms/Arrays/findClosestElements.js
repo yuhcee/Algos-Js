@@ -22,10 +22,18 @@ const findClosestElements = function (arr, k, x) {
     // Binary search against the criteria described
     while (left < right) {
         let mid = Math.floor((left + right) / 2);
-        if (x - arr[mid] > arr[mid] - k) {
+        if (x - arr[mid] > arr[mid + k] - x) {
             left = mid + 1;
         } else {
             right = mid;
         }
     }
+
+    // Create output in correct format
+    let result = [];
+    for (let i = left; i < left + k; i++) {
+        result.push(arr[i]);
+    }
+
+    return result;
 };
