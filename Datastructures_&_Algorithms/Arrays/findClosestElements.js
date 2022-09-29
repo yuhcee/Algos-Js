@@ -37,3 +37,9 @@ const findClosestElements = function (arr, k, x) {
 
     return result;
 };
+
+const arr = [1, 2, 3, 4, 5],
+    k = 4,
+    x = 3;
+// Output: [1,2,3,4]
+console.log(findClosestElements(arr, k, x));
