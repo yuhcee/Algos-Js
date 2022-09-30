@@ -134,3 +134,10 @@ const buildings = [
 Figure A shows the buildings of the input.
 Figure B shows the skyline formed by those buildings. The red points in figure B represent the key points in the output list. */
 console.log(getSkyline(buildings));
+
+const buildings1 = [
+    [0, 2, 3],
+    [2, 5, 3],
+];
+// Output: [[0,3],[5,0]]
+console.log(getSkyline(buildings1));
