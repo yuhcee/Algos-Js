@@ -28,4 +28,16 @@
  * @param {number[][]} buildings
  * @return {number[][]}
  */
-const getSkyline = function (buildings) {};
+const getSkyline = function (buildings) {
+    /*
+    First, register all building start/end events.
+    To distinguish them, we'll register the starts with
+    positive heights and the ends with negative heights.
+    */
+    
+    const data = [];
+    
+    for (let [x1, x2, h] of buildings) {
+        data.push([x1, h], [x2, -h]);
+    }
+};
