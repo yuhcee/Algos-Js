@@ -82,4 +82,21 @@ const getSkyline = function (buildings) {
 
         heights.splice(left, 0, h);
     };
+
+    const removeHeight = (heights, h) => {
+        let left = 0;
+        let right = heights.length - 1;
+
+        while (left <= right) {
+            const mid = Math.floor((left + right) / 2);
+
+            if (heights[mid] >= h) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        heights.splice(left, 1);
+    };
 };
