@@ -99,4 +99,25 @@ const getSkyline = function (buildings) {
 
         heights.splice(left, 1);
     };
+
+    const answer = [];
+
+    let previousHeight = 0;
+
+    for (let [x, h] of data) {
+        if (h > 0) {
+            addHeight(heights, h);
+        } else {
+            removeHeight(heights, -h);
+        }
+
+        let currentHeight = heights[heights.length - 1] || 0;
+
+        if (currentHeight !== previousHeight) {
+            answer.push([x, currentHeight]);
+            previousHeight = currentHeight;
+        }
+    }
+
+    return answer;
 };
