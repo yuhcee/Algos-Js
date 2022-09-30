@@ -48,4 +48,38 @@ const getSkyline = function (buildings) {
     */
 
     data.sort(([x1, h1], [x2, h2]) => x1 - x2 || h2 - h1);
+
+    /*
+    Next, we want to iterate over the events (from leftmost
+    to rightmost, since we sorted them that way) and keep
+    track of the heights we see. If it is positive, we add it;
+    if it is negative, we remove it.
+    
+    We want to keep these heights sorted. This way, at any
+    given coordinate we will know which is the biggest height,
+    which is what we need to calculate our output.
+    
+    Since we want to keep heights sorted, whenever we want to
+    add or remove a height we'll have to use binary search to
+    be efficient.
+    */
+
+    const heights = [];
+
+    const addHeight = (heights, h) => {
+        let left = 0;
+        let right = heights.length - 1;
+
+        while (left <= right) {
+            const mid = Math.floor((left + right) / 2);
+
+            if (heights[mid] >= h) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        heights.splice(left, 0, h);
+    };
 };
