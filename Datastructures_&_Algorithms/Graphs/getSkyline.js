@@ -34,10 +34,18 @@ const getSkyline = function (buildings) {
     To distinguish them, we'll register the starts with
     positive heights and the ends with negative heights.
     */
-    
+
     const data = [];
-    
+
     for (let [x1, x2, h] of buildings) {
         data.push([x1, h], [x2, -h]);
     }
+
+    /*
+    Then, we sort the events by from leftmost to rightmost
+    x-coordinate. If there's a tie, then we pick first
+    those events with higher height
+    */
+
+    data.sort(([x1, h1], [x2, h2]) => x1 - x2 || h2 - h1);
 };
