@@ -25,4 +25,7 @@
  * @param {string} s
  * @return {number}
  */
-const numDecodings = function (str, index = 0, memo = {}) {};
+const numDecodings = function (str, index = 0, memo = {}) {
+    // if current value is '0', return 0
+    if (str[index] === '0') return 0;
+};
