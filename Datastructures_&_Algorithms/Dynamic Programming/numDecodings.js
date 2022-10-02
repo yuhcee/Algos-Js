@@ -43,3 +43,8 @@ const numDecodings = function (str, index = 0, memo = {}) {
 
     return memo[index];
 };
+
+const s = '12';
+// Output: 2
+// Explanation: "12" could be decoded as "AB" (1 2) or "L" (12).
+console.log(numDecodings(s));
