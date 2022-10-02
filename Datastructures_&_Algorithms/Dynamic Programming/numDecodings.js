@@ -28,4 +28,8 @@
 const numDecodings = function (str, index = 0, memo = {}) {
     // if current value is '0', return 0
     if (str[index] === '0') return 0;
+
+    // when you get to the second to the last value of the string, return 1
+    // because you must have explored the last one
+    if (index >= str.length - 1) return 1;
 };
