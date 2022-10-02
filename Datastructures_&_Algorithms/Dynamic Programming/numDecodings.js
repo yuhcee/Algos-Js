@@ -53,3 +53,8 @@ const s1 = '226';
 // Output: 3
 // Explanation: "226" could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
 console.log(numDecodings(s1));
+
+const s2 = '06';
+// Output: 0
+// Explanation: "06" cannot be mapped to "F" because of the leading zero ("6" is different from "06").
+console.log(numDecodings(s2));
