@@ -35,4 +35,11 @@ const numDecodings = function (str, index = 0, memo = {}) {
 
     // if the index already exists in memo, return the value;
     if (index in memo) return memo[index];
+
+    memo[index] = numDecodings(str, index + 1, memo);
+    if (str[index] + str[index + 1] < 27) {
+        memo[index] += numDecodings(str, index + 2, memo);
+    }
+
+    return memo[index];
 };
