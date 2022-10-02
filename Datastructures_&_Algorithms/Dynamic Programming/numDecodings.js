@@ -48,3 +48,8 @@ const s = '12';
 // Output: 2
 // Explanation: "12" could be decoded as "AB" (1 2) or "L" (12).
 console.log(numDecodings(s));
+
+const s1 = '226';
+// Output: 3
+// Explanation: "226" could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
+console.log(numDecodings(s1));
