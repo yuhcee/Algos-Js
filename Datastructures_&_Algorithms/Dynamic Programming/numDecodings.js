@@ -32,4 +32,7 @@ const numDecodings = function (str, index = 0, memo = {}) {
     // when you get to the second to the last value of the string, return 1
     // because you must have explored the last one
     if (index >= str.length - 1) return 1;
+
+    // if the index already exists in memo, return the value;
+    if (index in memo) return memo[index];
 };
