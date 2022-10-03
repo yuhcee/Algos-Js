@@ -47,3 +47,10 @@ const n1 = 2,
 /* Explanation: You throw two dice, each with 6 faces.
 There are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1. */
 console.log(numRollsToTarget(n1, k1, target1));
+
+const n2 = 30,
+    k2 = 30,
+    target2 = 500;
+// Output: 222616187
+// Explanation: The answer must be returned modulo 109 + 7.
+console.log(numRollsToTarget(n2, k2, target2));
