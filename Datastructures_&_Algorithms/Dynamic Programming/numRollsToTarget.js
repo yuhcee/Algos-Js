@@ -39,3 +39,11 @@ const n = 1,
 /* Explanation: You throw one die with 6 faces.
 There is only one way to get a sum of 3. */
 console.log(numRollsToTarget(n, k, target));
+
+const n1 = 2,
+    k1 = 6,
+    target1 = 7;
+// Output: 6
+/* Explanation: You throw two dice, each with 6 faces.
+There are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1. */
+console.log(numRollsToTarget(n1, k1, target1));
