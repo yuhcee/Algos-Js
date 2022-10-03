@@ -12,4 +12,7 @@
  * @param {number} target
  * @return {number}
  */
-const numRollsToTarget = function (n, k, target, memo = {}) {};
+const numRollsToTarget = function (n, k, target, memo = {}) {
+    if (n === 0 && target === 0) return 1;
+    if (n === 0 || target <= 0) return 0;
+};
