@@ -26,4 +26,8 @@ const numRollsToTarget = function (n, k, target, memo = {}) {
     for (let i = 1; i <= k; i++) {
         count = (count + numRollsToTarget(n - 1, k, target - i, memo)) % M;
     }
+
+    memo[key] = count;
+
+    return memo[key];
 };
