@@ -31,3 +31,11 @@ const numRollsToTarget = function (n, k, target, memo = {}) {
 
     return memo[key];
 };
+
+const n = 1,
+    k = 6,
+    target = 3;
+// Output: 1
+/* Explanation: You throw one die with 6 faces.
+There is only one way to get a sum of 3. */
+console.log(numRollsToTarget(n, k, target));
