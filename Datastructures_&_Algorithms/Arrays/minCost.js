@@ -38,3 +38,9 @@ const colors = 'abaac',
 Bob can remove the blue balloon at index 2. This takes 3 seconds.
 There are no longer two consecutive balloons of the same color. Total time = 3. */
 console.log(minCost(colors, neededTime));
+
+const colors1 = 'abc',
+    neededTime1 = [1, 2, 3];
+// Output: 0
+// Explanation: The rope is already colorful. Bob does not need to remove any balloons from the rope.
+console.log(minCost(colors1, neededTime1));
