@@ -23,7 +23,7 @@ const minCost = function (colors, neededTime) {
         max = Math.max(max, neededTime[i]);
 
         if (colors[i] !== colors[i + 1]) {
-            result -= neededTime[i];
+            result -= max;
             max = 0;
         }
     }
@@ -44,3 +44,10 @@ const colors1 = 'abc',
 // Output: 0
 // Explanation: The rope is already colorful. Bob does not need to remove any balloons from the rope.
 console.log(minCost(colors1, neededTime1));
+
+const colors2 = 'aabaa',
+    neededTime2 = [1, 2, 3, 4, 1];
+// Output: 2
+/* Explanation: Bob will remove the ballons at indices 0 and 4. Each ballon takes 1 second to remove.
+There are no longer two consecutive balloons of the same color. Total time = 1 + 1 = 2. */
+console.log(minCost(colors2, neededTime2));
