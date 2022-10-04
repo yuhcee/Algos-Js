@@ -30,3 +30,11 @@ const minCost = function (colors, neededTime) {
 
     return result;
 };
+
+const colors = 'abaac',
+    neededTime = [1, 2, 3, 4, 5];
+// Output: 3
+/* Explanation: In the above image, 'a' is blue, 'b' is red, and 'c' is green.
+Bob can remove the blue balloon at index 2. This takes 3 seconds.
+There are no longer two consecutive balloons of the same color. Total time = 3. */
+console.log(minCost(colors, neededTime));
