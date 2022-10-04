@@ -15,4 +15,18 @@
  * @param {number[]} neededTime
  * @return {number}
  */
-const minCost = function (colors, neededTime) {};
+const minCost = function (colors, neededTime) {
+    let result = 0;
+
+    for (let i = 0, max = 0; i < colors.length; i++) {
+        result += neededTime[i];
+        max = Math.max(max, neededTime[i]);
+
+        if (colors[i] !== colors[i + 1]) {
+            result -= neededTime[i];
+            max = 0;
+        }
+    }
+
+    return result;
+};
