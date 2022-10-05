@@ -27,3 +27,9 @@ const hasPathSum = function (root, targetSum) {
 
     return hasPathSum(root.left, targetSum) || hasPathSum(root.right, targetSum);
 };
+
+const root = [5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1],
+    targetSum = 22;
+// Output: true
+// Explanation: The root-to-leaf path with the target sum is shown.
+console.log(hasPathSum(root, targetSum));
