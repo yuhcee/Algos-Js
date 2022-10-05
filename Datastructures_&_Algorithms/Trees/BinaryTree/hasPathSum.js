@@ -42,3 +42,9 @@ const root1 = [1, 2, 3],
 (1 --> 3): The sum is 4.
 There is no root-to-leaf path with sum = 5. */
 console.log(hasPathSum(root1, targetSum1));
+
+const root2 = [],
+    targetSum2 = 0;
+// Output: false
+// Explanation: Since the tree is empty, there are no root-to-leaf paths.
+console.log(hasPathSum(root2, targetSum2));
