@@ -48,3 +48,9 @@ const root = [4, 2, 6, 3, 1, 5],
     depth = 2;
 // Output: [4,1,1,2,null,null,6,3,1,5]
 console.log(addOneRow(root, val, depth));
+
+const root1 = [4, 2, null, 3, 1],
+    val1 = 1,
+    depth1 = 3;
+// Output: [4,2,null,1,1,3,null,null,1]
+console.log(addOneRow(root1, val1, depth1));
