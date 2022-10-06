@@ -42,3 +42,9 @@ const addOneRow = function (root, val, depth) {
     }
     return callDFS(root, 1, 'L');
 };
+
+const root = [4, 2, 6, 3, 1, 5],
+    val = 1,
+    depth = 2;
+// Output: [4,1,1,2,null,null,6,3,1,5]
+console.log(addOneRow(root, val, depth));
