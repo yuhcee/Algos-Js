@@ -34,3 +34,24 @@ TimeMap.prototype.set = function (key, value, timestamp) {
     const keyStamp = `${key}${timestamp}`;
     this.map[keyStamp] = value;
 };
+
+/**
+ * @param {string} key
+ * @param {number} timestamp
+ * @return {string}
+ */
+TimeMap.prototype.get = function (key, timestamp) {
+    while (timestamp > 0) {
+        const keyStamp = `${key}${timestamp}`;
+        if (keyStamp in this.map) return this.map[keyStamp];
+        timestamp -= 1;
+    }
+    return '';
+};
+
+/**
+ * Your TimeMap object will be instantiated and called as such:
+ * var obj = new TimeMap()
+ * obj.set(key,value,timestamp)
+ * var param_2 = obj.get(key,timestamp)
+ */
