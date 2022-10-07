@@ -30,4 +30,7 @@ var TimeMap = function () {
  * @param {number} timestamp
  * @return {void}
  */
-TimeMap.prototype.set = function (key, value, timestamp) {};
+TimeMap.prototype.set = function (key, value, timestamp) {
+    const keyStamp = `${key}${timestamp}`;
+    this.map[keyStamp] = value;
+};
