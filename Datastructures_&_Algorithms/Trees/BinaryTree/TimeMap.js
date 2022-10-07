@@ -1,4 +1,6 @@
-var TimeMap = function () {};
+var TimeMap = function () {
+    this.map = {};
+};
 
 /**
  * **981. Time Based Key-Value Store**
