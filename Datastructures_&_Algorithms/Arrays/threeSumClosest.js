@@ -18,4 +18,7 @@
  * @param {number} target
  * @return {number}
  */
-const threeSumClosest = function (nums, target) {};
+const threeSumClosest = function (nums, target) {
+    nums.sort((x, y) => x - y);
+    let closest = Infinity;
+};
