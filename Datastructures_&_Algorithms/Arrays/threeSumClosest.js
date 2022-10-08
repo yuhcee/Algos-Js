@@ -57,3 +57,9 @@ const threeSumClosest = function (nums, target) {
     }
     return closest;
 };
+
+const nums = [-1, 2, 1, -4],
+    target = 1;
+// Output: 2
+// Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
+console.log(threeSumClosest(nums, target));
