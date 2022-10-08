@@ -21,4 +21,11 @@
 const threeSumClosest = function (nums, target) {
     nums.sort((x, y) => x - y);
     let closest = Infinity;
+
+    //Iterate through until 2 from end because there will be two pointers after
+    //this idx to find threesums.
+    for (let i = 0; i < nums.length - 2; i++) {
+        
+    }
+    return closest;
 };
