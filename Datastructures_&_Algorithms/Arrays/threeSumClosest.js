@@ -25,7 +25,11 @@ const threeSumClosest = function (nums, target) {
     //Iterate through until 2 from end because there will be two pointers after
     //this idx to find threesums.
     for (let i = 0; i < nums.length - 2; i++) {
-        
+        //Stops us from doing repeat work.  If i is same as last, we have
+        //Already checked all perms.
+        if (i > 0 && nums[i] === nums[i - 1]) continue;
+        let left = i + 1,
+            right = nums.length - 1;
     }
     return closest;
 };
