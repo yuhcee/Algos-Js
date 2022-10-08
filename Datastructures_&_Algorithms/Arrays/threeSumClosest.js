@@ -36,7 +36,8 @@ const threeSumClosest = function (nums, target) {
             //If found, return target.
             if (total === target) return target;
 
-            
+            //Otherwise set closest to min of distance between current total and target, or previous closest.
+            closest = Math.abs(target - closest) < Math.abs(target - total) ? closest : total;
         }
     }
     return closest;
