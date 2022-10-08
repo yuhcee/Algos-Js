@@ -36,8 +36,23 @@ const threeSumClosest = function (nums, target) {
             //If found, return target.
             if (total === target) return target;
 
-            //Otherwise set closest to min of distance between current total and target, or previous closest.
+            //Otherwise set closest to min of distance between current total and target, or
+            //previous closest.
             closest = Math.abs(target - closest) < Math.abs(target - total) ? closest : total;
+
+            //If current total is less than target, we know we need a higher number and arr
+            //is sorted.  Incrementing left pointer and looping until we find a unique val
+            //gives us the next highest number.  Side Note:  For this problem and the LC tests,
+            //we do not need the loop in this block.  For larger data sets, it could save us from
+            //a lot of repeat work though.  I left it in because I think it's a nice addition.  Feel free
+            //to remove if you want though.  Won't change performance on LC test cases much.
+            if (total < target) {
+                left++;
+                while (left < right && nums[i] === nums[i - 1]) left++;
+            } else {
+                right--;
+                while (left < right && nums[right] === nums[right + 1]) right--;
+            }
         }
     }
     return closest;
