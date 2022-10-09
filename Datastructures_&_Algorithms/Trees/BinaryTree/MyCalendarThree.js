@@ -30,6 +30,21 @@ MyCalendarThree.prototype.book = function (start, end) {
     this.data.sort(function (a, b) {
         return a[0] - b[0];
     });
+
+    let sum = 0,
+        max = 0,
+        i = 0;
+
+    while (i < this.data.length) {
+        let currX = this.data[i][0];
+        while (i < this.data.length && this.data[i][0] === currX) {
+            sum += this.data[i][1];
+            i++;
+        }
+        max = Math.max(max, sum);
+    }
+
+    return max;
 };
 
 /**
