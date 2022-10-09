@@ -1,4 +1,6 @@
-var MyCalendarThree = function () {};
+var MyCalendarThree = function () {
+    this.data = [];
+};
 
 /**
  * **732. My Calendar III**
