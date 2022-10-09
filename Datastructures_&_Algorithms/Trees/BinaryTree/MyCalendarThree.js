@@ -25,6 +25,11 @@ MyCalendarThree.prototype.book = function (start, end) {
     //Use +1 for start and -1 for end, but we need to check only start and end points of the meeting as the possible duration of the meetins are high 10^9
     this.data.push([start, 1]);
     this.data.push([end, -1]);
+
+    // sort data
+    this.data.sort(function (a, b) {
+        return a[0] - b[0];
+    });
 };
 
 /**
