@@ -34,4 +34,9 @@ const findTarget = function (root, k) {
 const root = [5, 3, 6, 2, 4, null, 7],
     k = 9;
 // Output: true
-console.log(findTarget(root));
+console.log(findTarget(root, k));
+
+const root1 = [5, 3, 6, 2, 4, null, 7],
+    k1 = 28;
+// Output: false
+console.log(findTarget(root1, k1));
