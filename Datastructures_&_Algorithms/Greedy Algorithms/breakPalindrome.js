@@ -33,3 +33,9 @@ const breakPalindrome = (palindrome) => {
         return p.join(``);
     } else return ``;
 };
+
+const palindrome = 'abccba';
+// Output: "aaccba"
+/* Explanation: There are many ways to make "abccba" not a palindrome, such as "zbccba", "aaccba", and "abacba".
+Of all the ways, "aaccba" is the lexicographically smallest. */
+console.log(breakPalindrome(palindrome));
