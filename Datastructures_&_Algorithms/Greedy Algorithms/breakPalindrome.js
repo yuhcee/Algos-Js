@@ -14,6 +14,10 @@
  * `"abcd"` because the first position they differ is at the fourth character, and `'c'` is
  * smaller than `'d'`.
  *
+ * **Constraints:**
+ * - `1 <= palindrome.length <= 1000`
+ * - `palindrome` consists of only lowercase English letters.
+ *
  * @param {string} palindrome
  * @return {string}
  */
@@ -39,3 +43,8 @@ const palindrome = 'abccba';
 /* Explanation: There are many ways to make "abccba" not a palindrome, such as "zbccba", "aaccba", and "abacba".
 Of all the ways, "aaccba" is the lexicographically smallest. */
 console.log(breakPalindrome(palindrome));
+
+const palindrome1 = 'a';
+// Output: ""
+/* Explanation: There is no way to replace a single character to make "a" not a palindrome, so return an empty string. */
+console.log(breakPalindrome(palindrome1));
