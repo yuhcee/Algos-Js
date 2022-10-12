@@ -24,3 +24,8 @@ const increasingTriplet = function (nums) {
 
     return false;
 };
+
+const nums = [1, 2, 3, 4, 5];
+// Output: true
+// Explanation: Any triplet where i < j < k is valid.
+console.log(increasingTriplet(nums));
