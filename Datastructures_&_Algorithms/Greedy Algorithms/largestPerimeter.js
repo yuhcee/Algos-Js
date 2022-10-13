@@ -8,4 +8,16 @@
  * @param {number[]} nums
  * @return {number}
  */
-const largestPerimeter = function (nums) {};
+const largestPerimeter = function (nums) {
+    nums.sort((a, b) => a - b);
+
+    for (let i = nums.length - 3; i >= 0; i--) {
+        console.log(i);
+        const perimeter = nums[i] + nums[i + 1] > nums[i + 2];
+        if (perimeter) {
+            return nums[i] + nums[i + 1] + nums[i + 2];
+        }
+    }
+
+    return 0;
+};
