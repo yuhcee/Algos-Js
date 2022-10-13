@@ -12,7 +12,7 @@ const largestPerimeter = function (nums) {
     nums.sort((a, b) => a - b);
 
     for (let i = nums.length - 3; i >= 0; i--) {
-        console.log(i);
+
         const perimeter = nums[i] + nums[i + 1] > nums[i + 2];
         if (perimeter) {
             return nums[i] + nums[i + 1] + nums[i + 2];
@@ -21,3 +21,6 @@ const largestPerimeter = function (nums) {
 
     return 0;
 };
+const nums = [2, 1, 2];
+// Output: 5
+console.log(largestPerimeter(nums));
