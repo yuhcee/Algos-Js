@@ -71,3 +71,11 @@ const head1 = [1, 2, 3, 4];
 The above figure represents the given linked list.
 For n = 4, node 2 with value 3 is the middle node, which is marked in red. */
 console.log(deleteMiddle(head1));
+
+const head2 = [2,1]
+// Output: [2]
+/* Explanation:
+The above figure represents the given linked list.
+For n = 2, node 1 with value 1 is the middle node, which is marked in red.
+Node 0 with value 2 is the only node remaining after removing node 1. */
+console.log(deleteMiddle(head2));
