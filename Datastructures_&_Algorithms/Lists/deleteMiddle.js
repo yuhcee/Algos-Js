@@ -37,7 +37,27 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const findMiddle = function (head) {
+
+const deleteMiddle = function (head) {
+    let target = findMiddle(head);
+
+    let dummy = new ListNode(null);
+    dummy.next = head;
+    let prev = dummy;
+    let cur = head;
+
+    while (cur) {
+        if (cur == target) {
+            prev.next = cur.next;
+        } else {
+            prev = prev.next;
+        }
+        cur = cur.next;
+    }
+    return dummy.next;
+};
+
+const findMiddle = (head) => {
     let slow = head;
     let fast = head;
 
