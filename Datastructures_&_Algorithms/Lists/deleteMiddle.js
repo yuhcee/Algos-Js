@@ -65,4 +65,9 @@ Since n = 7, node 3 with value 7 is the middle node, which is marked in red.
 We return the new list after removing this node.  */
 console.log(deleteMiddle(head));
 
-
+const head1 = [1, 2, 3, 4];
+// Output: [1,2,4]
+/* Explanation:
+The above figure represents the given linked list.
+For n = 4, node 2 with value 3 is the middle node, which is marked in red. */
+console.log(deleteMiddle(head1));
