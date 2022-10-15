@@ -30,11 +30,20 @@
  * respectively.
  *
  * **Constraints:**
- * 
+ *
  * - The number of nodes in the list is in the range `[1, 105]`.
  * - 1 <= Node.val <= 105
- * 
+ *
  * @param {ListNode} head
  * @return {ListNode}
  */
-const findMiddle = function (head) {};
+const findMiddle = function (head) {
+    let slow = head;
+    let fast = head;
+
+    while (fast && fast.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    return slow;
+};
