@@ -15,13 +15,33 @@
  * return `-1`.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= jobDifficulty.length <= 300`
  * - `0 <= jobDifficulty[i] <= 1000`
  * - `1 <= d <= 10`
- * 
+ *
  * @param {number[]} jobDifficulty
  * @param {number} d
  * @return {number}
  */
-const minDifficulty = (jobDifficulty, d) => {};
+const minDifficulty = (jobDifficulty, d) => {
+    const n = jobDifficulty.length;
+    if (n < d) return -1;
+    const dp = new Array(n + 1).fill(0);
+
+    for (let i = n - 1; i >= 0; i--) {
+        dp[i] = jobDifficulty[i] > dp[i + 1] ? jobDifficulty[i] : dp[i + 1];
+    }
+
+    for (let i = 2; i <= d; i++)
+        for (let j = 0; j <= n - i; j++) {
+            let max = 0;
+            dp[j] = Infinity;
+            for (let k = j; k <= n - i; k++) {
+                if (jobDifficulty[k] > max) max = jobDifficulty[k];
+                if (dp[j] > dp[k + 1] + max) dp[j] = dp[k + 1] + max;
+            }
+        }
+
+    return dp[0];
+};
