@@ -59,3 +59,9 @@ const jobDifficulty1 = [9, 9, 9],
 // Output: -1
 /* Explanation: If you finish a job per day you will still have a free day. you cannot find a schedule for the given jobs. */
 console.log(minDifficulty(jobDifficulty1, d1));
+
+const jobDifficulty2 = [1, 1, 1],
+    d2 = 3;
+// Output: 3
+// Explanation: The schedule is one job per day. total difficulty will be 3.
+console.log(minDifficulty(jobDifficulty2, d2));
