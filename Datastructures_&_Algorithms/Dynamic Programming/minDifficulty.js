@@ -45,3 +45,11 @@ const minDifficulty = (jobDifficulty, d) => {
 
     return dp[0];
 };
+
+const jobDifficulty = [6, 5, 4, 3, 2, 1],
+    d = 2;
+// Output: 7
+/* Explanation: First day you can finish the first 5 jobs, total difficulty = 6.
+Second day you can finish the last job, total difficulty = 1.
+The difficulty of the schedule = 6 + 1 = 7  */
+console.log(minDifficulty(jobDifficulty, d));
