@@ -6,10 +6,11 @@
  * Given a string `sentence` containing only lowercase English letters, return *`true` if sentence
  * is a **pangram**, or `false` otherwise*.
  *
- * Constraints:
-
-1 <= sentence.length <= 1000
-sentence consists of lowercase English letters.
+ * **Constraints:**
+ *
+ * - `1 <= sentence.length <= 1000`
+ * - `sentence` consists of lowercase English letters.
+ *
  * @param {string} sentence
  * @return {boolean}
  */
@@ -26,3 +27,7 @@ const sentence = 'thequickbrownfoxjumpsoverthelazydog';
 // Output: true
 // Explanation: sentence contains at least one of every letter of the English alphabet.
 console.log(checkIfPangram(sentence));
+
+const sentence1 = 'leetcode';
+// Output: false
+console.log(checkIfPangram(sentence1));
