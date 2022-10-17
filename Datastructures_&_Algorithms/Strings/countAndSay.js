@@ -50,3 +50,12 @@ const n = 1;
 // Output: "1"
 // Explanation: This is the base case.
 console.log(countAndSay(n));
+
+const n1 = 4;
+// Output: "1211"
+/* Explanation:
+countAndSay(1) = "1"
+countAndSay(2) = say "1" = one 1 = "11"
+countAndSay(3) = say "11" = two 1's = "21"
+countAndSay(4) = say "21" = one 2 + one 1 = "12" + "11" = "1211" */
+console.log(countAndSay(n1));
