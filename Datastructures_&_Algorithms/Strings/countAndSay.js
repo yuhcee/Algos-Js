@@ -45,3 +45,8 @@ const countAndSay = function (n) {
     }
     return res;
 };
+
+const n = 1;
+// Output: "1"
+// Explanation: This is the base case.
+console.log(countAndSay(n));
