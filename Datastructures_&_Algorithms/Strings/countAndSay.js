@@ -22,4 +22,26 @@
  * @param {number} n
  * @return {string}
  */
-const countAndSay = function (n) {};
+const countAndSay = function (n) {
+    //corner case layer <= 1
+    if (n <= 1) return n + '';
+    let res = '1'; //default(include #1 level res), for each layer's res
+    for (let i = 2; i <= n; i++) {
+        //how to set many layers, use prev res?
+        let temp = ''; //temp str for creat this layer res
+        let count = 1; //default count for first char of prev
+        let ch = res[0]; //default first char of prev
+        for (let j = 1; j < res.length; j++) {
+            //traverse prev res
+            if (res[j] == res[j - 1]) {
+                count++; //same char
+            } else {
+                temp += count + ch + ''; //prev char
+                count = 1;
+                ch = res[j]; //cur char
+            }
+        }
+        res = temp + count + ch + ''; //update res
+    }
+    return res;
+};
