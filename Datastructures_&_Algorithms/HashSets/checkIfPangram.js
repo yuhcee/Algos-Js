@@ -19,5 +19,10 @@ const checkIfPangram = function (sentence) {
     for (let char of sentence) {
         seen.add(char);
     }
-    return seen.size() === 26;
+    return seen.size === 26;
 };
+
+const sentence = 'thequickbrownfoxjumpsoverthelazydog';
+// Output: true
+// Explanation: sentence contains at least one of every letter of the English alphabet.
+console.log(checkIfPangram(sentence));
