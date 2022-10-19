@@ -25,3 +25,9 @@ const words = ['i', 'love', 'leetcode', 'i', 'love', 'coding'],
 /* Explanation: "i" and "love" are the two most frequent words.
 Note that "i" comes before "love" due to a lower alphabetical order. */
 console.log(topKFrequent(words, k));
+
+const words1 = ['the', 'day', 'is', 'sunny', 'the', 'the', 'the', 'sunny', 'is', 'is'],
+    k1 = 4;
+// Output: ["the","is","sunny","day"]
+/* Explanation: "the", "is", "sunny" and "day" are the four most frequent words, with the number of occurrence being 4, 3, 2 and 1 respectively. */
+console.log(topKFrequent(words1, k1));
