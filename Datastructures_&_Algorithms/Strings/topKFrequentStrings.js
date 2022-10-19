@@ -18,3 +18,10 @@
  * @return {string[]}
  */
 const topKFrequent = function (words, k) {};
+
+const words = ['i', 'love', 'leetcode', 'i', 'love', 'coding'],
+    k = 2;
+// Output: ["i","love"]
+/* Explanation: "i" and "love" are the two most frequent words.
+Note that "i" comes before "love" due to a lower alphabetical order. */
+console.log(topKFrequent(words, k));
