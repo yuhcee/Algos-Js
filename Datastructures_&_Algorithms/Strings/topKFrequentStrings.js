@@ -17,7 +17,20 @@
  * @param {number} k
  * @return {string[]}
  */
-const topKFrequent = function (words, k) {};
+const topKFrequent = function (words, k) {
+    const hash = {};
+
+    for (let word of words) {
+        hash[word] = (hash[word] || 0) + 1;
+    }
+    const arr = Object.keys(hash);
+    arr.sort((a, b) => {
+        let diff = hash[b] - hash[a];
+        return diff === 0 ? a.localeCompare(b) : diff;
+    });
+
+    return arr.slice(0, k);
+};
 
 const words = ['i', 'love', 'leetcode', 'i', 'love', 'coding'],
     k = 2;
