@@ -61,3 +61,8 @@ const intToRoman = function (num) {
 
     return romanValue;
 };
+
+const num = 3;
+// Output: "III"
+// Explanation: 3 is represented as 3 ones.
+console.log(intToRoman(num));
