@@ -50,4 +50,14 @@ const intToRoman = function (num) {
         IV: 4,
         I: 1,
     };
+
+    let romanValue = '';
+    for (let key in romanToNumMap) {
+        while (num >= romanToNumMap[key]) {
+            romanValue += key;
+            num -= romanToNumMap[key];
+        }
+    }
+
+    return romanValue;
 };
