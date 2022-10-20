@@ -66,3 +66,8 @@ const num = 3;
 // Output: "III"
 // Explanation: 3 is represented as 3 ones.
 console.log(intToRoman(num));
+
+const num1 = 58;
+// Output: "LVIII"
+// Explanation: L = 50, V = 5, III = 3.
+console.log(intToRoman(num1));
