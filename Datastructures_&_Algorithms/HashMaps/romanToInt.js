@@ -47,8 +47,12 @@ var romanToInt = (s) => {
     };
     let romanValue = 0;
 
-    
-    
+    // We need to iterate the string to find each value
+    for (let i = 0; i < s.length; i++) {
+        
+    }
+
+    return romanValue;
 };
 
 const s = 'III';
