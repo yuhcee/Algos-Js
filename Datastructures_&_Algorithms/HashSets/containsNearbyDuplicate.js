@@ -14,4 +14,18 @@
  * @param {number} k
  * @return {boolean}
  */
-const containsNearbyDuplicate = function (nums, k) {};
+const containsNearbyDuplicate = function (nums, k) {
+    const set = new Set();
+
+    for (let i = 0; i < nums.length; i++) {
+        let num = nums[i];
+        if (set.has(num)) return true;
+        set.add(num);
+
+        if (set.size > k) {
+            set.delete(nums[i - k]);
+        }
+    }
+
+    return false;
+};
