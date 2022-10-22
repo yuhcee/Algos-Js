@@ -70,6 +70,7 @@ var romanToInt = (s) => {
         romanValue += romanToNumMap[letter];
     }
 
+    // Return total value
     return romanValue;
 };
 
