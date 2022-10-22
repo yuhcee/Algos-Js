@@ -59,10 +59,14 @@ var romanToInt = (s) => {
         if (letters in romanToNumMap) {
             // If exist, add the value
             romanValue += romanToNumMap[letters];
+            // Increment i since we do not want to repeat the character next to.
+            // For example: currentRomain =>"I" and Combo => "IV".
+            // Whole value is 4. If we don't add i, next iteraction will say we are at "V" now when it has already been added.
             i++;
             continue;
         }
 
+        // Add single romain value if special character not present
         romanValue += romanToNumMap[letter];
     }
 
