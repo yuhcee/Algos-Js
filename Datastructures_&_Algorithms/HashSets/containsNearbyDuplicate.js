@@ -39,3 +39,8 @@ const nums1 = [1, 0, 1, 1],
     k1 = 1;
 // Output: true
 console.log(containsNearbyDuplicate(nums1, k1));
+
+const nums2 = [1, 2, 3, 1, 2, 3],
+    k2 = 2;
+// Output: false;
+console.log(containsNearbyDuplicate(nums2, k2));
