@@ -55,7 +55,11 @@ var romanToInt = (s) => {
         // Grab the second letter next to current to check if special conditions are there (such as IV, CM etc.)
         let letters = s[i] + s[i + 1];
 
-        
+        // We want to check first if a special combo exist
+        if (letters in romanToNumMap) {
+            
+        }
+
     }
 
     return romanValue;
