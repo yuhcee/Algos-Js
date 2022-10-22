@@ -57,9 +57,13 @@ var romanToInt = (s) => {
 
         // We want to check first if a special combo exist
         if (letters in romanToNumMap) {
-            
+            // If exist, add the value
+            romanValue += romanToNumMap[letters];
+            i++;
+            continue;
         }
 
+        romanValue += romanToNumMap[letter];
     }
 
     return romanValue;
