@@ -21,7 +21,7 @@ const containsNearbyDuplicate = function (nums, k) {
         let num = nums[i];
         if (set.has(num)) return true;
         set.add(num);
-        
+
         if (set.size > k) {
             set.delete(nums[i - k]);
         }
@@ -34,3 +34,8 @@ const nums = [1, 2, 3, 1],
     k = 3;
 // Output: true
 console.log(containsNearbyDuplicate(nums, k));
+
+const nums1 = [1, 0, 1, 1],
+    k1 = 1;
+// Output: true
+console.log(containsNearbyDuplicate(nums1, k1));
