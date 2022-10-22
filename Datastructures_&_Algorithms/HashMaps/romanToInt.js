@@ -52,6 +52,9 @@ var romanToInt = (s) => {
         // Grab the current letter
         let letter = s[i];
 
+        // Grab the second letter next to current to check if special conditions are there (such as IV, CM etc.)
+        let letters = s[i] + s[i + 1];
+
         
     }
 
