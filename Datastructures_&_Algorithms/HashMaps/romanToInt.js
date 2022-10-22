@@ -49,6 +49,9 @@ var romanToInt = (s) => {
 
     // We need to iterate the string to find each value
     for (let i = 0; i < s.length; i++) {
+        // Grab the current letter
+        let letter = s[i];
+
         
     }
 
