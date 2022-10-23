@@ -24,3 +24,9 @@ const minWindow = function (s, t) {
     // return "" if substring not possible
     if (!s || !t || s.length < t.length) return '';
 };
+
+const s = 'ADOBECODEBANC',
+    t = 'ABC';
+// Output: "BANC"
+// Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+console.log(minWindow(s, t));
