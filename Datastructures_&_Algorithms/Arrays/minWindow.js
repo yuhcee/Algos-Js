@@ -23,6 +23,33 @@
 const minWindow = function (s, t) {
     // return "" if substring not possible
     if (!s || !t || s.length < t.length) return '';
+
+    let l = 0,
+        r = 0,
+        minI = s.length + 1,
+        minL = s.length + 1,
+        count = 0;
+    const charMap = {};
+
+    for (const char of t) {
+        charMap[char] = charMap[char] + 1 || 1;
+    }
+
+    while (r < s.length) {
+        if (charMap[s[r]]-- >= 1) count += 1;
+        r += 1;
+
+        while (count == t.length) {
+            if (r - l < minL) {
+                minL = r - l;
+                minI = l;
+            }
+            if (charMap[s[l]]++ >= 0) count -= 1;
+            l += 1;
+        }
+    }
+
+    return s.slice(minI, minI + minL);
 };
 
 const s = 'ADOBECODEBANC',
