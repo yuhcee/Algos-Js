@@ -30,3 +30,9 @@ const s = 'ADOBECODEBANC',
 // Output: "BANC"
 // Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
 console.log(minWindow(s, t));
+
+const s1 = 'a',
+    t1 = 'a';
+// Output: "a"
+// Explanation: The entire string s is the minimum window.
+console.log(minWindow(s1, t1));
