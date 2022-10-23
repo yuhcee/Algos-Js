@@ -20,4 +20,7 @@
  * @param {string} t
  * @return {string}
  */
-const minWindow = function (s, t) {};
+const minWindow = function (s, t) {
+    // return "" if substring not possible
+    if (!s || !t || s.length < t.length) return '';
+};
