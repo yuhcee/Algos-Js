@@ -16,7 +16,17 @@
  * @param {string[]} arr
  * @return {number}
  */
-const maxLength = function (arr) {};
+const maxLength = function (arr) {
+    function hasUniqueChars(word) {
+        const map = new Map();
+        for (let i = 0; i < word.length; i++) {
+            const char = word[i];
+            if (map.has(char)) return false;
+            map.set(char, true);
+        }
+        return true;
+    }
+};
 
 const arr = ['un', 'iq', 'ue'];
 // Output: 4
