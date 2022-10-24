@@ -26,6 +26,21 @@ const maxLength = function (arr) {
         }
         return true;
     }
+
+    let res = 0;
+
+    function dfs(idx, str) {
+        if (idx === arr.length) return;
+        const newStr = str + arr[idx];
+
+        if (hasUniqueChars(newStr)) {
+            res = Math.max(res, newStr.length);
+            dfs(idx + 1, newStr);
+        }
+        dfs(idx + 1, str);
+    }
+    dfs(0, '');
+    return res;
 };
 
 const arr = ['un', 'iq', 'ue'];
