@@ -35,3 +35,7 @@ const arr1 = ['cha', 'r', 'act', 'ers'];
 /* Explanation: Possible longest valid concatenations are "chaers" ("cha" + "ers") and "acters" ("act" + "ers"). */
 console.log(maxLength(arr1));
 
+const arr2 = ['abcdefghijklmnopqrstuvwxyz'];
+// Output: 26
+// Explanation: The only string in arr has all 26 characters.
+console.log(maxLength(arr2));
