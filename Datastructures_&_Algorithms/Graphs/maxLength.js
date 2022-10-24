@@ -17,3 +17,15 @@
  * @return {number}
  */
 const maxLength = function (arr) {};
+
+const arr = ['un', 'iq', 'ue'];
+// Output: 4
+/* Explanation: All the valid concatenations are:
+- ""
+- "un"
+- "iq"
+- "ue"
+- "uniq" ("un" + "iq")
+- "ique" ("iq" + "ue")
+Maximum length is 4. */
+console.log(maxLength(arr));
