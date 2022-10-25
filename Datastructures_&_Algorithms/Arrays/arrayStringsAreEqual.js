@@ -33,3 +33,8 @@ const word11 = ['a', 'cb'],
     word22 = ['ab', 'c'];
 // Output: false
 console.log(arrayStringsAreEqual(word11, word22));
+
+const word13 = ['abc', 'd', 'defg'],
+    word23 = ['abcddefg'];
+// Output: true
+console.log(arrayStringsAreEqual(word13, word23));
