@@ -28,3 +28,8 @@ word1 represents string "ab" + "c" -> "abc"
 word2 represents string "a" + "bc" -> "abc"
 The strings are the same, so return true. */
 console.log(arrayStringsAreEqual(word1, word2));
+
+const word11 = ['a', 'cb'],
+    word22 = ['ab', 'c'];
+// Output: false
+console.log(arrayStringsAreEqual(word11, word22));
