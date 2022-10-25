@@ -18,7 +18,9 @@
  * @param {string[]} word2
  * @return {boolean}
  */
-const arrayStringsAreEqual = function (word1, word2) {};
+const arrayStringsAreEqual = function (word1, word2) {
+    return word1.join('') === word2.join('');
+};
 
 const word1 = ['ab', 'c'],
     word2 = ['a', 'bc'];
