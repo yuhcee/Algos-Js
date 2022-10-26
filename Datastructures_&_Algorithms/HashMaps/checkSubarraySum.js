@@ -32,3 +32,8 @@ const nums1 = [23, 2, 6, 4, 7],
 /* Explanation: [23, 2, 6, 4, 7] is an continuous subarray of size 5 whose elements sum up to 42.
 42 is a multiple of 6 because 42 = 7 * 6 and 7 is an integer. */
 console.log(checkSubarraySum(nums1, k1));
+
+const nums2 = [23, 2, 6, 4, 7],
+    k2 = 13;
+// Output: false
+console.log(checkSubarraySum(nums2, k2));
