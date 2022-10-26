@@ -19,3 +19,9 @@
  * @return {boolean}
  */
 const checkSubarraySum = function (nums, k) {};
+
+const nums = [23, 2, 4, 6, 7],
+    k = 6;
+// Output: true
+/* Explanation: [2, 4] is a continuous subarray of size 2 whose elements sum up to 6. */
+console.log(checkSubarraySum(nums, k));
