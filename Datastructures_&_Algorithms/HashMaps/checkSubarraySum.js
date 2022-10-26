@@ -18,7 +18,12 @@
  * @param {number} k
  * @return {boolean}
  */
-const checkSubarraySum = function (nums, k) {};
+const checkSubarraySum = function (nums, k) {
+    // initialize the hash map with index 0 for sum 0
+    const map = new Map();
+    map.set(0, 0);
+    let sum = 0;
+};
 
 const nums = [23, 2, 4, 6, 7],
     k = 6;
