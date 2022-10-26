@@ -27,9 +27,11 @@ const checkSubarraySum = function (nums, k) {
         sum += nums[i];
         // if the remainder sum % k occurs for the first time
         if (!map.has(sum % k)) map.set(sum % k, i + 1);
-       
+        // if the subarray size is at least two
+        else if (map.get(sum % k) < i) return true;
     }
 
+    return false;
 };
 
 const nums = [23, 2, 4, 6, 7],
