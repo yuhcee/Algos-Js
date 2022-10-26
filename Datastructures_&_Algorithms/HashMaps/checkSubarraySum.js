@@ -23,6 +23,7 @@ const checkSubarraySum = function (nums, k) {
     const map = new Map();
     map.set(0, 0);
     let sum = 0;
+    
     for (let i = 0; i < nums.length; i++) {
         sum += nums[i];
         // if the remainder sum % k occurs for the first time
