@@ -25,3 +25,10 @@ const nums = [23, 2, 4, 6, 7],
 // Output: true
 /* Explanation: [2, 4] is a continuous subarray of size 2 whose elements sum up to 6. */
 console.log(checkSubarraySum(nums, k));
+
+const nums1 = [23, 2, 6, 4, 7],
+    k1 = 6;
+// Output: true
+/* Explanation: [23, 2, 6, 4, 7] is an continuous subarray of size 5 whose elements sum up to 42.
+42 is a multiple of 6 because 42 = 7 * 6 and 7 is an integer. */
+console.log(checkSubarraySum(nums1, k1));
