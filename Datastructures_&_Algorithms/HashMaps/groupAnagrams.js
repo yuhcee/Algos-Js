@@ -16,12 +16,16 @@ const groupAnagrams = function (strs) {
     for (let str of strs) {
         let charkey = str.split('').sort().join('');
 
-        if (group[charkey]) {
-            group[charkey].push(str);
+        if (groups[charkey]) {
+            groups[charkey].push(str);
         } else {
-            groupAnagrams[charkey] = [str];
+            groups[charkey] = [str];
         }
     }
 
     return Object.values(groups);
 };
+
+const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
+// Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+console.log(groupAnagrams(strs));
