@@ -30,6 +30,10 @@ const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
 // Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 console.log(groupAnagrams(strs));
 
-const strs1 = [""]
+const strs1 = [''];
 // Output: [[""]]
 console.log(groupAnagrams(strs1));
+
+const strs2 = ['a'];
+// Output: [["a"]]
+console.log(groupAnagrams(strs2));
