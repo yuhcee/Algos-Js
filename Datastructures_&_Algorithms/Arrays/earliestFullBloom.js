@@ -28,7 +28,19 @@
  * @param {number[]} growTime
  * @return {number}
  */
-const earliestFullBloom = function (plantTime, growTime) {};
+const earliestFullBloom = function (plantTime, growTime) {
+    const harvest = plantTime.map((v, i) => [plantTime[i], growTime[i]]).sort((a, b) => b[1] - a[1]);
+
+    let fullBloom = -Infinity,
+        total = 0;
+
+    for (const [plant, grow] of harvest) {
+        total += plant;
+        fullBloom = Math.max(fullBloom, total + grow);
+    }
+
+    return fullBloom;
+};
 
 const plantTime = [1, 2, 3, 2],
     growTime = [2, 1, 2, 1];
