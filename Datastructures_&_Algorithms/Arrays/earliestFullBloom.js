@@ -41,3 +41,10 @@ On days 2, 4, and 5, plant the 2nd seed. The seed grows for 2 full days and bloo
 On days 6 and 7, plant the 3rd seed. The seed grows for 1 full day and blooms on day 9.
 Thus, on day 9, all the seeds are blooming. */
 console.log(earliestFullBloom(plantTime, growTime));
+
+const plantTime1 = [1],
+    growTime1 = [1];
+// Output: 2
+/* Explanation: On day 0, plant the 0th seed. The seed grows for 1 full day and blooms on day 2.
+Thus, on day 2, all the seeds are blooming. */
+console.log(earliestFullBloom(plantTime1, growTime1));
