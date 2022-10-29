@@ -17,8 +17,27 @@
  *
  * Return *the **earliest** possible day where **all** seeds are blooming*.
  *
+ *
+ * **Constraints:**
+ *
+ * `n == plantTime.length == growTime.length`
+ * `1 <= n <= 105`
+ * `1 <= plantTime[i], growTime[i] <= 104`
+ *
  * @param {number[]} plantTime
  * @param {number[]} growTime
  * @return {number}
  */
 const earliestFullBloom = function (plantTime, growTime) {};
+
+const plantTime = [1, 2, 3, 2],
+    growTime = [2, 1, 2, 1];
+// Output: 9;
+/* Explanation: The grayed out pots represent planting days, colored pots represent growing days, and the flower represents the day it blooms.
+One optimal way is:
+On day 1, plant the 0th seed. The seed grows for 2 full days and blooms on day 4.
+On days 0 and 3, plant the 1st seed. The seed grows for 1 full day and blooms on day 5.
+On days 2, 4, and 5, plant the 2nd seed. The seed grows for 2 full days and blooms on day 8.
+On days 6 and 7, plant the 3rd seed. The seed grows for 1 full day and blooms on day 9.
+Thus, on day 9, all the seeds are blooming. */
+console.log(earliestFullBloom(plantTime, growTime));
