@@ -50,6 +50,7 @@ const largestOverlap = function (img1, img2) {
             distanceCount[pos] = (distanceCount[pos] || 0) + 1;
         }
     }
+    return Math.max(...Object.values(distanceCount));
 };
 
 const img1 = [
