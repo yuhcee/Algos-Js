@@ -37,6 +37,9 @@ const largestOverlap = function (img1, img2) {
             if (img2[i][j] == 1) bCoords.push([i, j]);
         }
     }
+
+    // if one matrix has no 1 return 0
+    if (!aCoords.length || !bCoords.length) return 0;
 };
 
 const img1 = [
