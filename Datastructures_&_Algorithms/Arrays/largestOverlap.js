@@ -26,7 +26,18 @@
  * @param {number[][]} img2
  * @return {number}
  */
-const largestOverlap = function (img1, img2) {};
+const largestOverlap = function (img1, img2) {
+    const aCoords = [];
+    const bCoords = [];
+
+    for (let i = 0; i < img1.length; i++) {
+        for (let j = 0; j < img1[0].length; j++) {
+            // Keep track of all coordinates that have value 1
+            if (img1[i][j] == 1) aCoords.push([i, j]);
+            if (img2[i][j] == 1) bCoords.push([i, j]);
+        }
+    }
+};
 
 const img1 = [
         [1, 1, 0],
@@ -45,9 +56,9 @@ console.log(largestOverlap(img1, img2));
 const img11 = [[1]],
     img22 = [[1]];
 // Output: 1
-console.log(largestOverlap(img11, img22));
+// console.log(largestOverlap(img11, img22));
 
 const img111 = [[0]],
     img222 = [[0]];
 // Output: 0
-console.log(largestOverlap(img111, img222));
+// console.log(largestOverlap(img111, img222));
