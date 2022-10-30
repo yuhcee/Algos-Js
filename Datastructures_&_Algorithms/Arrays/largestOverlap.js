@@ -26,6 +26,18 @@
  * @param {number[][]} img2
  * @return {number}
  */
-const largestOverlap = function (img1, img2) {
-    
-};
+const largestOverlap = function (img1, img2) {};
+
+const img1 = [
+        [1, 1, 0],
+        [0, 1, 0],
+        [0, 1, 0],
+    ],
+    img2 = [
+        [0, 0, 0],
+        [0, 1, 1],
+        [0, 0, 1],
+    ];
+// Output: 3
+// Explanation: We translate img1 to right by 1 unit and down by 1 unit.
+console.log(largestOverlap(img1, img2));
