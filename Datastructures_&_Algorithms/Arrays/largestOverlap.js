@@ -46,3 +46,8 @@ const img11 = [[1]],
     img22 = [[1]];
 // Output: 1
 console.log(largestOverlap(img11, img22));
+
+const img111 = [[0]],
+    img222 = [[0]];
+// Output: 0
+console.log(largestOverlap(img111, img222));
