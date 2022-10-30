@@ -41,3 +41,8 @@ const img1 = [
 // Output: 3
 // Explanation: We translate img1 to right by 1 unit and down by 1 unit.
 console.log(largestOverlap(img1, img2));
+
+const img11 = [[1]],
+    img22 = [[1]];
+// Output: 1
+console.log(largestOverlap(img11, img22));
