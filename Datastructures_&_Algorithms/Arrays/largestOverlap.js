@@ -40,6 +40,16 @@ const largestOverlap = function (img1, img2) {
 
     // if one matrix has no 1 return 0
     if (!aCoords.length || !bCoords.length) return 0;
+
+    const distanceCount = {};
+
+    for (let [ax, ay] of aCoords) {
+        for (let [bx, by] of bCoords) {
+            let pos = `${ax - bx} ${ay - by}`; // find travel distance
+            // count number of times distance seen
+            distanceCount[pos] = (distanceCount[pos] || 0) + 1;
+        }
+    }
 };
 
 const img1 = [
