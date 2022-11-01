@@ -30,3 +30,12 @@ In the above grid, the diagonals are:
 "[9]", "[5, 5]", "[1, 1, 1]", "[2, 2, 2]", "[3, 3]", "[4]".
 In each diagonal all elements are the same, so the answer is True. */
 console.log(isToeplitzMatrix(matrix));
+
+const matrix1 = [
+    [1, 2],
+    [2, 2],
+];
+// Output: false
+/* Explanation:
+The diagonal "[1, 2]" has different elements. */
+console.log(isToeplitzMatrix(matrix1));
