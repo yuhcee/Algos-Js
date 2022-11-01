@@ -17,7 +17,21 @@
  * @param {number[][]} matrix
  * @return {boolean}
  */
-const isToeplitzMatrix = (matrix) => {};
+const isToeplitzMatrix = (matrix) => {
+    const groups = new Map();
+
+    for (let r = 0; r < matrix.length; r++) {
+        for (let c = 0; c < matrix[0].length; c++) {
+            let key = r - c;
+            if (!groups.has(key)) {
+                groups.set(key, matrix[r][c]);
+            } else if (groups.get(key) !== matrix[r][c]) {
+                return false;
+            }
+        }
+    }
+    return true;
+};
 
 const matrix = [
     [1, 2, 3, 4],
@@ -38,4 +52,4 @@ const matrix1 = [
 // Output: false
 /* Explanation:
 The diagonal "[1, 2]" has different elements. */
-console.log(isToeplitzMatrix(matrix1));
+// console.log(isToeplitzMatrix(matrix1));
