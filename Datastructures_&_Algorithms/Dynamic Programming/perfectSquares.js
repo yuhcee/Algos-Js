@@ -24,3 +24,13 @@ const numSquares = function (n) {
     }
     return dp[n];
 };
+
+const n = 12;
+// Output: 3
+// Explanation: 12 = 4 + 4 + 4.
+console.log(numSquares(n));
+
+const n1 = 13;
+// Output: 2
+// Explanation: 13 = 4 + 9.
+console.log(numSquares(n1));
