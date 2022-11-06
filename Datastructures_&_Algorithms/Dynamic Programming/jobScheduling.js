@@ -9,6 +9,12 @@
  *
  * If you choose a job that ends at time `X` you will be able to start another job that starts at time `X`.
  *
+ * **Constraints:**
+ *
+ * `1 <= startTime.length == endTime.length == profit.length <= 5 * 104`
+ * `1 <= startTime[i] < endTime[i] <= 109`
+ * `1 <= profit[i] <= 104`
+ *
  * @param {number[]} startTime
  * @param {number[]} endTime
  * @param {number[]} profit
