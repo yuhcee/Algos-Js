@@ -54,3 +54,19 @@ var jobScheduling = function (startTime, endTime, profit) {
         return res;
     }
 };
+
+const startTime = [1, 2, 3, 3],
+    endTime = [3, 4, 5, 6],
+    profit = [50, 10, 40, 70];
+// Output: 120
+/* Explanation: The subset chosen is the first and fourth job. 
+Time range [1-3]+[3-6] , we get profit of 120 = 50 + 70. */
+console.log(jobScheduling(startTime, endTime, profit));
+
+const startTime1 = [1, 2, 3, 4, 6],
+    endTime1 = [3, 5, 10, 6, 9],
+    profit1 = [20, 20, 100, 70, 60];
+// Output: 150
+/* Explanation: The subset chosen is the first, fourth and fifth job. 
+Profit obtained 150 = 20 + 70 + 60. */
+console.log(jobScheduling(startTime1, endTime1, profit1));
