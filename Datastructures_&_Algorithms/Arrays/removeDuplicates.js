@@ -43,7 +43,18 @@
  * @return {number}
  */
 
-const removeDuplicates = function (nums) {};
+const removeDuplicates = function (nums) {
+    for (let i = 0; i < nums.length - 1; i++) {
+        if (i > nums.length - 1) {
+            break;
+        }
+        if (nums[i] === nums[i + 1]) {
+            nums.splice(i, 1);
+            i--;
+        }
+    }
+    return nums.length;
+};
 
 const nums = [1, 1, 2];
 // Output: 2, nums = [1,2,_]
