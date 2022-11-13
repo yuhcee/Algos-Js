@@ -25,7 +25,12 @@
  * @param {string} s
  * @return {string}
  */
-const reverseWords = function (s) {};
+const reverseWords = function (s) {
+    return s
+        .split(/\s{1,}/)
+        .reverse()
+        .join(' ');
+};
 
 const s = '  hello world  ';
 // Output: "world hello"
@@ -35,4 +40,4 @@ console.log(reverseWords(s));
 const s1 = 'a good   example';
 // Output: "example good a"
 /* Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string. */
-console.log(reverseWords(s));
+console.log(reverseWords(s1));
