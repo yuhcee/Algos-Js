@@ -26,3 +26,8 @@
  * @return {string}
  */
 const reverseWords = function (s) {};
+
+const s = '  hello world  ';
+// Output: "world hello"
+// Explanation: Your reversed string should not contain leading or trailing spaces.
+console.log(reverseWords(s));
