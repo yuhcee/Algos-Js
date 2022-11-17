@@ -27,7 +27,14 @@
  * @param {number} by2
  * @return {number}
  */
-const computeArea = function (ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) {};
+const computeArea = function (ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) {
+    const maxStart1 = Math.max(ax1, bx1);
+    const minEnd1 = Math.min(ax2, bx2);
+
+    const width = Math.abs(maxStart1 - minEnd1);
+
+    
+};
 
 const ax1 = -3,
     ay1 = 0,
