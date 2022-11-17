@@ -38,7 +38,14 @@ const computeArea = function (ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) {
 
     const height = Math.abs(minStart2 - maxEnd2);
 
-    
+    let overLapArea = 0;
+
+    function calcArea(x1, y1, x2, y2) {
+        const width = Math.abs(x1 - x2);
+        const height = Math.abs(y1 - y2);
+
+        return width * height;
+    }
 };
 
 const ax1 = -3,
