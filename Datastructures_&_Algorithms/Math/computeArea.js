@@ -46,6 +46,15 @@ const computeArea = function (ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) {
 
         return width * height;
     }
+
+    if (maxStart1 <= minEnd1 && maxEnd2 <= minStart2) {
+        overLapArea = width * height;
+    }
+
+    const rect1Area = calcArea(ax1, ay1, ax2, ay2);
+    const rect2Area = calcArea(bx1, by1, bx2, by2);
+
+    return rect1Area + rect2Area - overLapArea;
 };
 
 const ax1 = -3,
