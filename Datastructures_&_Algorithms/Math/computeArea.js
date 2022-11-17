@@ -28,3 +28,15 @@
  * @return {number}
  */
 const computeArea = function (ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) {};
+
+
+const ax1 = -3,
+    ay1 = 0,
+    ax2 = 3,
+    ay2 = 4,
+    bx1 = 0,
+    by1 = -1,
+    bx2 = 9,
+    by2 = 2;
+// Output: 45
+console.log(computeArea((ax1, ay1, ax2, ay2, bx1, by1, bx2, by2)));
