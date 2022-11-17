@@ -29,7 +29,6 @@
  */
 const computeArea = function (ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) {};
 
-
 const ax1 = -3,
     ay1 = 0,
     ax2 = 3,
@@ -40,3 +39,15 @@ const ax1 = -3,
     by2 = 2;
 // Output: 45
 console.log(computeArea((ax1, ay1, ax2, ay2, bx1, by1, bx2, by2)));
+
+const ax11 = -2,
+    ay11 = -2,
+    ax22 = 2,
+    ay22 = 2,
+    bx11 = -2,
+    by11 = -2,
+    bx22 = 2,
+    by22 = 2;
+// Output: 16
+
+console.log(computeArea((ax11, ay11, ax22, ay22, bx11, by11, bx22, by22)));
