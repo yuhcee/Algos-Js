@@ -33,6 +33,11 @@ const computeArea = function (ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) {
 
     const width = Math.abs(maxStart1 - minEnd1);
 
+    const minStart2 = Math.min(ay2, by2);
+    const maxEnd2 = Math.max(ay1, by1);
+
+    const height = Math.abs(minStart2 - maxEnd2);
+
     
 };
 
