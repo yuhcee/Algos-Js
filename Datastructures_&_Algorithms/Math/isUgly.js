@@ -22,3 +22,8 @@ const n1 = 1;
 // Output: true
 // Explanation: 1 has no prime factors, therefore all of its prime factors are limited to 2, 3, and 5.
 console.log(isUgly(n1));
+
+const n2 = 14;
+// Output: false
+// Explanation: 14 is not ugly since it includes the prime factor 7.
+console.log(isUgly(n2));
