@@ -17,7 +17,7 @@
  * The testcases will be generated such that no two matches will have the **same** outcome.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= matches.length <= 105`
  * - `matches[i].length == 2`
  * - `1 <= winneri, loseri <= 105`
@@ -54,3 +54,36 @@ var findWinners = function (matches) {
 
     return [first, second];
 };
+
+const matches = [
+    [1, 3],
+    [2, 3],
+    [3, 6],
+    [5, 6],
+    [5, 7],
+    [4, 5],
+    [4, 8],
+    [4, 9],
+    [10, 4],
+    [10, 9],
+];
+// Output: [[1,2,10],[4,5,7,8]]
+/* Explanation:
+Players 1, 2, and 10 have not lost any matches.
+Players 4, 5, 7, and 8 each have lost one match.
+Players 3, 6, and 9 each have lost two matches.
+Thus, answer[0] = [1,2,10] and answer[1] = [4,5,7,8]. */
+console.log(findWinners(matches));
+
+const matches1 = [
+    [2, 3],
+    [1, 3],
+    [5, 4],
+    [6, 4],
+];
+// Output: [[1,2,5,6],[]]
+/* Explanation:
+Players 1, 2, 5, and 6 have not lost any matches.
+Players 3 and 4 each have lost two matches.
+Thus, answer[0] = [1,2,5,6] and answer[1] = []. */
+console.log(findWinners(matches1));
