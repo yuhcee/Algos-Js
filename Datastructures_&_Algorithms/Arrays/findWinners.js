@@ -16,6 +16,14 @@
  * You should only consider the players that have played **at least one** match.
  * The testcases will be generated such that no two matches will have the **same** outcome.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= matches.length <= 105`
+ * - `matches[i].length == 2`
+ * - `1 <= winneri, loseri <= 105`
+ * - `winneri != loseri`
+ * - `All matches[i] are unique.`
+ *
  * @param {number[][]} matches
  * @return {number[][]}
  */
