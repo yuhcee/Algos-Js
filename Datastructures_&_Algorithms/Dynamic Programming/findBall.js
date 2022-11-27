@@ -19,6 +19,13 @@
  * Return *an array `answer` of size `n` where `answer[i]` is the column that the ball falls out of at the bottom
  * after dropping the ball from the `ith` column at the top, or `-1` if the ball gets stuck in the box*.
  *
+ * **Constraints:**
+ *
+ * - `m == grid.length`
+ * - `n == grid[i].length`
+ * - `1 <= m, n <= 100`
+ * - `grid[i][j] is 1 or -1.`
+ *
  * @param {number[][]} grid
  * @return {number[]}
  */
