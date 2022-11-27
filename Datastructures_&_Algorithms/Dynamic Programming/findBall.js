@@ -24,7 +24,7 @@
  * - `m == grid.length`
  * - `n == grid[i].length`
  * - `1 <= m, n <= 100`
- * - `grid[i][j] is 1 or -1.`
+ * - `grid[i][j]` is `1` or `-1.`
  *
  * @param {number[][]} grid
  * @return {number[]}
@@ -47,3 +47,19 @@ var findBall = function (grid) {
     }
     return ans; // Return the completed answer
 };
+
+const grid = [
+    [1, 1, 1, -1, -1],
+    [1, 1, 1, -1, -1],
+    [-1, -1, -1, 1, 1],
+    [1, 1, 1, 1, -1],
+    [-1, -1, -1, -1, -1],
+];
+// Output: [1,-1,-1,-1,-1]
+/* Explanation: This example is shown in the photo.
+Ball b0 is dropped at column 0 and falls out of the box at column 1.
+Ball b1 is dropped at column 1 and will get stuck in the box between column 2 and 3 and row 1.
+Ball b2 is dropped at column 2 and will get stuck on the box between column 2 and 3 and row 0.
+Ball b3 is dropped at column 3 and will get stuck on the box between column 2 and 3 and row 0.
+Ball b4 is dropped at column 4 and will get stuck on the box between column 2 and 3 and row 1. */
+console.log(findBall(grid));
