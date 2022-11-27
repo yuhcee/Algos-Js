@@ -68,3 +68,12 @@ const grid1 = [[-1]];
 // Output: [-1]
 // Explanation: The ball gets stuck against the left wall.
 console.log(findBall(grid1));
+
+const grid2 = [
+    [1, 1, 1, 1, 1, 1],
+    [-1, -1, -1, -1, -1, -1],
+    [1, 1, 1, 1, 1, 1],
+    [-1, -1, -1, -1, -1, -1],
+];
+// Output: [0,1,2,3,4,-1]
+console.log(findBall(grid2));
