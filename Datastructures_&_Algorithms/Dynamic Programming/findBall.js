@@ -63,3 +63,8 @@ Ball b2 is dropped at column 2 and will get stuck on the box between column 2 an
 Ball b3 is dropped at column 3 and will get stuck on the box between column 2 and 3 and row 0.
 Ball b4 is dropped at column 4 and will get stuck on the box between column 2 and 3 and row 1. */
 console.log(findBall(grid));
+
+const grid1 = [[-1]];
+// Output: [-1]
+// Explanation: The ball gets stuck against the left wall.
+console.log(findBall(grid1));
