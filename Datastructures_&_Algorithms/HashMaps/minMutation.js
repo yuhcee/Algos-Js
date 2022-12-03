@@ -27,4 +27,30 @@
  * @param {string[]} bank
  * @return {number}
  */
-var minMutation = function (start, end, bank) {};
+var minMutation = function (start, end, bank) {
+    // store number of mutations needed to get from start to end in the countArray
+    const countArray = [];
+
+    dfs(start, 0, bank);
+
+    // return -1 if no counts exist in countArray
+    return countArray.length ? Math.min(...countArray) : -1;
+
+    function dfs(current, count, remBank) {
+        if (current === end) countArray.push(count);
+        if (!remBank.length) return null;
+        else
+            remBank.forEach((x, i) => {
+                // remove already visited mutations from bank so you don't end up going backwards
+                return compare(current, x) && dfs(x, count + 1, [...remBank.slice(0, i), ...remBank.slice(i + 1)]);
+            });
+    }
+
+    function compare(s1, s2) {
+        let count = 0;
+        for (let i = 0; i < 8; i++) {
+            if (s1[i] !== s2[i]) count++;
+        }
+        return count === 1;
+    }
+};
