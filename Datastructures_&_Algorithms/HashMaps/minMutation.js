@@ -54,3 +54,10 @@ var minMutation = function (start, end, bank) {
         return count === 1;
     }
 };
+
+const startGene = 'AACCGGTT',
+    endGene = 'AACCGGTA',
+    bank = ['AACCGGTA'];
+// Output: 1
+
+console.log(minMutation(startGene, endGene, bank));
