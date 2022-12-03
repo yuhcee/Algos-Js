@@ -61,3 +61,9 @@ const startGene = 'AACCGGTT',
 // Output: 1
 
 console.log(minMutation(startGene, endGene, bank));
+
+const startGene1 = 'AACCGGTT',
+    endGene1 = 'AAACGGTA',
+    bank1 = ['AACCGGTA', 'AACCGCTA', 'AAACGGTA'];
+// Output: 2
+console.log(minMutation(startGene1, endGene1, bank1));
