@@ -70,3 +70,9 @@ const words1 = ['ab', 'ty', 'yt', 'lc', 'cl', 'ab'];
 /* Explanation: One longest palindrome is "ty" + "lc" + "cl" + "yt" = "tylcclyt", of length 8.
 Note that "lcyttycl" is another longest palindrome that can be created. */
 console.log(longestPalindrome(words1));
+
+const words2 = ['cc', 'll', 'xx'];
+// Output: 2
+/* Explanation: One longest palindrome is "cc", of length 2.
+Note that "ll" is another longest palindrome that can be created, and so is "xx". */
+console.log(longestPalindrome(words2));
