@@ -11,10 +11,15 @@
  *
  * A **palindrome** is a string that reads the same forward and backward.
  *
+ * **Constraints:**
+ *
+ * - `1 <= words.length <= 105`
+ * - `words[i].length == 2`
+ * - `words[i]` consists of lowercase English letters.
+ *
  * @param {string[]} words
  * @return {number}
  */
-
 var longestPalindrome = function (words) {
     // store the word in a map with total count
     const map = {};
