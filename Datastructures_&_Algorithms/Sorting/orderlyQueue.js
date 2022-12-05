@@ -43,3 +43,11 @@ const s = 'cba',
 In the first move, we move the 1st character 'c' to the end, obtaining the string "bac".
 In the second move, we move the 1st character 'b' to the end, obtaining the final result "acb". */
 console.log(orderlyQueue(s, k));
+
+const s1 = 'baaca',
+    k1 = 3;
+// Output: "aaabc"
+/* Explanation: 
+In the first move, we move the 1st character 'b' to the end, obtaining the string "aacab".
+In the second move, we move the 3rd character 'c' to the end, obtaining the final result "aaabc". */
+console.log(orderlyQueue(s1, k1));
