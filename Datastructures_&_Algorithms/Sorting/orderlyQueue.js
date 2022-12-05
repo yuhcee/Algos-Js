@@ -16,4 +16,22 @@
  * @param {number} k
  * @return {string}
  */
-var orderlyQueue = function (s, k) {};
+var orderlyQueue = function (s, k) {
+    if (k === 1) {
+        let answer = s;
+
+        for (let i = 0; i < s.length; i++) {
+            const compareString = s.substring(i) + s.substring(0, i);
+
+            // localcompare string using localeCompare() method - javascript
+            if (answer.localeCompare(compareString) > 0) {
+                answer = s.substring(i) + s.substring(0, i);
+            }
+        }
+
+        return answer;
+    }
+
+    // if k > 1
+    return s.split('').sort().join('');
+};
