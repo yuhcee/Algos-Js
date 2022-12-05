@@ -35,3 +35,11 @@ var orderlyQueue = function (s, k) {
     // if k > 1
     return s.split('').sort().join('');
 };
+
+const s = 'cba',
+    k = 1;
+// Output: "acb"
+/* Explanation: 
+In the first move, we move the 1st character 'c' to the end, obtaining the string "bac".
+In the second move, we move the 1st character 'b' to the end, obtaining the final result "acb". */
+console.log(orderlyQueue(s, k));
