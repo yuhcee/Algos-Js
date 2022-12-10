@@ -46,3 +46,7 @@ const reverseVowels = function (s) {
 const s = 'hello';
 // Output: 'holle';
 console.log(reverseVowels(s));
+
+const s1 = 'leetcode';
+// Output: "leotcede"
+console.log(reverseVowels(s1));
