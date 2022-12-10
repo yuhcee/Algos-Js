@@ -42,3 +42,7 @@ const reverseVowels = function (s) {
     // join the result array
     return result.join('');
 };
+
+const s = 'hello';
+// Output: 'holle';
+console.log(reverseVowels(s));
