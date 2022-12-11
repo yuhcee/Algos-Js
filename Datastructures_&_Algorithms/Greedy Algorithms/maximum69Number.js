@@ -25,3 +25,8 @@ Changing the third digit results in 9699.
 Changing the fourth digit results in 9666.
 The maximum number is 9969. */
 console.log(maximum69Number(num));
+
+const num1 = 9996;
+// Output: 9999
+// Explanation: Changing the last digit 6 to 9 results in the maximum number.
+console.log(maximum69Number(num1));
