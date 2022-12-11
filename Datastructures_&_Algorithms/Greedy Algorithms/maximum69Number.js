@@ -30,3 +30,8 @@ const num1 = 9996;
 // Output: 9999
 // Explanation: Changing the last digit 6 to 9 results in the maximum number.
 console.log(maximum69Number(num1));
+
+const num2 = 9999;
+// Output: 9999
+// Explanation: It is better not to apply any change.
+console.log(maximum69Number(num2));
