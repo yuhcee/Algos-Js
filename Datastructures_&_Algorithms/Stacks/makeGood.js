@@ -47,3 +47,10 @@ const s = 'leEeetcode';
 // Output: "leetcode"
 /* Explanation: In the first step, either you choose i = 1 or i = 2, both will result "leEeetcode" to be reduced to "leetcode". */
 console.log(makeGood(s));
+
+const s1 = 'abBAcC';
+// Output: ""
+/* Explanation: We have many possible scenarios, and all lead to the same answer. For example:
+"abBAcC" --> "aAcC" --> "cC" --> ""
+"abBAcC" --> "abBA" --> "aA" --> "" */
+console.log(makeGood(s1));
