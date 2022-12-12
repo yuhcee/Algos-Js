@@ -54,3 +54,7 @@ const s1 = 'abBAcC';
 "abBAcC" --> "aAcC" --> "cC" --> ""
 "abBAcC" --> "abBA" --> "aA" --> "" */
 console.log(makeGood(s1));
+
+const s2 = 's';
+// Output: "s"
+console.log(makeGood(s2));
