@@ -15,10 +15,14 @@
  *
  * **Notice** that an empty string is also good.
  *
+ * **Constraints:**
+ * - `1 <= s.length <= 100`
+ * - `s` contains only lower and upper case English letters.
+ *
  * @param {string} s
  * @return {string}
  */
-var makeGood = function (s) {
+const makeGood = function (s) {
     let str = '';
     for (let i = 0; i < s.length; i += 1) {
         if (!str) {
