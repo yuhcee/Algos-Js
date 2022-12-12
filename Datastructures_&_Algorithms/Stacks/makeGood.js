@@ -42,3 +42,8 @@ const makeGood = function (s) {
     }
     return str;
 };
+
+const s = 'leEeetcode';
+// Output: "leetcode"
+/* Explanation: In the first step, either you choose i = 1 or i = 2, both will result "leEeetcode" to be reduced to "leetcode". */
+console.log(makeGood(s));
