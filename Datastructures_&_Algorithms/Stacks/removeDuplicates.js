@@ -9,6 +9,10 @@
  * Return *the final string after all such duplicate removals have been made*. It can be proven that the answer is
  * **unique**.
  *
+ * **Constraints:**
+ * - `1 <= s.length <= 105`
+ * - `s` consists of lowercase English letters.
+ *
  * @param {string} s
  * @return {string}
  */
