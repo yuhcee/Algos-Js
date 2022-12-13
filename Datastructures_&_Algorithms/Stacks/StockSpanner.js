@@ -31,23 +31,37 @@
 const StockSpanner = function () {
     this.stack = { val: 0, span: 0, next: null };
 };
-StockSpanner.prototype.next = function(price) {
+StockSpanner.prototype.next = function (price) {
     let chain = 1,
-		cur = this.stack;
+        cur = this.stack;
     if (price < this.stack.val) {
         this.stack = { val: price, span: 1, next: this.stack };
     } else {
         while (cur !== null && price >= cur.val) {
             chain += cur.span;
-            cur = cur.next
-        };
+            cur = cur.next;
+        }
         this.stack = { val: price, span: chain, next: cur };
-    };
+    }
     return chain;
 };
 
-/** 
+/**
  * Your StockSpanner object will be instantiated and called as such:
  * var obj = new StockSpanner()
  * var param_1 = obj.next(price)
  */
+
+const input = ['StockSpanner', 'next', 'next', 'next', 'next', 'next', 'next', 'next'][([], [100], [80], [60], [70], [60], [75], [85])];
+// Output
+// [null, 1, 1, 1, 2, 1, 4, 6]
+
+/* Explanation
+StockSpanner stockSpanner = new StockSpanner();
+stockSpanner.next(100); // return 1
+stockSpanner.next(80);  // return 1
+stockSpanner.next(60);  // return 1
+stockSpanner.next(70);  // return 2
+stockSpanner.next(60);  // return 1
+stockSpanner.next(75);  // return 4, because the last 4 prices (including today's price of 75) were less than or equal to today's price.
+stockSpanner.next(85);  // return 6 */
