@@ -16,4 +16,8 @@
  * @param {string} s
  * @return {string}
  */
-const removeDuplicates = (s, result = []) => {};
+const removeDuplicates = (s, result = []) => {
+    s.split('').forEach((el) => (el !== result[result.length - 1] ? result.push(el) : result.pop()));
+
+    return result.join('');
+};
