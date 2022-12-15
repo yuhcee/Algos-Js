@@ -10,6 +10,12 @@
  * Given an array `stones` of length `n` where `stones[i] = [xi, yi]` represents the location of the `ith` stone,
  * return *the largest possible number of stones that can be removed*.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= stones.length <= 1000`
+ * - `0 <= xi, yi <= 104`
+ * - No two stones are at the same coordinate point.
+ *
  * @param {number[][]} stones
  * @return {number}
  */
