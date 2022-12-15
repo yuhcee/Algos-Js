@@ -83,3 +83,8 @@ const stones1 = [
 3. Remove stone [0,2] because it shares the same row as [0,0].
 Stones [0,0] and [1,1] cannot be removed since they do not share a row/column with another stone still on the plane. */
 console.log(removeStones(stones1));
+
+const stones2 = [[0, 0]];
+// Output: 0
+// Explanation: [0,0] is the only stone on the plane, so you cannot remove it.
+console.log(removeStones(stones2));
