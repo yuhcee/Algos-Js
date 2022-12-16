@@ -33,3 +33,18 @@ const guessNumber = function (n) {
 
     return helperRecursive(0, n);
 };
+
+const n = 10,
+    pick = 6;
+// Output: 6
+console.log(guessNumber(n));
+
+const n1 = 1,
+    pick1 = 1;
+// Output: 1
+console.log(guessNumber(n1));
+
+const n2 = 2,
+    pick2 = 1;
+// Output: 1
+console.log(guessNumber(n2));
