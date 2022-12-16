@@ -9,6 +9,12 @@
  *
  * Design an algorithm that runs in less than `O(n)` time complexity.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is in the range `[0, 5 * 104]`.
+ * - `0 <= Node.val <= 5 * 104`
+ * - The tree is guaranteed to be **complete**.
+ *
  * @param {TreeNode} root
  * @return {number}
  */
