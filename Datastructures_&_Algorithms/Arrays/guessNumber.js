@@ -22,4 +22,14 @@
  * @param {number} n
  * @return {number}
  */
-const guessNumber = function (n) {};
+const guessNumber = function (n) {
+    const helperRecursive = (low, high) => {
+        const mid = Math.floor((low + high) / 2);
+
+        if (guess(mid) === 0) return mid;
+        if (guess(mid) === 1) return helperRecursive(mid + 1, high);
+        if (guess(mid) === -1) return helperRecursive(low, mid - 1);
+    };
+
+    return helperRecursive(0, n);
+};
