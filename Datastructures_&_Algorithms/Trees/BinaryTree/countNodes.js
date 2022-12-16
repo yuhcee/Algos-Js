@@ -37,3 +37,6 @@ const root = [1, 2, 3, 4, 5, 6];
 
 const root1 = [];
 // Output: 0
+
+const root2 = [1];
+// Output: 1
