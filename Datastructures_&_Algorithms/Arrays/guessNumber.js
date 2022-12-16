@@ -15,6 +15,10 @@
  *
  * Return *the number that I picked*.
  *
+ * **Constraints:**
+ * - `1 <= n <= 231 - 1`
+ * - `1 <= pick <= n`
+ *
  * @param {number} n
  * @return {number}
  */
