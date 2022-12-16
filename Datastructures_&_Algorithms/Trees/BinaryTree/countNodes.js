@@ -18,4 +18,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const countNodes = function (root) {};
+const countNodes = function (root) {
+    if (!root) return 0;
+    return countNodes(root.left) + countNodes(root.right) + 1;
+};
