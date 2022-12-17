@@ -20,4 +20,40 @@
  * @param {string} s
  * @return {number}
  */
-const calculate = function (s) {};
+const calculate = function (s) {
+    s = s.replace(/ /g, '');
+    const array = [];
+    let res = 0;
+    let sign = 1;
+    let num = '';
+
+    for (let i = 0; i < s.length; i++) {
+        num = '';
+        while (s[i] >= '0' && s[i] <= '9') {
+            num = num + s[i];
+            i++;
+        }
+        res += sign * Number(num);
+
+        switch (s[i]) {
+            case '+':
+                sign = 1;
+                break;
+            case '-':
+                sign = '-1';
+                break;
+            case '(':
+                array.push(res);
+                array.push(sign);
+                res = 0;
+                sign = 1;
+                break;
+            case ')':
+                res = array.pop() * res;
+                res += array.pop();
+                break;
+        }
+    }
+
+    return res;
+};
