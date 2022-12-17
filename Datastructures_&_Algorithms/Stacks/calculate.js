@@ -65,3 +65,7 @@ console.log(calculate(s));
 const s1 = ' 2-1 + 2 ';
 // Output: 3
 console.log(calculate(s1));
+
+const s2 = '(1+(4+5+2)-3)+(6+8)';
+// Output: 23
+console.log(calculate(s2));
