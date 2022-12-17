@@ -33,6 +33,7 @@ const calculate = function (s) {
             num = num + s[i];
             i++;
         }
+
         res += sign * Number(num);
 
         switch (s[i]) {
@@ -57,3 +58,7 @@ const calculate = function (s) {
 
     return res;
 };
+
+const s = '1 + 1';
+// Output: 2
+console.log(calculate(s));
