@@ -31,3 +31,14 @@ var RandomizedSet = function () {
     this.map = {};
     this.values = [];
 };
+
+/** 
+ * @param {number} val
+ * @return {boolean}
+ */
+RandomizedSet.prototype.insert = function(val) {
+    if (this.map[val] !== undefined) return false;
+    this.map[val] = this.values.length;
+    this.values.push(val);
+    return true;
+};
