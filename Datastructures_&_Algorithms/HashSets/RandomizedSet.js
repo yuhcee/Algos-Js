@@ -57,3 +57,19 @@ RandomizedSet.prototype.remove = function (val) {
     this.values[idx] = last;
     return true;
 };
+
+/**
+ * @return {number}
+ */
+RandomizedSet.prototype.getRandom = function () {
+    if (this.values.length === 0) return null;
+    return this.values[Math.floor(Math.random() * this.values.length)];
+};
+
+/**
+ * Your RandomizedSet object will be instantiated and called as such:
+ * var obj = new RandomizedSet()
+ * var param_1 = obj.insert(val)
+ * var param_2 = obj.remove(val)
+ * var param_3 = obj.getRandom()
+ */
