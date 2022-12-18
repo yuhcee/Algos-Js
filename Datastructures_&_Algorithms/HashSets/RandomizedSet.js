@@ -19,7 +19,7 @@
  * complexity.
  *
  * **Constraints:**
- * 
+ *
  * - `-231 <= val <= 231 - 1`
  * - At most `2 * 105` calls will be made to `insert`, `remove`, and `getRandom`.
  * - There will be **at least one** element in the data structure when `getRandom` is called.
@@ -32,13 +32,28 @@ var RandomizedSet = function () {
     this.values = [];
 };
 
-/** 
+/**
  * @param {number} val
  * @return {boolean}
  */
-RandomizedSet.prototype.insert = function(val) {
+RandomizedSet.prototype.insert = function (val) {
     if (this.map[val] !== undefined) return false;
     this.map[val] = this.values.length;
     this.values.push(val);
+    return true;
+};
+
+/**
+ * @param {number} val
+ * @return {boolean}
+ */
+RandomizedSet.prototype.remove = function (val) {
+    if (this.map[val] === undefined) return false;
+    const idx = this.map[val];
+    delete this.map[val];
+    const last = this.values.pop();
+    if (this.values.length === idx) return true;
+    this.map[last] = idx;
+    this.values[idx] = last;
     return true;
 };
