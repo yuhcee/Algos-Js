@@ -12,4 +12,17 @@
  * @param {number[]} arr
  * @return {boolean}
  */
-const uniqueOccurrences = function (arr) {};
+const uniqueOccurrences = function (arr) {
+    const counter = {};
+
+    for (let num of arr) {
+        counter[num] = counter[num] + 1 || 1;
+    }
+
+    let arry = Object.values(counter);
+    let resultToReturn = false;
+
+    resultToReturn = arry.some((num, index) => arry.indexOf(num) !== index);
+
+    return resultToReturn ? false : true;
+};
