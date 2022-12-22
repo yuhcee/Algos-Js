@@ -35,3 +35,6 @@ const s1 = 'textbook';
 /* Explanation: a = "text" and b = "book". a has 1 vowel whereas b has 2. Therefore, they are not alike.
 Notice that the vowel o is counted twice. */
 console.log(halvesAreAlike(s1));
+
+const s2 = 'leetcode';
+console.log(halvesAreAlike(s2));
