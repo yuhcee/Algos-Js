@@ -18,4 +18,14 @@
  * @param {string} s
  * @return {boolean}
  */
-const halvesAreAlike = (s) => {};
+const halvesAreAlike = (s) => {
+    let sum = 0;
+    const vowels = new Set(['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']);
+    for (let i = 0; i < s.length / 2; i++) sum += vowels.has(s[i]) - vowels.has(s[s.length - 1 - i]);
+    return !sum;
+};
+
+const s = 'book';
+// Output: true
+// Explanation: a = "bo" and b = "ok". a has 1 vowel and b has 1 vowel. Therefore, they are alike.
+console.log(halvesAreAlike(s));
