@@ -29,3 +29,9 @@ const s = 'book';
 // Output: true
 // Explanation: a = "bo" and b = "ok". a has 1 vowel and b has 1 vowel. Therefore, they are alike.
 console.log(halvesAreAlike(s));
+
+const s1 = 'textbook';
+// Output: false
+/* Explanation: a = "text" and b = "book". a has 1 vowel whereas b has 2. Therefore, they are not alike.
+Notice that the vowel o is counted twice. */
+console.log(halvesAreAlike(s1));
