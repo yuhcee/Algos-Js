@@ -9,6 +9,11 @@
  *
  * Return `true` if `a` and `b` are alike. Otherwise, return `false`.
  *
+ * **Constraints:**
+ *
+ * - `2 <= s.length <= 1000`
+ * - `s.length` is even.
+ * - `s` consists of uppercase and lowercase letters.
  *
  * @param {string} s
  * @return {boolean}
