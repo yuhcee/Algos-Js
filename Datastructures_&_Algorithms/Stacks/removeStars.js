@@ -46,3 +46,11 @@ const s = 'leet**cod*e';
 - The closest character to the 3rd star is 'd' in "lecod*e". s becomes "lecoe".
 There are no more stars, so we return "lecoe". */
 console.log(removeStars(s));
+
+const s2 = 'a*bc';
+// Output: "bc"
+/* Explanation: Performing the removals from left to right:
+- The closest character to the 1st star is 'a' in "a*bc". s becomes "*bc".
+- The closest character to the 2nd star is 'b' in "*bc". s becomes "c".
+There are no more stars, so we return "c". */
+console.log(removeStars(s2));
