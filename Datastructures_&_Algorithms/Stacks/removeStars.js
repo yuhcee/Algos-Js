@@ -54,3 +54,8 @@ const s2 = 'a*bc';
 - The closest character to the 2nd star is 'b' in "*bc". s becomes "c".
 There are no more stars, so we return "c". */
 console.log(removeStars(s2));
+
+const s3 = 'erase*****';
+// Output: ""
+// Explanation: The entire string is removed, so we return an empty string.
+console.log(removeStars(s3));
