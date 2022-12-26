@@ -18,4 +18,16 @@
  * @param {string} s
  * @return {string}
  */
-const removeStars = function (s) {};
+const removeStars = function (s) {
+    const stack = []; // Initialize a stack to store the characters of the string s
+    for (const c of s) {
+        // Loop through the string s
+        if (c === '*') {
+            // If the current character is a star
+            stack.pop(); // Remove the closest non-star character to its left
+        } else {
+            stack.push(c); // Otherwise, push the current character to the stack
+        }
+    }
+    return stack.join(''); // Return the string formed by joining the characters in the stack
+};
