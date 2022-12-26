@@ -15,6 +15,12 @@
  * - The input will be generated such that the operation is always possible.
  * - It can be shown that the resulting string will always be unique.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 105`
+ * - `s` consists of lowercase English letters and stars *.
+ * - The operation above can be performed on `s`.
+ *
  * @param {string} s
  * @return {string}
  */
