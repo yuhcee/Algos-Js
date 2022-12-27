@@ -94,3 +94,9 @@ const colors = 'abaca',
 // Output: 3
 // Explanation: The path 0 -> 2 -> 3 -> 4 contains 3 nodes that are colored "a" (red in the above image).
 console.log(largestPathValue(colors, edges));
+
+const colors2 = 'a',
+    edges2 = [[0, 0]];
+// Output: -1
+// Explanation: There is a cycle from 0 to 0.
+console.log(largestPathValue(colors2, edges2));
