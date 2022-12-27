@@ -31,5 +31,55 @@
  * @return {number}
  */
 const largestPathValue = function (colors, edges) {
-    
+    const n = colors.length;
+    const graph = Array(n)
+        .fill(null)
+        .map(() => []);
+    const indegree = Array(n).fill(0);
+    const colorCounts = Array(n)
+        .fill(null)
+        .map(() => Array(26).fill(0));
+
+    for (const [u, v] of edges) {
+        graph[u].push(v);
+        indegree[v]++;
+    }
+
+    const stack = [];
+    for (let i = 0; i < n; i++) {
+        if (indegree[i] === 0) {
+            stack.push(i);
+        }
+    }
+
+    let visitedCount = 0;
+    while (stack.length > 0) {
+        const u = stack.pop();
+        visitedCount++;
+
+        colorCounts[u][colors.charCodeAt(u) - 97]++;
+
+        for (const v of graph[u]) {
+            if (--indegree[v] === 0) {
+                stack.push(v);
+            }
+
+            for (let i = 0; i < 26; i++) {
+                colorCounts[v][i] = Math.max(colorCounts[v][i], colorCounts[u][i]);
+            }
+        }
+    }
+
+    if (visitedCount < n) {
+        return -1;
+    }
+
+    let result = 0;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < 26; j++) {
+            result = Math.max(result, colorCounts[i][j]);
+        }
+    }
+
+    return result;
 };
