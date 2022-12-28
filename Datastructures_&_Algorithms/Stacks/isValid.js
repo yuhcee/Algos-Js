@@ -11,11 +11,29 @@
  * Every close bracket has a corresponding open bracket of the same type.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= s.length <= 104`
  * - `s` consists of parentheses only `'()[]{}'`.
- * 
+ *
  * @param {string} s
  * @return {boolean}
  */
-const isValid = function (s) {};
+const isValid = function (s) {
+    const stack = [];
+    const map = {
+        '(': ')',
+        '[': ']',
+        '{': '}',
+    };
+    for (let i = 0; i < s.length; i++) {
+        if (map[s[i]]) {
+            stack.push(s[i]);
+        } else {
+            if (map[stack.pop()] !== s[i]) {
+                return false;
+            }
+        }
+    }
+    return stack.length === 0;
+};
+
