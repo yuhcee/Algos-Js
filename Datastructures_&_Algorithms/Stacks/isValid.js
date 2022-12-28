@@ -37,3 +37,6 @@ const isValid = function (s) {
     return stack.length === 0;
 };
 
+const s = '()';
+// Output: true
+console.log(isValid(s));
