@@ -48,3 +48,7 @@ console.log(isValid(s2));
 const s3 = '(]';
 // Output: false
 console.log(isValid(s3));
+
+const s4 = '([)]';
+// Output: false
+console.log(isValid(s4));
