@@ -40,3 +40,7 @@ const isValid = function (s) {
 const s = '()';
 // Output: true
 console.log(isValid(s));
+
+const s2 = '()[]{}';
+// Output: true
+console.log(isValid(s2));
