@@ -31,5 +31,27 @@
  * @return {number}
  */
 const nearestExit = (maze, [y0, x0]) => {
-    
+    maze[y0][x0] = '@';
+    let queue = [[y0, x0]];
+    for (let step = 0; queue.length; ++step) {
+        const q = [];
+        for (const [y, x] of queue)
+            for (let [dy, dx] of [
+                [-1, 0],
+                [0, -1],
+                [1, 0],
+                [0, 1],
+            ]) {
+                const ny = y + dy,
+                    nx = x + dx;
+                if (!maze[ny] || !maze[ny][nx]) {
+                    if (step) return step;
+                } else if (maze[ny][nx] === '.') {
+                    q.push([ny, nx]);
+                    maze[ny][nx] = '*';
+                }
+            }
+        queue = q;
+    }
+    return -1;
 };
