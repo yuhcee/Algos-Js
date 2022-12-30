@@ -48,3 +48,7 @@ console.log(output);
 
 const output2 = MultipleBrackets('((hello [world])');
 console.log(output2);
+
+const output3 = MultipleBrackets('(c([od]er)) b(yt[e])');
+// output: "1 5"
+console.log(output3);
