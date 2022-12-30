@@ -21,7 +21,6 @@ function MultipleBrackets(str) {
     const map = {
         '(': ')',
         '[': ']',
-        '{': '}',
     };
 
     for (let i = 0; i < str.length; i++) {
