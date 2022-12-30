@@ -12,6 +12,7 @@
  *
  * If `str` contains no brackets return `1`.
  *
+ *
  * @param {string} str
  * @return {string}
  */
@@ -41,3 +42,6 @@ function MultipleBrackets(str) {
 
     return `1 ${numBrackets}`;
 }
+
+const output = MultipleBrackets('(hello [world])(!)');
+console.log(output);
