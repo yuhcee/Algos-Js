@@ -45,3 +45,6 @@ function MultipleBrackets(str) {
 
 const output = MultipleBrackets('(hello [world])(!)');
 console.log(output);
+
+const output2 = MultipleBrackets('((hello [world])');
+console.log(output2);
