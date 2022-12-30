@@ -52,3 +52,7 @@ console.log(output2);
 const output3 = MultipleBrackets('(c([od]er)) b(yt[e])');
 // output: "1 5"
 console.log(output3);
+
+const output4 = MultipleBrackets('(c([od]er)) b(yt[e)');
+// output: "0"
+console.log(output4);
