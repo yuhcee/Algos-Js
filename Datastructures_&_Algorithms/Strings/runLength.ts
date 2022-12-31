@@ -51,3 +51,6 @@ console.log(RunLength(str2));
 
 const str3: string = 'wwwbbbw';
 console.log(RunLength(str3));
+
+const str4: string = 'wwwbbbwwww';
+console.log(RunLength(str4));
