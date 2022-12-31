@@ -42,3 +42,6 @@ const RunLength = (str: string): string => {
 
     return output + CHALLENGETOKEN.slice(-lastChar);
 };
+
+const str: string = 'wwwggopp';
+console.log(RunLength(str));
