@@ -36,8 +36,9 @@ const RunLength = (str: string): string => {
     let output: string = '';
 
     for (let i = 0; i < result.length; i++) {
-        output += result[i] + CHALLENGETOKEN[i % CHALLENGETOKEN.length];
+        output += result[i] + CHALLENGETOKEN[i];
     }
+    const lastChar: number = CHALLENGETOKEN.length - result.length;
 
-    return output;
+    return output + CHALLENGETOKEN.slice(-lastChar);
 };
