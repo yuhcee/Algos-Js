@@ -49,4 +49,5 @@ console.log(RunLength(str));
 const str2: string = 'aabbcde';
 console.log(RunLength(str2));
 
-
+const str3: string = 'wwwbbbw';
+console.log(RunLength(str3));
