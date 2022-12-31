@@ -45,3 +45,8 @@ const RunLength = (str: string): string => {
 
 const str: string = 'wwwggopp';
 console.log(RunLength(str));
+
+const str2: string = 'aabbcde';
+console.log(RunLength(str2));
+
+
