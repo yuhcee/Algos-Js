@@ -57,3 +57,13 @@ const points = [
 - Shoot an arrow at x = 6, bursting the balloons [2,8] and [1,6].
 - Shoot an arrow at x = 11, bursting the balloons [10,16] and [7,12]. */
 console.log(findMinArrowShots(points));
+
+const points1 = [
+    [1, 2],
+    [3, 4],
+    [5, 6],
+    [7, 8],
+];
+// Output: 4
+// Explanation: One arrow needs to be shot for each balloon for a total of 4 arrows.
+console.log(findMinArrowShots(points1));
