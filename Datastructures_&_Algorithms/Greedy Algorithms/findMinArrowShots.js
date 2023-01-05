@@ -22,4 +22,26 @@
  * @param {number[][]} points
  * @return {number}
  */
-const findMinArrowShots = function (points) {};
+const findMinArrowShots = function (points) {
+    if (!points) return 0;
+
+    // Sort the balloons by their starting x-coordinates
+    points.sort((a, b) => a[0] - b[0]);
+
+    let end = points[0][1];
+    let arrowCount = 1;
+
+    // Keep track of the ending x-coordinate of the current balloon
+    for (let i = 0; i < points.length; i++) {
+        if (points[i][0] <= end) {
+            // The next balloon starts before the ending x-coordinate of the current balloon, so we  update the ending x-coordinate to the minimum of the two
+            end = Math.min(end, points[i][1]);
+        } else {
+            // The next balloon starts after the ending x-coordinate of the current balloon, so we need to shoot a separate arrow for it
+            end = points[i][1];
+            arrowCount += 1;
+        }
+    }
+
+    return arrowCount;
+};
