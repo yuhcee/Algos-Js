@@ -11,6 +11,13 @@
  *
  * **Note**: The boy can buy the ice cream bars in any order.
  *
+ * **Constraints:**
+ *
+ * - `costs.length == n`
+ * - `1 <= n <= 105`
+ * - `1 <= costs[i] <= 105`
+ * - `1 <= coins <= 108`
+ *
  * @param {number[]} costs
  * @param {number} coins
  * @return {number}
