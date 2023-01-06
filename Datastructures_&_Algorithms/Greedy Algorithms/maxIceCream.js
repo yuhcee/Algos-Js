@@ -22,4 +22,18 @@
  * @param {number} coins
  * @return {number}
  */
-const maxIceCream = function (costs, coins) {};
+const maxIceCream = function (costs, coins) {
+    costs.sort((a, b) => a - b);
+    let count = 0;
+
+    for (let cost of costs) {
+        if (coins < cost) {
+            break;
+        } else {
+            coins -= cost;
+            count += 1;
+        }
+    }
+
+    return count;
+};
