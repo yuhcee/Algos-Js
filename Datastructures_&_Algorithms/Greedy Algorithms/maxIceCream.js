@@ -49,3 +49,9 @@ const costs1 = [10, 6, 8, 7, 7, 8],
 // Output: 0
 // Explanation: The boy cannot afford any of the ice cream bars.
 console.log(maxIceCream(costs1, coins1));
+
+const costs2 = [1, 6, 3, 1, 2, 5],
+    coins2 = 20;
+// Output: 6
+// Explanation: The boy can buy all the ice cream bars for a total price of 1 + 6 + 3 + 1 + 2 + 5 = 18.
+console.log(maxIceCream(costs2, coins2));
