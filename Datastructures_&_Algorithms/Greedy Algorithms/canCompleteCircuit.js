@@ -10,6 +10,12 @@
  * circuit once in the clockwise direction, otherwise return `-1`*. If there exists a solution, it is **guaranteed** to
  * be **unique**
  *
+ * **Constraints:**
+ *
+ * - `n == gas.length == cost.length`
+ * - `1 <= n <= 105`
+ * - `0 <= gas[i], cost[i] <= 104`
+ *
  * @param {number[]} gas
  * @param {number[]} cost
  * @return {number}
