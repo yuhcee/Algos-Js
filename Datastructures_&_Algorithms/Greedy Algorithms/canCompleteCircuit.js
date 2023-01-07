@@ -20,4 +20,22 @@
  * @param {number[]} cost
  * @return {number}
  */
-const canCompleteCircuit = (gas, cost) => {};
+const canCompleteCircuit = (gas, cost) => {
+    const n = gas.length;
+    let totalTank = 0;
+    let currTank = 0;
+    let startingStation = 0;
+
+    for (let i = 0; i < n; i++) {
+        totalTank += gas[i] - cost[i];
+        currTank += gas[i] - cost[i];
+        // If one couldn't get here,
+        if (currTank < 0) {
+            // Pick up the next station as the starting one.
+            startingStation = i + 1;
+            // Start with an empty tank.
+            currTank = 0;
+        }
+    }
+    return totalTank >= 0 ? startingStation : -1;
+};
