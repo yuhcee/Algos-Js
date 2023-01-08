@@ -57,3 +57,14 @@ const points = [
 ];
 // Output: 3
 console.log(maxPoints(points));
+
+const points1 = [
+    [1, 1],
+    [3, 2],
+    [5, 3],
+    [4, 1],
+    [2, 3],
+    [1, 4],
+];
+// Output: 4
+console.log(maxPoints(points1));
