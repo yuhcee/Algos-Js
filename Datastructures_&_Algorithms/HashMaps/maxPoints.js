@@ -49,3 +49,11 @@ const maxPoints = (points) => {
     }
     return maxPoints;
 };
+
+const points = [
+    [1, 1],
+    [2, 2],
+    [3, 3],
+];
+// Output: 3
+console.log(maxPoints(points));
