@@ -68,3 +68,15 @@ const points1 = [
 ];
 // Output: 4
 console.log(maxPoints(points1));
+
+const points2 = [
+    [1, 1],
+    [2, 2],
+    [3, 3],
+    [3, 3],
+    [3, 3],
+    [3, 3],
+    [3, 3],
+    [3, 3],
+];
+console.log(maxPoints(points2));
