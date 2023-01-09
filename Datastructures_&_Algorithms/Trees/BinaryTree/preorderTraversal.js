@@ -43,6 +43,36 @@ const preorderTraversal = function (root) {
     return values;
 };
 
+// ITERATIVE APPROACH
+
+function preorderTraversal(root) {
+    // Create a stack to store the nodes visited
+    const stack = [];
+
+    // Create a list to store the values of the nodes visited
+    const values = [];
+
+    // Initialize the current node to the root of the tree
+    let current = root;
+
+    // Continue traversing the tree as long as there are nodes in the stack or the current node is not null
+    while (stack.length > 0 || current !== null) {
+        // If the current node is not null, add its value to the list and push it onto the stack
+        if (current !== null) {
+            values.push(current.val);
+            stack.push(current);
+            current = current.left;
+        } else {
+            // If the current node is null, pop the top node from the stack and set it as the current node
+            current = stack.pop();
+            current = current.right;
+        }
+    }
+
+    // Return the list of values
+    return values;
+}
+
 const root = [1, null, 2, 3];
 // Output: [1,2,3]
 console.log(preorderTraversal(root));
