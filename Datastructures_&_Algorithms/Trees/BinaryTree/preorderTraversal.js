@@ -43,3 +43,7 @@ console.log(preorderTraversal(root));
 const root1 = [];
 // Output: []
 console.log(preorderTraversal(root1));
+
+const root2 = [1];
+// Output: [1]
+console.log(preorderTraversal(root2));
