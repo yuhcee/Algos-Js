@@ -20,19 +20,26 @@
  * @return {number[]}
  */
 const preorderTraversal = function (root) {
+    // Create a list to store the values of the nodes visited
     const values = [];
 
+    // Define the recursive helper function
     function traverse(node) {
+        // Base case: if the node is null, return
         if (node === null) return;
 
+        // Add the value of the current node to the list
         values.push(node.val);
 
+        // Recursively traverse the left and right subtrees
         traverse(node.left);
         traverse(node.right);
     }
 
+    // Start the traversal at the root of the tree
     traverse(root);
 
+    // Return the list of values
     return values;
 };
 
