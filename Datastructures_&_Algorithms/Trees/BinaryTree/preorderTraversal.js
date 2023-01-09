@@ -39,3 +39,7 @@ const preorderTraversal = function (root) {
 const root = [1, null, 2, 3];
 // Output: [1,2,3]
 console.log(preorderTraversal(root));
+
+const root1 = [];
+// Output: []
+console.log(preorderTraversal(root1));
