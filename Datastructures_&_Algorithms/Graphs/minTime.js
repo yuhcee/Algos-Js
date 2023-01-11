@@ -24,4 +24,24 @@
  * @param {boolean[]} hasApple
  * @return {number}
  */
-const minTime = function (n, edges, hasApple) {};
+const minTime = function (n, edges, hasApple) {
+    let parentMap = {};
+
+    for (let [parent, child] of edges) parentMap[child] = parent;
+
+    let seen = {};
+    let res = 0;
+
+    for (let i = 0; i < hasApple.length; i++) {
+        if (hasApple[i]) {
+            let curNode = i;
+
+            while (curNode !== 0 && !seen[curNode]) {
+                seen[curNode] = true;
+                curNode = parentMap[curNode];
+                res += 2;
+            }
+        }
+    }
+    return res;
+};
