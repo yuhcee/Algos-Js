@@ -45,3 +45,17 @@ const minTime = function (n, edges, hasApple) {
     }
     return res;
 };
+
+const n = 7,
+    edges = [
+        [0, 1],
+        [0, 2],
+        [1, 4],
+        [1, 5],
+        [2, 3],
+        [2, 6],
+    ],
+    hasApple = [false, false, true, false, true, true, false];
+// Output: 8
+/* Explanation: The figure above represents the given tree where red vertices have an apple. One optimal path to collect all apples is shown by the green arrows.   */
+console.log(minTime(n, edges, hasApple));
