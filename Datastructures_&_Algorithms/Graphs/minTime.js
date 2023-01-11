@@ -10,6 +10,15 @@
  * exists an edge connecting the vertices `ai` and `bi`. Additionally, there is a boolean array `hasApple`,
  * where `hasApple[i] = true` means that vertex `i` has an apple; otherwise, it does not have any apple.
  *
+ * **Constraints**:
+ *
+ * - `1 <= n <= 105`
+ * - `edges.length == n - 1`
+ * - `edges[i].length == 2`
+ * - `0 <= ai < bi <= n - 1`
+ * - `fromi < toi`
+ * - `hasApple.length == n`
+ *
  * @param {number} n
  * @param {number[][]} edges
  * @param {boolean[]} hasApple
