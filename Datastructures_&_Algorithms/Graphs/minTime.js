@@ -59,3 +59,17 @@ const n = 7,
 // Output: 8
 /* Explanation: The figure above represents the given tree where red vertices have an apple. One optimal path to collect all apples is shown by the green arrows.   */
 console.log(minTime(n, edges, hasApple));
+
+const n1 = 7,
+    edges1 = [
+        [0, 1],
+        [0, 2],
+        [1, 4],
+        [1, 5],
+        [2, 3],
+        [2, 6],
+    ],
+    hasApple1 = [false, false, true, false, false, true, false];
+// Output: 6
+/* Explanation: The figure above represents the given tree where red vertices have an apple. One optimal path to collect all apples is shown by the green arrows. */
+console.log(minTime(n1, edges1, hasApple1));
