@@ -22,6 +22,13 @@
  * 
  * The functions `get` and `put` must each run in `O(1)` average time complexity.
  * 
+ * **Constraints:**
+ * 
+ * - `0 <= capacity <= 104`
+ * - `0 <= key <= 105`
+ * - `0 <= value <= 109`
+ * - At most 2 * 105 calls will be made to get and put.
+ * 
  * @param {number} capacity
  */
 const LFUCache = function (capacity) {}
