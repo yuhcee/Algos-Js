@@ -53,3 +53,16 @@ const LFUCache = function (capacity) {
         }
     };
 };
+
+/** 
+ * @param {number} key
+ * @return {number}
+ */
+LFUCache.prototype.get = function (key) {
+    if (this.cache.get(key)) {
+        this.increaseCount(key, this.cache.get(key).count);
+        this.cache.get(key).count++;
+        return this.cache.get(key).value;
+    }
+    return -1;
+};
