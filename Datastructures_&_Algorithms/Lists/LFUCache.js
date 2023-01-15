@@ -54,7 +54,7 @@ const LFUCache = function (capacity) {
     };
 };
 
-/** 
+/**
  * @param {number} key
  * @return {number}
  */
@@ -65,4 +65,30 @@ LFUCache.prototype.get = function (key) {
         return this.cache.get(key).value;
     }
     return -1;
+};
+
+/**
+ * @param {number} key
+ * @param {number} value
+ * @return {void}
+ */
+LFUCache.prototype.put = function (key, value) {
+    if (this.capacity === 0) return;
+
+    if (this.cache.size == this.capacity && !this.cache.has(key)) {
+        let keyToDelete = this.count.get(this.minCount).values().next().value;
+        this.cache.delete(keyToDelete);
+        this.count.get(this.minCount).delete(keyToDelete);
+        if (this.count.get(this.minCount).size == 0) this.count.delete(this.minCount);
+    }
+
+    if (this.cache.has(key)) {
+        let count = this.cache.get(key).count;
+        this.cache.set(key, { value: value, count: count + 1 });
+        this.increaseCount(key, count);
+    } else {
+        this.cache.set(key, { value: value, count: 1 });
+        this.increaseCount(key, 0);
+        this.minCount = 1;
+    }
 };
