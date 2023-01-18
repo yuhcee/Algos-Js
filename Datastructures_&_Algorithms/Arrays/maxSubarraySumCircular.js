@@ -55,3 +55,8 @@ const maxSubarraySumCircular = (nums) => {
 
     return Math.max(nonCircularMaxSum, totalSum - circularMinSum);
 };
+
+const nums = [1, -2, 3, -2];
+// Output: 3
+// Explanation: Subarray [3] has maximum sum 3.
+console.log(maxSubarraySumCircular(nums));
