@@ -65,3 +65,8 @@ const nums1 = [5, -3, 5];
 // Output: 10
 // Explanation: Subarray [5,5] has maximum sum 5 + 5 = 10.
 console.log(maxSubarraySumCircular(nums1));
+
+const nums2 = [-3, -2, -3];
+// Output: -2
+// Explanation: Subarray [-2] has maximum sum -2.
+console.log(maxSubarraySumCircular(nums2));
