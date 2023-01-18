@@ -12,6 +12,12 @@
  * a subarray `nums[i], nums[i + 1], ..., nums[j]`, there does not exist `i <= k1`, `k2 <= j` with `k1
  * % n == k2 % n`.
  *
+ * **Constraints:**
+ *
+ * - `n == nums.length`
+ * - `1 <= n <= 3 * 104`
+ * - `-3 * 104 <= nums[i] <= 3 * 104`
+ *
  * @param {number[]} nums
  * @return {number}
  */
