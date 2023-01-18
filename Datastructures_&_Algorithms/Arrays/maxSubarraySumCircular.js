@@ -21,4 +21,37 @@
  * @param {number[]} nums
  * @return {number}
  */
-const maxSubarraySumCircular = (nums) => {};
+const maxSubarraySumCircular = (nums) => {
+    // case where all elements are negative
+    let allNeg = true;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] >= 0) {
+            allNeg = false;
+            break;
+        }
+    }
+    if (allNeg) {
+        return Math.max(...nums);
+    }
+
+    // case where subarray is not circular
+    let nonCircularMaxSum = nums[0];
+    let nonCircularCurrSum = nums[0];
+    for (let i = 1; i < nums.length; i++) {
+        nonCircularCurrSum = Math.max(nums[i], nonCircularCurrSum + nums[i]);
+        nonCircularMaxSum = Math.max(nonCircularMaxSum, nonCircularCurrSum);
+    }
+
+    // case where subarray is circular
+    let totalSum = 0;
+    let circularMinSum = 0;
+    let circularCurrSum = 0;
+    for (let i = 0; i < nums.length; i++) {
+        totalSum += nums[i];
+        circularCurrSum += nums[i];
+        circularCurrSum = Math.min(circularCurrSum, 0);
+        circularMinSum = Math.min(circularMinSum, circularCurrSum);
+    }
+
+    return Math.max(nonCircularMaxSum, totalSum - circularMinSum);
+};
