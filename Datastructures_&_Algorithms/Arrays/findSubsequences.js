@@ -46,3 +46,7 @@ const findSubsequences = (nums) => {
 const nums = [4, 6, 7, 7];
 // Output: [[4,6],[4,6,7],[4,6,7,7],[4,7],[4,7,7],[6,7],[6,7,7],[7,7]]
 console.log(findSubsequences(nums));
+
+const nums1 = [4, 4, 3, 2, 1];
+// Output: [[4,4]]
+console.log(findSubsequences(nums1));
