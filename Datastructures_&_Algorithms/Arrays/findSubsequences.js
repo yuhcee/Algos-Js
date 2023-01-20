@@ -42,3 +42,7 @@ const findSubsequences = (nums) => {
     backtrack(0, []);
     return res;
 };
+
+const nums = [4, 6, 7, 7];
+// Output: [[4,6],[4,6,7],[4,6,7,7],[4,7],[4,7,7],[6,7],[6,7,7],[7,7]]
+console.log(findSubsequences(nums));
