@@ -73,6 +73,10 @@ const s = '25525511135';
 
 console.log(restoreIpAddresses(s));
 
-const s1 = "0000"
+const s1 = '0000';
 // Output: ["0.0.0.0"]
 console.log(restoreIpAddresses(s1));
+
+const s2 = '101023';
+// Output: ["1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"]
+console.log(restoreIpAddresses(s2));
