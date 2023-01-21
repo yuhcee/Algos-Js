@@ -21,3 +21,20 @@
  * @return {string[]}
  */
 const restoreIpAddresses = function (s) {};
+
+
+function isValidSegment(s) {
+    // s should be between 1 and 3 digits long
+    if (s.length > 3) {
+        return false;
+    }
+    // s should not have leading zeros
+    if (s.length > 1 && s[0] === '0') {
+        return false;
+    }
+    // s should be less than or equal to 255
+    if (parseInt(s) > 255) {
+        return false;
+    }
+    return true;
+}
