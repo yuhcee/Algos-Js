@@ -72,3 +72,7 @@ const s = '25525511135';
 // Output: ["255.255.11.135","255.255.111.35"]
 
 console.log(restoreIpAddresses(s));
+
+const s1 = "0000"
+// Output: ["0.0.0.0"]
+console.log(restoreIpAddresses(s1));
