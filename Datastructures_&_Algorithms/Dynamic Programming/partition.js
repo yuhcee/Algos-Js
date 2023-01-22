@@ -47,3 +47,6 @@ console.log(partition(s));
 const s1 = 'a';
 // Output: [["a"]]
 console.log(partition(s1));
+
+const s2 = 'abbababa';
+console.log(partition(s2));
