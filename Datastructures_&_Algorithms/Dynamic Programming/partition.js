@@ -31,3 +31,8 @@ function backtrack(s, temp, result) {
         }
     }
 }
+
+function isPalindrome(s) {
+    // helper function to check if a string is a palindrome
+    return s === s.split('').reverse().join('');
+}
