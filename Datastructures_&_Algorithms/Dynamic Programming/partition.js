@@ -40,3 +40,6 @@ function isPalindrome(s) {
     // helper function to check if a string is a palindrome
     return s === s.split('').reverse().join('');
 }
+const s = 'aab';
+// Output: [["a","a","b"],["aa","b"]]
+console.log(partition(s));
