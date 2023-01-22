@@ -43,3 +43,7 @@ function isPalindrome(s) {
 const s = 'aab';
 // Output: [["a","a","b"],["aa","b"]]
 console.log(partition(s));
+
+const s1 = 'a';
+// Output: [["a"]]
+console.log(partition(s1));
