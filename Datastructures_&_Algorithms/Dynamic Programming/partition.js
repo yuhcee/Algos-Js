@@ -12,7 +12,11 @@
  * @param {string} s
  * @return {string[][]}
  */
-const partition = function (s) {};
+const partition = function (s) {
+    let result = [];
+    backtrack(s, [], result);
+    return result;
+};
 
 function backtrack(s, temp, result) {
     // base case: if the current string is empty, add the current partition to the result
