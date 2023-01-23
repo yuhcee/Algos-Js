@@ -59,3 +59,8 @@ const findJudge = function (N, trust) {
     // no judge found
     return -1;
 };
+
+const n = 2,
+    trust = [[1, 2]];
+// Output: 2
+console.log(findJudge(n, trust));
