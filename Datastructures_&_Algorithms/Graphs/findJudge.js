@@ -64,3 +64,11 @@ const n = 2,
     trust = [[1, 2]];
 // Output: 2
 console.log(findJudge(n, trust));
+
+const n1 = 3,
+    trust1 = [
+        [1, 3],
+        [2, 3],
+    ];
+// Output: 3
+console.log(findJudge(n1, trust1));
