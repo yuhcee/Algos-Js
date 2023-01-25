@@ -91,3 +91,11 @@ const edges = [2, 2, 3, -1],
 // The maximum of those two distances is 1. It can be proven that we cannot get a node with a smaller maximum distance than 1, so we return node 2.
 
 console.log(closestMeetingNode(edges, node1, node2));
+
+const edges1 = [1, 2, -1],
+    node11 = 0,
+    node21 = 2;
+// Output: 2
+/* Explanation: The distance from node 0 to node 2 is 2, and the distance from node 2 to itself is 0.
+The maximum of those two distances is 2. It can be proven that we cannot get a node with a smaller maximum distance than 2, so we return node 2. */
+console.log(closestMeetingNode(edges1, node11, node21));
