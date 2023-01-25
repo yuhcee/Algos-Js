@@ -17,6 +17,14 @@
  * 
  * Note that `edges` may contain cycles.
  * 
+ * **Constraints**:
+ * 
+ * - `n == edges.length`
+ * - `2 <= n <= 105`
+ * - `-1 <= edges[i] < n`
+ * - `edges[i] != i`
+ * - `0 <= node1, node2 < n`
+ * 
  * @param {number[]} edges
  * @param {number} node1
  * @param {number} node2
