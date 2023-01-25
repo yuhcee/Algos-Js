@@ -82,3 +82,12 @@ function getDistances(index, edges) {
     // return the Map of distances
     return distances;
 }
+
+const edges = [2, 2, 3, -1],
+    node1 = 0,
+    node2 = 1;
+// Output: 2
+// Explanation: The distance from node 0 to node 2 is 1, and the distance from node 1 to node 2 is 1.
+// The maximum of those two distances is 1. It can be proven that we cannot get a node with a smaller maximum distance than 1, so we return node 2.
+
+console.log(closestMeetingNode(edges, node1, node2));
