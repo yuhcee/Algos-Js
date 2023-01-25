@@ -60,3 +60,25 @@ const closestMeetingNode = function (edges, node1, node2) {
     // return the closest meeting node
     return target;
 };
+
+// function to calculate the distance from a starting node to all other nodes in the graph
+// index: integer representing the starting node
+// edges: array of integers representing the edges in the graph, with each index representing a node and the value at that index representing the next node in the edge
+// returns: Map object with keys as the node and values as the distance from the starting node
+function getDistances(index, edges) {
+    // create a Map to store the distances
+    const distances = new Map();
+    // initialize distance to 0
+    let distance = 0;
+    // loop until we have reached the starting node or a node that has already been visited
+    while (!distances.has(index) && index !== -1) {
+        // store the distance for this node
+        distances.set(index, distance);
+        // increment distance
+        distance++;
+        // update index to the next node in the edge
+        index = edges[index];
+    }
+    // return the Map of distances
+    return distances;
+}
