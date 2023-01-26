@@ -105,3 +105,18 @@ const n1 = 3,
 The graph is shown above.
 The optimal path with at most 1 stop from city 0 to 2 is marked in red and has cost 100 + 100 = 200. */
 console.log(findCheapestPrice(n1, flights1, src1, dst1, k1));
+
+const n2 = 3,
+    flights2 = [
+        [0, 1, 100],
+        [1, 2, 100],
+        [0, 2, 500],
+    ],
+    src2 = 0,
+    dst2 = 2,
+    k2 = 0;
+// Output: 500
+/* Explanation:
+The graph is shown above.
+The optimal path with no stops from city 0 to 2 is marked in red and has cost 500. */
+console.log(findCheapestPrice(n2, flights2, src2, dst2, k2));
