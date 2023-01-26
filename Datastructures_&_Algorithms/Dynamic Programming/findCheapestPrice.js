@@ -90,3 +90,18 @@ The graph is shown above.
 The optimal path with at most 1 stop from city 0 to 3 is marked in red and has cost 100 + 600 = 700.
 Note that the path through cities [0,1,2,3] is cheaper but is invalid because it uses 2 stops. */
 console.log(findCheapestPrice(n, flights, src, dst, k));
+
+const n1 = 3,
+    flights1 = [
+        [0, 1, 100],
+        [1, 2, 100],
+        [0, 2, 500],
+    ],
+    src1 = 0,
+    dst1 = 2,
+    k1 = 1;
+// Output: 200
+/* Explanation:
+The graph is shown above.
+The optimal path with at most 1 stop from city 0 to 2 is marked in red and has cost 100 + 100 = 200. */
+console.log(findCheapestPrice(n1, flights1, src1, dst1, k1));
