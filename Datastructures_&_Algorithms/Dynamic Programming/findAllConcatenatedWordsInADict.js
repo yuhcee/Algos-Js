@@ -63,3 +63,10 @@ function canFormWord(word, wordSet) {
     // Return whether the entire word can be formed
     return dp[word.length];
 }
+
+const words = ['cat', 'cats', 'catsdogcats', 'dog', 'dogcatsdog', 'hippopotamuses', 'rat', 'ratcatdogcat'];
+// Output: ["catsdogcats","dogcatsdog","ratcatdogcat"]
+/* Explanation: "catsdogcats" can be concatenated by "cats", "dog" and "cats"; 
+"dogcatsdog" can be concatenated by "dog", "cats" and "dog"; 
+"ratcatdogcat" can be concatenated by "rat", "cat", "dog" and "cat". */
+console.log(findAllConcatenatedWordsInADict(words));
