@@ -37,3 +37,29 @@ const findAllConcatenatedWordsInADict = function (words) {
     // Return the array of concatenated words
     return concatenatedWords;
 };
+
+/**
+ * Helper function to check if a word can be formed by concatenating other words in a given set
+ * @param {string} word - The word to check
+ * @param {Set} wordSet - The set of words to check against
+ * @return {boolean} - Whether the word can be formed by concatenating words in the set
+ */
+function canFormWord(word, wordSet) {
+    // Initialize an array of booleans with the same length as the word
+    const dp = new Array(word.length + 1).fill(false);
+    // The empty string can always be formed
+    dp[0] = true;
+    // Iterate through the word
+    for (let i = 1; i <= word.length; i++) {
+        // Iterate through all possible substring lengths
+        for (let j = 0; j < i; j++) {
+            // Check if the current substring is in the set and if the remaining substring can be formed
+            if (wordSet.has(word.substring(j, i)) && dp[j]) {
+                dp[i] = true;
+                break;
+            }
+        }
+    }
+    // Return whether the entire word can be formed
+    return dp[word.length];
+}
