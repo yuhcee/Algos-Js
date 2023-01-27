@@ -70,3 +70,7 @@ const words = ['cat', 'cats', 'catsdogcats', 'dog', 'dogcatsdog', 'hippopotamuse
 "dogcatsdog" can be concatenated by "dog", "cats" and "dog"; 
 "ratcatdogcat" can be concatenated by "rat", "cat", "dog" and "cat". */
 console.log(findAllConcatenatedWordsInADict(words));
+
+const words1 = ['cat', 'dog', 'catdog'];
+// Output: ["catdog"]
+console.log(findAllConcatenatedWordsInADict(words1));
