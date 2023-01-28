@@ -38,3 +38,10 @@ const tribonacci = (n) => {
     // Return the nth term
     return c;
 };
+
+const n = 4;
+// Output: 4
+/* Explanation:
+T_3 = 0 + 1 + 1 = 2
+T_4 = 1 + 1 + 2 = 4 */
+console.log(tribonacci(n));
