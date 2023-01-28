@@ -15,4 +15,26 @@
  * @param {number} n
  * @return {number}
  */
-const tribonacci = (n) => {};
+const tribonacci = (n) => {
+    // If n is 0, return 0
+    if (n === 0) return 0;
+
+    // If n is 1 or 2, return 1
+    if (n === 1 || n === 2) return 1;
+
+    // Initialize variables for first three terms in the sequence
+    let a = 0,
+        b = 1,
+        c = 1;
+
+    // Loop through to calculate the next terms in the sequence
+    for (let i = 3; i <= n; i++) {
+        // Shift the values of a, b, and c to calculate the next term
+        let d = a + b + c;
+        a = b;
+        b = c;
+        c = d;
+    }
+    // Return the nth term
+    return c;
+};
