@@ -49,3 +49,7 @@ console.log(tribonacci(n));
 const n1 = 25;
 // Output: 1389537
 console.log(tribonacci(n1));
+
+const n2 = 8;
+// Output: 1389537
+console.log(tribonacci(n2));
