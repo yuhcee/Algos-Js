@@ -45,3 +45,7 @@ const n = 4;
 T_3 = 0 + 1 + 1 = 2
 T_4 = 1 + 1 + 2 = 4 */
 console.log(tribonacci(n));
+
+const n1 = 25;
+// Output: 1389537
+console.log(tribonacci(n1));
