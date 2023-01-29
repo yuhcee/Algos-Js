@@ -24,3 +24,8 @@ const gcdOfStrings = (str1, str2) => {
     let len = gcd(str1.length, str2.length);
     return str1.substring(0, len);
 };
+
+const str1 = 'ABCABC',
+    str2 = 'ABC';
+// Output: "ABC"
+console.log(gcdOfStrings(str1, str2));
