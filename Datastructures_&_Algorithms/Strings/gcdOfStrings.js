@@ -29,3 +29,8 @@ const str1 = 'ABCABC',
     str2 = 'ABC';
 // Output: "ABC"
 console.log(gcdOfStrings(str1, str2));
+
+const str11 = 'ABABAB',
+    str21 = 'ABAB';
+// Output: "AB"
+console.log(gcdOfStrings(str11, str21));
