@@ -16,4 +16,11 @@
  * @param {string} str2
  * @return {string}
  */
-const gcdOfStrings = (str1, str2) => {};
+const gcdOfStrings = (str1, str2) => {
+    if (str1 + str2 !== str2 + str1) return '';
+    function gcd(a, b) {
+        return b === 0 ? a : gcd(b, a % b);
+    }
+    let len = gcd(str1.length, str2.length);
+    return str1.substring(0, len);
+};
