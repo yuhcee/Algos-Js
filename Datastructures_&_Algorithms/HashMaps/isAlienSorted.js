@@ -18,4 +18,28 @@
  * @param {string} order
  * @return {boolean}
  */
-const isAlienSorted = (words, order) => {};
+const isAlienSorted = (words, order) => {
+    // Create a map to store the order of the alphabet
+    let map = new Map();
+    for (let i = 0; i < order.length; i++) {
+        map.set(order[i], i);
+    }
+
+    // Compare each pair of adjacent words
+    for (let i = 0; i < words.length - 1; i++) {
+        let word1 = words[i];
+        let word2 = words[i + 1];
+        let len = Math.min(word1.length, word2.length);
+        for (let j = 0; j < len; j++) {
+            if (map.get(word1[j]) < map.get(word2[j])) {
+                break;
+            } else if (map.get(word1[j]) > map.get(word2[j])) {
+                return false;
+            } else if (j === len - 1 && word1.length > word2.length) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+};
