@@ -49,3 +49,9 @@ const words = ['hello', 'leetcode'],
 // Output: true
 // Explanation: As 'h' comes before 'l' in this language, then the sequence is sorted.
 console.log(isAlienSorted(words, order));
+
+const words1 = ['word', 'world', 'row'],
+    order1 = 'worldabcefghijkmnpqstuvxyz';
+// Output: false
+// Explanation: As 'd' comes after 'l' in this language, then words[0] > words[1], hence the sequence is unsorted.
+console.log(isAlienSorted(words1, order1));
