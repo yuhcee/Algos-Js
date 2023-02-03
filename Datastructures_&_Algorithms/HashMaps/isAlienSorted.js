@@ -43,3 +43,9 @@ const isAlienSorted = (words, order) => {
 
     return true;
 };
+
+const words = ['hello', 'leetcode'],
+    order = 'hlabcdefgijkmnopqrstuvwxyz';
+// Output: true
+// Explanation: As 'h' comes before 'l' in this language, then the sequence is sorted.
+console.log(isAlienSorted(words, order));
