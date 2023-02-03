@@ -55,3 +55,9 @@ const words1 = ['word', 'world', 'row'],
 // Output: false
 // Explanation: As 'd' comes after 'l' in this language, then words[0] > words[1], hence the sequence is unsorted.
 console.log(isAlienSorted(words1, order1));
+
+const words2 = ['apple', 'app'],
+    order2 = 'abcdefghijklmnopqrstuvwxyz';
+// Output: false
+/* Explanation: The first three characters "app" match, and the second string is shorter (in size.) According to lexicographical rules "apple" > "app", because 'l' > '∅', where '∅' is defined as the blank character which is less than any other character (More info). */
+console.log(isAlienSorted(words2, order2));
