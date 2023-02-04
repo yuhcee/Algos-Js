@@ -57,4 +57,7 @@ const s1 = 'ab',
 // Explanation: s2 contains one permutation of s1 ("ba").
 console.log(checkInclusion(s1, s2));
 
-
+const s11 = 'ab',
+    s21 = 'eidboaoo';
+// Output: false
+console.log(checkInclusion(s11, s21));
