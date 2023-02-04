@@ -50,3 +50,13 @@ const s = 'PAYPALISHIRING',
     numRows = 3;
 // Output: "PAHNAPLSIIGYIR"
 console.log(convert(s, numRows));
+
+const s1 = 'PAYPALISHIRING',
+    numRows1 = 4;
+// Output: "PINALSIGYAHRPI"
+/* Explanation:
+P     I    N
+A   L S  I G
+Y A   H R
+P     I */
+console.log(convert(s1, numRows1));
