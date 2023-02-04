@@ -45,3 +45,8 @@ const convert = (s, numRows) => {
 
     return rows.reduce((res, row) => res + row.join(''), ''); // join each row and concatenate to result string
 };
+
+const s = 'PAYPALISHIRING',
+    numRows = 3;
+// Output: "PAHNAPLSIIGYIR"
+console.log(convert(s, numRows));
