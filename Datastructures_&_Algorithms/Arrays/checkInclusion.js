@@ -6,6 +6,11 @@
  * 
  * In other words, return `true` if one of `s1`'s permutations is the substring of `s2`.
  * 
+ * **Constraints:**
+ * 
+ * - `1 <= s1.length, s2.length <= 104`
+ * - `s1` and `s2` consist of lowercase English letters.
+ * 
  * @param {string} s1
  * @param {string} s2
  * @return {boolean}
