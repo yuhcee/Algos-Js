@@ -50,3 +50,11 @@ function matches(s1Freq, s2Freq) {
     }
     return true;
 }
+
+const s1 = 'ab',
+    s2 = 'eidbaooo';
+// Output: true
+// Explanation: s2 contains one permutation of s1 ("ba").
+console.log(checkInclusion(s1, s2));
+
+
