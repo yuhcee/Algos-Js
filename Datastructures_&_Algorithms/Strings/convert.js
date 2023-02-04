@@ -60,3 +60,8 @@ A   L S  I G
 Y A   H R
 P     I */
 console.log(convert(s1, numRows1));
+
+const s2 = 'A',
+    numRows2 = 1;
+// Output: "A"
+console.log(convert(s2, numRows2));
