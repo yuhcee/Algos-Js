@@ -27,4 +27,21 @@
  * @param {number} numRows
  * @return {string}
  */
-const convert = (s, numRows) => {};
+const convert = (s, numRows) => {
+    if (numRows === 1 || numRows >= s.length) return s; // if numRows is 1 or greater than string length, return the string as is
+
+    let rows = [];
+    for (let i = 0; i < numRows; i++) {
+        rows[i] = []; // initialize empty arrays for each row
+    }
+
+    let row = 0,
+        direction = -1;
+    for (let i = 0; i < s.length; i++) {
+        rows[row].push(s[i]);
+        if (row === 0 || row === numRows - 1) direction *= -1; // change direction when reaching first or last row
+        row += direction;
+    }
+
+    return rows.reduce((res, row) => res + row.join(''), ''); // join each row and concatenate to result string
+};
