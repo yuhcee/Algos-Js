@@ -26,7 +26,7 @@ function App() {
     function submitForm(answer) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                let shouldError = answer !== checkPalindrome(answer);
+                let shouldError = answer.toLowerCase() !== checkPalindrome(answer);
                 if (shouldError) {
                     reject(new Error('Not Quite, Try again! 😔'));
                 } else {
@@ -37,7 +37,7 @@ function App() {
     }
 
     function checkPalindrome(value) {
-        return value.split('').reverse().join('');
+        return value.split('').reverse().join('').toLowerCase();
     }
 
     return (
