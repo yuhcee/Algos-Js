@@ -44,3 +44,8 @@ const addBinary = (a, b) => {
 
     return result; // return the binary sum as a string
 };
+
+const a = '11',
+    b = '1';
+// Output: "100"
+console.log(addBinary(a, b));
