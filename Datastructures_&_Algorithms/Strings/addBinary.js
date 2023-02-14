@@ -49,3 +49,8 @@ const a = '11',
     b = '1';
 // Output: "100"
 console.log(addBinary(a, b));
+
+const a1 = '1010',
+    b1 = '1011';
+// Output: "10101"
+console.log(addBinary(a1, b1));
