@@ -71,5 +71,9 @@ var addToArrayForm = function (num, k) {
     // Convert the string to an array of digits and return it
     return sum.split('').map(Number);
 };
-
+const num = [1, 2, 0, 0],
+    k = 34;
+// Output: [1,2,3,4]
+// Explanation: 1200 + 34 = 1234
+console.log(addToArrayForm(num, k));
 
