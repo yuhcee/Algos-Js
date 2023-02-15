@@ -82,3 +82,9 @@ const num1 = [2, 7, 4],
 // Output: [4,5,5]
 // Explanation: 274 + 181 = 455
 console.log(addToArrayForm(num1, k1));
+
+const num2 = [2, 1, 5],
+    k2 = 806;
+// Output: [1,0,2,1]
+// Explanation: 215 + 806 = 1021
+console.log(addToArrayForm(num2, k2));
