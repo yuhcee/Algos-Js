@@ -20,10 +20,56 @@
  * @param {number} k
  * @return {number[]}
  */
-const addToArrayForm = function (num, k) {
+var addToArrayForm = function (num, k) {
     const singleDigit = num.join('');
     const singleNumber = BigInt(singleDigit);
     let sum = singleNumber + BigInt(k);
     let output = Array.from(String(sum), Number);
     return output;
 };
+
+var addToArrayForm = function (num, k) {
+    // Convert k to an array
+    const kArr = k.toString().split('').map(Number);
+
+    // Initialize a carry variable to 0
+    let carry = 0;
+
+    // Initialize a result array to store the result of the addition
+    const result = [];
+
+    // Loop through the digits of num and k from right to left
+    for (let i = num.length - 1, j = kArr.length - 1; i >= 0 || j >= 0; i--, j--) {
+        // Get the current digit of num, or 0 if i is out of bounds
+        const digit1 = i >= 0 ? num[i] : 0;
+
+        // Get the current digit of k, or 0 if j is out of bounds
+        const digit2 = j >= 0 ? kArr[j] : 0;
+
+        // Add the digits together, along with the carry from the previous iteration
+        const sum = digit1 + digit2 + carry;
+
+        // Update the carry for the next iteration
+        carry = Math.floor(sum / 10);
+
+        // Add the least significant digit of the sum to the result array
+        result.unshift(sum % 10);
+    }
+
+    // If there is still a carry after the loop, add it to the beginning of the result array
+    if (carry > 0) {
+        result.unshift(carry);
+    }
+
+    return result;
+};
+
+var addToArrayForm = function (num, k) {
+    // Convert num to a number, add k to it, and convert the result to a string
+    const sum = (BigInt(num.join('')) + BigInt(k)).toString();
+
+    // Convert the string to an array of digits and return it
+    return sum.split('').map(Number);
+};
+
+
