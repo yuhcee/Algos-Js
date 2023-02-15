@@ -77,3 +77,8 @@ const num = [1, 2, 0, 0],
 // Explanation: 1200 + 34 = 1234
 console.log(addToArrayForm(num, k));
 
+const num1 = [2, 7, 4],
+    k1 = 181;
+// Output: [4,5,5]
+// Explanation: 274 + 181 = 455
+console.log(addToArrayForm(num1, k1));
