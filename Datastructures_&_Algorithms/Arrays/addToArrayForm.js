@@ -20,4 +20,10 @@
  * @param {number} k
  * @return {number[]}
  */
-const addToArrayForm = function (num, k) {};
+const addToArrayForm = function (num, k) {
+    const singleDigit = num.join('');
+    const singleNumber = BigInt(singleDigit);
+    let sum = singleNumber + BigInt(k);
+    let output = Array.from(String(sum), Number);
+    return output;
+};
