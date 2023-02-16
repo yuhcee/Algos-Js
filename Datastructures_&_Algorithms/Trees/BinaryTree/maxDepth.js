@@ -38,3 +38,7 @@ const maxDepth = function (root) {
 const root = [3, 9, 20, null, null, 15, 7];
 // Output: 3
 console.log(maxDepth(root));
+
+const root1 = [1, null, 2];
+// Output: 2
+console.log(maxDepth(root1));
