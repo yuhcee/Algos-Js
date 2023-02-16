@@ -35,3 +35,6 @@ const maxDepth = function (root) {
     // plus one for the root node itself
     return Math.max(leftDepth, rightDepth) + 1;
 };
+const root = [3, 9, 20, null, null, 15, 7];
+// Output: 3
+console.log(maxDepth(root));
