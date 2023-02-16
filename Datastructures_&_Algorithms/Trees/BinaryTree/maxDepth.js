@@ -22,5 +22,16 @@ function TreeNode(val, left, right) {
  * @return {number}
  */
 const maxDepth = function (root) {
-    
+    // If the root is null, the tree has depth 0
+    if (!root) {
+        return 0;
+    }
+
+    // Recursively compute the maximum depth of the left and right subtrees
+    const leftDepth = maxDepth(root.left);
+    const rightDepth = maxDepth(root.right);
+
+    // The depth of the entire tree is the maximum of the depths of the left and right subtrees,
+    // plus one for the root node itself
+    return Math.max(leftDepth, rightDepth) + 1;
 };
