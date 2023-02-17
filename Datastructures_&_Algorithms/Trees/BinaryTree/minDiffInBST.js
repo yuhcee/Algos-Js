@@ -46,3 +46,4 @@ const minDiffInBST = function (root) {
 
 const root = [4, 2, 6, 1, 3];
 // Output: 1
+console.log(minDiffInBST(root));
