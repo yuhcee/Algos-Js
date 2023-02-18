@@ -44,3 +44,7 @@ console.log(invertTree(root));
 const root1 = [2, 1, 3];
 // Output: [2,3,1]
 console.log(invertTree(root1));
+
+const root2 = [];
+// Output: []
+console.log(invertTree(root2));
