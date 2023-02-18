@@ -20,15 +20,19 @@
  * @return {TreeNode}
  */
 const invertTree = function (root) {
+    // If the root is null, return null
     if (root === null) {
         return null;
     }
 
+    // Recursively invert the left and right subtrees
     const left = invertTree(root.left);
     const right = invertTree(root.right);
 
+    // Swap the left and right subtrees
     root.left = right;
     root.right = left;
 
+    // Return the inverted root
     return root;
 };
