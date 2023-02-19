@@ -81,3 +81,8 @@ const zigzagLevelOrder = function (root) {
 const root = [3, 9, 20, null, null, 15, 7];
 // Output: [[3],[20,9],[15,7]]
 console.log(zigzagLevelOrder(root));
+
+const root1 = [1];
+// Output: [[1]]
+console.log(zigzagLevelOrder(root1));
+
