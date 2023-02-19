@@ -89,3 +89,7 @@ console.log(zigzagLevelOrder(root1));
 const root2 = [];
 // Output: []
 console.log(zigzagLevelOrder(root2));
+
+const root3 = [1, 3];
+// Output: [[1], [3]]
+console.log(zigzagLevelOrder(root3));
