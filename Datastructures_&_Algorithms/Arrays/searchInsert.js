@@ -29,7 +29,7 @@ const searchInsert = function (nums, target) {
         } else if (nums[mid] < target) {
             left = mid + 1;
         } else {
-            right + mid - 1;
+            right = mid - 1;
         }
     }
 
@@ -40,3 +40,8 @@ const nums = [1, 3, 5, 6],
     target = 5;
 // Output: 2
 console.log(searchInsert(nums, target));
+
+const nums1 = [1, 3, 5, 6],
+    target1 = 2;
+// Output: 1
+console.log(searchInsert(nums1, target1));
