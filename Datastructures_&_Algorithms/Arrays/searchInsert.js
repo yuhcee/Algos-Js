@@ -7,14 +7,31 @@
  * You must write an algorithm with `O(log n)` runtime complexity.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= nums.length <= 104`
  * - `-104 <= nums[i] <= 104`
  * - `nums` contains distinct values sorted in ascending order.
  * - `-104 <= target <= 104`
- * 
+ *
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
  */
-const searchInsert = function (nums, target) {};
+const searchInsert = function (nums, target) {
+    let left = 0; // set the left boundary to the beginning of the array
+    let right = nums.length - 1; // set the right boundary to the end of the array
+
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+
+        if (nums[mid] === target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            left = mid + 1;
+        } else {
+            right + mid - 1;
+        }
+    }
+
+    return left;
+};
