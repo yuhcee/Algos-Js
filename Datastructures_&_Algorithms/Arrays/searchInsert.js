@@ -35,3 +35,8 @@ const searchInsert = function (nums, target) {
 
     return left;
 };
+
+const nums = [1, 3, 5, 6],
+    target = 5;
+// Output: 2
+console.log(searchInsert(nums, target));
