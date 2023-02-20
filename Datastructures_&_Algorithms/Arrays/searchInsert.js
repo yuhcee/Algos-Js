@@ -22,17 +22,22 @@ const searchInsert = function (nums, target) {
     let right = nums.length - 1; // set the right boundary to the end of the array
 
     while (left <= right) {
-        const mid = Math.floor((left + right) / 2);
-
+        // run the binary search loop while left index is less than or equal to right index
+        let mid = Math.floor((left + right) / 2); // find the middle index
         if (nums[mid] === target) {
+            // if the middle value is equal to the target, return the middle index
             return mid;
         } else if (nums[mid] < target) {
-            left = mid + 1;
+            // if the middle value is less than the target, search in the right half of the array
+            left = mid + 1; // set the left boundary to the index after the middle index
         } else {
-            right = mid - 1;
+            // if the middle value is greater than the target, search in the left half of the array
+            right = mid - 1; // set the right boundary to the index before the middle index
         }
     }
 
+    // If we reach here, the target value was not found in the array
+    // The left index now represents the index where the target value would be inserted
     return left;
 };
 
