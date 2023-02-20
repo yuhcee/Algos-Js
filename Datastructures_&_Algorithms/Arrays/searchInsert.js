@@ -45,3 +45,8 @@ const nums1 = [1, 3, 5, 6],
     target1 = 2;
 // Output: 1
 console.log(searchInsert(nums1, target1));
+
+const nums2 = [1, 3, 5, 6],
+    target2 = 7;
+// Output: 4
+console.log(searchInsert(nums2, target2));
