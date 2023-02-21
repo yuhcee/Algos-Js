@@ -9,11 +9,31 @@
  * Your solution must run in `O(log n)` time and `O(1)` space.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= nums.length <= 105`
  * - `0 <= nums[i] <= 105`
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
-const singleNonDuplicate = function (nums) {};
+const singleNonDuplicate = function (nums) {
+    let left = 0;
+    let right = nums.length - 1;
+
+    while (left <= right) {
+        let middle = Math.floor((left + right) / 2);
+
+        if (middle % 2 === 1) {
+            middle--;
+        }
+
+        if (nums[middle] === nums[middle + 1]) {
+            left = middle + 2;
+        } else {
+            right = middle;
+        }
+    }
+
+    return nums[left];
+};
+
