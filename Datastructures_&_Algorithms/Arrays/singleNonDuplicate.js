@@ -20,7 +20,7 @@ const singleNonDuplicate = function (nums) {
     let left = 0;
     let right = nums.length - 1;
 
-    while (left <= right) {
+    while (left < right) {
         let middle = Math.floor((left + right) / 2);
 
         if (middle % 2 === 1) {
@@ -37,3 +37,6 @@ const singleNonDuplicate = function (nums) {
     return nums[left];
 };
 
+const nums = [1, 1, 2, 3, 3, 4, 4, 8, 8];
+// Output: 2
+console.log(singleNonDuplicate(nums));
