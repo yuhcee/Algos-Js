@@ -8,6 +8,11 @@
  *
  * Your solution must run in `O(log n)` time and `O(1)` space.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= nums.length <= 105`
+ * - `0 <= nums[i] <= 105`
+ * 
  * @param {number[]} nums
  * @return {number}
  */
