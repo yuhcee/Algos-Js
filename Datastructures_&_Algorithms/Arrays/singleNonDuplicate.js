@@ -49,3 +49,7 @@ console.log(singleNonDuplicate(nums));
 const nums1 = [3, 3, 7, 7, 10, 11, 11];
 // Output: 10
 console.log(singleNonDuplicate(nums1));
+
+const nums2 = [1, 1, 3, 3, 7, 7, 10, 10, 11, 11, 12];
+// Output: 12
+console.log(singleNonDuplicate(nums2));
