@@ -24,7 +24,7 @@
  * The function takes in the following parameters:
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= k <= 105`
  * - `0 <= w <= 109`
  * - `n == profits.length`
@@ -32,7 +32,7 @@
  * - `1 <= n <= 105`
  * - `0 <= profits[i] <= 104`
  * - `0 <= capital[i] <= 109`
- * 
+ *
  * @param {number} k - The maximum number of projects that can be performed.
  * @param {number} initialCapital - The initial capital available to invest.
  * @param {number[]} profits - An array of profits to be earned from each project.
@@ -66,3 +66,15 @@ const findMaximizedCapital = function (k, initialCapital, profits, capital) {
     // Return the final amount of capital
     return initialCapital;
 };
+
+const k = 2,
+    w = 0,
+    profits = [1, 2, 3],
+    capital = [0, 1, 1];
+// Output: 4
+/* Explanation: Since your initial capital is 0, you can only start the project indexed 0.
+After finishing it you will obtain profit 1 and your capital becomes 1.
+With capital 1, you can either start the project indexed 1 or the project indexed 2.
+Since you can choose at most 2 projects, you need to finish the project indexed 2 to get the maximum capital.
+Therefore, output the final maximized capital, which is 0 + 1 + 3 = 4. */
+console.log(findMaximizedCapital(k, w, profits, capital));
