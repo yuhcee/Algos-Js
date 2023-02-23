@@ -23,6 +23,16 @@
  *
  * The function takes in the following parameters:
  *
+ * **Constraints:**
+ * 
+ * - `1 <= k <= 105`
+ * - `0 <= w <= 109`
+ * - `n == profits.length`
+ * - `n == capital.length`
+ * - `1 <= n <= 105`
+ * - `0 <= profits[i] <= 104`
+ * - `0 <= capital[i] <= 109`
+ * 
  * @param {number} k - The maximum number of projects that can be performed.
  * @param {number} initialCapital - The initial capital available to invest.
  * @param {number[]} profits - An array of profits to be earned from each project.
