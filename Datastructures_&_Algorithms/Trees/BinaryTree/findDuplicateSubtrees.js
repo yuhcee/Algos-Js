@@ -74,3 +74,5 @@ const root = [1,2,3,4,null,2,4,null,null,4];
 
 const root1 = [2,1,1]
 // Output: [[1]]
+const root2 = [2,2,2,3,null,3,null]
+// Output: [[2,3],[3]]
