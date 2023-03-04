@@ -71,3 +71,6 @@ const findDuplicateSubtrees = function (root) {
 
 const root = [1,2,3,4,null,2,4,null,null,4];
 // Output: [[2,4],[4]]
+
+const root1 = [2,1,1]
+// Output: [[1]]
