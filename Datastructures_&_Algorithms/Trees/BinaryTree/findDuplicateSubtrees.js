@@ -17,6 +17,11 @@
  * Two trees are **duplicate** if they have the **same structure** with the **same node
  * values**.
  *
+ * **Constraints:**
+ *
+ * - The number of the nodes in the tree will be in the range `[1, 5000]`
+ * - `-200 <= Node.val <= 200`
+ *
  * @param {TreeNode} root
  * @return {TreeNode[]}
  */
