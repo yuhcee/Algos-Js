@@ -53,3 +53,8 @@ const nums1 = [5, 1, 1, 2, 0, 0];
 // Output: [0,0,1,1,2,5]
 // Explanation: Note that the values of nums are not necessairly unique.
 console.log(sortArray(nums1));
+
+const nums2 = [5, 1, 1, 2, 0, 0, 5, 3];
+// Output: [0,0,1,1,2,3,5,5]
+// Explanation: Note that the values of nums are not necessairly unique.
+console.log(sortArray(nums2));
