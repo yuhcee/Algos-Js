@@ -46,3 +46,9 @@ const arr = [2, 3, 4, 7, 11],
 // Output: 9
 /* Explanation: The missing positive integers are [1,5,6,8,9,10,12,13,...]. The 5th missing positive integer is 9. */
 console.log(findKthPositive(arr, k));
+
+const arr1 = [1, 2, 3, 4],
+    k1 = 2;
+// Output: 6
+/* Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing positive integer is 6. */
+console.log(findKthPositive(arr1, k1));
