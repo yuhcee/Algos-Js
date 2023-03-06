@@ -17,4 +17,26 @@
  * @param {number} k
  * @return {number}
  */
-const findKthPositive = function (arr, k) {};
+const findKthPositive = function (arr, k) {
+    let n = arr.length;
+    let missingCount = 0; // number of missing integers found so far
+    let lastMissing = 0; // last missing integer found
+
+    for (let i = 0; i < n; i++) {
+        // calculate the number of missing integers between arr[i] and lastMissing
+        let diff = arr[i] - lastMissing - 1;
+
+        if (diff > 0) {
+            missingCount += diff;
+            if (missingCount >= k) {
+                // we found the kth missing integer
+                return lastMissing + k - (missingCount - diff);
+            }
+        }
+        // update lastMissing
+        lastMissing = arr[i];
+    }
+
+    // if we get here, it means the kth missing integer is greater than arr[n-1]
+    return arr[n - 1] + k - missingCount;
+};
