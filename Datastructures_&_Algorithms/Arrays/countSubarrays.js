@@ -48,3 +48,10 @@ const countSubarrays = function (nums, minK, maxK) {
     }
     return count;
 };
+
+const nums = [1, 3, 5, 2, 7, 5],
+    minK = 1,
+    maxK = 5;
+// Output: 2
+// Explanation: The fixed-bound subarrays are [1,3,5] and [1,3,5,2].
+console.log(countSubarrays(nums, minK, maxK));
