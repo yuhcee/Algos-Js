@@ -83,3 +83,8 @@ const arr1 = [7];
 // Output: 0
 // Explanation: Start index is the last index. You do not need to jump.
 console.log(minJumps(arr1));
+
+const arr2 = [7, 6, 9, 6, 9, 6, 9, 7];
+// Output: 1
+// Explanation: You can jump directly from index 0 to index 7 which is last index of the array.
+console.log(minJumps(arr2));
