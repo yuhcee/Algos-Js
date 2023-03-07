@@ -55,3 +55,10 @@ const nums = [1, 3, 5, 2, 7, 5],
 // Output: 2
 // Explanation: The fixed-bound subarrays are [1,3,5] and [1,3,5,2].
 console.log(countSubarrays(nums, minK, maxK));
+
+const nums1 = [1, 1, 1, 1],
+    minK1 = 1,
+    maxK1 = 1;
+// Output: 10
+// Explanation: Every subarray of nums is a fixed-bound subarray. There are 10 possible subarrays.
+console.log(countSubarrays(nums1, minK1, maxK1));
