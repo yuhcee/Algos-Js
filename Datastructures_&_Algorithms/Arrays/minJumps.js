@@ -13,6 +13,11 @@
  *
  * Notice that you can not jump outside of the array at any time.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= arr.length <= 5 * 104`
+ * - `-108 <= arr[i] <= 108`
+ * 
  * @param {number[]} arr
  * @return {number}
  */
