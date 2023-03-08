@@ -12,6 +12,11 @@
  * make **in total**. Return *the **minimum time** required for all buses to complete **at least**
  * `totalTrips` trips*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= time.length <= 105`
+ * - `1 <= time[i], totalTrips <= 107`
+ *
  * @param {number[]} time
  * @param {number} totalTrips
  * @return {number}
