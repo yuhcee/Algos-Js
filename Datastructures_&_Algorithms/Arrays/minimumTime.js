@@ -53,3 +53,11 @@ const time = [1, 2, 3],
   The total number of trips completed is 3 + 1 + 1 = 5.
 So the minimum time needed for all buses to complete at least 5 trips is 3. */
 console.log(minimumTime(time, totalTrips));
+
+const time1 = [2],
+    totalTrips1 = 1;
+// Output: 2
+/* Explanation:
+There is only one bus, and it will complete its first trip at t = 2.
+So the minimum time needed to complete 1 trip is 2. */
+console.log(minimumTime(time1, totalTrips1));
