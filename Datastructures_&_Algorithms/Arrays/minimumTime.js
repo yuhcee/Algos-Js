@@ -61,3 +61,11 @@ const time1 = [2],
 There is only one bus, and it will complete its first trip at t = 2.
 So the minimum time needed to complete 1 trip is 2. */
 console.log(minimumTime(time1, totalTrips1));
+
+const time2 = [2, 4, 6, 10],
+    totalTrips2 = 15;
+// Output: 16
+/* Explanation:
+There is only one bus, and it will complete its first trip at t = 2.
+So the minimum time needed to complete 1 trip is 2. */
+console.log(minimumTime(time2, totalTrips2));
