@@ -40,3 +40,16 @@ const minimumTime = function (time, totalTrips) {
 
     return high;
 };
+
+const time = [1, 2, 3],
+    totalTrips = 5;
+// Output: 3
+/* Explanation:
+- At time t = 1, the number of trips completed by each bus are [1,0,0]. 
+  The total number of trips completed is 1 + 0 + 0 = 1.
+- At time t = 2, the number of trips completed by each bus are [2,1,0]. 
+  The total number of trips completed is 2 + 1 + 0 = 3.
+- At time t = 3, the number of trips completed by each bus are [3,1,1]. 
+  The total number of trips completed is 3 + 1 + 1 = 5.
+So the minimum time needed for all buses to complete at least 5 trips is 3. */
+console.log(minimumTime(time, totalTrips));
