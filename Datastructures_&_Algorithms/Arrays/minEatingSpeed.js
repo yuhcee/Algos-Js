@@ -56,3 +56,8 @@ const piles1 = [30, 11, 23, 4, 20],
     h1 = 5;
 // Output: 30
 console.log(minEatingSpeed(piles1, h1));
+
+const piles2 = [30, 11, 23, 4, 20],
+    h2 = 6;
+// Output: 23
+console.log(minEatingSpeed(piles2, h2));
