@@ -12,6 +12,12 @@
  *
  * Return *the minimum integer `k` such that she can eat all the bananas within `h` hours*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= piles.length <= 104`
+ * - `piles.length <= h <= 109`
+ * - `1 <= piles[i] <= 109`
+ *
  * @param {number[]} piles
  * @param {number} h
  * @return {number}
