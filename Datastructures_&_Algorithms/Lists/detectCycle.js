@@ -53,3 +53,8 @@ const head1 = [1, 2],
     pos1 = 0;
 // Output: tail connects to node index 0
 // Explanation: There is a cycle in the linked list, where tail connects to the first node.
+
+const head2 = [1],
+    pos2 = -1;
+// Output: no cycle
+// Explanation: There is no cycle in the linked list.
