@@ -48,3 +48,8 @@ const head = [3, 2, 0, -4],
     pos = 1;
 // Output: tail connects to node index 1
 // Explanation: There is a cycle in the linked list, where tail connects to the second node.
+
+const head1 = [1, 2],
+    pos1 = 0;
+// Output: tail connects to node index 0
+// Explanation: There is a cycle in the linked list, where tail connects to the first node.
