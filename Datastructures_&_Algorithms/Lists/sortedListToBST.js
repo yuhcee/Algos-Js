@@ -19,6 +19,10 @@
  * Given the `head` of a singly linked list where elements are sorted in **ascending order**,
  * *convert it to a height-balanced binary search tree*.
  *
+ * **Constraints:**
+ * - The number of nodes in `head` is in the range `[0, 2 * 104]`.
+ * - `-105 <= Node.val <= 105`
+ *
  * @param {ListNode} head
  * @return {TreeNode}
  */
