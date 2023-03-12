@@ -59,3 +59,6 @@ merging them into one sorted list:
 
 const lists1 = [];
 // Output: []
+
+const lists2 = [[]];
+// Output: []
