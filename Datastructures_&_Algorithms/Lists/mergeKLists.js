@@ -24,4 +24,20 @@
  * @param {ListNode[]} lists
  * @return {ListNode}
  */
-var mergeKLists = function (lists) {};
+var mergeKLists = function (lists) {
+    let numsArr = [];
+    lists.forEach((item) => {
+        while (item && item.val !== null) {
+            numsArr.push(item.val);
+            item = item.next;
+        }
+    });
+    numsArr = numsArr.sort((a, b) => b - a);
+    let resultNode = null;
+    numsArr.forEach((item) => {
+        let tempNode = new ListNode(item);
+        tempNode.next = resultNode;
+        resultNode = tempNode;
+    });
+    return resultNode;
+};
