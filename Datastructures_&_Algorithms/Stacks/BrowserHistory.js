@@ -18,6 +18,14 @@
  * steps in the history and `steps > x`, you will forward only `x` steps. Return the current
  * `url` after forwarding in history **at most** `steps`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= homepage.length <= 20`
+ * - `1 <= url.length <= 20`
+ * - `1 <= steps <= 100`
+ * - `homepage` and `url` consist of  '.' or lower case English letters.
+ * - At most `5000` calls will be made to `visit`, `back`, and `forward`.
+ *
  * @param {string} homepage
  */
 var BrowserHistory = function (homepage) {};
