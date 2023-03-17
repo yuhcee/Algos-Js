@@ -34,3 +34,7 @@ const isSymmetric = function (root) {
         return dfs(leftNode.right, rightNode.left) && dfs(leftNode.left, rightNode.right);
     }
 };
+
+const root = [1,2,2,3,4,4,3]
+// Output: true
+console.log(isSymmetric(root));
