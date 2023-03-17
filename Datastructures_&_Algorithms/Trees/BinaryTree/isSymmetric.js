@@ -35,6 +35,10 @@ const isSymmetric = function (root) {
     }
 };
 
-const root = [1,2,2,3,4,4,3]
+const root = [1, 2, 2, 3, 4, 4, 3];
 // Output: true
 console.log(isSymmetric(root));
+
+const root1 = [1, 2, 2, null, 3, null, 3];
+// Output: false
+console.log(isSymmetric(root1));
