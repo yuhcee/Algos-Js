@@ -55,3 +55,8 @@ const inorder = [9, 3, 15, 20, 7],
     postorder = [9, 15, 7, 20, 3];
 // Output: [3,9,20,null,null,15,7]
 console.log(buildTree(inorder, postorder));
+
+const inorder1 = [-1],
+    postorder1 = [-1];
+// Output: [-1]
+console.log(buildTree(inorder1, postorder1));
