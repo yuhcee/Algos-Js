@@ -33,3 +33,7 @@ console.log(bulbSwitch(n));
 const n1 = 0;
 // Output: 0
 console.log(bulbSwitch(n1));
+
+const n2 = 1;
+// Output: 1
+console.log(bulbSwitch(n2));
