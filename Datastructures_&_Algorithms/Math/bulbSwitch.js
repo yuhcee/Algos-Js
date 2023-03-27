@@ -29,3 +29,7 @@ After the second round, the three bulbs are [on, off, on].
 After the third round, the three bulbs are [on, off, off]. 
 So you should return 1 because there is only one bulb is on. */
 console.log(bulbSwitch(n));
+
+const n1 = 0;
+// Output: 0
+console.log(bulbSwitch(n1));
