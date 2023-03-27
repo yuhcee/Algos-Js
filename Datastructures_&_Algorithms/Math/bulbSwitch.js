@@ -10,7 +10,9 @@
  * 
  * Return *the number of bulbs that are on after `n` rounds*.
  * 
+ * **Constraints:**
  * 
+ * - `0 <= n <= 109`
  * 
  * @param {number} n
  * @return {number}
