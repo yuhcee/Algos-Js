@@ -48,3 +48,9 @@ const dfs = function (i, edges, visited) {
     return i === -1 ? -1 : cycle - 1;
 };
 
+const edges = [1, 2, 3, 4, 5, 0];
+// Output: 5
+// Explanation: The longest cycle is the path 1 -> 2 -> 3 -> 4 -> 5 -> 1, which has length 5
+console.log(longestCycle(edges));
+
+
