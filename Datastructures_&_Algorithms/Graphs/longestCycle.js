@@ -59,4 +59,7 @@ const edges1 = [3, 3, 4, 2, 3];
 // The length of this cycle is 3, so 3 is returned.
 console.log(longestCycle(edges1));
 
-
+const edges2 = [2, -1, 3, 1];
+// Output: -1
+// Explanation: There are no cycles in this graph.
+console.log(longestCycle(edges2));
