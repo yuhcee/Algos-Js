@@ -23,4 +23,28 @@
  * @param {number[]} edges
  * @return {number}
  */
-const longestCycle = function (edges) {};
+const longestCycle = function (edges) {
+    const n = edges.length;
+    const visited = Array(n).fill(false);
+    let max = -1;
+    for (let i = 0; i < n; i++) {
+        if (!visited[i]) {
+            const cycle = dfs(i, edges, visited);
+            max = Math.max(max, cycle);
+        }
+    }
+
+    return max;
+};
+
+const dfs = function (i, edges, visited) {
+    let cycle = 0;
+    while (i !== -1 && !visited[i]) {
+        visited[i] = true;
+        cycle++;
+        i = edges[i];
+    }
+
+    return i === -1 ? -1 : cycle - 1;
+};
+
