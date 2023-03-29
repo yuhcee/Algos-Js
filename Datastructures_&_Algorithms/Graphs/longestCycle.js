@@ -53,4 +53,10 @@ const edges = [1, 2, 3, 4, 5, 0];
 // Explanation: The longest cycle is the path 1 -> 2 -> 3 -> 4 -> 5 -> 1, which has length 5
 console.log(longestCycle(edges));
 
+const edges1 = [3, 3, 4, 2, 3];
+// Output: 3
+// Explanation: The longest cycle in the graph is the cycle: 2 -> 4 -> 3 -> 2.
+// The length of this cycle is 3, so 3 is returned.
+console.log(longestCycle(edges1));
+
 
