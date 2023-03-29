@@ -13,6 +13,12 @@
  *
  * A cycle is a path that starts and ends at the `same` node.
  *
+ * **Constraints:**
+ *
+ * - `n == edges.length`
+ * - `2 <= n <= 105`
+ * - `-1 <= edges[i] < n`
+ * - `edges[i] != i`
  *
  * @param {number[]} edges
  * @return {number}
