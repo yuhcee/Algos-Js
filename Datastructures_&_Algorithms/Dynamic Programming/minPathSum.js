@@ -56,3 +56,7 @@ const grid1 = [
 ];
 // Output: 12
 console.log(minPathSum(grid1));
+
+const grid2 = [[0]];
+// Output: 0
+console.log(minPathSum(grid2));
