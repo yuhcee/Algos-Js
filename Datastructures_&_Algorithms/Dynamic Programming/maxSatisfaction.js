@@ -27,11 +27,17 @@
  */
 const maxSatisfaction = function (arr) {
     arr.sort((a, b) => a - b);
-    let sum = 0;
-    let res = 0;
+    let sum = 0,
+        res = 0;
     for (let i = arr.length - 1; i >= 0; i--) {
         sum += arr[i];
+        if (sum < 0) {
+            break;
+        }
         res += sum;
     }
+
     return res;
 };
+
+
