@@ -45,3 +45,8 @@ const satisfaction = [-1, -8, 0, 5, -9];
 // Explanation: After Removing the second and last dish, the maximum total
 // Like-time coefficient will be equal to (-1*1 + 0*2 + 5*3 = 14).
 console.log(maxSatisfaction(satisfaction));
+
+const satisfaction1 = [4, 3, 2];
+// Output: 20
+// Explanation: Dishes can be prepared in any order, (2*1 + 3*2 + 4*3 = 20)
+console.log(maxSatisfaction(satisfaction1));
