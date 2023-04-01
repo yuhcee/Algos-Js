@@ -40,4 +40,8 @@ const maxSatisfaction = function (arr) {
     return res;
 };
 
-
+const satisfaction = [-1, -8, 0, 5, -9];
+// Output: 14
+// Explanation: After Removing the second and last dish, the maximum total
+// Like-time coefficient will be equal to (-1*1 + 0*2 + 5*3 = 14).
+console.log(maxSatisfaction(satisfaction));
