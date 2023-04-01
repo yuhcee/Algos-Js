@@ -15,6 +15,11 @@
  * this maximum value.
  * 
  * 
+ * **Constraints:**
+ * 
+ * - `n == satisfaction.length`
+ * - `1 <= n <= 500`
+ * - `-10^3 <= satisfaction[i] <= 10^3`
  * 
  * 
  * @param {number[]} satisfaction
