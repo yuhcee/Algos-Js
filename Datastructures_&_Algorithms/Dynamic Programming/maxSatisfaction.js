@@ -50,3 +50,8 @@ const satisfaction1 = [4, 3, 2];
 // Output: 20
 // Explanation: Dishes can be prepared in any order, (2*1 + 3*2 + 4*3 = 20)
 console.log(maxSatisfaction(satisfaction1));
+
+const satisfaction2 = [-1, -4, -5];
+// Output: 0
+// Explanation: People don't like the dishes. No dish is prepared.
+console.log(maxSatisfaction(satisfaction2));
