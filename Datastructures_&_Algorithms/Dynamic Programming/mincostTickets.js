@@ -19,11 +19,17 @@
  * Return *the minimum number of dollars you need to travel every day in the given 
  * list of days*.
  * 
+ * **Constraints:**
+ * 
+ * - `1 <= days.length <= 365`
+ * - `1 <= days[i] <= 365`
+ * - `days` is in strictly increasing order.
+ * - `costs.length == 3`
+ * - `1 <= costs[i] <= 1000`
+ * 
  * 
  * @param {number[]} days
  * @param {number[]} costs
  * @return {number}
  */
-const mincostTickets = function (days, costs) {
-    
-}
+const mincostTickets = function (days, costs) {}
