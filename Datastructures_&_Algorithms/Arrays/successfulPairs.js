@@ -82,3 +82,14 @@ const spells1 = [3, 1, 2],
 - 2nd spell: 2 * [8,5,8] = [16,10,16]. 2 pairs are successful. 
 Thus, [2,0,2] is returned. */
 console.log(successfulPairs(spells1, potions1, success1));
+
+const spells2 = [1, 1, 1],
+    potions2 = [1, 1, 1],
+    success2 = 1;
+// Output: [3,3,3]
+/* Explanation:
+- 0th spell: 1 * [1,1,1] = [1,1,1]. 3 pairs are successful.
+- 1st spell: 1 * [1,1,1] = [1,1,1]. 3 pairs are successful.
+- 2nd spell: 1 * [1,1,1] = [1,1,1]. 3 pairs are successful.
+Thus, [3,3,3] is returned. */
+console.log(successfulPairs(spells2, potions2, success2));
