@@ -45,3 +45,9 @@ const people1 = [3, 2, 2, 1],
 // Output: 3
 // Explanation: 3 boats (1, 2), (2) and (3)
 console.log(numRescueBoats(people1, limit1));
+
+const people2 = [3, 5, 3, 4],
+    limit2 = 5;
+// Output: 4
+// Explanation: 4 boats (3), (3), (4), (5)
+console.log(numRescueBoats(people2, limit2));
