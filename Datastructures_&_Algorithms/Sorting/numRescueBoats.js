@@ -33,3 +33,9 @@ const numRescueBoats = function (people, limit) {
     }
     return result;
 };
+
+const people = [1, 2],
+    limit = 3;
+// Output: 1
+// Explanation: 1 boat (1, 2)
+console.log(numRescueBoats(people, limit));
