@@ -9,12 +9,27 @@
  * Return *the minimum number of boats to carry every given person*.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= people.length <= 5 * 104`
  * - `1 <= people[i] <= limit <= 3 * 104`
- * 
+ *
  * @param {number[]} people
  * @param {number} limit
  * @return {number}
  */
-const numRescueBoats = function (people, limit) {};
+const numRescueBoats = function (people, limit) {
+    people.sort((a, b) => a - b);
+    let result = 0,
+        light = 0,
+        heavy = people.length - 1;
+
+    while (light <= heavy) {
+        let left = limit - people[heavy];
+        if (left >= people[light]) {
+            light += 1;
+        }
+        heavy -= 1;
+        result += 1;
+    }
+    return result;
+};
