@@ -11,9 +11,19 @@
  * Return *an integer array `pairs` of length `n` where `pairs[i]` is the number of **potions** that
  * will form a successful pair with the `ith` spell*.
  *
+ * **Constraints:
+ * 
+ * - `n == spells.length`
+ * - `m == potions.length`
+ * - `1 <= n, m <= 105`
+ * - `1 <= spells[i], potions[i] <= 105`
+ * - `1 <= success <= 1010`
+ * 
  * @param {number[]} spells
  * @param {number[]} potions
  * @param {number} success
  * @return {number[]}
  */
-const successfulPairs = function (spells, potions, success) {};
+const successfulPairs = function (spells, potions, success) {
+        
+};
