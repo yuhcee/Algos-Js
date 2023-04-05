@@ -8,6 +8,11 @@
  *
  * Return *the minimum number of boats to carry every given person*.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= people.length <= 5 * 104`
+ * - `1 <= people[i] <= limit <= 3 * 104`
+ * 
  * @param {number[]} people
  * @param {number} limit
  * @return {number}
