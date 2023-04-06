@@ -9,6 +9,11 @@
  *
  * Note that each character should belong to exactly one substring in a partition.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 105`
+ * - `s` consists of only English lowercase letters.
+ *
  * @param {string} s
  * @return {number}
  */
