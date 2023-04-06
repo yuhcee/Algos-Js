@@ -38,3 +38,9 @@ const s = 'abacaba';
 Two possible partitions are ("a","ba","cab","a") and ("ab","a","ca","ba").
 It can be shown that 4 is the minimum number of substrings needed. */
 console.log(partitionString(s));
+
+const s1 = 'ssssss';
+// Output: 6
+/* Explanation:
+The only valid partition is ("s","s","s","s","s","s"). */
+console.log(partitionString(s1));
