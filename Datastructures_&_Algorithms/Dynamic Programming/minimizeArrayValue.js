@@ -11,6 +11,12 @@
  *
  * Return *the **minimum** possible value of the **maximum** integer of `nums` after performing any number of operations*.
  *
+ * **Constraints:**
+ *
+ * - `n == nums.length`
+ * - `2 <= n <= 105`
+ * - `0 <= nums[i] <= 109`
+ *
  * @param {number[]} nums
  * @return {number}
  */
