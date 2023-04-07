@@ -40,3 +40,9 @@ One set of optimal operations is as follows:
 The maximum integer of nums is 5. It can be shown that the maximum number cannot be less than 5.
 Therefore, we return 5. */
 console.log(minimizeArrayValue(nums));
+
+const nums1 = [10, 1];
+// Output: 10
+/* Explanation:
+It is optimal to leave nums as is, and since 10 is the maximum value, we return 10. */
+console.log(minimizeArrayValue(nums1));
