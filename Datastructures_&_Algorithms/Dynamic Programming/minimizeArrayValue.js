@@ -20,4 +20,12 @@
  * @param {number[]} nums
  * @return {number}
  */
-const minimizeArrayValue = function (nums) {};
+const minimizeArrayValue = function (nums) {
+    let sum = 0;
+    let maxNum = 0;
+    nums.forEach((num, key) => {
+        sum += num;
+        maxNum = Math.max(maxNum, Math.floor((sum + key) / (key + 1)));
+    });
+    return maxNum;
+};
