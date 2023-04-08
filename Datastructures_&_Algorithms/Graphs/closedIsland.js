@@ -68,3 +68,15 @@ const grid2 = [
 ];
 // Output: 1
 console.log(closedIsland(grid2));
+
+const grid3 = [
+    [1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 1, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 1, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1],
+];
+// Output: 2;
+console.log(closedIsland(grid3));
