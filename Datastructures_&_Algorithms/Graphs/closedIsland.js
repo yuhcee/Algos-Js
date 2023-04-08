@@ -60,3 +60,11 @@ const grid = [
 /* Explanation: 
 Islands in gray are closed because they are completely surrounded by water (group of 1s). */
 console.log(closedIsland(grid));
+
+const grid2 = [
+    [0, 0, 1, 0, 0],
+    [0, 1, 0, 1, 0],
+    [0, 1, 1, 1, 0],
+];
+// Output: 1
+console.log(closedIsland(grid2));
