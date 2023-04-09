@@ -61,3 +61,13 @@ const grid = [
 // Output: 3
 // Explanation: There are three 1s that are enclosed by 0s, and one 1 that is not enclosed because its on the boundary.
 console.log(numEnclaves(grid));
+
+const grid2 = [
+    [0, 1, 1, 0],
+    [0, 0, 1, 0],
+    [0, 0, 1, 0],
+    [0, 0, 0, 0],
+];
+// Output: 0
+// Explanation: All 1s are either on the boundary or can reach the boundary.
+console.log(numEnclaves(grid2));
