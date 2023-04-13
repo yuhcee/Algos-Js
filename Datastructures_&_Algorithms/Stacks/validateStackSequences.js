@@ -51,4 +51,8 @@ pop() -> 5, pop() -> 3, pop() -> 2, pop() -> 1
  */
 console.log(validateStackSequences(pushed, popped));
 
-
+const pushed2 = [1, 2, 3, 4, 5],
+    popped2 = [4, 3, 5, 1, 2];
+// Output: false
+// Explanation: 1 cannot be popped before 2.
+console.log(validateStackSequences(pushed2, popped2));
