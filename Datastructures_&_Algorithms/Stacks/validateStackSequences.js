@@ -1,0 +1,12 @@
+/**
+ * **946. Validate Stack Sequences**
+ *
+ * Given two integer arrays `pushed` and `popped` each with distinct values, return *`true` if
+ * this could have been the result of a sequence of push and pop operations on an initially
+ * empty stack, or `false` otherwise*.
+ *
+ * @param {number[]} pushed
+ * @param {number[]} popped
+ * @return {boolean}
+ */
+const validateStackSequences = function (pushed, popped) {};
