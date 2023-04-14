@@ -46,4 +46,7 @@ const path = '/home/';
 // Explanation: Note that there is no trailing slash after the last directory name.
 console.log(simplifyPath(path));
 
-
+const path2 = '/../';
+// Output: "/"
+// Explanation: Going one level up from the root directory is a no-op, as the root level is the highest level you can go.
+console.log(simplifyPath(path2));
