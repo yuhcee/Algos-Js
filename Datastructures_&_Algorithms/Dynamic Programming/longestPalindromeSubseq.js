@@ -41,3 +41,8 @@ const s = 'bbbab';
 // Output: 4
 // Explanation: One possible longest palindromic subsequence is "bbbb".
 console.log(longestPalindromeSubseq(s));
+
+const s2 = 'cbbd';
+// Output: 2
+// Explanation: One possible longest palindromic subsequence is "bb".
+console.log(longestPalindromeSubseq(s2));
