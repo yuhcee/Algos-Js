@@ -36,3 +36,8 @@ const longestPalindromeSubseq = function (s) {
 
     return dp[0][n - 1]; // Return the length of the longest palindromic subsequence that can be formed from the entire string s, which is stored in dp[0][n - 1]
 };
+
+const s = 'bbbab';
+// Output: 4
+// Explanation: One possible longest palindromic subsequence is "bbbb".
+console.log(longestPalindromeSubseq(s));
