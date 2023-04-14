@@ -19,6 +19,12 @@
  *
  * Return *the simplified **canonical path***.
  *
+ * **Constraints:**
+ *
+ * - `1 <= path.length <= 3000`
+ * - `path` consists of English letters, digits, period `'.'`, slash `'/'` or `'_'`.
+ * - `path` is a valid absolute Unix path.
+ *
  * @param {string} path
  * @return {string}
  */
