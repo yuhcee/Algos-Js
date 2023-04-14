@@ -50,3 +50,7 @@ const path2 = '/../';
 // Output: "/"
 // Explanation: Going one level up from the root directory is a no-op, as the root level is the highest level you can go.
 console.log(simplifyPath(path2));
+
+const path3 = '/home//foo/';
+// Output: "/home/foo"
+// Explanation: In the canonical path, multiple consecutive slashes are replaced by a single one.
