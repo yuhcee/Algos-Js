@@ -40,3 +40,10 @@ const simplifyPath = function (path) {
     }
     return '/' + stack.join('/');
 };
+
+const path = '/home/';
+// Output: "/home"
+// Explanation: Note that there is no trailing slash after the last directory name.
+console.log(simplifyPath(path));
+
+
