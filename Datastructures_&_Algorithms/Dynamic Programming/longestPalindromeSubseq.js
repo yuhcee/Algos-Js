@@ -8,6 +8,11 @@
  * deleting some or no elements without changing the order of the remaining
  * elements.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 1000`
+ * - `s` consists only of lowercase English letters.
+ *
  * @param {string} s
  * @return {number}
  */
