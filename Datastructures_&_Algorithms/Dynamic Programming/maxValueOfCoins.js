@@ -63,3 +63,14 @@ const maxValueOfCoins = function (piles, k) {
 
     return getMaxValue(0, k); // Start the recursive computation from the first pile
 };
+
+const piles = [
+        [1, 100, 3],
+        [7, 8, 9],
+    ],
+    k = 2;
+// Output: 101
+// Explanation:
+// The above diagram shows the different ways we can choose k coins.
+// The maximum total we can obtain is 101.
+console.log(maxValueOfCoins(piles, k));
