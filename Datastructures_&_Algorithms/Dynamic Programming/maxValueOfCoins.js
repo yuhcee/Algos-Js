@@ -80,3 +80,13 @@ const piles2 = [[100], [100], [100], [100], [100], [100], [1, 1, 1, 1, 1, 1, 700
 // Output: 706
 // Explanation: The maximum total can be obtained if we choose all coins from the last pile.
 console.log(maxValueOfCoins(piles2, k2));
+
+const piles3 = [
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    ],
+    k3 = 50;
+// Output: 220
+console.log(maxValueOfCoins(piles3, k3));
