@@ -74,3 +74,9 @@ const piles = [
 // The above diagram shows the different ways we can choose k coins.
 // The maximum total we can obtain is 101.
 console.log(maxValueOfCoins(piles, k));
+
+const piles2 = [[100], [100], [100], [100], [100], [100], [1, 1, 1, 1, 1, 1, 700]],
+    k2 = 7;
+// Output: 706
+// Explanation: The maximum total can be obtained if we choose all coins from the last pile.
+console.log(maxValueOfCoins(piles2, k2));
