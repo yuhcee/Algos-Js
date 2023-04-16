@@ -81,3 +81,7 @@ const words2 = ['abba', 'baab'],
 "bab" -> index 1 ("abba"), index 2 ("baab"), index 3 ("baab") */
 console.log(numWays(words2, target2));
 
+const words3 = ['abcd'],
+    target3 = 'abcd';
+// Output: 1
+console.log(numWays(words3, target3));
