@@ -31,4 +31,36 @@
  * @param {string} target
  * @return {number}
  */
-const numWays = function (words, target) {};
+const numWays = function (words, target) {
+    const n = words[0].length;
+    const m = target.length;
+    const mod = 10 ** 9 + 7;
+    const dp = Array(m)
+        .fill(null)
+        .map(() => Array(n).fill(0));
+    const charCounts = Array(n)
+        .fill(null)
+        .map(() => Array(26).fill(0));
+
+    for (const word of words) {
+        for (let i = 0; i < n; i++) {
+            charCounts[i][word.charCodeAt(i) - 97]++;
+        }
+    }
+
+    for (let i = 0; i < n; i++) {
+        if (target.charCodeAt(0) === words[0].charCodeAt(i)) {
+            dp[0][i] = 1;
+        }
+    }
+
+    for (let i = 1; i < m; i++) {
+        for (let j = i; j < n; j++) {
+            for (let k = 0; k < j; k++) {
+                dp[i][j] = (dp[i][j] + dp[i - 1][k] * charCounts[j][target.charCodeAt(i) - 97]) % mod;
+            }
+        }
+    }
+
+    return dp[m - 1].reduce((a, b) => (a + b) % mod, 0);
+};
