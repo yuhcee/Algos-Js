@@ -32,35 +32,31 @@
  * @return {number}
  */
 const numWays = function (words, target) {
-    const n = words[0].length;
-    const m = target.length;
-    const mod = 10 ** 9 + 7;
-    const dp = Array(m)
-        .fill(null)
-        .map(() => Array(n).fill(0));
-    const charCounts = Array(n)
-        .fill(null)
-        .map(() => Array(26).fill(0));
+    const mod = 1e9 + 7;
 
-    for (const word of words) {
-        for (let i = 0; i < n; i++) {
-            charCounts[i][word.charCodeAt(i) - 97]++;
+    // initialize result array with 0s and set result[0] to 1
+    const result = new Array(target.length + 1).fill(0);
+    result[0] = 1;
+
+    // loop through each character position in the words
+    for (let i = 0; i < words[0].length; i++) {
+        // initialize a count array to store the count of each character in the words
+        let count = new Array(26).fill(0);
+        for (let word of words) {
+            count[word.charCodeAt(i) - 97]++;
+        }
+
+        // loop through each character in the target string backwards
+        for (let j = target.length - 1; j >= 0; --j) {
+            // calculate the number of ways to form the target string up to the j-th character
+            // using characters from the i-th position in the words
+            result[j + 1] += (result[j] * count[target.charCodeAt(j) - 97]) % mod;
+            result[j + 1] %= mod;
         }
     }
 
-    for (let i = 0; i < n; i++) {
-        if (target.charCodeAt(0) === words[0].charCodeAt(i)) {
-            dp[0][i] = 1;
-        }
-    }
-
-    for (let i = 1; i < m; i++) {
-        for (let j = i; j < n; j++) {
-            for (let k = 0; k < j; k++) {
-                dp[i][j] = (dp[i][j] + dp[i - 1][k] * charCounts[j][target.charCodeAt(i) - 97]) % mod;
-            }
-        }
-    }
-
-    return dp[m - 1].reduce((a, b) => (a + b) % mod, 0);
+    // return the number of ways to form the target string
+    return result[target.length];
 };
+
+
