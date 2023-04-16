@@ -59,4 +59,14 @@ const numWays = function (words, target) {
     return result[target.length];
 };
 
-
+const words = ['acca', 'bbbb', 'caca'],
+    target = 'aba';
+// Output: 6
+/* Explanation: There are 6 ways to form target.
+"aba" -> index 0 ("acca"), index 1 ("bbbb"), index 3 ("caca")
+"aba" -> index 0 ("acca"), index 2 ("bbbb"), index 3 ("caca")
+"aba" -> index 0 ("acca"), index 1 ("bbbb"), index 3 ("acca")
+"aba" -> index 0 ("acca"), index 2 ("bbbb"), index 3 ("acca")
+"aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("acca")
+"aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("caca") */
+console.log(numWays(words, target));
