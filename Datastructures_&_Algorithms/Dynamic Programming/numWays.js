@@ -70,3 +70,14 @@ const words = ['acca', 'bbbb', 'caca'],
 "aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("acca")
 "aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("caca") */
 console.log(numWays(words, target));
+
+const words2 = ['abba', 'baab'],
+    target2 = 'bab';
+// Output: 4
+/* Explanation: There are 4 ways to form target.
+"bab" -> index 0 ("baab"), index 1 ("baab"), index 2 ("abba")
+"bab" -> index 0 ("baab"), index 1 ("baab"), index 3 ("baab")
+"bab" -> index 0 ("baab"), index 2 ("baab"), index 3 ("baab")
+"bab" -> index 1 ("abba"), index 2 ("baab"), index 3 ("baab") */
+console.log(numWays(words2, target2));
+
