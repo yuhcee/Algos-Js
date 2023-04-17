@@ -40,3 +40,10 @@ const candies = [2, 3, 5, 1, 3],
 - Kid 4, they will have 1 + 3 = 4 candies, which is not the greatest among the kids.
 - Kid 5, they will have 3 + 3 = 6 candies, which is the greatest among the kids. */
 console.log(kidsWithCandies(candies, extraCandies));
+
+const candies2 = [4, 2, 1, 1, 2],
+    extraCandies2 = 1;
+// Output: [true,false,false,false,false]
+/* Explanation: There is only 1 extra candy, therefore only kid 1 will have the greatest number
+of candies among the kids regardless of who takes the extra candy. */
+console.log(kidsWithCandies(candies2, extraCandies2));
