@@ -51,3 +51,12 @@ word1:  a   b
 word2:    p   q   r   s
 merged: a p b q   r   s */
 console.log(mergeAlternately(word11, word21));
+
+const word12 = 'abcd',
+    word22 = 'pq';
+// Output: "apbqcd"
+/* Explanation: Notice that as word1 is longer, "cd" is appended to the end.
+word1:  a   b   c   d
+word2:    p   q 
+merged: a p b q c   d */
+console.log(mergeAlternately(word12, word22));
