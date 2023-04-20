@@ -22,6 +22,11 @@
  * It is **guaranteed** that the answer will in the range of a **32-bit** signed
  * integer.
  *
+ * **Constraints**
+ *
+ * - The number of nodes in the tree is in the range `[1, 3000]`.
+ * - `100 <= Node.val <= 100`
+ *
  * @param {TreeNode} root
  * @return {number}
  */
