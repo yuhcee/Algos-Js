@@ -18,4 +18,44 @@
  * @return {number}
  */
 // dp[i][j] denote number of schemes having profit i with j members
-const profitableSchemes = function (n, minProfit, group, profit) {};
+const profitableSchemes = function (n, minProfit, group, profit) {
+    // Initialize the memo to be an array of length minProfit + 1, each element of which is an array
+    // of length n + 1, each element of which is 0
+    const memo = Array.from({ length: minProfit + 1 }, () => Array.from({ length: n + 1 }, () => 0));
+
+    // Set the first element of the memo to 1
+    memo[0][0] = 1;
+
+    // Loop through the profits
+    for (let i = 0; i < profit.length; i++) {
+        // Get the current profit
+        const currentProfit = profit[i];
+
+        // Get the current group size
+        const currentGroupSize = group[i];
+
+        // Loop through the profits in reverse
+        for (let j = minProfit; j >= 0; j--) {
+            // Loop through the group sizes in reverse
+            for (let k = n; k >= currentGroupSize; k--) {
+                // Add the number of schemes having profit j with k members to the number of schemes
+                // having profit j - currentProfit with k - currentGroupSize members
+                memo[j][k] += memo[Math.max(0, j - currentProfit)][k - currentGroupSize];
+                memo[j][k] %= 1000000007;
+            }
+        }
+    }
+
+    // Initialize the number of schemes to 0
+    let numberOfSchemes = 0;
+
+    // Loop through the group sizes
+    for (let i = 0; i <= n; i++) {
+        // Add the number of schemes having profit minProfit with i members to the number of schemes
+        numberOfSchemes += memo[minProfit][i];
+        numberOfSchemes %= 1000000007;
+    }
+
+    // Return the number of schemes
+    return numberOfSchemes;
+};
