@@ -11,6 +11,15 @@
  * Return the number of schemes that can be chosen. Since the answer may be very large, **return it
  * modulo** `109 + 7`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 100`
+ * - `0 <= minProfit <= 100`
+ * - `1 <= group.length <= 100`
+ * - `1 <= group[i] <= 100`
+ * - `profit.length == group.length`
+ * - `0 <= profit[i] <= 100`
+ *
  * @param {number} n
  * @param {number} minProfit
  * @param {number[]} group
