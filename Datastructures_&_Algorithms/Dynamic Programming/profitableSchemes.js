@@ -77,3 +77,12 @@ const n = 5,
 /* Explanation: To make a profit of at least 3, the group could either commit crimes 0 and 1, or just crime 1.
 In total, there are 2 schemes. */
 console.log(profitableSchemes(n, minProfit, group, profit));
+
+const n1 = 10,
+    minProfit1 = 5,
+    group1 = [2, 3, 5],
+    profit1 = [6, 7, 8];
+// Output: 7
+/* Explanation: To make a profit of at least 5, the group could commit any crimes, as long as they commit one.
+There are 7 possible schemes: (0), (1), (2), (0,1), (0,2), (1,2), and (0,1,2). */
+console.log(profitableSchemes(n1, minProfit1, group1, profit1));
