@@ -68,3 +68,12 @@ const profitableSchemes = function (n, minProfit, group, profit) {
     // Return the number of schemes
     return numberOfSchemes;
 };
+
+const n = 5,
+    minProfit = 3,
+    group = [2, 2],
+    profit = [2, 3];
+// Output: 2
+/* Explanation: To make a profit of at least 3, the group could either commit crimes 0 and 1, or just crime 1.
+In total, there are 2 schemes. */
+console.log(profitableSchemes(n, minProfit, group, profit));
