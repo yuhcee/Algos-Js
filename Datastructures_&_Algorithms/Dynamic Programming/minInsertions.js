@@ -7,6 +7,12 @@
  *
  * A **Palindrome String** is one that reads the same backward as well as forward.
  *
+ *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 500`
+ * - `s` consists of lowercase English letters.
+ *
  * @param {string} s
  * @return {number}
  */
