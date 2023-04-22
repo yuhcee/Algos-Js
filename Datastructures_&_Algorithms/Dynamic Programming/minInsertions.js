@@ -56,3 +56,7 @@ const s2 = 'leetcode';
 // Output: 5
 // Explanation: Inserting 5 characters the string becomes "leetcodocteel".
 console.log(minInsertions(s2));
+
+const s3 = 'g';
+// Output: 0
+console.log(minInsertions(s3));
