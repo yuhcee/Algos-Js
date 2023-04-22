@@ -46,3 +46,8 @@ const s = 'zzazz';
 // Output: 0
 // Explanation: The string "zzazz" is already palindrome we do not need any insertions.
 console.log(minInsertions(s));
+
+const s1 = 'mbadm';
+// Output: 2
+// Explanation: String can be "mbdadbm" or "mdbabdm".
+console.log(minInsertions(s1));
