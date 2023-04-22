@@ -17,40 +17,32 @@
  * @return {number}
  */
 const minInsertions = function (s) {
-    // Create a memo to store the number of insertions for each substring
-    const memo = {};
+    // reverse the input string
+    const reversedS = s.split('').reverse().join('');
+    // get the length of the input string
+    const n = s.length;
+    // create a 2D array to store the LCS of substrings
+    const dp = Array.from({ length: n + 1 }, () => new Array(n + 1).fill(0));
 
-    // Create a helper function to recursively find the minimum number of insertions
-    const findMinInsertions = (startIndex, endIndex) => {
-        // If the startIndex is greater than the endIndex, return 0
-        if (startIndex > endIndex) {
-            return 0;
+    // fill up the dp array using dynamic programming approach
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (s[i - 1] === reversedS[j - 1]) {
+                // if characters match, add 1 to LCS
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+            } else {
+                // otherwise, take maximum LCS of two substrings
+                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+            }
         }
+    }
 
-        // If the startIndex is equal to the endIndex, return 1
-        if (startIndex === endIndex) {
-            return 1;
-        }
-
-        // If the number of insertions for the substring starting at startIndex and ending at endIndex
-        // is already in the memo, return it
-        if (memo[`${startIndex},${endIndex}`] !== undefined) {
-            return memo[`${startIndex},${endIndex}`];
-        }
-
-        // If the characters at the startIndex and endIndex are the same, return the number of
-        // insertions for the substring starting at startIndex + 1 and ending at endIndex - 1
-        if (s[startIndex] === s[endIndex]) {
-            return findMinInsertions(startIndex + 1, endIndex - 1);
-        }
-
-        // Otherwise, return the minimum of the number of insertions for the substring starting at
-        // startIndex + 1 and ending at endIndex and the number of insertions for the substring
-        // starting at startIndex and ending at endIndex - 1
-        return 1 + Math.min(findMinInsertions(startIndex + 1, endIndex), findMinInsertions(startIndex, endIndex - 1));
-    };
-
-    // Return the number of insertions for the substring starting at 0 and ending at the length of
-    // the string - 1
-    return findMinInsertions(0, s.length - 1);
+    // return the minimum number of insertions required to make s a palindrome
+    // this is the difference between the length of s and the length of its LCS
+    return n - dp[n][n];
 };
+
+const s = 'zzazz';
+// Output: 0
+// Explanation: The string "zzazz" is already palindrome we do not need any insertions.
+console.log(minInsertions(s));
