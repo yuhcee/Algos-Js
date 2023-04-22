@@ -51,3 +51,8 @@ const s1 = 'mbadm';
 // Output: 2
 // Explanation: String can be "mbdadbm" or "mdbabdm".
 console.log(minInsertions(s1));
+
+const s2 = 'leetcode';
+// Output: 5
+// Explanation: Inserting 5 characters the string becomes "leetcodocteel".
+console.log(minInsertions(s2));
