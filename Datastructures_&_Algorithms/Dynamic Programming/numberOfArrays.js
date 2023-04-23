@@ -82,3 +82,9 @@ const s = '1000',
 // Output: 1
 // Explanation: The only possible array is [1000]
 console.log(numberOfArrays(s, k));
+
+const s2 = '1000',
+    k2 = 10;
+// Output: 0
+// Explanation: There cannot be an array that was printed this way and has all integer >= 1 and <= 10.
+console.log(numberOfArrays(s2, k2));
