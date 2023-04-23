@@ -9,6 +9,11 @@
  * printed as `s` using the mentioned program*. Since the answer may be very large, return it
  * **modulo** `109 + 7`.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= s.length <= 105`
+ * - `s` consists of only digits and does not contain leading zeros.
+ * - `1 <= k <= 109`
  *
  * @param {string} s
  * @param {number} k
