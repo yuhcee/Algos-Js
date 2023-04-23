@@ -10,7 +10,7 @@
  * **modulo** `109 + 7`.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= s.length <= 105`
  * - `s` consists of only digits and does not contain leading zeros.
  * - `1 <= k <= 109`
@@ -76,3 +76,9 @@ const numberOfArrays = function (s, k) {
     // Return the number of arrays for the substring starting at 0
     return findNumberOfArrays(0);
 };
+
+const s = '1000',
+    k = 10000;
+// Output: 1
+// Explanation: The only possible array is [1000]
+console.log(numberOfArrays(s, k));
