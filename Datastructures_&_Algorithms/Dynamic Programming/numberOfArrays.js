@@ -88,3 +88,9 @@ const s2 = '1000',
 // Output: 0
 // Explanation: There cannot be an array that was printed this way and has all integer >= 1 and <= 10.
 console.log(numberOfArrays(s2, k2));
+
+const s3 = '1317',
+    k3 = 2000;
+// Output: 8
+// Explanation: Possible arrays are [1317],[131,7],[13,17],[1,317],[13,1,7],[1,31,7],[1,3,17],[1,3,1,7]
+console.log(numberOfArrays(s3, k3));
