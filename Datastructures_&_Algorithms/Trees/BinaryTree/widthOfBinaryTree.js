@@ -91,3 +91,8 @@ const root2 = [1, 3, 2, 5, null, null, 9, 6, null, 7];
 Output: 7;
 // Explanation: The maximum width exists in the fourth level with length 7 (6,null,null,null,null,null,7).
 console.log();
+
+const root3 = [1, 3, 2, 5];
+// Output: 2
+// Explanation: The maximum width exists in the second level with length 2 (3,2).
+console.log(widthOfBinaryTree(root3));
