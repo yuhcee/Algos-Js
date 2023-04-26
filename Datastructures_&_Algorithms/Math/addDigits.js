@@ -31,3 +31,7 @@ console.log(addDigits(num));
 const num1 = 0;
 // Output: 0
 console.log(addDigits(num1));
+
+const num2 = 1;
+// Output: 1
+console.log(addDigits(num2));
