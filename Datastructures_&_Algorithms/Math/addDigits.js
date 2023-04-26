@@ -27,3 +27,7 @@ const num = 38;
 // 11 --> 1 + 1 --> 2
 // Since 2 has only one digit, return it
 console.log(addDigits(num));
+
+const num1 = 0;
+// Output: 0
+console.log(addDigits(num1));
