@@ -70,3 +70,6 @@ const strs2 = ['omv', 'ovm'];
 // Output: 1
 console.log(numSimilarGroups(strs2));
 
+const strs3 = ['abc', 'abc'];
+// Output: 1
+console.log(numSimilarGroups(strs3));
