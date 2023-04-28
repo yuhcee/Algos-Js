@@ -15,9 +15,9 @@
  *
  * We are given a list `strs` of strings where every string in `strs` is an anagram of
  * every other string in `strs`. How many groups are there?
- * 
+ *
  * **Constraints:**
- * 
+ *
  * - `1 <= strs.length <= 300`
  * - `1 <= strs[i].length <= 300`
  * - `strs[i]` consists of lowercase letters only.
@@ -26,4 +26,49 @@
  * @param {string[]} strs
  * @return {number}
  */
-const numSimilarGroups = function (strs) {};
+const numSimilarGroups = function (strs) {
+    const visited = new Set();
+    let count = 0;
+
+    for (let i = 0; i < strs.length; i++) {
+        if (!visited.has(strs[i])) {
+            dfs(strs, visited, strs[i]);
+            count++;
+        }
+    }
+
+    return count;
+};
+
+const dfs = (strs, visited, str) => {
+    if (visited.has(str)) return;
+    visited.add(str);
+
+    for (let i = 0; i < strs.length; i++) {
+        if (isSimilar(str, strs[i])) {
+            dfs(strs, visited, strs[i]);
+        }
+    }
+};
+
+const isSimilar = (str1, str2) => {
+    let diff = 0;
+
+    for (let i = 0; i < str1.length; i++) {
+        if (str1[i] !== str2[i]) diff++;
+        if (diff > 2) return false;
+    }
+
+    return true;
+};
+
+
+
+
+
+
+
+
+
+
+
