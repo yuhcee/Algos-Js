@@ -15,6 +15,13 @@
  *
  * We are given a list `strs` of strings where every string in `strs` is an anagram of
  * every other string in `strs`. How many groups are there?
+ * 
+ * **Constraints:**
+ * 
+ * - `1 <= strs.length <= 300`
+ * - `1 <= strs[i].length <= 300`
+ * - `strs[i]` consists of lowercase letters only.
+ * - All words in `strs` have the same length and are anagrams of each other.
  *
  * @param {string[]} strs
  * @return {number}
