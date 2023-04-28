@@ -65,3 +65,8 @@ const isSimilar = (str1, str2) => {
 const strs = ['tars', 'rats', 'arts', 'star'];
 // Output: 2
 console.log(numSimilarGroups(strs));
+
+const strs2 = ['omv', 'ovm'];
+// Output: 1
+console.log(numSimilarGroups(strs2));
+
