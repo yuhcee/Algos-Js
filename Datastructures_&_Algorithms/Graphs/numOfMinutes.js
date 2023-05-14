@@ -70,3 +70,11 @@ const numOfMinutes = function (n, headID, manager, informTime) {
     // Start the recursive calculation from the headID
     return dfs(headID);
 };
+
+const n = 1,
+    headID = 0,
+    manager = [-1],
+    informTime = [0];
+// Output: 0
+// Explanation: The head of the company is the only employee in the company.
+console.log(numOfMinutes(n, headID, manager, informTime));
