@@ -78,3 +78,12 @@ const n = 1,
 // Output: 0
 // Explanation: The head of the company is the only employee in the company.
 console.log(numOfMinutes(n, headID, manager, informTime));
+
+const n1 = 6,
+    headID1 = 2,
+    manager1 = [2, 2, -1, 2, 2, 2],
+    informTime1 = [0, 0, 1, 0, 0, 0];
+// Output: 1
+/* Explanation: The head of the company with id = 2 is the direct manager of all the employees in the company and needs 1 minute to inform them all.
+The tree structure of the employees in the company is shown. */
+console.log(numOfMinutes(n1, headID1, manager1, informTime1));
