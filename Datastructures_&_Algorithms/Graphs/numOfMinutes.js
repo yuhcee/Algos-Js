@@ -19,6 +19,18 @@
  *
  * Return the *number of minutes* needed to inform all the employees about the urgent news.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 105`
+ * - `0 <= headID < n`
+ * - `manager.length == n`
+ * - `0 <= manager[i] < n`
+ * - `manager[headID] == -1`
+ * - `informTime.length == n`
+ * - `0 <= informTime[i] <= 1000`
+ * - `informTime[i] == 0` if employee `i` has no subordinates.
+ * - It is **guaranteed** that all the employees can be informed.
+ *
  * @param {number} n
  * @param {number} headID
  * @param {number[]} manager
