@@ -37,4 +37,36 @@
  * @param {number[]} informTime
  * @return {number}
  */
-const numOfMinutes = function (n, headID, manager, informTime) {};
+const numOfMinutes = function (n, headID, manager, informTime) {
+    // Create a map to store the subordinates for each employee
+    const subordinates = new Map();
+
+    // Populate the subordinates map based on the manager array
+    for (let i = 0; i < n; i++) {
+        const mgr = manager[i];
+        if (!subordinates.has(mgr)) {
+            subordinates.set(mgr, []);
+        }
+        subordinates.get(mgr).push(i);
+    }
+
+    // Define a recursive helper function to calculate the time needed for each employee
+    function dfs(employee) {
+        // If the employee has no subordinates, return 0 (base case)
+        if (!subordinates.has(employee)) {
+            return 0;
+        }
+
+        let maxTime = 0;
+        // Iterate over the subordinates of the employee and recursively calculate the time for each
+        for (let sub of subordinates.get(employee)) {
+            maxTime = Math.max(maxTime, dfs(sub));
+        }
+
+        // Add the informTime of the current employee to the maximum time of subordinates
+        return maxTime + informTime[employee];
+    }
+
+    // Start the recursive calculation from the headID
+    return dfs(headID);
+};
