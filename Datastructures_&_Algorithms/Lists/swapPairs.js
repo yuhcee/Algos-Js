@@ -56,6 +56,10 @@ const head = [1, 2, 3, 4];
 // Output: [2,1,4,3]
 console.log(swapPairs(head));
 
-const head1 = []
+const head1 = [];
 // Output: []
 console.log(swapPairs(head1));
+
+const head2 = [1];
+// Output: [1]
+console.log(swapPairs(head2));
