@@ -5,6 +5,11 @@
  * You must solve the problem without modifying the values in the list's nodes (i.e., 
  * only nodes themselves may be changed.)
  * 
+ * **Constraints:**
+ * 
+ * - The number of nodes in the list is in the range `[0, 100]`.
+ * - `0 <= Node.val <= 100`
+ * 
  * Definition for singly-linked list.
  * function ListNode(val, next) {
  *     this.val = (val === undefined ? 0 : val)
