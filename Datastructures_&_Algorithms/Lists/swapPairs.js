@@ -55,3 +55,7 @@ const swapPairs = function (head) {
 const head = [1, 2, 3, 4];
 // Output: [2,1,4,3]
 console.log(swapPairs(head));
+
+const head1 = []
+// Output: []
+console.log(swapPairs(head1));
