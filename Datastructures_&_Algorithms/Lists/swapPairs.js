@@ -51,3 +51,7 @@ const swapPairs = function (head) {
     // Return the head of the modified linked list.
     return dummy.next;
 };
+
+const head = [1, 2, 3, 4];
+// Output: [2,1,4,3]
+console.log(swapPairs(head));
