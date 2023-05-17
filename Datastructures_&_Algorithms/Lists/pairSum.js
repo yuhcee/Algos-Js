@@ -21,7 +21,10 @@
  * Given the `head` of a linked list with even length, return the
  * ***maximum twin sum** of the linked list*.
  * 
+ * **Constraints:**
  * 
+ * - The number of nodes in the list is in the range `[0, 100]`.
+ * - `0 <= Node.val <= 100`
  *
  * Returns the maximum twin sum of the linked list.
  * @param {ListNode} head - The head of the linked list.
