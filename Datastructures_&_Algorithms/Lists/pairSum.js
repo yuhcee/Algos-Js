@@ -58,3 +58,10 @@ const pairSum = function (head) {
 const head = [3, 1, 4, 2];
 // Output: 8
 console.log(pairSum(head));
+
+const head1 = [5, 4, 2, 1];
+// Output: 6
+/* Explanation:
+Nodes 0 and 1 are the twins of nodes 3 and 2, respectively. All have twin sum = 6.
+There are no other nodes with twins in the linked list.
+Thus, the maximum twin sum of the linked list is 6. */
