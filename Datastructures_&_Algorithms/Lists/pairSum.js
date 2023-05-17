@@ -20,9 +20,9 @@
  *
  * Given the `head` of a linked list with even length, return the
  * ***maximum twin sum** of the linked list*.
- * 
+ *
  * **Constraints:**
- * 
+ *
  * - The number of nodes in the list is in the range `[0, 100]`.
  * - `0 <= Node.val <= 100`
  *
@@ -30,4 +30,27 @@
  * @param {ListNode} head - The head of the linked list.
  * @returns {number} - The maximum twin sum.
  */
-const pairSum = function (head) {};
+const pairSum = function (head) {
+    let maxSum = Number.NEGATIVE_INFINITY;
+    let curr = head;
+    const values = [];
+
+    // Store the values of the linked list in an array.
+    while (curr) {
+        values.push(curr.val);
+        curr = curr.next;
+    }
+
+    let left = 0;
+    let right = values.length - 1;
+
+    // Iterate from both ends of the array to find the maximum twin sum.
+    while (left < right) {
+        maxSum = Math.max(maxSum, values[left] + values[right]);
+        left++;
+        right--;
+    }
+
+    // Return the maximum twin sum.
+    return maxSum;
+};
