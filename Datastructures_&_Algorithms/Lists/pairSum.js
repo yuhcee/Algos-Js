@@ -54,3 +54,7 @@ const pairSum = function (head) {
     // Return the maximum twin sum.
     return maxSum;
 };
+
+const head = [3, 1, 4, 2];
+// Output: 8
+console.log(pairSum(head));
