@@ -10,11 +10,19 @@
  * 
  * Notice that you can return the vertices in any order.
  * 
+ * **Constraints:**
+ * 
+ * - `2 <= n <= 10^5`
+ * - `1 <= edges.length <= min(10^5, n * (n - 1) / 2)`
+ * - `edges[i].length == 2`
+ * - `0 <= fromi, toi < n`
+ * - All pairs `(fromi, toi)` are distinct.
+ * 
  * @param {number} n - The number of vertices in the graph.
  * @param {number[][]} edges - The array of directed edges.
  * @return {number[]} - The smallest set of vertices from which all nodes 
  * are reachable.
  */
 const findSmallestSetOfVertices = function (n, edges) {
-   
+    
 };
