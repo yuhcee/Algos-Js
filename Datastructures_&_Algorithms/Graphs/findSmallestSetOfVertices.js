@@ -69,3 +69,12 @@ const edges1 = [
 /* Explanation: Notice that vertices 0, 3 and 2 are not reachable from any other node,
 so we must include them. Also any of these vertices can reach nodes 1 and 4. */
 console.log(findSmallestSetOfVertices(n1, edges1));
+
+const n2 = 2;
+const edges2 = [
+    [0, 1],
+    [1, 0],
+];
+// Output: [0, 1]
+/* Explanation: Graphs with multiple edges between nodes are allowed */
+console.log(findSmallestSetOfVertices(n2, edges2));
