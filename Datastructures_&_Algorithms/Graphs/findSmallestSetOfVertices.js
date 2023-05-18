@@ -24,5 +24,22 @@
  * are reachable.
  */
 const findSmallestSetOfVertices = function (n, edges) {
-    
+    // Create an array to store the incoming edge counts for each vertex.
+    const incomingEdges = new Array(n).fill(0);
+
+    // Iterate through the edges and count the incoming edges for each vertex.
+    for (const [from, to] of edges) {
+        incomingEdges[to]++;
+    }
+
+    const smallestSet = [];
+
+    // Iterate through the vertices and add the ones with no incoming edges to the smallest set.
+    for (let i = 0; i < n; i++) {
+        if (incomingEdges[i] === 0) {
+            smallestSet.push(i);
+        }
+    }
+
+    return smallestSet;
 };
