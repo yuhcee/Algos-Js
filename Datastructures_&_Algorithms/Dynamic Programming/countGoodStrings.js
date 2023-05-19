@@ -16,14 +16,39 @@
  * properties*. Since the answer can be large, return it **modulo** `109 + 7`.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= low <= high <= 105`
  * - `1 <= zero, one <= low`
- * 
+ *
  * @param {number} low - The lower bound of the string length.
  * @param {number} high - The upper bound of the string length.
  * @param {number} zero - The number of zeros available.
  * @param {number} one - The number of ones available.
  * @return {number} - The number of different good strings modulo 10^9 + 7.
  */
-const countGoodStrings = function (low, high, zero, one) {};
+const countGoodStrings = function (low, high, zero, one) {
+    const dp = new Array(high + 1).fill(0);
+    dp[0] = 1;
+    const mod = 1000000007;
+
+    // Calculate the dynamic programming array
+    for (let end = 1; end <= high; ++end) {
+        // Calculate the count for the current length
+        if (end >= zero) {
+            dp[end] += dp[end - zero]; // Append '0'
+        }
+        if (end >= one) {
+            dp[end] += dp[end - one]; // Append '1'
+        }
+        dp[end] %= mod;
+    }
+
+    let answer = 0;
+    // Sum up the counts within the range [low, high]
+    for (let i = low; i <= high; ++i) {
+        answer += dp[i];
+        answer %= mod;
+    }
+
+    return answer;
+};
