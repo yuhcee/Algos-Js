@@ -52,3 +52,14 @@ const countGoodStrings = function (low, high, zero, one) {
 
     return answer;
 };
+
+const low = 3,
+    high = 3,
+    zero = 1,
+    one = 1;
+// Output: 8
+/* Explanation: 
+One possible valid good string is "011". 
+It can be constructed as follows: "" -> "0" -> "01" -> "011". 
+All binary strings from "000" to "111" are good strings in this example. */
+console.log(countGoodStrings(low, high, zero, one));
