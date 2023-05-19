@@ -71,3 +71,11 @@ const low1 = 2,
 // Output: 0
 /* Explanation: The only good string of length 2 is "11". */
 console.log(countGoodStrings(low1, high1, zero1, one1));
+
+const low2 = 2,
+    high2 = 3,
+    zero2 = 1,
+    one2 = 2;
+// Output: 5
+// Explanation: The good strings are "00", "11", "000", "110", and "011".
+console.log(countGoodStrings(low2, high2, zero2, one2));
