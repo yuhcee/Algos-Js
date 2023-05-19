@@ -63,3 +63,11 @@ One possible valid good string is "011".
 It can be constructed as follows: "" -> "0" -> "01" -> "011". 
 All binary strings from "000" to "111" are good strings in this example. */
 console.log(countGoodStrings(low, high, zero, one));
+
+const low1 = 2,
+    high1 = 2,
+    zero1 = 0,
+    one1 = 0;
+// Output: 0
+/* Explanation: The only good string of length 2 is "11". */
+console.log(countGoodStrings(low1, high1, zero1, one1));
