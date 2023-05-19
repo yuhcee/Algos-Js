@@ -15,6 +15,11 @@
  * Return *the number of **different** good strings that can be constructed satisfying these
  * properties*. Since the answer can be large, return it **modulo** `109 + 7`.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= low <= high <= 105`
+ * - `1 <= zero, one <= low`
+ * 
  * @param {number} low - The lower bound of the string length.
  * @param {number} high - The upper bound of the string length.
  * @param {number} zero - The number of zeros available.
