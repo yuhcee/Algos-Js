@@ -60,3 +60,35 @@ function buildGraph(equations, values) {
 
     return graph;
 }
+
+/**
+ * Helper function to evaluate a query using DFS.
+ * @param {object} graph - The graph representing the equations and values.
+ * @param {string} start - The starting variable.
+ * @param {string} end - The target variable.
+ * @param {Set} visited - Set to track visited variables during DFS.
+ * @return {number} - The result of evaluating the query.
+ */
+function evaluateQuery(graph, start, end, visited) {
+    if (start === end) {
+        return 1.0;
+    }
+
+    visited.add(start);
+
+    for (const [next, value] of graph[start]) {
+        if (visited.has(next)) {
+            continue;
+        }
+
+        visited.add(next);
+        const result = evaluateQuery(graph, next, end, visited);
+
+        if (result !== -1.0) {
+            return result * value;
+        }
+    }
+
+    return -1.0;
+}
+
