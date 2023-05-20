@@ -33,3 +33,30 @@
 const calcEquation = (equations, values, queries) => {
     
 };
+
+/**
+ * Helper function to build the graph from equations and values.
+ * @param {string[][]} equations - Array of variable pairs equations.
+ * @param {number[]} values - Array of real numbers representing the equation values.
+ * @return {object} - The built graph.
+ */
+function buildGraph(equations, values) {
+    const graph = {};
+
+    for (let i = 0; i < equations.length; i++) {
+        const [numerator, denominator] = equations[i];
+        const value = values[i];
+
+        if (!(numerator in graph)) {
+            graph[numerator] = [];
+        }
+        if (!(denominator in graph)) {
+            graph[denominator] = [];
+        }
+
+        graph[numerator].push([denominator, value]);
+        graph[denominator].push([numerator, 1 / value]);
+    }
+
+    return graph;
+}
