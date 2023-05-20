@@ -108,3 +108,38 @@ function evaluateQuery(graph, start, end, visited) {
     return -1.0;
 }
 
+const equations = [
+        ['a', 'b'],
+        ['b', 'c'],
+    ],
+    values = [2.0, 3.0],
+    queries = [
+        ['a', 'c'],
+        ['b', 'a'],
+        ['a', 'e'],
+        ['a', 'a'],
+        ['x', 'x'],
+    ]; // Output: [6.00000,0.50000,-1.00000,1.00000,-1.00000]
+const equations1 = [
+        ['a', 'b'],
+        ['b', 'c'],
+        ['bc', 'cd'],
+    ],
+    values1 = [1.5, 2.5, 5.0],
+    queries1 = [
+        ['a', 'c'],
+        ['c', 'b'],
+        ['bc', 'cd'],
+        ['cd', 'bc'],
+    ]; // Output: [3.75000,0.40000,5.00000,0.20000]
+const equations2 = [['a', 'b']],
+    values2 = [0.5],
+    queries2 = [
+        ['a', 'b'],
+        ['b', 'a'],
+        ['a', 'c'],
+        ['x', 'y'],
+    ]; //  Output: [0.50000,2.00000,-1.00000,-1.00000]
+console.log(calcEquation(equations, values, queries));
+console.log(calcEquation(equations1, values1, queries1));
+console.log(calcEquation(equations2, values2, queries2));
