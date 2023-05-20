@@ -19,12 +19,34 @@
  * Return *the **maximum** points you can earn for the exam*.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= questions.length <= 105`
  * - `questions[i].length == 2`
  * - `1 <= pointsi, brainpoweri <= 105`
- * 
+ *
  * @param {number[][]} questions - 2D integer array describing the questions.
  * @return {number} - Maximum points that can be earned.
  */
-const mostPoints = function (questions) {};
+const mostPoints = function (questions) {
+    const n = questions.length;
+    const dp = new Array(n).fill(BigInt(0));
+
+    // Initialize the last question's points
+    dp[n - 1] = BigInt(questions[n - 1][0]);
+
+    // Dynamic programming from the second-to-last question to the first question
+    for (let i = n - 2; i >= 0; --i) {
+        dp[i] = BigInt(questions[i][0]); // Points earned by solving the current question
+        const skip = questions[i][1]; // Number of questions to skip
+
+        // Check if it is possible to solve the current question and earn additional points from skipped questions
+        if (i + skip + 1 < n) {
+            dp[i] += dp[i + skip + 1]; // Add the points earned from skipped questions
+        }
+
+        // Choose the maximum points between solving the current question and skipping it
+        dp[i] = BigInt(Math.max(Number(dp[i]), Number(dp[i + 1])));
+    }
+
+    return Number(dp[0]); // Convert the result from BigInt to Number
+};
