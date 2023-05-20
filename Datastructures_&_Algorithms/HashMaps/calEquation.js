@@ -14,7 +14,7 @@
  * in division by zero and that there is no contradiction.
  *
  *  **Constraints:**
- * 
+ *
  * - `1 <= equations.length <= 20`
  * - `equations[i].length == 2`
  * - `1 <= Ai.length, Bi.length <= 5`
@@ -24,14 +24,30 @@
  * - `queries[i].length == 2`
  * - `1 <= Cj.length, Dj.length <= 5`
  * - `Ai, Bi, Cj, Dj` consist of lower case English letters and digits.
- * 
+ *
  * @param {string[][]} equations - Array of variable pairs equations.
  * @param {number[]} values - Array of real numbers representing the equation values.
  * @param {string[][]} queries - Array of queries to evaluate.
  * @return {number[]} - Array of answers for each query.
  */
 const calcEquation = (equations, values, queries) => {
-    
+    // Step 1: Build the graph
+    const graph = buildGraph(equations, values);
+
+    // Step 2: Evaluate queries
+    const results = [];
+    for (const [start, end] of queries) {
+        if (!(start in graph) || !(end in graph)) {
+            // One or both variables are not in the graph
+            results.push(-1.0);
+        } else {
+            const visited = new Set();
+            const result = evaluateQuery(graph, start, end, visited);
+            results.push(result);
+        }
+    }
+
+    return results;
 };
 
 /**
