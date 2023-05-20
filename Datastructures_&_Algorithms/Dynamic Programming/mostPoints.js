@@ -80,3 +80,31 @@ const questions1 = [
 - Solve question 4: Earn 5 points
 Total points earned: 2 + 5 = 7. There is no other way to earn 7 or more points. */
 console.log(mostPoints(questions1));
+
+const questions2 = [
+    [1, 2],
+    [2, 4],
+    [3, 2],
+    [4, 1],
+    [5, 3],
+    [6, 2],
+    [7, 1],
+    [8, 2],
+    [9, 1],
+    [10, 1],
+];
+// Output: 22
+/* Explanation: The maximum points can be earned by solving questions 1, 3, 5, 7, and 9.
+- Skip question 0
+- Solve question 1: Earn 2 points, will be unable to solve the next 3 questions
+- Skip question 2
+- Solve question 3: Earn 1 point, will be unable to solve the next 0 questions
+- Skip question 4
+- Solve question 5: Earn 3 points, will be unable to solve the next 1 question
+- Skip question 6
+- Solve question 7: Earn 1 point, will be unable to solve the next 0 questions
+- Skip question 8
+- Solve question 9: Earn 1 point, will be unable to solve the next 0 questions
+- Skip question 10
+Total points earned: 2 + 1 + 3 + 1 + 1 + 1 = 10. There is no other way to earn 10 or more points. */
+console.log(mostPoints(questions2));
