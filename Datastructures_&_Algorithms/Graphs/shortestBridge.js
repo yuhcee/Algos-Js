@@ -107,3 +107,10 @@ const shortestBridge = function (grid) {
 
     return findShortestPath(queue);
 };
+
+const grid = [
+    [0, 1],
+    [1, 0],
+];
+// Output: 1
+console.log(shortestBridge(grid));
