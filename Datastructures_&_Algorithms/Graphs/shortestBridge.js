@@ -11,6 +11,13 @@
  *
  * Return *the smallest number of `0`'s you must flip to connect the two islands*.
  *
+ * **Constraints:**
+ *
+ * - `n == grid.length == grid[i].length`
+ * - `2 <= n <= 100`
+ * - `grid[i][j]` is either `0` or `1`.
+ * - There are exactly two islands in `grid`.
+ *
  * @param {number[][]} grid
  * @return {number}
  */
