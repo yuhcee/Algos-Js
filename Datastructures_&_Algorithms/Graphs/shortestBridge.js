@@ -115,6 +115,20 @@ const grid = [
 // Output: 1
 console.log(shortestBridge(grid));
 
-const grid1 = [[0,1,0],[0,0,0],[0,0,1]]
+const grid1 = [
+    [0, 1, 0],
+    [0, 0, 0],
+    [0, 0, 1],
+];
 // Output: 2
 console.log(shortestBridge(grid1));
+
+const grid2 = [
+    [1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 1],
+    [1, 0, 1, 0, 1],
+    [1, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1],
+];
+// Output: 1
+console.log(shortestBridge(grid2));
