@@ -132,3 +132,13 @@ const grid2 = [
 ];
 // Output: 1
 console.log(shortestBridge(grid2));
+
+const grid3 = [
+    [0, 1, 0, 0, 0],
+    [0, 1, 0, 1, 1],
+    [0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 0],
+    [1, 1, 0, 0, 0],
+];
+// Output: 1
+console.log(shortestBridge(grid3));
