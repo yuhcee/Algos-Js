@@ -57,3 +57,8 @@ const nums1 = [1, 4, 2],
 /* Explanation: We can draw 2 uncrossed lines as in the diagram.
 We cannot draw 3 uncrossed lines, because the line from nums1[1] = 4 to nums2[2] = 4 will intersect the line from nums1[2]=2 to nums2[1]=2. */
 console.log(maxUncrossedLines(nums1, nums2));
+
+const nums11 = [2, 5, 1, 2, 5],
+    nums22 = [10, 5, 2, 1, 5, 2];
+// Output: 3
+console.log(maxUncrossedLines(nums11, nums22));
