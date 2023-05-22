@@ -50,3 +50,10 @@ const maxUncrossedLines = function (nums1, nums2) {
     // The bottom-right element of the DP array contains the maximum number of connecting lines
     return dp[m][n];
 };
+
+const nums1 = [1, 4, 2],
+    nums2 = [1, 2, 4];
+// Output: 2
+/* Explanation: We can draw 2 uncrossed lines as in the diagram.
+We cannot draw 3 uncrossed lines, because the line from nums1[1] = 4 to nums2[2] = 4 will intersect the line from nums1[2]=2 to nums2[1]=2. */
+console.log(maxUncrossedLines(nums1, nums2));
