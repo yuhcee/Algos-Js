@@ -15,6 +15,11 @@
  *
  * Return *the maximum number of connecting lines we can draw in this way*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums1.length, nums2.length <= 500`
+ * - `1 <= nums1[i], nums2[j] <= 2000`
+ *
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number}
