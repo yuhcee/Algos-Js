@@ -62,3 +62,8 @@ const nums11 = [2, 5, 1, 2, 5],
     nums22 = [10, 5, 2, 1, 5, 2];
 // Output: 3
 console.log(maxUncrossedLines(nums11, nums22));
+
+const nums111 = [1, 3, 7, 1, 7, 5],
+    nums222 = [1, 9, 2, 5, 1];
+// Output: 2
+console.log(maxUncrossedLines(nums111, nums222));
