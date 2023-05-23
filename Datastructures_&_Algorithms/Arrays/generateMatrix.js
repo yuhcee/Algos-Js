@@ -55,3 +55,7 @@ const generateMatrix = (n) => {
 const n = 3;
 // Output: [[1,2,3],[8,9,4],[7,6,5]]
 console.log(generateMatrix(n));
+
+const n1 = 1;
+// Output: [[1]]
+console.log(generateMatrix(n1));
