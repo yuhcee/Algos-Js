@@ -17,6 +17,13 @@
  * A **subsequence** of indices of an array is a set that can be derived from the set `
  * {0, 1, ..., n-1}` by deleting some or no elements.
  *
+ * **Constraints:**
+ * 
+ * - `n == nums1.length == nums2.length`
+ * - `1 <= n <= 105`
+ * - `0 <= nums1[i], nums2[j] <= 105`
+ * - `1 <= k <= n`
+ * 
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @param {number} k
