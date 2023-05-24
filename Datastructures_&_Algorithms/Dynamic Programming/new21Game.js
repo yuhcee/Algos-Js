@@ -13,9 +13,16 @@
  * 
  * Answers within `10-5` of the actual answer are considered accepted.
  * 
+ * **Constraints:**
+ * 
+ * - `0 <= k <= n <= 104`
+ * - `1 <= maxPts <= 104`
+ * 
  * @param {number} n
  * @param {number} k
  * @param {number} maxPts
  * @return {number}
  */
-
+const new21Game = function (n, k, maxPts) {
+    
+};
