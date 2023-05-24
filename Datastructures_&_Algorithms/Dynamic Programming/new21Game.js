@@ -24,5 +24,36 @@
  * @return {number}
  */
 const new21Game = function (n, k, maxPts) {
-    
+    // Create an array to store the probabilities
+    let dp = new Array(n + 1);
+
+    // Initialize the first element of the array to 1
+    dp[0] = 1;
+
+    // Initialize the sum variable
+    let s = k > 0 ? 1 : 0;
+
+    // Calculate the probabilities using dynamic programming
+    for (let i = 1; i <= n; i++) {
+        // Calculate the probability at index i
+        dp[i] = s / maxPts;
+
+        // If i is less than k, add the probability to the sum
+        if (i < k) {
+            s += dp[i];
+        }
+
+        // If i - maxPts is within the range [0, k), subtract the probability from the sum
+        if (i - maxPts >= 0 && i - maxPts < k) {
+            s -= dp[i - maxPts];
+        }
+    }
+
+    // Calculate the total probability from k to n
+    let ans = 0;
+    for (let i = k; i <= n; i++) {
+        ans += dp[i];
+    }
+
+    return ans;
 };
