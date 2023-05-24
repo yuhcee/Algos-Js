@@ -64,3 +64,11 @@ const n = 10,
 // Output: 1.00000
 // Explanation: Alice gets a single card, then stops.
 console.log(new21Game(n, k, maxPts));
+
+const n1 = 6,
+    k1 = 1,
+    maxPts1 = 10;
+// Output: 0.60000
+/* Explanation: Alice gets a single card, then stops.
+In 6 out of 10 possibilities, she is at or below 6 points. */
+console.log(new21Game(n1, k1, maxPts1));
