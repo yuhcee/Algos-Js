@@ -72,3 +72,9 @@ const n1 = 6,
 /* Explanation: Alice gets a single card, then stops.
 In 6 out of 10 possibilities, she is at or below 6 points. */
 console.log(new21Game(n1, k1, maxPts1));
+
+const n2 = 21,
+    k2 = 17,
+    maxPts2 = 10;
+// Output: 0.73278
+console.log(new21Game(n2, k2, maxPts2));
