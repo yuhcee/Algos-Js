@@ -123,3 +123,11 @@ The four possible subsequence scores are:
 - We choose the indices 1, 2, and 3 with score = (3+3+2) * min(1,3,4) = 8.
 Therefore, we return the max score, which is 12. */
 console.log(maxScore(nums1, nums2, k));
+
+const nums11 = [4, 2, 3, 1, 1],
+    nums22 = [7, 5, 10, 9, 6],
+    k1 = 1;
+// Output: 30
+/* Explanation: 
+Choosing index 2 is optimal: nums1[2] * nums2[2] = 3 * 10 = 30 is the maximum possible score. */
+console.log(maxScore(nums11, nums22, k1));
