@@ -29,7 +29,39 @@
  * @param {number} k
  * @return {number}
  */
-const maxScore = function (nums1, nums2, k) {};
+const maxScore = function (nums1, nums2, k) {
+    const n = nums1.length;
+    const pairs = new Array(n);
+    const minHeap = new MinHeap();
+    let max = 0;
+    let sum = 0;
+
+    // Create pairs from nums1 and nums2
+    for (let i = 0; i < n; i++) {
+        pairs[i] = [nums1[i], nums2[i]];
+    }
+
+    // Sort pairs based on the second element (nums2 values) in descending order
+    pairs.sort((a, b) => b[1] - a[1]);
+
+    // Calculate the initial sum and add elements to the min heap
+    for (let i = 0; i < k; i++) {
+        sum += pairs[i][0];
+        minHeap.add(pairs[i][0]);
+    }
+
+    // Calculate the maximum score based on the current sum and the last element in the subsequence
+    max = sum * pairs[k - 1][1];
+
+    // Slide the window and update the sum and max score
+    for (let i = k; i < n; i++) {
+        sum += pairs[i][0] - minHeap.remove();
+        minHeap.add(pairs[i][0]);
+        max = Math.max(max, sum * pairs[i][1]);
+    }
+
+    return max;
+};
 
 function swap(arr, i, j) {
     const temp = arr[i];
