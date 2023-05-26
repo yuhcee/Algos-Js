@@ -63,6 +63,7 @@ const stoneGameII = function (piles) {
             // Calculate the maximum number of stones Alice can get in the current turn
             const aliceStones = suffixSum[i] - otherPlayerStones;
 
+
             // Update the maximum number of stones Alice can get
             maxStones = Math.max(maxStones, aliceStones);
         }
@@ -80,8 +81,12 @@ const stoneGameII = function (piles) {
 const piles = [2, 7, 9, 4, 4];
 // Output: 10
 /* Explanation:  If Alice takes one pile at the beginning, Bob takes two piles, then Alice takes 2 piles again. Alice can get 2 + 4 + 4 = 10 piles in total. If Alice takes two piles at the beginning, then Bob can take all three piles left. In this case, Alice get 2 + 7 = 9 piles in total. So we return 10 since it's larger.  */
-console.log(stoneGameII(piles));
+// console.log(stoneGameII(piles));
 
 const piles1 = [1, 2, 3, 4, 5, 100];
 // Output: 104
-console.log(stoneGameII(piles1));
+// console.log(stoneGameII(piles1));
+
+const piles2 = [1, 2, 4, 5, 100, 50, 10, 70, 10000];
+// Output: 104
+console.log(stoneGameII(piles2));
