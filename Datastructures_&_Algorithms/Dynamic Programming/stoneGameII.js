@@ -14,6 +14,11 @@
  *
  * Assuming Alice and Bob play optimally, return the maximum number of stones Alice can get.
  *
+ * **Constraints:**
+ *
+ * - `1 <= piles.length <= 100`
+ * - `1 <= piles[i] <= 104`
+ *
  * @param {number[]} piles
  * @return {number}
  */
