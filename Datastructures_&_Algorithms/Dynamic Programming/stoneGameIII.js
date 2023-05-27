@@ -55,3 +55,8 @@ const stoneGameIII = function (stoneValue) {
         return 'Tie'; // If dp[0] is zero, it's a tie
     }
 };
+
+const values = [1, 2, 3, 7];
+// Output: "Bob"
+/* Explanation: Alice will always lose. Her best move will be to take three piles and the score become 6. Now the score of Bob is 7 and Bob wins. */
+console.log(stoneGameIII(values));
