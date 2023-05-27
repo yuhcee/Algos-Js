@@ -27,4 +27,31 @@
  * @param {number[]} stoneValue
  * @return {string}
  */
-const stoneGameIII = function (stoneValue) {};
+const stoneGameIII = function (stoneValue) {
+    const n = stoneValue.length;
+    const dp = new Array(n + 1).fill(0); // Create a DP array to store maximum score differences
+    dp[n] = 0; // Initialize the DP value for the last position as 0
+
+    // Iterate backwards from the last stone to the first stone
+    for (let i = n - 1; i >= 0; i--) {
+        let maxScore = Number.NEGATIVE_INFINITY; // Initialize the maximum score as negative infinity
+        let currSum = 0; // Variable to store the current sum of stone values
+
+        // Consider all possible choices of taking 1, 2, or 3 stones
+        for (let j = 0; j < 3 && i + j < n; j++) {
+            currSum += stoneValue[i + j]; // Calculate the current sum by adding stone values
+            maxScore = Math.max(maxScore, currSum - dp[i + j + 1]); // Update the maximum score difference
+        }
+
+        dp[i] = maxScore; // Update the DP value for the current position with the maximum score difference
+    }
+
+    // Check the value of dp[0] to determine the winner
+    if (dp[0] > 0) {
+        return 'Alice'; // If dp[0] is positive, Alice wins
+    } else if (dp[0] < 0) {
+        return 'Bob'; // If dp[0] is negative, Bob wins
+    } else {
+        return 'Tie'; // If dp[0] is zero, it's a tie
+    }
+};
