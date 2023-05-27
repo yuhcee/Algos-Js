@@ -68,3 +68,8 @@ If Alice chooses one pile her score will be 1 and the next move Bob's score beco
 If Alice chooses two piles her score will be 3 and the next move Bob's score becomes 3. In the next move, Alice will take the pile with value = -9 and also lose.
 Remember that both play optimally so here Alice will choose the scenario that makes her win. */
 console.log(stoneGameIII(values1));
+
+const values2 = [1, 2, 3, 6];
+// Output: "Tie"
+/* Explanation: Alice cannot win this game. She can end the game in a draw if she decided to choose all the first three piles, otherwise she will lose. */
+console.log(stoneGameIII(values2));
