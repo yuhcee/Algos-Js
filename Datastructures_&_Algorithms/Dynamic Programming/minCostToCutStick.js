@@ -26,4 +26,27 @@
  * @param {number[]} cuts
  * @return {number}
  */
-const minCostToCutStick = function (n, cuts) {};
+const minCostToCutStick = function (n, cuts) {
+    cuts.push(0); // Add 0 at the beginning to represent the left end of the stick
+    cuts.push(n); // Add n at the end to represent the right end of the stick
+    cuts.sort((a, b) => a - b); // Sort the cuts in ascending order
+    const m = cuts.length;
+    const dp = new Array(m).fill(0).map(() => new Array(m).fill(0)); // Create a DP array to store minimum costs
+
+    // Calculate the minimum cost for different subproblems
+    for (let len = 2; len < m; len++) {
+        for (let i = 0; i < m - len; i++) {
+            const j = i + len;
+            dp[i][j] = Infinity; // Initialize the cost as infinity
+
+            // Calculate the cost for different split points within the current range
+            for (let k = i + 1; k < j; k++) {
+                dp[i][j] = Math.min(dp[i][j], dp[i][k] + dp[k][j]); // Calculate the cost for the current split point
+            }
+
+            dp[i][j] += cuts[j] - cuts[i]; // Add the cost of the current cut
+        }
+    }
+
+    return dp[0][m - 1];
+};
