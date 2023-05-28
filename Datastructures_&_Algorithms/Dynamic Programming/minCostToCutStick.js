@@ -15,6 +15,13 @@
  *
  * Return *the minimum total cost* of the cuts.
  *
+ * **Constraints:**
+ *
+ * - `2 <= n <= 106`
+ * - `1 <= cuts.length <= min(n - 1, 100)`
+ * - `1 <= cuts[i] <= n - 1`
+ * - All the integers in `cuts` array are **distinct**.
+ *
  * @param {number} n
  * @param {number[]} cuts
  * @return {number}
