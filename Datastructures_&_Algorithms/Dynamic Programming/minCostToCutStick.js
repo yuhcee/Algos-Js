@@ -66,3 +66,8 @@ const n1 = 9,
 /* Explanation: If you try the given cuts ordering the cost will be 25.
 There are much ordering with total cost <= 25, for example, the order [4, 6, 5, 2, 1] has total cost = 22 which is the minimum possible. */
 console.log(minCostToCutStick(n1, cuts1));
+
+const n2 = 5,
+    cuts2 = [1, 3, 4, 5, 34];
+// Output: 45
+console.log(minCostToCutStick(n2, cuts2));
