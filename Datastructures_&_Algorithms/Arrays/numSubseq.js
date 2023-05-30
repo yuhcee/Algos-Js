@@ -69,3 +69,10 @@ const nums1 = [3, 3, 6, 8],
 /* Explanation: There are 6 subsequences that satisfy the condition. (nums can have repeated numbers).
 [3] , [3] , [3,3], [3,6] , [3,6] , [3,3,6] */
 console.log(numSubseq(nums1, target1));
+
+const nums2 = [2, 3, 3, 4, 6, 7],
+    target2 = 12;
+// Output: 61
+/* Explanation: There are 63 non-empty subsequences, two of them do not satisfy the condition ([6,7], [7]).
+Number of valid subsequences (63 - 2 = 61). */
+console.log(numSubseq(nums2, target2));
