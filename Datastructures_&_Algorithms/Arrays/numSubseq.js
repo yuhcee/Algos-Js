@@ -63,3 +63,9 @@ const nums = [3, 5, 6, 7],
 [3,6] -> (3 + 6 <= 9) */
 console.log(numSubseq(nums, target));
 
+const nums1 = [3, 3, 6, 8],
+    target1 = 10;
+// Output: 6
+/* Explanation: There are 6 subsequences that satisfy the condition. (nums can have repeated numbers).
+[3] , [3] , [3,3], [3,6] , [3,6] , [3,3,6] */
+console.log(numSubseq(nums1, target1));
