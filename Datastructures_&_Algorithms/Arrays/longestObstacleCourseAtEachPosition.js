@@ -80,3 +80,14 @@ const obstacles1 = [2, 2, 1];
 - i = 1: [2,2], [2,2] has length 2.
 - i = 2: [2,2,1], [1] has length 1. */
 console.log(longestObstacleCourseAtEachPosition(obstacles1));
+
+const obstacles2 = [3, 1, 5, 6, 4, 2];
+// Output: [1,1,2,3,2,2]
+/* Explanation: The longest valid obstacle course at each position is:
+- i = 0: [3], [3] has length 1.
+- i = 1: [3,1], [1] has length 1.
+- i = 2: [3,1,5], [3,5] has length 2. [1,5] is also valid.
+- i = 3: [3,1,5,6], [3,5,6] has length 3. [1,5,6] is also valid.
+- i = 4: [3,1,5,6,4], [3,4] has length 2. [1,4] is also valid.
+- i = 5: [3,1,5,6,4,2], [1,2] has length 2. */
+console.log(longestObstacleCourseAtEachPosition(obstacles2));
