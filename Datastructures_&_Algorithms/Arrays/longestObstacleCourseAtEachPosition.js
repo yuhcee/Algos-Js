@@ -27,7 +27,25 @@
  * @param {number[]} obstacles
  * @return {number[]}
  */
-const longestObstacleCourseAtEachPosition = function (obstacles) {};
+const longestObstacleCourseAtEachPosition = function (obstacles) {
+    const n = obstacles.length;
+    const dp = []; // Maintains the increasing subsequence of obstacle heights
+    const ans = [];
+
+    for (let i = 0; i < n; i++) {
+        const obstacle = obstacles[i];
+        const index = binarySearch(dp, obstacle);
+        ans[i] = index + 1; // Length of the obstacle course at position i
+
+        if (index === dp.length) {
+            dp.push(obstacle); // Append the obstacle to the end
+        } else {
+            dp[index] = obstacle; // Replace the element at the found index
+        }
+    }
+
+    return ans;
+};
 // Binary search to find the correct position for the obstacle height
 function binarySearch(arr, target) {
     let left = 0;
