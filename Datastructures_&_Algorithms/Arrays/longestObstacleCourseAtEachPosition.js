@@ -63,3 +63,12 @@ function binarySearch(arr, target) {
 
     return left;
 }
+
+const obstacles = [1, 2, 3, 2];
+// Output: [1,2,3,3]
+/* Explanation: The longest valid obstacle course at each position is:
+- i = 0: [1], [1] has length 1.
+- i = 1: [1,2], [1,2] has length 2.
+- i = 2: [1,2,3], [1,2,3] has length 3.
+- i = 3: [1,2,3,2], [1,2,2] has length 3. */
+console.log(longestObstacleCourseAtEachPosition(obstacles));
