@@ -18,6 +18,12 @@
  * Return *an array `ans` of length `n`, where `ans[i]` is the length of
  * the **longest obstacle course** for index `i` as described above.
  *
+ * **Constraints:**
+ *
+ * - `n == obstacles.length`
+ * - `1 <= n <= 105`
+ * - `1 <= obstacles[i] <= 107`
+ *
  * @param {number[]} obstacles
  * @return {number[]}
  */
