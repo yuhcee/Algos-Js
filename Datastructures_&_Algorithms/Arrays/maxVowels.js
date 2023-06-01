@@ -49,3 +49,9 @@ const s = 'abciiidef',
 // Output: 3
 // Explanation: The substring "iii" contains 3 vowel letters.
 console.log(maxVowels(s, k));
+
+const s1 = 'aeiou',
+    k1 = 2;
+// Output: 2
+// Explanation: Any substring of length 2 contains 2 vowels.
+console.log(maxVowels(s1, k1));
