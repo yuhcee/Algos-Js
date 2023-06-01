@@ -43,3 +43,9 @@ const maxVowels = function (s, k) {
 
     return maxCount;
 };
+
+const s = 'abciiidef',
+    k = 3;
+// Output: 3
+// Explanation: The substring "iii" contains 3 vowel letters.
+console.log(maxVowels(s, k));
