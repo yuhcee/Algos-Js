@@ -27,4 +27,19 @@ const maxVowels = function (s, k) {
             windowCount++;
         }
     }
+
+    maxCount = windowCount;
+
+    // Slide the window through the string and update the maximum count
+    for (let i = k; i < s.length; i++) {
+        if (vowels.has(s[i])) {
+            windowCount++;
+        }
+        if (vowels.has(s[i - k])) {
+            windowCount--;
+        }
+        maxCount = Math.max(maxCount, windowCount);
+    }
+
+    return maxCount;
 };
