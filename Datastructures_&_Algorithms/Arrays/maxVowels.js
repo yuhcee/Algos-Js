@@ -55,3 +55,9 @@ const s1 = 'aeiou',
 // Output: 2
 // Explanation: Any substring of length 2 contains 2 vowels.
 console.log(maxVowels(s1, k1));
+
+const s2 = 'leetcode',
+    k2 = 3;
+// Output: 2
+// Explanation: "lee", "eet" and "ode" contain 2 vowels.
+console.log(maxVowels(s2, k2));
