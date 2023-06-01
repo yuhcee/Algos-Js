@@ -16,4 +16,15 @@
  * @param {number} k
  * @return {number}
  */
-const maxVowels = function (s, k) {};
+const maxVowels = function (s, k) {
+    const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+    let maxCount = 0;
+    let windowCount = 0;
+
+    // Calculate the vowel count in the initial window of length k
+    for (let i = 0; i < k; i++) {
+        if (vowels.has(s[i])) {
+            windowCount++;
+        }
+    }
+};
