@@ -8,7 +8,7 @@
  * The bombs are represented by a **0-indexed** 2D integer array `bombs` 
  * where `bombs[i] = [xi, yi, ri]`. `xi` and `yi` denote the X-coordinate 
  * and Y-coordinate of the location of the `ith` bomb, whereas `ri` 
- * denotes the radius of its range.
+ * denotes the **radius** of its range.
  * 
  * You may choose to detonate a **single** bomb. When a bomb is detonated, 
  * it will detonate all bombs that lie in its range. These bombs will 
@@ -16,6 +16,12 @@
  * 
  * Given the list of `bombs`, return *the **maximum** number of bombs that 
  * can be detonated if you are allowed to detonate **only one** bomb*.
+ * 
+ * **Constraints:**
+ * 
+ * - `1 <= bombs.length <= 100`
+ * - `bombs[i].length == 3`
+ * - `1 <= xi, yi, ri <= 105`
  * 
  * @param {number[][]} bombs
  * @return {number}
