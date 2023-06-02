@@ -56,4 +56,39 @@ const maximumDetonation = function (bombs) {
             }
         }
     }
+
+    let max = 0;
+
+    // Iterate over each bomb and find the maximum number of detonations
+    for (let i = 0; i < bombs.length; i++) {
+        const visited = new Set(); // Track visited bombs
+        const q = []; // Queue for BFS traversal
+        q.push(i);
+        visited.add(i);
+
+        // Perform BFS traversal to find all reachable bombs
+        while (q.length) {
+            const first = q.shift();
+
+            // Check if the current bomb has neighbors
+            if (neighbours.has(first)) {
+                for (let b of neighbours.get(first)) {
+                    if (!visited.has(b)) {
+                        visited.add(b);
+                        q.push(b);
+                    }
+                }
+            }
+        }
+
+        // Check if all bombs can be detonated
+        if (visited.size === bombs.length) {
+            return visited.size;
+        }
+
+        // Update the maximum number of detonations
+        max = Math.max(max, visited.size);
+    }
+
+    return max;
 };
