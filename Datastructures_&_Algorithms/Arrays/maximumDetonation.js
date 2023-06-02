@@ -130,4 +130,3 @@ The best bomb to detonate is bomb 0 because:
 - Bomb 3 detonates bomb 4. The green circle denotes the range of bomb 3.
 Thus all 5 bombs are detonated. */
 console.log(maximumDetonation(bombs2));
-
