@@ -103,3 +103,4 @@ The above figure shows the positions and ranges of the 2 bombs.
 If we detonate the left bomb, the right bomb will not be affected.
 But if we detonate the right bomb, both bombs will be detonated.
 So the maximum bombs that can be detonated is max(1, 2) = 2. */
+console.log(maximumDetonation(bombs));
