@@ -6,6 +6,12 @@
  *
  * Vowel letters in English are `'a'`, `'e'`, `'i'`, `'o'`, and `'u'`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 105`
+ * - `s` consists of lowercase English letters.
+ * - `1 <= k <= s.length`
+ *
  * @param {string} s
  * @param {number} k
  * @return {number}
