@@ -104,3 +104,13 @@ If we detonate the left bomb, the right bomb will not be affected.
 But if we detonate the right bomb, both bombs will be detonated.
 So the maximum bombs that can be detonated is max(1, 2) = 2. */
 console.log(maximumDetonation(bombs));
+
+const bombs1 = [
+    [1, 1, 5],
+    [10, 10, 5],
+];
+// Output: 1
+/* Explanation:
+Detonating either bomb will not detonate the other bomb, so the maximum number of bombs that can be detonated is 1.
+ */
+console.log(maximumDetonation(bombs1));
