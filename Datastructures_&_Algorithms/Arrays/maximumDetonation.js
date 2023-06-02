@@ -114,3 +114,20 @@ const bombs1 = [
 Detonating either bomb will not detonate the other bomb, so the maximum number of bombs that can be detonated is 1.
  */
 console.log(maximumDetonation(bombs1));
+
+const bombs2 = [
+    [1, 2, 3],
+    [2, 3, 1],
+    [3, 4, 2],
+    [4, 5, 3],
+    [5, 6, 4],
+];
+// Output: 5
+/* Explanation:
+The best bomb to detonate is bomb 0 because:
+- Bomb 0 detonates bombs 1 and 2. The red circle denotes the range of bomb 0.
+- Bomb 2 detonates bomb 3. The blue circle denotes the range of bomb 2.
+- Bomb 3 detonates bomb 4. The green circle denotes the range of bomb 3.
+Thus all 5 bombs are detonated. */
+console.log(maximumDetonation(bombs2));
+
