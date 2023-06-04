@@ -60,3 +60,11 @@ const isConnected = [
 ];
 // Output: 2
 console.log(findCircleNum(isConnected));
+
+const isConnected1 = [
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1],
+];
+// Output: 3
+console.log(findCircleNum(isConnected1));
