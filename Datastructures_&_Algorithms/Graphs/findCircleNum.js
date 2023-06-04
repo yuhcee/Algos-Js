@@ -68,3 +68,13 @@ const isConnected1 = [
 ];
 // Output: 3
 console.log(findCircleNum(isConnected1));
+
+const isConnected2 = [
+    [0, 1, 0],
+    [1, 0, 0],
+    [1, 0, 1],
+    [1, 1, 1],
+    [0, 0, 1],
+];
+// Output: 4
+console.log(findCircleNum(isConnected2));
