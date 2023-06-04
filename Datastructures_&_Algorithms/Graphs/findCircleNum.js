@@ -25,4 +25,30 @@
  * @param {number[][]} isConnected
  * @return {number}
  */
-const findCircleNum = function (isConnected) {};
+const findCircleNum = function (isConnected) {
+    const n = isConnected.length;
+    const visited = new Array(n).fill(false); // Track visited cities
+    let count = 0; // Initialize province count
+
+    // Depth-first search to find connected cities
+    function dfs(city) {
+        visited[city] = true; // Mark current city as visited
+
+        // Iterate over all cities and recursively visit unvisited connected cities
+        for (let i = 0; i < n; i++) {
+            if (isConnected[city][i] === 1 && !visited[i]) {
+                dfs(i);
+            }
+        }
+    }
+
+    // Iterate over all cities and perform DFS to find provinces
+    for (let i = 0; i < n; i++) {
+        if (!visited[i]) {
+            dfs(i);
+            count++; // Increment province count
+        }
+    }
+
+    return count;
+};
