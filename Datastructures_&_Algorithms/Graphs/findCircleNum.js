@@ -13,6 +13,15 @@
  *
  * Return *the total number of **provinces***.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 200`
+ * - `n == isConnected.length`
+ * - `n == isConnected[i].length`
+ * - `isConnected[i][j]` is `1` or `0`.
+ * - `isConnected[i][i] == 1`
+ * - `isConnected[i][j] == isConnected[j][i]`
+ *
  * @param {number[][]} isConnected
  * @return {number}
  */
