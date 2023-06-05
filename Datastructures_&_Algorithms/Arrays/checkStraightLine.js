@@ -16,8 +16,8 @@
  * @return {boolean}
  */
 const checkStraightLine = function (coordinates) {
-    const [x1, x2] = coordinates[0];
-    const [y1, y2] = coordinates[1];
+    const [x1, y1] = coordinates[0];
+    const [x2, y2] = coordinates[1];
 
     for (let i = 2; i < coordinates.length; i++) {
         const [x, y] = coordinates[i];
@@ -39,3 +39,14 @@ const coordinates = [
 ];
 // Output: true
 console.log(checkStraightLine(coordinates));
+
+const coordinates1 = [
+    [1, 1],
+    [2, 2],
+    [3, 4],
+    [4, 5],
+    [5, 6],
+    [7, 7],
+];
+// Output: false
+console.log(checkStraightLine(coordinates1));
