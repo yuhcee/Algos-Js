@@ -28,3 +28,14 @@ const checkStraightLine = function (coordinates) {
     }
     return true;
 };
+
+const coordinates = [
+    [1, 2],
+    [2, 3],
+    [3, 4],
+    [4, 5],
+    [5, 6],
+    [6, 7],
+];
+// Output: true
+console.log(checkStraightLine(coordinates));
