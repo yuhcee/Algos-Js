@@ -16,17 +16,20 @@
  * @return {boolean}
  */
 const checkStraightLine = function (coordinates) {
+    // Get the first two points as reference
     const [x1, y1] = coordinates[0];
     const [x2, y2] = coordinates[1];
 
+    // Iterate over the remaining points
     for (let i = 2; i < coordinates.length; i++) {
         const [x, y] = coordinates[i];
 
+        // Check if the current point lies on the same line as the reference points
         if ((x2 - x1) * (y - y1) !== (x - x1) * (y2 - y1)) {
             return false;
         }
     }
-    return true;
+    return true; // All points lie on the same line
 };
 
 const coordinates = [
