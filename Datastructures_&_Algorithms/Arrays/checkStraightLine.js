@@ -15,4 +15,16 @@
  * @param {number[][]} coordinates
  * @return {boolean}
  */
-const checkStraightLine = function (coordinates) {};
+const checkStraightLine = function (coordinates) {
+    const [x1, x2] = coordinates[0];
+    const [y1, y2] = coordinates[1];
+
+    for (let i = 2; i < coordinates.length; i++) {
+        const [x, y] = coordinates[i];
+
+        if ((x2 - x1) * (y - y1) !== (x - x1) * (y2 - y1)) {
+            return false;
+        }
+    }
+    return true;
+};
