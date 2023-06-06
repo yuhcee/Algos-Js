@@ -44,3 +44,6 @@ console.log(canMakeArithmeticProgression(arr1));
 
 const arr2 = [0, 10, 20, 30];
 console.log(canMakeArithmeticProgression(arr2));
+
+const arr3 = [4, 9, 2];
+console.log(canMakeArithmeticProgression(arr3));
