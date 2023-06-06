@@ -7,6 +7,11 @@
  * Given an array of numbers `arr`, return *`true` if the array can be rearranged to form
  * an **arithmetic progression**. Otherwise, return `false`*.
  *
+ * **Constraints:**
+ *
+ * - `2 <= arr.length <= 1000`
+ * - `-106 <= arr[i] <= 106`
+ *
  * @param {number[]} arr
  * @return {boolean}
  */
