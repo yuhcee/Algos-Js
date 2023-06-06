@@ -41,3 +41,6 @@ const arr1 = [1, 2, 4];
 // Output: false
 // Explanation: There is no way to reorder the elements to obtain an arithmetic progression.
 console.log(canMakeArithmeticProgression(arr1));
+
+const arr2 = [0, 10, 20, 30];
+console.log(canMakeArithmeticProgression(arr2));
