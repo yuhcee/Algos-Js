@@ -55,3 +55,9 @@ const a1 = 4,
     c1 = 7;
 // Output: 1
 console.log(minFlips(a1, b1, c1));
+
+const a2 = 1,
+    b2 = 2,
+    c2 = 3;
+// Output: 0
+console.log(minFlips(a2, b2, c2));
