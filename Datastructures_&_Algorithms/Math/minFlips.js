@@ -42,3 +42,10 @@ const minFlips = function (a, b, c) {
 
     return flips;
 };
+
+const a = 2,
+    b = 6,
+    c = 5;
+// Output: 3
+// Explanation: After flips a = 1 , b = 4 , c = 5 such that (a OR b == c)
+console.log(minFlips(a, b, c));
