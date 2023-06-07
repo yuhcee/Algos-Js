@@ -49,3 +49,9 @@ const a = 2,
 // Output: 3
 // Explanation: After flips a = 1 , b = 4 , c = 5 such that (a OR b == c)
 console.log(minFlips(a, b, c));
+
+const a1 = 4,
+    b1 = 2,
+    c1 = 7;
+// Output: 1
+console.log(minFlips(a1, b1, c1));
