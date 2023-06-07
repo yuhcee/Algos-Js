@@ -8,6 +8,12 @@
  * Flip operation consists of change **any** single bit 1 to 0 or change the
  * bit 0 to 1 in their binary representation.
  *
+ * **Constraints:**
+ *
+ * - `1 <= a <= 10^9`
+ * - `1 <= b <= 10^9`
+ * - `1 <= c <= 10^9`
+ *
  * @param {number} a
  * @param {number} b
  * @param {number} c
