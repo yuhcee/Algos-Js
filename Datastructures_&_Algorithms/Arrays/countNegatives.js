@@ -36,3 +36,10 @@ const grid = [
 // Output: 8
 // Explanation: There are 8 negatives number in the matrix.
 console.log(countNegatives(grid));
+
+const grid1 = [
+    [3, 2],
+    [1, 0],
+];
+// Output: 0
+console.log(countNegatives(grid1));
