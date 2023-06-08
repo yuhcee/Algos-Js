@@ -14,4 +14,15 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const countNegatives = function (grid) {};
+const countNegatives = function (grid) {
+    const nums = grid.flat();
+    let count = 0;
+
+    for (let num of nums) {
+        if (num < 0) {
+            count += 1;
+        }
+    }
+
+    return count;
+};
