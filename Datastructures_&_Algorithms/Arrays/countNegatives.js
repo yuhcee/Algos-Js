@@ -43,3 +43,12 @@ const grid1 = [
 ];
 // Output: 0
 console.log(countNegatives(grid1));
+
+const grid2 = [
+    [3, 2, -1],
+    [2, 1, -1],
+    [1, -1, -2],
+];
+// Output: 4
+const negativeCount2 = countNegatives(grid2);
+console.log('Number of negative numbers:', negativeCount2);
