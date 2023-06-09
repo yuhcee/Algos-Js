@@ -40,3 +40,9 @@ const letters = ['c', 'f', 'j'],
 // Output: "c"
 // Explanation: The smallest character that is lexicographically greater than 'a' in letters is 'c'.
 console.log(nextGreatestLetter(letters, target));
+
+const letters1 = ['c', 'f', 'j'],
+    target1 = 'c';
+// Output: "f"
+// Explanation: The smallest character that is lexicographically greater than 'c' in letters is 'f'.
+console.log(nextGreatestLetter(letters1, target1));
