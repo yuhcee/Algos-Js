@@ -46,3 +46,9 @@ const letters1 = ['c', 'f', 'j'],
 // Output: "f"
 // Explanation: The smallest character that is lexicographically greater than 'c' in letters is 'f'.
 console.log(nextGreatestLetter(letters1, target1));
+
+const letters2 = ['x', 'x', 'y', 'y'],
+    target2 = 'z';
+// Output: "x"
+// Explanation: There are no characters in letters that is lexicographically greater than 'z' so we return letters[0].
+console.log(nextGreatestLetter(letters2, target2));
