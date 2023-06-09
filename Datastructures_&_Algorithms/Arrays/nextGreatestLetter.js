@@ -34,3 +34,9 @@ const nextGreatestLetter = function (letters, target) {
     }
     return minLetter;
 };
+
+const letters = ['c', 'f', 'j'],
+    target = 'a';
+// Output: "c"
+// Explanation: The smallest character that is lexicographically greater than 'a' in letters is 'c'.
+console.log(nextGreatestLetter(letters, target));
