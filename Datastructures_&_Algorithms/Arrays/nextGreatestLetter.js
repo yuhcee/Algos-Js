@@ -19,4 +19,18 @@
  * @param {character} target
  * @return {character}
  */
-const nextGreatestLetter = function (letters, target) {};
+const nextGreatestLetter = function (letters, target) {
+    let minValue = Infinity;
+    let minLetter = letters[0];
+
+    for (let i = 0; i < letters.length; i++) {
+        let charCode = letters[i].charCodeAt(0);
+        let targetCharCode = target.charCodeAt(0);
+        const codeDifference = charCode - targetCharCode;
+        if (codeDifference > 0 && codeDifference < minValue) {
+            minValue = codeDifference;
+            minLetter = letters[i];
+        }
+    }
+    return minLetter;
+};
