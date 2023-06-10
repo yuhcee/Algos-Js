@@ -68,3 +68,9 @@ const n = 4,
 /* Explanation: nums = [1,2,2,1] is one array that satisfies all the conditions.
 There are no arrays that satisfy all the conditions and have nums[2] == 3, so 2 is the maximum nums[2]. */
 console.log(maxValue(n, index, maxSum));
+
+const n1 = 6,
+    index1 = 1,
+    maxSum1 = 10;
+// Output: 3
+console.log(maxValue(n1, index1, maxSum1));
