@@ -13,6 +13,11 @@
  *
  * Note that `abs(x)` equals `x` if `x >= 0`, and `-x` otherwise.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= n <= maxSum <= 109`
+ * - `0 <= index < n`
+ * 
  * @param {number} n
  * @param {number} index
  * @param {number} maxSum
