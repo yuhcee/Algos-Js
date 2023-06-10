@@ -60,3 +60,11 @@ const maxValue = function (n, index, maxSum) {
     // Return the maximum value
     return max;
 };
+
+const n = 4,
+    index = 2,
+    maxSum = 6;
+// Output: 2
+/* Explanation: nums = [1,2,2,1] is one array that satisfies all the conditions.
+There are no arrays that satisfy all the conditions and have nums[2] == 3, so 2 is the maximum nums[2]. */
+console.log(maxValue(n, index, maxSum));
