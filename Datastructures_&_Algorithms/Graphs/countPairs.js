@@ -7,6 +7,15 @@
  *
  * Return *the **number of pairs** of different nodes that are **unreachable** from each other.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 105`
+ * - `0 <= edges.length <= 2 * 105`
+ * - `edges[i].length == 2`
+ * - `0 <= ai, bi < n`
+ * - `ai != bi`
+ * - There are no repeated edges.
+ * 
  * @param {number} n
  * @param {number[][]} edges
  * @return {number}
