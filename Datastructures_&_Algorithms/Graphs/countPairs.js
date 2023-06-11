@@ -67,3 +67,13 @@ const countPairs = function (n, edges) {
 
     return ans;
 };
+
+const n = 3,
+    edges = [
+        [0, 1],
+        [0, 2],
+        [1, 2],
+    ];
+// Output: 0
+// Explanation: There are no pairs of nodes that are unreachable from each other. Therefore, we return 0.
+console.log(countPairs(n, edges));
