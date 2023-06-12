@@ -24,4 +24,24 @@
  * @param {number[]} nums
  * @return {string[]}
  */
-const summaryRanges = function (nums) {};
+const summaryRanges = function (nums) {
+    const result = [];
+    let start = nums[0];
+
+    for (let i = 0; i < nums.length; i++) {
+        // Check if the next number is consecutive
+        if (nums[i] + 1 !== nums[i + 1]) {
+            // If the range consists of a single number
+            if (start === nums[i]) {
+                result.push(start.toString());
+            } else {
+                // If the range consists of multiple numbers
+                result.push(`${start}->${nums[i]}`);
+            }
+            // Reset the start to the next number
+            start = nums[i + 1];
+        }
+    }
+
+    return result;
+};
