@@ -14,7 +14,12 @@
  * - `"a->b"` if `a != b`
  * - `"a"` if `a == b`
  *
+ * **Constraints:**
  *
+ * - `0 <= nums.length <= 20`
+ * - `-231 <= nums[i] <= 231 - 1`
+ * - All the values of `nums` are **unique**.
+ * - `nums` is sorted in ascending order.
  *
  * @param {number[]} nums
  * @return {string[]}
