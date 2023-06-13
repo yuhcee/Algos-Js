@@ -7,6 +7,12 @@
  * A row and column pair is considered equal if they contain the same elements in the same
  * order (i.e., an equal array).
  *
+ * **Constraints:**
+ *
+ * - `n == grid.length == grid[i].length`
+ * - `1 <= n <= 200`
+ * - `1 <= grid[i][j] <= 105`
+ *
  * @param {number[][]} grid
  * @return {number}
  */
