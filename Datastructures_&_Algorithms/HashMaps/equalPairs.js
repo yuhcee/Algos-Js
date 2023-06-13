@@ -16,4 +16,37 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const equalPairs = function (grid) {};
+const equalPairs = function (grid) {
+    const rowCount = grid.length;
+    const colCount = grid[0].length;
+    let count = 0;
+
+    // Create a map to store the frequency of each row as a string
+    const rowMap = new Map();
+
+    // Iterate over each row and convert it to a string representation
+    for (let i = 0; i < rowCount; i++) {
+        const rowString = grid[i].toString();
+
+        // Increment the count for the current row
+        rowMap.set(rowString, (rowMap.get(rowString) || 0) + 1);
+    }
+
+    // Iterate over each column
+    for (let j = 0; j < colCount; j++) {
+        const colArray = [];
+
+        // Get the elements of the current column and store them in an array
+        for (let i = 0; i < rowCount; i++) {
+            colArray.push(grid[i][j]);
+        }
+
+        // Check if the column array is equal to any row
+        const colString = colArray.toString();
+        if (rowMap.has(colString)) {
+            count += rowMap.get(colString);
+        }
+    }
+
+    return count;
+};
