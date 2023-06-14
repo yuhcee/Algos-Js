@@ -25,6 +25,12 @@
  * Predict which party will finally announce the victory and change the Dota2 game. The output
  * should be `"Radiant"` or `"Dire"`.
  *
+ * **Constraints:**
+ *
+ * - `n == senate.length`
+ * - `1 <= n <= 104`
+ * - `senate[i]` is either `'R'` or `'D'`.
+ *
  * @param {string} senate
  * @return {string}
  */
