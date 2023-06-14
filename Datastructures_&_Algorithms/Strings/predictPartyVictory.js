@@ -73,6 +73,13 @@ function predictPartyVictory(senate) {
     }
 
     // Return the winner of the voting procedure based on which party has remaining votes.
-    return (radiant.length > 0) ? "Radiant" : "Dire";
+    return radiant.length > 0 ? 'Radiant' : 'Dire';
 }
-}
+
+const senate = 'RD';
+// Output: "Radiant"
+/* Explanation: 
+The first senator comes from Radiant and he can just ban the next senator's right in round 1. 
+And the second senator can't exercise any rights anymore since his right has been banned. 
+And in round 2, the first senator can just announce the victory since he is the only guy in the senate who can vote. */
+console.log(predictPartyVictory(senate));
