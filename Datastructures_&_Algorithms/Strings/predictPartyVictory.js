@@ -83,3 +83,12 @@ The first senator comes from Radiant and he can just ban the next senator's righ
 And the second senator can't exercise any rights anymore since his right has been banned. 
 And in round 2, the first senator can just announce the victory since he is the only guy in the senate who can vote. */
 console.log(predictPartyVictory(senate));
+
+const senate1 = 'RDD';
+// Output: 'Dire';
+/* Explanation: 
+ The first senator comes from Radiant and he can just ban the next senator's right in round 1. 
+And the second senator can't exercise any rights anymore since his right has been banned. 
+And the third senator comes from Dire and he can ban the first senator's right in round 1. 
+And in round 2, the third senator can just announce the victory since he is the only guy in the senate who can vote. */
+console.log(predictPartyVictory(senate1));
