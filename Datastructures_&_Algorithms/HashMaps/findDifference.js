@@ -19,4 +19,24 @@
  * @param {number[]} nums2
  * @return {number[][]}
  */
-const findDifference = function (nums1, nums2) {};
+const findDifference = function (nums1, nums2) {
+    const set1 = new Set(nums1); // Create a set of all unique elements in nums1
+    const set2 = new Set(nums2); // Create a set of all unique elements in nums2
+    const answer = [[], []]; // Initialize the answer array
+
+    for (const num of set1) {
+        if (!set2.has(num)) {
+            // If num is in set1 but not in set2, add it to answer[0]
+            answer[0].push(num);
+        }
+    }
+
+    for (const num of set2) {
+        if (!set1.has(num)) {
+            // If num is in set2 but not in set1, add it to answer[1]
+            answer[1].push(num);
+        }
+    }
+
+    return answer; // Return the answer array
+};
