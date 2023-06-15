@@ -10,6 +10,11 @@
  *
  * **Note** that the integers in the lists may be returned in **any** order.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums1.length, nums2.length <= 1000`
+ * - `-1000 <= nums1[i], nums2[i] <= 1000`
+ *
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number[][]}
