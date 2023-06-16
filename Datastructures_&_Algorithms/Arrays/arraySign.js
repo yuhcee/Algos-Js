@@ -37,5 +37,9 @@ const arraySign = function (nums) {
 const nums = [-1, -2, -3, -4, 3, 2, 1];
 // Output: 1;
 // Explanation: The product of all values in the array is 144, and signFunc(144) = 1
-
 console.log(arraySign(nums));
+
+const nums1 = [1, 5, 0, 2, -3];
+// Output: 0
+// Explanation: The product of all values in the array is 0, and signFunc(0) = 0
+console.log(arraySign(nums1));
