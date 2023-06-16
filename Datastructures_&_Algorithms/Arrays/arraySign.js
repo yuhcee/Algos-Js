@@ -20,4 +20,16 @@
  * @param {number[]} nums
  * @return {number}
  */
-const arraySign = function (nums) {};
+const arraySign = function (nums) {
+    let product = 1; // Initialize product to 1
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === 0) {
+            // If any value is 0, the product will be 0
+            return 0;
+        } else if (nums[i] < 0) {
+            // If any value is negative, change the sign of the product
+            product = -product;
+        }
+    }
+    return product > 0 ? 1 : -1; // Return 1 if product is positive, -1 if negative
+};
