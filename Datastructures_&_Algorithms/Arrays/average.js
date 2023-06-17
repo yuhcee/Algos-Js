@@ -16,4 +16,19 @@
  * @param {number[]} salary
  * @return {number}
  */
-const average = function (salary) {};
+const average = function (salary) {
+    // Find the minimum and maximum salaries
+    let min = Math.min(...salary);
+    let max = Math.max(...salary);
+
+    // Calculate the sum of all salaries
+    let sum = salary.reduce((acc, curr) => acc + curr);
+
+    // Subtract the minimum and maximum salaries from the total sum
+    sum = sum - min - max;
+
+    // Divide the remaining sum by the number of employees minus 2
+    let avg = sum / (salary.length - 2);
+
+    return avg;
+};
