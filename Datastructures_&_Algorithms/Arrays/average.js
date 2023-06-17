@@ -38,3 +38,9 @@ const salary = [4000, 3000, 1000, 2000];
 /* Explanation: Minimum salary and maximum salary are 1000 and 4000 respectively.
 Average salary excluding minimum and maximum salary is (2000+3000) / 2 = 2500 */
 console.log(average(salary));
+
+const salary1 = [1000, 2000, 3000];
+// Output: 2000.00000
+/* Explanation: Minimum salary and maximum salary are 1000 and 3000 respectively.
+Average salary excluding minimum and maximum salary is (2000) / 1 = 2000 */
+console.log(average(salary1));
