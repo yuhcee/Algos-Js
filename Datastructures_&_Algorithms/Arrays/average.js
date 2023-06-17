@@ -7,6 +7,12 @@
  * Return *the average salary of employees excluding the minimum and maximum salary*. Answers within
  * `10-5` of the actual answer will be accepted.
  *
+ * **Constraints:**
+ *
+ * - `3 <= salary.length <= 100`
+ * - `1000 <= salary[i] <= 106`
+ * - All the integers of `salary` are **unique**.
+ *
  * @param {number[]} salary
  * @return {number}
  */
