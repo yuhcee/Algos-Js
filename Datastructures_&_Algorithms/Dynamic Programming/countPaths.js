@@ -10,6 +10,14 @@
  *
  * Two paths are considered different if they do not have exactly the same sequence of visited cells.
  *
+ * **Constraints:**
+ *
+ * - `m == grid.length`
+ * - `n == grid[i].length`
+ * - `1 <= m, n <= 1000`
+ * - `1 <= m * n <= 105`
+ * - `1 <= grid[i][j] <= 105`
+ *
  * @param {number[][]} grid
  * @return {number}
  */
