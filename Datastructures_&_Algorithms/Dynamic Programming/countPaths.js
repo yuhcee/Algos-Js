@@ -84,3 +84,15 @@ const countPaths = (grid) => {
 
     return result; // Return the final result
 };
+
+const grid = [
+    [1, 1],
+    [3, 4],
+];
+// Output: 8
+/* Explanation: The strictly increasing paths are:
+- Paths with length 1: [1], [1], [3], [4].
+- Paths with length 2: [1 -> 3], [1 -> 4], [3 -> 4].
+- Paths with length 3: [1 -> 3 -> 4].
+The total number of paths is 4 + 3 + 1 = 8. */
+console.log(countPaths(grid));
