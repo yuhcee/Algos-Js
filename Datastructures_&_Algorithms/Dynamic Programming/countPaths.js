@@ -96,3 +96,11 @@ const grid = [
 - Paths with length 3: [1 -> 3 -> 4].
 The total number of paths is 4 + 3 + 1 = 8. */
 console.log(countPaths(grid));
+
+const grid1 = [[1], [2]];
+// Output: 3
+/* Explanation: The strictly increasing paths are:
+- Paths with length 1: [1], [2].
+- Paths with length 2: [1 -> 2].
+The total number of paths is 2 + 1 = 3. */
+console.log(countPaths(grid1));
