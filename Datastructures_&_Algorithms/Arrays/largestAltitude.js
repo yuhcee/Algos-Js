@@ -17,4 +17,19 @@
  * @param {number[]} gain
  * @return {number}
  */
-const largestAltitude = function (gain) {};
+const largestAltitude = function (gain) {
+    let highestAltitude = 0; // Variable to store the highest altitude
+    let currentAltitude = 0; // Variable to track the current altitude
+
+    for (let i = 0; i < gain.length; i++) {
+        // Calculate the current altitude by adding the gain at each point
+        currentAltitude += gain[i];
+
+        // Check if the current altitude is higher than the highest altitude
+        if (currentAltitude > highestAltitude) {
+            highestAltitude = currentAltitude; // Update the highest altitude
+        }
+    }
+
+    return highestAltitude; // Return the highest altitude
+};
