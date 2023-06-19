@@ -33,3 +33,8 @@ const largestAltitude = function (gain) {
 
     return highestAltitude; // Return the highest altitude
 };
+
+const gain = [-5, 1, 5, 0, -7];
+// Output: 1
+// Explanation: The altitudes are [0,-5,-4,1,1,-6]. The highest is 1.
+console.log(largestAltitude(gain));
