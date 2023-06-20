@@ -66,3 +66,11 @@ const nums = [7, 4, 3, 9, 1, 8, 5, 2, 6],
 - For the subarray centered at index 5, avg[5] = (3 + 9 + 1 + 8 + 5 + 2 + 6) / 7 = 4.
 - avg[6], avg[7], and avg[8] are -1 because there are less than k elements after each index. */
 console.log(getAverages(nums, k));
+
+const nums1 = [100000],
+    k1 = 0;
+// Output: [100000]
+/* Explanation:
+- The sum of the subarray centered at index 0 with radius 0 is: 100000.
+  avg[0] = 100000 / 1 = 100000. */
+console.log(getAverages(nums1, k1));
