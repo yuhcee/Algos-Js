@@ -17,6 +17,12 @@
  * - For example, the average of four elements `2`, `3`, `1`, and `5` is `(2 + 3 + 1 + 5) / 4 = 11 / 4
  * = 2.75`, which truncates to `2`.
  *
+ * **Constraints:**
+ *
+ * - `n == nums.length`
+ * - `1 <= n <= 105`
+ * - `0 <= nums[i], k <= 105`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number[]}
