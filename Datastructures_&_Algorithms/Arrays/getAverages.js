@@ -27,4 +27,30 @@
  * @param {number} k
  * @return {number[]}
  */
-const getAverages = function (nums, k) {};
+const getAverages = function (nums, k) {
+    const n = nums.length;
+    const avgs = [];
+    let sum = 0;
+
+    // Calculate the prefix sums array
+    const prefixSums = [0];
+    for (let i = 0; i < n; i++) {
+        prefixSums[i + 1] = prefixSums[i] + nums[i];
+    }
+
+    for (let i = 0; i < n; i++) {
+        const left = Math.max(0, i - k);
+        const right = Math.min(n - 1, i + k);
+
+        const count = right - left + 1;
+        const windowSum = prefixSums[right + 1] - prefixSums[left];
+
+        if (count < 2 * k + 1) {
+            avgs[i] = -1; // Not enough elements in the subarray
+        } else {
+            avgs[i] = Math.floor(windowSum / count);
+        }
+    }
+
+    return avgs;
+};
