@@ -33,4 +33,36 @@
  * @param {number[][]} roads
  * @return {number}
  */
-const minScore = function (n, roads) {};
+const minScore = function (n, roads) {
+    const map = new Map();
+    for (const [a, b, d] of roads) {
+        if (!map.has(a)) map.set(a, []);
+        if (!map.has(b)) map.set(b, []);
+        map.get(a).push([b, d]);
+        map.get(b).push([a, d]);
+    }
+
+    // Perform BFS starting from city 1
+    const queue = [1]; // Initialize the queue with city 1
+    const visited = {}; // Keep track of visited cities
+    visited[1] = true;
+    let min = Infinity; // Initialize the minimum score to Infinity
+
+    while (queue.length > 0) {
+        const node = queue.shift(); // Get the next city from the queue
+
+        if (map.has(node)) {
+            for (const [next, d] of map.get(node)) {
+                min = Math.min(d, min); // Update the minimum score
+
+                // If the neighboring city hasn't been visited, add it to the queue
+                if (!visited[next]) {
+                    visited[next] = true;
+                    queue.push(next);
+                }
+            }
+        }
+    }
+
+    return min === Infinity ? -1 : min; // Return the minimum score or -1 if no path exists
+};
