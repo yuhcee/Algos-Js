@@ -66,3 +66,15 @@ const minScore = function (n, roads) {
 
     return min === Infinity ? -1 : min; // Return the minimum score or -1 if no path exists
 };
+
+const n = 4,
+    roads = [
+        [1, 2, 9],
+        [2, 3, 6],
+        [2, 4, 5],
+        [1, 4, 7],
+    ];
+// Output: 5
+/* Explanation: The path from city 1 to 4 with the minimum score is: 1 -> 2 -> 4. The score of this path is min(9,5) = 5.
+It can be shown that no other path has less score. */
+console.log(minScore(n, roads));
