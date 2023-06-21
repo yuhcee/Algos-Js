@@ -18,6 +18,17 @@
  * cities `1` and `n` multiple times along the path.
  * - The test cases are generated such that there is **at least** one path between `1` and `n`.
  *
+ * **Constraints:**
+ *
+ * - `2 <= n <= 105`
+ * - `1 <= roads.length <= 105`
+ * - `roads[i].length == 3`
+ * - `1 <= ai, bi <= n`
+ * - `ai != bi`
+ * - `1 <= distancei <= 104`
+ * - There are no repeated edges.
+ * - There is at least one path between `1` and `n`.
+ *
  * @param {number} n
  * @param {number[][]} roads
  * @return {number}
