@@ -78,3 +78,13 @@ const n = 4,
 /* Explanation: The path from city 1 to 4 with the minimum score is: 1 -> 2 -> 4. The score of this path is min(9,5) = 5.
 It can be shown that no other path has less score. */
 console.log(minScore(n, roads));
+
+const n1 = 4,
+    roads1 = [
+        [1, 2, 2],
+        [1, 3, 4],
+        [3, 4, 7],
+    ];
+// Output: 2
+/* Explanation: The path from city 1 to 4 with the minimum score is: 1 -> 2 -> 1 -> 3 -> 4. The score of this path is min(2,2,4,7) = 2. */
+console.log(minScore(n1, roads1));
