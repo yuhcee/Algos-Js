@@ -10,6 +10,12 @@
  * Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the
  * stock before you buy again).
  *
+ * **Constraints:**
+ *
+ * - `1 <= prices.length <= 5 * 104`
+ * - `1 <= prices[i] < 5 * 104`
+ * - `0 <= fee < 5 * 104`
+ *
  * @param {number[]} prices
  * @param {number} fee
  * @return {number}
