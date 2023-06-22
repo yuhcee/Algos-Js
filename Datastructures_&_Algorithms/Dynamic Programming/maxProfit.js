@@ -46,3 +46,8 @@ const prices = [1, 3, 2, 8, 4, 9],
 - Selling at prices[5] = 9
 The total profit is ((8 - 1) - 2) + ((9 - 4) - 2) = 8. */
 console.log(maxProfit(prices, fee));
+
+const prices1 = [1, 3, 7, 5, 10, 3],
+    fee1 = 3;
+// Output: 6
+console.log(maxProfit(prices1, fee1));
