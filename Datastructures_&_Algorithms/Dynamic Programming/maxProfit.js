@@ -20,4 +20,18 @@
  * @param {number} fee
  * @return {number}
  */
-const maxProfit = function (prices, fee) {};
+const maxProfit = function (prices, fee) {
+    const n = prices.length;
+    let cash = 0; // represents the maximum profit we have if we don't own any stock
+    let hold = -prices[0]; // represents the maximum profit we have if we own a stock
+
+    for (let i = 1; i < n; i++) {
+        // Update the maximum profit if we sell the stock on the current day
+        cash = Math.max(cash, hold + prices[i] - fee);
+
+        // Update the maximum profit if we buy the stock on the current day
+        hold = Math.max(hold, cash - prices[i]);
+    }
+
+    return cash; // return the maximum profit without owning any stock
+};
