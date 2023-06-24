@@ -51,3 +51,8 @@ const rods = [1, 2, 3, 6];
 // Output: 6
 // Explanation: We have two disjoint subsets {1,2,3} and {6}, which have the same sum = 6.
 console.log(tallestBillboard(rods));
+
+const rods1 = [1, 2, 3, 4, 5, 6];
+// Output: 10
+// Explanation: We have two disjoint subsets {2,3,5} and {4,6}, which have the same sum = 10.
+console.log(tallestBillboard(rods1));
