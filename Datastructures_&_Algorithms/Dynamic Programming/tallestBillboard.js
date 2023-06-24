@@ -20,4 +20,29 @@
  * @param {number[]} rods
  * @return {number}
  */
-const tallestBillboard = function (rods) {};
+const tallestBillboard = function (rods) {
+    // Create a dynamic programming (DP) object to store the maximum heights
+    // Key: Difference in heights between the two steel supports
+    // Value: Maximum height achievable with the given difference
+    const dp = { 0: 0 };
+
+    // Iterate through each rod
+    for (const rod of rods) {
+        // Iterate through each existing difference in the DP object
+        for (let [diff, val] of Object.entries({ ...dp })) {
+            // Convert the difference from string to number
+            diff = parseInt(diff);
+
+            // Calculate the height when the rod is added to the positive difference side
+            dp[diff + rod] = Math.max(dp[diff + rod] || 0, val);
+
+            // Calculate the height when the rod is added to the negative difference side
+            const newDiff = Math.abs(diff - rod);
+            const min = Math.min(diff, rod);
+            dp[newDiff] = Math.max(dp[newDiff] || 0, val + min);
+        }
+    }
+
+    // Return the maximum height achievable with a difference of 0
+    return dp[0];
+};
