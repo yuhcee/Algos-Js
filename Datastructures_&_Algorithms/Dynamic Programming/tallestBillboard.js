@@ -46,3 +46,8 @@ const tallestBillboard = function (rods) {
     // Return the maximum height achievable with a difference of 0
     return dp[0];
 };
+
+const rods = [1, 2, 3, 6];
+// Output: 6
+// Explanation: We have two disjoint subsets {1,2,3} and {6}, which have the same sum = 6.
+console.log(tallestBillboard(rods));
