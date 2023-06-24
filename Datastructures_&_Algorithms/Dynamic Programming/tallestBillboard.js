@@ -11,6 +11,12 @@
  * Return *the largest possible height of your billboard installation. If you cannot support the
  * billboard, return `0`*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= rods.length <= 20`
+ * - `1 <= rods[i] <= 1000`
+ * - `sum(rods[i]) <= 5000`
+ *
  * @param {number[]} rods
  * @return {number}
  */
