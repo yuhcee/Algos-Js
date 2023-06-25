@@ -16,6 +16,14 @@
  * Return *the count of all possible routes from `start` to `finish`. Since the answer may be too
  * large, return it **modulo** `109 + 7`.
  *
+ * **Constraints:**
+ *
+ * - `2 <= locations.length <= 100`
+ * - `1 <= locations[i] <= 109`
+ * - All integers in locations are distinct.
+ * - `0 <= start, finish < locations.length`
+ * - `1 <= fuel <= 200`
+ *
  * @param {number[]} locations
  * @param {number} start
  * @param {number} finish
