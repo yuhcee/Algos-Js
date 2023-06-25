@@ -84,3 +84,16 @@ const locations = [2, 3, 6, 8, 4],
 1 -> 4 -> 3
 1 -> 4 -> 2 -> 3 */
 console.log(countRoutes(locations, start, finish, fuel));
+
+const locations1 = [4, 3, 1],
+    start1 = 1,
+    finish1 = 0,
+    fuel1 = 6;
+// Output: 5
+/* Explanation: The following are all possible routes:
+1 -> 0, used fuel = 1
+1 -> 2 -> 0, used fuel = 5
+1 -> 2 -> 1 -> 0, used fuel = 5
+1 -> 0 -> 1 -> 0, used fuel = 3
+1 -> 0 -> 1 -> 0 -> 1 -> 0, used fuel = 5 */
+console.log(countRoutes(locations1, start1, finish1, fuel1));
