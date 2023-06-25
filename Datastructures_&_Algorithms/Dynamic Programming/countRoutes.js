@@ -97,3 +97,11 @@ const locations1 = [4, 3, 1],
 1 -> 0 -> 1 -> 0, used fuel = 3
 1 -> 0 -> 1 -> 0 -> 1 -> 0, used fuel = 5 */
 console.log(countRoutes(locations1, start1, finish1, fuel1));
+
+const locations2 = [5, 2, 1],
+    start2 = 0,
+    finish2 = 2,
+    fuel2 = 3;
+// Output: 0
+/* Explanation: It is impossible to get from 0 to 2 using only 3 units of fuel since the shortest route needs 4 units of fuel. */
+console.log(countRoutes(locations2, start2, finish2, fuel2));
