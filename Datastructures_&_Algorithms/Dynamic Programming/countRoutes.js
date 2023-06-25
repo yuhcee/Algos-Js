@@ -30,4 +30,45 @@
  * @param {number} fuel
  * @return {number}
  */
-var countRoutes = function (locations, start, finish, fuel) {};
+var countRoutes = function (locations, start, finish, fuel) {
+    const n = locations.length;
+    const MOD = Math.pow(10, 9) + 7;
+
+    // Create a memoization table to store computed results
+    const dp = new Array(n).fill().map(() => new Array(fuel + 1).fill());
+
+    // Recursive helper function to calculate the number of routes
+    function helper(start, fuel) {
+        // Check if the result for the current start city and fuel amount is already memoized
+        if (dp[start][fuel] !== undefined) {
+            return dp[start][fuel];
+        }
+
+        let result = start === finish ? 1 : 0;
+
+        // Iterate through each city
+        for (let i = 0; i < n; i++) {
+            // Skip the current start city
+            if (i === start) {
+                continue;
+            }
+
+            // Calculate the fuel cost to travel from the current start city to city i
+            const cost = Math.abs(locations[i] - locations[start]);
+
+            // Check if there is enough fuel to travel from the current start city to city i
+            if (fuel >= cost) {
+                // Recursively calculate the number of routes from city i to the finish city
+                result = (result + helper(i, fuel - cost)) % MOD;
+            }
+        }
+
+        // Memoize the result for the current start city and fuel amount
+        dp[start][fuel] = result;
+
+        return result;
+    }
+
+    // Call the helper function to calculate the number of routes from the start city with the given fuel amount
+    return helper(start, fuel);
+};
