@@ -72,3 +72,15 @@ var countRoutes = function (locations, start, finish, fuel) {
     // Call the helper function to calculate the number of routes from the start city with the given fuel amount
     return helper(start, fuel);
 };
+
+const locations = [2, 3, 6, 8, 4],
+    start = 1,
+    finish = 3,
+    fuel = 5;
+// Output: 4
+/* Explanation: The following are all possible routes, each uses 5 units of fuel:
+1 -> 3
+1 -> 2 -> 3
+1 -> 4 -> 3
+1 -> 4 -> 2 -> 3 */
+console.log(countRoutes(locations, start, finish, fuel));
