@@ -19,4 +19,36 @@
  * @param {number[]} nums
  * @return {number}
  */
-const longestArithSeqLength = function (nums) {};
+const longestArithSeqLength = function (nums) {
+    // Initialize a dynamic programming map to store the lengths of arithmetic subsequences
+    // The map will have the form: dp[i][diff] = length
+    // `dp[i][diff]` represents the length of the arithmetic subsequence ending at index `i` with a common difference `diff`
+    const dp = new Map();
+
+    // Initialize the result to store the maximum length
+    let maxLen = 0;
+
+    // Iterate over the array elements
+    for (let i = 0; i < nums.length; i++) {
+        // Create a new map entry for the current index
+        dp.set(i, new Map());
+
+        // Iterate over the elements before the current index
+        for (let j = 0; j < i; j++) {
+            // Calculate the difference between the current element and the previous element
+            const diff = nums[i] - nums[j];
+
+            // Get the length of the arithmetic subsequence ending at index `j` with the common difference `diff`
+            const len = dp.get(j).get(diff) || 1;
+
+            // Update the length of the arithmetic subsequence ending at index `i` with the common difference `diff`
+            dp.get(i).set(diff, len + 1);
+
+            // Update the maximum length
+            maxLen = Math.max(maxLen, dp.get(i).get(diff));
+        }
+    }
+
+    // Return the maximum length of the arithmetic subsequence
+    return maxLen;
+};
