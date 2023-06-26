@@ -52,3 +52,8 @@ const longestArithSeqLength = function (nums) {
     // Return the maximum length of the arithmetic subsequence
     return maxLen;
 };
+
+const nums = [3, 6, 9, 12];
+// Output: 4
+// Explanation:  The whole array is an arithmetic sequence with steps of length = 3.
+console.log(longestArithSeqLength(nums));
