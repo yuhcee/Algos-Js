@@ -57,3 +57,8 @@ const nums = [3, 6, 9, 12];
 // Output: 4
 // Explanation:  The whole array is an arithmetic sequence with steps of length = 3.
 console.log(longestArithSeqLength(nums));
+
+const nums1 = [9, 4, 7, 2, 10];
+// Output: 3
+// Explanation:  The longest arithmetic subsequence is [4,7,10].
+console.log(longestArithSeqLength(nums1));
