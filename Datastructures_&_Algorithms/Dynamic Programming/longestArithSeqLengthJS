@@ -11,6 +11,11 @@
  * - A sequence `seq` is arithmetic if `seq[i + 1] - seq[i]` are all the same value (for `0 <= i < seq.
  * length - 1`).
  *
+ * **Constraints:**
+ *
+ * - `2 <= nums.length <= 1000`
+ * - `0 <= nums[i] <= 500`
+ *
  * @param {number[]} nums
  * @return {number}
  */
