@@ -62,3 +62,8 @@ const nums1 = [9, 4, 7, 2, 10];
 // Output: 3
 // Explanation:  The longest arithmetic subsequence is [4,7,10].
 console.log(longestArithSeqLength(nums1));
+
+const nums2 = [20, 1, 15, 3, 10, 5, 8];
+// Output: 4
+// Explanation:  The longest arithmetic subsequence is [20,15,10,5].
+console.log(longestArithSeqLength(nums2));
