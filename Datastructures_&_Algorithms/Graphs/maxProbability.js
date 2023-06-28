@@ -98,3 +98,15 @@ const n = 3,
 // Output: 0.25000
 /* Explanation: There are two paths from start to end, one having a probability of success = 0.2 and the other has 0.5 * 0.5 = 0.25. */
 console.log(maxProbability(n, edges, succProb, start, end));
+
+const n1 = 3,
+    edges1 = [
+        [0, 1],
+        [1, 2],
+        [0, 2],
+    ],
+    succProb1 = [0.5, 0.5, 0.3],
+    start1 = 0,
+    end1 = 2;
+// Output: 0.30000
+console.log(maxProbability(n1, edges1, succProb1, start1, end1));
