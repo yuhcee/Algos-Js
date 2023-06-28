@@ -110,3 +110,12 @@ const n1 = 3,
     end1 = 2;
 // Output: 0.30000
 console.log(maxProbability(n1, edges1, succProb1, start1, end1));
+
+const n2 = 3,
+    edges2 = [[0, 1]],
+    succProb2 = [0.5],
+    start2 = 0,
+    end2 = 2;
+// Output: 0.00000
+// Explanation: There is no path between 0 and 2.
+console.log(maxProbability(n2, edges2, succProb2, start2, end2));
