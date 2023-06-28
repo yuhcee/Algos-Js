@@ -85,3 +85,16 @@ function buildGraph(n, edges, succProb) {
 
     return graph;
 }
+
+const n = 3,
+    edges = [
+        [0, 1],
+        [1, 2],
+        [0, 2],
+    ],
+    succProb = [0.5, 0.5, 0.2],
+    start = 0,
+    end = 2;
+// Output: 0.25000
+/* Explanation: There are two paths from start to end, one having a probability of success = 0.2 and the other has 0.5 * 0.5 = 0.25. */
+console.log(maxProbability(n, edges, succProb, start, end));
