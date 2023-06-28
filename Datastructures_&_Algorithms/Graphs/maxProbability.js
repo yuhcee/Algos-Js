@@ -28,4 +28,60 @@
  * @param {number} end
  * @return {number}
  */
-const maxProbability = function (n, edges, succProb, start, end) {};
+const maxProbability = function (n, edges, succProb, start, end) {
+    // Build the graph using the edge list and success probabilities
+    const graph = buildGraph(n, edges, succProb);
+
+    // Initialize the probabilities array with all elements set to 0, except for the start node which is set to 1
+    const probabilities = new Array(n).fill(0);
+    probabilities[start] = 1;
+
+    // Create a queue and enqueue the start node
+    const queue = [];
+    queue.push(start);
+
+    while (queue.length > 0) {
+        // Dequeue a node from the front of the queue
+        const node = queue.shift();
+
+        // Get the neighbors of the current node from the graph
+        const neighbors = graph[node];
+
+        // Traverse the neighbors and calculate new probabilities
+        for (const [neighbor, prob] of neighbors) {
+            // Calculate the new probability by multiplying the probability of the current node with the success probability of the edge to the neighbor
+            const newProb = probabilities[node] * prob;
+
+            // Update the probability if the new probability is greater than the current probability at the neighbor
+            if (newProb > probabilities[neighbor]) {
+                probabilities[neighbor] = newProb;
+
+                // Enqueue the neighbor to continue exploring its neighbors
+                queue.push(neighbor);
+            }
+        }
+    }
+
+    // Return the probability at the end node
+    return probabilities[end];
+};
+
+// Function to build the graph using the edge list and success probabilities
+function buildGraph(n, edges, succProb) {
+    // Create an array of arrays to represent the graph
+    const graph = new Array(n).fill().map(() => []);
+
+    // Traverse the edge list and add edges to the graph along with their success probabilities
+    for (let i = 0; i < edges.length; i++) {
+        const [a, b] = edges[i];
+        const prob = succProb[i];
+
+        // Add the edge (a, b) with probability prob
+        graph[a].push([b, prob]);
+
+        // Add the edge (b, a) with probability prob (since the graph is undirected)
+        graph[b].push([a, prob]);
+    }
+
+    return graph;
+}
