@@ -5,6 +5,11 @@
  *
  * A **subarray** is a contiguous non-empty sequence of elements within an array.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `-109 <= nums[i] <= 109`
+ *
  * @param {number[]} nums
  * @return {number}
  */
