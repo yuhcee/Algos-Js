@@ -42,3 +42,8 @@ const canPlaceFlowers = function (flowerbed, n) {
     // Check if the required number of flowers can be placed
     return count >= n;
 };
+
+const flowerbed = [1, 0, 0, 0, 1],
+    n = 1;
+// Output: true
+console.log(canPlaceFlowers(flowerbed, n));
