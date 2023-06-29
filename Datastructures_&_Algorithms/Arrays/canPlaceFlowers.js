@@ -8,6 +8,13 @@
  * not empty, and an integer `n`, return *`true` if `n` new flowers can be planted in the `flowerbed`
  * without violating the no-adjacent-flowers rule and `false` otherwise*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= flowerbed.length <= 2 * 104`
+ * - `flowerbed[i]` is `0` or `1`.
+ * - There are no two adjacent flowers in `flowerbed`.
+ * - `0 <= n <= flowerbed.length`
+ *
  * @param {number[]} flowerbed
  * @param {number} n
  * @return {boolean}
