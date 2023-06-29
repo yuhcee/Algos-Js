@@ -47,3 +47,8 @@ const flowerbed = [1, 0, 0, 0, 1],
     n = 1;
 // Output: true
 console.log(canPlaceFlowers(flowerbed, n));
+
+const flowerbed1 = [1, 0, 0, 0, 1],
+    n1 = 2;
+// Output: false
+console.log(canPlaceFlowers(flowerbed1, n1));
