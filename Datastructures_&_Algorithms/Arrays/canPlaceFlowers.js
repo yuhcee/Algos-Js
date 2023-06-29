@@ -19,4 +19,26 @@
  * @param {number} n
  * @return {boolean}
  */
-const canPlaceFlowers = function (flowerbed, n) {};
+const canPlaceFlowers = function (flowerbed, n) {
+    const length = flowerbed.length;
+    let count = 0;
+    let i = 0;
+
+    while (i < length) {
+        // Check if the current plot is empty (0) and its adjacent plots are also empty or out of bounds
+        if (flowerbed[i] === 0 && (i === 0 || flowerbed[i - 1] === 0) && (i === length - 1 || flowerbed[i + 1] === 0)) {
+            // Place a flower in the current plot
+            flowerbed[i] = 1;
+            count++;
+
+            // Increment the index by 2 since the next plot must be empty
+            i += 2;
+        } else {
+            // Move to the next plot
+            i++;
+        }
+    }
+
+    // Check if the required number of flowers can be placed
+    return count >= n;
+};
