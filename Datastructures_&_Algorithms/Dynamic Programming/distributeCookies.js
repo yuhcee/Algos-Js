@@ -11,6 +11,12 @@
  *
  * Return *the **minimum** unfairness of all distributions*.
  *
+ * **Constraints:**
+ *
+ * - `2 <= cookies.length <= 8`
+ * - `1 <= cookies[i] <= 105`
+ * - `2 <= k <= cookies.length`
+ *
  * @param {number[]} cookies
  * @param {number} k
  * @return {number}
