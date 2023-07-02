@@ -43,4 +43,4 @@ console.log(maxProfit(prices)); // Output: 5
 const prices1 = [7, 6, 4, 3, 1];
 // Output: 0
 // Explanation: In this case, no transactions are done and the max profit = 0.
-console.log(maxProfit(prices1)); // Output: 5
+console.log(maxProfit(prices1)); // Output: 0
