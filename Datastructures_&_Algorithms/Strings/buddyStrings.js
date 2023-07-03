@@ -18,4 +18,29 @@
  * @param {string} goal
  * @return {boolean}
  */
-const buddyStrings = function (s, goal) {};
+const buddyStrings = function (s, goal) {
+    if (s.length !== goal.length) return false;
+
+    if (s === goal) {
+        const charObj = {};
+
+        for (let i = 0; i < s.length; i++) {
+            let char = s[i];
+
+            if (charObj[char]) return true;
+            charObj[char] = true;
+        }
+        return false;
+    }
+
+    let diffIndices = [];
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] !== goal[i]) diffIndices.push(i);
+    }
+
+    if (diffIndices.length !== 2) return false;
+
+    let [i, j] = diffIndices;
+
+    return s[i] === goal[j] && s[j] === goal[i];
+};
