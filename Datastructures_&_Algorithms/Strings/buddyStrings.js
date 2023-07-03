@@ -19,29 +19,40 @@
  * @return {boolean}
  */
 const buddyStrings = function (s, goal) {
-    if (s.length !== goal.length) return false;
+    // Check if the lengths of the strings are different
+    if (s.length !== goal.length) {
+        return false;
+    }
 
+    // Check if the strings are equal
     if (s === goal) {
-        const charObj = {};
-
+        // Check if there are duplicate characters in the string
+        const charCount = {};
         for (let i = 0; i < s.length; i++) {
             let char = s[i];
-
-            if (charObj[char]) return true;
-            charObj[char] = true;
+            if (charCount[char]) {
+                return true;
+            }
+            charCount[char] = true;
         }
         return false;
     }
 
-    let diffIndices = [];
+    // Find the indices where the characters are different
+    const diffIndices = [];
     for (let i = 0; i < s.length; i++) {
-        if (s[i] !== goal[i]) diffIndices.push(i);
+        if (s[i] !== goal[i]) {
+            diffIndices.push(i);
+        }
     }
 
-    if (diffIndices.length !== 2) return false;
+    // Check if there are exactly two different indices
+    if (diffIndices.length !== 2) {
+        return false;
+    }
 
+    // Check if swapping the characters at the different indices results in goal
     let [i, j] = diffIndices;
-
     return s[i] === goal[j] && s[j] === goal[i];
 };
 
