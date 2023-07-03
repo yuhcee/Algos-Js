@@ -9,6 +9,11 @@
  *
  * For example, swapping at indices `0` and `2` in "`abcd"` results in `"cbad"`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length, goal.length <= 2 * 104`
+ * - `s` and `goal` consist of lowercase letters.
+ *
  * @param {string} s
  * @param {string} goal
  * @return {boolean}
