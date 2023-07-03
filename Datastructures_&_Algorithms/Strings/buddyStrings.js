@@ -44,3 +44,9 @@ const buddyStrings = function (s, goal) {
 
     return s[i] === goal[j] && s[j] === goal[i];
 };
+
+const s = 'ab',
+    goal = 'ba';
+// Output: true
+// Explanation: You can swap s[0] = 'a' and s[1] = 'b' to get "ba", which is equal to goal.
+console.log(buddyStrings(s, goal));
