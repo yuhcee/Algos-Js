@@ -56,3 +56,9 @@ const s1 = 'ab',
 // Output: false
 // Explanation: The only letters you can swap are s[0] = 'a' and s[1] = 'b', which results in "ba" != goal.
 console.log(buddyStrings(s1, goal1));
+
+const s2 = 'aa',
+    goal2 = 'aa';
+// Output: true
+// Explanation: You can swap s[0] = 'a' and s[1] = 'a' to get "aa", which is equal to goal.
+console.log(buddyStrings(s2, goal2));
