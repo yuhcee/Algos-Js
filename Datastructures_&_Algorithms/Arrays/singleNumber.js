@@ -34,3 +34,7 @@ const singleNumber = function (nums) {
 const nums = [2, 2, 3, 2];
 // Output: 3
 console.log(singleNumber(nums));
+
+const nums1 = [0, 1, 0, 1, 0, 1, 99];
+// Output: 99
+console.log(singleNumber(nums1));
