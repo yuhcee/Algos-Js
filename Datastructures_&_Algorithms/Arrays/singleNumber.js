@@ -27,8 +27,10 @@ const singleNumber = function (nums) {
     }
 
     // return Object.keys(numsCounter).filter(key => numsCounter[key] === 1).join('')
-    // return Object.entries(numsCounter).filter(([key, value]) => value === 1 && key).join('')
     for (let [key, value] of Object.entries(numsCounter)) {
         if (value === 1) return key;
     }
 };
+const nums = [2, 2, 3, 2];
+// Output: 3
+console.log(singleNumber(nums));
