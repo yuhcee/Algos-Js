@@ -17,4 +17,18 @@
  * @param {number[]} nums
  * @return {number}
  */
-const singleNumber = function (nums) {};
+const singleNumber = function (nums) {
+    const numsCounter = {};
+
+    for (let i = 0; i < nums.length; i++) {
+        let num = nums[i];
+
+        numsCounter[num] = numsCounter[num] + 1 || 1;
+    }
+
+    // return Object.keys(numsCounter).filter(key => numsCounter[key] === 1).join('')
+    // return Object.entries(numsCounter).filter(([key, value]) => value === 1 && key).join('')
+    for (let [key, value] of Object.entries(numsCounter)) {
+        if (value === 1) return key;
+    }
+};
