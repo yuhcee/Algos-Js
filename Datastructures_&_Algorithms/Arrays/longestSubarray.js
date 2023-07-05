@@ -45,3 +45,8 @@ const nums1 = [0, 1, 1, 1, 0, 1, 1, 0, 1];
 // Output: 5
 // Explanation: After deleting the number in position 4, [0,1,1,1,1,1,0,1] longest subarray with value of 1's is [1,1,1,1,1].
 console.log(longestSubarray(nums1));
+
+const nums2 = [1, 1, 1];
+// Output: 2
+// Explanation: You must delete one element.
+console.log(longestSubarray(nums2));
