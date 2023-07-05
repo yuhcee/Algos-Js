@@ -15,7 +15,7 @@
  * @return {number}
  */
 const longestSubarray = function (nums) {
-    const maxLength = 0;
+    let maxLength = 0;
     let left = 0;
     let countZeros = 0;
 
@@ -35,3 +35,8 @@ const longestSubarray = function (nums) {
 
     return maxLength;
 };
+
+const nums = [1, 1, 0, 1];
+// Output: 3
+// Explanation: After deleting the number in position 2, [1,1,1] contains 3 numbers with value of 1's.
+console.log(longestSubarray(nums));
