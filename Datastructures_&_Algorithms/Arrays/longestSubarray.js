@@ -40,3 +40,8 @@ const nums = [1, 1, 0, 1];
 // Output: 3
 // Explanation: After deleting the number in position 2, [1,1,1] contains 3 numbers with value of 1's.
 console.log(longestSubarray(nums));
+
+const nums1 = [0, 1, 1, 1, 0, 1, 1, 0, 1];
+// Output: 5
+// Explanation: After deleting the number in position 4, [0,1,1,1,1,1,0,1] longest subarray with value of 1's is [1,1,1,1,1].
+console.log(longestSubarray(nums1));
