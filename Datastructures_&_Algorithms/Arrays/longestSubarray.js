@@ -14,4 +14,24 @@
  * @param {number[]} nums
  * @return {number}
  */
-const longestSubarray = function (nums) {};
+const longestSubarray = function (nums) {
+    const maxLength = 0;
+    let left = 0;
+    let countZeros = 0;
+
+    for (let right = 0; right < nums.length; right++) {
+        if (nums[right] === 0) {
+            countZeros++;
+
+            while (countZeros === 2) {
+                if (nums[left] === 0) {
+                    countZeros -= 1;
+                }
+                left++;
+            }
+        }
+        maxLength = Math.max(maxLength, right - left);
+    }
+
+    return maxLength;
+};
