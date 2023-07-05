@@ -15,21 +15,25 @@
  * @return {number}
  */
 const longestSubarray = function (nums) {
-    let maxLength = 0;
-    let left = 0;
-    let countZeros = 0;
+    let maxLength = 0; // Length of the longest subarray of 1's
+    let left = 0; // Left pointer of the sliding window
+    let countZeros = 0; // Count of zeros in the current window
 
     for (let right = 0; right < nums.length; right++) {
         if (nums[right] === 0) {
-            countZeros++;
+            countZeros++; // Increment countZeros for each 0 encountered
 
+            // If countZeros becomes 2, we have more than one zero in the window
+            // Move the left pointer to the right until we exclude one zero from the window
             while (countZeros === 2) {
                 if (nums[left] === 0) {
-                    countZeros -= 1;
+                    countZeros--; // Decrement countZeros as we exclude a zero from the window
                 }
-                left++;
+                left++; // Move the left pointer to the right
             }
         }
+
+        // Update maxLength with the maximum length of the window
         maxLength = Math.max(maxLength, right - left);
     }
 
