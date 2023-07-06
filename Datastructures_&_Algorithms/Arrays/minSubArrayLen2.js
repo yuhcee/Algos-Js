@@ -47,3 +47,8 @@ const target1 = 4,
     nums1 = [1, 4, 4];
 // Output: 1
 console.log(minSubArrayLen(target1, nums1));
+
+const target2 = 11,
+    nums2 = [1, 1, 1, 1, 1, 1, 1, 1];
+// Output: 0
+console.log(minSubArrayLen(target2, nums2));
