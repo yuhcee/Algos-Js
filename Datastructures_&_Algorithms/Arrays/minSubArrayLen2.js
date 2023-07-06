@@ -42,3 +42,8 @@ const target = 7,
 // Output: 2
 // Explanation: The subarray [4,3] has the minimal length under the problem constraint.
 console.log(minSubArrayLen(target, nums));
+
+const target1 = 4,
+    nums1 = [1, 4, 4];
+// Output: 1
+console.log(minSubArrayLen(target1, nums1));
