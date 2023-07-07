@@ -25,4 +25,23 @@
  * @param {number} k
  * @return {number}
  */
-function maxConsecutiveAnswers(answerKey, k) {}
+function maxConsecutiveAnswers(answerKey, k) {
+    let j = 0; // maximum count of consecutive 'T's or 'F's
+    let cnt = { T: 0, F: 0 }; // counts of 'T's and 'F's
+    const n = answerKey.length;
+
+    for (let i = 0; i < n; i++) {
+        cnt[answerKey[i]]++; // increment the count of the current answer
+
+        // If the minimum count of 'T's or 'F's within the window is greater than k,
+        // reduce the count of the answer at the window's start and move the window
+        if (Math.min(cnt.T, cnt.F) > k) {
+            cnt[answerKey[i - j]]--; // decrement the count of the answer at the window's start
+            j--; // reduce the window size
+        }
+
+        j++; // increment the window size
+    }
+
+    return j; // return the maximum count of consecutive 'T's or 'F's
+}
