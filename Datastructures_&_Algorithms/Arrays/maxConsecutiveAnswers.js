@@ -51,3 +51,11 @@ const answerKey = 'TTFF',
 /* Explanation: We can replace both the 'F's with 'T's to make answerKey = "TTTT".
 There are four consecutive 'T's.*/
 console.log(maxConsecutiveAnswers(answerKey, k));
+
+const answerKey1 = 'TFFT',
+    k1 = 1;
+// Output: 3
+/* Explanation: We can replace the first 'T' with an 'F' to make answerKey = "FFFT".
+Alternatively, we can replace the second 'T' with an 'F' to make answerKey = "TFFF".
+In both cases, there are three consecutive 'F's. */
+console.log(maxConsecutiveAnswers(answerKey1, k1));
