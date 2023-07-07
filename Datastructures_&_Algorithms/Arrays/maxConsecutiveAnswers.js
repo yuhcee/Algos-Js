@@ -14,6 +14,13 @@
  * Return *the maximum number of consecutive `'T'`s or 'F's in the answer key after performing the
  * operation at most `k` times*.
  *
+ * **Constraints:**
+ *
+ * - `n == answerKey.length`
+ * - `1 <= n <= 5 * 104`
+ * - `answerKey[i]` is either `'T'` or `'F'`
+ * - `1 <= k <= n`
+ *
  * @param {string} answerKey
  * @param {number} k
  * @return {number}
