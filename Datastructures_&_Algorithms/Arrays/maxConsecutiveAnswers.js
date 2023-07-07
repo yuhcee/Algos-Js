@@ -45,3 +45,9 @@ function maxConsecutiveAnswers(answerKey, k) {
 
     return j; // return the maximum count of consecutive 'T's or 'F's
 }
+const answerKey = 'TTFF',
+    k = 2;
+// Output: 4
+/* Explanation: We can replace both the 'F's with 'T's to make answerKey = "TTTT".
+There are four consecutive 'T's.*/
+console.log(maxConsecutiveAnswers(answerKey, k));
