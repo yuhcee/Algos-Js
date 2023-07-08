@@ -71,3 +71,15 @@ const largestVariance = function (s) {
 
     return result; // Return the largest variance
 };
+
+const s = 'aababbb';
+// Output: 3
+/* Explanation:
+All possible variances along with their respective substrings are listed below:
+- Variance 0 for substrings "a", "aa", "ab", "abab", "aababb", "ba", "b", "bb", and "bbb".
+- Variance 1 for substrings "aab", "aba", "abb", "aabab", "ababb", "aababbb", and "bab".
+- Variance 2 for substrings "aaba", "ababbb", "abbb", and "babb".
+- Variance 3 for substring "babbb".
+Since the largest possible variance is 3, we return it. */
+console.log(largestVariance(s));
+
