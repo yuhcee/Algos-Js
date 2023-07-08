@@ -16,12 +16,32 @@
  * Return *the **difference** between the **maximum** and **minimum** scores among marble distributions*.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= k <= weights.length <= 105`
  * - `1 <= weights[i] <= 109`
- * 
+ *
  * @param {number[]} weights
  * @param {number} k
  * @return {number}
  */
-const putMarbles = function (weights, k) {};
+const putMarbles = function (weights, k) {
+    const costs = [];
+
+    // Creating all cuts costs array
+    for (let i = 0; i < weights.length - 1; i++) {
+        costs.push(weights[i] + weights[i + 1]);
+    }
+
+    // We sort costs since we need k lowest and k highest
+    costs.sort((a, b) => a - b);
+
+    let result = 0;
+
+    // We need only the difference, so no need to slice the array
+    // We iterate once, adding the difference to the result
+    for (let i = 0; i < k - 1; i++) {
+        result += costs[costs.length - 1 - i] - costs[i];
+    }
+
+    return result;
+};
