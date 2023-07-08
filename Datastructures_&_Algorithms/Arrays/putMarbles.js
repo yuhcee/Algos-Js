@@ -15,6 +15,11 @@
  *
  * Return *the **difference** between the **maximum** and **minimum** scores among marble distributions*.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= k <= weights.length <= 105`
+ * - `1 <= weights[i] <= 109`
+ * 
  * @param {number[]} weights
  * @param {number} k
  * @return {number}
