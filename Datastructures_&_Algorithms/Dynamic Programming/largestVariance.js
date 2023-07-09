@@ -83,3 +83,8 @@ All possible variances along with their respective substrings are listed below:
 Since the largest possible variance is 3, we return it. */
 console.log(largestVariance(s));
 
+const s1 = 'abcde';
+// Output: 0
+/* Explanation:
+No letter occurs more than once in s, so the variance of every substring is 0. */
+console.log(largestVariance(s1));
