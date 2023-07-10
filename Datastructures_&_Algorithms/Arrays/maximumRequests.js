@@ -90,3 +90,13 @@ From building 1 we have employee y and they want to move to building 2.
 From building 2 we have employee z and they want to move to building 1.
 We can achieve all the requests.  */
 console.log(maximumRequests(n1, requests1));
+
+const n2 = 4,
+    requests2 = [
+        [0, 3],
+        [3, 1],
+        [1, 2],
+        [2, 0],
+    ];
+// Output: 4
+console.log(maximumRequests(n2, requests2));
