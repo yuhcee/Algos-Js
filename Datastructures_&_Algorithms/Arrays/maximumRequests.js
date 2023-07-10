@@ -15,6 +15,13 @@
  *
  * Return *the maximum number of achievable requests*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 20`
+ * - `1 <= requests.length <= 16`
+ * - `requests[i].length == 2`
+ * - `0 <= fromi, toi < n`
+ *
  * @param {number} n
  * @param {number[][]} requests
  * @return {number}
