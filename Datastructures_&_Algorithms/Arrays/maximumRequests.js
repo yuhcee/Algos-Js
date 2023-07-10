@@ -56,3 +56,23 @@ const maximumRequests = function (n, requests) {
 
     return maxAchievable; // Return the maximum number of achievable requests
 };
+
+const n = 5,
+    requests = [
+        [0, 1],
+        [1, 0],
+        [0, 1],
+        [1, 2],
+        [2, 0],
+        [3, 4],
+    ];
+// Output: 5
+/* Explantion: Let's see the requests:
+From building 0 we have employees x and y and both want to move to building 1.
+From building 1 we have employees a and b and they want to move to buildings 2 and 0 respectively.
+From building 2 we have employee z and they want to move to building 0.
+From building 3 we have employee c and they want to move to building 4.
+From building 4 we don't have any requests.
+We can achieve the requests of users x and b by swapping their places.
+We can achieve the requests of users y, a and z by swapping the places in the 3 buildings. */
+console.log(maximumRequests(n, requests));
