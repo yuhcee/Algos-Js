@@ -26,4 +26,33 @@
  * @param {number[][]} requests
  * @return {number}
  */
-const maximumRequests = function (n, requests) {};
+const maximumRequests = function (n, requests) {
+    const m = requests.length; // Number of requests
+    let maxAchievable = 0; // Maximum number of achievable requests
+
+    // Backtracking function to calculate the net change in each building
+    function backtrack(idx, count, balance) {
+        if (idx === m) {
+            if (balance.every((b) => b === 0)) {
+                maxAchievable = Math.max(maxAchievable, count);
+            }
+            return;
+        }
+
+        const [from, to] = requests[idx];
+        balance[from]--; // Decrement the outgoing building
+        balance[to]++; // Increment the incoming building
+
+        backtrack(idx + 1, count + 1, balance); // Include the current request
+        balance[from]++; // Undo the decrement
+        balance[to]--; // Undo the increment
+
+        backtrack(idx + 1, count, balance); // Exclude the current request
+    }
+
+    const balance = Array(n).fill(0); // Array to track the net change in each building
+
+    backtrack(0, 0, balance); // Start the backtracking process
+
+    return maxAchievable; // Return the maximum number of achievable requests
+};
