@@ -76,3 +76,17 @@ From building 4 we don't have any requests.
 We can achieve the requests of users x and b by swapping their places.
 We can achieve the requests of users y, a and z by swapping the places in the 3 buildings. */
 console.log(maximumRequests(n, requests));
+
+const n1 = 3,
+    requests1 = [
+        [0, 0],
+        [1, 2],
+        [2, 1],
+    ];
+// Output: 3
+/* Explantion: Let's see the requests:
+From building 0 we have employee x and they want to stay in the same building 0.
+From building 1 we have employee y and they want to move to building 2.
+From building 2 we have employee z and they want to move to building 1.
+We can achieve all the requests.  */
+console.log(maximumRequests(n1, requests1));
