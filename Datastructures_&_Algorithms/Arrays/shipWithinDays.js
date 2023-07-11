@@ -10,6 +10,11 @@
  * Return the least weight capacity of the ship that will result in all the packages on the
  * conveyor belt being shipped within `days` days.
  *
+ * **Constraints:**
+ *
+ * - `1 <= days <= weights.length <= 5 * 104`
+ * - `1 <= weights[i] <= 500`
+ *
  * @param {number[]} weights
  * @param {number} days
  * @return {number}
