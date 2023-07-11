@@ -70,3 +70,13 @@ const weights1 = [3, 2, 2, 4, 1, 4],
 2nd day: 2, 4
 3rd day: 1, 4 */
 console.log(shipWithinDays(weights1, days1));
+
+const weights2 = [1, 2, 3, 1, 1],
+    days2 = 4;
+// Output: 3
+/* Explanation:
+1st day: 1
+2nd day: 2
+3rd day: 3
+4th day: 1, 1 */
+console.log(shipWithinDays(weights2, days2));
