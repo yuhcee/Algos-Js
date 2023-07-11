@@ -19,4 +19,32 @@
  * @param {number} days
  * @return {number}
  */
-const shipWithinDays = function (weights, days) {};
+const shipWithinDays = function (weights, days) {
+    let left = Math.max(...weights); // the minimum capacity is at least the maximum weight
+    let right = weights.reduce((acc, cur) => acc + cur, 0); // the maximum capacity is the sum of all weights
+
+    while (left < right) {
+        // perform binary search
+        const mid = Math.floor((left + right) / 2); // calculate the midpoint capacity
+        let total = 0; // initialize the total weight to 0
+        let requiredDays = 1; // initialize the required days to 1
+
+        for (let i = 0; i < weights.length; i++) {
+            total += weights[i]; // add the weight of the current package
+            if (total > mid) {
+                // if the total weight exceeds the capacity
+                total = weights[i]; // start a new shipment with the weight of the current package
+                requiredDays++; // increase the required days by 1
+            }
+        }
+
+        if (requiredDays <= days) {
+            // if the required days is less than or equal to the given days
+            right = mid; // search in the left half of the array
+        } else {
+            left = mid + 1; // search in the right half of the array
+        }
+    }
+
+    return left; // return the minimum capacity that will result in all packages being shipped within the given days
+};
