@@ -61,3 +61,12 @@ const weights = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 
 Note that the cargo must be shipped in the order given, so using a ship of capacity 14 and splitting the packages into parts like (2, 3, 4, 5), (1, 6, 7), (8), (9), (10) is not allowed. */
 console.log(shipWithinDays(weights, days));
+
+const weights1 = [3, 2, 2, 4, 1, 4],
+    days1 = 3;
+// Output: 6
+/* Explanation: A ship capacity of 6 is the minimum to ship all the packages in 3 days like this:
+1st day: 3, 2
+2nd day: 2, 4
+3rd day: 1, 4 */
+console.log(shipWithinDays(weights1, days1));
