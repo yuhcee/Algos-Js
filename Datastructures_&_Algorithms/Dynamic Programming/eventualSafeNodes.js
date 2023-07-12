@@ -24,4 +24,27 @@
  * @param {number[][]} graph
  * @return {number[]}
  */
-const eventualSafeNodes = function (graph) {};
+const eventualSafeNodes = function (graph) {
+    const answer = [];
+    const map = new Map();
+
+    for (let i = 0; i < graph.length; i++) {
+        if (explore(graph, i, map)) {
+            answer.push(i);
+        }
+    }
+    return answer;
+};
+
+var explore = function (graph, node, map) {
+    if (map.has(node)) return map.get(node);
+    map.set(node, false);
+
+    for (let neighbor of graph[node]) {
+        if (!explore(graph, neighbor, map)) {
+            return false;
+        }
+    }
+    map.set(node, true);
+    return true;
+};
