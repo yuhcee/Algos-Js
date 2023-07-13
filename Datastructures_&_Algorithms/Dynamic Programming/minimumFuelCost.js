@@ -91,3 +91,25 @@ const roads = [
 It costs 3 liters of fuel at minimum. 
 It can be proven that 3 is the minimum number of liters of fuel needed. */
 console.log(minimumFuelCost(roads, seats));
+
+const roads1 = [
+        [3, 1],
+        [3, 2],
+        [1, 0],
+        [0, 4],
+        [0, 5],
+        [4, 6],
+    ],
+    seats1 = 2;
+// Output: 7
+/* Explanation: 
+- Representative2 goes directly to city 3 with 1 liter of fuel.
+- Representative2 and representative3 go together to city 1 with 1 liter of fuel.
+- Representative2 and representative3 go together to the capital with 1 liter of fuel.
+- Representative1 goes directly to the capital with 1 liter of fuel.
+- Representative5 goes directly to the capital with 1 liter of fuel.
+- Representative6 goes directly to city 4 with 1 liter of fuel.
+- Representative4 and representative6 go together to the capital with 1 liter of fuel.
+It costs 7 liters of fuel at minimum. 
+It can be proven that 7 is the minimum number of liters of fuel needed. */
+console.log(minimumFuelCost(roads1, seats1));
