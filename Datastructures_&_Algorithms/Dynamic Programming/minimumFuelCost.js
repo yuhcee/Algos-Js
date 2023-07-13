@@ -16,6 +16,16 @@
  *
  * Return *the minimum number of liters of fuel to reach the capital city*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 105`
+ * - `roads.length == n - 1`
+ * - `roads[i].length == 2`
+ * - `0 <= ai, bi < n`
+ * - `ai != bi`
+ * - `roads` represents a valid tree.
+ * - `1 <= seats <= 105`
+ *
  * @param {number[][]} roads - a 2D array that represents the roads in the network, each element of the array is a road represented as [ai, bi], indicating a bidirectional road between cities ai and bi
  * @param {number} seats - an integer that represents the number of seats in each car
  * @return {number} - returns the minimum number of liters of fuel required to reach the capital city
