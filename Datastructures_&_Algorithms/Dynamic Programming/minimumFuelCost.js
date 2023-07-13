@@ -30,4 +30,49 @@
  * @param {number} seats - an integer that represents the number of seats in each car
  * @return {number} - returns the minimum number of liters of fuel required to reach the capital city
  */
-const minimumFuelCost = function (roads, seats) {};
+const minimumFuelCost = function (roads, seats) {
+    // Create an array of arrays to represent the graph, with each subarray representing the connected cities for that city
+    let graph = Array.from({ length: roads.length + 1 }, () => []);
+
+    // Create a variable to keep track of the total fuel required
+    let totalFuel = 0;
+
+    // Populate the graph with the roads
+    for (let [i, j] of roads) {
+        graph[i].push(j);
+        graph[j].push(i);
+    }
+
+    /**
+     * A helper function to traverse the graph using DFS
+     *
+     * @param {number} city - the current city node
+     * @param {number} parent - the parent city node
+     * @return {number} - the total number of people (representatives) in the subtree rooted at the current city node
+     */
+    const dfsTraversal = (city, parent) => {
+        // Start the total number of people at 1 to account for the representative at the current city node
+        let totalPeople = 1;
+
+        // Loop through the cities connected to the current city node
+        for (let i = 0; i < graph[city].length; i++) {
+            // Check if the connected city is the parent node, if it is, skip it
+            if (graph[city][i] === parent) continue;
+
+            // Recursively traverse the connected city and add the total number of people in its subtree to the totalPeople
+            totalPeople += dfsTraversal(graph[city][i], city);
+        }
+
+        // Check if the parent node exists, if it does, then we need to add the fuel required for the representatives from the current city to the parent city
+        if (parent > -1) totalFuel += Math.ceil(totalPeople / seats);
+
+        // Return the total number of people in the subtree rooted at the current city node
+        return totalPeople;
+    };
+
+    // Start the DFS traversal from the capital city (city 0) with -1 as the parent node
+    dfsTraversal(0, -1);
+
+    // Return the total fuel required to reach the capital city
+    return totalFuel;
+};
