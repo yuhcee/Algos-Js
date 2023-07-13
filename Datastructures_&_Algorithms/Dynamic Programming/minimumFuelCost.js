@@ -76,3 +76,18 @@ const minimumFuelCost = function (roads, seats) {
     // Return the total fuel required to reach the capital city
     return totalFuel;
 };
+
+const roads = [
+        [0, 1],
+        [0, 2],
+        [0, 3],
+    ],
+    seats = 5;
+// Output: 3
+/* Explanation: 
+- Representative1 goes directly to the capital with 1 liter of fuel.
+- Representative2 goes directly to the capital with 1 liter of fuel.
+- Representative3 goes directly to the capital with 1 liter of fuel.
+It costs 3 liters of fuel at minimum. 
+It can be proven that 3 is the minimum number of liters of fuel needed. */
+console.log(minimumFuelCost(roads, seats));
