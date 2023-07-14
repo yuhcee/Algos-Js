@@ -46,3 +46,9 @@ const arr1 = [1, 3, 5, 7],
 // Output: 1
 // Explanation: The longest arithmetic subsequence is any single element.
 console.log(longestSubsequence(arr1, difference1));
+
+const arr2 = [1, 5, 7, 8, 5, 3, 4, 2, 1],
+    difference2 = -2;
+// Output: 4
+// Explanation: The longest arithmetic subsequence is [7,5,3,1].
+console.log(longestSubsequence(arr2, difference2));
