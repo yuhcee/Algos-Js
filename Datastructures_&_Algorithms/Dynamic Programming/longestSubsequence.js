@@ -34,3 +34,9 @@ const longestSubsequence = function (arr, difference) {
 
     return maxLength;
 };
+
+const arr = [1, 2, 3, 4],
+    difference = 1;
+// Output: 4
+// Explanation: The longest arithmetic subsequence is [1,2,3,4].
+console.log(longestSubsequence(arr, difference));
