@@ -17,4 +17,20 @@
  * @param {number} difference
  * @return {number}
  */
-const longestSubsequence = function (arr, difference) {};
+const longestSubsequence = function (arr, difference) {
+    const dp = new Map(); // Hashmap to store the length of longest subsequence ending at each element
+    let maxLength = 1; // Maximum length of arithmetic subsequence
+
+    for (const num of arr) {
+        // Check if there is a previous element with a difference of `difference`
+        if (dp.has(num - difference)) {
+            dp.set(num, dp.get(num - difference) + 1); // Update the length of subsequence for current element
+        } else {
+            dp.set(num, 1); // Initialize the length of subsequence for current element as 1
+        }
+
+        maxLength = Math.max(maxLength, dp.get(num)); // Update the maximum length if needed
+    }
+
+    return maxLength;
+};
