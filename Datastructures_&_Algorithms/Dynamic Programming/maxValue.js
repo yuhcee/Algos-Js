@@ -68,3 +68,14 @@ const events = [
 // Output: 7
 // Explanation: Choose the green events, 0 and 1 (0-indexed) for a total value of 4 + 3 = 7.
 console.log(maxValue(events, k));
+
+const events1 = [
+        [1, 2, 4],
+        [3, 4, 3],
+        [2, 3, 10],
+    ],
+    k1 = 2;
+// Output: 10
+/* Explanation: Choose event 2 for a total value of 10.
+Notice that you cannot attend any other event as they overlap, and that you do not have to attend k events. */
+console.log(maxValue(events1, k1));
