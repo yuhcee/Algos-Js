@@ -12,6 +12,13 @@
  *
  * Return *the **maximum sum** of values that you can receive by attending events*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= k <= events.length`
+ * - `1 <= k * events.length <= 106`
+ * - `1 <= startDayi <= endDayi <= 109`
+ * - `1 <= valuei <= 106`
+ *
  * @param {number[][]} events
  * @param {number} k
  * @return {number}
