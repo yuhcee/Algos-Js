@@ -79,3 +79,14 @@ const events1 = [
 /* Explanation: Choose event 2 for a total value of 10.
 Notice that you cannot attend any other event as they overlap, and that you do not have to attend k events. */
 console.log(maxValue(events1, k1));
+
+const events2 = [
+        [1, 1, 1],
+        [2, 2, 2],
+        [3, 3, 3],
+        [4, 4, 4],
+    ],
+    k2 = 3;
+// Output: 9
+// Explanation: Although the events do not overlap, you can only attend 3 events. Pick the highest valued three.
+console.log(maxValue(events2, k2));
