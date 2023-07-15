@@ -58,3 +58,13 @@ function binarySearch(events, target) {
 
     return left;
 }
+
+const events = [
+        [1, 2, 4],
+        [3, 4, 3],
+        [2, 3, 1],
+    ],
+    k = 2;
+// Output: 7
+// Explanation: Choose the green events, 0 and 1 (0-indexed) for a total value of 4 + 3 = 7.
+console.log(maxValue(events, k));
