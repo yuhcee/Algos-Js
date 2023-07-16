@@ -76,3 +76,15 @@ const req_skills = ['java', 'nodejs', 'reactjs'],
     people = [['java'], ['nodejs'], ['nodejs', 'reactjs']];
 // Output: [0,2]
 console.log(smallestSufficientTeam(req_skills, people));
+
+const req_skills1 = ['algorithms', 'math', 'java', 'reactjs', 'csharp', 'aws'],
+    people1 = [
+        ['algorithms', 'math', 'java'],
+        ['algorithms', 'math', 'reactjs'],
+        ['java', 'csharp', 'aws'],
+        ['reactjs', 'csharp'],
+        ['csharp', 'math'],
+        ['aws', 'java'],
+    ];
+// Output: [1,2]
+console.log(smallestSufficientTeam(req_skills1, people1));
