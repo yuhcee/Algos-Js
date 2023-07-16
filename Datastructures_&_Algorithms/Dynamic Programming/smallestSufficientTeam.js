@@ -71,3 +71,8 @@ const smallestSufficientTeam = function (req_skills, people) {
     // Return the minimum team for the complete skill mask
     return skillTeamMap.get((1 << req_skills.length) - 1);
 };
+
+const req_skills = ['java', 'nodejs', 'reactjs'],
+    people = [['java'], ['nodejs'], ['nodejs', 'reactjs']];
+// Output: [0,2]
+console.log(smallestSufficientTeam(req_skills, people));
