@@ -34,4 +34,40 @@
  * @param {string[][]} people
  * @return {number[]}
  */
-const smallestSufficientTeam = function (req_skills, people) {};
+const smallestSufficientTeam = function (req_skills, people) {
+    const skillIndexMap = new Map();
+
+    // Create a map to store the index of each required skill
+    req_skills.forEach((skill, index) => skillIndexMap.set(skill, index));
+
+    // Create a map to store the minimum team for each skill mask
+    const skillTeamMap = new Map([[0, []]]);
+
+    // Iterate through each person's skills
+    people.forEach((skills, index) => {
+        let hisSkills = 0;
+
+        // Convert the person's skills into a bitmask
+        for (const skill of skills) {
+            hisSkills |= 1 << skillIndexMap.get(skill);
+        }
+
+        // Iterate through each existing skill mask and update the minimum team
+        for (const [currSkill, team] of skillTeamMap) {
+            const totalSkills = currSkill | hisSkills;
+
+            // If the current team already covers all the skills, no need to update
+            if (totalSkills === currSkill) {
+                continue;
+            }
+
+            // Update the minimum team if the new team is smaller
+            if (!skillTeamMap.has(totalSkills) || team.length + 1 < skillTeamMap.get(totalSkills).length) {
+                skillTeamMap.set(totalSkills, [...team, index]);
+            }
+        }
+    });
+
+    // Return the minimum team for the complete skill mask
+    return skillTeamMap.get((1 << req_skills.length) - 1);
+};
