@@ -87,3 +87,6 @@ const maxDistance = function (grid) {
 const grid = [[1,0,1],[0,0,0],[1,0,1]]
 // Output: 2
 // Explanation: The cell (1, 1) is as far as possible from all the land with distance 2.
+const grid1 = [[1,0,0],[0,0,0],[0,0,0]]
+// Output: 4
+// Explanation: The cell (2, 2) is as far as possible from all the land with distance 4.
