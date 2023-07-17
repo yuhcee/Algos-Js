@@ -7,6 +7,12 @@
  *
  * The distance used in this problem is the Manhattan distance: the distance between two cells (`x0, y0`) and (`x1, y1`) is `|x0 - x1| + |y0 - y1|`.
  *
+ * **Constraints:**
+ *
+ * - `n == grid.length`
+ * - `n == grid[i].length`
+ * - `1 <= n <= 100`
+ * - `grid[i][j]` is `0` or `1`
  *
  * @param {number[][]} grid
  * @return {number}
