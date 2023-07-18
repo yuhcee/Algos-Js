@@ -43,3 +43,9 @@ const s = 'tree';
 /* Explanation: 'e' appears twice while 'r' and 't' both appear once.
 So 'e' must appear before both 'r' and 't'. Therefore "eetr" is also a valid answer. */
 console.log(frequencySort(s));
+
+const s1 = 'cccaaa';
+// Output: "aaaccc"
+/* Explanation: Both 'c' and 'a' appear three times, so both "cccaaa" and "aaaccc" are valid answers.
+Note that "cacaca" is incorrect, as the same characters must be together. */
+console.log(frequencySort(s1));
