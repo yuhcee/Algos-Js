@@ -6,6 +6,11 @@
  *
  * Return *the sorted string*. If there are multiple answers, return *any of them.*
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 5 * 105`
+ * - `s` consists of uppercase and lowercase English letters and digits.
+ *
  * @param {string} s
  * @return {string}
  */
