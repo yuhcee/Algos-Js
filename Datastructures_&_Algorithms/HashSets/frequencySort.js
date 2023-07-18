@@ -49,3 +49,9 @@ const s1 = 'cccaaa';
 /* Explanation: Both 'c' and 'a' appear three times, so both "cccaaa" and "aaaccc" are valid answers.
 Note that "cacaca" is incorrect, as the same characters must be together. */
 console.log(frequencySort(s1));
+
+const s2 = 'Aabb';
+// Output: "bbAa"
+/* Explanation: "bbaA" is also a valid answer, but "Aabb" is incorrect.
+Note that 'A' and 'a' are treated as two different characters. */
+console.log(frequencySort(s2));
