@@ -14,4 +14,26 @@
  * @param {string} s
  * @return {string}
  */
-const frequencySort = function (s) {};
+const frequencySort = function (s) {
+    // Step 1: Build a frequency map
+    const frequencyMap = new Map();
+    for (let char of s) {
+        frequencyMap.set(char, (frequencyMap.get(char) || 0) + 1);
+    }
+
+    // Step 2: Sort characters based on frequencies
+    const sortedChars = Array.from(frequencyMap.keys()).sort((a, b) => {
+        const frequencyA = frequencyMap.get(a);
+        const frequencyB = frequencyMap.get(b);
+        return frequencyB - frequencyA;
+    });
+
+    // Step 3: Construct the sorted string
+    let sortedString = '';
+    for (let char of sortedChars) {
+        const frequency = frequencyMap.get(char);
+        sortedString += char.repeat(frequency);
+    }
+
+    return sortedString;
+};
