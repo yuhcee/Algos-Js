@@ -12,4 +12,26 @@
  * @param {number[][]} intervals
  * @return {number}
  */
-const eraseOverlapIntervals = function (intervals) {};
+const eraseOverlapIntervals = function (intervals) {
+    // Sort the intervals based on their ending points
+    intervals.sort((a, b) => a[1] - b[1]);
+
+    let nonOverlappingCount = 0; // Count of non-overlapping intervals
+    let prevEnd = Number.MIN_SAFE_INTEGER; // Ending point of the previous interval
+
+    for (const interval of intervals) {
+        const [start, end] = interval;
+
+        // If the current interval doesn't overlap with the previous one
+        if (start >= prevEnd) {
+            nonOverlappingCount++; // Increment the non-overlapping count
+            prevEnd = end; // Update the ending point for the next iteration
+        }
+        // If the current interval overlaps with the previous one
+        // Skip this interval, as we want to keep the one with the earliest ending point
+    }
+
+    // Calculate the number of intervals to remove
+    const intervalsToRemove = intervals.length - nonOverlappingCount;
+    return intervalsToRemove;
+};
