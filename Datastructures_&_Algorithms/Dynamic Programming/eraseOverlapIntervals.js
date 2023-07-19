@@ -35,3 +35,13 @@ const eraseOverlapIntervals = function (intervals) {
     const intervalsToRemove = intervals.length - nonOverlappingCount;
     return intervalsToRemove;
 };
+
+const intervals = [
+    [1, 2],
+    [2, 3],
+    [3, 4],
+    [1, 3],
+];
+// Output: 1
+// Explanation: [1,3] can be removed and the rest of the intervals are non-overlapping.
+console.log(eraseOverlapIntervals(intervals));
