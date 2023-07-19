@@ -45,3 +45,12 @@ const intervals = [
 // Output: 1
 // Explanation: [1,3] can be removed and the rest of the intervals are non-overlapping.
 console.log(eraseOverlapIntervals(intervals));
+
+const intervals1 = [
+    [1, 2],
+    [1, 2],
+    [1, 2],
+];
+// Output: 2
+// Explanation: You need to remove two [1,2] to make the rest of the intervals non-overlapping.
+console.log(eraseOverlapIntervals(intervals1));
