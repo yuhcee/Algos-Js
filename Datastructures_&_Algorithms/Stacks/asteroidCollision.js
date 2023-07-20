@@ -56,3 +56,8 @@ const asteroids = [5, 10, -5];
 // Output: [5,10]
 // Explanation: The 10 and -5 collide resulting in 10. The 5 and 10 never collide.
 console.log(asteroidCollision(asteroids));
+
+const asteroids1 = [8, -8];
+// Output: []
+// Explanation: The 8 and -8 collide exploding each other.
+console.log(asteroidCollision(asteroids1));
