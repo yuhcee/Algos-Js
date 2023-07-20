@@ -10,6 +10,13 @@
  * will explode. If both are the same size, both will explode. Two asteroids moving in the same
  * direction will never meet.
  *
+ * **Constraints:**
+ *
+ * - `2 <= asteroids.length <= 104`
+ * - `-1000 <= asteroids[i] <= 1000`
+ * - `asteroids[i] != 0`
+ *
+ *
  * @param {number[]} asteroids
  * @return {number[]}
  */
