@@ -1,10 +1,15 @@
 /**
  * **673. Number of Longest Increasing Subsequence**
- * 
+ *
  * Given an integer array `nums`, return *the number of longest increasing subsequences*.
- * 
+ *
  * **Notice** that the sequence has to be **strictly** increasing.
- * 
+ *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 2000`
+ * - `-106 <= nums[i] <= 106`
+ *
  * @param {number[]} nums
  * @return {number}
  */
