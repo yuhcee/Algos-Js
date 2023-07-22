@@ -92,3 +92,10 @@ const n = 3,
 From each of those positions, there are also two moves that will keep the knight on the board.
 The total probability the knight stays on the board is 0.0625. */
 console.log(knightProbability(n, k, row, column));
+
+const n1 = 1,
+    k1 = 0,
+    row1 = 0,
+    column1 = 0;
+// Output: 1.00000
+console.log(knightProbability(n1, k1, row1, column1));
