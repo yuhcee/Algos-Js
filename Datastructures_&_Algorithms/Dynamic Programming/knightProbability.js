@@ -15,6 +15,12 @@
  *
  * Return *the probability that the knight remains on the board after it has stopped moving*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 25`
+ * - `0 <= k <= 100`
+ * - `0 <= row, column <= n - 1`
+ *
  * @param {number} n
  * @param {number} k
  * @param {number} row
