@@ -8,6 +8,13 @@
  * A chess knight has eight possible moves it can make, as illustrated below. Each move is two cells
  * in a cardinal direction, then one cell in an orthogonal direction.
  *
+ * Each time the knight is to move, it chooses one of eight possible moves uniformly at random (even
+ * if the piece would go off the chessboard) and moves there.
+ *
+ * The knight continues moving until it has made exactly `k` moves or has moved off the chessboard.
+ *
+ * Return *the probability that the knight remains on the board after it has stopped moving*.
+ *
  * @param {number} n
  * @param {number} k
  * @param {number} row
