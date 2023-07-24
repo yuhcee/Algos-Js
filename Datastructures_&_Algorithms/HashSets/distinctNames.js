@@ -25,4 +25,45 @@
  * @param {string[]} ideas
  * @return {number}
  */
-const distinctNames = function (ideas) {};
+const distinctNames = function (ideas) {
+    // Create a map to store first letters of names as keys and sets of suffixes as values
+    const suffixes = new Map();
+
+    // Loop through each idea to separate the first letter and suffix
+    for (const idea of ideas) {
+        const first = idea[0];
+        const suffix = idea.substring(1);
+        // Check if the first letter is already in the map, if not add it and an empty set for its suffixes
+        if (!suffixes.has(first)) {
+            suffixes.set(first, new Set());
+        }
+        // Add the suffix to the set for the corresponding first letter
+        suffixes.get(first).add(suffix);
+    }
+
+    let result = 0;
+
+    // Loop through each combination of two first letters
+    for (const [letterA, suffA] of suffixes) {
+        for (const [letterB, suffB] of suffixes) {
+            // Skip if the letters are the same
+            if (letterA === letterB) {
+                continue;
+            }
+            // Calculate the number of intersecting suffixes between the two sets
+            let intersections = 0;
+            for (const suffix of suffA) {
+                if (suffB.has(suffix)) {
+                    intersections++;
+                }
+            }
+            // Calculate the number of distinct names that can be formed from each set
+            const distinctA = suffA.size - intersections;
+            const distinctB = suffB.size - intersections;
+            // Add the number of distinct names for this combination of first letters to the result
+            result += distinctA * distinctB;
+        }
+    }
+
+    return result;
+};
