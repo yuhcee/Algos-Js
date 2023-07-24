@@ -1,7 +1,6 @@
 /**
  * **2306. Naming a Company**
  *
- *
  * You are given an array of strings ideas that represents a list of names to be used in the process
  * of naming a company. The process of naming a company is as follows:
  *
@@ -15,6 +14,14 @@
  * 4. Otherwise, it is not a valid name.
  *
  * Return the number of distinct valid names for the company.
+ *
+ * **Constraints:**
+ *
+ * - `2 <= ideas.length <= 5 * 104`
+ * - `1 <= ideas[i].length <= 10`
+ * - `ideas[i]` consists of lowercase English letters.
+ * - All the strings in `ideas` are **unique**.
+ *
  * @param {string[]} ideas
  * @return {number}
  */
