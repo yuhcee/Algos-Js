@@ -39,3 +39,8 @@ const myPow = function (x, n) {
         return myPow(x * x, (n - 1) / 2) * x;
     }
 };
+
+const x = 2.0,
+    n = 10;
+// Output: 1024.00000
+console.log(myPow(x, n));
