@@ -84,3 +84,8 @@ The following are some examples of invalid selections:
 - ("time", "toffee"): Both names are still the same after swapping and exist in the original array.
 - ("coffee", "toffee"): Both names formed after swapping already exist in the original array. */
 console.log(distinctNames(ideas));
+
+const ideas1 = ['lack', 'back'];
+// Output: 0
+// Explanation: There are no valid selections. Therefore, 0 is returned.
+console.log(distinctNames(ideas1));
