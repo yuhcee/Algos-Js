@@ -17,4 +17,25 @@
  * @param {number} n - The exponent.
  * @return {number} - The result of x raised to the power n.
  */
-const myPow = function (x, n) {};
+const myPow = function (x, n) {
+    // Base case: If the exponent is 0, any number raised to the power of 0 is 1.
+    if (n === 0) {
+        return 1;
+    }
+
+    // If the exponent is negative, convert x to its reciprocal (1/x) and make n positive.
+    if (n < 0) {
+        x = 1 / x;
+        n = -n;
+    }
+
+    // For even n, use the property x^n = (x^(n/2)) * (x^(n/2)).
+    if (n % 2 === 0) {
+        // Recursively calculate pow(x, n/2) and square it.
+        return myPow(x * x, n / 2);
+    } else {
+        // For odd n, use the property x^n = (x^((n-1)/2)) * (x^((n-1)/2)) * x.
+        // Recursively calculate pow(x, (n-1)/2), square it, and multiply by x.
+        return myPow(x * x, (n - 1) / 2) * x;
+    }
+};
