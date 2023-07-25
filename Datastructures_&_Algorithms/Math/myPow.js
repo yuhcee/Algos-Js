@@ -44,3 +44,7 @@ const x = 2.0,
     n = 10;
 // Output: 1024.00000
 console.log(myPow(x, n));
+
+const x1 = 2.10000, n1 = 3
+// Output: 9.26100
+console.log(myPow(x1, n1));
