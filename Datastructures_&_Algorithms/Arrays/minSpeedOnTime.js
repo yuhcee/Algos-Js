@@ -27,4 +27,32 @@
  * @param {number} hour - The time available to reach the office.
  * @return {number} - The minimum positive integer speed (in kilometers per hour) needed to reach the office on time.
  */
-const minSpeedOnTime = function (dist, hour) {};
+const minSpeedOnTime = function (dist, hour) {
+    const n = dist.length;
+    let left = 1; // Lower bound for binary search
+    let right = 10 ** 7; // Upper bound for binary search
+
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        let totalHours = 0;
+
+        // Calculate the total time taken at the current speed
+        for (let i = 0; i < n - 1; i++) {
+            totalHours += Math.ceil(dist[i] / mid); // Ceil to handle fractional hours
+        }
+        totalHours += dist[n - 1] / mid; // Last distance does not require waiting time
+
+        // Compare the total time with the available time
+        if (totalHours <= hour) {
+            // If we can reach on time, update the answer and explore lower speeds
+            right = mid - 1;
+        } else {
+            // If we cannot reach on time, explore higher speeds
+            left = mid + 1;
+        }
+    }
+
+    // The answer will be the lower bound (left) if it is possible to reach on time
+    // Otherwise, return -1 indicating it is impossible to reach on time
+    return left <= 10 ** 7 ? left : -1;
+};
