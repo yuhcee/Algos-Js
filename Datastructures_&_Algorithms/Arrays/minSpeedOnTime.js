@@ -76,3 +76,9 @@ const dist1 = [1, 3, 2],
 - Since we are already at an integer hour, we depart immediately at the 2 hour mark. The third train takes 2/3 = 0.66667 hours.
 - You will arrive at the 2.66667 hour mark. */
 console.log(minSpeedOnTime(dist1, hour1));
+
+const dist2 = [1, 3, 2],
+    hour2 = 1.9;
+// Output: -1
+// Explanation: It is impossible because the earliest the third train can depart is at the 2 hour mark.
+console.log(minSpeedOnTime(dist2, hour2));
