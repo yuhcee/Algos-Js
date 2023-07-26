@@ -56,3 +56,13 @@ const minSpeedOnTime = function (dist, hour) {
     // Otherwise, return -1 indicating it is impossible to reach on time
     return left <= 10 ** 7 ? left : -1;
 };
+
+const dist = [1, 3, 2],
+    hour = 6;
+// Output: 1
+/* Explanation: At speed 1:
+- The first train ride takes 1/1 = 1 hour.
+- Since we are already at an integer hour, we depart immediately at the 1 hour mark. The second train takes 3/1 = 3 hours.
+- Since we are already at an integer hour, we depart immediately at the 4 hour mark. The third train takes 2/1 = 2 hours.
+- You will arrive at exactly the 6 hour mark. */
+console.log(minSpeedOnTime(dist, hour));
