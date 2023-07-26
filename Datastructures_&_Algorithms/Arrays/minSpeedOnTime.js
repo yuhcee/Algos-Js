@@ -15,6 +15,14 @@
  *
  * Tests are generated such that the answer will not exceed `107` and hour will have **at most two digits after the decimal point**.
  *
+ * **Constraints:**
+ *
+ * - `n == dist.length`
+ * - `1 <= n <= 105`
+ * - `1 <= dist[i] <= 105`
+ * - `1 <= hour <= 109`
+ * - There will be at most two digits after the decimal point in `hour`.
+ *
  * @param {number[]} dist - Array of distances (in kilometers) of each train ride.
  * @param {number} hour - The time available to reach the office.
  * @return {number} - The minimum positive integer speed (in kilometers per hour) needed to reach the office on time.
