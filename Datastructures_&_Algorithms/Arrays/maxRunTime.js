@@ -67,3 +67,13 @@ At the end of the third minute, battery 0 is drained, and you need to remove it 
 By the end of the fourth minute, battery 1 is also drained, and the first computer is no longer running.
 We can run the two computers simultaneously for at most 4 minutes, so we return 4. */
 console.log(maxRunTime(n, batteries));
+
+const n1 = 2,
+    batteries1 = [1, 1, 1, 1];
+// Output: 2
+/* Explanation: 
+Initially, insert battery 0 into the first computer and battery 2 into the second computer. 
+After one minute, battery 0 and battery 2 are drained so you need to remove them and insert battery 1 into the first computer and battery 3 into the second computer. 
+After another minute, battery 1 and battery 3 are also drained so the first and second computers are no longer running.
+We can run the two computers simultaneously for at most 2 minutes, so we return 2. */
+console.log(maxRunTime(n1, batteries1));
