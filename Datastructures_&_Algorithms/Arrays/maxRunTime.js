@@ -23,4 +23,36 @@
  * @param {number[]} batteries - Array of battery times for each computer.
  * @return {number} - The maximum number of minutes all n computers can run simultaneously.
  */
-const maxRunTime = function (n, batteries) {};
+const maxRunTime = function (n, batteries) {
+    // Function to check if it is possible to run all computers simultaneously
+    const canRunAllComputers = (maxTime) => {
+        let totalRunningTime = 0;
+
+        // Calculate the total running time using the given maxTime
+        for (let battery of batteries) {
+            totalRunningTime += Math.min(battery, maxTime);
+        }
+
+        // Check if the total running time is greater than or equal to n times maxTime
+        return totalRunningTime >= n * maxTime;
+    };
+
+    let left = 0; // Lower bound for binary search
+    let right = batteries.reduce((acc, battery) => acc + battery, 0); // Upper bound for binary search
+
+    while (left < right) {
+        const mid = Math.floor((left + right + 1) / 2);
+
+        // Check if it is possible to run all computers simultaneously for the current mid value
+        if (canRunAllComputers(mid)) {
+            // If possible, update the lower bound to mid
+            left = mid;
+        } else {
+            // If not possible, update the upper bound to mid - 1
+            right = mid - 1;
+        }
+    }
+
+    // The answer will be the lower bound (left)
+    return left;
+};
