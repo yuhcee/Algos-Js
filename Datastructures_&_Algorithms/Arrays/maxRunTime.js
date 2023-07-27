@@ -14,6 +14,11 @@
  *
  * Return *the **maximum** number of minutes you can run all the `n` computers simultaneously*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= batteries.length <= 105`
+ * - `1 <= batteries[i] <= 109`
+ *
  * @param {number} n - The number of computers.
  * @param {number[]} batteries - Array of battery times for each computer.
  * @return {number} - The maximum number of minutes all n computers can run simultaneously.
