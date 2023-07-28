@@ -60,3 +60,9 @@ If he chooses 2 (or 1), then player 2 can choose from 1 (or 2) and 5. If player 
 So, final score of player 1 is 1 + 2 = 3, and player 2 is 5. 
 Hence, player 1 will never be the winner and you need to return false. */
 console.log(PredictTheWinner(nums)); // Output: false
+
+const nums1 = [1, 5, 233, 7];
+// Output: true
+/* Explanation: Player 1 first chooses 1. Then player 2 has to choose between 5 and 7. No matter which number player 2 choose, player 1 can choose 233.
+Finally, player 1 has more score (234) than player 2 (12), so you need to return True representing player1 can win. */
+console.log(PredictTheWinner(nums1)); // Output: false
