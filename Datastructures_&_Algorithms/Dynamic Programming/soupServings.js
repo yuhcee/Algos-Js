@@ -27,4 +27,42 @@
  * @param {number} n
  * @return {number}
  */
-const soupServings = function (n) {};
+const soupServings = function (n) {
+    // If n is too large, return 1 since it is certain that A will be empty first
+    if (n >= 5000) {
+        return 1;
+    }
+
+    // Define a helper function to calculate the probability using memoization
+    const memo = new Map();
+    const calculateProbability = (a, b) => {
+        // If both a and b are 0, return 0.5 since A and B will be empty at the same time
+        if (a <= 0 && b <= 0) {
+            return 0.5;
+        }
+        // If only a is 0, return 1 since A will be empty first
+        if (a <= 0) {
+            return 1;
+        }
+        // If only b is 0, return 0 since A cannot be empty first
+        if (b <= 0) {
+            return 0;
+        }
+
+        // Check if the probability has already been calculated
+        const key = `${a}-${b}`;
+        if (memo.has(key)) {
+            return memo.get(key);
+        }
+
+        // Calculate the probability recursively based on the four operations
+        const probability = 0.25 * (calculateProbability(a - 100, b) + calculateProbability(a - 75, b - 25) + calculateProbability(a - 50, b - 50) + calculateProbability(a - 25, b - 75));
+
+        // Memoize the result and return it
+        memo.set(key, probability);
+        return probability;
+    };
+
+    // Calculate the probability starting from n ml of soup A and B
+    return calculateProbability(n, n);
+};
