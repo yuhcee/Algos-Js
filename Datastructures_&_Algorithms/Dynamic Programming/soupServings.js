@@ -20,6 +20,10 @@
  * and **B** become empty at the same time. Answers within `10-5` of the actual answer will be
  * accepted.
  *
+ * **Constraints:**
+ *
+ * - `0 <= n <= 109`
+ *
  * @param {number} n
  * @return {number}
  */
