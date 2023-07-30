@@ -54,3 +54,8 @@ const s = 'aaabbb';
 // Output: 2
 // Explanation: Print "aaa" first and then print "bbb".
 console.log(strangePrinter(s));
+
+const s1 = 'aba';
+// Output: 2
+// Explanation: Print "aaa" first and then print "b" from the second place of the string, which will cover the existing character 'a'.
+console.log(strangePrinter(s1));
