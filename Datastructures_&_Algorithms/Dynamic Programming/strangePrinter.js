@@ -49,3 +49,8 @@ const strangePrinter = function (s) {
     // The minimum number of turns needed to print the entire string (0 to n-1) is stored in dp[0][n-1]
     return dp[0][n - 1];
 };
+
+const s = 'aaabbb';
+// Output: 2
+// Explanation: Print "aaa" first and then print "bbb".
+console.log(strangePrinter(s));
