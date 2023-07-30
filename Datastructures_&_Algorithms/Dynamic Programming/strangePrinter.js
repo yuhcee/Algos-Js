@@ -17,4 +17,35 @@
  * @param {string} s
  * @return {number}
  */
-const strangePrinter = function (s) {};
+const strangePrinter = function (s) {
+    const n = s.length;
+
+    // Create a 2D DP array to store the minimum number of turns needed for substrings
+    const dp = Array.from({ length: n }, () => Array(n).fill(0));
+
+    // The base case is that the printer needs one turn for each character (single character substring)
+    for (let i = 0; i < n; i++) {
+        dp[i][i] = 1;
+    }
+
+    // Calculate the minimum number of turns for substrings of increasing lengths
+    for (let len = 2; len <= n; len++) {
+        for (let i = 0; i <= n - len; i++) {
+            const j = i + len - 1;
+
+            // Initialize the minimum turns to print the substring (i to j) to be one more than the minimum turns
+            // required to print the substring (i to j-1)
+            dp[i][j] = dp[i][j - 1] + 1;
+
+            // Try to reduce the number of turns by combining the substring (i to j) with the previous substrings
+            for (let k = i; k < j; k++) {
+                if (s[k] === s[j]) {
+                    dp[i][j] = Math.min(dp[i][j], dp[i][k] + dp[k + 1][j - 1]);
+                }
+            }
+        }
+    }
+
+    // The minimum number of turns needed to print the entire string (0 to n-1) is stored in dp[0][n-1]
+    return dp[0][n - 1];
+};
