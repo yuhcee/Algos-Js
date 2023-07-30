@@ -9,6 +9,11 @@
  *
  * Given a string `s`, return *the minimum number of turns the printer needed to print it*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 100`
+ * - `s` consists of lowercase English letters.
+ *
  * @param {string} s
  * @return {number}
  */
