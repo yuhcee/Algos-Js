@@ -6,6 +6,11 @@
  *
  * You may return the answer in **any order**.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 20`
+ * - `1 <= k <= n`
+ *
  * @param {number} n
  * @param {number} k
  * @return {number[][]}
