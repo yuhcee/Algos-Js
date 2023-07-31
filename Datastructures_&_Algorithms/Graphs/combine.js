@@ -43,3 +43,9 @@ const n = 4,
 /* Explanation: There are 4 choose 2 = 6 total combinations.
 Note that combinations are unordered, i.e., [1,2] and [2,1] are considered to be the same combination. */
 console.log(combine(n, k));
+
+const n1 = 1,
+    k1 = 1;
+// Output: [[1]]
+// Explanation: There is 1 choose 1 = 1 total combination.
+console.log(combine(n1, k1));
