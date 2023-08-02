@@ -13,4 +13,31 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
-const permute = function (nums) {};
+const permute = function (nums) {
+    const result = [];
+
+    // Helper function to backtrack and generate permutations
+    function backtrack(start) {
+        if (start === nums.length) {
+            // If we have reached the end of the array, add the current permutation to the result
+            result.push([...nums]);
+            return;
+        }
+
+        for (let i = start; i < nums.length; i++) {
+            // Swap elements to create a new permutation
+            [nums[start], nums[i]] = [nums[i], nums[start]];
+
+            // Recurse to generate permutations for the next elements
+            backtrack(start + 1);
+
+            // Backtrack by swapping back the elements
+            [nums[start], nums[i]] = [nums[i], nums[start]];
+        }
+    }
+
+    // Start the backtracking process from index 0
+    backtrack(0);
+
+    return result;
+};
