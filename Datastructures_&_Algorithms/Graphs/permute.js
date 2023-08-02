@@ -49,3 +49,7 @@ console.log(permute(nums));
 const nums1 = [0, 1];
 // Output: [[0,1],[1,0]]
 console.log(permute(nums1));
+
+const nums2 = [1];
+// Output: [[1]]
+console.log(permute(nums2));
