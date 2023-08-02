@@ -45,3 +45,7 @@ const permute = function (nums) {
 const nums = [1, 2, 3];
 // Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 console.log(permute(nums));
+
+const nums1 = [0, 1];
+// Output: [[0,1],[1,0]]
+console.log(permute(nums1));
