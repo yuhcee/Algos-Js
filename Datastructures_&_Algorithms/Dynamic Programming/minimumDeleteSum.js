@@ -13,4 +13,36 @@
  * @param {string} s2
  * @return {number}
  */
-const minimumDeleteSum = function (s1, s2) {};
+const minimumDeleteSum = function (s1, s2) {
+    const m = s1.length;
+    const n = s2.length;
+
+    // Create a 2D DP array to store the minimum ASCII sum of deleted characters for substrings
+    const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+
+    // Initialize the base cases for the empty substrings
+    for (let i = 1; i <= m; i++) {
+        dp[i][0] = dp[i - 1][0] + s1.charCodeAt(i - 1);
+    }
+
+    for (let j = 1; j <= n; j++) {
+        dp[0][j] = dp[0][j - 1] + s2.charCodeAt(j - 1);
+    }
+
+    // Calculate the minimum ASCII sum of deleted characters for substrings
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (s1[i - 1] === s2[j - 1]) {
+                // If the characters are equal, no deletion is needed, and the result is the same as the previous substrings
+                dp[i][j] = dp[i - 1][j - 1];
+            } else {
+                // If the characters are not equal, we need to delete one of them (either from s1 or s2)
+                // We choose the minimum ASCII value among the two options
+                dp[i][j] = Math.min(dp[i - 1][j] + s1.charCodeAt(i - 1), dp[i][j - 1] + s2.charCodeAt(j - 1));
+            }
+        }
+    }
+
+    // The result is stored in dp[m][n], which represents the minimum ASCII sum of deleted characters to make both strings equal
+    return dp[m][n];
+};
