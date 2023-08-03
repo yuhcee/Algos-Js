@@ -46,3 +46,11 @@ const minimumDeleteSum = function (s1, s2) {
     // The result is stored in dp[m][n], which represents the minimum ASCII sum of deleted characters to make both strings equal
     return dp[m][n];
 };
+
+const s1 = 'sea',
+    s2 = 'eat';
+// Output: 231
+/* Explanation: Deleting "s" from "sea" adds the ASCII value of "s" (115) to the sum.
+Deleting "t" from "eat" adds 116 to the sum.
+At the end, both strings are equal, and 115 + 116 = 231 is the minimum sum possible to achieve this. */
+console.log(minimumDeleteSum(s1, s2));
