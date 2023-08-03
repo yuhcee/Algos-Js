@@ -54,3 +54,13 @@ const s1 = 'sea',
 Deleting "t" from "eat" adds 116 to the sum.
 At the end, both strings are equal, and 115 + 116 = 231 is the minimum sum possible to achieve this. */
 console.log(minimumDeleteSum(s1, s2));
+
+const s11 = 'delete',
+    s22 = 'leet';
+// Output: 403
+// Explanation: Deleting "dee" from "delete" to turn the string into "let",
+// adds 100[d] + 101[e] + 101[e] to the sum.
+// Deleting "e" from "leet" adds 101[e] to the sum.
+// At the end, both strings are equal to "let", and the answer is 100+101+101+101 = 403.
+// If instead we turned both strings into "lee" or "eet", we would get answers of 433 or 417, which are higher.
+console.log(minimumDeleteSum(s11, s22));
