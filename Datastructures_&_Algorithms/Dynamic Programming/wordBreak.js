@@ -51,3 +51,10 @@ const s = 'leetcode',
 // Output: true
 // Explanation: Return true because "leetcode" can be segmented as "leet code".
 console.log(wordBreak(s, wordDict));
+
+const s1 = 'applepenapple',
+    wordDict1 = ['apple', 'pen'];
+// Output: true
+/* Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
+Note that you are allowed to reuse a dictionary word. */
+console.log(wordBreak(s1, wordDict1));
