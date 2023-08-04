@@ -58,3 +58,8 @@ const s1 = 'applepenapple',
 /* Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
 Note that you are allowed to reuse a dictionary word. */
 console.log(wordBreak(s1, wordDict1));
+
+const s2 = 'catsandog',
+    wordDict2 = ['cats', 'dog', 'sand', 'and', 'cat'];
+// Output: false
+console.log(wordBreak(s2, wordDict2));
