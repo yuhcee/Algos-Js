@@ -45,3 +45,9 @@ var wordBreak = function (s, wordDict) {
     // dp[s.length] will hold the result for the entire string s
     return dp[s.length];
 };
+
+const s = 'leetcode',
+    wordDict = ['leet', 'code'];
+// Output: true
+// Explanation: Return true because "leetcode" can be segmented as "leet code".
+console.log(wordBreak(s, wordDict));
