@@ -13,6 +13,12 @@
  *
  * You must solve it in `O(log(arr.length))` time complexity.
  *
+ * **Constraints:**
+ *
+ * - `3 <= arr.length <= 105`
+ * - `0 <= arr[i] <= 106`
+ * - `arr` is **guaranteed** to be a mountain array.
+ *
  * @param {number[]} arr
  * @return {number}
  */
