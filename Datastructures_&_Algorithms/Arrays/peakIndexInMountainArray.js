@@ -44,3 +44,7 @@ const peakIndexInMountainArray = function (arr) {
     // If the loop ends, the left pointer points to the peak element
     return left;
 };
+
+const arr = [0, 1, 0];
+// Output: 1
+console.log(peakIndexInMountainArray(arr));
