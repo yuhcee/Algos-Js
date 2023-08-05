@@ -48,3 +48,7 @@ const peakIndexInMountainArray = function (arr) {
 const arr = [0, 1, 0];
 // Output: 1
 console.log(peakIndexInMountainArray(arr));
+
+const arr1 = [0, 2, 1, 0];
+// Output: 1
+console.log(peakIndexInMountainArray(arr1));
