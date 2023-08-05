@@ -22,4 +22,25 @@
  * @param {number[]} arr
  * @return {number}
  */
-const peakIndexInMountainArray = function (arr) {};
+const peakIndexInMountainArray = function (arr) {
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left < right) {
+        const mid = Math.floor((left + right) / 2);
+
+        // Check if the middle element is greater than its neighbors
+        if (arr[mid] > arr[mid - 1] && arr[mid] > arr[mid + 1]) {
+            return mid; // Found the peak element
+        } else if (arr[mid] < arr[mid + 1]) {
+            // If the middle element is less than the right neighbor, move to the right side
+            left = mid + 1;
+        } else {
+            // If the middle element is less than the left neighbor, move to the left side
+            right = mid;
+        }
+    }
+
+    // If the loop ends, the left pointer points to the peak element
+    return left;
+};
