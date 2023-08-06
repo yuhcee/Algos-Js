@@ -39,3 +39,8 @@ const nums1 = [1, 2, 3, 4, 4, 3, 2, 1],
     n1 = 4;
 // Output: [1,4,2,3,3,2,4,1]
 console.log(shuffle(nums1, n1));
+
+const nums2 = [1, 1, 2, 2],
+    n2 = 2;
+// Output: [1,2,1,2]
+console.log(shuffle(nums2, n2));
