@@ -34,3 +34,8 @@ const nums = [2, 5, 1, 3, 4, 7],
 // Output: [2,3,5,4,1,7]
 // Explanation: Since x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 then the answer is [2,3,5,4,1,7].
 console.log(shuffle(nums, n));
+
+const nums1 = [1, 2, 3, 4, 4, 3, 2, 1],
+    n1 = 4;
+// Output: [1,4,2,3,3,2,4,1]
+console.log(shuffle(nums1, n1));
