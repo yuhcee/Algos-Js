@@ -25,4 +25,40 @@
  * @param {number} target
  * @return {boolean}
  */
-const searchMatrix = function (matrix, target) {};
+const searchMatrix = function (matrix, target) {
+    const rows = matrix.length;
+    const cols = matrix[0].length;
+
+    // Binary search helper function for the 1D array
+    const binarySearch = (arr, left, right, target) => {
+        while (left <= right) {
+            const mid = Math.floor((left + right) / 2);
+            const midVal = arr[mid];
+
+            if (midVal === target) {
+                return true;
+            } else if (midVal < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+
+        return false;
+    };
+
+    // Perform binary search on each row
+    for (let row = 0; row < rows; row++) {
+        const firstNum = matrix[row][0];
+        const lastNum = matrix[row][cols - 1];
+
+        // If the target is within the range of this row, do binary search on it
+        if (target >= firstNum && target <= lastNum) {
+            if (binarySearch(matrix[row], 0, cols - 1, target)) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+};
