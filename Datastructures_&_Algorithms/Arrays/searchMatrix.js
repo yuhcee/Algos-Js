@@ -71,3 +71,12 @@ const matrix = [
     target = 3;
 // Output: true
 console.log(searchMatrix(matrix, target));
+
+const matrix1 = [
+        [1, 3, 5, 7],
+        [10, 11, 16, 20],
+        [23, 30, 34, 60],
+    ],
+    target1 = 13;
+// Output: false
+console.log(searchMatrix(matrix1, target1));
