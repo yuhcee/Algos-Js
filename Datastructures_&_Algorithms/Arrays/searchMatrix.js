@@ -14,6 +14,13 @@
  *
  * You must write a solution in `O(log(m * n))` time complexity.
  *
+ * **Constraints:**
+ *
+ * - `m == matrix.length`
+ * - `n == matrix[i].length`
+ * - `1 <= m, n <= 100`
+ * - `-104 <= matrix[i][j], target <= 104`
+ *
  * @param {number[][]} matrix
  * @param {number} target
  * @return {boolean}
