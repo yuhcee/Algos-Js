@@ -52,3 +52,8 @@ const search = function (nums, target) {
 
     return -1; // Target not found
 };
+
+const nums = [4, 5, 6, 7, 0, 1, 2],
+    target = 0;
+// Output: 4
+console.log(search(nums, target));
