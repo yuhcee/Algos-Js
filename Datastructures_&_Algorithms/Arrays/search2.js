@@ -62,3 +62,8 @@ const nums1 = [4, 5, 6, 7, 0, 1, 2],
     target1 = 3;
 // Output: -1
 console.log(search(nums1, target1));
+
+const nums2 = [1],
+    target2 = 0;
+// Output: -1
+console.log(search(nums2, target2));
