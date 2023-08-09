@@ -68,3 +68,10 @@ function canFormPairs(nums, maxDiff, p) {
     }
     return count >= p;
 }
+
+const nums = [10, 1, 2, 7, 1, 3],
+    p = 2;
+// Output: 1
+/* Explanation: The first pair is formed from the indices 1 and 4, and the second pair is formed from the indices 2 and 5. 
+The maximum difference is max(|nums[1] - nums[4]|, |nums[2] - nums[5]|) = max(0, 1) = 1. Therefore, we return 1. */
+console.log(minimizeMax(nums, p));
