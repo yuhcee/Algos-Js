@@ -47,4 +47,24 @@ const minimizeMax = function minimizeMax(nums, p) {
     return left;
 };
 
-
+/**
+ * Check if it's possible to form p pairs with maximum difference <= maxDiff
+ * @param {number[]} nums - Sorted array of integers
+ * @param {number} maxDiff - Maximum allowed difference between pairs
+ * @param {number} p - Number of pairs to form
+ * @return {boolean} - True if p pairs can be formed, False otherwise
+ */
+function canFormPairs(nums, maxDiff, p) {
+    let count = 0;
+    for (let i = 0; i < nums.length - 1 && count < p; ) {
+        // If the difference between consecutive elements is <= maxDiff,
+        // increment the count and move to the next pair
+        if (nums[i + 1] - nums[i] <= maxDiff) {
+            count++;
+            i += 2; // Skip to the next possible pair
+        } else {
+            i++;
+        }
+    }
+    return count >= p;
+}
