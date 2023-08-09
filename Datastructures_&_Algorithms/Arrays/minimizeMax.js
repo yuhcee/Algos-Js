@@ -75,3 +75,9 @@ const nums = [10, 1, 2, 7, 1, 3],
 /* Explanation: The first pair is formed from the indices 1 and 4, and the second pair is formed from the indices 2 and 5. 
 The maximum difference is max(|nums[1] - nums[4]|, |nums[2] - nums[5]|) = max(0, 1) = 1. Therefore, we return 1. */
 console.log(minimizeMax(nums, p));
+
+const nums1 = [4, 2, 1, 2],
+    p1 = 1;
+// Output: 0
+/* Explanation: Let the indices 1 and 3 form a pair. The difference of that pair is |2 - 2| = 0, which is the minimum we can attain. */
+console.log(minimizeMax(nums1, p1));
