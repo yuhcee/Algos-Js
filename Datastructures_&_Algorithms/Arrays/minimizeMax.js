@@ -24,4 +24,27 @@
  * @param {number} p
  * @return {number}
  */
-const minimizeMax = function minimizeMax(nums, p) {};
+const minimizeMax = function minimizeMax(nums, p) {
+    // Sort the input array in ascending order
+    nums.sort((a, b) => a - b);
+
+    // Initialize the left and right pointers for binary search
+    let left = 0,
+        right = nums[nums.length - 1] - nums[0];
+
+    // Perform binary search to find the minimum maximum difference
+    while (left < right) {
+        let mid = Math.floor((left + right) / 2);
+
+        // Check if it's possible to form p pairs with maximum difference <= mid
+        if (canFormPairs(nums, mid, p)) {
+            right = mid;
+        } else {
+            left = mid + 1;
+        }
+    }
+
+    return left;
+};
+
+
