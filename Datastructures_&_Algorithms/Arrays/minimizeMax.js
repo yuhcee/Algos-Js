@@ -13,6 +13,13 @@
  * Return *the **minimum maximum** difference among all `p` pairs*. We define the
  * maximum of an empty set to be zero.
  *
+ *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `0 <= nums[i] <= 109`
+ * - `0 <= p <= (nums.length)/2`
+ *
  * @param {number[]} nums
  * @param {number} p
  * @return {number}
