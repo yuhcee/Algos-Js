@@ -15,6 +15,13 @@
  *
  * You must decrease the overall operation steps as much as possible.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 5000`
+ * - `-104 <= nums[i] <= 104`
+ * - `nums` is guaranteed to be rotated at some pivot.
+ * - `-104 <= target <= 104`
+ *
  * @param {number[]} nums
  * @param {number} target
  * @return {boolean}
