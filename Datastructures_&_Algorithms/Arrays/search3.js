@@ -61,3 +61,9 @@ const search = function (nums, target) {
 
     return false;
 };
+
+const nums = [2, 5, 6, 0, 0, 1, 2],
+    target = 0;
+// Output: true
+
+console.log(search(nums, target));
