@@ -49,3 +49,13 @@ const change = function (amount, coins) {
     // The result is stored in dp[coins.length][amount].
     return dp[coins.length][amount];
 };
+
+const amount = 5,
+    coins = [1, 2, 5];
+// Output: 4
+/* Explanation: there are four ways to make up the amount:
+5=5
+5=2+2+1
+5=2+1+1+1
+5=1+1+1+1+1 */
+console.log(change(amount, coins));
