@@ -11,6 +11,13 @@
  *
  * The answer is **guaranteed** to fit into a signed **32-bit** integer.
  *
+ * **Constraints:**
+ *
+ * - `1 <= coins.length <= 300`
+ * - `1 <= coins[i] <= 5000`
+ * - All the values of `coins` are **unique**.
+ * - `0 <= amount <= 5000`
+ *
  * @param {number} amount
  * @param {number[]} coins
  * @return {number}
