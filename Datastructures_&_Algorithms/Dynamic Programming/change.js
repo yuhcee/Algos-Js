@@ -22,4 +22,30 @@
  * @param {number[]} coins
  * @return {number}
  */
-const change = function (amount, coins) {};
+const change = function (amount, coins) {
+    // Create a 2D array dp where dp[i][j] represents the number of combinations to make amount j
+    // using the first i coins.
+    const dp = Array.from({ length: coins.length + 1 }, () => Array(amount + 1).fill(0));
+
+    // There is exactly one way to make amount 0, which is using no coins.
+    for (let i = 0; i <= coins.length; i++) {
+        dp[i][0] = 1;
+    }
+
+    // Loop through each coin and each amount to fill in the dp array.
+    for (let i = 1; i <= coins.length; i++) {
+        for (let j = 1; j <= amount; j++) {
+            // Calculate the number of combinations without using the current coin.
+            dp[i][j] = dp[i - 1][j];
+
+            // If the current amount is greater than or equal to the current coin value,
+            // then add the number of combinations that use the current coin to dp[i][j].
+            if (j >= coins[i - 1]) {
+                dp[i][j] += dp[i][j - coins[i - 1]];
+            }
+        }
+    }
+
+    // The result is stored in dp[coins.length][amount].
+    return dp[coins.length][amount];
+};
