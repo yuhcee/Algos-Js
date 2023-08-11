@@ -65,3 +65,8 @@ const amount1 = 3,
 // Output: 0
 // Explanation: the amount of 3 cannot be made up just with coins of 2.
 console.log(change(amount1, coins1));
+
+const amount2 = 10,
+    coins2 = [10];
+// Output: 1
+console.log(change(amount2, coins2));
