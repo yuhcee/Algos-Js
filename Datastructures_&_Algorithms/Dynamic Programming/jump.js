@@ -14,6 +14,12 @@
  * Return *the minimum number of jumps to reach `nums[n - 1]`. The test cases are
  * generated such that you can reach `nums[n - 1]`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 104`
+ * - `0 <= nums[i] <= 1000`
+ * - It's guaranteed that you can reach `nums[n - 1]`.
+ *
  * @param {number[]} nums
  * @return {number}
  */
