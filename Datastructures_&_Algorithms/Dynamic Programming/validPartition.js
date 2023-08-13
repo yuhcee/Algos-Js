@@ -26,4 +26,27 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-const validPartition = function (nums) {};
+const validPartition = function (nums) {
+    const memo = {};
+    const n = nums.length;
+
+    const explore = (i) => {
+        if (i === n) return true;
+        if (memo[i] !== undefined) return memo[i];
+
+        if (i + 1 < n && nums[i] === nums[i + 1]) {
+            if (explore(i + 2)) return true;
+        }
+
+        if (i + 2 < n && nums[i] === nums[i + 1] && nums[i] === nums[i + 2]) {
+            if (explore(i + 3)) return true;
+        }
+
+        if (i + 2 < n && 1 + nums[i] === nums[i + 1] && 1 + nums[i + 1] === nums[i + 2]) {
+            if (explore(i + 3)) return true;
+        }
+
+        return (memo[i] = false);
+    };
+    return explore(0);
+};
