@@ -51,9 +51,13 @@ const validPartition = function (nums) {
     return explore(0);
 };
 
-const nums = [4,4,4,5,6]
+const nums = [4, 4, 4, 5, 6];
 // Output: true
 // Explanation: The array can be partitioned into the subarrays [4,4] and [4,5,6].
 // This partition is valid, so we return true.
-// Test cases
 console.log(validPartition(nums)); // Should return true
+
+const nums1 = [1, 1, 1, 2];
+// Output: false
+// Explanation: There is no valid partition for this array.
+console.log(validPartition(nums1)); // Should return false
