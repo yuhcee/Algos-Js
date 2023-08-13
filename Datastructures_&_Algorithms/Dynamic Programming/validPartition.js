@@ -50,3 +50,10 @@ const validPartition = function (nums) {
     };
     return explore(0);
 };
+
+const nums = [4,4,4,5,6]
+// Output: true
+// Explanation: The array can be partitioned into the subarrays [4,4] and [4,5,6].
+// This partition is valid, so we return true.
+// Test cases
+console.log(validPartition(nums)); // Should return true
