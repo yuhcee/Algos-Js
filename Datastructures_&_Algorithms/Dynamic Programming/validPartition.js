@@ -18,6 +18,11 @@
  * Return *`true` if the array has **at least** one valid partition. Otherwise,
  * return `false`.
  *
+ * **Constraints:**
+ *
+ * - `2 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 106`
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
