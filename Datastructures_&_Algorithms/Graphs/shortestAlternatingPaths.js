@@ -99,3 +99,12 @@ function getNeighbors(n, edges) {
 
     return neighbors;
 }
+
+const n = 3,
+    redEdges = [
+        [0, 1],
+        [1, 2],
+    ],
+    blueEdges = [];
+// Output: [0,1,-1]
+console.log(shortestAlternatingPaths(n, redEdges, blueEdges));
