@@ -29,4 +29,73 @@
  * @param {number[][]} blueEdges
  * @return {number[]}
  */
-const shortestAlternatingPaths = function (n, redEdges, blueEdges) {};
+const shortestAlternatingPaths = function (n, redEdges, blueEdges) {
+    // Create a dictionary to store all the red and blue edges as separate lists
+    const neighbors = {
+        red: getNeighbors(n, redEdges),
+        blue: getNeighbors(n, blueEdges),
+    };
+
+    // Create sets to keep track of visited nodes for red and blue edges
+    const visited = {
+        red: new Set(),
+        blue: new Set(),
+    };
+
+    // Initialize an array to store the shortest distances from node 0 to all nodes
+    const res = new Array(n).fill(Infinity);
+
+    // Add node 0 to the queue for both red and blue edges
+    // dist, node, lastColor
+    const queue = [
+        [0, 0, 'red'],
+        [0, 0, 'blue'],
+    ];
+
+    // BFS to find the shortest alternating paths
+    while (queue.length) {
+        // Dequeue the first element in the queue
+        const [dist, node, lastColor] = queue.shift();
+
+        // Check if we've seen this edge before
+        if (visited[lastColor].has(node)) {
+            continue;
+        }
+        visited[lastColor].add(node);
+
+        // Update the minimum path so far
+        res[node] = Math.min(res[node], dist);
+
+        // Queue the neighbors of the opposite color edge
+        const nextColor = lastColor !== 'red' ? 'red' : 'blue';
+        for (const neighbor of neighbors[nextColor][node]) {
+            queue.push([dist + 1, neighbor, nextColor]);
+        }
+    }
+
+    // Replace all the Infinity values in the result array with -1
+    for (let i = 0; i < res.length; i++) {
+        if (res[i] === Infinity) {
+            res[i] = -1;
+        }
+    }
+
+    return res;
+};
+
+// Helper function to get the neighbors of each node for a given set of edges
+function getNeighbors(n, edges) {
+    const neighbors = new Array(n);
+
+    // Initialize an empty array for each node
+    for (let i = 0; i < n; i++) {
+        neighbors[i] = [];
+    }
+
+    // Add the neighbors to the corresponding node
+    for (const [source, dest] of edges) {
+        neighbors[source].push(dest);
+    }
+
+    return neighbors;
+}
