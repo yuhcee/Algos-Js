@@ -16,6 +16,14 @@
  * the shortest path from node `0` to node `x` such that the edge colors alternate
  * along the path, or `-1` if such a path does not exist.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 100`
+ * - `0 <= redEdges.length, blueEdges.length <= 400`
+ * - `redEdges[i].length == blueEdges[j].length == 2`
+ * - `0 <= ai, bi, uj, vj < n`
+ *
+ *
  * @param {number} n
  * @param {number[][]} redEdges
  * @param {number[][]} blueEdges
