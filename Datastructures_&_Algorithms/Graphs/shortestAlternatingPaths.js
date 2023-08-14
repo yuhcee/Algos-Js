@@ -108,3 +108,9 @@ const n = 3,
     blueEdges = [];
 // Output: [0,1,-1]
 console.log(shortestAlternatingPaths(n, redEdges, blueEdges));
+
+const n1 = 3,
+    redEdges1 = [[0, 1]],
+    blueEdges1 = [[2, 1]];
+// Output: [0,1,-1]
+console.log(shortestAlternatingPaths(n1, redEdges1, blueEdges1));
