@@ -28,4 +28,30 @@
  * @param {number[]} fruits
  * @return {number}
  */
-const totalFruit = function (fruits) {};
+const totalFruit = function (fruits) {
+    let left = 0;
+    let right = 0;
+    let basket = new Map();
+    let maxFruits = 0;
+
+    // Move the right pointer forward until we have more than 2 unique types of fruits in our basket
+    while (right < fruits.length) {
+        let fruit = fruits[right];
+        if (!basket.has(fruit)) basket.set(fruit, 0);
+        basket.set(fruit, basket.get(fruit) + 1);
+
+        // Move the left pointer forward until we have 2 or less unique types of fruits in our basket
+        while (basket.size > 2) {
+            let leftFruit = fruits[left];
+            basket.set(leftFruit, basket.get(leftFruit) - 1);
+            if (basket.get(leftFruit) === 0) basket.delete(leftFruit);
+            left++;
+        }
+
+        // Update maxFruits with the maximum number of fruits we can pick in this window
+        maxFruits = Math.max(maxFruits, right - left + 1);
+        right++;
+    }
+
+    return maxFruits;
+};
