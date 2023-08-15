@@ -60,3 +60,9 @@ const fruits = [1, 2, 1];
 // Output: 3
 // Explanation: We can pick from all 3 trees.
 console.log(totalFruit(fruits));
+
+const fruits1 = [0, 1, 2, 2];
+// Output: 3
+// Explanation: We can pick from trees [1,2,2].
+// If we had started at the first tree, we would only pick from trees [0,1].
+console.log(totalFruit(fruits1));
