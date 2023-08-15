@@ -55,3 +55,8 @@ const totalFruit = function (fruits) {
 
     return maxFruits;
 };
+
+const fruits = [1, 2, 1];
+// Output: 3
+// Explanation: We can pick from all 3 trees.
+console.log(totalFruit(fruits));
