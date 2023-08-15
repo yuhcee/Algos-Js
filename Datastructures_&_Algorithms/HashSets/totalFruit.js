@@ -17,8 +17,13 @@
  * - Once you reach a tree with fruit that cannot fit in your baskets, you
  * must stop.
  *
- * Given the integer array `fruits`, return *the **maximum** number of fruits 
- * you can pick*.
+ * Given the integer array `fruits`, return *the **maximum** number of
+ * fruits you can pick*.
+ *
+ * **Constraints:**
+ *
+ * - `1 <= fruits.length <= 105`
+ * - `0 <= fruits[i] < fruits.length`
  *
  * @param {number[]} fruits
  * @return {number}
