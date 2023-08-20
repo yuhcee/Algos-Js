@@ -118,3 +118,11 @@ const n = 8,
     beforeItems = [[], [6], [5], [6], [3, 6], [], [], []];
 // Output: [6,3,4,1,5,2,0,7]
 console.log(sortItems(n, m, group, beforeItems));
+
+const n1 = 8,
+    m1 = 2,
+    group1 = [-1, -1, 1, 0, 0, 1, 0, -1],
+    beforeItems1 = [[], [6], [5], [6], [3], [], [4], []];
+// Output: []
+// Explanation: This is the same as example 1 except that 4 needs to be before 6 in the sorted list.
+console.log(sortItems(n1, m1, group1, beforeItems1));
