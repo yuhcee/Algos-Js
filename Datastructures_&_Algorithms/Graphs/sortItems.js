@@ -111,3 +111,10 @@ function topologicalSort(adjList, n) {
 
     return result.length === n ? result : [];
 }
+
+const n = 8,
+    m = 2,
+    group = [-1, -1, 1, 0, 0, 1, 0, -1],
+    beforeItems = [[], [6], [5], [6], [3, 6], [], [], []];
+// Output: [6,3,4,1,5,2,0,7]
+console.log(sortItems(n, m, group, beforeItems));
