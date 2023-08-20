@@ -17,6 +17,16 @@
  * Return any solution if there is more than one solution and return an 
  * **empty list** if there is no solution.
  * 
+ * **Constraints:**
+ * 
+ * - `1 <= m <= n <= 3 * 104`
+ * - `group.length == beforeItems.length == n`
+ * - `-1 <= group[i] <= m - 1`
+ * - `0 <= beforeItems[i].length <= n - 1`
+ * - `0 <= beforeItems[i][j] <= n - 1`
+ * - `i != beforeItems[i][j]`
+ * - `beforeItems[i]` does not contain duplicates elements.
+ * 
  * @param {number} n
  * @param {number} m
  * @param {number[]} group
