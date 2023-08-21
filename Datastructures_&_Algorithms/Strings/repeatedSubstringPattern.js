@@ -13,11 +13,17 @@
  * @return {boolean}
  */
 const repeatedSubstringPattern = function (s) {
-    const s2 = s + s;
+    // We create a doubled string by concatenating s with itself
+    const doubledString = s + s;
 
-    const trimString = s2.slice(1, -1);
+    // We remove the first and last characters from the doubled string
+    // This is because if s can be made by repeating a substring, then
+    // it must start and end with the same character
+    const trimmedDoubledString = doubledString.slice(1, -1);
 
-    return trimString.includes(s);
+    // If the original string s is found in the trimmed doubled string,
+    // it means s can be made by repeating a substring
+    return trimmedDoubledString.includes(s);
 };
 
 const s = 'abab';
