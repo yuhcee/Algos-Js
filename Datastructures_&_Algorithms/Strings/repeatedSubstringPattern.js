@@ -24,3 +24,8 @@ const s = 'abab';
 // Output: true
 // Explanation: It is the substring "ab" twice.
 console.log(repeatedSubstringPattern(s));
+
+const s1 = 'abcabcabcabc';
+// Output: true
+// Explanation: It is the substring "abc" four times or the substring "abcabc" twice.
+console.log(repeatedSubstringPattern(s1));
