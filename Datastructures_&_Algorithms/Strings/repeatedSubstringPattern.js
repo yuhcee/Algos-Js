@@ -26,6 +26,32 @@ const repeatedSubstringPattern = function (s) {
     return trimmedDoubledString.includes(s);
 };
 
+// ===============SOLUTION 2 ==================
+/* const repeatedSubstringPattern = function (s) {
+    // Start checking patterns from 1 character up to half the length of the string
+    for (let i = 1; i <= s.length / 2; i++) {
+        // If the current pattern length divides the string length evenly
+        if (s.length % i === 0) {
+            // Form the potential pattern from the beginning of the string
+            const pattern = s.slice(0, i);
+            let formedString = '';
+
+            // Create a new string by repeating the pattern
+            for (let j = 0; j < s.length / i; j++) {
+                formedString += pattern;
+            }
+
+            // If the formed string is equal to the original string, we found a pattern
+            if (formedString === s) {
+                return true;
+            }
+        }
+    }
+
+    // No repeating pattern found
+    return false;
+}; */
+
 const s = 'abab';
 // Output: true
 // Explanation: It is the substring "ab" twice.
