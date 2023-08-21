@@ -12,4 +12,11 @@
  * @param {string} s
  * @return {boolean}
  */
-const repeatedSubstringPattern = function (s) {};
+const repeatedSubstringPattern = function (s) {
+    const s2 = s + s;
+
+    const trimString = s2.slice(1, -1);
+
+    return trimString.includes(s)
+    
+};
