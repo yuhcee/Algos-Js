@@ -17,6 +17,10 @@ const repeatedSubstringPattern = function (s) {
 
     const trimString = s2.slice(1, -1);
 
-    return trimString.includes(s)
-    
+    return trimString.includes(s);
 };
+
+const s = 'abab';
+// Output: true
+// Explanation: It is the substring "ab" twice.
+console.log(repeatedSubstringPattern(s));
