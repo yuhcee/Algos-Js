@@ -46,3 +46,7 @@ const convertToTitle = function (columnNumber) {
 const columnNumber = 1;
 // Output: "A"
 console.log(convertToTitle(columnNumber));
+
+const columnNumber1 = 28;
+// Output: "AB"
+console.log(convertToTitle(columnNumber1));
