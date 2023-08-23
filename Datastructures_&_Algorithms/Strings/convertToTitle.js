@@ -50,3 +50,7 @@ console.log(convertToTitle(columnNumber));
 const columnNumber1 = 28;
 // Output: "AB"
 console.log(convertToTitle(columnNumber1));
+
+const columnNumber2 = 701;
+// Output: "ZY"
+console.log(convertToTitle(columnNumber2));
