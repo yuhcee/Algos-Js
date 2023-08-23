@@ -16,6 +16,9 @@
  * AB -> 28 
  * ...
  * ```
+ * **Constraints:**
+ * 
+ * - `1 <= columnNumber <= 231 - 1`
  * 
  * @param {number} columnNumber
  * @return {string}
