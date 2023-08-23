@@ -42,3 +42,7 @@ const convertToTitle = function (columnNumber) {
 
     return result;
 };
+
+const columnNumber = 1;
+// Output: "A"
+console.log(convertToTitle(columnNumber));
