@@ -61,3 +61,7 @@ const reorganizeString = function (s) {
 
     return rearranged.join('');
 };
+
+const s = 'aab';
+// Output: "aba"
+console.log(reorganizeString(s));
