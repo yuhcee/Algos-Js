@@ -6,6 +6,11 @@
  *
  * Return *any possible rearrangement of `s` or return `""` if not possible*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 500`
+ * - `s` consists of lowercase English letters.
+ *
  * @param {string} s
  * @return {string}
  */
