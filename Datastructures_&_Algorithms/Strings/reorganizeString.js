@@ -65,3 +65,7 @@ const reorganizeString = function (s) {
 const s = 'aab';
 // Output: "aba"
 console.log(reorganizeString(s));
+
+const s1 = 'aaab';
+// Output: ""
+console.log(reorganizeString(s1));
