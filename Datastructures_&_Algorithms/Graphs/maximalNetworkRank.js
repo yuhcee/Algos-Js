@@ -15,6 +15,15 @@
  * Given the integer `n` and the array `roads`, return *the **maximal network
  * rank** of the entire infrastructure*.
  *
+ * **Constraints:**
+ *
+ * - `2 <= n <= 100`
+ * - `0 <= roads.length <= n * (n - 1) / 2`
+ * - `roads[i].length == 2`
+ * - `0 <= ai, bi <= n-1`
+ * - `ai != bi`
+ * - Each pair of cities has **at most one** road connecting them.
+ *
  * @param {number} n
  * @param {number[][]} roads
  * @return {number}
