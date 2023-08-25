@@ -28,4 +28,27 @@
  * @param {number[][]} roads
  * @return {number}
  */
-const maximalNetworkRank = function (n, roads) {};
+const maximalNetworkRank = function (n, roads) {
+    const roadCounts = new Array(n).fill(0); // Initialize road counts for each city
+    const directConnections = Array.from({ length: n }, () => Array(n).fill(false)); // Initialize direct connections matrix
+
+    for (const [city1, city2] of roads) {
+        roadCounts[city1]++;
+        roadCounts[city2]++;
+        directConnections[city1][city2] = true;
+        directConnections[city2][city1] = true;
+    }
+
+    let maximalRank = 0;
+
+    // Loop through all pairs of cities
+    for (let city1 = 0; city1 < n; city1++) {
+        for (let city2 = city1 + 1; city2 < n; city2++) {
+            // Calculate network rank for each pair
+            const networkRank = roadCounts[city1] + roadCounts[city2] - (directConnections[city1][city2] ? 1 : 0);
+            maximalRank = Math.max(maximalRank, networkRank);
+        }
+    }
+
+    return maximalRank;
+};
