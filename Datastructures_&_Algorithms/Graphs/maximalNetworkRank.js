@@ -76,3 +76,16 @@ const n1 = 5,
 // Output: 5
 // Explanation: There are 5 roads that are connected to cities 1 or 2.
 console.log(maximalNetworkRank(n1, roads1));
+
+const n2 = 8,
+    roads2 = [
+        [0, 1],
+        [1, 2],
+        [2, 3],
+        [2, 4],
+        [5, 6],
+        [5, 7],
+    ];
+// Output: 5
+// Explanation: The network rank of 2 and 5 is 5. Notice that all the cities do not have to be connected.
+console.log(maximalNetworkRank(n2, roads2));
