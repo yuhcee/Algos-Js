@@ -39,3 +39,4 @@ const findLongestChain = function (pairs) {
     // Return the maximum value in the dp array, which represents the length of the longest chain that can be formed
     return Math.max(...dp);
 };
+
