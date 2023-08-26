@@ -40,3 +40,12 @@ const findLongestChain = function (pairs) {
     return Math.max(...dp);
 };
 
+const pairs = [
+    [1, 2],
+    [2, 3],
+    [3, 4],
+];
+// Output: 2
+// Explanation: The longest chain is [1,2] -> [3,4].
+console.log(findLongestChain(pairs));
+
