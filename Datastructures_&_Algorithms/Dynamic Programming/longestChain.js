@@ -12,6 +12,12 @@
  * You do not need to use up all the given intervals. You can select
  * pairs in any order.
  *
+ * **Constraints:**
+ *
+ * - `n == pairs.length`
+ * - `1 <= n <= 1000`
+ * - `-1000 <= lefti < righti <= 1000`
+ *
  * @param {number[][]} pairs
  * @return {number}
  */
