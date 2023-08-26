@@ -49,3 +49,11 @@ const pairs = [
 // Explanation: The longest chain is [1,2] -> [3,4].
 console.log(findLongestChain(pairs));
 
+const pairs1 = [
+    [1, 2],
+    [7, 8],
+    [4, 5],
+];
+// Output: 3
+// Explanation: The longest chain is [1,2] -> [4,5] -> [7,8].
+console.log(findLongestChain(pairs1));
