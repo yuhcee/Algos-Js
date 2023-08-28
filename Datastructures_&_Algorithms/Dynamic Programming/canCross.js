@@ -15,13 +15,35 @@
  * direction.
  *
  * **Constraints:**
- * 
+ *
  * - `2 <= stones.length <= 2000`
  * - `0 <= stones[i] <= 231 - 1`
  * - `stones[0] == 0`
  * - `stones` is sorted in a strictly increasing order.
- * 
+ *
  * @param {number[]} stones
  * @return {boolean}
  */
-const canCross = function (stones) {};
+const canCross = function (stones) {
+    const n = stones.length;
+    const dp = new Array(n).fill(0).map(() => new Array(n).fill(false));
+    dp[0][0] = true; // The first stone is always reachable with a jump size of 0
+
+    for (let i = 1; i < n; i++) {
+        for (let j = i - 1; j >= 0; j--) {
+            const diff = stones[i] - stones[j];
+            if (diff > j + 1) {
+                // If the difference between the current stone and the previous stone is greater than the maximum possible jump size (j + 1),
+                // then it is not possible to reach the current stone with the given jump size
+                break;
+            }
+            dp[i][diff] = dp[j][diff - 1] || dp[j][diff] || dp[j][diff + 1];
+            if (i === n - 1 && dp[i][diff]) {
+                // If we reach the last stone and it is reachable with any jump size, return true
+                return true;
+            }
+        }
+    }
+
+    return false; // If we cannot reach the last stone, return false
+};
