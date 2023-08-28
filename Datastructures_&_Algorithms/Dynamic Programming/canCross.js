@@ -14,6 +14,13 @@
  * 1`, `k`, or `k + 1` units. The frog can only jump in the forward
  * direction.
  *
+ * **Constraints:**
+ * 
+ * - `2 <= stones.length <= 2000`
+ * - `0 <= stones[i] <= 231 - 1`
+ * - `stones[0] == 0`
+ * - `stones` is sorted in a strictly increasing order.
+ * 
  * @param {number[]} stones
  * @return {boolean}
  */
