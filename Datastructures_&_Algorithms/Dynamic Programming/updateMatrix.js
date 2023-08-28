@@ -57,3 +57,11 @@ const updateMatrix = function (mat) {
 
     return mat;
 };
+
+const mat = [
+    [0, 0, 0],
+    [0, 1, 0],
+    [0, 0, 0],
+];
+// Output: [[0,0,0],[0,1,0],[0,0,0]]
+console.log(updateMatrix(mat));
