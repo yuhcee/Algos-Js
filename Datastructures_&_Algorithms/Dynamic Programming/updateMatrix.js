@@ -18,4 +18,42 @@
  * @param {number[][]} mat
  * @return {number[][]}
  */
-const updateMatrix = function (mat) {};
+const updateMatrix = function (mat) {
+    const m = mat.length;
+    const n = mat[0].length;
+    const queue = [];
+    const visited = new Array(m).fill(false).map(() => new Array(n).fill(false));
+    const directions = [
+        [-1, 0],
+        [1, 0],
+        [0, -1],
+        [0, 1],
+    ];
+
+    // Enqueue all cells with value 0 and mark them as visited
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (mat[i][j] === 0) {
+                queue.push([i, j]);
+                visited[i][j] = true;
+            }
+        }
+    }
+
+    while (queue.length > 0) {
+        const [row, col] = queue.shift();
+
+        for (const [dx, dy] of directions) {
+            const newRow = row + dx;
+            const newCol = col + dy;
+
+            if (newRow >= 0 && newRow < m && newCol >= 0 && newCol < n && !visited[newRow][newCol]) {
+                mat[newRow][newCol] = mat[row][col] + 1;
+                queue.push([newRow, newCol]);
+                visited[newRow][newCol] = true;
+            }
+        }
+    }
+
+    return mat;
+};
