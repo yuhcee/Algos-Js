@@ -65,3 +65,11 @@ const mat = [
 ];
 // Output: [[0,0,0],[0,1,0],[0,0,0]]
 console.log(updateMatrix(mat));
+
+const mat1 = [
+    [0, 0, 0],
+    [0, 1, 0],
+    [1, 1, 1],
+];
+// Output: [[0,0,0],[0,1,0],[1,2,1]]
+console.log(updateMatrix(mat1));
