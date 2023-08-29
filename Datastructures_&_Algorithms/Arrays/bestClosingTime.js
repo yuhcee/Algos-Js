@@ -13,6 +13,10 @@ Return the earliest hour at which the shop must be closed to incur a minimum pen
 
 Note that if a shop closes at the jth hour, it means the shop is closed at the hour j.
  * 
+ * **Constraints:**
+
+1 <= customers.length <= 105
+customers consists only of characters 'Y' and 'N'.
  * 
  * @param {string} customers
  * @return {number}
