@@ -21,4 +21,31 @@ customers consists only of characters 'Y' and 'N'.
  * @param {string} customers
  * @return {number}
  */
-const bestClosingTime = function (customers) {};
+const bestClosingTime = function (customers) {
+    const n = customers.length;
+    const penaltyWhenOpen = new Array(n + 1).fill(0); // Array to store cumulative penalties when the shop is open
+    const penaltyWhenClosed = new Array(n + 1).fill(0); // Array to store cumulative penalties when the shop is closed
+
+    // Calculate cumulative penalties for each hour when the shop is open and closed
+    for (let i = 0; i < n; i++) {
+        penaltyWhenOpen[i + 1] = penaltyWhenOpen[i] + (customers[i] === 'N' ? 1 : 0);
+        penaltyWhenClosed[i + 1] = penaltyWhenClosed[i] + (customers[i] === 'Y' ? 1 : 0);
+    }
+
+    let minPenalty = Infinity; // Initialize minimum penalty as infinity
+    let earliestHour = -1; // Initialize earliest hour as -1
+
+    // Iterate through each hour from 0 to n
+    for (let hour = 0; hour <= n; hour++) {
+        // Calculate the penalty for closing the shop at the current hour
+        const penalty = penaltyWhenOpen[hour] + penaltyWhenClosed[n] - penaltyWhenClosed[hour];
+
+        // If the calculated penalty is less than the current minimum penalty, update the minimum penalty and the earliest hour
+        if (penalty < minPenalty) {
+            minPenalty = penalty;
+            earliestHour = hour;
+        }
+    }
+
+    return earliestHour; // Return the earliest hour as the result};
+};
