@@ -54,3 +54,8 @@ const customers = 'NNNNN';
 // Output: 0
 // Explanation: It is best to close the shop at the 0th hour as no customers arrive.
 console.log(bestClosingTime(customers));
+
+const customers1 = 'YYYY';
+// Output: 4
+// Explanation: It is best to close the shop at the 4th hour as customers arrive at each hour.
+console.log(bestClosingTime(customers1));
