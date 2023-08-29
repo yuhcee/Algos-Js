@@ -49,3 +49,8 @@ const bestClosingTime = function (customers) {
 
     return earliestHour; // Return the earliest hour as the result};
 };
+
+const customers = 'NNNNN';
+// Output: 0
+// Explanation: It is best to close the shop at the 0th hour as no customers arrive.
+console.log(bestClosingTime(customers));
