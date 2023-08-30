@@ -44,3 +44,8 @@ const nums = [3, 9, 3];
 // - From [3,3,6,3], replace the 6 with 3 and 3 so the array becomes [3,3,3,3,3]
 // There are 2 steps to sort the array in non-decreasing order. Therefore, we return 2.
 console.log(minimumReplacement(nums));
+
+const nums1 = [1, 2, 3, 4, 5];
+// Output: 0
+// Explanation: The array is already in non-decreasing order. Therefore, we return 0.
+console.log(minimumReplacement(nums1));
