@@ -15,6 +15,12 @@
  * Return *the minimum number of taps* that should be open to water
  * the whole garden, If the garden cannot be watered return -1.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 104`
+ * - `ranges.length == n + 1`
+ * - `0 <= ranges[i] <= 100`
+ *
  * @param {number} n
  * @param {number[]} ranges
  * @return {number}
