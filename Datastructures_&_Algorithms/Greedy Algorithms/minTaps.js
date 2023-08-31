@@ -25,4 +25,33 @@
  * @param {number[]} ranges
  * @return {number}
  */
-const minTaps = function (n, ranges) {};
+const minTaps = function (n, ranges) {
+    let intervals = [];
+
+    // Convert ranges into intervals
+    for (let i = 0; i <= n; i++) {
+        intervals.push([i - ranges[i], i + ranges[i]]);
+    }
+
+    // Sort intervals based on their start
+    intervals.sort((a, b) => a[0] - b[0]);
+
+    let taps = 0,
+        i = 0,
+        start = 0,
+        end = 0;
+
+    while (end < n) {
+        while (i <= n && intervals[i][0] <= start) {
+            end = Math.max(end, intervals[i][1]);
+            i++;
+        }
+
+        if (start === end) return -1; // If no progress was made, garden cannot be fully watered
+
+        taps++;
+        start = end;
+    }
+
+    return taps;
+};
