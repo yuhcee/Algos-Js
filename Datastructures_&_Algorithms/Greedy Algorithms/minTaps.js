@@ -68,3 +68,9 @@ The tap at point 5 can cover the interval [5,5]
 Opening Only the second tap will water the whole garden [0,5] */
 
 console.log(minTaps(n, ranges));
+
+const n1 = 3,
+    ranges1 = [0, 0, 0, 0];
+// Output: -1
+// Explanation: Even if you activate all the four taps you cannot water the whole garden.
+console.log(minTaps(n1, ranges1));
