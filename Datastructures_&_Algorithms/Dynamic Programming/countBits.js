@@ -32,3 +32,15 @@ const n = 2;
 1 --> 1
 2 --> 10 */
 console.log(countBits(n));
+
+const n1 = 5;
+// Output: [0,1,1,2,1,2]
+/* Explanation:
+0 --> 0
+1 --> 1
+2 --> 10
+3 --> 11
+4 --> 100
+5 --> 101 */
+console.log(countBits(n1));
+
