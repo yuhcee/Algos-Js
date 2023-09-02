@@ -5,6 +5,10 @@
  * that for each `i` `(0 <= i <= n)`, `ans[i]` is the number of `1`'s
  * in the binary representation of `i`.
  *
+ * **Constraints:**
+ *
+ * - `0 <= n <= 105`
+ *
  * @param {number} n
  * @return {number[]}
  */
