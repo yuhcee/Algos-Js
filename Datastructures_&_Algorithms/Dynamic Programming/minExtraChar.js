@@ -22,4 +22,41 @@ dictionary contains distinct words
  * @param {string[]} dictionary
  * @return {number}
  */
-function minExtraChar(s, dictionary) {}
+function minExtraChar(s, dictionary) {
+    // Create a DP array with the size of the string length + 1, 
+    // initialized to Infinity. 
+    // dp[i] represents the minimum number of extra characters 
+    // considering the first i characters of the string s.
+    const dp = new Array(s.length + 1).fill(Infinity);
+
+    // For the base case, if no characters are considered from string s, 
+    // then no extra characters are there.
+    dp[0] = 0;
+
+    // Loop through the string, for each index i
+    for (let i = 0; i <= s.length; i++) {
+        
+        // For each word in the dictionary
+        for (const w of dictionary) {
+            
+            // If the current word can be placed in s starting from index i
+            if (i + w.length <= s.length && s.slice(i, i + w.length) === w) {
+                
+                // Update the DP array at the position where the word ends 
+                // to be the minimum of its current value or dp[i].
+                // The intuition here is that if we can place the word starting from 
+                // index i, then the number of extra characters remains the same.
+                dp[i + w.length] = Math.min(dp[i + w.length], dp[i]);
+            }
+        }
+
+        // If we don't choose any word from the dictionary that starts at index i, 
+        // then we just increment the number of extra characters by 1 from the 
+        // previous count.
+        dp[i + 1] = Math.min(dp[i + 1], dp[i] + 1);
+    }
+
+    // Return the minimum number of extra characters for the entire string.
+    return dp[s.length];
+}
+
