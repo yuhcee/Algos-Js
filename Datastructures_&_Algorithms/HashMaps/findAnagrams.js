@@ -83,3 +83,12 @@ const s = 'cbaebabacd',
 The substring with start index = 0 is "cba", which is an anagram of "abc".
 The substring with start index = 6 is "bac", which is an anagram of "abc". */
 console.log(findAnagrams(s, p));
+
+const s1 = 'abab',
+    p1 = 'ab';
+// Output: [0,1,2]
+/* Explanation:
+The substring with start index = 0 is "ab", which is an anagram of "ab".
+The substring with start index = 1 is "ba", which is an anagram of "ab".
+The substring with start index = 2 is "ab", which is an anagram of "ab". */
+console.log(findAnagrams(s1, p1));
