@@ -43,3 +43,7 @@ const minFlipsMonoIncr = function (s) {
 
     return minFlips;
 };
+const s = '00110';
+// Output: 1
+// Explanation: We flip the last digit to get 00111.
+console.log(minFlipsMonoIncr(s));
