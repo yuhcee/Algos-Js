@@ -9,6 +9,17 @@ Return an array of size n where ans[i] is the number of nodes in the subtree of 
 
 A subtree of a tree T is the tree consisting of a node in T and all of its descendant nodes.
  * 
+
+Constraints:
+
+1 <= n <= 105
+edges.length == n - 1
+edges[i].length == 2
+0 <= ai, bi < n
+ai != bi
+labels.length == n
+labels is consisting of only of lowercase English letters.
+
  * @param {number} n
  * @param {number[][]} edges
  * @param {string} labels
