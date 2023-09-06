@@ -39,10 +39,10 @@ const countSubTrees = (n, edges, labels) => {
     const dfs = (node) => {
         // Base Case
         if (visited[node]) return Array(26).fill(0);
-        
+
         visited[node] = true;
         const currFreq = Array(26).fill(0);
-        
+
         for (const child of graph[node]) {
             const childFreq = dfs(child);
             for (let i = 0; i < 26; i++) {
@@ -53,7 +53,7 @@ const countSubTrees = (n, edges, labels) => {
         // Increment the frequency for the current node's label
         currFreq[labels.charCodeAt(node) - 97]++;
         ans[node] = currFreq[labels.charCodeAt(node) - 97];
-        
+
         return currFreq;
     };
 
@@ -61,4 +61,18 @@ const countSubTrees = (n, edges, labels) => {
     dfs(0);
 
     return ans;
-}
+};
+const n = 7,
+    edges = [
+        [0, 1],
+        [0, 2],
+        [1, 4],
+        [1, 5],
+        [2, 3],
+        [2, 6],
+    ],
+    labels = 'abaedcd';
+// Output: [2,1,1,1,1,1,1]
+/* Explanation: Node 0 has label 'a' and its sub-tree has node 2 with label 'a' as well, thus the answer is 2. Notice that any node is part of its sub-tree.
+Node 1 has a label 'b'. The sub-tree of node 1 contains nodes 1,4 and 5, as nodes 4 and 5 have different labels than node 1, the answer is just 1 (the node itself). */
+console.log(countSubTrees(n, edges, labels));
