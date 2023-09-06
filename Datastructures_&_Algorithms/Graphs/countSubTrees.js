@@ -25,4 +25,40 @@ labels is consisting of only of lowercase English letters.
  * @param {string} labels
  * @return {number[]}
  */
-const countSubTrees = (n, edges, labels) => {}
+const countSubTrees = (n, edges, labels) => {
+    // Step 1: Represent the graph as an adjacency list
+    const graph = Array.from({ length: n }, () => []);
+    for (const [u, v] of edges) {
+        graph[u].push(v);
+        graph[v].push(u);
+    }
+
+    const ans = Array(n).fill(0);
+    const visited = Array(n).fill(false);
+
+    const dfs = (node) => {
+        // Base Case
+        if (visited[node]) return Array(26).fill(0);
+        
+        visited[node] = true;
+        const currFreq = Array(26).fill(0);
+        
+        for (const child of graph[node]) {
+            const childFreq = dfs(child);
+            for (let i = 0; i < 26; i++) {
+                currFreq[i] += childFreq[i];
+            }
+        }
+
+        // Increment the frequency for the current node's label
+        currFreq[labels.charCodeAt(node) - 97]++;
+        ans[node] = currFreq[labels.charCodeAt(node) - 97];
+        
+        return currFreq;
+    };
+
+    // Step 3: Initialization
+    dfs(0);
+
+    return ans;
+}
