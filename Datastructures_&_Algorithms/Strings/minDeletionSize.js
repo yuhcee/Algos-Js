@@ -58,3 +58,11 @@ const strs = ['cba', 'daf', 'ghi'];
   ghi
 Columns 0 and 2 are sorted, but column 1 is not, so you only need to delete 1 column. */
 console.log(minDeletionSize(strs));
+
+const strs1 = ['a', 'b'];
+// Output: 0
+/* Explanation: The grid looks as follows:
+  a
+  b
+Column 0 is the only column and is sorted, so you will not delete any columns. */
+console.log(minDeletionSize(strs1));
