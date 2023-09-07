@@ -66,3 +66,12 @@ const strs1 = ['a', 'b'];
   b
 Column 0 is the only column and is sorted, so you will not delete any columns. */
 console.log(minDeletionSize(strs1));
+
+const strs2 = ['zyx', 'wvu', 'tsr'];
+Output: 3;
+/* Explanation: The grid looks as follows:
+  zyx
+  wvu
+  tsr
+All 3 columns are not sorted, so you will delete all 3. */
+console.log(minDeletionSize(strs2));
