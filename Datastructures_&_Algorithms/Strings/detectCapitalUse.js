@@ -20,3 +20,7 @@
 const detectCapitalUse = function (word) {
     return word === word.toUpperCase() || word === word[0] + word.substring(1).toLowerCase();
 };
+
+const word = 'USA';
+// Output: true
+console.log(detectCapitalUse(word));
