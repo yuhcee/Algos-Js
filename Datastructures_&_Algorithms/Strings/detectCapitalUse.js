@@ -9,6 +9,11 @@
  * - Only the first letter in this word is capital, like `"Google"`.
  * - Given a string `word`, return `true` if the usage of capitals in it is right.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= word.length <= 100`
+ * - `word` consists of lowercase and uppercase English letters.
+ * 
  * @param {string} word
  * @return {boolean}
  */
