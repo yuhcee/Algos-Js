@@ -24,3 +24,7 @@ const detectCapitalUse = function (word) {
 const word = 'USA';
 // Output: true
 console.log(detectCapitalUse(word));
+
+const word1 = 'FlaG';
+// Output: false
+console.log(detectCapitalUse(word1));
