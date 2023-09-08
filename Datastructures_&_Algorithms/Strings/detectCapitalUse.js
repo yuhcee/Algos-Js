@@ -10,11 +10,13 @@
  * - Given a string `word`, return `true` if the usage of capitals in it is right.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= word.length <= 100`
  * - `word` consists of lowercase and uppercase English letters.
- * 
+ *
  * @param {string} word
  * @return {boolean}
  */
-const detectCapitalUse = function (word) {};
+const detectCapitalUse = function (word) {
+    return word === word.toUpperCase() || word === word[0] + word.substring(1).toLowerCase();
+};
