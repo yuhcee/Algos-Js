@@ -44,3 +44,8 @@ const pattern = 'abba',
     s = 'dog cat cat dog';
 // Output: true
 console.log(wordPattern(pattern, s));
+
+const pattern1 = 'abba',
+    s1 = 'dog cat cat fish';
+// Output: false
+console.log(wordPattern(pattern1, s1));
