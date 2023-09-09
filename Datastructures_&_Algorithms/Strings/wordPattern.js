@@ -39,3 +39,8 @@ const wordPattern = function (pattern, s) {
 
     return true;
 };
+
+const pattern = 'abba',
+    s = 'dog cat cat dog';
+// Output: true
+console.log(wordPattern(pattern, s));
