@@ -20,4 +20,22 @@
  * @param {string} s
  * @return {boolean}
  */
-const wordPattern = function (pattern, s) {};
+const wordPattern = function (pattern, s) {
+    const splitStr = s.split(' ');
+    if (splitStr.length !== pattern.length) return false;
+    const hash = {};
+
+    for (let i = 0; i < pattern.length; i++) {
+        if (pattern[i] in hash) {
+            if (hash[pattern[i]] !== splitStr[i]) {
+                return false;
+            }
+        } else if (Object.values(hash).indexOf(splitStr[i]) > -1) {
+            return false;
+        } else {
+            hash[pattern[i]] = splitStr[i];
+        }
+    }
+
+    return true;
+};
