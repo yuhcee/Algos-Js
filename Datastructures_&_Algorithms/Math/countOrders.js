@@ -15,4 +15,13 @@
  * @param {number} n
  * @return {number}
  */
-const countOrders = function (n) {};
+const countOrders = function (n) {
+    let mod = 1e9 + 7;
+    let ans = 1;
+
+    for (let i = 1; i <= n; i++) {
+        ans = (ans * (2 * i - 1) * i) % mod;
+    }
+
+    return ans;
+};
