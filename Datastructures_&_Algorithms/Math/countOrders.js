@@ -37,3 +37,7 @@ const n1 = 2;
 (P1,P2,D1,D2), (P1,P2,D2,D1), (P1,D1,P2,D2), (P2,P1,D1,D2), (P2,P1,D2,D1) and (P2,D2,P1,D1).
 This is an invalid order (P1,D2,P2,D1) because Pickup 2 is after of Delivery 2. */
 console.log(countOrders(n1));
+
+const n2 = 3;
+// Output: 90
+console.log(countOrders(n2));
