@@ -25,3 +25,8 @@ const countOrders = function (n) {
 
     return ans;
 };
+
+const n = 1;
+// Output: 1
+// Explanation: Unique order (P1, D1), Delivery 1 always is after of Pickup 1.
+console.log(countOrders(n));
