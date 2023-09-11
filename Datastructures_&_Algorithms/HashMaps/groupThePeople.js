@@ -25,4 +25,29 @@
  * @param {number[]} groupSizes
  * @return {number[][]}
  */
-const groupThePeople = function (groupSizes) {};
+const groupThePeople = function (groupSizes) {
+    const groups = {}; // Create an object to store the groups
+
+    const result = []; // Initialize the result array here
+
+    for (let i = 0; i < groupSizes.length; i++) {
+        const size = groupSizes[i]; // Get the group size for the current person
+
+        if (!groups[size]) {
+            groups[size] = []; // Initialize an empty array for this group size
+        }
+
+        groups[size].push(i); // Add the person to the corresponding group
+        // If the group size is reached, add the group to the result and reset it
+        if (groups[size].length === size) {
+            result.push(groups[size]); // Push the group to the result
+            groups[size] = []; // Reset the group
+        }
+    }
+
+    for (const size in groups) {
+        result.push(...groups[size]); // Push all the remaining groups to the result
+    }
+
+    return result;
+};
