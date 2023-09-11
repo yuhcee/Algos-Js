@@ -61,3 +61,6 @@ The third group is [3,4,6]. The size is 3, and groupSizes[3] = groupSizes[4] = g
 Other possible solutions are [[2,1,6],[5],[0,4,3]] and [[5],[0,6,2],[4,3,1]]. */
 console.log(groupThePeople(groupSizes));
 
+const groupSizes1 = [2, 1, 3, 3, 3, 2];
+// Output: [[1],[0,5],[2,3,4]]
+console.log(groupThePeople(groupSizes1));
