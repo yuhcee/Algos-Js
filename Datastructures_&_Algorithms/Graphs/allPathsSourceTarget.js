@@ -36,3 +36,8 @@ const allPathsSourceTarget = function (graph) {
     dfs(0, []);
     return res;
 };
+
+const graph = [[1, 2], [3], [3], []];
+// Output: [[0,1,3],[0,2,3]]
+// Explanation: There are two paths: 0 -> 1 -> 3 and 0 -> 2 -> 3.
+console.log(allPathsSourceTarget(graph));
