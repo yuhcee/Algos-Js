@@ -41,3 +41,7 @@ const graph = [[1, 2], [3], [3], []];
 // Output: [[0,1,3],[0,2,3]]
 // Explanation: There are two paths: 0 -> 1 -> 3 and 0 -> 2 -> 3.
 console.log(allPathsSourceTarget(graph));
+
+const graph1 = [[4, 3, 1], [3, 2, 4], [3], [4], []];
+// Output: [[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]
+console.log(allPathsSourceTarget(graph1));
