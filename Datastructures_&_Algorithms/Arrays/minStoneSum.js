@@ -16,6 +16,12 @@
  * `floor(x)` is the **greatest** integer that is **smaller** than or
  * **equal** to `x` (i.e., rounds `x` down).
  *
+ * **Constraints:
+ *
+ * - `1 <= piles.length <= 105`
+ * - `1 <= piles[i] <= 104`
+ * - `1 <= k <= 105`
+ *
  * @param {number[]} piles
  * @param {number} k
  * @return {number}
