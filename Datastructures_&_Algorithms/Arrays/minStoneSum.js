@@ -47,3 +47,13 @@ const piles = [5, 4, 9],
 - Apply the operation on pile 0. The resulting piles are [3,4,5].
 The total number of stones in [3,4,5] is 12. */
 console.log(minStoneSum(piles, k));
+
+const piles1 = [4, 3, 6, 7],
+    k1 = 3;
+// Output: 12;
+/* Explanation: Steps of a possible scenario are:
+- Apply the operation on pile 2. The resulting piles are [4,3,3,7].
+- Apply the operation on pile 3. The resulting piles are [4,3,3,4].
+- Apply the operation on pile 0. The resulting piles are [2,3,3,4].
+The total number of stones in [2,3,3,4] is 12. */
+console.log(minStoneSum(piles1, k1));
