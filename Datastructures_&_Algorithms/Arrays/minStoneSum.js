@@ -26,4 +26,15 @@
  * @param {number} k
  * @return {number}
  */
-const minStoneSum = function (piles, k) {};
+const minStoneSum = function (piles, k) {
+    let pq = new MaxPriorityQueue({ priority: (x) => x });
+    for (const pile of piles) pq.enqueue(pile);
+    while (k--) {
+        let cur = pq.dequeue().element;
+        let remove = parseInt(cur / 2);
+        pq.enqueue(cur - remove);
+    }
+    let res = 0;
+    while (pq.size()) res += pq.dequeue().element; // difference, parse pq directly
+    return res;
+};
