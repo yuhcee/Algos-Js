@@ -38,3 +38,12 @@ const minStoneSum = function (piles, k) {
     while (pq.size()) res += pq.dequeue().element; // difference, parse pq directly
     return res;
 };
+
+const piles = [5, 4, 9],
+    k = 2;
+// Output: 12;
+/* Explanation: Steps of a possible scenario are:
+- Apply the operation on pile 2. The resulting piles are [5,4,5].
+- Apply the operation on pile 0. The resulting piles are [3,4,5].
+The total number of stones in [3,4,5] is 12. */
+console.log(minStoneSum(piles, k));
