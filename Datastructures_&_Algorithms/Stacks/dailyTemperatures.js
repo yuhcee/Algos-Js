@@ -7,6 +7,11 @@
  * If there is no future day for which this is possible, keep `answer[i] == 0`
  * instead.
  *
+ * **Constraints:**
+ *
+ * - `1 <= temperatures.length <= 105`
+ * - `30 <= temperatures[i] <= 100`
+ *
  * @param {number[]} temperatures
  * @return {number[]}
  */
