@@ -37,3 +37,7 @@ console.log(dailyTemperatures(temperatures));
 const temperatures1 = [30, 40, 50, 60];
 // Output: [1,1,1,0]
 console.log(dailyTemperatures(temperatures1));
+
+const temperatures2 = [30, 60, 90];
+// Output: [1,1,0]
+console.log(dailyTemperatures(temperatures2));
