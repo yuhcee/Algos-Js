@@ -43,3 +43,7 @@ const prices = [1, 2, 3, 0, 2];
 // Output: 3
 // Explanation: transactions = [buy, sell, cooldown, buy, sell]
 console.log(maxProfit(prices));
+
+const prices1 = [1];
+// Output: 0
+console.log(maxProfit(prices1));
