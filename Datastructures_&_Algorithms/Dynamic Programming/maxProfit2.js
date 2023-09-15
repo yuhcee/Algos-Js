@@ -38,3 +38,8 @@ const maxProfit = function (prices) {
 
     return Math.max(sold, rest);
 };
+
+const prices = [1, 2, 3, 0, 2];
+// Output: 3
+// Explanation: transactions = [buy, sell, cooldown, buy, sell]
+console.log(maxProfit(prices));
