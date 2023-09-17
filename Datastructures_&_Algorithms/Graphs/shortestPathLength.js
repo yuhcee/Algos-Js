@@ -54,3 +54,8 @@ const shortestPathLength = function (graph) {
 
     return -1; // This line should never be reached
 };
+
+const graph = [[1, 2, 3], [0], [0], [0]];
+// Output: 4
+// Explanation: One possible path is [1,0,2,0,3]
+console.log(shortestPathLength(graph));
