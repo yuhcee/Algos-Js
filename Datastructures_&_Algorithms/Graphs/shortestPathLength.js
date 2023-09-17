@@ -22,4 +22,35 @@
  * @param {number[][]} graph
  * @return {number}
  */
-const shortestPathLength = function (graph) {};
+const shortestPathLength = function (graph) {
+    const n = graph.length;
+    const queue = []; // BFS queue
+    const visited = new Set(); // Visited set
+
+    // Initialize the BFS queue with starting states
+    for (let i = 0; i < n; i++) {
+        const mask = 1 << i;
+        queue.push([mask, i, 0]); // [mask, node, distance]
+        visited.add(mask + ',' + i);
+    }
+
+    while (queue.length > 0) {
+        const [mask, node, dist] = queue.shift();
+
+        // If all nodes are visited, return the distance
+        if (mask === (1 << n) - 1) {
+            return dist;
+        }
+
+        // Explore neighbors
+        for (const next_node of graph[node]) {
+            const next_mask = mask | (1 << next_node);
+            if (!visited.has(next_mask + ',' + next_node)) {
+                visited.add(next_mask + ',' + next_node);
+                queue.push([next_mask, next_node, dist + 1]);
+            }
+        }
+    }
+
+    return -1; // This line should never be reached
+};
