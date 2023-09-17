@@ -10,6 +10,15 @@
  * node*. You may start and stop at any node, you may revisit
  * nodes multiple times, and you may reuse edges.
  *
+ * **Constraints:**
+ *
+ * - `n == graph.length`
+ * - `1 <= n <= 12`
+ * - `0 <= graph[i].length < n`
+ * - `graph[i]` does not contain `i`.
+ * - If `graph[a]` contains `b`, then `graph[b]` contains `a`.
+ * - The input graph is always connected.
+ *
  * @param {number[][]} graph
  * @return {number}
  */
