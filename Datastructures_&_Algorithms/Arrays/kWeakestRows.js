@@ -12,6 +12,14 @@
  * - Return *the indices of the `k` **weakest** rows in the matrix ordered from weakest to
  * strongest**.
  *
+ * **Constraints:**
+ *
+ * - `m == mat.length`
+ * - `n == mat[i].length`
+ * - `2 <= n, m <= 100`
+ * - `1 <= k <= m`
+ * - `matrix[i][j]` is either 0 or 1.
+ *
  * @param {number[][]} mat
  * @param {number} k
  * @return {number[]}
