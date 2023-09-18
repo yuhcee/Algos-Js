@@ -24,4 +24,13 @@
  * @param {number} k
  * @return {number[]}
  */
-const kWeakestRows = function (mat, k) {};
+const kWeakestRows = function (mat, k) {
+    // Create an array of pairs [index, number of soldiers]
+    let rows = mat.map((row, index) => [index, row.reduce((a, b) => a + b, 0)]);
+
+    // Sort the array based on the number of soldiers and then by index
+    rows.sort((a, b) => a[1] - b[1] || a[0] - b[0]);
+
+    // Extract the first k indices
+    return rows.slice(0, k).map((row) => row[0]);
+};
