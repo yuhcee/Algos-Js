@@ -53,3 +53,20 @@ The number of soldiers in each row is:
 - Row 4: 5 
 The rows ordered from weakest to strongest are [2,0,3,1,4]. */
 console.log(kWeakestRows(mat, k));
+
+const mat1 = [
+        [1, 0, 0, 0],
+        [1, 1, 1, 1],
+        [1, 0, 0, 0],
+        [1, 0, 0, 0],
+    ],
+    k1 = 2;
+// Output: [0,2]
+/* Explanation: 
+The number of soldiers in each row is: 
+- Row 0: 1 
+- Row 1: 4 
+- Row 2: 1 
+- Row 3: 1 
+The rows ordered from weakest to strongest are [0,2,3,1]. */
+console.log(kWeakestRows(mat1, k1));
