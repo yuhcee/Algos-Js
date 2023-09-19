@@ -21,4 +21,22 @@
  * @param {number[]} nums
  * @return {number}
  */
-const findDuplicate = function (nums) {};
+const findDuplicate = function (nums) {
+    // Phase 1: Detecting the loop using Floyd's Tortoise and Hare
+    let tortoise = nums[0];
+    let hare = nums[0];
+
+    do {
+        tortoise = nums[tortoise];
+        hare = nums[nums[hare]];
+    } while (tortoise !== hare);
+
+    // Phase 2: Find the position of the loop (duplicate number)
+    hare = nums[0];
+    while (tortoise !== hare) {
+        tortoise = nums[tortoise];
+        hare = nums[hare];
+    }
+
+    return hare;
+};
