@@ -44,3 +44,7 @@ const findDuplicate = function (nums) {
 const nums = [1, 3, 4, 2, 2];
 // Output: 2
 console.log(findDuplicate(nums));
+
+const nums1 = [3, 1, 3, 4, 2];
+// Output: 3
+console.log(findDuplicate(nums1));
