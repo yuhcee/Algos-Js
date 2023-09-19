@@ -40,3 +40,7 @@ const findDuplicate = function (nums) {
 
     return hare;
 };
+
+const nums = [1, 3, 4, 2, 2];
+// Output: 2
+console.log(findDuplicate(nums));
