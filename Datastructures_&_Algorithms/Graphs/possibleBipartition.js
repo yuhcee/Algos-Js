@@ -22,4 +22,41 @@
  * @param {number[][]} dislikes
  * @return {boolean}
  */
-const possibleBipartition = function (n, dislikes) {};
+const possibleBipartition = function (n, dislikes) {
+    const graph = [];
+
+    for (let i = 0; i < n; i++) {
+        graph.push([]);
+    }
+
+    for (const [from, to] of dislikes) {
+        graph[from - 1].push(to - 1);
+        graph[to - 1].push(from - 1);
+    }
+
+    const colors = Array(n).fill(0);
+
+    function isValid(i, color) {
+        if (colors[i] !== 0) {
+            return colors[i] === color;
+        }
+
+        colors[i] = color;
+
+        for (const j of graph[i]) {
+            if (colors[i] === colors[j] || !isValid(j, -color)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    for (let i = 0; i < n; i++) {
+        if (colors[i] === 0 && !isValid(i, 1)) {
+            return false;
+        }
+    }
+
+    return true;
+};
