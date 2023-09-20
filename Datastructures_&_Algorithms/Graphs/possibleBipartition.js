@@ -60,3 +60,13 @@ const possibleBipartition = function (n, dislikes) {
 
     return true;
 };
+
+const n = 4,
+    dislikes = [
+        [1, 2],
+        [1, 3],
+        [2, 4],
+    ];
+// Output: true
+// Explanation: The first group has [1,4], and the second group has [2,3].
+console.log(possibleBipartition(n, dislikes));
