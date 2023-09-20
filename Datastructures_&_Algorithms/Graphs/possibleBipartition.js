@@ -70,3 +70,13 @@ const n = 4,
 // Output: true
 // Explanation: The first group has [1,4], and the second group has [2,3].
 console.log(possibleBipartition(n, dislikes));
+
+const n1 = 3,
+    dislikes1 = [
+        [1, 2],
+        [1, 3],
+        [2, 3],
+    ];
+// Output: false
+// Explanation: We need at least 3 groups to divide them. We cannot put them in two groups.
+console.log(possibleBipartition(n1, dislikes1));
