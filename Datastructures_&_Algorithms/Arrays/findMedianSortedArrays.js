@@ -66,3 +66,9 @@ const nums1 = [1, 3],
 // Output: 2.00000
 // Explanation: merged array = [1,2,3] and median is 2.
 console.log(findMedianSortedArrays(nums1, nums2));
+
+const nums11 = [1, 2],
+    nums21 = [3, 4];
+// Output: 2.50000
+// Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+console.log(findMedianSortedArrays(nums11, nums21));
