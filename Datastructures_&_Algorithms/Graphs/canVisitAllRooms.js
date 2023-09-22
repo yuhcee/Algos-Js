@@ -26,4 +26,25 @@
  * @param {number[][]} rooms
  * @return {boolean}
  */
-const canVisitAllRooms = function (rooms) {};
+const canVisitAllRooms = function (rooms) {
+    const visited = new Set();
+
+    // DFS function to visit a room and collect keys
+    const dfs = (room) => {
+        // Mark the room as visited
+        visited.add(room);
+
+        // Visit all rooms that can be unlocked by keys in the current room
+        for (const key of rooms[room]) {
+            if (!visited.has(key)) {
+                dfs(key);
+            }
+        }
+    };
+
+    // Start DFS from room 0
+    dfs(0);
+
+    // Check if all rooms have been visited
+    return visited.size === rooms.length;
+};
