@@ -48,3 +48,13 @@ const canVisitAllRooms = function (rooms) {
     // Check if all rooms have been visited
     return visited.size === rooms.length;
 };
+
+const rooms = [[1], [2], [3], []];
+// Output: true
+/* Explanation: 
+We visit room 0 and pick up key 1.
+We then visit room 1 and pick up key 2.
+We then visit room 2 and pick up key 3.
+We then visit room 3.
+Since we were able to visit every room, we return true. */
+console.log(canVisitAllRooms(rooms));
