@@ -58,3 +58,8 @@ We then visit room 2 and pick up key 3.
 We then visit room 3.
 Since we were able to visit every room, we return true. */
 console.log(canVisitAllRooms(rooms));
+
+const rooms1 = [[1, 3], [3, 0, 1], [2], [0]];
+// Output: false
+// Explanation: We can not enter room number 2 since the only key that unlocks it is in that room.
+console.log(canVisitAllRooms(rooms1));
