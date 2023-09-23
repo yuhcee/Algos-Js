@@ -39,18 +39,18 @@ const validPath = function (n, edges, source, destination) {
         graph[u].push(v);
         graph[v].push(u); // Since the graph is bi-directional
     }
-    
+
     // Create a set to keep track of visited vertices
     const visited = new Set();
-    
+
     // DFS function to traverse the graph
     const dfs = (node) => {
         // If we reach the destination, return true
         if (node === destination) return true;
-        
+
         // Mark the current node as visited
         visited.add(node);
-        
+
         // Visit all neighbors of the current node
         for (const neighbor of graph[node]) {
             // If the neighbor is not visited, visit it and continue the DFS
@@ -58,11 +58,25 @@ const validPath = function (n, edges, source, destination) {
                 if (dfs(neighbor)) return true; // If we reach the destination through this path, return true
             }
         }
-        
+
         // If we've explored all paths from this node and haven't found the destination, return false
         return false;
     };
-    
+
     // Start DFS from the source vertex
     return dfs(source);
 };
+
+const n = 3,
+    edges = [
+        [0, 1],
+        [1, 2],
+        [2, 0],
+    ],
+    source = 0,
+    destination = 2;
+// Output: true
+/* Explanation: There are two paths from vertex 0 to vertex 2:
+- 0 → 1 → 2
+- 0 → 2 */
+console.log(validPath(n, edges, source, destination));
