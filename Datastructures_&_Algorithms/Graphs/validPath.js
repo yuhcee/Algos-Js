@@ -15,6 +15,17 @@
  * *`true` if there is a **valid path** from `source` to `destination`, or
  * `false` otherwise*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 2 * 105`
+ * - `0 <= edges.length <= 2 * 105`
+ * - `edges[i].length == 2`
+ * - `0 <= ui, vi <= n - 1`
+ * - `ui != vi`
+ * - `0 <= source, destination <= n - 1`
+ * - There are no duplicate edges.
+ * - There are no self edges.
+ *
  * @param {number} n
  * @param {number[][]} edges
  * @param {number} source
