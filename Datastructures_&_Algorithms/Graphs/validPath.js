@@ -32,4 +32,37 @@
  * @param {number} destination
  * @return {boolean}
  */
-const validPath = function (n, edges, source, destination) {};
+const validPath = function (n, edges, source, destination) {
+    // Create an adjacency list to represent the graph
+    const graph = new Array(n).fill(null).map(() => []);
+    for (const [u, v] of edges) {
+        graph[u].push(v);
+        graph[v].push(u); // Since the graph is bi-directional
+    }
+    
+    // Create a set to keep track of visited vertices
+    const visited = new Set();
+    
+    // DFS function to traverse the graph
+    const dfs = (node) => {
+        // If we reach the destination, return true
+        if (node === destination) return true;
+        
+        // Mark the current node as visited
+        visited.add(node);
+        
+        // Visit all neighbors of the current node
+        for (const neighbor of graph[node]) {
+            // If the neighbor is not visited, visit it and continue the DFS
+            if (!visited.has(neighbor)) {
+                if (dfs(neighbor)) return true; // If we reach the destination through this path, return true
+            }
+        }
+        
+        // If we've explored all paths from this node and haven't found the destination, return false
+        return false;
+    };
+    
+    // Start DFS from the source vertex
+    return dfs(source);
+};
