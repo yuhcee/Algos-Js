@@ -65,3 +65,8 @@ const tokens = ['2', '1', '+', '3', '*'];
 // Output: 9
 // Explanation: ((2 + 1) * 3) = 9
 console.log(evalRPN(tokens));
+
+const tokens1 = ['4', '13', '5', '/', '+'];
+// Output: 6
+// Explanation: (4 + (13 / 5)) = 6
+console.log(evalRPN(tokens1));
