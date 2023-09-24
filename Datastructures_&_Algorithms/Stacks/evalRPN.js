@@ -60,3 +60,8 @@ const evalRPN = function (tokens) {
     }
     return stack1.pop();
 };
+
+const tokens = ['2', '1', '+', '3', '*'];
+// Output: 9
+// Explanation: ((2 + 1) * 3) = 9
+console.log(evalRPN(tokens));
