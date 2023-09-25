@@ -16,4 +16,19 @@ s and t consist of lowercase English letters.
  * @param {string} t
  * @return {character}
  */
-const findTheDifference = function(s, t) {}
+const findTheDifference = function (s, t) {
+    let result = 0;
+
+    // XOR all characters in string s
+    for (let i = 0; i < s.length; i++) {
+        result ^= s.charCodeAt(i);
+    }
+
+    // XOR all characters in string t
+    for (let i = 0; i < t.length; i++) {
+        result ^= t.charCodeAt(i);
+    }
+
+    // Convert the result back to a character and return
+    return String.fromCharCode(result);
+};
