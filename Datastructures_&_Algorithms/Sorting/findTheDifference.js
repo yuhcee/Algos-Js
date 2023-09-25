@@ -32,3 +32,9 @@ const findTheDifference = function (s, t) {
     // Convert the result back to a character and return
     return String.fromCharCode(result);
 };
+
+const s = 'abcd',
+    t = 'abcde';
+// Output: "e"
+// Explanation: 'e' is the letter that was added.
+console.log(findTheDifference(s, t));
