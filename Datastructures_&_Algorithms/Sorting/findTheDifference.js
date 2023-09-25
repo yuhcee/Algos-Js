@@ -38,3 +38,8 @@ const s = 'abcd',
 // Output: "e"
 // Explanation: 'e' is the letter that was added.
 console.log(findTheDifference(s, t));
+
+const s1 = '',
+    t1 = 'y';
+// Output: "y"
+console.log(findTheDifference(s1, t1));
