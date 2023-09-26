@@ -13,7 +13,7 @@
  * @param {string} s
  * @return {string}
  */
-var removeDuplicateLetters = function (s) {
+const removeDuplicateLetters = function (s) {
     if (!s || s.length === 0) return '';
 
     // Create an array to keep track of the remaining count of each character
@@ -45,3 +45,7 @@ var removeDuplicateLetters = function (s) {
 
     return stack.join('');
 };
+
+const s = 'bcabc';
+// Output: "abc"
+console.log(removeDuplicateLetters(s));
