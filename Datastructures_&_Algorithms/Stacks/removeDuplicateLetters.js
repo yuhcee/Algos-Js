@@ -49,3 +49,7 @@ const removeDuplicateLetters = function (s) {
 const s = 'bcabc';
 // Output: "abc"
 console.log(removeDuplicateLetters(s));
+
+const s1 = 'cbacdcbc';
+// Output: "acdb"
+console.log(removeDuplicateLetters(s1));
