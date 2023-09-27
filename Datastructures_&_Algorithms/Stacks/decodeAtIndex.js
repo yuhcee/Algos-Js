@@ -58,3 +58,10 @@ const s1 = 'ha22',
 // Explanation: The decoded string is "hahahaha".
 // The 5th letter is "h".
 console.log(decodeAtIndex(s1, k1));
+
+const s2 = 'a2345678999999999999999',
+    k2 = 1;
+// Output: "a"
+// Explanation: The decoded string is "a" repeated 8301530446056247680 times.
+// The 1st letter is "a".
+console.log(decodeAtIndex(s2, k2));
