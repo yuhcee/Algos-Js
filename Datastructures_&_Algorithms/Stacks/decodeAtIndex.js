@@ -44,3 +44,10 @@ const decodeAtIndex = function (s, k) {
         length = isNaN(s[j]) ? length - 1 : length / Number(s[j]);
     }
 };
+
+const s = 'leet2code3',
+    k = 10;
+// Output: "o"
+// Explanation: The decoded string is "leetleetcodeleetleetcodeleetleetcode".
+// The 10th letter in the string is "o".
+console.log(decodeAtIndex(s, k));
