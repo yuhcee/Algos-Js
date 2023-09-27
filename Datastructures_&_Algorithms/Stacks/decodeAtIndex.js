@@ -27,4 +27,20 @@
  * @param {number} k
  * @return {string}
  */
-const decodeAtIndex = function (s, k) {};
+const decodeAtIndex = function (s, k) {
+    let length = 0;
+    let i = 0;
+
+    // Calculate the total length of the decoded string
+    while (length < k) {
+        length = isNaN(s[i]) ? length + 1 : length * Number(s[i]);
+        i++;
+    }
+
+    // Iterate through the string in reverse order
+    for (let j = i - 1; j >= 0; j--) {
+        k %= length;
+        if (k === 0 && isNaN(s[j])) return s[j];
+        length = isNaN(s[j]) ? length - 1 : length / Number(s[j]);
+    }
+};
