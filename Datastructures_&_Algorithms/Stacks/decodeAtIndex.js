@@ -51,3 +51,10 @@ const s = 'leet2code3',
 // Explanation: The decoded string is "leetleetcodeleetleetcodeleetleetcode".
 // The 10th letter in the string is "o".
 console.log(decodeAtIndex(s, k));
+
+const s1 = 'ha22',
+    k1 = 5;
+// Output: "h"
+// Explanation: The decoded string is "hahahaha".
+// The 5th letter is "h".
+console.log(decodeAtIndex(s1, k1));
