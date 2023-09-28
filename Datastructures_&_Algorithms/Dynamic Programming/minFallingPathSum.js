@@ -35,3 +35,12 @@ const minFallingPathSum = function (matrix) {
     // Return the minimum value from the last row
     return Math.min(...matrix[n - 1]);
 };
+
+const matrix = [
+    [2, 1, 3],
+    [6, 5, 4],
+    [7, 8, 9],
+];
+// Output: 13
+// Explanation: There are two falling paths with a minimum sum as shown.
+console.log(minFallingPathSum(matrix));
