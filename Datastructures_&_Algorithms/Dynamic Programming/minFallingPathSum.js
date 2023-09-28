@@ -18,4 +18,20 @@
  * @param {number[][]} matrix
  * @return {number}
  */
-const minFallingPathSum = function (matrix) {};
+const minFallingPathSum = function (matrix) {
+    const n = matrix.length;
+
+    for (let i = 1; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            // For each cell (i, j), find the minimum value from the cells above it
+            matrix[i][j] += Math.min(
+                matrix[i - 1][j], // cell directly above
+                matrix[i - 1][Math.max(j - 1, 0)], // cell diagonally above to the left (or itself if at the leftmost column)
+                matrix[i - 1][Math.min(j + 1, n - 1)] // cell diagonally above to the right (or itself if at the rightmost column)
+            );
+        }
+    }
+
+    // Return the minimum value from the last row
+    return Math.min(...matrix[n - 1]);
+};
