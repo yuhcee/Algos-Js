@@ -44,3 +44,11 @@ const matrix = [
 // Output: 13
 // Explanation: There are two falling paths with a minimum sum as shown.
 console.log(minFallingPathSum(matrix));
+
+const matrix1 = [
+    [-19, 57],
+    [-40, -5],
+];
+// Output: -59
+// Explanation: The falling path with a minimum sum is shown.
+console.log(minFallingPathSum(matrix1));
