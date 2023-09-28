@@ -9,6 +9,12 @@
  * left/right. Specifically, the next element from position `(row, col)`
  * will be `(row + 1, col - 1)`, `(row + 1, col)`, or `(row + 1, col + 1)`.
  *
+ * **Constraints:**
+ *
+ * - `n == matrix.length == matrix[i].length`
+ * - `1 <= n <= 100`
+ * - `-100 <= matrix[i][j] <= 100`
+ *
  * @param {number[][]} matrix
  * @return {number}
  */
