@@ -34,3 +34,7 @@ const isMonotonic = function (nums) {
 
     return isIncreasing || isDecreasing;
 };
+
+const nums = [1, 2, 2, 3];
+// Output: true
+console.log(isMonotonic(nums));
