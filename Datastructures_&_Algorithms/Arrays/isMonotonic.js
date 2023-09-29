@@ -42,3 +42,7 @@ console.log(isMonotonic(nums));
 const nums1 = [6, 5, 4, 4];
 // Output: true
 console.log(isMonotonic(nums1));
+
+const nums2 = [1, 3, 2];
+// Output: false
+console.log(isMonotonic(nums2));
