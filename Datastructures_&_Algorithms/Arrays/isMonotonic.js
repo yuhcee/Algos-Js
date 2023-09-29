@@ -1,22 +1,36 @@
 /**
  * **896. Monotonic Array**
- * 
- * An array is **monotonic** if it is either monotone increasing or 
+ *
+ * An array is **monotonic** if it is either monotone increasing or
  * monotone decreasing.
- * 
- * An array `nums` is monotone increasing if for all `i <= j`, `nums[i] <= 
- * nums[j]`. An array `nums` is monotone decreasing if for all `i <= j`, 
+ *
+ * An array `nums` is monotone increasing if for all `i <= j`, `nums[i] <=
+ * nums[j]`. An array `nums` is monotone decreasing if for all `i <= j`,
  * `nums[i] >= nums[j]`.
- * 
- * Given an integer array `nums`, return *`true` if the given array is 
+ *
+ * Given an integer array `nums`, return *`true` if the given array is
  * monotonic, or `false` otherwise*.
- * 
+ *
  * **Constraints:**
- * 
+ *
  * - `1 <= nums.length <= 105`
  * - `-105 <= nums[i] <= 105`
- * 
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
-const isMonotonic = function(nums) {}
+const isMonotonic = function (nums) {
+    let isIncreasing = true;
+    let isDecreasing = true;
+
+    for (let i = 0; i < nums.length - 1; i++) {
+        if (nums[i] > nums[i + 1]) {
+            isIncreasing = false;
+        }
+        if (nums[i] < nums[i + 1]) {
+            isDecreasing = false;
+        }
+    }
+
+    return isIncreasing || isDecreasing;
+};
