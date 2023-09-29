@@ -38,3 +38,7 @@ const isMonotonic = function (nums) {
 const nums = [1, 2, 2, 3];
 // Output: true
 console.log(isMonotonic(nums));
+
+const nums1 = [6, 5, 4, 4];
+// Output: true
+console.log(isMonotonic(nums1));
