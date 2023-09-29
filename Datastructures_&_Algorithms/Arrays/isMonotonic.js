@@ -11,6 +11,10 @@
  * Given an integer array `nums`, return *`true` if the given array is 
  * monotonic, or `false` otherwise*.
  * 
+ * **Constraints:**
+ * 
+ * - `1 <= nums.length <= 105`
+ * - `-105 <= nums[i] <= 105`
  * 
  * @param {number[]} nums
  * @return {boolean}
