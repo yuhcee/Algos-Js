@@ -19,6 +19,10 @@
  * divided (**integer division**) by `n`.
  * - The average of `0` elements is considered to be `0`.
  *
+ * **Constraints:**
+ * - `1 <= nums.length <= 105`
+ * - `0 <= nums[i] <= 105`
+ * 
  * @param {number[]} nums
  * @return {number}
  */
