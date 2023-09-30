@@ -61,3 +61,10 @@ const nums = [2, 5, 3, 9, 5, 3];
 - The average difference of index 5 is: |(2 + 5 + 3 + 9 + 5 + 3) / 6 - 0| = |27 / 6 - 0| = |4 - 0| = 4.
 The average difference of index 3 is the minimum average difference so return 3. */
 console.log(minimumAverageDifference(nums));
+
+const nums1 = [0];
+// Output: 0
+/* Explanation:
+The only index is 0 so return 0.
+The average difference of index 0 is: |0 / 1 - 0| = |0 - 0| = 0. */
+console.log(minimumAverageDifference(nums1));
