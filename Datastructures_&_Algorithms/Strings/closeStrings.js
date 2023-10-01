@@ -19,6 +19,11 @@
  * Given two strings, `word1` and `word2`, return *`true` if `word1` and
  * `word2` are **close**, and `false` otherwise*.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= word1.length, word2.length <= 105`
+ * - `word1` and `word2` contain only lowercase English letters.
+ * 
  * @param {string} word1
  * @param {string} word2
  * @return {boolean}
