@@ -20,12 +20,47 @@
  * `word2` are **close**, and `false` otherwise*.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= word1.length, word2.length <= 105`
  * - `word1` and `word2` contain only lowercase English letters.
- * 
+ *
  * @param {string} word1
  * @param {string} word2
  * @return {boolean}
  */
-const closeStrings = function (word1, word2) {};
+const closeStrings = function (word1, word2) {
+    if (word1.length !== word2.length) return false;
+
+    const freqCount1 = new Array(26).fill(0);
+    const freqCount2 = new Array(26).fill(0);
+    const existsIn1 = new Array(26).fill(0);
+    const existsIn2 = new Array(26).fill(0);
+
+    // Count character frequencies and existence in word1
+    for (let char of word1) {
+        const idx = char.charCodeAt(0) - 'a'.charCodeAt(0);
+        freqCount1[idx]++;
+        existsIn1[idx] = 1;
+    }
+
+    // Count character frequencies and existence in word2
+    for (let char of word2) {
+        const idx = char.charCodeAt(0) - 'a'.charCodeAt(0);
+        freqCount2[idx]++;
+        existsIn2[idx] = 1;
+    }
+
+    // Compare existence arrays
+    for (let i = 0; i < 26; i++) {
+        if (existsIn1[i] !== existsIn2[i]) return false;
+    }
+
+    // Compare frequency distributions
+    freqCount1.sort((a, b) => a - b);
+    freqCount2.sort((a, b) => a - b);
+    for (let i = 0; i < 26; i++) {
+        if (freqCount1[i] !== freqCount2[i]) return false;
+    }
+
+    return true;
+};
