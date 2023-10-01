@@ -78,3 +78,12 @@ const word10 = 'a',
 // Output: false
 /* Explanation: It is impossible to attain word2 from word1, or vice versa, in any number of operations. */
 console.log(closeStrings(word10, word20));
+
+const word11 = 'cabbba',
+    word21 = 'abbccc';
+// Output: true
+/* Explanation: You can attain word2 from word1 in 3 operations.
+Apply Operation 1: "cabbba" -> "caabbb"
+Apply Operation 2: "caabbb" -> "baaccc"
+Apply Operation 2: "baaccc" -> "abbccc" */
+console.log(closeStrings(word11, word21));
