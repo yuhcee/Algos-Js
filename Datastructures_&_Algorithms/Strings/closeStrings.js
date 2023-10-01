@@ -72,3 +72,9 @@ const word1 = 'abc',
 Apply Operation 1: "abc" -> "acb"
 Apply Operation 1: "acb" -> "bca" */
 console.log(closeStrings(word1, word2));
+
+const word10 = 'a',
+    word20 = 'aa';
+// Output: false
+/* Explanation: It is impossible to attain word2 from word1, or vice versa, in any number of operations. */
+console.log(closeStrings(word10, word20));
