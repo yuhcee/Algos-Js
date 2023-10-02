@@ -29,4 +29,25 @@
  * @param {string} colors
  * @return {boolean}
  */
-const winnerOfGame = function (colors) {};
+const winnerOfGame = function (colors) {
+    let countA = 0,
+        countB = 0;
+    let movesA = 0,
+        movesB = 0;
+
+    for (let i = 0; i < colors.length; i++) {
+        if (colors[i] === 'A') {
+            countA++;
+            countB = 0;
+
+            if (countA >= 3) movesA++;
+        } else {
+            countB++;
+            countA = 0;
+
+            if (countB >= 3) movesB++;
+        }
+    }
+
+    return movesA > movesB;
+};
