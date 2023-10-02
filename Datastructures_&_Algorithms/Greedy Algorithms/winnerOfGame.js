@@ -51,3 +51,15 @@ const winnerOfGame = function (colors) {
 
     return movesA > movesB;
 };
+
+const colors = 'AAABABB';
+// Output: true
+/* Explanation:
+AAABABB -> AABABB
+Alice moves first.
+She removes the second 'A' from the left since that is the only 'A' whose neighbors are both 'A'.
+
+Now it's Bob's turn.
+Bob cannot make a move on his turn since there are no 'B's whose neighbors are both 'B'.
+Thus, Alice wins, so return true. */
+console.log(winnerOfGame(colors));
