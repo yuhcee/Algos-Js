@@ -30,25 +30,33 @@
  * @return {boolean}
  */
 const winnerOfGame = function (colors) {
+    // Initialize variables to store the count of consecutive 'A's and 'B's
     let countA = 0,
         countB = 0;
+    // Initialize variables to store the total number of moves available for Alice and Bob
     let movesA = 0,
         movesB = 0;
 
+    // Iterate over the colors string
     for (let i = 0; i < colors.length; i++) {
+        // If the current color is 'A'
         if (colors[i] === 'A') {
+            // Increment the count of consecutive 'A's
             countA++;
+            // Reset the count of consecutive 'B's to 0
             countB = 0;
-
+            // If there are at least 3 consecutive 'A's, increment the number of moves available for Alice
             if (countA >= 3) movesA++;
         } else {
+            // If the current color is 'B', do the same process for Bob
             countB++;
             countA = 0;
-
             if (countB >= 3) movesB++;
         }
     }
 
+    // If the number of moves available for Alice is greater than the number of moves available for Bob, return true
+    // Otherwise, return false
     return movesA > movesB;
 };
 
