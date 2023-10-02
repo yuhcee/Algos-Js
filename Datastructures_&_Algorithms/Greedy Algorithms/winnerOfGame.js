@@ -71,3 +71,18 @@ Alice has her turn first.
 There are only two 'A's and both are on the edge of the line, so she cannot move on her turn.
 Thus, Bob wins, so return false. */
 console.log(winnerOfGame(colors1));
+
+const colors2 = 'ABBBBBBBAAA';
+// Output: false
+/* Explanation:
+ABBBBBBBAAA -> ABBBBBBBAA
+Alice moves first.
+Her only option is to remove the second to last 'A' from the right.
+
+ABBBBBBBAA -> ABBBBBBAA
+Next is Bob's turn.
+He has many options for which 'B' piece to remove. He can pick any.
+
+On Alice's second turn, she has no more pieces that she can remove.
+Thus, Bob wins, so return false. */
+console.log(winnerOfGame(colors2));
