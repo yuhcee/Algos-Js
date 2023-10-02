@@ -63,3 +63,11 @@ Now it's Bob's turn.
 Bob cannot make a move on his turn since there are no 'B's whose neighbors are both 'B'.
 Thus, Alice wins, so return true. */
 console.log(winnerOfGame(colors));
+
+const colors1 = 'AA';
+// Output: false
+/* Explanation:
+Alice has her turn first.
+There are only two 'A's and both are on the edge of the line, so she cannot move on her turn.
+Thus, Bob wins, so return false. */
+console.log(winnerOfGame(colors1));
