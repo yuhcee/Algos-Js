@@ -43,3 +43,7 @@ const nums1 = [1, 1, 1, 1];
 // Output: 6
 // Explanation: Each pair in the array are good.
 console.log(numIdenticalPairs(nums1));
+
+const nums2 = [1, 2, 3];
+// Output: 0
+console.log(numIdenticalPairs(nums2));
