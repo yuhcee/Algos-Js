@@ -19,9 +19,10 @@ const numIdenticalPairs = function (nums) {
     const countPairs = {};
 
     for (let num of nums) {
-        countPairs[num] = 1 || countPairs[num]++;
+        countPairs[num] = countPairs[num] + 1 || 1;
     }
 
+    countPairs
     let goodPairs = 0;
 
     for (let count of Object.values(countPairs)) {
@@ -32,3 +33,8 @@ const numIdenticalPairs = function (nums) {
 
     return goodPairs;
 };
+
+const nums = [1, 2, 3, 1, 1, 3];
+// Output: 4
+// Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
+console.log(numIdenticalPairs(nums));
