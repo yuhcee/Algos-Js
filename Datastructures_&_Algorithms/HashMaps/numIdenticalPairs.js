@@ -16,21 +16,23 @@
  * @return {number}
  */
 const numIdenticalPairs = function (nums) {
-    const countPairs = {};
+    // Step 1: Create a map to store the count of each number
+    const countMap = {};
 
+    // Step 2: Iterate over the array and count the frequency of each number
     for (let num of nums) {
-        countPairs[num] = countPairs[num] + 1 || 1;
+        countMap[num] = countMap[num] + 1 || 1;
     }
 
-    countPairs;
+    // Step 3: Iterate over the counts and calculate the number of good pairs for each number
     let goodPairs = 0;
-
-    for (let count of Object.values(countPairs)) {
+    for (let count of Object.values(countMap)) {
         if (count > 1) {
             goodPairs += (count * (count - 1)) / 2;
         }
     }
 
+    // Step 4: Return the total number of good pairs
     return goodPairs;
 };
 
