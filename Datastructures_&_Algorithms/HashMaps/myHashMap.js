@@ -15,6 +15,11 @@
  * - `void remove(key)` removes the `key` and its corresponding
  * `value` if the map contains the mapping for the `key`.
  *
+ * **Constraints:**
+ *
+ * - `0 <= key, value <= 106`
+ * - At most `104` calls will be made to `put`, `get`, and `remove`.
+ *
  */
 const MyHashMap = function () {};
 
