@@ -21,26 +21,62 @@
  * - At most `104` calls will be made to `put`, `get`, and `remove`.
  *
  */
-const MyHashMap = function () {};
+const MyHashMap = function () {
+    this.size = 1000;
+    this.buckets = Array(this.size)
+        .fill(null)
+        .map(() => []);
+};
 
 /**
  * @param {number} key
  * @param {number} value
  * @return {void}
  */
-MyHashMap.prototype.put = function (key, value) {};
+MyHashMap.prototype.put = function (key, value) {
+    const index = key % this.size;
+    const bucket = this.buckets[index];
+
+    for (let pair of bucket) {
+        if (pair[0] === key) {
+            pair[1] = value;
+            return;
+        }
+    }
+    bucket.push([key, pair]);
+};
 
 /**
  * @param {number} key
  * @return {number}
  */
-MyHashMap.prototype.get = function (key) {};
+MyHashMap.prototype.get = function (key) {
+    const index = key % this.size;
+    const bucket = this.buckets[index];
+
+    for (let pair of bucket) {
+        if (pair[0] === key) {
+            return pair[1];
+        }
+    }
+    return -1;
+};
 
 /**
  * @param {number} key
  * @return {void}
  */
-MyHashMap.prototype.remove = function (key) {};
+MyHashMap.prototype.remove = function (key) {
+    const index = key % this.size;
+    const bucket = this.buckets[index];
+
+    for (let i = 0; i < bucket.length; i++) {
+        if (bucket[i][0] === key) {
+            bucket.splice(i, 1);
+            return;
+        }
+    }
+};
 
 /**
  * Your MyHashMap object will be instantiated and called as such:
