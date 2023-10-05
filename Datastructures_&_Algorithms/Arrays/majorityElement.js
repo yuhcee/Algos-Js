@@ -56,3 +56,7 @@ console.log(majorityElement(nums));
 const nums1 = [1];
 // Output: [1]
 console.log(majorityElement(nums1));
+
+const nums2 = [1, 2];
+// Output: [1,2]
+console.log(majorityElement(nums2));
