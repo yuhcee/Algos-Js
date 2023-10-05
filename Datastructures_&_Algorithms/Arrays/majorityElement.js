@@ -49,3 +49,6 @@ const majorityElement = function (nums) {
     if (count2 > nums.length / 3) result.push(candidate2);
     return result;
 };
+const nums = [3, 2, 3];
+// Output: [3]
+console.log(majorityElement(nums));
