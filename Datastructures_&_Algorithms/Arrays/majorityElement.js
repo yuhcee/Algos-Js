@@ -52,3 +52,7 @@ const majorityElement = function (nums) {
 const nums = [3, 2, 3];
 // Output: [3]
 console.log(majorityElement(nums));
+
+const nums1 = [1];
+// Output: [1]
+console.log(majorityElement(nums1));
