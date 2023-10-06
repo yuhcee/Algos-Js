@@ -13,9 +13,16 @@
  * @param {number} n
  * @return {number}
  */
-const integerBreak = function (n) {};
+const integerBreak = function (n) {
+    
+};
 
 const n = 2;
 // Output: 1
 // Explanation: 2 = 1 + 1, 1 × 1 = 1.
 console.log(integerBreak(n));
+
+const n1 = 10;
+// Output: 36
+// Explanation: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36.
+console.log(integerBreak(n1));
