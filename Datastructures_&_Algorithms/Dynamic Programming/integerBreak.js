@@ -6,6 +6,10 @@
  *
  * Return *the maximum product you can get*.
  *
+ * **Constraints:**
+ *
+ * - `2 <= n <= 58`
+ *
  * @param {number} n
  * @return {number}
  */
