@@ -14,3 +14,8 @@
  * @return {number}
  */
 const integerBreak = function (n) {};
+
+const n = 2;
+// Output: 1
+// Explanation: 2 = 1 + 1, 1 × 1 = 1.
+console.log(integerBreak(n));
