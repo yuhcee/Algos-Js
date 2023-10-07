@@ -33,3 +33,10 @@ const n = 2,
 // Output: 6
 // Explanation: The possible arrays are [1, 1], [2, 1], [2, 2], [3, 1], [3, 2] [3, 3]
 console.log(numOfArrays(n, m, k));
+
+const n1 = 5,
+    m1 = 2,
+    k1 = 3;
+// Output: 0
+// Explanation: There are no possible arrays that satisify the mentioned conditions.
+console.log(numOfArrays(n1, m1, k1));
