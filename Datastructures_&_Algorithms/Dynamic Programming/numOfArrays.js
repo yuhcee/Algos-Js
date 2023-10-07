@@ -25,7 +25,28 @@
  * @param {number} k
  * @return {number}
  */
-const numOfArrays = function (n, m, k) {};
+const numOfArrays = function (n, m, k) {
+    const mod = 1e9 + 7;
+    let dp = Array.from({ length: n + 1 }, () => Array.from({ length: k + 1 }, () => Array(m + 1).fill(0)));
+
+    for (let i = 1; i <= m; i++) dp[1][1][i] = 1;
+
+    for (let i = 2; i <= n; i++) {
+        for (let j = 1; j <= k; j++) {
+            let sum = Array(m + 1).fill(0);
+            for (let l = 1; l <= m; l++) {
+                sum[l] = (sum[l - 1] + dp[i - 1][j - 1][l]) % mod;
+            }
+            for (let l = 1; l <= m; l++) {
+                dp[i][j][l] = (dp[i][j][l] + dp[i - 1][j][l] * l + sum[l - 1]) % mod;
+            }
+        }
+    }
+
+    let res = 0;
+    for (let i = 1; i <= m; i++) res = (res + dp[n][k][i]) % mod;
+    return res;
+};
 
 const n = 2,
     m = 3,
