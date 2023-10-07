@@ -26,3 +26,10 @@
  * @return {number}
  */
 const numOfArrays = function (n, m, k) {};
+
+const n = 2,
+    m = 3,
+    k = 1;
+// Output: 6
+// Explanation: The possible arrays are [1, 1], [2, 1], [2, 2], [3, 1], [3, 2] [3, 3]
+console.log(numOfArrays(n, m, k));
