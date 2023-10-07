@@ -40,3 +40,10 @@ const n1 = 5,
 // Output: 0
 // Explanation: There are no possible arrays that satisify the mentioned conditions.
 console.log(numOfArrays(n1, m1, k1));
+
+const n2 = 9,
+    m2 = 1,
+    k2 = 1;
+// Output: 1
+// Explanation: The only possible array is [1, 1, 1, 1, 1, 1, 1, 1, 1]
+console.log(numOfArrays(n2, m2, k2));
