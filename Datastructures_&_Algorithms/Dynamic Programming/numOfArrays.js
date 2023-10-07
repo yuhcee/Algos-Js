@@ -14,6 +14,12 @@
  * conditions*. As the answer may grow large, the answer **must be** computed
  * modulo `109 + 7`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 50`
+ * - `1 <= m <= 100`
+ * - `0 <= k <= n`
+ *
  * @param {number} n
  * @param {number} m
  * @param {number} k
