@@ -28,3 +28,10 @@ const nums1 = [2, 1, -2, 5],
 /* Explanation: Take subsequence [2,-2] from nums1 and subsequence [3,-6] from nums2.
 Their dot product is (2*3 + (-2)*(-6)) = 18. */
 console.log(maxDotProduct(nums, nums2));
+
+const nums11 = [3, -2],
+    nums21 = [2, -6, 7];
+// Output: 21
+/* Explanation: Take subsequence [3] from nums1 and subsequence [7] from nums2.
+Their dot product is (3*7) = 21. */
+console.log(maxDotProduct(nums1, nums21));
