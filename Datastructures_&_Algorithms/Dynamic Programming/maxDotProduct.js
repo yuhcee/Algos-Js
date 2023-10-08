@@ -11,6 +11,11 @@
  * the relative positions of the remaining characters. (ie, `[2,3,5]` is a
  * subsequence of `[1,2,3,4,5]` while `[1,5,3]` is not).
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums1.length, nums2.length <= 500`
+ * - `-1000 <= nums1[i], nums2[i] <= 1000`
+ *
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number}
