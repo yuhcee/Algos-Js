@@ -20,7 +20,27 @@
  * @param {number[]} nums2
  * @return {number}
  */
-const maxDotProduct = function (nums1, nums2) {};
+const maxDotProduct = function (nums1, nums2) {
+    const n = nums1.length,
+        m = nums2.length;
+    const dp = Array.from({ length: n + 1 }, () => Array(m + 1).fill(-Infinity));
+
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= m; j++) {
+            // Calculate dot product for current pair of elements
+            const prod = nums1[i - 1] * nums2[j - 1];
+            // Update dp[i][j] based on previous states
+            dp[i][j] = Math.max(
+                prod, // Take only the current pair
+                dp[i - 1][j - 1] + prod, // Add current pair to previous subsequence
+                dp[i - 1][j], // Skip current element in nums1
+                dp[i][j - 1] // Skip current element in nums2
+            );
+        }
+    }
+
+    return dp[n][m];
+};
 
 const nums1 = [2, 1, -2, 5],
     nums2 = [3, 0, -6];
