@@ -19,7 +19,35 @@
  * @param {number} target
  * @return {number[]}
  */
-const searchRange = function (nums, target) {};
+const searchRange = function (nums, target) {
+    function binarySearchLeft(nums, target) {
+        let left = 0,
+            right = nums.length - 1;
+        while (left <= right) {
+            const mid = Math.floor((left + right) / 2);
+            if (nums[mid] < target) left = mid + 1;
+            else right = mid - 1;
+        }
+        return left;
+    }
+
+    function binarySearchRight(nums, target) {
+        let left = 0,
+            right = nums.length - 1;
+        while (left <= right) {
+            const mid = Math.floor((left + right) / 2);
+            if (nums[mid] <= target) left = mid + 1;
+            else right = mid - 1;
+        }
+        return right;
+    }
+
+    const left = binarySearchLeft(nums, target);
+    const right = binarySearchRight(nums, target);
+
+    if (left <= right) return [left, right];
+    return [-1, -1];
+};
 
 const nums = [5, 7, 7, 8, 8, 10],
     target = 8;
