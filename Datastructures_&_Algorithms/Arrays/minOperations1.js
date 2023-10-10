@@ -50,6 +50,8 @@ const nums1 = [1, 2, 3, 5, 6];
 // Output: 1
 /* Explanation: One possible solution is to change the last element to 4.
 The resulting array is [1,2,3,5,4], which is continuous. */
+console.log(minOperations(nums1));
+
 
 const nums2 = [1, 10, 100, 1000];
 // Output: 3
@@ -58,3 +60,5 @@ const nums2 = [1, 10, 100, 1000];
 - Change the third element to 3.
 - Change the fourth element to 4.
 The resulting array is [1,2,3,4], which is continuous. */
+console.log(minOperations(nums2));
+
