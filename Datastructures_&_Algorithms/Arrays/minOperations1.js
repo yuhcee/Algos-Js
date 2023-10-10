@@ -24,3 +24,7 @@
  * @return {number}
  */
 var minOperations = function (nums) {};
+
+const nums = [4, 2, 5, 3];
+// Output: 0
+// Explanation: nums is already continuous.
