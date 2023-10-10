@@ -28,3 +28,8 @@ var minOperations = function (nums) {};
 const nums = [4, 2, 5, 3];
 // Output: 0
 // Explanation: nums is already continuous.
+
+const nums1 = [1, 2, 3, 5, 6];
+// Output: 1
+/* Explanation: One possible solution is to change the last element to 4.
+The resulting array is [1,2,3,5,4], which is continuous. */
