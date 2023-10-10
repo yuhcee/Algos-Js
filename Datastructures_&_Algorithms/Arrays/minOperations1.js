@@ -15,6 +15,10 @@
  *
  * Return the minimum number of operations to make nums continuous.
  * 
+ * **Constraints:**
+
+1 <= nums.length <= 105
+1 <= nums[i] <= 109
  * 
  * @param {number[]} nums
  * @return {number}
