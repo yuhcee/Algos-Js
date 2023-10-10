@@ -23,11 +23,28 @@
  * @param {number[]} nums
  * @return {number}
  */
-var minOperations = function (nums) {};
+const minOperations = function (nums) {
+    nums.sort((a, b) => a - b);
+    let uniqueNums = Array.from(new Set(nums));
+    let maxContinuous = 0;
+    for (let i = 0; i < uniqueNums.length; i++) {
+        let continuous = 1;
+        for (let j = i + 1; j < uniqueNums.length; j++) {
+            if (uniqueNums[j] - uniqueNums[i] < nums.length) {
+                continuous = j - i + 1;
+            } else {
+                break;
+            }
+        }
+        maxContinuous = Math.max(maxContinuous, continuous);
+    }
+    return nums.length - maxContinuous;
+};
 
 const nums = [4, 2, 5, 3];
 // Output: 0
 // Explanation: nums is already continuous.
+console.log(minOperations(nums));
 
 const nums1 = [1, 2, 3, 5, 6];
 // Output: 1
