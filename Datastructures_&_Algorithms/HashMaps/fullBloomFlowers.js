@@ -60,3 +60,8 @@ const fullBloomFlowers = function (flowers, persons) {
 
     return persons.map((person) => map[person]);
 };
+
+const lowers = [[1,6],[3,7],[9,12],[4,13]], poeple = [2,3,7,11]
+Output: [1,2,2,2]
+Explanation: The figure above shows the times when the flowers are in full bloom and when the people arrive.
+For each person, we return the number of flowers in full bloom during their arrival.
