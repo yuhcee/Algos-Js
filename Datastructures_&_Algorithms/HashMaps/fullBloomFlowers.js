@@ -11,6 +11,14 @@
  * Return an integer array answer of size n, where answer[i] is the 
  * number of flowers that are in full bloom when the ith person arrives.
  * 
+ * **Constraints:
+
+1 <= flowers.length <= 5 * 104
+flowers[i].length == 2
+1 <= starti <= endi <= 109
+1 <= people.length <= 5 * 104
+1 <= people[i] <= 109
+ * 
  * @param {number[][]} flowers
  * @param {number[]} people
  * @return {number[]}
