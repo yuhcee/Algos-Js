@@ -73,3 +73,13 @@ const flowers = [
 /* Explanation: The figure above shows the times when the flowers are in full bloom and when the people arrive.
 For each person, we return the number of flowers in full bloom during their arrival. */
 console.log(fullBloomFlowers(flowers, people));
+
+const flowers1 = [
+        [1, 10],
+        [3, 3],
+    ],
+    people1 = [3, 3, 2];
+// Output: [2,2,1]
+/* Explanation: The figure above shows the times when the flowers are in full bloom and when the people arrive.
+For each person, we return the number of flowers in full bloom during their arrival. */
+console.log(fullBloomFlowers(flowers1, people1));
