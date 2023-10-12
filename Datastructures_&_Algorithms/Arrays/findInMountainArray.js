@@ -41,6 +41,12 @@
  * judged Wrong Answer. Also, any solutions that attempt to circumvent the
  * judge will result in disqualification.
  *
+ * **Constraints:**
+ * 
+ * - `3 <= mountain_arr.length() <= 104`
+ * - `0 <= target <= 109`
+ * - `0 <= mountain_arr.get(index) <= 109`
+ * 
  * @param {number} target
  * @param {MountainArray} mountainArr
  * @return {number}
