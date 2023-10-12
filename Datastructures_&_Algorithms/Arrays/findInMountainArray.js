@@ -42,13 +42,19 @@
  * judge will result in disqualification.
  *
  * **Constraints:**
- * 
+ *
  * - `3 <= mountain_arr.length() <= 104`
  * - `0 <= target <= 109`
  * - `0 <= mountain_arr.get(index) <= 109`
- * 
+ *
  * @param {number} target
  * @param {MountainArray} mountainArr
  * @return {number}
  */
 const findInMountainArray = function (target, mountainArr) {};
+
+const array = [1, 2, 3, 4, 5, 3, 1],
+    target = 3;
+// Output: 2
+// Explanation: 3 exists in the array, at index=2 and index=5. Return the minimum index, which is 2.
+console.log(findInMountainArray(target, array));
