@@ -51,7 +51,49 @@
  * @param {MountainArray} mountainArr
  * @return {number}
  */
-const findInMountainArray = function (target, mountainArr) {};
+const findInMountainArray = function (target, mountainArr) {
+    const n = mountainArr.length();
+
+    // Find the peak
+    let left = 0,
+        right = n - 1,
+        peak = 0;
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        if (mountainArr.get(mid) < mountainArr.get(mid + 1)) {
+            left = peak = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    // Binary search in the increasing part
+    (left = 0), (right = peak);
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        if (mountainArr.get(mid) === target) return mid;
+        if (mountainArr.get(mid) < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    // Binary search in the decreasing part
+    (left = peak), (right = n - 1);
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        if (mountainArr.get(mid) === target) return mid;
+        if (mountainArr.get(mid) > target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    // Target not found
+    return -1;
+};
 
 const array = [1, 2, 3, 4, 5, 3, 1],
     target = 3;
