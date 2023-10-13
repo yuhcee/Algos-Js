@@ -11,24 +11,24 @@
  * @param {number[]} cost
  * @return {number}
  */
-const minCostClimbingStairs = (cost) => {
-    // The array's length should be 1 longer than the length of cost
-    // This is because we can treat the "top floor" as a step to reach
-    let len = cost.length,
-        minimumCost = Array(len + 1).fill(0);
+// const minCostClimbingStairs = (cost) => {
+//     // The array's length should be 1 longer than the length of cost
+//     // This is because we can treat the "top floor" as a step to reach
+//     let len = cost.length,
+//         minimumCost = Array(len + 1).fill(0);
 
-    // Start iteration from step 2, since the minimum cost of reaching
-    // step 0 and step 1 is 0
-    for (let i = 2; i < minimumCost.length; i++) {
-        let takeOneStep = minimumCost[i - 1] + cost[i - 1];
-        let takeTwoSteps = minimumCost[i - 2] + cost[i - 2];
+//     // Start iteration from step 2, since the minimum cost of reaching
+//     // step 0 and step 1 is 0
+//     for (let i = 2; i < minimumCost.length; i++) {
+//         let takeOneStep = minimumCost[i - 1] + cost[i - 1];
+//         let takeTwoSteps = minimumCost[i - 2] + cost[i - 2];
 
-        // apply the recurrence relation
-        minimumCost[i] = Math.min(takeOneStep, takeTwoSteps);
-    }
-    // The final element in minimumCost refers to the top floor
-    return minimumCost.at(-1);
-};
+//         // apply the recurrence relation
+//         minimumCost[i] = Math.min(takeOneStep, takeTwoSteps);
+//     }
+//     // The final element in minimumCost refers to the top floor
+//     return minimumCost.at(-1);
+// };
 
 const cost = [10, 15, 20];
 // Output: 15
