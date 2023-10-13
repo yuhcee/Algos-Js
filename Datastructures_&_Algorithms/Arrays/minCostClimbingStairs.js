@@ -30,6 +30,19 @@
 //     return minimumCost.at(-1);
 // };
 
+const minCostClimbingStairs = function (cost) {
+    let minCost = Array(cost.length + 1).fill(0);
+
+    for (let i = 2; i < minCost.length; i++) {
+        let takeOneStep = minCost[i - 1] + cost[i - 1];
+        let takeTwoSteps = minCost[i - 2] + cost[i - 2];
+
+        minCost[i] = Math.min(takeOneStep, takeTwoSteps);
+    }
+
+    return minCost.at(-1);
+};
+
 const cost = [10, 15, 20];
 // Output: 15
 /* Explanation: You will start at index 1.
