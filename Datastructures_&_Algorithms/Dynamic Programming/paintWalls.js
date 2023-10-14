@@ -25,3 +25,9 @@
  * @return {number}
  */
 const paintWalls = function (cost, time) {};
+
+const cost = [1, 2, 3, 2],
+    time = [1, 2, 3, 2];
+// Output: 3;
+/* Explanation: The walls at index 0 and 1 will be painted by the paid painter, and it will take 3 units of time; meanwhile, the free painter will paint the walls at index 2 and 3, free of cost in 2 units of time. Thus, the total cost is 1 + 2 = 3. */
+console.log(paintWalls(cost, time));
