@@ -13,6 +13,13 @@
  *
  * Return *the minimum amount of money required to paint the `n` walls*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= cost.length <= 500`
+ * - `cost.length == time.length`
+ * - `1 <= cost[i] <= 106`
+ * - `1 <= time[i] <= 500`
+ *
  * @param {number[]} cost
  * @param {number[]} time
  * @return {number}
