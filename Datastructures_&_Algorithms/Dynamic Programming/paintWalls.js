@@ -31,3 +31,9 @@ const cost = [1, 2, 3, 2],
 // Output: 3;
 /* Explanation: The walls at index 0 and 1 will be painted by the paid painter, and it will take 3 units of time; meanwhile, the free painter will paint the walls at index 2 and 3, free of cost in 2 units of time. Thus, the total cost is 1 + 2 = 3. */
 console.log(paintWalls(cost, time));
+
+const cost1 = [2, 3, 4, 2],
+    time1 = [1, 1, 1, 1];
+// Output: 4
+/* Explanation: The walls at index 0 and 3 will be painted by the paid painter, and it will take 2 units of time; meanwhile, the free painter will paint the walls at index 1 and 2, free of cost in 2 units of time. Thus, the total cost is 2 + 2 = 4. */
+console.log(paintWalls(cost1, time1));
