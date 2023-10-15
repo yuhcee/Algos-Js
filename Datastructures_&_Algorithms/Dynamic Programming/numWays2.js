@@ -31,3 +31,11 @@ Stay, Right, Left
 Right, Stay, Left
 Stay, Stay, Stay */
 console.log(numWays(steps, arrLen));
+
+const steps1 = 2,
+    arrLen1 = 4;
+// Output: 2
+/* Explanation: There are 2 differents ways to stay at index 0 after 2 steps
+Right, Left
+Stay, Stay */
+console.log(numWays(steps1, arrLen1));
