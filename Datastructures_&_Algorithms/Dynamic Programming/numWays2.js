@@ -39,3 +39,8 @@ const steps1 = 2,
 Right, Left
 Stay, Stay */
 console.log(numWays(steps1, arrLen1));
+
+const steps2 = 4, arrLen2 = 2
+// Output: 8
+console.log(numWays(steps2, arrLen2));
+
