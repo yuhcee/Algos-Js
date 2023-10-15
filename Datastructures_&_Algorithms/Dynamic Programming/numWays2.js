@@ -20,7 +20,29 @@
  * @param {number} arrLen
  * @return {number}
  */
-const numWays = function (steps, arrLen) {};
+const numWays = function (steps, arrLen) {
+    const MOD = 1000000007;
+
+    // The maximum index we can reach is min(arrLen, steps/2 + 1)
+    const maxLen = Math.min(arrLen, Math.floor(steps / 2) + 1);
+    const dp = new Array(steps + 1).fill(0).map(() => new Array(maxLen).fill(0));
+
+    dp[0][0] = 1;
+
+    for (let i = 1; i <= steps; i++) {
+        for (let j = 0; j < maxLen; j++) {
+            dp[i][j] = dp[i - 1][j];
+            if (j - 1 >= 0) {
+                dp[i][j] = (dp[i][j] + dp[i - 1][j - 1]) % MOD;
+            }
+            if (j + 1 < maxLen) {
+                dp[i][j] = (dp[i][j] + dp[i - 1][j + 1]) % MOD;
+            }
+        }
+    }
+
+    return dp[steps][0];
+};
 
 const steps = 3,
     arrLen = 2;
@@ -40,7 +62,7 @@ Right, Left
 Stay, Stay */
 console.log(numWays(steps1, arrLen1));
 
-const steps2 = 4, arrLen2 = 2
+const steps2 = 4,
+    arrLen2 = 2;
 // Output: 8
 console.log(numWays(steps2, arrLen2));
-
