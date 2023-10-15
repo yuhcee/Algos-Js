@@ -21,3 +21,13 @@
  * @return {number}
  */
 const numWays = function (steps, arrLen) {};
+
+const steps = 3,
+    arrLen = 2;
+// Output: 4
+/* Explanation: There are 4 differents ways to stay at index 0 after 3 steps.
+Right, Left, Stay
+Stay, Right, Left
+Right, Stay, Left
+Stay, Stay, Stay */
+console.log(numWays(steps, arrLen));
