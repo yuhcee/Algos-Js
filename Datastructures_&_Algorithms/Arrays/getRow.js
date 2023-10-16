@@ -23,3 +23,7 @@ console.log(getRow(rowIndex));
 const rowIndex1 = 0;
 // Output: [1]
 console.log(getRow(rowIndex1));
+
+const rowIndex2 = 1;
+// Output: [1,1]
+console.log(getRow(rowIndex2));
