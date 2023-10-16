@@ -14,7 +14,14 @@
  * @param {number} rowIndex
  * @return {number[]}
  */
-const getRow = function (rowIndex) {};
+const getRow = function (rowIndex) {
+    const res = [1];
+
+    for (let i = 1; i <= rowIndex; i++) {
+        res[i] = res[i - 1] * (rowIndex - i - 1) + 1;
+    }
+    return res;
+};
 
 const rowIndex = 3;
 // Output: [1,3,3,1]
