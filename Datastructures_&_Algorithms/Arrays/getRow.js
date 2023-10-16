@@ -19,3 +19,7 @@ const getRow = function (rowIndex) {};
 const rowIndex = 3;
 // Output: [1,3,3,1]
 console.log(getRow(rowIndex));
+
+const rowIndex1 = 0;
+// Output: [1]
+console.log(getRow(rowIndex1));
