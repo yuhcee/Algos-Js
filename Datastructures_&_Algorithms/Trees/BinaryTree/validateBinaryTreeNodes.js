@@ -13,14 +13,20 @@
  * numbers in this problem.
  *
  * **Constraints:**
- * 
+ *
  * - `n == leftChild.length == rightChild.length`
  * - `1 <= n <= 104`
  * - `-1 <= leftChild[i], rightChild[i] <= n - 1`
- * 
+ *
  * @param {number} n
  * @param {number[]} leftChild
  * @param {number[]} rightChild
  * @return {boolean}
  */
 const validateBinaryTreeNodes = function (n, leftChild, rightChild) {};
+
+const n = 4,
+    leftChild = [1, -1, 3, -1],
+    rightChild = [2, -1, -1, -1];
+// Output: true
+console.log(validateBinaryTreeNodes(n, leftChild, rightChild));
