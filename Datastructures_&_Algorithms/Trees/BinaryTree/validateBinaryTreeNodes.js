@@ -23,7 +23,47 @@
  * @param {number[]} rightChild
  * @return {boolean}
  */
-const validateBinaryTreeNodes = function (n, leftChild, rightChild) {};
+const validateBinaryTreeNodes = function (n, leftChild, rightChild) {
+    const parentCount = new Array(n).fill(0);
+    const visited = new Array(n).fill(false);
+
+    for (let i = 0; i < n; i++) {
+        if (leftChild[i] !== -1) {
+            parentCount[leftChild[i]]++;
+        }
+        if (rightChild[i] !== -1) {
+            parentCount[rightChild[i]]++;
+        }
+    }
+
+    let rootCount = 0;
+    let root = -1;
+    for (let i = 0; i < n; i++) {
+        if (parentCount[i] === 0) {
+            rootCount++;
+            root = i;
+        } else if (parentCount[i] > 1) {
+            return false;
+        }
+    }
+
+    if (rootCount !== 1) return false;
+
+    const dfs = (node) => {
+        if (node === -1 || visited[node]) return;
+        visited[node] = true;
+        dfs(leftChild[node]);
+        dfs(rightChild[node]);
+    };
+
+    dfs(root);
+
+    for (let i = 0; i < n; i++) {
+        if (!visited[i]) return false;
+    }
+
+    return true;
+};
 
 const n = 4,
     leftChild = [1, -1, 3, -1],
