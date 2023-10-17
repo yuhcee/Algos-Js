@@ -12,6 +12,12 @@
  * Note that the nodes have no values and that we only use the node
  * numbers in this problem.
  *
+ * **Constraints:**
+ * 
+ * - `n == leftChild.length == rightChild.length`
+ * - `1 <= n <= 104`
+ * - `-1 <= leftChild[i], rightChild[i] <= n - 1`
+ * 
  * @param {number} n
  * @param {number[]} leftChild
  * @param {number[]} rightChild
