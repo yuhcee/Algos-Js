@@ -30,3 +30,9 @@ const n = 4,
     rightChild = [2, -1, -1, -1];
 // Output: true
 console.log(validateBinaryTreeNodes(n, leftChild, rightChild));
+
+const n1 = 4,
+    leftChild1 = [1, -1, 3, -1],
+    rightChild1 = [2, 3, -1, -1];
+// Output: false
+console.log(validateBinaryTreeNodes(n1, leftChild1, rightChild1));
