@@ -36,3 +36,9 @@ const n1 = 4,
     rightChild1 = [2, 3, -1, -1];
 // Output: false
 console.log(validateBinaryTreeNodes(n1, leftChild1, rightChild1));
+
+const n2 = 2,
+    leftChild2 = [1, 0],
+    rightChild2 = [-1, -1];
+// Output: false
+console.log(validateBinaryTreeNodes(n2, leftChild2, rightChild2));
