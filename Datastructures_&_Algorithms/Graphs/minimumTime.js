@@ -18,6 +18,18 @@
  * **Note:** The test cases are generated such that it is possible to complete every course (i.e.,
  * the graph is a directed acyclic graph).
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 5 * 104`
+ * - `0 <= relations.length <= min(n * (n - 1) / 2, 5 * 104)`
+ * - `relations[j].length == 2`
+ * - `1 <= prevCoursej, nextCoursej <= n`
+ * - `prevCoursej != nextCoursej`
+ * - All the pairs `[prevCoursej, nextCoursej]` are **unique**.
+ * - `time.length == n`
+ * - `1 <= time[i] <= 104`
+ * - The given graph is a directed acyclic graph.
+ *
  * @param {number} n
  * @param {number[][]} relations
  * @param {number[]} time
