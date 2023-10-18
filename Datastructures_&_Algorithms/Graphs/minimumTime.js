@@ -36,3 +36,16 @@
  * @return {number}
  */
 const minimumTime = function (n, relations, time) {};
+
+const n = 3,
+    relations = [
+        [1, 3],
+        [2, 3],
+    ],
+    time = [3, 2, 5];
+// Output: 8
+/* Explanation: The figure above represents the given graph and the time required to complete each course. 
+We start course 1 and course 2 simultaneously at month 0.
+Course 1 takes 3 months and course 2 takes 2 months to complete respectively.
+Thus, the earliest time we can start course 3 is at month 3, and the total time required is 3 + 5 = 8 months. */
+console.log(minimumTime(n, relations, time));
