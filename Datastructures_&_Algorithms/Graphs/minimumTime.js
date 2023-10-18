@@ -35,7 +35,37 @@
  * @param {number[]} time
  * @return {number}
  */
-const minimumTime = function (n, relations, time) {};
+const minimumTime = function (n, relations, time) {
+    const adjList = new Array(n).fill(0).map(() => []);
+    const inDegree = new Array(n).fill(0);
+    const maxTime = [...time];
+
+    // Create adjacency list and compute in-degrees
+    for (let [u, v] of relations) {
+        adjList[u - 1].push(v - 1);
+        inDegree[v - 1]++;
+    }
+
+    const queue = [];
+    for (let i = 0; i < n; i++) {
+        if (inDegree[i] === 0) {
+            queue.push(i);
+        }
+    }
+
+    while (queue.length) {
+        const curr = queue.shift();
+        for (const next of adjList[curr]) {
+            maxTime[next] = Math.max(maxTime[next], maxTime[curr] + time[next]);
+            inDegree[next]--;
+            if (inDegree[next] === 0) {
+                queue.push(next);
+            }
+        }
+    }
+
+    return Math.max(...maxTime);
+};
 
 const n = 3,
     relations = [
