@@ -57,3 +57,8 @@ function getNextValidChar(str, index) {
 const s = "ab#c", t = "ad#c"
 // Output: true
 // Explanation: Both s and t become "ac".
+
+
+const s = "ab##", t = "c#d#"
+// Output: true
+// Explanation: Both s and t become "".
