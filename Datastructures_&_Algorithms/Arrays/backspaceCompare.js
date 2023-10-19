@@ -6,6 +6,10 @@
  *
  * Note that after backspacing an empty text, the text will continue empty.
  *
+ * **Constraints:**
+
+1 <= s.length, t.length <= 200
+s and t only contain lowercase letters and '#' characters.
  * 
  * @param {string} s
  * @param {string} t
