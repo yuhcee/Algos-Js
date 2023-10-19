@@ -6,6 +6,7 @@
  *
  * Note that after backspacing an empty text, the text will continue empty.
  *
+ * 
  * @param {string} s
  * @param {string} t
  * @return {boolean}
