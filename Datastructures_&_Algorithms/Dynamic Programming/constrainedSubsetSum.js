@@ -18,7 +18,36 @@
  * @param {number} k
  * @return {number}
  */
-const constrainedSubsetSum = function (nums, k) {};
+const constrainedSubsetSum = function (nums, k) {
+    const n = nums.length;
+    const dp = new Array(n).fill(0);
+    const dq = []; // deque to store indices
+
+    let maxSum = -Infinity;
+
+    for (let i = 0; i < n; i++) {
+        // If the front of the deque is out of the window of size k, pop it
+        while (dq.length && dq[0] < i - k) {
+            dq.shift();
+        }
+
+        // Set dp[i] to nums[i] or nums[i] + maximum value in the window
+        dp[i] = nums[i] + (dq.length ? Math.max(0, dp[dq[0]]) : 0);
+
+        // Update the maximum sum
+        maxSum = Math.max(maxSum, dp[i]);
+
+        // Maintain the deque in decreasing order of dp values
+        while (dq.length && dp[i] >= dp[dq[dq.length - 1]]) {
+            dq.pop();
+        }
+
+        // Push the current index to the back of the deque
+        dq.push(i);
+    }
+
+    return maxSum;
+};
 
 const nums = [10, 2, -10, 5, 20],
     k = 2;
