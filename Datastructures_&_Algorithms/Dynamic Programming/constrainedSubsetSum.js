@@ -19,3 +19,9 @@
  * @return {number}
  */
 const constrainedSubsetSum = function (nums, k) {};
+
+const nums = [10, 2, -10, 5, 20],
+    k = 2;
+// Output: 37
+// Explanation: The subsequence is [10, 2, 5, 20].
+console.log(constrainedSubsetSum(nums, k));
