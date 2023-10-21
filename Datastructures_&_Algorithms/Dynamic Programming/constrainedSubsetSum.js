@@ -25,3 +25,9 @@ const nums = [10, 2, -10, 5, 20],
 // Output: 37
 // Explanation: The subsequence is [10, 2, 5, 20].
 console.log(constrainedSubsetSum(nums, k));
+
+const nums1 = [-1, -2, -3],
+    k1 = 1;
+// Output: -1
+// Explanation: The subsequence must be non-empty, so we choose the largest number.
+console.log(constrainedSubsetSum(nums1, k1));
