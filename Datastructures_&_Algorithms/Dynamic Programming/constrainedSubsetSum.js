@@ -9,6 +9,11 @@
  * A *subsequence* of an array is obtained by deleting some number of elements (can be zero) from
  * the array, leaving the remaining elements in their original order.
  *
+ * **Constraints:**
+ *
+ * - `1 <= k <= nums.length <= 105`
+ * - `-104 <= nums[i] <= 104`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
