@@ -31,3 +31,9 @@ const nums1 = [-1, -2, -3],
 // Output: -1
 // Explanation: The subsequence must be non-empty, so we choose the largest number.
 console.log(constrainedSubsetSum(nums1, k1));
+
+const nums2 = [10, -2, -10, -5, 20],
+    k2 = 2;
+// Output: 23
+// Explanation: The subsequence is [10, -2, -5, 20].
+console.log(constrainedSubsetSum(nums2, k2));
