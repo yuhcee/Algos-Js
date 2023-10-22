@@ -42,3 +42,9 @@ const maximumScore = function (nums, k) {
 
     return maxScore;
 };
+
+const nums = [1, 4, 3, 7, 4, 5],
+    k = 3;
+// Output: 15
+// Explanation: The optimal subarray is (1, 5) with a score of min(4,3,7,4,5) * (5-1+1) = 3 * 5 = 15.
+console.log(maximumScore(nums, k));
