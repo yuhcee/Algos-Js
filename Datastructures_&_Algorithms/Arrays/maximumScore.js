@@ -7,6 +7,12 @@
  *
  * Return *the maximum possible **score** of a **good** subarray*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 2 * 104`
+ * - `0 <= k < nums.length`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
