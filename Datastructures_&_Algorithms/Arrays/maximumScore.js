@@ -17,4 +17,28 @@
  * @param {number} k
  * @return {number}
  */
-const maximumScore = function (nums, k) {};
+const maximumScore = function (nums, k) {
+    let left = k,
+        right = k;
+    let minValue = nums[k];
+    let maxScore = minValue;
+
+    while (left > 0 || right < nums.length - 1) {
+        if (left == 0) {
+            right++;
+            minValue = Math.min(minValue, nums[right]);
+        } else if (right == nums.length - 1) {
+            left--;
+            minValue = Math.min(minValue, nums[left]);
+        } else if (nums[left - 1] >= nums[right + 1]) {
+            left--;
+            minValue = Math.min(minValue, nums[left]);
+        } else {
+            right++;
+            minValue = Math.min(minValue, nums[right]);
+        }
+        maxScore = Math.max(maxScore, minValue * (right - left + 1));
+    }
+
+    return maxScore;
+};
