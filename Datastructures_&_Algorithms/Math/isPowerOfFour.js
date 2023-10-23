@@ -19,3 +19,7 @@ const isPowerOfFour = function (n) {};
 const n = 16;
 // Output: true
 console.log(isPowerOfFour(n));
+
+const n1 = 5;
+// Output: false
+console.log(isPowerOfFour(n1));
