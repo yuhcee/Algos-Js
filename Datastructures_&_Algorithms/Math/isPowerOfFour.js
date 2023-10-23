@@ -7,6 +7,9 @@
  * An integer `n` is a power of four, if there exists an integer `x`
  * such that `n == 4x`.
  *
+ * **Constraints:**
+ *
+ * `-231 <= n <= 231 - 1`
  *
  * @param {number} n
  * @return {boolean}
