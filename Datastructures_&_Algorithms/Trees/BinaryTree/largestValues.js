@@ -43,3 +43,7 @@ const largestValues = function (root) {
 
     return result;
 };
+
+const root = [1, 3, 2, 5, 3, null, 9];
+// Output: [1,3,9]
+console.log(largestValues(root));
