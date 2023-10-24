@@ -20,4 +20,26 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-const largestValues = function (root) {};
+const largestValues = function (root) {
+    if (!root) return [];
+
+    let result = [];
+    let queue = [root];
+
+    while (queue.length > 0) {
+        let levelSize = queue.length;
+        let maxValue = -Infinity;
+
+        for (let i = 0; i < levelSize; i++) {
+            let currentNode = queue.shift();
+            maxValue = Math.max(maxValue, currentNode.val);
+
+            if (currentNode.left) queue.push(currentNode.left);
+            if (currentNode.right) queue.push(currentNode.right);
+        }
+
+        result.push(maxValue);
+    }
+
+    return result;
+};
