@@ -43,3 +43,11 @@ const n = 1,
 // Output: 0
 // Explanation: row 1: 0
 console.log(kthGrammar(n, k));
+
+const n1 = 2,
+    k1 = 1;
+/* Output: 0
+Explanation: 
+row 1: 0
+row 2: 01 */
+console.log(kthGrammar(n1, k1));
