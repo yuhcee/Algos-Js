@@ -51,3 +51,11 @@ Explanation:
 row 1: 0
 row 2: 01 */
 console.log(kthGrammar(n1, k1));
+
+const n2 = 2,
+    k2 = 2;
+/* Output: 1
+Explanation: 
+row 1: 0
+row 2: 01 */
+console.log(kthGrammar(n2, k2));
