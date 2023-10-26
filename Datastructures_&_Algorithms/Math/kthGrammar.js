@@ -37,3 +37,9 @@ const kthGrammar = function (n, k) {
         return 1 - kthGrammar(n - 1, k - mid);
     }
 };
+
+const n = 1,
+    k = 1;
+// Output: 0
+// Explanation: row 1: 0
+console.log(kthGrammar(n, k));
