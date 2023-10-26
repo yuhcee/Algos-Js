@@ -11,6 +11,11 @@
  * Given two integer `n` and `k`, return the `kth` (**1-indexed**) symbol in the `nth` row of a
  * table of `n` rows.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 30`
+ * - `1 <= k <= 2n - 1`
+ *
  * @param {number} n
  * @param {number} k
  * @return {number}
