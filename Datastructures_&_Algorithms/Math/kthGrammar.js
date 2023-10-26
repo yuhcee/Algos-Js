@@ -20,4 +20,20 @@
  * @param {number} k
  * @return {number}
  */
-const kthGrammar = function (n, k) {};
+const kthGrammar = function (n, k) {
+    // Base case
+    if (n === 1) {
+        return 0;
+    }
+
+    // Calculate the midpoint of the (n-1)-th row
+    const mid = Math.pow(2, n - 2);
+
+    // If k is in the first half of the (n-1)-th row
+    if (k <= mid) {
+        return kthGrammar(n - 1, k);
+    } else {
+        // If k is in the second half, flip the result of the (n-1)-th row
+        return 1 - kthGrammar(n - 1, k - mid);
+    }
+};
