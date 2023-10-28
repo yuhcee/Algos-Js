@@ -21,4 +21,29 @@
  * @param {number} n
  * @return {number}
  */
-const countVowelPermutation = function (n) {};
+const countVowelPermutation = function (n) {
+    const MOD = 1000000007;
+    let dp = new Array(2).fill(0).map(() => new Array(5).fill(0));
+    let curr = 0,
+        prev = 1;
+
+    // Initialize for strings of length 1
+    for (let i = 0; i < 5; i++) dp[curr][i] = 1;
+
+    for (let i = 1; i < n; i++) {
+        [curr, prev] = [prev, curr]; // Swap current and previous
+
+        dp[curr][0] = dp[prev][1]; // 'a' can only be followed by 'e'
+        dp[curr][1] = (dp[prev][0] + dp[prev][2]) % MOD; // 'e' can be followed by 'a' or 'i'
+        dp[curr][2] = (dp[prev][0] + dp[prev][1] + dp[prev][3] + dp[prev][4]) % MOD; // 'i' can be followed by 'a', 'e', 'o', or 'u'
+        dp[curr][3] = (dp[prev][2] + dp[prev][4]) % MOD; // 'o' can be followed by 'i' or 'u'
+        dp[curr][4] = dp[prev][0]; // 'u' can only be followed by 'a'
+    }
+
+    let result = 0;
+    for (let i = 0; i < 5; i++) {
+        result = (result + dp[curr][i]) % MOD;
+    }
+
+    return result;
+};
