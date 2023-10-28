@@ -52,3 +52,8 @@ const n = 1;
 // Output: 5
 // Explanation: All possible strings are: "a", "e", "i" , "o" and "u".
 console.log(countVowelPermutation(n));
+
+const n1 = 2;
+// Output: 10
+// Explanation: All possible strings are: "ae", "ea", "ei", "ia", "ie", "io", "iu", "oi", "ou" and "ua".
+console.log(countVowelPermutation(n1));
