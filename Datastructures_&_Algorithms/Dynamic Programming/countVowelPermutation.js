@@ -14,6 +14,10 @@
  *
  * Since the answer may be too large, return it modulo `10^9 + 7`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 2 * 10^4`
+ *
  * @param {number} n
  * @return {number}
  */
