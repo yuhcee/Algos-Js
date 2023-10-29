@@ -23,11 +23,14 @@
  * @return {number}
  */
 var poorPigs = function (buckets, minutesToDie, minutesToTest) {
-    let answer = 1;
-    let n = (minutesToTest / minutesToDie) >> 0;
-    n += 1;
+    let rounds = Math.floor(minutesToTest / minutesToDie) + 1;
+    let pigs = 0;
 
-    return Math.ceil(Math.log(buckets) / Math.log(n));
+    while (Math.pow(rounds, pigs) < buckets) {
+        pigs++;
+    }
+
+    return pigs;
 };
 const buckets = 4,
     minutesToDie = 15,
