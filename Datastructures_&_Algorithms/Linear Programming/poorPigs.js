@@ -68,3 +68,9 @@ At time 15, there are 2 possible outcomes:
 At time 30, one of the two pigs must die, and the poisonous bucket is the one it was fed. */
 
 console.log(poorPigs(buckets1, minutesToDie1, minutesToTest1));
+
+const buckets2 = 5,
+    minutesToDie2 = 5,
+    minutesToTest2 = 20;
+// Output: 1
+console.log(poorPigs(buckets2, minutesToDie2, minutesToTest2));
