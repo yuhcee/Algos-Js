@@ -16,4 +16,23 @@
  * @param {number[]} arr
  * @return {number[]}
  */
-const sortByBits = function (arr) {};
+const sortByBits = function (arr) {
+    function countBits(num) {
+        let count = 0;
+        while (num > 0) {
+            count += num % 2;
+            num = Math.floor(num / 2);
+        }
+        return count;
+    }
+
+    return arr.sort((a, b) => {
+        const bitCountA = countBits(a);
+        const bitCountB = countBits(b);
+
+        if (bitCountA === bitCountB) {
+            return a - b; // Sort by value if bit counts are the same
+        }
+        return bitCountA - bitCountB; // Sort by bit count
+    });
+};
