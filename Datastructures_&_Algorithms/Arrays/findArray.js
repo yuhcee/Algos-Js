@@ -39,3 +39,8 @@ const pref = [5, 2, 0, 3, 1];
 - pref[3] = 5 ^ 7 ^ 2 ^ 3 = 3.
 - pref[4] = 5 ^ 7 ^ 2 ^ 3 ^ 2 = 1. */
 console.log(findArray(pref));
+
+const pref1 = [13];
+// Output: [13]
+// Explanation: We have pref[0] = arr[0] = 13.
+console.log(findArray(pref1));
