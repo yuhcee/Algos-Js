@@ -18,4 +18,14 @@
  * @param {number[]} pref
  * @return {number[]}
  */
-const findArray = function (pref) {};
+const findArray = function (pref) {
+    const n = pref.length;
+    const arr = new Array(n);
+    arr[0] = pref[0];
+
+    for (let i = 1; i < n; i++) {
+        arr[i] = pref[i - 1] ^ pref[i];
+    }
+
+    return arr;
+};
