@@ -10,6 +10,11 @@
  *
  * It can be proven that the answer is **unique**.
  *
+ * **Constraints:**
+ *
+ * - `1 <= pref.length <= 105`
+ * - `0 <= pref[i] <= 106`
+ *
  * @param {number[]} pref
  * @return {number[]}
  */
