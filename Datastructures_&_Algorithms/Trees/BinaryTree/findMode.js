@@ -23,6 +23,11 @@
  * **greater than or equal to** the node's key.
  * - Both the left and right subtrees must also be binary search trees.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is in the range `[1, 104]`.
+ * - `-105 <= Node.val <= 105`
+ *
  * @param {TreeNode} root
  * @return {number[]}
  */
