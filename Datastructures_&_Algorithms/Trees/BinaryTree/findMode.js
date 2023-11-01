@@ -62,3 +62,5 @@ const findMode = function (root) {
     inOrderTraversal(root);
     return modes;
 };
+const root = [1, null, 2, 2];
+// Output: [2]
