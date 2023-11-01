@@ -31,4 +31,34 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-const findMode = function (root) {};
+const findMode = function (root) {
+    let currentCount = 0;
+    let maxCount = 0;
+    let previousVal = null;
+    let modes = [];
+
+    function inOrderTraversal(node) {
+        if (!node) return;
+
+        inOrderTraversal(node.left);
+
+        if (previousVal === node.val) {
+            currentCount++;
+        } else {
+            currentCount = 1;
+        }
+        previousVal = node.val;
+
+        if (currentCount > maxCount) {
+            maxCount = currentCount;
+            modes = [node.val];
+        } else if (currentCount === maxCount) {
+            modes.push(node.val);
+        }
+
+        inOrderTraversal(node.right);
+    }
+
+    inOrderTraversal(root);
+    return modes;
+};
