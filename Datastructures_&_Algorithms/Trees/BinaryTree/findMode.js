@@ -64,3 +64,6 @@ const findMode = function (root) {
 };
 const root = [1, null, 2, 2];
 // Output: [2]
+
+const root1 = [0];
+// Output: [0]
