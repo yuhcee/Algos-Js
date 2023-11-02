@@ -51,3 +51,12 @@ const averageOfSubtree = function (root) {
     postOrderTraversal(root);
     return result;
 };
+
+const root = [4, 8, 5, 0, 1, null, 6];
+// Output: 5
+/* Explanation: 
+For the node with value 4: The average of its subtree is (4 + 8 + 5 + 0 + 1 + 6) / 6 = 24 / 6 = 4.
+For the node with value 5: The average of its subtree is (5 + 6) / 2 = 11 / 2 = 5.
+For the node with value 0: The average of its subtree is 0 / 1 = 0.
+For the node with value 1: The average of its subtree is 1 / 1 = 1.
+For the node with value 6: The average of its subtree is 6 / 1 = 6. */
