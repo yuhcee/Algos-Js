@@ -20,6 +20,11 @@
  * - A **subtree** of `root` is a tree consisting of `root` and all of
  * its descendants.
  *
+ * **Constraints**:
+ *
+ * - The number of nodes in the tree is in the range `[1, 1000]`.
+ * - `0 <= Node.val <= 1000`
+ *
  * @param {TreeNode} root
  * @return {number}
  */
