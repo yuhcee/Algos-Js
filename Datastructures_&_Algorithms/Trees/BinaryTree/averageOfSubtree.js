@@ -28,4 +28,26 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const averageOfSubtree = function (root) {};
+const averageOfSubtree = function (root) {
+    let result = 0;
+
+    function postOrderTraversal(node) {
+        if (!node) return [0, 0]; // [sum, count]
+
+        const [leftSum, leftCount] = postOrderTraversal(node.left);
+        const [rightSum, rightCount] = postOrderTraversal(node.right);
+
+        const sum = leftSum + rightSum + node.val;
+        const count = leftCount + rightCount + 1;
+        const average = Math.floor(sum / count);
+
+        if (node.val === average) {
+            result++;
+        }
+
+        return [sum, count];
+    }
+
+    postOrderTraversal(root);
+    return result;
+};
