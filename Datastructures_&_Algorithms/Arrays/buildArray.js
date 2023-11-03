@@ -24,6 +24,13 @@
  * Return *the stack operations needed to build `target` following the mentioned rules. If there 
  * are multiple valid answers, return **any of them**.
  * 
+ * **Constraints:**
+ * 
+ * - `1 <= target.length <= 100`
+ * - `1 <= n <= 100`
+ * - `1 <= target[i] <= n`
+ * - `target` is strictly increasing.
+ * 
  * @param {number[]} target
  * @param {number} n
  * @return {string[]}
