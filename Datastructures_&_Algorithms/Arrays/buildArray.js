@@ -61,3 +61,12 @@ Read 2 from the stream and push it to the stack. s = [1,2].
 Pop the integer on the top of the stack. s = [1].
 Read 3 from the stream and push it to the stack. s = [1,3]. */
 console.log(buildArray(target, n));
+
+const target1 = [1, 2, 3],
+    n1 = 3;
+// Output: ['Push', 'Push', 'Push'];
+/* Explanation: Initially the stack s is empty. The last element is the top of the stack.
+Read 1 from the stream and push it to the stack. s = [1].
+Read 2 from the stream and push it to the stack. s = [1,2].
+Read 3 from the stream and push it to the stack. s = [1,2,3]. */
+console.log(buildArray(target1, n1));
