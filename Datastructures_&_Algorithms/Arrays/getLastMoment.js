@@ -55,3 +55,10 @@ const n = 4,
 -The ant at index 4 is named D and going to the left.
 The last moment when an ant was on the plank is t = 4 seconds. After that, it falls immediately out of the plank. (i.e., We can say that at t = 4.0000000001, there are no ants on the plank). */
 console.log(getLastMoment(n, left, right));
+
+const n1 = 7,
+    left1 = [],
+    right1 = [0, 1, 2, 3, 4, 5, 6, 7];
+// Output: 7
+// Explanation: All ants are going to the right, the ant at index 0 needs 7 seconds to fall.
+console.log(getLastMoment(n1, left1, right1));
