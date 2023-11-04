@@ -43,3 +43,15 @@ const getLastMoment = function (n, left, right) {
     // The last moment when the last ant falls is the maximum of maxLeft and maxRight
     return Math.max(maxLeft, maxRight);
 };
+
+const n = 4,
+    left = [4, 3],
+    right = [0, 1];
+// Output: 4
+/* Explanation: In the image above:
+-The ant at index 0 is named A and going to the right.
+-The ant at index 1 is named B and going to the right.
+-The ant at index 3 is named C and going to the left.
+-The ant at index 4 is named D and going to the left.
+The last moment when an ant was on the plank is t = 4 seconds. After that, it falls immediately out of the plank. (i.e., We can say that at t = 4.0000000001, there are no ants on the plank). */
+console.log(getLastMoment(n, left, right));
