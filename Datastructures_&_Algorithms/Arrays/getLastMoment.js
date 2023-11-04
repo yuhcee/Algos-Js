@@ -33,4 +33,13 @@
  * @param {number[]} right
  * @return {number}
  */
-const getLastMoment = function (n, left, right) {};
+const getLastMoment = function (n, left, right) {
+    // The last moment for ants moving to the left is the maximum value in the left array
+    let maxLeft = left.length > 0 ? Math.max(...left) : 0;
+
+    // The last moment for ants moving to the right is the distance from the minimum value in the right array to the end of the plank
+    let maxRight = right.length > 0 ? n - Math.min(...right) : 0;
+
+    // The last moment when the last ant falls is the maximum of maxLeft and maxRight
+    return Math.max(maxLeft, maxRight);
+};
