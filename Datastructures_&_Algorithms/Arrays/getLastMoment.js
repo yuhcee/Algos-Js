@@ -17,6 +17,17 @@
  * the positions of the ants moving to the left and the right, return
  * *the moment when the last ant(s) fall out of the plank*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 104`
+ * - `0 <= left.length <= n + 1`
+ * - `0 <= left[i] <= n`
+ * - `0 <= right.length <= n + 1`
+ * - `0 <= right[i] <= n`
+ * - `1 <= left.length + right.length <= n + 1`
+ * - All values of `left` and `right` are unique, and each value can
+ * appear **only in one** of the two arrays.
+ *
  * @param {number} n
  * @param {number[]} left
  * @param {number[]} right
