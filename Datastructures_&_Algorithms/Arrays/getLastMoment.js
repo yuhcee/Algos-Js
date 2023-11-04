@@ -62,3 +62,10 @@ const n1 = 7,
 // Output: 7
 // Explanation: All ants are going to the right, the ant at index 0 needs 7 seconds to fall.
 console.log(getLastMoment(n1, left1, right1));
+
+const n2 = 7,
+    left2 = [0, 1, 2, 3, 4, 5, 6, 7],
+    right2 = [];
+// Output: 7
+// Explanation: All ants are going to the left, the ant at index 7 needs 7 seconds to fall.
+console.log(getLastMoment(n2, left2, right2));
