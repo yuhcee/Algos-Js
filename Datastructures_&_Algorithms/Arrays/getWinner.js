@@ -25,4 +25,28 @@
  * @param {number} k
  * @return {number}
  */
-const getWinner = function (arr, k) {};
+const getWinner = function (arr, k) {
+    let currentWinner = arr[0]; // The initial winner is the first element
+    let winCount = 0; // To count the consecutive wins
+
+    // Start from the second element and simulate the game
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > currentWinner) {
+            // If the current element is greater, it becomes the new winner
+            currentWinner = arr[i];
+            winCount = 1; // Reset the win count to 1
+        } else {
+            // If the current winner wins again, increment the win count
+            winCount++;
+        }
+
+        // If the win count reaches k, return the current winner
+        if (winCount === k) {
+            return currentWinner;
+        }
+    }
+
+    // If we reach the end without any integer winning k times, the current winner
+    // must be the largest integer in the array and thus will win all subsequent rounds.
+    return currentWinner;
+};
