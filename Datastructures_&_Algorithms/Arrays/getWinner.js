@@ -62,3 +62,9 @@ Round |       arr       | winner | win_count
   4   | [5,4,6,7,1,2,3] | 5      | 2
 So we can see that 4 rounds will be played and 5 is the winner because it wins 2 consecutive games. */
 console.log(getWinner(arr, k));
+
+const arr1 = [3, 2, 1],
+    k1 = 10;
+// Output: 3
+// Explanation: 3 will win the first 10 rounds consecutively.
+console.log(getWinner(arr1, k1));
