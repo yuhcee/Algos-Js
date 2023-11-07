@@ -62,3 +62,12 @@ After a minute, the distances of the monsters are [X,2,3]. You eliminate the sec
 After a minute, the distances of the monsters are [X,X,2]. You eliminate the thrid monster.
 All 3 monsters can be eliminated. */
 console.log(eliminateMaximum(dist, speed));
+
+const dist1 = [1, 1, 2, 3],
+    speed1 = [1, 1, 1, 1];
+// Output: 1
+/* Explanation:
+In the beginning, the distances of the monsters are [1,1,2,3]. You eliminate the first monster.
+After a minute, the distances of the monsters are [X,0,1,2], so you lose.
+You can only eliminate 1 monster. */
+console.log(eliminateMaximum(dist1, speed1));
