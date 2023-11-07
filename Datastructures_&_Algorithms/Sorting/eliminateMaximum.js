@@ -33,4 +33,22 @@
  * @param {number[]} speed
  * @return {number}
  */
-const eliminateMaximum = function (dist, speed) {};
+const eliminateMaximum = function (dist, speed) {
+    // Calculate the time it takes for each monster to reach the city
+    let times = dist.map((d, i) => Math.ceil(d / speed[i]));
+
+    // Sort the times in ascending order
+    times.sort((a, b) => a - b);
+
+    // Go through each monster and eliminate as many as possible
+    for (let i = 0; i < times.length; i++) {
+        // If the time for this monster to reach the city is less than or equal to i,
+        // it means we can't eliminate it before it reaches the city
+        if (times[i] <= i) {
+            return i; // Return the number of monsters eliminated so far
+        }
+    }
+
+    // If we've gone through all monsters, return the total number
+    return times.length;
+};
