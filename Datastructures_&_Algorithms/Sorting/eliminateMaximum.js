@@ -23,6 +23,12 @@
  * before you lose, or `n` if you can eliminate all the monsters
  * before they reach the city.
  *
+ * **Constraints:**
+ *
+ * - `n == dist.length == speed.length`
+ * - `1 <= n <= 105`
+ * - `1 <= dist[i], speed[i] <= 105`
+ *
  * @param {number[]} dist
  * @param {number[]} speed
  * @return {number}
