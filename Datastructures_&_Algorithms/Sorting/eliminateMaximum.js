@@ -71,3 +71,12 @@ In the beginning, the distances of the monsters are [1,1,2,3]. You eliminate the
 After a minute, the distances of the monsters are [X,0,1,2], so you lose.
 You can only eliminate 1 monster. */
 console.log(eliminateMaximum(dist1, speed1));
+
+const dist2 = [3, 2, 4],
+    speed2 = [5, 3, 2];
+// Output: 1
+/* Explanation:
+In the beginning, the distances of the monsters are [3,2,4]. You eliminate the first monster.
+After a minute, the distances of the monsters are [X,0,2], so you lose.
+You can only eliminate 1 monster. */
+console.log(eliminateMaximum(dist2, speed2));
