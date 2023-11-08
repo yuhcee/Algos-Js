@@ -13,6 +13,11 @@
  * A cell's **adjacent** cells are the 8 cells around it that share at
  * least one corner with it. You can visit the same cell several times.
  *
+ * **Constraints:**
+ *
+ * - `1 <= sx, sy, fx, fy <= 109`
+ * - `0 <= t <= 109`
+ *
  * @param {number} sx
  * @param {number} sy
  * @param {number} fx
