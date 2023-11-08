@@ -35,3 +35,12 @@ const isReachableAtTime = function (sx, sy, fx, fy, t) {
 
     return xDist <= t && yDist <= t;
 };
+
+const sx = 2,
+    sy = 4,
+    fx = 7,
+    fy = 7,
+    t = 6;
+// Output: true
+/* Explanation: Starting at cell (2, 4), we can reach cell (7, 7) in exactly 6 seconds by going through the cells depicted in the picture above. */
+console.log(isReachableAtTime(sx, sy, fx, fy, t));
