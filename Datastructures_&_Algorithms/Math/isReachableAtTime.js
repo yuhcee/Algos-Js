@@ -44,3 +44,12 @@ const sx = 2,
 // Output: true
 /* Explanation: Starting at cell (2, 4), we can reach cell (7, 7) in exactly 6 seconds by going through the cells depicted in the picture above. */
 console.log(isReachableAtTime(sx, sy, fx, fy, t));
+
+const sx1 = 3,
+    sy1 = 1,
+    fx1 = 7,
+    fy1 = 3,
+    t1 = 3;
+// Output: false
+/* Explanation: Starting at cell (3, 1), it takes at least 4 seconds to reach cell (7, 3) by going through the cells depicted in the picture above. Hence, we cannot reach cell (7, 3) at the third second. */
+console.log(isReachableAtTime(sx1, sy1, fx1, fy1, t1));
