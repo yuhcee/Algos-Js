@@ -59,3 +59,7 @@ const s1 = 'xy';
 // Output: 2
 // Explanation: The homogenous substrings are "x" and "y".
 console.log(countHomogenous(s1));
+
+const s2 = 'zzzzz';
+// Output: 15
+console.log(countHomogenous(s2));
