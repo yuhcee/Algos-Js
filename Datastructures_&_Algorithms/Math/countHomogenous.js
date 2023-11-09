@@ -19,4 +19,25 @@
  * @param {string} s
  * @return {number}
  */
-const countHomogenous = function (s) {};
+const countHomogenous = function (s) {
+    const MOD = 1000000007; // We'll use this to keep our answer within the bounds
+    let count = 0; // This will hold the total count of homogenous substrings
+    let currentChar = ''; // This will keep track of the current character we're looking at
+    let currentLength = 0; // This will keep track of the length of the current sequence of identical characters
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === currentChar) {
+            currentLength++; // If the character is the same as the current one, we increase the length
+        } else {
+            // If it's a different character, we first add the count of substrings from the previous sequence
+            count = (count + (currentLength * (currentLength + 1)) / 2) % MOD;
+            currentChar = s[i]; // Then we update the current character and length for the new sequence
+            currentLength = 1; // Start at 1 since we have encountered a new character
+        }
+    }
+
+    // After the loop, we need to add the count from the last sequence of identical characters
+    count = (count + (currentLength * (currentLength + 1)) / 2) % MOD;
+
+    return count; // Return the total count of homogenous substrings
+};
