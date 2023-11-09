@@ -54,3 +54,8 @@ const s = 'abbcccaa';
 "ccc" appears 1 time.
 3 + 1 + 2 + 1 + 3 + 2 + 1 = 13. */
 console.log(countHomogenous(s));
+
+const s1 = 'xy';
+// Output: 2
+// Explanation: The homogenous substrings are "x" and "y".
+console.log(countHomogenous(s1));
