@@ -66,3 +66,13 @@ const restoreArray = function (adjacentPairs) {
 
     return nums;
 };
+
+const adjacentPairs = [
+    [2, 1],
+    [3, 4],
+    [3, 2],
+];
+// Output: [1,2,3,4]
+/* Explanation: This array has all its adjacent pairs in adjacentPairs.
+Notice that adjacentPairs[i] may not be in left-to-right order. */
+console.log(restoreArray(adjacentPairs));
