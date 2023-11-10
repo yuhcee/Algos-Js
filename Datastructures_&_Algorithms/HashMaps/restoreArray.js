@@ -76,3 +76,13 @@ const adjacentPairs = [
 /* Explanation: This array has all its adjacent pairs in adjacentPairs.
 Notice that adjacentPairs[i] may not be in left-to-right order. */
 console.log(restoreArray(adjacentPairs));
+
+const adjacentPairs1 = [
+    [4, -2],
+    [1, 4],
+    [-3, 1],
+];
+// Output: [-2,4,1,-3]
+/* Explanation: There can be negative numbers.
+Another solution is [-3,1,4,-2], which would also be accepted. */
+console.log(restoreArray(adjacentPairs1));
