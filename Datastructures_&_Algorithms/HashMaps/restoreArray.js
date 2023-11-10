@@ -29,4 +29,40 @@
  * @param {number[][]} adjacentPairs
  * @return {number[]}
  */
-const restoreArray = function (adjacentPairs) {};
+const restoreArray = function (adjacentPairs) {
+    // Step 1: Create a hash map for the adjacency list
+    const adjMap = new Map();
+
+    // Step 2: Populate the hash map
+    for (const [u, v] of adjacentPairs) {
+        if (!adjMap.has(u)) adjMap.set(u, []);
+        if (!adjMap.has(v)) adjMap.set(v, []);
+        adjMap.get(u).push(v);
+        adjMap.get(v).push(u);
+    }
+
+    // Step 3: Find the starting number
+    let start = 0;
+    for (const [num, adj] of adjMap) {
+        if (adj.length === 1) {
+            start = num;
+            break;
+        }
+    }
+
+    // Step 4: Reconstruct the array
+    const nums = [start];
+    let prev = start;
+    while (nums.length < adjacentPairs.length + 1) {
+        const nextAdj = adjMap.get(prev);
+        for (const next of nextAdj) {
+            if (nums.length === 1 || next !== nums[nums.length - 2]) {
+                nums.push(next);
+                prev = next;
+                break;
+            }
+        }
+    }
+
+    return nums;
+};
