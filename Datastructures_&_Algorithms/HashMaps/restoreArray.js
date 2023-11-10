@@ -86,3 +86,7 @@ const adjacentPairs1 = [
 /* Explanation: There can be negative numbers.
 Another solution is [-3,1,4,-2], which would also be accepted. */
 console.log(restoreArray(adjacentPairs1));
+
+const adjacentPairs2 = [[100000, -100000]];
+// Output: [100000,-100000]
+console.log(restoreArray(adjacentPairs2));
