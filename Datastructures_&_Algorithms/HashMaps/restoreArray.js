@@ -17,6 +17,15 @@
  * Return *the original array `nums`. If there are multiple solutions,
  * return **any of them***.
  *
+ * **Constraints:**
+ *
+ * - `nums.length == n`
+ * - `adjacentPairs.length == n - 1`
+ * - `adjacentPairs[i].length == 2`
+ * - `2 <= n <= 105`
+ * - `-105 <= nums[i], ui, vi <= 105`
+ * - There exists some `nums` that has `adjacentPairs` as its pairs.
+ *
  * @param {number[][]} adjacentPairs
  * @return {number[]}
  */
