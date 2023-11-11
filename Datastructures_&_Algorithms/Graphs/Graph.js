@@ -36,4 +36,15 @@
  * @param {number} n
  * @param {number[][]} edges
  */
-const Graph = function (n, edges) {};
+const Graph = function (n, edges) {
+    // Step 1: Initialize the graph with nodes and edges.
+    this.adjList = new Map();
+    for (let i = 0; i < n; i++) {
+        this.adjList.set(i, []);
+    }
+    edges.forEach((edge) => {
+        this.adjList.get(edge[0]).push({ node: edge[1], cost: edge[2] });
+    });
+};
+
+
