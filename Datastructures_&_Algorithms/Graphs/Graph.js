@@ -47,4 +47,7 @@ const Graph = function (n, edges) {
     });
 };
 
-
+Graph.prototype.addEdge = function (edge) {
+    // Step 2: Add a new edge to the graph.
+    this.adjList.get(edge[0]).push({ node: edge[1], cost: edge[2] });
+};
