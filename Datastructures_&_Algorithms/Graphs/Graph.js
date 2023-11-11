@@ -52,12 +52,12 @@ Graph.prototype.addEdge = function (edge) {
     this.adjList.get(edge[0]).push({ node: edge[1], cost: edge[2] });
 };
 
-Graph.prototype.shortestPath = function(node1, node2) {
+Graph.prototype.shortestPath = function (node1, node2) {
     // Step 3: Use Dijkstra's algorithm to find the shortest path.
     const minHeap = new MinHeap();
     const distances = new Array(this.adjList.size).fill(Infinity);
     const visited = new Set();
-    
+
     distances[node1] = 0;
     minHeap.insert({ node: node1, cost: 0 });
 
@@ -68,7 +68,7 @@ Graph.prototype.shortestPath = function(node1, node2) {
         visited.add(node);
 
         const neighbors = this.adjList.get(node);
-        neighbors.forEach(neighbor => {
+        neighbors.forEach((neighbor) => {
             const newCost = cost + neighbor.cost;
             if (newCost < distances[neighbor.node]) {
                 distances[neighbor.node] = newCost;
@@ -79,3 +79,71 @@ Graph.prototype.shortestPath = function(node1, node2) {
 
     return distances[node2] === Infinity ? -1 : distances[node2];
 };
+
+// We'll need a MinHeap class to efficiently get the node with the smallest cost.
+class MinHeap {
+    constructor() {
+        this.heap = [];
+    }
+
+    insert(element) {
+        this.heap.push(element);
+        this.heapifyUp(this.heap.length - 1);
+    }
+
+    heapifyUp(index) {
+        let parentIndex = Math.floor((index - 1) / 2);
+        while (index > 0 && this.heap[parentIndex].cost > this.heap[index].cost) {
+            // Swap
+            [this.heap[parentIndex], this.heap[index]] = [this.heap[index], this.heap[parentIndex]];
+            // Move up
+            index = parentIndex;
+            parentIndex = Math.floor((index - 1) / 2);
+        }
+    }
+
+    extractMin() {
+        if (this.isEmpty()) return null;
+        const min = this.heap[0];
+        this.heap[0] = this.heap[this.size() - 1];
+        this.heap.pop();
+        this.heapifyDown(0);
+        return min;
+    }
+
+    heapifyDown(index) {
+        let smallest = index;
+        const leftChildIndex = 2 * index + 1;
+        const rightChildIndex = 2 * index + 2;
+
+        if (leftChildIndex < this.size() && this.heap[leftChildIndex].cost < this.heap[smallest].cost) {
+            smallest = leftChildIndex;
+        }
+
+        if (rightChildIndex < this.size() && this.heap[rightChildIndex].cost < this.heap[smallest].cost) {
+            smallest = rightChildIndex;
+        }
+
+        if (smallest !== index) {
+            // Swap
+            [this.heap[index], this.heap[smallest]] = [this.heap[smallest], this.heap[index]];
+            // Move down
+            this.heapifyDown(smallest);
+        }
+    }
+
+    isEmpty() {
+        return this.size() === 0;
+    }
+
+    size() {
+        return this.heap.length;
+    }
+}
+
+/**
+ * Your Graph object will be instantiated and called as such:
+ * var obj = new Graph(n, edges)
+ * obj.addEdge(edge)
+ * var param_2 = obj.shortestPath(node1,node2)
+ */
