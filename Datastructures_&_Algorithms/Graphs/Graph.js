@@ -51,3 +51,31 @@ Graph.prototype.addEdge = function (edge) {
     // Step 2: Add a new edge to the graph.
     this.adjList.get(edge[0]).push({ node: edge[1], cost: edge[2] });
 };
+
+Graph.prototype.shortestPath = function(node1, node2) {
+    // Step 3: Use Dijkstra's algorithm to find the shortest path.
+    const minHeap = new MinHeap();
+    const distances = new Array(this.adjList.size).fill(Infinity);
+    const visited = new Set();
+    
+    distances[node1] = 0;
+    minHeap.insert({ node: node1, cost: 0 });
+
+    while (!minHeap.isEmpty()) {
+        const { node, cost } = minHeap.extractMin();
+        if (node === node2) return cost;
+        if (visited.has(node)) continue;
+        visited.add(node);
+
+        const neighbors = this.adjList.get(node);
+        neighbors.forEach(neighbor => {
+            const newCost = cost + neighbor.cost;
+            if (newCost < distances[neighbor.node]) {
+                distances[neighbor.node] = newCost;
+                minHeap.insert({ node: neighbor.node, cost: newCost });
+            }
+        });
+    }
+
+    return distances[node2] === Infinity ? -1 : distances[node2];
+};
