@@ -21,6 +21,18 @@
  * `-1`. The cost of a path is the sum of the costs of the edges in
  * the path.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 100`
+ * - `0 <= edges.length <= n * (n - 1)`
+ * - `edges[i].length == edge.length == 3`
+ * - `0 <= fromi, toi, from, to, node1, node2 <= n - 1`
+ * - `1 <= edgeCosti, edgeCost <= 106`
+ * - There are no repeated edges and no self-loops in the graph at any
+ * point.
+ * - At most `100` calls will be made for `addEdge`.
+ * - At most `100` calls will be made for `shortestPath`.
+ *
  * @param {number} n
  * @param {number[][]} edges
  */
