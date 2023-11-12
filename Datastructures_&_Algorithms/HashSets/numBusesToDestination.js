@@ -68,3 +68,13 @@ const numBusesToDestination = function (routes, source, target) {
 
     return -1; // If we're here, it's not possible to reach the target
 };
+
+const routes = [
+        [1, 2, 7],
+        [3, 6, 7],
+    ],
+    source = 1,
+    target = 6;
+// Output: 2
+/* Explanation: The best strategy is take the first bus to the bus stop 7, then take the second bus to the bus stop 6. */
+console.log(numBusesToDestination(routes, source, target));
