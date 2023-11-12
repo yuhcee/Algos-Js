@@ -78,3 +78,9 @@ const routes = [
 // Output: 2
 /* Explanation: The best strategy is take the first bus to the bus stop 7, then take the second bus to the bus stop 6. */
 console.log(numBusesToDestination(routes, source, target));
+
+const routes1 = [[7, 12], [4, 5, 15], [6], [15, 19], [9, 12, 13]],
+    source1 = 15,
+    target1 = 12;
+// Output: -1;
+console.log(numBusesToDestination(routes1, source1, target1));
