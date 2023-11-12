@@ -15,6 +15,15 @@
  * Return *the least number of buses you must take to travel from
  * `source` to `target`. Return `-1` if it is not possible.
  *
+ * **Constraints:**
+ *
+ * - `1 <= routes.length <= 500`.
+ * - `1 <= routes[i].length <= 105`
+ * - All the values of `routes[i]` are unique.
+ * - `sum(routes[i].length) <= 105`
+ * - `0 <= routes[i][j] < 106`
+ * - `0 <= source, target < 106`
+ *
  * @param {number[][]} routes
  * @param {number} source
  * @param {number} target
