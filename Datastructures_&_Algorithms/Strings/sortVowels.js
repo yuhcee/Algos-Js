@@ -19,6 +19,12 @@
  * appear in lowercase or uppercase. Consonants comprise all letters
  * that are not vowels.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 105`
+ * - `s` consists only of letters of the English alphabet in
+ * **uppercase** and **lowercase**.
+ *
  * @param {string} s
  * @return {string}
  */
