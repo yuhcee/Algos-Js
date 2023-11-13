@@ -56,3 +56,9 @@ const sortVowels = function (s) {
 
     return result;
 };
+
+const s = 'lEetcOde';
+// Output: "lEOtcede"
+/* Explanation: 'E', 'O', and 'e' are the vowels in s; 'l', 't', 'c', and 'd' are all consonants. The vowels are sorted according to their ASCII values, and the consonants remain in the same places. */
+console.log(sortVowels(s));
+
