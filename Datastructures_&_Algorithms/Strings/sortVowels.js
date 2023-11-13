@@ -28,4 +28,31 @@
  * @param {string} s
  * @return {string}
  */
-const sortVowels = function (s) {};
+const sortVowels = function (s) {
+    // Define vowels
+    const vowels = 'aeiouAEIOU';
+
+    // Extract vowels from the string and sort them
+    const sortedVowels = s
+        .split('')
+        .filter((char) => vowels.includes(char))
+        .sort();
+
+    // Initialize an index for the sorted vowels
+    let vowelIndex = 0;
+
+    // Construct the new string
+    let result = s
+        .split('')
+        .map((char) => {
+            // If the character is a vowel, replace it with the next sorted vowel
+            if (vowels.includes(char)) {
+                return sortedVowels[vowelIndex++];
+            }
+            // If it's a consonant, keep it as is
+            return char;
+        })
+        .join('');
+
+    return result;
+};
