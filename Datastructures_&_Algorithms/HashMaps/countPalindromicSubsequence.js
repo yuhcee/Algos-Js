@@ -50,3 +50,11 @@ const countPalindromicSubsequence = function (s) {
 
     return uniquePalindromes.size;
 };
+
+const s = 'aabca';
+// Output: 3
+/* Explanation: The 3 palindromic subsequences of length 3 are:
+- "aba" (subsequence of "aabca")
+- "aaa" (subsequence of "aabca")
+- "aca" (subsequence of "aabca") */
+console.log(countPalindromicSubsequence(s));
