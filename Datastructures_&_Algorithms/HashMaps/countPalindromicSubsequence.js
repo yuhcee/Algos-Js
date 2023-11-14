@@ -58,3 +58,8 @@ const s = 'aabca';
 - "aaa" (subsequence of "aabca")
 - "aca" (subsequence of "aabca") */
 console.log(countPalindromicSubsequence(s));
+
+const s1 = 'adc';
+// Output: 0
+// Explanation: There are no palindromic subsequences of length 3 in "adc".
+console.log(countPalindromicSubsequence(s1));
