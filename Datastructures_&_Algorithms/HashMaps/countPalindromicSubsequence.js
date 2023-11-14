@@ -17,11 +17,36 @@
  * For example, `"ace"` is a subsequence of `"abcde"`.
  *
  * **Constraints:**
- * 
+ *
  * - `3 <= s.length <= 105`
  * - `s` consists of only lowercase English letters.
- * 
+ *
  * @param {string} s
  * @return {number}
  */
-const countPalindromicSubsequence = function (s) {};
+const countPalindromicSubsequence = function (s) {
+    let uniquePalindromes = new Set();
+    let charIndices = new Map();
+
+    // Store the indices of each character's occurrences
+    for (let i = 0; i < s.length; i++) {
+        if (!charIndices.has(s[i])) {
+            charIndices.set(s[i], []);
+        }
+        charIndices.get(s[i]).push(i);
+    }
+
+    // Iterate over each unique character
+    for (let [char, indices] of charIndices) {
+        if (indices.length > 1) {
+            let firstIndex = indices[0];
+            let lastIndex = indices[indices.length - 1];
+            let middleChars = new Set(s.slice(firstIndex + 1, lastIndex));
+            for (let middleChar of middleChars) {
+                uniquePalindromes.add(char + middleChar + char);
+            }
+        }
+    }
+
+    return uniquePalindromes.size;
+};
