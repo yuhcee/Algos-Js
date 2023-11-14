@@ -63,3 +63,12 @@ const s1 = 'adc';
 // Output: 0
 // Explanation: There are no palindromic subsequences of length 3 in "adc".
 console.log(countPalindromicSubsequence(s1));
+
+const s2 = 'bbcbaba';
+// Output: 4
+/* Explanation: The 4 palindromic subsequences of length 3 are:
+- "bbb" (subsequence of "bbcbaba")
+- "bcb" (subsequence of "bbcbaba")
+- "bab" (subsequence of "bbcbaba")
+- "aba" (subsequence of "bbcbaba") */
+console.log(countPalindromicSubsequence(s2));
