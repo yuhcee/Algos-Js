@@ -16,6 +16,11 @@
  *
  * For example, `"ace"` is a subsequence of `"abcde"`.
  *
+ * **Constraints:**
+ * 
+ * - `3 <= s.length <= 105`
+ * - `s` consists of only lowercase English letters.
+ * 
  * @param {string} s
  * @return {number}
  */
