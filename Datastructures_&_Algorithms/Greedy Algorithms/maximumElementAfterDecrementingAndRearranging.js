@@ -22,6 +22,11 @@
  * Return *the **maximum** possible value of an element in `arr` after
  * performing the operations to satisfy the conditions.
  *
+ * **Constraints:**
+ *
+ * - `1 <= arr.length <= 105`
+ * - `1 <= arr[i] <= 109`
+ *
  * @param {number[]} arr
  * @return {number}
  */
