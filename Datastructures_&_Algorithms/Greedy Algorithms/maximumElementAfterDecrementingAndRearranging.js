@@ -42,3 +42,10 @@ const maximumElementAfterDecrementingAndRearranging = function (arr) {
 
     return arr[arr.length - 1];
 };
+
+const arr = [2, 2, 1, 2, 1];
+// Output: 2
+/* Explanation: 
+We can satisfy the conditions by rearranging arr so it becomes [1,2,2,2,1].
+The largest element in arr is 2. */
+console.log(maximumElementAfterDecrementingAndRearranging(arr));
