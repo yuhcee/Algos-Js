@@ -60,3 +60,8 @@ One possible way to satisfy the conditions is by doing the following:
 Now arr = [1,2,3], which satisfies the conditions.
 The largest element in arr is 3. */
 console.log(maximumElementAfterDecrementingAndRearranging(arr1));
+
+const arr3 = [1,2,3,4,5]
+// Output: 5
+/* Explanation: The array already satisfies the conditions, and the largest element is 5. */
+console.log(maximumElementAfterDecrementingAndRearranging(arr3));
