@@ -27,3 +27,8 @@ const findDifferentBinaryString = function (nums) {
 
     return result;
 };
+
+const nums = ['01', '10'];
+// Output: "11"
+// Explanation: "11" does not appear in nums. "00" would also be correct.
+console.log(findDifferentBinaryString(nums));
