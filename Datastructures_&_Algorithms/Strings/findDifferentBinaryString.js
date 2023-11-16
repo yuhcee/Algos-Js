@@ -37,3 +37,8 @@ const nums1 = ['00', '01'];
 // Output: "11"
 // Explanation: "11" does not appear in nums. "10" would also be correct.
 console.log(findDifferentBinaryString(nums1));
+
+const nums2 = ['111', '011', '001'];
+// Output: "101"
+// Explanation: "101" does not appear in nums. "000", "010", "100", and "110" would also be correct.
+console.log(findDifferentBinaryString(nums2));
