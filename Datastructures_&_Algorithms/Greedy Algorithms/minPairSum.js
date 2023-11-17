@@ -27,4 +27,20 @@
  * @param {number[]} nums
  * @return {number}
  */
-const minPairSum = function (nums) {};
+const minPairSum = function (nums) {
+    // Sort the array
+    nums.sort((a, b) => a - b);
+
+    let maxPairSum = 0;
+    let left = 0;
+    let right = nums.length - 1;
+
+    // Pair the elements and find the maximum pair sum
+    while (left < right) {
+        maxPairSum = Math.max(maxPairSum, nums[left] + nums[right]);
+        left++;
+        right--;
+    }
+
+    return maxPairSum;
+};
