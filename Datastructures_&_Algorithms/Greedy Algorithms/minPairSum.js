@@ -44,3 +44,9 @@ const minPairSum = function (nums) {
 
     return maxPairSum;
 };
+
+const nums = [3, 5, 2, 3];
+// Output: 7
+/* Explanation: The elements can be paired up into pairs (3,3) and (5,2).
+The maximum pair sum is max(3+3, 5+2) = max(6, 7) = 7. */
+console.log(minPairSum(nums));
