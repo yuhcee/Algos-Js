@@ -17,6 +17,13 @@
  * Return *the minimized **maximum pair sum** after optimally pairing
  * up the elements*.
  *
+ * **Constraints:**
+ *
+ * - `n == nums.length`
+ * - `2 <= n <= 105`
+ * - `n` is even.
+ * - `1 <= nums[i] <= 105`
+ *
  * @param {number[]} nums
  * @return {number}
  */
