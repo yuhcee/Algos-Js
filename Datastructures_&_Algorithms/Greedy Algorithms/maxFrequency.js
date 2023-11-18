@@ -43,3 +43,10 @@ const maxFrequency = function (nums, k) {
 
     return maxFreq;
 };
+
+const nums = [1, 2, 4],
+    k = 5;
+// Output: 3
+/* Explanation: Increment the first element three times and the second element two times to make nums = [4,4,4].
+4 has a frequency of 3. */
+console.log(maxFrequency(nums, k));
