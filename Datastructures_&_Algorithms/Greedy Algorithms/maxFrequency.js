@@ -12,6 +12,12 @@
  * Return *the **maximum possible frequency** of an element after
  * performing **at most** `k` operations.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 105`
+ * - `1 <= k <= 105`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
