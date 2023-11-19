@@ -49,3 +49,12 @@ const nums1 = [1, 1, 1];
 // Output: 0
 // Explanation: All elements in nums are already equal.
 console.log(reductionOperations(nums1));
+
+const nums2 = [1, 1, 2, 2, 3];
+// Output: 4
+/* Explanation: It takes 4 operations to make all elements in nums equal:
+1. largest = 3 at index 4. nextLargest = 2. Reduce nums[4] to 2. nums = [1,1,2,2,2].
+2. largest = 2 at index 2. nextLargest = 1. Reduce nums[2] to 1. nums = [1,1,1,2,2].
+3. largest = 2 at index 3. nextLargest = 1. Reduce nums[3] to 1. nums = [1,1,1,1,2].
+4. largest = 2 at index 4. nextLargest = 1. Reduce nums[4] to 1. nums = [1,1,1,1,1]. */
+console.log(reductionOperations(nums2));
