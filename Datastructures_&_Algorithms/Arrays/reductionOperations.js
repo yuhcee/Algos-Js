@@ -37,3 +37,10 @@ const reductionOperations = function (nums) {
     // Return the number of operations
     return operations;
 };
+const nums = [5, 1, 3];
+// Output: 3
+/* Explanation: It takes 3 operations to make all elements in nums equal:
+1. largest = 5 at index 0. nextLargest = 3. Reduce nums[0] to 3. nums = [3,1,3].
+2. largest = 3 at index 0. nextLargest = 1. Reduce nums[0] to 1. nums = [1,1,3].
+3. largest = 3 at index 2. nextLargest = 1. Reduce nums[2] to 1. nums = [1,1,1]. */
+console.log(reductionOperations(nums));
