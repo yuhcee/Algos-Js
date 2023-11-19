@@ -12,6 +12,11 @@
  * Return *the number of operations to make all elements in `nums`
  * equal*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 5 * 104`
+ * - `1 <= nums[i] <= 5 * 104`
+ *
  * @param {number[]} nums
  * @return {number}
  */
