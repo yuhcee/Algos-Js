@@ -21,4 +21,19 @@
  * @return {number}
  */
 // A function to find the minimum number of operations to make all elements in nums equal
-const reductionOperations = function (nums) {};
+const reductionOperations = function (nums) {
+    // Sort the array in descending order
+    nums.sort((a, b) => b - a);
+    // Initialize the number of operations to 0
+    let operations = 0;
+    // Loop through the array from the second element
+    for (let i = 1; i < nums.length; i++) {
+        // If the current element is smaller than the previous one
+        if (nums[i] < nums[i - 1]) {
+            // Increment the number of operations by the number of elements before i
+            operations += i;
+        }
+    }
+    // Return the number of operations
+    return operations;
+};
