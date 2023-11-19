@@ -44,3 +44,8 @@ const nums = [5, 1, 3];
 2. largest = 3 at index 0. nextLargest = 1. Reduce nums[0] to 1. nums = [1,1,3].
 3. largest = 3 at index 2. nextLargest = 1. Reduce nums[2] to 1. nums = [1,1,1]. */
 console.log(reductionOperations(nums));
+
+const nums1 = [1, 1, 1];
+// Output: 0
+// Explanation: All elements in nums are already equal.
+console.log(reductionOperations(nums1));
