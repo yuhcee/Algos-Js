@@ -37,7 +37,9 @@
  * @return {number}
  */
 const garbageCollection = function (garbage, travel) {
-    let lastM = -1, lastP = -1, lastG = -1;
+    let lastM = -1,
+        lastP = -1,
+        lastG = -1;
     let totalTime = 0;
 
     // Find the last house for each type of garbage
@@ -57,3 +59,13 @@ const garbageCollection = function (garbage, travel) {
 
     return totalTime;
 };
+
+const garbage = ['MMM', 'PGM', 'GP'],
+    travel = [3, 10];
+// Output: 37
+/* Explanation:
+The metal garbage truck takes 7 minutes to pick up all the metal garbage.
+The paper garbage truck takes 15 minutes to pick up all the paper garbage.
+The glass garbage truck takes 15 minutes to pick up all the glass garbage.
+It takes a total of 7 + 15 + 15 = 37 minutes to collect all the garbage. */
+console.log(garbageCollection(garbage, travel));
