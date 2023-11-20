@@ -36,4 +36,24 @@
  * @param {number[]} travel
  * @return {number}
  */
-const garbageCollection = function (garbage, travel) {};
+const garbageCollection = function (garbage, travel) {
+    let lastM = -1, lastP = -1, lastG = -1;
+    let totalTime = 0;
+
+    // Find the last house for each type of garbage
+    for (let i = 0; i < garbage.length; i++) {
+        if (garbage[i].includes('M')) lastM = i;
+        if (garbage[i].includes('P')) lastP = i;
+        if (garbage[i].includes('G')) lastG = i;
+        totalTime += garbage[i].length; // Add collection time
+    }
+
+    // Calculate travel time for each truck
+    for (let i = 0; i < travel.length; i++) {
+        if (i < lastM) totalTime += travel[i];
+        if (i < lastP) totalTime += travel[i];
+        if (i < lastG) totalTime += travel[i];
+    }
+
+    return totalTime;
+};
