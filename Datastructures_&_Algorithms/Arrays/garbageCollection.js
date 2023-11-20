@@ -21,9 +21,16 @@
  * one truck is driving or picking up garbage, the other two trucks
  * **cannot** do anything.
  *
- * Return *the minimum number of minutes needed to pick up all the 
+ * Return *the minimum number of minutes needed to pick up all the
  * garbage*.
  *
+ * **Constraints:**
+ *
+ * - `2 <= garbage.length <= 105`
+ * - `garbage[i]` consists of only the letters `'M'`, `'P'`, and `'G'`.
+ * - `1 <= garbage[i].length <= 10`
+ * - `travel.length == garbage.length - 1`
+ * - `1 <= travel[i] <= 100`
  *
  * @param {string[]} garbage
  * @param {number[]} travel
