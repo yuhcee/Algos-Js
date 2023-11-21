@@ -48,3 +48,7 @@ const nums = [42, 11, 1, 97];
  - (0,3) : 42 + rev(97) = 42 + 79 = 121, 97 + rev(42) = 97 + 24 = 121.
  - (1,2) : 11 + rev(1) = 11 + 1 = 12, 1 + rev(11) = 1 + 11 = 12. */
 console.log(countNicePairs(nums));
+
+const nums1 = [13, 10, 35, 24, 76];
+// Output: 4
+console.log(countNicePairs(nums1));
