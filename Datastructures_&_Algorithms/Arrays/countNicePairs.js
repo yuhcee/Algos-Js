@@ -21,4 +21,23 @@
  * @param {number[]} nums
  * @return {number}
  */
-const countNicePairs = function (nums) {};
+const countNicePairs = function (nums) {
+    const MOD = 1e9 + 7;
+
+    function rev(x) {
+        return parseInt(x.toString().split('').reverse().join(''));
+    }
+
+    let countMap = new Map();
+    for (let num of nums) {
+        let diff = num - rev(num);
+        countMap.set(diff, (countMap.get(diff) || 0) + 1);
+    }
+
+    let count = 0;
+    for (let [_, value] of countMap) {
+        count = (count + (value * (value - 1)) / 2) % MOD;
+    }
+
+    return count;
+};
