@@ -13,6 +13,11 @@
  * Return *the number of nice pairs of indices*. Since that number can
  * be too large, return it **modulo** `109 + 7`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `0 <= nums[i] <= 109`
+ *
  * @param {number[]} nums
  * @return {number}
  */
