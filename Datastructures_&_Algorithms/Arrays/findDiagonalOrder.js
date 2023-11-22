@@ -14,4 +14,27 @@
  * @param {number[][]} nums
  * @return {number[]}
  */
-const findDiagonalOrder = function (nums) {};
+const findDiagonalOrder = function (nums) {
+    let map = new Map();
+
+    // Populate the map with diagonal elements
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = 0; j < nums[i].length; j++) {
+            if (!map.has(i + j)) {
+                map.set(i + j, []);
+            }
+            map.get(i + j).push(nums[i][j]);
+        }
+    }
+
+    let result = [];
+    // Traverse the map and append elements to result
+    for (let [_, values] of map) {
+        // Append in reverse order as per the problem's requirement
+        for (let i = values.length - 1; i >= 0; i--) {
+            result.push(values[i]);
+        }
+    }
+
+    return result;
+};
