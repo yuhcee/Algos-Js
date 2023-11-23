@@ -42,4 +42,20 @@
  * @param {number[]} r
  * @return {boolean[]}
  */
-const checkArithmeticSubarrays = function (nums, l, r) {};
+const checkArithmeticSubarrays = function (nums, l, r) {
+    const isArithmetic = (arr) => {
+        if (arr.length <= 2) return true;
+        arr.sort((a, b) => a - b);
+        const diff = arr[1] - arr[0];
+        for (let i = 2; i < arr.length; i++) {
+            if (arr[i] - arr[i - 1] !== diff) return false;
+        }
+        return true;
+    };
+
+    let result = [];
+    for (let i = 0; i < l.length; i++) {
+        result.push(isArithmetic(nums.slice(l[i], r[i] + 1)));
+    }
+    return result;
+};
