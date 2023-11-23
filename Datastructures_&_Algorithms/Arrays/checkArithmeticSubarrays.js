@@ -27,6 +27,16 @@
  * [l[i]], nums[l[i]+1], ... , nums[r[i]]` can be **rearranged** to form an **arithmetic**
  * sequence, and `false` otherwise*.
  *
+ * **Constraints:
+ *
+ * - `n == nums.length`
+ * - `m == l.length`
+ * - `m == r.length`
+ * - `2 <= n <= 500`
+ * - `1 <= m <= 500`
+ * - `0 <= l[i] < r[i] < n`
+ * - `-105 <= nums[i] <= 105`
+ *
  * @param {number[]} nums
  * @param {number[]} l
  * @param {number[]} r
