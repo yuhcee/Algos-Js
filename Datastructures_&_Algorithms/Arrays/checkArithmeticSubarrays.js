@@ -59,3 +59,13 @@ const checkArithmeticSubarrays = function (nums, l, r) {
     }
     return result;
 };
+
+const nums = [4, 6, 5, 9, 3, 7],
+    l = [0, 0, 2],
+    r = [2, 3, 5];
+// Output: [true, false, true];
+/* Explanation:
+In the 0th query, the subarray is [4,6,5]. This can be rearranged as [6,5,4], which is an arithmetic sequence.
+In the 1st query, the subarray is [4,6,5,9]. This cannot be rearranged as an arithmetic sequence.
+In the 2nd query, the subarray is [5,9,3,7]. This can be rearranged as [3,5,7,9], which is an arithmetic sequence. */
+console.log(checkArithmeticSubarrays(nums, l, r));
