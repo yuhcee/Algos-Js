@@ -23,4 +23,18 @@
  * @param {number[]} piles
  * @return {number}
  */
-const maxCoins = function (piles) {};
+const maxCoins = function (piles) {
+    // Sort the piles in descending order
+    piles.sort((a, b) => b - a);
+
+    let maxCoins = 0;
+    let n = piles.length / 3;
+
+    for (let i = 0; i < n; i++) {
+        // You always take the second pile in each triplet
+        // Since the array is sorted, these will be at indices 1, 3, 5, ...
+        maxCoins += piles[i * 2 + 1];
+    }
+
+    return maxCoins;
+};
