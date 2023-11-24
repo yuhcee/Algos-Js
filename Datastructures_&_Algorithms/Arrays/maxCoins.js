@@ -50,3 +50,7 @@ console.log(maxCoins(piles));
 const piles1 = [2, 4, 5];
 // Output: 4
 console.log(maxCoins(piles1));
+
+const piles2 = [9, 8, 7, 6, 5, 1, 2, 3, 4];
+// Output: 18
+console.log(maxCoins(piles2));
