@@ -46,3 +46,7 @@ Choose the triplet (1, 2, 4), Alice Pick the pile with 4 coins, you the pile wit
 The maximum number of coins which you can have are: 7 + 2 = 9.
 On the other hand if we choose this arrangement (1, 2, 8), (2, 4, 7) you only get 2 + 4 = 6 coins which is not optimal. */
 console.log(maxCoins(piles));
+
+const piles1 = [2, 4, 5];
+// Output: 4
+console.log(maxCoins(piles1));
