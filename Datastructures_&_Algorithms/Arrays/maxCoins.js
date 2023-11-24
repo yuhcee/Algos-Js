@@ -14,6 +14,12 @@
  *
  * Return *the maximum number of coins that you can have*.
  *
+ * **Constraints:**
+ *
+ * - `3 <= piles.length <= 105`
+ * - `piles.length % 3 == 0`
+ * - `1 <= piles[i] <= 104`
+ *
  * @param {number[]} piles
  * @return {number}
  */
