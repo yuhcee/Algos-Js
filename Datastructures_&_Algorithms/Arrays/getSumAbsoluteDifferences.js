@@ -40,3 +40,11 @@ const getSumAbsoluteDifferences = function (nums) {
 
     return result;
 };
+
+const nums = [2, 3, 5];
+// Output: [4,3,5]
+/* Explanation: Assuming the arrays are 0-indexed, then
+result[0] = |2-2| + |2-3| + |2-5| = 0 + 1 + 3 = 4,
+result[1] = |3-2| + |3-3| + |3-5| = 1 + 0 + 2 = 3,
+result[2] = |5-2| + |5-3| + |5-5| = 3 + 2 + 0 = 5. */
+console.log(getSumAbsoluteDifferences(nums));
