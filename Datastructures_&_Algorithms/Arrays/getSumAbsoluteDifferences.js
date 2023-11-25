@@ -48,3 +48,7 @@ result[0] = |2-2| + |2-3| + |2-5| = 0 + 1 + 3 = 4,
 result[1] = |3-2| + |3-3| + |3-5| = 1 + 0 + 2 = 3,
 result[2] = |5-2| + |5-3| + |5-5| = 3 + 2 + 0 = 5. */
 console.log(getSumAbsoluteDifferences(nums));
+
+const nums1 = [1,4,6,8,10]
+// Output: [24,15,13,15,21]
+console.log(getSumAbsoluteDifferences(nums1));
