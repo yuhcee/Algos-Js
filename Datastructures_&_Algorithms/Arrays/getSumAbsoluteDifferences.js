@@ -11,6 +11,11 @@
  * In other words, `result[i]` is equal to `sum(|nums[i]-nums[j]|)` where
  * `0 <= j < nums.length` and `j != i` (**0-indexed**).
  *
+ * **Constraints:**
+ *
+ * - `2 <= nums.length <= 105`
+ * - `1 <= nums[i] <= nums[i + 1] <= 104`
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
