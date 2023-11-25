@@ -19,4 +19,24 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-const getSumAbsoluteDifferences = function (nums) {};
+const getSumAbsoluteDifferences = function (nums) {
+    const n = nums.length;
+    let result = new Array(n).fill(0);
+    let sum = 0;
+
+    // Calculate the initial sum of differences for the first element
+    for (let i = 0; i < n; i++) {
+        sum += nums[i] - nums[0];
+    }
+    result[0] = sum;
+
+    // Update the sum of differences for each subsequent element
+    for (let i = 1; i < n; i++) {
+        // The change in the sum when moving from nums[i-1] to nums[i]
+        let change = (nums[i] - nums[i - 1]) * i;
+        sum = sum + change - (nums[i] - nums[i - 1]) * (n - i);
+        result[i] = sum;
+    }
+
+    return result;
+};
