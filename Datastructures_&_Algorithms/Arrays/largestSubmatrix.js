@@ -52,3 +52,9 @@ const matrix = [
 /* Explanation: You can rearrange the columns as shown above.
 The largest submatrix of 1s, in bold, has an area of 4. */
 console.log(largestSubmatrix(matrix));
+
+const matrix1 = [[1, 0, 1, 0, 1]];
+// Output: 3
+/* Explanation: You can rearrange the columns as shown above.
+The largest submatrix of 1s, in bold, has an area of 3. */
+console.log(largestSubmatrix(matrix1));
