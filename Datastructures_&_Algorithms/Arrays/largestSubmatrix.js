@@ -42,3 +42,13 @@ const largestSubmatrix = function (matrix) {
 
     return maxArea;
 };
+
+const matrix = [
+    [0, 0, 1],
+    [1, 1, 1],
+    [1, 0, 1],
+];
+// Output: 4
+/* Explanation: You can rearrange the columns as shown above.
+The largest submatrix of 1s, in bold, has an area of 4. */
+console.log(largestSubmatrix(matrix));
