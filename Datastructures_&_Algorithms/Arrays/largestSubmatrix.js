@@ -8,6 +8,13 @@
  * **every** element of the submatrix is `1` after reordering the columns
  * optimally.
  *
+ * **Constraints:**
+ *
+ * - `m == matrix.length`
+ * - `n == matrix[i].length`
+ * - `1 <= m * n <= 105`
+ * - `matrix[i][j]` is either `0` or `1`.
+ *
  * @param {number[][]} matrix
  * @return {number}
  */
