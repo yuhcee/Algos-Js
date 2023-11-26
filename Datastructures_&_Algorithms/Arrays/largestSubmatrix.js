@@ -18,4 +18,27 @@
  * @param {number[][]} matrix
  * @return {number}
  */
-const largestSubmatrix = function (matrix) {};
+const largestSubmatrix = function (matrix) {
+    const m = matrix.length;
+    const n = matrix[0].length;
+    let maxArea = 0;
+
+    // Transform the matrix
+    for (let i = 1; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (matrix[i][j] === 1) {
+                matrix[i][j] += matrix[i - 1][j];
+            }
+        }
+    }
+
+    // Rearrange each row and find the largest submatrix
+    for (let i = 0; i < m; i++) {
+        matrix[i].sort((a, b) => b - a); // Sort in descending order
+        for (let j = 0; j < n; j++) {
+            maxArea = Math.max(maxArea, matrix[i][j] * (j + 1));
+        }
+    }
+
+    return maxArea;
+};
