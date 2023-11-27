@@ -24,4 +24,25 @@
  * @param {number} n
  * @return {number}
  */
-const knightDialer = function (n) {};
+const knightDialer = function (n) {
+    const MOD = 1000000007;
+    const moves = [[4, 6], [6, 8], [7, 9], [4, 8], [0, 3, 9], [], [0, 1, 7], [2, 6], [1, 3], [2, 4]];
+    let dp = new Array(10).fill(1); // Base case: for n = 1
+
+    for (let i = 2; i <= n; i++) {
+        let newDp = new Array(10).fill(0);
+        for (let j = 0; j < 10; j++) {
+            for (const move of moves[j]) {
+                newDp[j] = (newDp[j] + dp[move]) % MOD;
+            }
+        }
+        dp = newDp;
+    }
+
+    let sum = 0;
+    for (let count of dp) {
+        sum = (sum + count) % MOD;
+    }
+
+    return sum;
+};
