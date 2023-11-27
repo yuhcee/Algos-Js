@@ -46,3 +46,8 @@ const knightDialer = function (n) {
 
     return sum;
 };
+
+const n = 1;
+// Output: 10
+// Explanation: We need to dial a number of length 1, so placing the knight over any numeric cell of the 10 cells is sufficient.
+console.log(knightDialer(n));
