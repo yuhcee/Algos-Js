@@ -17,6 +17,10 @@
  *
  * As the answer may be very large, **return *the answer modulo** `109 + 7`*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 5000`
+ *
  * @param {number} n
  * @return {number}
  */
