@@ -56,3 +56,8 @@ const n1 = 2;
 // Output: 20
 // Explanation: All the valid number we can dial are [04, 06, 16, 18, 27, 29, 34, 38, 40, 43, 49, 60, 61, 67, 72, 76, 81, 83, 92, 94]
 console.log(knightDialer(n1));
+
+const n2 = 3131;
+// Output: 136006598
+// Explanation: Please take care of the mod.
+console.log(knightDialer(n2));
