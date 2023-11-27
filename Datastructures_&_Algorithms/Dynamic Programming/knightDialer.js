@@ -51,3 +51,8 @@ const n = 1;
 // Output: 10
 // Explanation: We need to dial a number of length 1, so placing the knight over any numeric cell of the 10 cells is sufficient.
 console.log(knightDialer(n));
+
+const n1 = 2;
+// Output: 20
+// Explanation: All the valid number we can dial are [04, 06, 16, 18, 27, 29, 34, 38, 40, 43, 49, 60, 61, 67, 72, 76, 81, 83, 92, 94]
+console.log(knightDialer(n1));
