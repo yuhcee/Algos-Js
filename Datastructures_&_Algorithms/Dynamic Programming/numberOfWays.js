@@ -73,3 +73,8 @@ const corridor1 = 'PPSPSP';
 /* Explanation: There is only 1 way to divide the corridor, by not installing any additional dividers.
 Installing any would create some section that does not have exactly two seats. */
 console.log(numberOfWays(corridor1));
+
+const corridor2 = 'S';
+// Output: 0
+// Explanation: There is no way to divide the corridor because there will always be a section that does not have exactly two seats.
+console.log(numberOfWays(corridor2));
