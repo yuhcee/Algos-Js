@@ -60,3 +60,10 @@ const numberOfWays = function (corridor) {
 
     return ways;
 };
+
+const corridor = 'SSPPSPS';
+// Output: 3
+/* Explanation: There are 3 different ways to divide the corridor.
+The black bars in the above image indicate the two room dividers already installed.
+Note that in each of the ways, each section has exactly two seats. */
+console.log(numberOfWays(corridor));
