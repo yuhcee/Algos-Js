@@ -67,3 +67,9 @@ const corridor = 'SSPPSPS';
 The black bars in the above image indicate the two room dividers already installed.
 Note that in each of the ways, each section has exactly two seats. */
 console.log(numberOfWays(corridor));
+
+const corridor1 = 'PPSPSP';
+// Output: 1
+/* Explanation: There is only 1 way to divide the corridor, by not installing any additional dividers.
+Installing any would create some section that does not have exactly two seats. */
+console.log(numberOfWays(corridor1));
