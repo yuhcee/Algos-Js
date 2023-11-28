@@ -21,6 +21,12 @@
  * may be very large, return it **modulo 109 + 7**. If there is no way,
  * return `0`.
  *
+ * **Constraints:**
+ *
+ * - `n == corridor.length`
+ * - `1 <= n <= 105`
+ * - `corridor[i]` is either `'S'` or `'P'`.
+ *
  * @param {string} corridor
  * @return {number}
  */
