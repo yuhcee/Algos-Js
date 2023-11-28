@@ -30,4 +30,33 @@
  * @param {string} corridor
  * @return {number}
  */
-const numberOfWays = function (corridor) {};
+const numberOfWays = function (corridor) {
+    const MOD = 1000000007;
+    let seatCount = 0,
+        ways = 1,
+        plantCount = 0,
+        pairCount = 0;
+
+    // Count the total number of seats
+    for (let i = 0; i < corridor.length; i++) {
+        if (corridor[i] === 'S') seatCount++;
+    }
+
+    // If the total number of seats is not even or zero, return 0
+    if (seatCount === 0 || seatCount % 2 !== 0) return 0;
+
+    for (let i = 0; i < corridor.length; i++) {
+        if (corridor[i] === 'S') {
+            pairCount++;
+            // For every second seat in a pair after the first pair
+            if (pairCount > 2 && pairCount % 2 === 0) {
+                ways = (ways * (plantCount + 1)) % MOD;
+                plantCount = 0;
+            }
+        } else if (pairCount >= 2 && pairCount % 2 === 0) {
+            plantCount++;
+        }
+    }
+
+    return ways;
+};
