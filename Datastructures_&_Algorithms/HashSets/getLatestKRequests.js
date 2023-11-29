@@ -37,4 +37,19 @@
  * @param {arr} requests
  * @param {num} K
  */
-const getLatestKRequests = (requests, K) => {};
+const getLatestKRequests = (requests, K) => {
+    const uniqueRequests = new Set();
+    const latestKRequests = [];
+
+    for (let i = requests.length - 1; i >= 0; i--) {
+        if (!uniqueRequests.has(requests[i])) {
+            uniqueRequests.add(requests[i]);
+
+            latestKRequests.push(requests[i]);
+
+            if (latestKRequests.length === K) break;
+        }
+    }
+
+    return latestKRequests;
+};
