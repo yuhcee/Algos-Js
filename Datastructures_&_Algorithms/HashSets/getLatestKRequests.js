@@ -57,3 +57,8 @@ const getLatestKRequests = (requests, K) => {
 const requests = ['item 1', 'item2', 'item3', 'item 1', 'item3'],
     K = 3;
 console.log(getLatestKRequests(requests, K));
+
+const requests1 = ['item 1'],
+    K1 = 1;
+console.log(getLatestKRequests(requests1, K1));
+
