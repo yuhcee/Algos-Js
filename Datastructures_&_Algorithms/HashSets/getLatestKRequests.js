@@ -28,6 +28,12 @@
  * **Returns**
  * str[k]: the `k` most recent requests
  *
+ * **Constraints**
+ *
+ * - 1 <=k <= n <= 105
+ * - `requests[i]` consists of lowercase characters and digits only, `[a-2,
+ * 0-9]`.
+ *
  * @param {arr} requests
  * @param {num} K
  */
