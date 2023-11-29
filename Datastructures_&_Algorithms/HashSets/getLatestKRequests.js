@@ -62,3 +62,6 @@ const requests1 = ['item 1'],
     K1 = 1;
 console.log(getLatestKRequests(requests1, K1));
 
+const requests2 = ['item 1', 'item3', 'item 1'],
+    K2 = 5;
+console.log(getLatestKRequests(requests2, K2));
