@@ -36,3 +36,12 @@ const n = 3;
 "11" -> "01" with the 2nd operation since the 0th bit is 1.
 "01" -> "00" with the 1st operation. */
 console.log(minimumOneBitOperations(n));
+
+const n1 = 6;
+// Output: 4
+/* Explanation: The binary representation of 6 is "110".
+"110" -> "010" with the 2nd operation since the 1st bit is 1 and 0th through 0th bits are 0.
+"010" -> "011" with the 1st operation.
+"011" -> "001" with the 2nd operation since the 0th bit is 1.
+"001" -> "000" with the 1st operation. */
+console.log(minimumOneBitOperations(n1));
