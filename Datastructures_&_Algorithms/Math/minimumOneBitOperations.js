@@ -11,6 +11,10 @@
  *
  * Return *the minimum number of operations to transform `n` into `0`*.
  *
+ * **Constraints:**
+ *
+ * - `0 <= n <= 109`
+ *
  * @param {number} n
  * @return {number}
  */
