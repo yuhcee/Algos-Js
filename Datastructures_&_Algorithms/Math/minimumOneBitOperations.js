@@ -29,3 +29,10 @@ const minimumOneBitOperations = function (n) {
 
     return (1 << bit) - 1 - minimumOneBitOperations(n ^ (1 << (bit - 1)));
 };
+
+const n = 3;
+// Output: 2
+/* Explanation: The binary representation of 3 is "11".
+"11" -> "01" with the 2nd operation since the 0th bit is 1.
+"01" -> "00" with the 1st operation. */
+console.log(minimumOneBitOperations(n));
