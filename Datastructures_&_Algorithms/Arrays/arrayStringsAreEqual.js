@@ -22,6 +22,21 @@
 //     return word1.join('') === word2.join('');
 // };
 
+const arrayStringsAreEqual = (word1, word2) => {
+    let word1Chars = '',
+        word2Chars = '';
+
+    for (let char of word1) {
+        word1Chars += char;
+    }
+
+    for (let char of word2) {
+        word2Chars += char;
+    }
+
+    return word1Chars === word2Chars;
+};
+
 const word1 = ['ab', 'c'],
     word2 = ['a', 'bc'];
 // Output: true
