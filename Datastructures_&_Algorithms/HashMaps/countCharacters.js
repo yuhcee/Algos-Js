@@ -63,6 +63,13 @@ const countCharacters = (words, chars) => {
 const words = ['cat', 'bt', 'hat', 'tree'],
     chars = 'atach'; // output 6
 console.log(countCharacters(words, chars));
+
+const words1 = ['hello', 'world', 'leetcode'],
+    chars1 = 'welldonehoneyr';
+// Output: 10
+// Explanation: The strings that can be formed are "hello" and "world" so the answer is 5 + 5 = 10.
+console.log(countCharacters(words1, chars1));
+
 const words2 = [
         'dyiclysmffuhibgfvapygkorkqllqlvokosagyelotobicwcmebnpznjbirzrzsrtzjxhsfpiwyfhzyonmuabtlwin',
         'ndqeyhhcquplmznwslewjzuyfgklssvkqxmqjpwhrshycmvrb',
