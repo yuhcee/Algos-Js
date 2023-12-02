@@ -36,7 +36,7 @@
     return count;
 }; */
 
-const countCharacters = (words, chars) => {
+/* const countCharacters = (words, chars) => {
     let result = 0,
         isGood = true,
         oldChars = chars;
@@ -58,7 +58,7 @@ const countCharacters = (words, chars) => {
         isGood = true;
     }
     return result;
-};
+}; */
 
 const words = ['cat', 'bt', 'hat', 'tree'],
     chars = 'atach'; // output 6
