@@ -86,4 +86,4 @@ const words2 = [
         'qqxpxpmemkldghbmbyxpkwgkaykaerhmwwjonrhcsubchs',
     ],
     chars2 = 'usdruypficfbpfbivlrhutcgvyjenlxzeovdyjtgvvfdjzcmikjraspdfp';
-// console.log(countCharacters(words2, chars2)); // output 0
+console.log(countCharacters(words2, chars2)); // output 0
