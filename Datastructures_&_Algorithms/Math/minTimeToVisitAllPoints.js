@@ -47,3 +47,15 @@ const minTimeToVisitAllPoints = function (points) {
     // return the total time
     return totalTime;
 };
+
+const points = [
+    [1, 1],
+    [3, 4],
+    [-1, 0],
+];
+// Output: 7
+/* Explanation: One optimal path is [1,1] -> [2,2] -> [3,3] -> [3,4] -> [2,3] -> [1,2] -> [0,1] -> [-1,0]   
+Time from [1,1] to [3,4] = 3 seconds 
+Time from [3,4] to [-1,0] = 4 seconds
+Total time = 7 seconds */
+console.log(minTimeToVisitAllPoints(points));
