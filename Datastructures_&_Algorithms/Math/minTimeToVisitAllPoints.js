@@ -28,4 +28,22 @@
  * @param {number[][]} points
  * @return {number}
  */
-const minTimeToVisitAllPoints = function (points) {};
+const minTimeToVisitAllPoints = function (points) {
+    // initialize the totalTime to zero
+    let totalTime = 0;
+    // loop through the points array from the second element
+    for (let i = 1; i < points.length; i++) {
+        // get the current point and the previous point
+        const [x1, y1] = points[i - 1];
+        const [x2, y2] = points[i];
+
+        // calculate the Chebyshev distance between them
+        const dx = Math.abs(x2 - x1);
+        const dy = Math.abs(y2 - y1);
+
+        // add the distance to the time
+        totalTime += Math.max(dx, dy);
+    }
+    // return the total time
+    return totalTime;
+};
