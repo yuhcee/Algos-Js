@@ -59,3 +59,10 @@ Time from [1,1] to [3,4] = 3 seconds
 Time from [3,4] to [-1,0] = 4 seconds
 Total time = 7 seconds */
 console.log(minTimeToVisitAllPoints(points));
+
+const points1 = [
+    [3, 2],
+    [-2, 2],
+];
+// Output: 5
+console.log(minTimeToVisitAllPoints(points1));
