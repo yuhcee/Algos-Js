@@ -46,3 +46,8 @@ const num1 = '2300019';
 // Output: "000"
 // Explanation: "000" is the only good integer.
 console.log(largestGoodInteger(num1));
+
+const num2 = '42352338';
+// Output: ""
+// Explanation: No substring of length 3 consists of only one unique digit. Therefore, there are no good integers.
+console.log(largestGoodInteger(num2));
