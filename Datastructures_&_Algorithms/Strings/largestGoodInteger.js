@@ -15,6 +15,11 @@
  * - A **substring** is a contiguous sequence of characters within a string.
  * - There may be **leading zeroes** in `num` or a good integer.
  *
+ * **Constraints:**
+ *
+ * - `3 <= num.length <= 1000`
+ * - `num` only consists of digits.
+ *
  * @param {string} num
  * @return {string}
  */
