@@ -41,3 +41,8 @@ const num = '6777133339';
 /* Explanation: There are two distinct good integers: "777" and "333".
 "777" is the largest, so we return "777". */
 console.log(largestGoodInteger(num));
+
+const num1 = '2300019';
+// Output: "000"
+// Explanation: "000" is the only good integer.
+console.log(largestGoodInteger(num1));
