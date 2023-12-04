@@ -35,3 +35,9 @@ const largestGoodInteger = function (num) {
 
     return '';
 };
+
+const num = '6777133339';
+// Output: "777"
+/* Explanation: There are two distinct good integers: "777" and "333".
+"777" is the largest, so we return "777". */
+console.log(largestGoodInteger(num));
