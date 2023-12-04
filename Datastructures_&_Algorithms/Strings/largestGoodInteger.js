@@ -23,4 +23,15 @@
  * @param {string} num
  * @return {string}
  */
-const largestGoodInteger = function (num) {};
+const largestGoodInteger = function (num) {
+    let n = 9;
+
+    while (n >= 0) {
+        if (num.includes(String(n).repeat(3))) {
+            return String(n).repeat(3);
+        }
+        n--;
+    }
+
+    return '';
+};
