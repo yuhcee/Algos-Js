@@ -12,6 +12,10 @@
  *
  * Return *the number of matches played in the tournament until a winner is decided*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 200`
+ *
  * @param {number} n
  * @return {number}
  */
