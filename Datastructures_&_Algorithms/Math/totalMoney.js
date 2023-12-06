@@ -19,4 +19,19 @@
  * @param {number} n
  * @return {number}
  */
-const totalMoney = function (n) {};
+const totalMoney = function (n) {
+    let total = 0,
+        base = 1,
+        week = 1;
+
+    for (let day = 1; day <= n; day++) {
+        total += base;
+        base++;
+
+        if (day % 7 === 0) {
+            base = week + 1;
+            week++;
+        }
+    }
+    return total;
+};
