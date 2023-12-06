@@ -35,3 +35,8 @@ const totalMoney = function (n) {
     }
     return total;
 };
+
+const n = 4;
+// Output: 10
+// Explanation: After the 4th day, the total is 1 + 2 + 3 + 4 = 10.
+console.log(totalMoney(n));
