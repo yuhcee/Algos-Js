@@ -12,6 +12,10 @@
  * Given `n`, return *the total amount of money he will have in the
  * Leetcode bank at the end of the `nth` day*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 1000`
+ *
  * @param {number} n
  * @return {number}
  */
