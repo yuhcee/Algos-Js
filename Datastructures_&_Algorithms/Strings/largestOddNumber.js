@@ -7,6 +7,11 @@
  * 
  * A **substring** is a contiguous sequence of characters within a string.
  * 
+ * **Constraints:**
+ * 
+ * - `1 <= num.length <= 105`
+ * - `num` only consists of digits and does not contain any leading zeros.
+ * 
  * @param {string} num
  * @return {string}
  */
