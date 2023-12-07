@@ -27,4 +27,7 @@ const largestOddNumber = function (num) {
     return '';
 };
 
-
+const num = '52';
+// Output: "5"
+// Explanation: The only non-empty substrings are "5", "2", and "52". "5" is the only odd number.
+console.log(largestOddNumber(num));
