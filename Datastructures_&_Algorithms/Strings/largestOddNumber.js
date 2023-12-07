@@ -36,3 +36,8 @@ const num1 = '4206';
 // Output: ""
 // Explanation: There are no odd numbers in "4206".
 console.log(largestOddNumber(num1));
+
+const num2 = '35427';
+// Output: "35427"
+// Explanation: "35427" is already an odd number.
+console.log(largestOddNumber(num2));
