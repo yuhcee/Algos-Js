@@ -16,6 +16,11 @@
  * Omit all the empty parenthesis pairs that do not affect the one-to-one
  * mapping relationship between the string and the original binary tree.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is in the range `[1, 104]`.
+ * - `-1000 <= Node.val <= 1000`
+ *
  * @param {TreeNode} root
  * @return {string}
  */
