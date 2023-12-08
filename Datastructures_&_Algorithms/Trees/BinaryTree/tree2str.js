@@ -24,4 +24,39 @@
  * @param {TreeNode} root
  * @return {string}
  */
-const tree2str = function (root) {};
+const tree2str = function (root) {
+    if (!root) {
+        return ''; // Empty tree, return an empty string
+    }
+
+    const result = [];
+
+    // Helper function for recursive preorder traversal
+    const preorder = (node) => {
+        if (!node) {
+            return;
+        }
+
+        // Process current value
+        result.push(node.val);
+
+        // Process left subtree
+        if (node.left || node.right) {
+            result.push('(');
+            preorder(node.left);
+            result.push(')');
+        }
+
+        // Process right subtree
+        if (node.right) {
+            result.push('(');
+            preorder(node.right);
+            result.push(')');
+        }
+    };
+
+    // Start the traversal
+    preorder(root);
+
+    return result.join('');
+};
