@@ -60,3 +60,7 @@ const tree2str = function (root) {
 
     return result.join('');
 };
+
+const root = [1,2,3,4]
+// Output: "1(2(4))(3)"
+// Explanation: Originally, it needs to be "1(2(4)())(3()())", but you need to omit all the unnecessary empty parenthesis pairs. And it will be "1(2(4))(3)"
