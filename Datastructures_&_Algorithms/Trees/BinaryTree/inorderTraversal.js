@@ -13,18 +13,7 @@
  * @return {number[]}
  */
 const inorderTraversal = function (root) {
-    let res = [];
-
-    const fn = (node) => {
-        if (!node) return;
-        fn(node.left);
-        res.push(node.val);
-        fn(node.right);
-    };
-
-    fn(root);
-
-    return res;
+    
 };
 
 const root = [1, null, 2, 3];
