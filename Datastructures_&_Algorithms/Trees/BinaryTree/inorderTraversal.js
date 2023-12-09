@@ -20,10 +20,13 @@ const inorderTraversal = function (root) {
             return;
         }
 
+        // Process left subtree
         inorder(node.left);
 
+        // Process the current value
         result.push(node.val);
 
+        // Process right subtree
         inorder(node.right);
     };
 
