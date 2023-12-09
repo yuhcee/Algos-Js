@@ -29,6 +29,9 @@ const inorderTraversal = function (root) {
         // Process right subtree
         inorder(node.right);
     };
+    
+    // Start the traversal
+    inorder(root)
 
     return result;
 };
