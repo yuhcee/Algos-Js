@@ -45,3 +45,15 @@ const matrix1 = [
 ];
 // Output: [[1,4],[2,5],[3,6]]
 console.log(transpose(matrix1));
+
+const matrix2 = [
+    [10, 20, 30],
+    [40, 50, 60]
+];
+
+console.log(transpose(matrix2));
+// Output: [
+//   [10, 40],
+//   [20, 50],
+//   [30, 60]
+// ]
