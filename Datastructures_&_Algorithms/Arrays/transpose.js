@@ -48,7 +48,7 @@ console.log(transpose(matrix1));
 
 const matrix2 = [
     [10, 20, 30],
-    [40, 50, 60]
+    [40, 50, 60],
 ];
 
 console.log(transpose(matrix2));
@@ -58,13 +58,23 @@ console.log(transpose(matrix2));
 //   [30, 60]
 // ]
 
-const matrix3 = [
-    [1, 2, 3]
-];
+const matrix3 = [[1, 2, 3]];
 
 console.log(transpose(matrix3));
 // Output: [
 //   [1],
 //   [2],
 //   [3]
+// ]
+
+const matrix4 = [
+    [1, 2],
+    [3, 4],
+    [5, 6],
+];
+
+console.log(transpose(matrix4));
+// Output: [
+//   [1, 3, 5],
+//   [2, 4, 6]
 // ]
