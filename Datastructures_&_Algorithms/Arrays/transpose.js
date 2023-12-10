@@ -57,3 +57,14 @@ console.log(transpose(matrix2));
 //   [20, 50],
 //   [30, 60]
 // ]
+
+const matrix3 = [
+    [1, 2, 3]
+];
+
+console.log(transpose(matrix3));
+// Output: [
+//   [1],
+//   [2],
+//   [3]
+// ]
