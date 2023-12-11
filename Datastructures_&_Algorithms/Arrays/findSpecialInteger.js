@@ -41,3 +41,7 @@ const findSpecialInteger = function (arr) {
 const arr = [1, 2, 2, 6, 6, 6, 6, 7, 10];
 // Output: 6
 console.log(findSpecialInteger(arr));
+
+const arr1 = [1, 1];
+// Output: 1
+console.log(findSpecialInteger(arr1));
