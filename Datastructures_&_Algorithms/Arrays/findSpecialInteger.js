@@ -45,3 +45,8 @@ console.log(findSpecialInteger(arr));
 const arr1 = [1, 1];
 // Output: 1
 console.log(findSpecialInteger(arr1));
+
+const arr2 = [1];
+// Output: 1
+console.log(findSpecialInteger(arr2));
+
