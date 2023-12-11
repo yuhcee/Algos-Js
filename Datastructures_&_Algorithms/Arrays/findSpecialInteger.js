@@ -5,6 +5,11 @@
  * exactly one integer in the array that occurs more than 25% of the time,
  * return that integer.
  *
+ * **Constraints:**
+ *
+ * - `1 <= arr.length <= 104`
+ * - `0 <= arr[i] <= 105`
+ *
  * @param {number[]} arr
  * @return {number}
  */
