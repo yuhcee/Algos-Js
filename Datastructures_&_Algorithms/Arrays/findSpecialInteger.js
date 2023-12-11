@@ -37,3 +37,7 @@ const findSpecialInteger = function (arr) {
 
     return -1; // Not found (shouldn't reach here if the input is valid)
 };
+
+const arr = [1, 2, 2, 6, 6, 6, 6, 7, 10];
+// Output: 6
+console.log(findSpecialInteger(arr));
