@@ -13,4 +13,11 @@
  * @param {number[]} nums
  * @return {number}
  */
-const maxProduct = function (nums) {};
+const maxProduct = function (nums) {
+    nums.sort((a, b) => b - a);
+
+    const x = nums[0] - 1;
+    const y = nums[1] - 1;
+
+    return x * y;
+};
