@@ -18,7 +18,35 @@
  * @param {number[][]} mat
  * @return {number}
  */
-const numSpecial = function (mat) {};
+const numSpecial = function (mat) {
+    const rows = mat.length;
+    const cols = mat[0].length;
+    const rowCounts = new Array(rows).fill(0);
+    const colCounts = new Array(cols).fill(0);
+
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+            if (mat[r][c] === 1) {
+                rowCounts[r]++;
+                colCounts[c]++;
+            }
+        }
+    }
+
+    let specialCounts = 0;
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+            if (mat[r][c] === 1 && rowCounts[r] === 1 && colCounts[c] === 1) {
+                specialCounts++;
+            }
+        }
+    }
+
+    rowCounts;
+    colCounts; 
+
+    return specialCounts;
+};
 
 const mat = [
     [1, 0, 0],
@@ -27,7 +55,7 @@ const mat = [
 ];
 // Output: 1
 // Explanation: (1, 2) is a special position because mat[1][2] == 1 and all other elements in row 1 and column 2 are 0.
-console.log(numSpecial(mat));
+// console.log(numSpecial(mat));
 
 const mat1 = [
     [1, 0, 0],
