@@ -28,3 +28,12 @@ const mat = [
 // Output: 1
 // Explanation: (1, 2) is a special position because mat[1][2] == 1 and all other elements in row 1 and column 2 are 0.
 console.log(numSpecial(mat));
+
+const mat1 = [
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1],
+];
+// Output: 3
+// Explanation: (0, 0), (1, 1) and (2, 2) are special positions.
+console.log(numSpecial(mat1));
