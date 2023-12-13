@@ -19,3 +19,12 @@
  * @return {number}
  */
 const numSpecial = function (mat) {};
+
+const mat = [
+    [1, 0, 0],
+    [0, 0, 1],
+    [1, 0, 0],
+];
+// Output: 1
+// Explanation: (1, 2) is a special position because mat[1][2] == 1 and all other elements in row 1 and column 2 are 0.
+console.log(numSpecial(mat));
