@@ -42,9 +42,6 @@ const numSpecial = function (mat) {
         }
     }
 
-    rowCounts;
-    colCounts; 
-
     return specialCounts;
 };
 
