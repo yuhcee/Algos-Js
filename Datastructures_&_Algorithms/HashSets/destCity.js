@@ -40,3 +40,17 @@ const destCity = function (paths) {
 
     return '';
 };
+
+const paths = [
+    ['B', 'C'],
+    ['D', 'B'],
+    ['C', 'A'],
+];
+// Output: "A"
+/* Explanation: All possible trips are: 
+"D" -> "B" -> "C" -> "A". 
+"B" -> "C" -> "A". 
+"C" -> "A". 
+"A". 
+Clearly the destination city is "A". */
+console.log(destCity(paths));
