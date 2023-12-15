@@ -54,3 +54,12 @@ const paths = [
 "A". 
 Clearly the destination city is "A". */
 console.log(destCity(paths));
+
+const paths1 = [
+    ['London', 'New York'],
+    ['New York', 'Lima'],
+    ['Lima', 'Sao Paulo'],
+];
+// Output: "Sao Paulo"
+/* Explanation: Starting at "London" city you will reach "Sao Paulo" city which is the destination city. Your trip consist of: "London" -> "New York" -> "Lima" -> "Sao Paulo". */
+console.log(destCity(paths1));
