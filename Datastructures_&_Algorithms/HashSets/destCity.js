@@ -23,4 +23,20 @@
  * @param {string[][]} paths
  * @return {string}
  */
-const destCity = function (paths) {};
+const destCity = function (paths) {
+    const destinations = new Set();
+    const sources = new Set();
+
+    for (let [source, destination] of paths) {
+        destinations.add(destination);
+        sources.add(source);
+    }
+
+    for (let destination of destinations) {
+        if (!sources.has(destination)) {
+            return destination;
+        }
+    }
+
+    return '';
+};
