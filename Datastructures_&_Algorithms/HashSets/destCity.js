@@ -10,6 +10,15 @@
  * It is guaranteed that the graph of paths forms a line without any loop,
  * therefore, there will be exactly one destination city.
  *
+ * **Constraints:**
+ *
+ * - `1 <= paths.length <= 100`
+ * - `paths[i].length == 2`
+ * - `1 <= cityAi.length, cityBi.length <= 10`
+ * - `cityAi != cityBi`
+ * - All strings consist of lowercase and uppercase English letters and
+ * the space character.
+ *
  *
  * @param {string[][]} paths
  * @return {string}
