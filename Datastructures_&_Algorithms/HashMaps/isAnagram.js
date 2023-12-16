@@ -36,3 +36,8 @@ const isAnagram = function (s, t) {
 
     return true;
 };
+
+const s = 'anagram',
+    t = 'nagaram';
+// Output: true
+console.log(isAnagram(s, t));
