@@ -41,3 +41,8 @@ const s = 'anagram',
     t = 'nagaram';
 // Output: true
 console.log(isAnagram(s, t));
+
+const s1 = 'rat',
+    t1 = 'car';
+// Output: false
+console.log(isAnagram(s1, t1));
