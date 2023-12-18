@@ -13,6 +13,11 @@
  *
  * Return *the **maximum** such product difference*.
  *
+ * **Constraints:**
+ *
+ * - `4 <= nums.length <= 104`
+ * - `1 <= nums[i] <= 104`
+ *
  * @param {number[]} nums
  * @return {number}
  */
