@@ -21,4 +21,30 @@
  * @param {number[]} nums
  * @return {number}
  */
-const maxProductDifference = function (nums) {};
+const maxProductDifference = function (nums) {
+    // Initialize variables to store the two largest and two smallest elements
+    let max1 = -Infinity,
+        max2 = -Infinity;
+    let min1 = Infinity,
+        min2 = Infinity;
+
+    // Iterate through the array to find the two largest and two smallest elements
+    for (const num of nums) {
+        if (num > max1) {
+            max2 = max1;
+            max1 = num;
+        } else if (num > max2) {
+            max2 = num;
+        }
+
+        if (num < min1) {
+            min2 = min1;
+            min1 = num;
+        } else if (num < min2) {
+            min2 = num;
+        }
+    }
+
+    // Calculate the product difference
+    return max1 * max2 - min1 * min2;
+};
