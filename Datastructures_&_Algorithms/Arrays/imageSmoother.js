@@ -12,6 +12,13 @@
  * image, return *the image after applying the smoother on each cell of 
  * it*.
  * 
+ * **Constraints:**
+ * 
+ * - `m == img.length`
+ * - `n == img[i].length`
+ * - `1 <= m, n <= 200`
+ * - `0 <= img[i][j] <= 255`
+ * 
  * @param {number[][]} img
  * @return {number[][]}
  */
