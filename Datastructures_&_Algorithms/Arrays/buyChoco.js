@@ -18,4 +18,20 @@ Constraints:
  * @param {number} money
  * @return {number}
  */
-const buyChoco = function (prices, money) {};
+const buyChoco = function (prices, money) {
+    let firstMinCost = Infinity;
+    let secondMinCost = Infinity;
+
+    for (let p of prices) {
+        if (p < firstMinCost) {
+            secondMinCost = firstMinCost;
+            firstMinCost = p;
+        } else if (p < secondMinCost) {
+            secondMinCost = p;
+        }
+    }
+
+    let leftover = money - (firstMinCost + secondMinCost);
+
+    return leftover >= 0 ? leftover : money;
+};
