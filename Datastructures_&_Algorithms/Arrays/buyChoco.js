@@ -7,6 +7,12 @@ You must buy exactly two chocolates in such a way that you still have some non-n
 
 Return the amount of money you will have leftover after buying the two chocolates. If there is no way for you to buy two chocolates without ending up in debt, return money. Note that the leftover must be non-negative.
 
+Constraints:
+
+2 <= prices.length <= 50
+1 <= prices[i] <= 100
+1 <= money <= 100
+
 
  * @param {number[]} prices
  * @param {number} money
