@@ -35,3 +35,13 @@ const buyChoco = function (prices, money) {
 
     return leftover >= 0 ? leftover : money;
 };
+
+const prices = [1, 2, 2],
+    money = 3;
+// Output: 0
+// Explanation: Purchase the chocolates priced at 1 and 2 units respectively. You will have 3 - 3 = 0 units of money afterwards. Thus, we return 0.
+console.log(buyChoco(prices, money));
+
+const prices1 = [3,2,3], money1 = 3
+// Output: 3
+// Explanation: You cannot buy 2 chocolates without going in debt, so we return 3.
