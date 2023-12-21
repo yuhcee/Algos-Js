@@ -48,3 +48,14 @@ const points = [
 // Output: 1
 // Explanation: Both the red and the blue area are optimal.
 console.log(maxWidthOfVerticalArea(points));
+
+const points1 = [
+    [3, 1],
+    [9, 0],
+    [1, 0],
+    [1, 4],
+    [5, 3],
+    [8, 8],
+];
+// Output: 3
+console.log(maxWidthOfVerticalArea(points1));
