@@ -22,4 +22,19 @@
  * @param {number[][]} points
  * @return {number}
  */
-const maxWidthOfVerticalArea = function (points) {};
+const maxWidthOfVerticalArea = function (points) {
+    // Extract x-coordinates
+    const xCoordinates = points.map((point) => point[0]);
+
+    // Sort x-coordinates
+    xCoordinates.sort((a, b) => a - b);
+
+    // Find the maximum width
+    let maxWidth = 0;
+    for (let i = 1; i < xCoordinates.length; i++) {
+        const width = xCoordinates[i] - xCoordinates[i - 1];
+        maxWidth = Math.max(maxWidth, width);
+    }
+
+    return maxWidth;
+};
