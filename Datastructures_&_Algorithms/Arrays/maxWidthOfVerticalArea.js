@@ -12,6 +12,13 @@
  * Note that points **on the edge** of a vertical area **are not**
  * considered included in the area.
  *
+ * **Constraints:**
+ *
+ * - `n == points.length`
+ * - `2 <= n <= 105`
+ * - `points[i].length == 2`
+ * - `0 <= xi, yi <= 109`
+ *
  * @param {number[][]} points
  * @return {number}
  */
