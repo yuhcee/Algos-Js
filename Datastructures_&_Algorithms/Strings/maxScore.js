@@ -10,11 +10,29 @@
  * substring.
  *
  * **Constraints:**
- * 
+ *
  * - `2 <= s.length <= 500`
  * - The string `s` consists of characters `'0'` and `'1'` only.
- * 
+ *
  * @param {string} s
  * @return {number}
  */
-const maxScore = function (s) {};
+const maxScore = function (s) {
+    let zerosLeft = 0;
+    let onesRight = s.split('1').length - 1;
+
+    let maxScore = 0;
+
+    for (let i = 0; i < s.length - 1; i++) {
+        if (s[i] === '0') {
+            zerosLeft++;
+        } else {
+            onesRight--;
+        }
+
+        const currentScore = zerosLeft + onesRight;
+        maxScore = Math.max(maxScore, currentScore);
+    }
+
+    return maxScore;
+};
