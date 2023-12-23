@@ -51,3 +51,8 @@ const isPathCrossing = function (path) {
 
     return false;
 };
+
+const path = 'NES';
+// Output: false
+// Explanation: Notice that the path doesn't cross any point more than once.
+console.log(isPathCrossing(path));
