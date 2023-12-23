@@ -18,7 +18,7 @@
  * @param {string} path
  * @return {boolean}
  */
-var isPathCrossing = function (path) {
+const isPathCrossing = function (path) {
     const visited = new Set();
     visited.add('0,0'); // Starting position
 
