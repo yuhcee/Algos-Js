@@ -56,3 +56,8 @@ const path = 'NES';
 // Output: false
 // Explanation: Notice that the path doesn't cross any point more than once.
 console.log(isPathCrossing(path));
+
+const path1 = 'NESWW';
+// Output: true
+// Explanation: Notice that the path visits the origin twice.
+console.log(isPathCrossing(path1));
