@@ -10,6 +10,11 @@
  * at any time you are on a location you have previously visited*.
  * Return `false` otherwise.
  *
+ * **Constraints:**
+ *
+ * - `1 <= path.length <= 104`
+ * - `path[i]` is either `'N'`, `'S'`, `'E'`, or `'W'`.
+ *
  * @param {string} path
  * @return {boolean}
  */
