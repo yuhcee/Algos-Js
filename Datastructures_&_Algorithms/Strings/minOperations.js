@@ -47,3 +47,8 @@ const s1 = '10';
 // Output: 0
 // Explanation: s is already alternating.
 console.log(minOperations(s1));
+
+const s2 = '1111';
+// Output: 2
+// Explanation: You need two operations to reach "0101" or "1010".
+console.log(minOperations(s2));
