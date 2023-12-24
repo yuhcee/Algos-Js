@@ -37,3 +37,8 @@ const minOperations = function (s) {
     // Count operations for both starting characters and return the minimum
     return Math.min(countOperations('0'), countOperations('1'));
 };
+
+const s = '0100';
+// Output: 1
+// Explanation: If you change the last character to '1', s will be "0101", which is alternating.
+console.log(minOperations(s));
