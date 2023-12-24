@@ -20,4 +20,20 @@
  * @param {string} s
  * @return {number}
  */
-const minOperations = function (s) {};
+const minOperations = function (s) {
+    // Function to count operations for a given starting character
+    const countOperations = (startChar) => {
+        let operations = 0;
+        for (let i = 0; i < s.length; i++) {
+            if (s[i] !== startChar) {
+                operations++;
+            }
+            // Toggle the starting character for the next position
+            startChar = startChar === '0' ? '1' : '0';
+        }
+        return operations;
+    };
+
+    // Count operations for both starting characters and return the minimum
+    return Math.min(countOperations('0'), countOperations('1'));
+};
