@@ -12,6 +12,11 @@
  * Return *the **minimum** number of operations needed to make s
  * alternating*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 104`
+ * - `s[i]` is either `'0'` or `'1'`.
+ *
  * @param {string} s
  * @return {number}
  */
