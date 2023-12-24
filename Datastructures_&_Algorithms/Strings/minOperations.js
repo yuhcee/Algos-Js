@@ -42,3 +42,8 @@ const s = '0100';
 // Output: 1
 // Explanation: If you change the last character to '1', s will be "0101", which is alternating.
 console.log(minOperations(s));
+
+const s1 = '10';
+// Output: 0
+// Explanation: s is already alternating.
+console.log(minOperations(s1));
