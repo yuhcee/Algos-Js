@@ -28,4 +28,31 @@ s contains only lowercase English letters.
  * @param {number} k
  * @return {number}
  */
-const getLengthOfOptimalCompression = function (s, k) {};
+const getLengthOfOptimalCompression = function (s, k) {
+    const n = s.length;
+    const memo = new Map();
+
+    const dp = (i, lastChar, lastCharCount, k) => {
+        if (k < 0) return Number.POSITIVE_INFINITY;
+        if (i >= n) return 0;
+
+        const memoKey = `${i}#${lastChar}#${lastCharCount}#${k}`;
+        if (memo.has(memoKey)) return memo.get(memoKey);
+
+        if (s[i] === lastChar) {
+            const incrementor = [1, 9, 99].includes(lastCharCount) ? 1 : 0;
+            memo.set(memoKey, incrementor + dp(i + 1, lastChar, lastCharCount + 1, k));
+        } else {
+            memo.set(
+                memoKey,
+                Math.min(
+                    1 + dp(i + 1, s[i], 1, k), // Keep char
+                    dp(i + 1, lastChar, lastCharCount, k - 1) // Delete char
+                )
+            );
+        }
+        return memo.get(memoKey);
+    };
+
+    return dp(0, '', 0, k);
+};
