@@ -18,6 +18,11 @@
  * Find *the minimum length of the run-length encoded version of `s`
  * after deleting at most `k` characters*.
  *
+ * **Constraints:**
+
+1 <= s.length <= 100
+0 <= k <= s.length
+s contains only lowercase English letters.
  *
  * @param {string} s
  * @param {number} k
