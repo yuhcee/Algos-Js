@@ -19,7 +19,7 @@
  * after deleting at most `k` characters*.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= s.length <= 100`
  * - `0 <= k <= s.length`
  * - `s` contains only lowercase English letters.
@@ -69,7 +69,8 @@ const s1 = 'aabbaa',
 // Explanation: If we delete both 'b' characters, the resulting compressed string would be "a4" of length 2.
 console.log(getLengthOfOptimalCompression(s1, k1));
 
-const s2 = "aaaaaaaaaaa", k2 = 0
+const s2 = 'aaaaaaaaaaa',
+    k2 = 0;
 // Output: 3
 // Explanation: Since k is zero, we cannot delete anything. The compressed string is "a11" of length 3.
-console.log(getLengthOfOptimalCompression(s2, k2))2;
+console.log(getLengthOfOptimalCompression(s2, k2));
