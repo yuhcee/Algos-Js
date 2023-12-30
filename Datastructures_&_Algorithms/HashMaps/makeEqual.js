@@ -19,4 +19,23 @@
  * @param {string[]} words
  * @return {boolean}
  */
-const makeEqual = function (words) {};
+const makeEqual = function (words) {
+    const charCount = new Map();
+
+    // Count the frequency of each character in all words
+    for (const word of words) {
+        for (const char of word) {
+            charCount.set(char, (charCount.get(char) || 0) + 1);
+        }
+    }
+
+    // Check if the frequency of each character is a multiple of the total number of words
+    const totalWords = words.length;
+    for (const count of charCount.values()) {
+        if (count % totalWords !== 0) {
+            return false;
+        }
+    }
+
+    return true;
+};
