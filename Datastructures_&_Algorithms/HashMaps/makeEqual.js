@@ -45,3 +45,8 @@ const words = ['abc', 'aabc', 'bc'];
 to make words[1] = "abc" and words[2] = "abc".
 All the strings are now equal to "abc", so return true. */
 console.log(makeEqual(words));
+
+const words1 = ['ab', 'a'];
+// Output: false
+// Explanation: It is impossible to make all the strings equal using the operation.
+console.log(makeEqual(words1));
