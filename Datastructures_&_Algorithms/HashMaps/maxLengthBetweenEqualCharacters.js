@@ -36,3 +36,8 @@ const s = 'aa';
 // Output: 0
 // Explanation: The optimal substring here is an empty substring between the two 'a's.
 console.log(maxLengthBetweenEqualCharacters(s));
+
+const s1 = 'abca';
+// Output: 2
+// Explanation: The optimal substring here is "bc".
+console.log(maxLengthBetweenEqualCharacters(s1));
