@@ -31,3 +31,8 @@ const maxLengthBetweenEqualCharacters = function (s) {
 
     return maxLength;
 };
+
+const s = 'aa';
+// Output: 0
+// Explanation: The optimal substring here is an empty substring between the two 'a's.
+console.log(maxLengthBetweenEqualCharacters(s));
