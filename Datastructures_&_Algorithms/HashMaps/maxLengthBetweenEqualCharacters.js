@@ -8,6 +8,11 @@
  * A **substring** is a contiguous sequence of characters within a
  * string.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 300`
+ * - `s` contains only lowercase English letters.
+ *
  * @param {string} s
  * @return {number}
  */
