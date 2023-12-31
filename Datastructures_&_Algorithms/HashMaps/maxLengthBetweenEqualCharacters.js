@@ -16,4 +16,18 @@
  * @param {string} s
  * @return {number}
  */
-const maxLengthBetweenEqualCharacters = function (s) {};
+const maxLengthBetweenEqualCharacters = function (s) {
+    const firstOccurrence = new Map();
+    let maxLength = -1;
+
+    for (let i = 0; i < s.length; i++) {
+        const char = s[i];
+        if (firstOccurrence.has(char)) {
+            maxLength = Math.max(maxLength, i - firstOccurrence.get(char) - 1);
+        } else {
+            firstOccurrence.set(char, i);
+        }
+    }
+
+    return maxLength;
+};
