@@ -41,3 +41,8 @@ const s1 = 'abca';
 // Output: 2
 // Explanation: The optimal substring here is "bc".
 console.log(maxLengthBetweenEqualCharacters(s1));
+
+const s2 = 'cbzxy';
+// Output: -1
+// Explanation: There are no characters that appear twice in s.
+console.log(maxLengthBetweenEqualCharacters(s2));
