@@ -63,3 +63,14 @@ const g1 = [1, 2],
 You have 3 cookies and their sizes are big enough to gratify all of the children, 
 You need to output 2. */
 console.log(findContentChildren(g1, s1));
+
+const g2 = [7, 8, 9, 10];
+const s2 = [5, 6, 7, 8];
+
+console.log(findContentChildren(g2, s2));
+// Expected Output: 2
+/*
+Explanation: You have 4 children with greed factors 7, 8, 9, 10, 
+and 4 cookies with sizes 5, 6, 7, 8. You can assign cookies of size 7 and 8 to the children with greed factors 7 and 8, 
+making 2 children content. Therefore, the expected output is 2.
+*/
