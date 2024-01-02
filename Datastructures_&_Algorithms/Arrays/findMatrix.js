@@ -15,6 +15,11 @@
  * **Note** that the 2D array can have a different number of elements on
  * each row.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 200`
+ * - `1 <= nums[i] <= nums.length`
+ *
  * @param {number[]} nums
  * @return {number[][]}
  */
