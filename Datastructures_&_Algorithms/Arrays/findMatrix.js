@@ -66,3 +66,12 @@ const nums1 = [1, 2, 3, 4];
 // Output: [[4,3,2,1]]
 // Explanation: All elements of the array are distinct, so we can keep all of them in the first row of the 2D array.
 console.log(findMatrix(nums1));
+
+const nums3 = [5, 2, 1, 3, 5, 4, 2, 1];
+// Output: [[5,2,1,3,4],[5,2],[1]]
+// Explanation: We can create a 2D array that contains the following rows:
+// - 5,2,1,3,4
+// - 5,2
+// - 1
+// All elements of nums3 were used, and each row of the 2D array contains distinct integers, so it is a valid answer.
+console.log(findMatrix(nums3));
