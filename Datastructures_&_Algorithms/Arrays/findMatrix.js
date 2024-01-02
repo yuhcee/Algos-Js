@@ -61,3 +61,8 @@ const nums = [1, 3, 4, 1, 2, 3, 1];
 All elements of nums were used, and each row of the 2D array contains distinct integers, so it is a valid answer.
 It can be shown that we cannot have less than 3 rows in a valid array. */
 console.log(findMatrix(nums));
+
+const nums1 = [1, 2, 3, 4];
+// Output: [[4,3,2,1]]
+// Explanation: All elements of the array are distinct, so we can keep all of them in the first row of the 2D array.
+console.log(findMatrix(nums1));
