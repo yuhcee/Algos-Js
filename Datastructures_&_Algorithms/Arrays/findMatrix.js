@@ -23,4 +23,31 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
-const findMatrix = function (nums) {};
+const findMatrix = function (nums) {
+    // Step 1: Sort the input array in descending order
+    nums.sort((a, b) => b - a);
+
+    // Step 2: Create an empty 2D array
+    const result = [];
+
+    // Step 3: Iterate through the sorted array
+    for (const num of nums) {
+        // Find a row to insert the current number while ensuring distinct integers
+        let rowFound = false;
+        for (let row of result) {
+            if (!row.includes(num)) {
+                row.push(num);
+                rowFound = true;
+                break;
+            }
+        }
+
+        // If no suitable row is found, create a new row
+        if (!rowFound) {
+            result.push([num]);
+        }
+    }
+
+    // Step 4: Return the resulting 2D array
+    return result;
+};
