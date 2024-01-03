@@ -66,3 +66,8 @@ const bank = ['011001', '000000', '010100', '001000'];
 Note that there is no beam between any device on the 0th row with any on the 3rd row.
 This is because the 2nd row contains security devices, which breaks the second condition. */
 console.log(numberOfBeams(bank));
+
+const bank1 = ['000', '111', '000'];
+// Output: 0
+// Explanation: There does not exist two devices located on two different rows.
+console.log(numberOfBeams(bank1));
