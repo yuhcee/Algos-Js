@@ -71,3 +71,6 @@ const bank1 = ['000', '111', '000'];
 // Output: 0
 // Explanation: There does not exist two devices located on two different rows.
 console.log(numberOfBeams(bank1));
+
+const bank2 = ['0010', '0001', '1100', '0000'];
+console.log(numberOfBeams(bank2)); // Output: 3
