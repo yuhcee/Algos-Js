@@ -30,4 +30,24 @@
  * @param {string[]} bank
  * @return {number}
  */
-const numberOfBeams = function (bank) {};
+const numberOfBeams = function (bank) {
+    let prev = 0;
+    let ans = 0;
+
+    for (let s of bank) {
+        let count = 0;
+
+        for (let i = 0; i < s.length; i++) {
+            if (s.charAt(i) === '1') {
+                count++;
+            }
+        }
+
+        if (count > 0) {
+            ans += prev * count;
+            prev = count;
+        }
+    }
+
+    return ans;
+};
