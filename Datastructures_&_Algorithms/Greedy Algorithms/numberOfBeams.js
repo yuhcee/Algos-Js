@@ -20,6 +20,13 @@
  * join with another.
  * Return *the total number of laser beams in the bank*.
  *
+ * **Constraints:**
+ *
+ * - `m == bank.length`
+ * - `n == bank[i].length`
+ * - `1 <= m, n <= 500`
+ * - `bank[i][j]` is either `'0'` or `'1'`.
+ *
  * @param {string[]} bank
  * @return {number}
  */
