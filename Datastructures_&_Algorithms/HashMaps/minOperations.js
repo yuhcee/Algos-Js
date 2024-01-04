@@ -15,6 +15,11 @@
  * Return *the **minimum** number of operations required to make the
  * array empty, or `-1` if it is not possible.
  *
+ * **Constraints:**
+ * 
+ * - `2 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 106`
+ * 
  * @param {number[]} nums
  * @return {number}
  */
