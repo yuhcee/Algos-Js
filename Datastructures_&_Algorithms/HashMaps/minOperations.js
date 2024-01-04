@@ -69,3 +69,12 @@ const nums1 = [2, 1, 2, 2, 3, 3];
 // Output: -1
 // Explanation: It is impossible to empty the array.
 console.log(minOperations(nums1));
+
+const nums2 = [1, 1, 1, 2, 2, 2, 3, 3, 3];
+// Output: 3
+/* Explanation: We can apply the following operations to make the array empty:
+- Apply the first operation on the elements at indices 0 and 3. The resulting array is nums2 = [2,1,2,2,3,3,3].
+- Apply the second operation on the elements at indices 4, 5, and 6. The resulting array is nums2 = [2,1].
+- Apply the first operation on the elements at indices 0 and 1. The resulting array is nums2 = [].
+It can be shown that we cannot make the array empty in less than 3 operations. */
+console.log(minOperations(nums2));
