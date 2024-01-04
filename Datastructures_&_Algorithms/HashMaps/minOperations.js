@@ -64,3 +64,8 @@ const nums = [2, 3, 3, 2, 2, 4, 2, 3, 4];
 - Apply the first operation on the elements at indices 0 and 1. The resulting array is nums = [].
 It can be shown that we cannot make the array empty in less than 4 operations. */
 console.log(minOperations(nums));
+
+const nums1 = [2, 1, 2, 2, 3, 3];
+// Output: -1
+// Explanation: It is impossible to empty the array.
+console.log(minOperations(nums1));
