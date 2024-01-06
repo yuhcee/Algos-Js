@@ -40,6 +40,23 @@ const jobScheduling = function (startTime, endTime, profit) {
     return dp[0];
 };
 
+function binarySearch(intervals, startIndex) {
+    let low = startIndex + 1;
+    let high = intervals.length - 1;
+
+    while (low <= high) {
+        const mid = Math.floor((low + high) / 2);
+
+        if (intervals[mid].start >= intervals[startIndex].end) {
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    return low;
+}
+
 const startTime = [1, 2, 3, 3],
     endTime = [3, 4, 5, 6],
     profit = [50, 10, 40, 70];
