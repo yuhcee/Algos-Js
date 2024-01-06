@@ -20,39 +20,24 @@
  * @param {number[]} profit
  * @return {number}
  */
-var jobScheduling = function (startTime, endTime, profit) {
-    let intervals = [];
-    for (let i = 0; i < startTime.length; i++) {
+const jobScheduling = function (startTime, endTime, profit) {
+    const n = startTime.length;
+    const intervals = [];
+
+    for (let i = 0; i < n; i++) {
         intervals.push({ start: startTime[i], end: endTime[i], profit: profit[i] });
     }
 
     intervals.sort((a, b) => a.start - b.start);
-    let memo = new Array(intervals.length + 1);
-    return dfs(0);
 
-    function dfs(startIdx) {
-        if (memo[startIdx] !== undefined) {
-            return memo[startIdx];
-        }
+    const dp = new Array(n + 1).fill(0);
 
-        if (startIdx >= intervals.length) {
-            return 0;
-        }
-
-        // taking
-        let idx = startIdx;
-        let take = intervals[startIdx];
-        while (intervals[idx]?.start < take?.end) {
-            idx++;
-        }
-
-        const takeProfit = take.profit + dfs(idx);
-        // not taking
-        const notTakeProfit = dfs(startIdx + 1);
-        let res = Math.max(takeProfit, notTakeProfit);
-        memo[startIdx] = res;
-        return res;
+    for (let i = n - 1; i >= 0; i--) {
+        const nextIndex = binarySearch(intervals, i);
+        dp[i] = Math.max(intervals[i].profit + dp[nextIndex], dp[i + 1]);
     }
+
+    return dp[0];
 };
 
 const startTime = [1, 2, 3, 3],
