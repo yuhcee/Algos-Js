@@ -66,3 +66,13 @@ const nums2 = [1, 2, 3, 4, 5];
 [1,2,4,5]
 [1,3,4,5] */
 console.log(numberOfArithmeticSlices(nums2));
+
+const nums3 = [1, 3, 5, 7, 9];
+// Output: 5
+/* Explanation: All arithmetic subsequence slices are:
+[1,3,5]
+[3,5,7]
+[1,5,9]
+[1,3,7]
+[1,3,5,7,9] */
+console.log(numberOfArithmeticSlices(nums3));
