@@ -39,7 +39,6 @@ var numberOfArithmeticSlices = function (nums) {
     return result;
 };
 
-
 const nums = [2, 4, 6, 8, 10];
 Output: 7;
 /* Explanation: All arithmetic subsequence slices are:
@@ -56,3 +55,14 @@ const nums1 = [7, 7, 7, 7, 7];
 // Output: 16
 // Explanation: Any subsequence of this array is arithmetic.
 console.log(numberOfArithmeticSlices(nums1));
+
+const nums2 = [1, 2, 3, 4, 5];
+// Output: 6
+/* Explanation: All arithmetic subsequence slices are:
+[1,2,3]
+[1,2,3,4]
+[2,3,4]
+[1,3,5]
+[1,2,4,5]
+[1,3,4,5] */
+console.log(numberOfArithmeticSlices(nums2));
