@@ -23,20 +23,22 @@
  * @return {number}
  */
 var numberOfArithmeticSlices = function (nums) {
-    let cache = new Map();
+    let cache = [];
     let result = 0;
+
     for (let i = 0; i < nums.length; i++) {
-        cache[i] = new Map();
+        cache[i] = {};
         for (let j = 0; j < i; j++) {
             let diff = nums[i] - nums[j];
-            let cacheOne = cache[i].get(diff) || 0;
-            let cacheTwo = cache[j].get(diff) || 0;
+            let cacheOne = cache[i][diff] || 0;
+            let cacheTwo = cache[j][diff] || 0;
             result += cacheTwo;
-            cache[i].set(diff, cacheOne + cacheTwo + 1);
+            cache[i][diff] = cacheOne + cacheTwo + 1;
         }
     }
     return result;
 };
+
 
 const nums = [2, 4, 6, 8, 10];
 Output: 7;
