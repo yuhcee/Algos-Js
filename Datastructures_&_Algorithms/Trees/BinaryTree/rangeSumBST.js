@@ -54,3 +54,10 @@ const root = [10, 5, 15, 3, 7, null, 18],
 // Output: 32
 // Explanation: Nodes 7, 10, and 15 are in the range [7, 15]. 7 + 10 + 15 = 32.
 console.log(rangeSumBST(root, low, high));
+
+const root1 = [10, 5, 15, 3, 7, 13, 18, 1, null, 6],
+    low1 = 6,
+    high1 = 10;
+// Output: 23
+// Explanation: Nodes 6, 7, and 10 are in the range [6, 10]. 6 + 7 + 10 = 23.
+console.log(rangeSumBST(root1, low1, high1));
