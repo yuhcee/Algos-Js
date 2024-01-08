@@ -47,3 +47,10 @@ let rangeSumBST = function (root, low, high) {
 
     return sum;
 };
+
+const root = [10, 5, 15, 3, 7, null, 18],
+    low = 7,
+    high = 15;
+// Output: 32
+// Explanation: Nodes 7, 10, and 15 are in the range [7, 15]. 7 + 10 + 15 = 32.
+console.log(rangeSumBST(root, low, high));
