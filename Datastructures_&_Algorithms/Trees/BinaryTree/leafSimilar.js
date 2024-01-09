@@ -31,4 +31,27 @@
  * @param {TreeNode} root2
  * @return {boolean}
  */
-var leafSimilar = function (root1, root2) {};
+var leafSimilar = function (root1, root2) {
+    const leaves1 = [];
+    const leaves2 = [];
+
+    // Helper function to perform DFS and collect leaf values
+    const collectLeaves = (root, leaves) => {
+        if (!root) {
+            return;
+        }
+
+        if (!root.left && !root.right) {
+            leaves.push(root.val);
+        }
+
+        collectLeaves(root.left, leaves);
+        collectLeaves(root.right, leaves);
+    };
+
+    collectLeaves(root1, leaves1);
+    collectLeaves(root2, leaves2);
+
+    // Check if the leaf sequences are equal
+    return JSON.stringify(leaves1) === JSON.stringify(leaves2);
+};
