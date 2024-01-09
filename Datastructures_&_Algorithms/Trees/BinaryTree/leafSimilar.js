@@ -55,3 +55,8 @@ var leafSimilar = function (root1, root2) {
     // Check if the leaf sequences are equal
     return JSON.stringify(leaves1) === JSON.stringify(leaves2);
 };
+
+const root1 = [3, 5, 1, 6, 2, 9, 8, null, null, 7, 4],
+    root2 = [3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8];
+// Output: true
+console.log(leafSimilar(root1, root2));
