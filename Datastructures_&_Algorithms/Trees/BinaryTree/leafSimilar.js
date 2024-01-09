@@ -60,3 +60,8 @@ const root1 = [3, 5, 1, 6, 2, 9, 8, null, null, 7, 4],
     root2 = [3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8];
 // Output: true
 console.log(leafSimilar(root1, root2));
+
+const root11 = [1, 2, 3],
+    root22 = [1, 3, 2];
+// Output: false
+console.log(leafSimilar(root11, root22));
