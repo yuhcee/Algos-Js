@@ -82,3 +82,9 @@ const root = [1, 5, 3, null, 4, 10, 6, 9, 2],
 - Minute 4: Nodes 9 and 2
 It takes 4 minutes for the whole tree to be infected so we return 4. */
 console.log(amountOfTime(root, start));
+
+const root1 = [1],
+    start1 = 1;
+// Output: 0
+// Explanation: At minute 0, the only node in the tree is infected so we return 0.
+console.log(amountOfTime(root1, start1));
