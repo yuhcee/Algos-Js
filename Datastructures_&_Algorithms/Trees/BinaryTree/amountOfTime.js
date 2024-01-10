@@ -35,4 +35,38 @@
  * - Each node has a **unique** value.
  * - A node with a value of `start` exists in the tree.
  */
-const amountOfTime = (root, start) => {};
+const amountOfTime = (root, start) => {
+    let amount = 0;
+
+    /**
+     * Helper function to traverse the binary tree and calculate the infection time
+     * @param {TreeNode} root - The current root node being processed
+     * @param {number} start - The value of the node where the infection starts
+     * @return {number} - The time taken for the infection to reach the current node
+     */
+    const traverse = (root, start) => {
+        if (!root) {
+            return 0;
+        }
+
+        let left = traverse(root.left, start);
+        let right = traverse(root.right, start);
+
+        if (root.val === start) {
+            // If the current node is where the infection starts, update the amount
+            amount = Math.max(left, right);
+            return -1; // Signal that the start node is found
+        } else if (left >= 0 && right >= 0) {
+            // If both left and right subtrees are infected, return the maximum time
+            return Math.max(left, right) + 1;
+        } else {
+            // If only one subtree is infected, update the amount and return the adjusted time
+            amount = Math.max(amount, Math.abs(left - right));
+            return Math.min(left, right) - 1;
+        }
+    };
+
+    traverse(root, start);
+
+    return amount;
+};
