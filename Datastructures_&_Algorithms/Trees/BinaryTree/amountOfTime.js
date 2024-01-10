@@ -23,8 +23,10 @@
  * infected*.
  *
  * Calculate the amount of time for the entire binary tree to be infected
+ * 
  * @param {TreeNode} root - The root node of the binary tree
- * @param {number} start - The value of the node where the infection starts
+ * @param {number} start - The value of the node where the infection 
+ * starts
  * @return {number} - The amount of time needed for the entire tree to
  * be infected.
  *
