@@ -45,3 +45,7 @@ const root = [8, 3, 10, 1, 6, null, 14, null, null, 4, 7, 13];
 |10 - 13| = 3
 Among all possible differences, the maximum value of 7 is obtained by |8 - 1| = 7. */
 console.log(maxAncestorDiff(root));
+
+const root1 = [1, null, 2, null, 0, 3];
+// Output: 3
+console.log(maxAncestorDiff(root1));
