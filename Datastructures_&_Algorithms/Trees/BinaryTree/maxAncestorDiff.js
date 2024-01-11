@@ -24,4 +24,14 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const maxAncestorDiff = function (root) {};
+const maxAncestorDiff = function (root) {
+    function iterate(node, max, min) {
+        if (!node) return max - min;
+
+        max = Math.max(max, node.val);
+        min = Math.min(min, node.val);
+
+        return Math.max(iterate(node.left, max, min), iterate(node.right, max, min));
+    }
+    return iterate(root, root.val, root.val);
+};
