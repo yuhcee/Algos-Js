@@ -18,13 +18,17 @@
  * @param {string} s
  * @return {boolean}
  */
-const halvesAreAlike = (s) => {
-    let sum = 0;
-    const vowels = new Set(['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']);
-    for (let i = 0; i < s.length / 2; i++) {
-        sum += vowels.has(s[i]) - vowels.has(s[s.length - 1 - i]);
+const countVowels = (str) => {
+    const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
+    let count = 0;
+
+    for (let char of str) {
+        if (vowels.has(char)) {
+            count++;
+        }
     }
-    return !sum;
+
+    return count;
 };
 
 const s = 'book';
