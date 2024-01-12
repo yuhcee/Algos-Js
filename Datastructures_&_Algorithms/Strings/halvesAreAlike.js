@@ -30,6 +30,21 @@ const countVowels = (str) => {
 
     return count;
 };
+/**
+ * Determine if two halves of a string are alike based on the count of vowels
+ * @param {string} s - The input string of even length
+ * @return {boolean} - True if the two halves are alike, false otherwise
+ */
+const halvesAreAlike = (s) => {
+    const halfLength = s.length / 2;
+    const firstHalf = s.substring(0, halfLength);
+    const secondHalf = s.substring(halfLength);
+
+    const countFirstHalf = countVowels(firstHalf);
+    const countSecondHalf = countVowels(secondHalf);
+
+    return countFirstHalf === countSecondHalf;
+};
 
 const s = 'book';
 // Output: true
