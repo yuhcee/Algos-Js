@@ -9,6 +9,12 @@
  * An **Anagram** of a string is a string that contains the same characters with a different (or
  * the same) ordering.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 5 * 104`
+ * - `s.length == t.length`
+ * `s` and `t` consist of lowercase English letters only.
+ *
  * @param {string} s
  * @param {string} t
  * @return {number}
