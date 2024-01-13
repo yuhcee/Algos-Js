@@ -49,3 +49,9 @@ const s = 'bab',
 // Output: 1
 // Explanation: Replace the first 'a' in t with b, t = "bba" which is anagram of s.
 console.log(minSteps(s, t));
+
+const s1 = 'leetcode',
+    t1 = 'practice';
+// Output: 5
+// Explanation: Replace 'p', 'r', 'a', 'i' and 'c' from t with proper characters to make t anagram of s.
+console.log(minSteps(s1, t1));
