@@ -43,3 +43,9 @@ const minSteps = function (s, t) {
     // Step 5: Return the result
     return steps;
 };
+
+const s = 'bab',
+    t = 'aba';
+// Output: 1
+// Explanation: Replace the first 'a' in t with b, t = "bba" which is anagram of s.
+console.log(minSteps(s, t));
