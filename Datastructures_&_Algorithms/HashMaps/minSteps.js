@@ -19,4 +19,27 @@
  * @param {string} t
  * @return {number}
  */
-const minSteps = function (s, t) {};
+const minSteps = function (s, t) {
+    // Step 1: Create frequency arrays
+    const freqS = new Array(26).fill(0);
+    const freqT = new Array(26).fill(0);
+
+    // Step 2: Update frequency of characters in string s
+    for (let char of s) {
+        freqS[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+    }
+
+    // Step 3: Update frequency of characters in string t
+    for (let char of t) {
+        freqT[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+    }
+
+    // Step 4: Calculate the sum of absolute differences
+    let steps = 0;
+    for (let i = 0; i < 26; i++) {
+        steps += Math.max(0, freqS[i] - freqT[i]);
+    }
+
+    // Step 5: Return the result
+    return steps;
+};
