@@ -55,3 +55,9 @@ const s1 = 'leetcode',
 // Output: 5
 // Explanation: Replace 'p', 'r', 'a', 'i' and 'c' from t with proper characters to make t anagram of s.
 console.log(minSteps(s1, t1));
+
+const s2 = 'anagram',
+    t2 = 'mangaar';
+// Output: 0
+// Explanation: "anagram" and "mangaar" are anagrams.
+console.log(minSteps(s2, t2));
