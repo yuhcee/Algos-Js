@@ -29,7 +29,6 @@
  * @return {boolean}
  */
 const closeStrings = function (word1, word2) {
-
     if (word1.length !== word2.length) return false;
 
     const freqCount1 = new Array(26).fill(0);
@@ -59,7 +58,7 @@ const closeStrings = function (word1, word2) {
     // Compare frequency distributions
     freqCount1.sort((a, b) => a - b);
     freqCount2.sort((a, b) => a - b);
-    
+
     for (let i = 0; i < 26; i++) {
         if (freqCount1[i] !== freqCount2[i]) return false;
     }
