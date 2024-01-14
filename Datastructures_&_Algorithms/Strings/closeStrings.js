@@ -21,7 +21,7 @@
  *
  * **Constraints:**
  *
- * - `1 <= word1.length, word2.length <= 105`
+ * - `1 <= word1.length, word2.length <= 105`.
  * - `word1` and `word2` contain only lowercase English letters.
  *
  * @param {string} word1
