@@ -29,6 +29,7 @@
  * @return {boolean}
  */
 const closeStrings = function (word1, word2) {
+    
     if (word1.length !== word2.length) return false;
 
     const freqCount1 = new Array(26).fill(0);
