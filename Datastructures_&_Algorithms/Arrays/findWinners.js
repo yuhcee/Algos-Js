@@ -1,7 +1,7 @@
 /**
  * **2225. Find Players With Zero or One Losses**
  *
- * You are given an integer array `matches` where `matches[i] = [winneri, loseri]` indicates that 
+ * You are given an integer array `matches` where `matches[i] = [winneri, loseri]` indicates that
  * the player `winneri` defeated player `loseri` in a match.
  *
  * Return *a list `answer` of size `2` where*:
