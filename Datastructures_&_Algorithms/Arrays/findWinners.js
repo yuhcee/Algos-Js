@@ -94,3 +94,22 @@ Players 1, 2, 5, and 6 have not lost any matches.
 Players 3 and 4 each have lost two matches.
 Thus, answer[0] = [1,2,5,6] and answer[1] = []. */
 console.log(findWinners(matches1));
+
+const matches2 = [
+    [1, 2],
+    [2, 3],
+    [3, 4],
+    [5, 4],
+    [5, 6],
+    [7, 6],
+    [7, 8],
+    [8, 9],
+    [10, 9],
+    [10, 11],
+];
+// Output: [[1,5,7,10,11], [2,3,4,6,8,9]]
+/* Explanation:
+Players 1, 5, 7, 10, and 11 have not lost any matches.
+Players 2, 3, 4, 6, 8, and 9 each have lost one match.
+Thus, answer[0] = [1,5,7,10,11] and answer[1] = [2,3,4,6,8,9]. */
+console.log(findWinners(matches2));
