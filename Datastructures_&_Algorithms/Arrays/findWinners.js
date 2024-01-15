@@ -28,31 +28,38 @@
  * @return {number[][]}
  */
 var findWinners = function (matches) {
-    const n = matches.length;
+    const playerStats = new Map();
 
-    const players = [];
+    for (const [winner, loser] of matches) {
+        // Update winner's stats
+        if (!playerStats.has(winner)) {
+            playerStats.set(winner, { wins: 0, losses: 0 });
+        }
+        playerStats.get(winner).wins++;
 
-    for (let i = 0; i < n; ++i) {
-        const [winner, loser] = matches[i];
-
-        if (players[winner] == null) players[winner] = [0, 0];
-        if (players[loser] == null) players[loser] = [0, 0];
-
-        players[winner][0] += 1;
-        players[loser][1] += 1;
+        // Update loser's stats
+        if (!playerStats.has(loser)) {
+            playerStats.set(loser, { wins: 0, losses: 0 });
+        }
+        playerStats.get(loser).losses++;
     }
 
-    const first = [];
-    const second = [];
+    const zeroLosses = [];
+    const oneLoss = [];
 
-    for (let i = 1; i <= 1e5; ++i) {
-        if (players[i] != null) {
-            if (players[i][1] === 0) first.push(i);
-            else if (players[i][1] === 1) second.push(i);
+    for (const [player, stats] of playerStats.entries()) {
+        if (stats.losses === 0) {
+            zeroLosses.push(player);
+        } else if (stats.losses === 1) {
+            oneLoss.push(player);
         }
     }
 
-    return [first, second];
+    // Sort arrays
+    zeroLosses.sort((a, b) => a - b);
+    oneLoss.sort((a, b) => a - b);
+
+    return [zeroLosses, oneLoss];
 };
 
 const matches = [
