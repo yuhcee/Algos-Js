@@ -13,7 +13,7 @@
  * @return {boolean}
  *
  */
-const uniqueOccurrences = function (arr) {
+/* const uniqueOccurrences = function (arr) {
     const counter = {};
 
     for (let num of arr) {
@@ -26,9 +26,9 @@ const uniqueOccurrences = function (arr) {
     resultToReturn = arry.some((num, index) => arry.indexOf(num) !== index);
 
     return resultToReturn ? false : true;
-};
+}; */
 
-const uniqueOccurrences = function(arr) {
+const uniqueOccurrences = function (arr) {
     const occurrenceMap = new Map();
 
     // Count occurrences of each value in the array
