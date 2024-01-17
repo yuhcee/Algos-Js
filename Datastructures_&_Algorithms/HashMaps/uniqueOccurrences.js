@@ -28,7 +28,7 @@ const uniqueOccurrences = function (arr) {
     return resultToReturn ? false : true;
 };
 
-var uniqueOccurrences = function(arr) {
+const uniqueOccurrences = function(arr) {
     const occurrenceMap = new Map();
 
     // Count occurrences of each value in the array
