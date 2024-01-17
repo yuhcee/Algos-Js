@@ -28,6 +28,27 @@ const uniqueOccurrences = function (arr) {
     return resultToReturn ? false : true;
 };
 
+var uniqueOccurrences = function(arr) {
+    const occurrenceMap = new Map();
+
+    // Count occurrences of each value in the array
+    for (const num of arr) {
+        occurrenceMap.set(num, (occurrenceMap.get(num) || 0) + 1);
+    }
+
+    const occurrenceSet = new Set();
+
+    // Check if the number of occurrences is unique
+    for (const occurrence of occurrenceMap.values()) {
+        if (occurrenceSet.has(occurrence)) {
+            return false; // Occurrence count is not unique
+        }
+        occurrenceSet.add(occurrence);
+    }
+
+    return true; // Occurrence count is unique
+};
+
 const arr = [1, 2, 2, 1, 1, 3];
 // Output: true
 // Explanation: The value 1 has 3 occurrences, 2 has 2 and 3 has 1. No two values have the same number of occurrences.
