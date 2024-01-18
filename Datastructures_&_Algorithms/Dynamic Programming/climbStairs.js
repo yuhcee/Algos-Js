@@ -28,3 +28,6 @@ const climbStairs = function (n) {
 
     return dp[n];
 };
+
+const n1 = 2;
+console.log(climbStairs(n1)); // Output: 2
