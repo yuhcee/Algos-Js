@@ -34,3 +34,6 @@ console.log(climbStairs(n1)); // Output: 2
 
 const n2 = 3;
 console.log(climbStairs(n2)); // Output: 3
+
+const n3 = 3;
+console.log(climbStairs(n2)); // Output: 3
