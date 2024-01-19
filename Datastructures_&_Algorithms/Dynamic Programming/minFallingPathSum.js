@@ -52,3 +52,11 @@ const matrix1 = [
 // Output: -59
 // Explanation: The falling path with a minimum sum is shown.
 console.log(minFallingPathSum(matrix1));
+
+const matrix3 = [
+    [10, 20, 15],
+    [5, 2, 5],
+    [8, 3, 10],
+];
+// Output: 20
+console.log(minFallingPathSum(matrix3));
