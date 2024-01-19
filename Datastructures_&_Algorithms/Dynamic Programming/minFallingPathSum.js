@@ -60,3 +60,12 @@ const matrix3 = [
 ];
 // Output: 20
 console.log(minFallingPathSum(matrix3));
+
+const matrix4 = [
+    [2, 4, 6, 8],
+    [1, 3, 5, 7],
+    [9, 10, 2, 6],
+    [4, 5, 7, 1],
+];
+// Output: 13
+console.log(minFallingPathSum(matrix4));
