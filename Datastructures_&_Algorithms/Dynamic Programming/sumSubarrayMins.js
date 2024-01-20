@@ -71,3 +71,11 @@ Subarrays are [4], [3], [2], [1], [4,3], [3,2], [2,1], [4,3,2], [3,2,1], [4,3,2,
 Minimums are 4, 3, 2, 1, 3, 2, 1, 2, 1, 1.
 Sum is 20. */
 console.log(sumSubarrayMins(arr3));
+
+const arr4 = [5, 5, 5, 5, 5];
+// Output: 50
+/* Explanation: 
+Subarrays are [5], [5], [5], [5], [5,5], [5,5], [5,5], [5,5,5], [5,5,5,5], [5,5,5,5,5]. 
+Minimums are 5, 5, 5, 5, 5, 5, 5, 5, 5, 5.
+Sum is 50. */
+console.log(sumSubarrayMins(arr4));
