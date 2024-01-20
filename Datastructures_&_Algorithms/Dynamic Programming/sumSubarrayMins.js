@@ -16,32 +16,40 @@
  *
  */
 var sumSubarrayMins = function (arr) {
-    const MOD = Math.pow(10, 9) + 7;
-    const n = arr.length;
+    const MOD = 1e9 + 7;
+    let result = 0;
     const stack = [];
-    const leftBound = new Array(n).fill(-1);
-    const rightBound = new Array(n).fill(n);
+    const left = new Array(arr.length);
+    const right = new Array(arr.length);
 
-    for (let i = 0; i < n; i++) {
-        while (stack.length && arr[i] < arr[stack[stack.length - 1]]) {
-            const idx = stack.pop();
-            rightBound[idx] = i;
+    for (let i = 0; i < arr.length; i++) {
+        left[i] = i + 1;
+        right[i] = arr.length - i;
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        while (stack.length > 0 && arr[i] < arr[stack[stack.length - 1]]) {
+            const popIndex = stack.pop();
+            right[popIndex] = i - popIndex;
         }
-        if (stack.length > 0) leftBound[i] = stack[stack.length - 1];
-
         stack.push(i);
     }
 
-    let ans = 0;
-    for (let i = 0; i < n; i++) {
-        const countLeft = i - leftBound[i];
-        const countRight = rightBound[i] - i;
-        const result = arr[i] * countLeft * countRight;
+    stack.length = 0;
 
-        ans += result;
+    for (let i = arr.length - 1; i >= 0; i--) {
+        while (stack.length > 0 && arr[i] <= arr[stack[stack.length - 1]]) {
+            const popIndex = stack.pop();
+            left[popIndex] = popIndex - i;
+        }
+        stack.push(i);
     }
 
-    return ans % MOD;
+    for (let i = 0; i < arr.length; i++) {
+        result = (result + arr[i] * left[i] * right[i]) % MOD;
+    }
+
+    return result;
 };
 
 const arr = [3, 1, 2, 4];
