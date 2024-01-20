@@ -13,6 +13,7 @@
  *
  * @param {number[]} arr
  * @return {number}
+ *
  */
 var sumSubarrayMins = function (arr) {
     const MOD = Math.pow(10, 9) + 7;
