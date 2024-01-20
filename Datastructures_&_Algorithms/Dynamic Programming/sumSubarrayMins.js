@@ -63,3 +63,11 @@ console.log(sumSubarrayMins(arr));
 const arr1 = [11, 81, 94, 43, 3];
 // Output: 444
 console.log(sumSubarrayMins(arr1));
+
+const arr3 = [4, 3, 2, 1];
+// Output: 20
+/* Explanation: 
+Subarrays are [4], [3], [2], [1], [4,3], [3,2], [2,1], [4,3,2], [3,2,1], [4,3,2,1]. 
+Minimums are 4, 3, 2, 1, 3, 2, 1, 2, 1, 1.
+Sum is 20. */
+console.log(sumSubarrayMins(arr3));
