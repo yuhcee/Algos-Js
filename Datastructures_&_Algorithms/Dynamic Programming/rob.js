@@ -40,3 +40,8 @@ const rob = function (nums) {
     // The final element in the dp array holds the maximum money that can be robbed.
     return dp[nums.length - 1];
 };
+const nums = [1, 2, 3, 1];
+// Output: 4
+// Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
+// Total amount you can rob = 1 + 3 = 4.
+console.log(rob(nums));
