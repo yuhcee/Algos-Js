@@ -11,6 +11,11 @@
  * house, return *the maximum amount of money you can rob tonight
  * **without alerting the police***.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= nums.length <= 100`
+ * - `0 <= nums[i] <= 400`
+ * 
  * @param {number[]} nums
  * @return {number}
  */
