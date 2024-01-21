@@ -12,11 +12,31 @@
  * **without alerting the police***.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= nums.length <= 100`
  * - `0 <= nums[i] <= 400`
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
-const rob = function (nums) {};
+const rob = function (nums) {
+    if (nums.length === 0) {
+        return 0;
+    }
+    if (nums.length === 1) {
+        return nums[0];
+    }
+
+    // Initialize an array to store the maximum money robbed up to each house.
+    const dp = new Array(nums.length);
+    dp[0] = nums[0];
+    dp[1] = Math.max(nums[0], nums[1]);
+
+    // Iterate through the rest of the houses and calculate the maximum money robbed.
+    for (let i = 2; i < nums.length; i++) {
+        dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]);
+    }
+
+    // The final element in the dp array holds the maximum money that can be robbed.
+    return dp[nums.length - 1];
+};
