@@ -47,3 +47,7 @@ console.log(findErrorNums(nums));
 const nums1 = [1, 1];
 // Output: [1,2]
 console.log(findErrorNums(nums1));
+
+const nums3 = [3, 2, 3, 4, 6, 5];
+// Output: [3,1]
+console.log(findErrorNums(nums3));
