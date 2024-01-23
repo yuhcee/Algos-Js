@@ -58,6 +58,7 @@ const arr = ['un', 'iq', 'ue'];
 - "uniq" ("un" + "iq")
 - "ique" ("iq" + "ue")
 Maximum length is 4. */
+
 console.log(maxLength(arr));
 
 const arr1 = ['cha', 'r', 'act', 'ers'];
