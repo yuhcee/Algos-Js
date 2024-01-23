@@ -43,6 +43,7 @@ const maxLength = function (arr) {
         }
         dfs(idx + 1, str);
     }
+
     dfs(0, '');
     return res;
 };
