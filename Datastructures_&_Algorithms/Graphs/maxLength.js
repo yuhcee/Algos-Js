@@ -70,4 +70,5 @@ console.log(maxLength(arr1));
 const arr2 = ['abcdefghijklmnopqrstuvwxyz'];
 // Output: 26
 // Explanation: The only string in arr has all 26 characters.
+
 console.log(maxLength(arr2));
