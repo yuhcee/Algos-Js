@@ -30,9 +30,11 @@ const pseudoPalindromicPaths = function (root) {
         digits[node.val] = !digits[node.val];
 
         if (!node.left && !node.right) {
-            if (digits.filter((num) => num === false).length <= 1) count += 1;
-            digits[node.val] = !digits[node.val];
-            return;
+            if (digits.filter((num) => num === false).length <= 1) {
+                count += 1;
+                digits[node.val] = !digits[node.val];
+                return;
+            }
         }
 
         f(node.left);
