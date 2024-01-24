@@ -12,10 +12,12 @@
  * **pseudo-palindromic** if at least one permutation of the node values in
  * the path is a palindrome.
  *
- * Return *the number of **pseudo-palindromic** paths going from the root node to leaf nodes*.
+ * Return *the number of **pseudo-palindromic** paths going from the root
+ * node to leaf nodes*.
  *
  * @param {TreeNode} root
  * @return {number}
+ *
  */
 const pseudoPalindromicPaths = function (root) {
     let count = 0;
