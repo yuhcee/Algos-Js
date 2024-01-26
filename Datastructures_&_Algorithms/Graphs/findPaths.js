@@ -68,3 +68,11 @@ const m1 = 1,
     startColumn1 = 1;
 // Output: 12
 console.log(findPaths(m1, n1, maxMove1, startRow1, startColumn1));
+
+const m2 = 3,
+    n2 = 3,
+    maxMove2 = 3,
+    startRow2 = 1,
+    startColumn2 = 1;
+// Output: 20
+console.log(findPaths(m2, n2, maxMove2, startRow2, startColumn2));
