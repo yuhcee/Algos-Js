@@ -14,6 +14,13 @@
  * move the ball out of the grid boundary. Since the answer can be very
  * large, return it **modulo** `109 + 7`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= m, n <= 50`
+ * - `0 <= maxMove <= 50`
+ * - `0 <= startRow < m`
+ * - `0 <= startColumn < n`
+ *
  * @param {number} m
  * @param {number} n
  * @param {number} maxMove
