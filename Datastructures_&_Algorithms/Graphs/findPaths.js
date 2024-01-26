@@ -30,8 +30,8 @@
  */
 const findPaths = (m, n, maxMove, startRow, startColumn, memo = {}) => {
     // initialize local variables
-    const MOD = 1e9 + 7,
-        key = `${maxMove},${startRow},${startColumn}`;
+    const MOD = 1e9 + 7;
+    const key = `${maxMove},${startRow},${startColumn}`;
 
     const rowInbounds = startRow >= 0 && startRow < m;
     const colInbounds = startColumn >= 0 && startColumn < n;
