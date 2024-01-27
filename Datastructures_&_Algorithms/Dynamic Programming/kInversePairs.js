@@ -9,6 +9,10 @@
  * **inverse pairs**. Since the answer can be huge, return it **modulo** `109
  * + 7`.
  *
+ * **Constraints:**
+ * - `1 <= n <= 1000`
+ * - `0 <= k <= 1000`
+ *
  * @param {number} n
  * @param {number} k
  * @return {number}
