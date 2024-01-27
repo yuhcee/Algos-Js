@@ -40,3 +40,9 @@ const n = 3,
 // Output: 1
 // Explanation: Only the array [1,2,3] which consists of numbers from 1 to 3 has exactly 0 inverse pairs.
 console.log(kInversePairs(n, k));
+
+const n1 = 3,
+    k1 = 1;
+// Output: 2
+// Explanation: The array [1,3,2] and [2,1,3] have exactly 1 inverse pair.
+console.log(kInversePairs(n1, k1));
