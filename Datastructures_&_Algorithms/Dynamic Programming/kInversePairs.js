@@ -17,4 +17,20 @@
  * @param {number} k
  * @return {number}
  */
-const kInversePairs = function (n, k) {};
+const kInversePairs = function (n, k, MOD = 10 ** 9 + 7) {
+    const [dp, pr] = [new Array(k + 2).fill(0), new Array(k + 2).fill(0)];
+
+    for (let i = 1; i <= n; i++) {
+        dp[1] = 1;
+
+        for (let j = 2; j <= k + 1; j++) {
+            dp[j] = (pr[j] - Math.max(0, j - 1) + MOD) % MOD;
+        }
+
+        for (let l = 1; l <= k + 1; l++) {
+            pr[l] = pr[l - 1] + dp[l] + MOD;
+        }
+    }
+
+    return dp[k + 1];
+};
