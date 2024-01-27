@@ -34,3 +34,9 @@ const kInversePairs = function (n, k, MOD = 10 ** 9 + 7) {
 
     return dp[k + 1];
 };
+
+const n = 3,
+    k = 0;
+// Output: 1
+// Explanation: Only the array [1,2,3] which consists of numbers from 1 to 3 has exactly 0 inverse pairs.
+console.log(kInversePairs(n, k));
