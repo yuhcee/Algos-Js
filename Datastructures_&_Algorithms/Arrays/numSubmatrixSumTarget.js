@@ -123,3 +123,34 @@ var numSubmatrixSumTarget2 = function (matrix, target) {
     }
     return ans;
 };
+
+const numSubmatrixSumTarget3 = function (matrix, target) {
+    const rows = matrix.length;
+    const cols = matrix[0].length;
+    let count = 0;
+
+    // Calculate prefix sums for each row
+    for (let row = 0; row < rows; row++) {
+        for (let col = 1; col < cols; col++) {
+            matrix[row][col] += matrix[row][col - 1];
+        }
+    }
+
+    // Iterate through all possible combinations of columns
+    for (let startCol = 0; startCol < cols; startCol++) {
+        for (let endCol = startCol; endCol < cols; endCol++) {
+            const map = new Map();
+            let curSum = 0;
+            map.set(0, 1);
+
+            // Calculate the sum of submatrices using the prefix sums
+            for (let row = 0; row < rows; row++) {
+                curSum += matrix[row][endCol] - (startCol > 0 ? matrix[row][startCol - 1] : 0);
+                count += map.get(curSum - target) || 0;
+                map.set(curSum, (map.get(curSum) || 0) + 1);
+            }
+        }
+    }
+
+    return count;
+};
