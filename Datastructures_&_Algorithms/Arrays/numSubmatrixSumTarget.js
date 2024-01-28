@@ -166,3 +166,11 @@ const matrix11 = [
 
 console.log(numSubmatrixSumTarget3(matrix11, target11));
 
+const matrix12 = [
+        [1, -1],
+        [-1, 1],
+    ],
+    target12 = 0;
+// Output: 5
+// Explanation: The two 1x2 submatrices, plus the two 2x1 submatrices, plus the 2x2 submatrix.
+console.log(numSubmatrixSumTarget3(matrix12, target12));
