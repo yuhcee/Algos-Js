@@ -29,7 +29,7 @@ function isMatch(text, pattern) {
 
     for (let j = 1; j <= pattern.length; j++) {
         if (pattern[j - 1] === '*') {
-            dp[0][j] = dp[0][j - 1];
+            dp[0][j] = dp[0][j - 2];
         }
     }
 
@@ -47,3 +47,8 @@ function isMatch(text, pattern) {
 
     return dp[text.length][pattern.length];
 }
+
+// Example usage:
+const text = 'aaab';
+const pattern = 'a*b';
+console.log(isMatch(text, pattern)); // Output: true
