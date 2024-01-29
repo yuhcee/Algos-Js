@@ -52,3 +52,7 @@ function isMatch(text, pattern) {
 const text = 'aaab';
 const pattern = 'a*b';
 console.log(isMatch(text, pattern)); // Output: true
+
+const text1 = 'abc';
+const pattern1 = 'a***abc';
+console.log(isMatch(text1, pattern1));
