@@ -46,7 +46,7 @@
     },
 }; */
 
-const evalRPN = function (tokens) {
+/* const evalRPN = function (tokens) {
     let result = 0;
     let stack1 = [];
     while (tokens.length > 0) {
@@ -61,7 +61,9 @@ const evalRPN = function (tokens) {
         }
     }
     return stack1.pop();
-};
+}; */
+
+
 
 const tokens = ['2', '1', '+', '3', '*'];
 // Output: 9
