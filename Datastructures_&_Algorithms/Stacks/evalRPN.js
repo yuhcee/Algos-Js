@@ -28,7 +28,7 @@
  * @return {number}
  *
  */
-let operators = {
+/* let operators = {
     '+': function add(a, b) {
         return a + b;
     },
@@ -44,7 +44,7 @@ let operators = {
             return Math.ceil(result);
         } else return Math.floor(result);
     },
-};
+}; */
 
 const evalRPN = function (tokens) {
     let result = 0;
