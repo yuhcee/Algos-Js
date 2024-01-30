@@ -65,28 +65,33 @@
 
 const evalRPN = (tokens) => {
     const stack = [];
-    const operators = new Set(['+', '/', '-', '*']);
+    const operators = new Set(['+', '-', '*', '/']);
 
     for (let token of tokens) {
         if (operators.has(token)) {
-            let operand1 = stack.pop();
             let operand2 = stack.pop();
+            let operand1 = stack.pop();
             let result;
             switch (token) {
                 case '+':
                     result = operand1 + operand2;
+                    break;
                 case '-':
-                    result = Math.trunc(operand1 - operand2); // Division truncates toward zero
+                    result = operand1 - operand2; // Division truncates toward zero
+                    break;
                 case '/':
-                    result = operand1 / operand2;
+                    result = Math.trunc(operand1 / operand2);
+                    break;
                 case '*':
                     result = operand1 * operand2;
+                    break;
             }
             stack.push(result);
         } else {
             stack.push(parseInt(token)); // Convert to integer and push onto stack
         }
     }
+    return stack.pop();
 };
 
 const tokens = ['2', '1', '+', '3', '*'];
