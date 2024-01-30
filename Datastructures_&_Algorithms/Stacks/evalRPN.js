@@ -63,7 +63,31 @@
     return stack1.pop();
 }; */
 
+const evalRPN = (tokens) => {
+    const stack = [];
+    const operators = new Set(['+', '/', '-', '*']);
 
+    for (let token of tokens) {
+        if (operators.has(token)) {
+            let operand1 = stack.pop();
+            let operand2 = stack.pop();
+            let result;
+            switch (token) {
+                case '+':
+                    result = operand1 + operand2;
+                case '-':
+                    result = Math.trunc(operand1 - operand2); // Division truncates toward zero
+                case '/':
+                    result = operand1 / operand2;
+                case '*':
+                    result = operand1 * operand2;
+            }
+            stack.push(result);
+        } else {
+            stack.push(parseInt(token)); // Convert to integer and push onto stack
+        }
+    }
+};
 
 const tokens = ['2', '1', '+', '3', '*'];
 // Output: 9
