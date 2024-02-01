@@ -15,15 +15,34 @@
  * answers, return **any** of them*.
  *
  * **Constraints:**
- * 
+ *
  * - `n == nums.length`
  * - `1 <= n <= 105`
  * - `n` is a multiple of `3`.
  * - `1 <= nums[i] <= 105`
  * - `1 <= k <= 105`
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number[][]}
  */
-const divideArray = (nums, k) => {};
+const divideArray = (nums, k) => {
+    nums.sort((a, b) => a - b);
+
+    const n = nums.length;
+    const result = [];
+    let currentSubarray = [];
+
+    for (let i = 0; i < n; i++) {
+        currentSubarray.push(nums[i]);
+        if (currentSubarray.length === 3 || i === n - 1 || nums[i + 1] - currentSubarray[0] > k) {
+            if (currentSubarray.length !== 3) {
+                return []; // If any subarray does not have exactly 3 elements, return an empty array
+            }
+            result.push(currentSubarray);
+            currentSubarray = [];
+        }
+    }
+
+    return result;
+};
