@@ -14,6 +14,14 @@
  * satisfy the conditions, return an empty array. And if there are multiple
  * answers, return **any** of them*.
  *
+ * **Constraints:**
+ * 
+ * - `n == nums.length`
+ * - `1 <= n <= 105`
+ * - `n` is a multiple of `3`.
+ * - `1 <= nums[i] <= 105`
+ * - `1 <= k <= 105`
+ * 
  * @param {number[]} nums
  * @param {number} k
  * @return {number[][]}
