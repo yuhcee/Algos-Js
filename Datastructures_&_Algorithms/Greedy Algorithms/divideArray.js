@@ -46,3 +46,11 @@ const divideArray = (nums, k) => {
 
     return result;
 };
+
+const nums = [1, 3, 4, 8, 7, 9, 3, 5, 1],
+    k = 2;
+// Output: [[1,1,3],[3,4,5],[7,8,9]]
+/* Explanation: We can divide the array into the following arrays: [1,1,3], [3,4,5] and [7,8,9].
+The difference between any two elements in each array is less than or equal to 2.
+Note that the order of elements is not important. */
+console.log(divideArray(nums, k));
