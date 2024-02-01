@@ -54,3 +54,9 @@ const nums = [1, 3, 4, 8, 7, 9, 3, 5, 1],
 The difference between any two elements in each array is less than or equal to 2.
 Note that the order of elements is not important. */
 console.log(divideArray(nums, k));
+
+const nums1 = [1, 3, 3, 2, 7, 3],
+    k1 = 3;
+// Output: []
+// Explanation: It is not possible to divide the array satisfying all the conditions.
+console.log(divideArray(nums1, k1));
