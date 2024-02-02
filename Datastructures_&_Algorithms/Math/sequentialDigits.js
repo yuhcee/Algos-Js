@@ -37,3 +37,8 @@ const low = 100,
     high = 300;
 // Output: [123,234]
 console.log(sequentialDigits(low, high));
+
+const low1 = 1000,
+    high1 = 13000;
+// Output: [1234,2345,3456,4567,5678,6789,12345]
+console.log(sequentialDigits(low1, high1));
