@@ -15,4 +15,21 @@
  * @param {number} high
  * @return {number[]}
  */
-const sequentialDigits = (low, high) => {};
+const sequentialDigits = (low, high) => {
+    const result = [];
+    const digits = '123456789';
+
+    const numLength = String(low).length;
+    const maxNumLength = String(high).length;
+
+    for (let l = numLength; l <= maxNumLength; l++) {
+        for (let i = 0; i <= 9 - l; i++) {
+            const num = parseInt(digits.substring(i, i + l));
+            if (num >= low && num <= high) {
+                result.push(num);
+            }
+        }
+    }
+
+    return result.sort((a, b) => a - b);
+};
