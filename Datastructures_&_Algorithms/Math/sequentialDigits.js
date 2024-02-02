@@ -33,3 +33,7 @@ const sequentialDigits = (low, high) => {
 
     return result.sort((a, b) => a - b);
 };
+const low = 100,
+    high = 300;
+// Output: [123,234]
+console.log(sequentialDigits(low, high));
