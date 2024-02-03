@@ -32,3 +32,9 @@ const maxSumAfterPartitioning = (arr, k) => {
 
     return dp[n - 1];
 };
+
+const arr = [1, 15, 7, 9, 2, 5, 10],
+    k = 3;
+// Output: 84
+// Explanation: arr becomes [15,15,15,9,10,10,10]
+console.log(maxSumAfterPartitioning(arr, k));
