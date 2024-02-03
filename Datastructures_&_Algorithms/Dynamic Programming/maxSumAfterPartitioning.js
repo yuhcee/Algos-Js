@@ -8,6 +8,12 @@
  * Return the *largest sum of the given array after partitioning. Test cases are
  * generated so that the answer fits in a 32-bit integer*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= arr.length <= 500`
+ * - `0 <= arr[i] <= 109`
+ * - `1 <= k <= arr.length`
+ *
  * @param {number[]} arr
  * @param {number} k
  * @return {number}
