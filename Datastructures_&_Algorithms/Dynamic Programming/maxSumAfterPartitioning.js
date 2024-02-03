@@ -43,3 +43,8 @@ const arr1 = [1, 4, 1, 5, 7, 3, 6, 1, 9, 9, 3],
     k1 = 4;
 // Output: 83
 console.log(maxSumAfterPartitioning(arr1, k1));
+
+const arr2 = [1],
+    k2 = 1;
+// Output: 1
+console.log(maxSumAfterPartitioning(arr2, k2));
