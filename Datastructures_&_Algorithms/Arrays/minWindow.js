@@ -21,7 +21,7 @@
  * @param {string} t
  * @return {string}
  */
-const minWindow = function (s, t) {
+/* const minWindow = function (s, t) {
     // return "" if substring not possible
     if (!s || !t || s.length < t.length) return '';
 
@@ -51,6 +51,59 @@ const minWindow = function (s, t) {
     }
 
     return s.slice(minI, minI + minL);
+}; */
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {string}
+ */
+var minWindow = function (s, t) {
+    const requiredChars = new Map();
+    const windowChars = new Map();
+
+    // Populate requiredChars map with character frequencies from string t
+    for (let char of t) {
+        requiredChars.set(char, (requiredChars.get(char) || 0) + 1);
+    }
+
+    let left = 0;
+    let right = 0;
+    let minLength = Infinity;
+    let minStart = 0;
+    let count = 0;
+
+    while (right < s.length) {
+        // Expand the window to the right
+        const char = s[right];
+        windowChars.set(char, (windowChars.get(char) || 0) + 1);
+
+        // If the current character is required and its frequency in windowChars is same as or greater than requiredChars, increment count
+        if (requiredChars.has(char) && windowChars.get(char) <= requiredChars.get(char)) {
+            count++;
+        }
+
+        // Shrink the window from the left if we have found a valid window
+        while (count === t.length) {
+            if (right - left + 1 < minLength) {
+                minLength = right - left + 1;
+                minStart = left;
+            }
+
+            const leftChar = s[left];
+            windowChars.set(leftChar, windowChars.get(leftChar) - 1);
+
+            if (requiredChars.has(leftChar) && windowChars.get(leftChar) < requiredChars.get(leftChar)) {
+                count--;
+            }
+
+            left++;
+        }
+
+        right++;
+    }
+
+    return minLength === Infinity ? '' : s.substring(minStart, minStart + minLength);
 };
 
 const s = 'ADOBECODEBANC',
