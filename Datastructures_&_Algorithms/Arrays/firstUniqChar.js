@@ -12,13 +12,32 @@
  * @param {string} s
  * @return {number}
  */
-const firstUniqChar = (s) => {
+/* const firstUniqChar = (s) => {
     for (let i = 0, n = s.length; i < n; i++) {
         const char = s[i];
 
         if (s.indexOf(char) === s.lastIndexOf(char)) return i;
     }
 
+    return -1;
+}; */
+
+const firstUniqChar = (s) => {
+    const frequencyMap = new Map();
+
+    // Populate the frequency map
+    for (let char of s) {
+        frequencyMap.set(char, (frequencyMap.get(char) || 0) + 1);
+    }
+
+    // Find the first non-repeating character
+    for (let i = 0; i < s.length; i++) {
+        if (frequencyMap.get(s[i]) === 1) {
+            return i;
+        }
+    }
+
+    // If no non-repeating character is found, return -1
     return -1;
 };
 
