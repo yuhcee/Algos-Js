@@ -17,7 +17,7 @@
  * @param {string[]} strs
  * @return {string[][]}
  */
-const groupAnagrams = function (strs) {
+/* const groupAnagrams = function (strs) {
     const groups = {};
 
     for (let str of strs) {
@@ -31,7 +31,7 @@ const groupAnagrams = function (strs) {
     }
 
     return Object.values(groups);
-};
+}; */
 
 const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
 // Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
