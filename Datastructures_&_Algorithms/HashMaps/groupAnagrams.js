@@ -8,6 +8,12 @@
  * of a different word or phrase, typically using all the original
  * letters exactly once.
  *
+ * **Constraints:**
+ *
+ * - `1 <= strs.length <= 104`
+ * - `0 <= strs[i].length <= 100`
+ * - `strs[i]` consists of lowercase English letters.
+ *
  * @param {string[]} strs
  * @return {string[][]}
  */
