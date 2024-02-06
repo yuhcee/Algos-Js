@@ -33,6 +33,22 @@
     return Object.values(groups);
 }; */
 
+const groupAnagrams = (strs) => {
+    const groups = new Map();
+
+    for (let str of strs) {
+        let charKey = str.split('').sort().join('');
+
+        if (!groups.has(charKey)) {
+            groups.set(charKey, []);
+        }
+
+        groups.get(charKey).push(str);
+    }
+
+    return groups;
+};
+
 const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
 // Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 console.log(groupAnagrams(strs));
