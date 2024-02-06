@@ -46,7 +46,7 @@ const groupAnagrams = (strs) => {
         groups.get(charKey).push(str);
     }
 
-    return groups;
+    return Array.from(groups.values());
 };
 
 const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
