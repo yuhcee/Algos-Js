@@ -18,7 +18,7 @@
  * @param {string} s
  * @return {string}
  */
-const frequencySort = function (s) {
+/* const frequencySort = function (s) {
     // Step 1: Build a frequency map
     const frequencyMap = new Map();
     for (let char of s) {
@@ -40,7 +40,7 @@ const frequencySort = function (s) {
     }
 
     return sortedString;
-};
+}; */
 
 const s = 'tree';
 // Output: "eert"
