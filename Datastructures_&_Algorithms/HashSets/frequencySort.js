@@ -49,9 +49,9 @@ const frequencySort = (s) => {
         charObj[char] = charObj[char] + 1 || 1;
     }
 
-    const sortedChars = Object.entries(charObj).sort((a, b) => b[1] - a[1]);
+    const sortedChars = Object.entries(charObj).sort((a, b) => b[1] - a[1]).map(([key, value]) => key.repeat(value)).join('');
 
-    return sortedChars.map(([key, value]) => key.repeat(value)).join('');
+    return sortedChars;
 };
 
 const s = 'tree';
