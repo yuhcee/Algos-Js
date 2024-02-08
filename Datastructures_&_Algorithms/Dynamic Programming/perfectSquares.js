@@ -54,3 +54,8 @@ const n4 = 7;
 // Output: 4
 // Explanation: 7 = 4 + 1 + 1 + 1.
 console.log(numSquares(n4));
+
+const n5 = 37;
+// Output: 2
+// Explanation: 37 = 36 + 1 = (6^2) + (1^2).
+console.log(numSquares(n5));
