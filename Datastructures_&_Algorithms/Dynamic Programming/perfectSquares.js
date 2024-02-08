@@ -44,3 +44,8 @@ const n2 = 25;
 // Output: 1
 // Explanation: 25 is already a perfect square (5^2).
 console.log(numSquares(n2));
+
+const n3 = 16;
+// Output: 1
+// Explanation: 16 is already a perfect square (4^2).
+console.log(numSquares(n3));
