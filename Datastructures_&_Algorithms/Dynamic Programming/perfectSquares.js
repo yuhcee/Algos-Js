@@ -39,3 +39,8 @@ const n1 = 13;
 // Output: 2
 // Explanation: 13 = 4 + 9.
 console.log(numSquares(n1));
+
+const n2 = 25;
+// Output: 1
+// Explanation: 25 is already a perfect square (5^2).
+console.log(numSquares(n2));
