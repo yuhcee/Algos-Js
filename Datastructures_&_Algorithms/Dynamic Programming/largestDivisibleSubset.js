@@ -56,3 +56,7 @@ const nums = [1, 2, 3];
 // Output: [1,2]
 // Explanation: [1,3] is also accepted.
 console.log(largestDivisibleSubset(nums));
+
+const nums1 = [1, 2, 4, 8];
+// Output: [1,2,4,8]
+console.log(largestDivisibleSubset(nums1));
