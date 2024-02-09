@@ -51,3 +51,8 @@ const largestDivisibleSubset = function (nums) {
 
     return result.reverse();
 };
+
+const nums = [1, 2, 3];
+// Output: [1,2]
+// Explanation: [1,3] is also accepted.
+console.log(largestDivisibleSubset(nums));
