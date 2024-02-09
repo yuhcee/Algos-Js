@@ -11,6 +11,12 @@
  *
  * If there are multiple solutions, return any of them.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 1000`
+ * - `1 <= nums[i] <= 2 * 109`
+ * - All the integers in `nums` are **unique**.
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
