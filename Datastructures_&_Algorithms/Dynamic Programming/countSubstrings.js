@@ -77,3 +77,8 @@ const s2 = 'racecar';
 // Output: 10
 // Explanation: Nine palindromic strings: "r", "a", "c", "e", "ca", "ace", "racecar", "cec", "aceca".
 console.log(countSubstrings(s2));
+
+const s3 = 'abcde';
+// Output: 5
+// Explanation: Five palindromic strings: "a", "b", "c", "d", "e".
+console.log(countSubstrings(s3));
