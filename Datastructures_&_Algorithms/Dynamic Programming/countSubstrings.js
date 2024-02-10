@@ -7,6 +7,11 @@
  *
  * A substring is a contiguous sequence of characters within the string.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 1000`
+ * - `s` consists of lowercase English letters.
+ *
  * @param {string} s
  * @return {number}
  *
