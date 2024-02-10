@@ -82,3 +82,8 @@ const s3 = 'abcde';
 // Output: 5
 // Explanation: Five palindromic strings: "a", "b", "c", "d", "e".
 console.log(countSubstrings(s3));
+
+const s4 = 'abba';
+// Output: 6
+// Explanation: Six palindromic strings: "a", "b", "b", "a", "bb", "abba".
+console.log(countSubstrings(s4));
