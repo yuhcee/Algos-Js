@@ -9,6 +9,7 @@
  *
  * @param {string} s
  * @return {number}
+ *
  */
 const countSubstrings = (s) => {
     const len = s.length;
@@ -40,7 +41,7 @@ const s = 'abc';
 // Explanation: Three palindromic strings: "a", "b", "c".
 console.log(countSubstrings(s));
 
-const s1 = "aaa"
+const s1 = 'aaa';
 // Output: 6
 // Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
 console.log(countSubstrings(s1));
