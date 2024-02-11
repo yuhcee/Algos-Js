@@ -31,4 +31,34 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const cherryPickup = (grid) => {};
+const cherryPickup = (grid) => {
+    const rows = grid.length;
+    const cols = grid[0].length;
+    const memo = new Array(rows).fill(null).map(() => new Array(cols).fill(null).map(() => new Array(cols).fill(null)));
+
+    const dfs = (row, c1, c2) => {
+        if (row === rows) return 0; // Base case: reached the bottom row
+        if (memo[row][c1][c2] !== null) return memo[row][c1][c2]; // Check memoization table
+
+        let cherries = 0;
+
+        // Iterate through all possible next positions for both robots
+        for (let dc1 of [-1, 0, 1]) {
+            for (let dc2 of [-1, 0, 1]) {
+                const nc1 = c1 + dc1,
+                    nc2 = c2 + dc2;
+                if (nc1 >= 0 && nc1 < cols && nc2 >= 0 && nc2 < cols) {
+                    cherries = Math.max(cherries, dfs(row + 1, nc1, nc2));
+                }
+            }
+        }
+
+        // Add cherries from the current cell if both robots are not in the same cell
+        if (c1 !== c2) cherries += grid[row][c1] + grid[row][c2];
+        // Memoize the result and return
+        memo[row][c1][c2] = cherries;
+        return cherries;
+    };
+
+    return dfs(0, 0, cols - 1); // Call dfs from the top-left and top-right corners
+};
