@@ -20,7 +20,14 @@
  * - When both robots stay in the same cell, only one takes the cherries.
  * - Both robots cannot move outside of the grid at any moment.
  * - Both robots should reach the bottom row in `grid`.
- * 
+ *
+ * **Constraints:**
+ *
+ * - `rows == grid.length`
+ * - `cols == grid[i].length`
+ * - `2 <= rows, cols <= 70`
+ * - `0 <= grid[i][j] <= 100`
+ *
  * @param {number[][]} grid
  * @return {number}
  */
