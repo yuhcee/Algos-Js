@@ -42,3 +42,7 @@ console.log(majorityElement(nums));
 const nums1 = [2, 2, 1, 1, 1, 2, 2];
 // Output: 2
 console.log(majorityElement(nums1));
+
+const nums2 = [2, 2, 1, 1, 1, 2, 2, 4, 5, 5, 5, 5, 5];
+// Output: 2
+console.log(majorityElement(nums2));
