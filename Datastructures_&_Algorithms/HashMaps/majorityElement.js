@@ -16,4 +16,21 @@
  * @param {number[]} nums
  * @return {number}
  */
-const majorityElement = (nums) => {};
+const majorityElement = (nums) => {
+    const frequencyCounter = {};
+    let maxValue = -Infinity;
+    let maxKey = 0;
+
+    for (let n of nums) {
+        frequencyCounter[n] = frequencyCounter[n] + 1 || 1;
+    }
+
+    Object.keys(frequencyCounter).map((key) => {
+        if (frequencyCounter[key] > maxValue) {
+            maxKey = Number(key);
+            maxValue = frequencyCounter[key];
+        }
+    });
+
+    return maxKey;
+};
