@@ -34,3 +34,7 @@ const majorityElement = (nums) => {
 
     return maxKey;
 };
+
+const nums = [3, 2, 3];
+// Output: 3
+console.log(majorityElement(nums));
