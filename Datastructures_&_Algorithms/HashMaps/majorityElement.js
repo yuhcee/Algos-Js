@@ -7,6 +7,12 @@
  * times. You may assume that the majority element always exists in the
  * array.
  *
+ * **Constraints:**
+ *
+ * - `n == nums.length`
+ * - `1 <= n <= 5 * 104`
+ * - `-109 <= nums[i] <= 109`
+ *
  * @param {number[]} nums
  * @return {number}
  */
