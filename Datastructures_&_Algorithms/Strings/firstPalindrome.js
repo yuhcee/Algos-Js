@@ -44,3 +44,8 @@ const words = ['abc', 'car', 'ada', 'racecar', 'cool'];
 /* Explanation: The first string that is palindromic is "ada".
 Note that "racecar" is also palindromic, but it is not the first. */
 console.log(firstPalindrome(words));
+
+const words1 = ['notapalindrome', 'racecar'];
+// Output: "racecar"
+// Explanation: The first and only string that is palindromic is "racecar".
+console.log(firstPalindrome(words1));
