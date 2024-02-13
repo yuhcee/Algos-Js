@@ -49,3 +49,8 @@ const words1 = ['notapalindrome', 'racecar'];
 // Output: "racecar"
 // Explanation: The first and only string that is palindromic is "racecar".
 console.log(firstPalindrome(words1));
+
+const words2 = ['def', 'ghi'];
+Output: '';
+// Explanation: There are no palindromic strings, so the empty string is returned.
+console.log(firstPalindrome(words2));
