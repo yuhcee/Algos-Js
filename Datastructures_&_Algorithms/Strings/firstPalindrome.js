@@ -38,3 +38,9 @@ const firstPalindrome = (words) => {
 
     return '';
 };
+
+const words = ['abc', 'car', 'ada', 'racecar', 'cool'];
+// Output: 'ada';
+/* Explanation: The first string that is palindromic is "ada".
+Note that "racecar" is also palindromic, but it is not the first. */
+console.log(firstPalindrome(words));
