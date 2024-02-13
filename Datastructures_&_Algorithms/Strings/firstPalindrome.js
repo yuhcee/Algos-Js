@@ -16,4 +16,25 @@
  * @param {string[]} words
  * @return {string}
  */
-const firstPalindrome = (words) => {};
+const firstPalindrome = (words) => {
+    const isPalindrome = (word) => {
+        let start = 0;
+        let end = word.length - 1;
+
+        while (start < end) {
+            if (word[start] !== word[end]) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+
+        return true;
+    };
+
+    for (let word of words) {
+        if (isPalindrome(word)) return word;
+    }
+
+    return '';
+};
