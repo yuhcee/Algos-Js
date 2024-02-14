@@ -15,6 +15,12 @@
  * Return *the modified array after rearranging the elements to satisfy the 
  * aforementioned conditions*.
  * 
+ * **Constraints:**
+ * 
+ * - `2 <= nums.length <= 2 * 105`
+ * - `nums.length` is **even**
+ * - `1 <= |nums[i]| <= 105`
+ * - `nums` consists of equal number of positive and negative integers.
  * 
  * @param {number[]} nums
  * @return {number[]}
