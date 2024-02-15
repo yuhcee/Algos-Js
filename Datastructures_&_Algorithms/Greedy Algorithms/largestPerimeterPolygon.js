@@ -23,4 +23,18 @@ Constraints:
  * @param {number[]} nums
  * @return {number}
  */
-const largestPerimeter = function (nums) {};
+const largestPerimeter = function (nums) {
+    nums.sort((a, b) => a - b); // Sort the array in non-decreasing order
+    let sum = nums.reduce((acc, val) => acc + val, 0); // Calculate the sum of all elements in nums
+    let n = nums.length;
+
+    for (let i = n - 1; i >= 2; i--) {
+        sum -= nums[i]; // Exclude the current element from the sum
+        if (sum > nums[i]) {
+            // Check if the sum of the remaining elements is greater than the current element
+            return sum + nums[i]; // If so, return the sum of the remaining elements plus the current element as the largest perimeter
+        }
+    }
+
+    return -1; // If no valid triangle is found, return -1
+};
