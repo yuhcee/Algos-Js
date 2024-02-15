@@ -43,3 +43,10 @@ const nums = [5, 5, 5];
 // Output: 15
 /* Explanation: The only possible polygon that can be made from nums has 3 sides: 5, 5, and 5. The perimeter is 5 + 5 + 5 = 15. */
 console.log(largestPerimeter(nums));
+
+const nums1 = [1, 12, 1, 2, 5, 50, 3];
+// Output: 12
+/* Explanation: The polygon with the largest perimeter which can be made from nums has 5 sides: 1, 1, 2, 3, and 5. The perimeter is 1 + 1 + 2 + 3 + 5 = 12.
+We cannot have a polygon with either 12 or 50 as the longest side because it is not possible to include 2 or more smaller sides that have a greater sum than either of them.
+It can be shown that the largest possible perimeter is 12. */
+console.log(largestPerimeter(nums1));
