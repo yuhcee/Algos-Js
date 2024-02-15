@@ -15,6 +15,10 @@ The **perimeter** of a polygon is the sum of lengths of its sides.
 
 Return the largest possible **perimeter** of a **polygon** whose sides can be formed from `nums`, or -1 if it is not possible to create a polygon.
 
+Constraints:
+
+3 <= n <= 105
+1 <= nums[i] <= 109
  
  * @param {number[]} nums
  * @return {number}
