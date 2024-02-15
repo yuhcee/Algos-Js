@@ -38,3 +38,8 @@ const largestPerimeter = function (nums) {
 
     return -1; // If no valid triangle is found, return -1
 };
+
+const nums = [5, 5, 5];
+// Output: 15
+/* Explanation: The only possible polygon that can be made from nums has 3 sides: 5, 5, and 5. The perimeter is 5 + 5 + 5 = 15. */
+console.log(largestPerimeter(nums));
