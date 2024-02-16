@@ -39,3 +39,9 @@ const findLeastNumOfUniqueInts = function (arr, k) {
     // Step 4: Return the number of remaining unique integers
     return uniqueCount;
 };
+
+const arr = [5, 5, 4],
+    k = 1;
+// Output: 1
+// Explanation: Remove the single 4, only 5 is left.
+console.log(findLeastNumOfUniqueInts(arr, k));
