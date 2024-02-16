@@ -45,3 +45,9 @@ const arr = [5, 5, 4],
 // Output: 1
 // Explanation: Remove the single 4, only 5 is left.
 console.log(findLeastNumOfUniqueInts(arr, k));
+
+const arr1 = [4, 3, 1, 1, 3, 3, 2],
+    k1 = 3;
+// Output: 2
+// Explanation: Remove 4, 2 and either one of the two 1s or three 3s. 1 and 3 will be left.
+console.log(findLeastNumOfUniqueInts(arr1, k1));
