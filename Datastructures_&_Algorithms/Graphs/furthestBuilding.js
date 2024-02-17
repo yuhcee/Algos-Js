@@ -29,7 +29,7 @@
  * @param {number} ladders
  * @return {number}
  */
-const furthestBuilding = (heights, bricks, ladders) => {
+/* const furthestBuilding = (heights, bricks, ladders) => {
     let len = heights.length,
         queue = [];
 
@@ -46,21 +46,21 @@ const furthestBuilding = (heights, bricks, ladders) => {
     }
 
     return len - 1;
-};
+}; */
 
 /**
  * @param {Array} queue
  * @param {Number} num
  */
-const add = (queue, num) => {
-    for (let i = 0; i < queue.length; i++) {
-        if (queue[i] > num) {
-            queue.splice(i, 0, num);
-            return;
-        }
-    }
-    queue.push(num);
-};
+// const add = (queue, num) => {
+//     for (let i = 0; i < queue.length; i++) {
+//         if (queue[i] > num) {
+//             queue.splice(i, 0, num);
+//             return;
+//         }
+//     }
+//     queue.push(num);
+// };
 
 const heights = [4, 2, 7, 6, 9, 14, 12],
     bricks = 5,
@@ -88,38 +88,62 @@ const heights2 = [14, 3, 19, 3],
 console.log(furthestBuilding(heights2, bricks2, ladders2));
 
 // ====================OPTIMAL SOLUTION WITH TRIE =============================
-/* var furthestBuilding = function(H, B, L) {
-    let len = H.length - 1, heap = [,]
-    const heapify = val => {
-        let i = heap.length, par = i >> 1, temp
-        heap.push(val)
+/**
+ * @param {number[]} heights - Array of building heights
+ * @param {number} bricks - Number of available bricks
+ * @param {number} ladders - Number of available ladders
+ * @return {number} - Furthest building index that can be reached
+ */
+var furthestBuilding = function (heights, bricks, ladders) {
+    let len = heights.length - 1; // Length of the heights array
+    let heap = [,]; // Initialize the heap with an empty array
+    // Function to heapify a value into the min heap
+    const heapify = (val) => {
+        let i = heap.length,
+            par = i >> 1,
+            temp;
+        heap.push(val); // Push the value into the heap
+        // Bubble up the value until the heap property is restored
         while (heap[par] > heap[i]) {
-            temp = heap[par], heap[par] = heap[i], heap[i] = temp
-            i = par, par = i >> 1
+            temp = heap[par];
+            heap[par] = heap[i];
+            heap[i] = temp;
+            i = par;
+            par = i >> 1;
         }
-    }
+    };
+    // Function to extract the minimum value from the heap
     const extract = () => {
-        if (heap.length === 1) return null
-        let top = heap[1], left, right, temp,
-            i = 1, child = heap[3] < heap[2] ? 3 : 2
-        if (heap.length > 2) heap[1] = heap.pop()
-        else heap.pop()
+        if (heap.length === 1) return null; // If heap is empty, return null
+        let top = heap[1],
+            left,
+            right,
+            temp,
+            i = 1,
+            child = heap[3] < heap[2] ? 3 : 2; // Determine the smaller child
+        if (heap.length > 2) heap[1] = heap.pop(); // Replace the root with the last element
+        else heap.pop(); // If only one element, remove it
+        // Bubble down the new root until the heap property is restored
         while (heap[i] > heap[child]) {
-            temp = heap[child], heap[child] = heap[i], heap[i] = temp
-            i = child, left = i << 1, right = left + 1
-            child = heap[right] < heap[left] ? right : left
+            temp = heap[child];
+            heap[child] = heap[i];
+            heap[i] = temp;
+            i = child;
+            left = i << 1;
+            right = left + 1;
+            child = heap[right] < heap[left] ? right : left; // Determine the smaller child
         }
-        return top
-    }    
+        return top; // Return the extracted minimum value
+    };
+    // Iterate through the buildings
     for (let i = 0; i < len; i++) {
-        let diff = H[i+1] - H[i]
+        let diff = heights[i + 1] - heights[i]; // Calculate height difference
         if (diff > 0) {
-            if (L > 0) heapify(diff), L--
-            else if (heap.length > 1 && diff > heap[1])
-                heapify(diff), B -= extract()
-            else B -= diff
-            if (B < 0) return i
+            if (ladders > 0) heapify(diff), ladders--; // If ladders are available, use them
+            else if (heap.length > 1 && diff > heap[1]) heapify(diff), (bricks -= extract()); // If bricks are available, use them
+            else bricks -= diff; // If neither ladders nor bricks are available, use bricks
+            if (bricks < 0) return i; // If bricks become negative, return current index
         }
     }
-    return len
-}; */
+    return len; // Return the furthest building index
+};
