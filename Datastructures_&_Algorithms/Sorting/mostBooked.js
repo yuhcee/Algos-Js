@@ -25,6 +25,14 @@
  * A **half-closed interval** `[a, b]` is the interval between `a` and `b`
  * **including** `a` and **not including** `b`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 100`
+ * - `1 <= meetings.length <= 105`
+ * - `meetings[i].length == 2`
+ * - `0 <= starti < endi <= 5 * 105`
+ * - All the values of `starti` are **unique**.
+ *
  * @param {number} n
  * @param {number[][]} meetings
  * @return {number}
