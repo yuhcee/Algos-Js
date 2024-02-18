@@ -37,4 +37,54 @@
  * @param {number[][]} meetings
  * @return {number}
  */
-const mostBooked = (n, meetings) => {};
+const mostBooked = (n, meetings) => {
+    const ans = new Array(n).fill(0); // To store the number of meetings held in each room
+    const times = new Array(n).fill(0); // To store the end time of the last meeting in each room
+
+    // Sort meetings based on start times
+    meetings.sort((a, b) => a[0] - b[0]);
+
+    // Iterate through each meeting
+    for (let i = 0; i < meetings.length; i++) {
+        const [start, end] = meetings[i];
+        let flag = false; // Flag to track if a room is available for the current meeting
+        let minind = -1; // Index of the room with the earliest available time
+        let val = Number.MAX_SAFE_INTEGER; // Initialize the earliest available time to maximum possible value
+
+        // Find the room with the earliest available time
+        for (let j = 0; j < n; j++) {
+            if (times[j] < val) {
+                val = times[j];
+                minind = j;
+            }
+            // If the room is available at or before the start time of the meeting
+            // Allocate the meeting to this room
+            if (times[j] <= start) {
+                flag = true;
+                ans[j]++; // Increment the meeting count for the room
+                times[j] = end; // Update the end time of the last meeting in the room
+                break; // Exit the loop since the meeting is allocated
+            }
+        }
+
+        // If no room is available at the start time of the meeting
+        // Allocate the meeting to the room with the earliest available time
+        if (!flag) {
+            ans[minind]++; // Increment the meeting count for the room
+            times[minind] += end - start; // Update the end time of the last meeting in the room
+        }
+    }
+
+    // Find the room with the highest number of meetings
+    let maxi = -1;
+    let id = -1;
+    for (let i = 0; i < n; i++) {
+        if (ans[i] > maxi) {
+            maxi = ans[i];
+            id = i;
+        }
+    }
+
+    // Return the room with the highest number of meetings
+    return id;
+};
