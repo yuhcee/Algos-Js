@@ -88,3 +88,21 @@ const mostBooked = (n, meetings) => {
     // Return the room with the highest number of meetings
     return id;
 };
+
+const n = 2,
+    meetings = [
+        [0, 10],
+        [1, 5],
+        [2, 7],
+        [3, 4],
+    ];
+// Output: 0
+/* Explanation:
+- At time 0, both rooms are not being used. The first meeting starts in room 0.
+- At time 1, only room 1 is not being used. The second meeting starts in room 1.
+- At time 2, both rooms are being used. The third meeting is delayed.
+- At time 3, both rooms are being used. The fourth meeting is delayed.
+- At time 5, the meeting in room 1 finishes. The third meeting starts in room 1 for the time period [5,10).
+- At time 10, the meetings in both rooms finish. The fourth meeting starts in room 0 for the time period [10,11).
+Both rooms 0 and 1 held 2 meetings, so we return 0. */
+console.log(mostBooked(n, meetings));
