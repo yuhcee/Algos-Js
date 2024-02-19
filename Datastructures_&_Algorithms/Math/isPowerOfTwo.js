@@ -24,3 +24,8 @@ const n = 1;
 // Output: true
 // Explanation: 20 = 1
 console.log(isPowerOfTwo(n));
+
+const n1 = 16;
+// Output: true
+// Explanation: 24 = 16
+console.log(isPowerOfTwo(n1));
