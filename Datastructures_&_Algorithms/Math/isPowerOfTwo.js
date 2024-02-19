@@ -19,3 +19,8 @@ const isPowerOfTwo = function (n) {
 
     return (n & (n - 1)) === 0;
 };
+
+const n = 1;
+// Output: true
+// Explanation: 20 = 1
+console.log(isPowerOfTwo(n));
