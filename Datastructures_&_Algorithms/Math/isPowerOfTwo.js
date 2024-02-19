@@ -29,3 +29,7 @@ const n1 = 16;
 // Output: true
 // Explanation: 24 = 16
 console.log(isPowerOfTwo(n1));
+
+const n2 = 3;
+// Output: false
+console.log(isPowerOfTwo(n2));
