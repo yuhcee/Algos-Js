@@ -14,7 +14,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const missingNumber = (nums) => {
+/* const missingNumber = (nums) => {
     nums.sort((a, b) => a - b);
 
     if (nums.at(-1) !== nums.length) return nums.length;
@@ -26,6 +26,17 @@ const missingNumber = (nums) => {
     }
 
     return -1;
+}; */
+
+const missingNumber = (nums) => {
+    nums.sort((a, b) => b - a);
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] - nums[i + 1] > 1) {
+            return nums[i] - 1;
+        }
+    }
+    return nums.at(-1) !== 0 ? 0 : nums[0] + 1;
 };
 
 const nums = [3, 0, 1];
