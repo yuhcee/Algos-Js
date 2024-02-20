@@ -4,6 +4,13 @@
  * Given an array nums containing `n` distinct numbers in the range `[0, n]`,
  * return *the only number in the range that is missing from the array*.
  *
+ * **Constraints:**
+ *
+ * - `n == nums.length`
+ * - `1 <= n <= 104`
+ * - `0 <= nums[i] <= n`
+ * - All the numbers of nums are **unique**.
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -11,7 +18,6 @@ const missingNumber = (nums) => {
     nums.sort((a, b) => a - b);
 
     if (nums.at(-1) !== nums.length) return nums.length;
-
     if (nums[0] !== 0) return 0;
 
     for (let i = 1; i < nums.length; i++) {
