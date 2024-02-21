@@ -28,3 +28,8 @@ const left = 5,
     right = 7;
 // Output: 4
 console.log(rangeBitwiseAnd(left, right));
+
+const left1 = 0,
+    right1 = 0;
+// Output: 0
+console.log(rangeBitwiseAnd(left1, right1));
