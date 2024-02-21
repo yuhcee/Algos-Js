@@ -23,3 +23,8 @@ const rangeBitwiseAnd = (left, right) => {
     // Shift the common bits to the left
     return left << shifts;
 };
+
+const left = 5,
+    right = 7;
+// Output: 4
+console.log(rangeBitwiseAnd(left, right));
