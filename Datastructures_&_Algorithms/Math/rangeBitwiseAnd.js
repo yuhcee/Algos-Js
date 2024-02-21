@@ -33,3 +33,8 @@ const left1 = 0,
     right1 = 0;
 // Output: 0
 console.log(rangeBitwiseAnd(left1, right1));
+
+const left2 = 1,
+    right2 = 2147483647;
+// Output: 0
+console.log(rangeBitwiseAnd(left2, right2));
