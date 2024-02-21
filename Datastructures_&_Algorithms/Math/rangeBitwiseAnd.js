@@ -12,4 +12,14 @@
  * @param {number} right
  * @return {number}
  */
-const rangeBitwiseAnd = (left, right) => {};
+const rangeBitwiseAnd = (left, right) => {
+    let shifts = 0;
+    // Find the common prefix
+    while (left < right) {
+        left >>= 1;
+        right >>= 1;
+        shifts++;
+    }
+    // Shift the common bits to the left
+    return left << shifts;
+};
