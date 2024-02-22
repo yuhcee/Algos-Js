@@ -17,7 +17,6 @@
  * Return *the label of the town judge if the town judge exists and can be 
  * identified, or return `-1` otherwise*.
  *
- *
  * **Constraints:**
  *
  * - `1 <= n <= 1000`
