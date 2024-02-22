@@ -1,7 +1,7 @@
 /**
  * **997. Find the Town Judge**
  *
- * In a town, there are `n` people labeled from `1` to `n`. There is a rumor 
+ * In a town, there are `n` people labeled from `1` to `n`. There is a rumor
  * that one of these people is secretly the town judge.
  *
  * If the town judge exists, then:
@@ -11,10 +11,10 @@
  * Everybody (except for the town judge) trusts the town judge.
  * There is exactly one person that satisfies properties **1** and **2**.
  *
- * You are given an array `trust` where `trust[i] = [ai, bi]` representing 
+ * You are given an array `trust` where `trust[i] = [ai, bi]` representing
  * that the person labeled `ai` trusts the person labeled `bi`.
  *
- * Return *the label of the town judge if the town judge exists and can be 
+ * Return *the label of the town judge if the town judge exists and can be
  * identified, or return `-1` otherwise*.
  *
  * **Constraints:**
@@ -30,7 +30,7 @@
  * @param {number[][]} trust
  * @return {number}
  */
-const findJudge = function (n, trust) {
+/* const findJudge = function (n, trust) {
     // if there's only 1 person and no trust relationship return 1
     if (n == 1 && trust.length == 0) return 1;
     // if there's not enough trust relationship to have a judge return -1
@@ -56,6 +56,23 @@ const findJudge = function (n, trust) {
     }
 
     // no judge found
+    return -1;
+}; */
+
+const findJudge = (n, trust) => {
+    const trustCount = new Array(n + 1).fill(0);
+
+    for (const [a, b] of trust) {
+        trustCount[a]--;
+        trustCount[b]++;
+    }
+
+    for (let i = 1; i <= n; i++) {
+        if (trustCount[i] === n - 1) {
+            return i;
+        }
+    }
+
     return -1;
 };
 
