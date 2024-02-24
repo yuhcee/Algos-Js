@@ -109,3 +109,18 @@ At time 8, person 2 shares the secret with person 3.
 At time 10, person 1 shares the secret with person 5.​​​​
 Thus, people 0, 1, 2, 3, and 5 know the secret after all the meetings. */
 console.log(findAllPeople(n, meetings, firstPerson));
+
+const n1 = 4,
+    meetings1 = [
+        [3, 1, 3],
+        [1, 2, 2],
+        [0, 3, 3],
+    ],
+    firstPerson1 = 3;
+// Output: [0,1,3]
+/* Explanation:
+At time 0, person 0 shares the secret with person 3.
+At time 2, neither person 1 nor person 2 know the secret.
+At time 3, person 3 shares the secret with person 0 and person 1.
+Thus, people 0, 1, and 3 know the secret after all the meetings. */
+console.log(findAllPeople(n1, meetings1, firstPerson1));
