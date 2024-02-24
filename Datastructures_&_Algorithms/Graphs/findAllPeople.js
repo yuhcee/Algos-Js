@@ -21,10 +21,21 @@
  * Return *a list of all the people that have the secret after all the
  * meetings have taken place. You may return the answer in **any order***.
  *
+ * **Constraints:**
+ *
+ * - `2 <= n <= 105`
+ * - `1 <= meetings.length <= 105`
+ * - `meetings[i].length == 3`
+ * - `0 <= xi, yi <= n - 1`
+ * - `xi != yi`
+ * - `1 <= timei <= 105`
+ * - `1 <= firstPerson <= n - 1`
+ *
  * @param {number} n - The number of people in the town.
  * @param {number[][]} meetings - The array of meetings represented as
  * [person1, person2, time].
  * @param {number} firstPerson - The person who initially knows the secret.
- * @return {number[]} - The list of people who know the secret after all the meetings.
+ * @return {number[]} - The list of people who know the secret after all the
+ * meetings.
  */
 const findAllPeople = function (n, meetings, firstPerson) {};
