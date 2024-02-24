@@ -38,4 +38,58 @@
  * @return {number[]} - The list of people who know the secret after all the
  * meetings.
  */
-const findAllPeople = function (n, meetings, firstPerson) {};
+const findAllPeople = function (n, meetings, firstPerson) {
+    // Initialize a set to keep track of people who know the secret
+    let knownSet = new Set([0, firstPerson]);
+
+    // Sort meetings by time
+    meetings.sort((a, b) => a[2] - b[2]);
+
+    // Group meetings by time
+    let sortedMeetings = [];
+    let seenTime = new Set();
+    for (let meeting of meetings) {
+        if (!seenTime.has(meeting[2])) {
+            seenTime.add(meeting[2]);
+            sortedMeetings.push([]);
+        }
+        sortedMeetings[sortedMeetings.length - 1].push([meeting[0], meeting[1]]);
+    }
+
+    // Iterate through each group of meetings
+    for (let meetingGroup of sortedMeetings) {
+        // Initialize a set to keep track of people who know the secret in this group of meetings
+        let peopleKnowSecret = new Set();
+        // Initialize a graph object to represent connections between people in this group of meetings
+        let graph = {};
+
+        // Build the graph and update peopleKnowSecret based on knownSet
+        for (let [p1, p2] of meetingGroup) {
+            if (!graph[p1]) graph[p1] = [];
+            if (!graph[p2]) graph[p2] = [];
+
+            graph[p1].push(p2);
+            graph[p2].push(p1);
+
+            if (knownSet.has(p1)) peopleKnowSecret.add(p1);
+            if (knownSet.has(p2)) peopleKnowSecret.add(p2);
+        }
+
+        // Perform BFS starting from peopleKnowSecret
+        let queue = [...peopleKnowSecret];
+        while (queue.length > 0) {
+            let curr = queue.shift();
+            knownSet.add(curr); // Add the current person to knownSet
+            // Add neighbors of the current person to the queue if they are not already known
+            for (let neigh of graph[curr]) {
+                if (!knownSet.has(neigh)) {
+                    knownSet.add(neigh);
+                    queue.push(neigh);
+                }
+            }
+        }
+    }
+
+    // Convert the set of known people to an array and return
+    return [...knownSet];
+};
