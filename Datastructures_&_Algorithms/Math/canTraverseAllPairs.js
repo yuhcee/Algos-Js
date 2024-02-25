@@ -13,6 +13,11 @@
  * Return *`true` if it is possible to traverse between all such pairs of
  * indices, or false otherwise.*
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 105`
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
