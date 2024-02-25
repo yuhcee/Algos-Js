@@ -90,3 +90,8 @@ const nums1 = [3, 9, 5];
 // Output: false
 // Explanation: No sequence of traversals can take us from index 0 to index 2 in this example. So, we return false.
 console.log(canTraverseAllPairs(nums1));
+
+const nums2 = [4, 3, 12, 8];
+// Output: true
+// Explanation: There are 6 possible pairs of indices to traverse between: (0, 1), (0, 2), (0, 3), (1, 2), (1, 3), and (2, 3). A valid sequence of traversals exists for each pair, so we return true.
+console.log(canTraverseAllPairs(nums2));
