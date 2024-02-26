@@ -39,3 +39,8 @@ const p = [1, 2, 3],
     q = [1, 2, 3];
 // Output: true
 console.log(isSameTree(p, q));
+
+const p1 = [1, 2],
+    q1 = [1, null, 2];
+// Output: false
+console.log(isSameTree(p1, q1));
