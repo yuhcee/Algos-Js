@@ -15,6 +15,11 @@
  * Two binary trees are considered the same if they are structurally
  * identical, and the nodes have the same value.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in both trees is in the range `[0, 100]`.
+ * `-104 <= Node.val <= 104`
+ *
  * @param {TreeNode} p
  * @param {TreeNode} q
  * @return {boolean}
