@@ -27,4 +27,24 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const diameterOfBinaryTree = (root) => {};
+const diameterOfBinaryTree = (root) => {
+    let diameter = 0;
+
+    const dfs = (node) => {
+        if (!node) return [0, 0];
+
+        const [leftDepth, leftDiameter] = dfs(node.left);
+        const [rightDepth, rightDiameter] = dfs(node.right);
+
+        const currentDepth = Math.max(leftDepth, rightDepth) + 1;
+        const currentDiameter = Math.max(leftDiameter, rightDiameter, leftDepth + rightDepth);
+
+        diameter = Math.max(diameter, currentDiameter);
+
+        return [currentDepth, currentDiameter];
+    };
+
+    dfs(root);
+
+    return diameter;
+};
