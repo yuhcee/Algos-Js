@@ -19,6 +19,11 @@
  * The **length** of a path between two nodes is represented by the number
  * of edges between them.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is in the range `[1, 104]`.
+ * `-100 <= Node.val <= 100`
+ *
  * @param {TreeNode} root
  * @return {number}
  */
