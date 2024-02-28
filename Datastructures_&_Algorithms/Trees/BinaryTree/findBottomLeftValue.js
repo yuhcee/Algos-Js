@@ -44,3 +44,7 @@ const findBottomLeftValue = (root) => {
 const root = [2, 1, 3];
 // Output: 1
 console.log(findBottomLeftValue(root));
+
+const root1 = [1, 2, 3, 4, null, 5, 6, null, null, 7];
+// Output: 7
+console.log(findBottomLeftValue(root1));
