@@ -20,4 +20,23 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const findBottomLeftValue = (root) => {};
+const findBottomLeftValue = (root) => {
+    if (!root) return null;
+
+    let leftmostValue = root.val;
+    const queue = [root];
+
+    while (queue.length > 0) {
+        const levelSize = queue.length;
+        leftmostValue = queue[0].val; // Update leftmost value for each level
+
+        for (let i = 0; i < levelSize; i++) {
+            const node = queue.shift();
+
+            if (node.left) queue.push(node.left);
+            if (node.right) queue.push(node.right);
+        }
+    }
+
+    return leftmostValue;
+};
