@@ -40,3 +40,7 @@ const findBottomLeftValue = (root) => {
 
     return leftmostValue;
 };
+
+const root = [2, 1, 3];
+// Output: 1
+console.log(findBottomLeftValue(root));
