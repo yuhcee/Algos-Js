@@ -21,11 +21,40 @@
  * **Even-Odd**, otherwise return `false`.
  *
  * **Constraints:**
- * 
+ *
  * - The number of nodes in the tree is in the range `[1, 105]`.
  * - `1 <= Node.val <= 106`
- * 
+ *
  * @param {TreeNode} root
  * @return {boolean}
  */
-const isEvenOddTree = (root) => {};
+const isEvenOddTree = (root) => {
+    if (!root) return false;
+
+    const queue = [[root, 0]];
+
+    while (queue.length > 0) {
+        const levelSize = queue.length;
+        let prevValue = null;
+
+        for (let i = 0; i < levelSize; i++) {
+            const [node, level] = queue.shift();
+
+            // Check if the current node's value satisfies the conditions based on the level
+            if (
+                (level % 2 === 0 && (node.val % 2 !== 1 || (prevValue !== null && node.val <= prevValue))) ||
+                (level % 2 !== 0 && (node.val % 2 !== 0 || (prevValue !== null && node.val >= prevValue)))
+            ) {
+                return false;
+            }
+
+            prevValue = node.val;
+
+            // Enqueue left and right children with their corresponding level indices
+            if (node.left) queue.push([node.left, level + 1]);
+            if (node.right) queue.push([node.right, level + 1]);
+        }
+    }
+
+    return true;
+};
