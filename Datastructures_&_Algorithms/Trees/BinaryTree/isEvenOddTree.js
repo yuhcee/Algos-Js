@@ -68,3 +68,12 @@ Level 2: [3,7,9]
 Level 3: [12,8,6,2]
 Since levels 0 and 2 are all odd and increasing and levels 1 and 3 are all even and decreasing, the tree is Even-Odd. */
 console.log(isEvenOddTree(root));
+
+const root1 = [5, 4, 2, 3, 3, 7];
+// Output: false
+/* Explanation: The node values on each level are:
+Level 0: [5]
+Level 1: [4,2]
+Level 2: [3,3,7]
+Node values in level 2 must be in strictly increasing order, so the tree is not Even-Odd. */
+console.log(isEvenOddTree(root1));
