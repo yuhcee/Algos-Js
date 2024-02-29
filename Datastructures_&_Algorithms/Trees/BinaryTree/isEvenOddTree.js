@@ -20,6 +20,11 @@
  * Given the `root` of a binary tree, return `true` if the binary tree is
  * **Even-Odd**, otherwise return `false`.
  *
+ * **Constraints:**
+ * 
+ * - The number of nodes in the tree is in the range `[1, 105]`.
+ * - `1 <= Node.val <= 106`
+ * 
  * @param {TreeNode} root
  * @return {boolean}
  */
