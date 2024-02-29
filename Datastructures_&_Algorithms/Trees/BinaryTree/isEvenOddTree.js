@@ -77,3 +77,8 @@ Level 1: [4,2]
 Level 2: [3,3,7]
 Node values in level 2 must be in strictly increasing order, so the tree is not Even-Odd. */
 console.log(isEvenOddTree(root1));
+
+const root2 = [5, 9, 1, 3, 5, 7];
+// Output: false
+// Explanation: Node values in the level 1 should be even integers.
+console.log(isEvenOddTree(root2));
