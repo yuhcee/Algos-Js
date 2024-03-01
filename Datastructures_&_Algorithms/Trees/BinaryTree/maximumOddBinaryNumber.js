@@ -36,3 +36,8 @@ const s = '010';
 // Output: "001"
 // Explanation: Because there is just one '1', it must be in the last position. So the answer is "001".
 console.log(maximumOddBinaryNumber(s));
+
+const s1 = '0101';
+// Output: "1001"
+// Explanation: One of the '1's must be in the last position. The maximum number that can be made with the remaining digits is "100". So the answer is "1001".
+console.log(maximumOddBinaryNumber(s1));
