@@ -31,3 +31,8 @@ const maximumOddBinaryNumber = (s) => {
     }
     return chars.join('');
 };
+
+const s = '010';
+// Output: "001"
+// Explanation: Because there is just one '1', it must be in the last position. So the answer is "001".
+console.log(maximumOddBinaryNumber(s));
