@@ -11,7 +11,13 @@
  * created from the given combination.*
  *
  * **Note** that the resulting string can have leading zeros.
- * 
+ *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 100`
+ * - `s` consists only of `'0'` and `'1'`.
+ * - `s` contains at least one `'1'`.
+ *
  * @param {string} s
  * @return {string}
  */
