@@ -22,7 +22,7 @@
  * @param {number} n
  * @return {ListNode}
  */
-const removeNthFromEnd = function (head, n) {
+const removeNthFromEnd = (head, n) => {
     if (!head.next) return null;
     var current = head;
     var delay = head;
