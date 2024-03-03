@@ -36,7 +36,6 @@ const removeNthFromEnd = (head, n) => {
     else delay.next = delay.next.next;
     return head;
 };
-
 const head = [1, 2, 3, 4, 5],
     n = 2;
 // Output: [1,2,3,5]
