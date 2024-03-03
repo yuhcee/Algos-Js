@@ -24,8 +24,8 @@
  */
 const removeNthFromEnd = (head, n) => {
     if (!head.next) return null;
-    var current = head;
-    var delay = head;
+    let current = head;
+    let delay = head;
 
     while (current) {
         if (n < 0) delay = delay.next;
