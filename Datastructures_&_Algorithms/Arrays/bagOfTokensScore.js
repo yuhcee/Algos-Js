@@ -56,3 +56,10 @@ const tokens = [100],
 // Output: 0
 /* Explanation: Since your score is 0 initially, you cannot play the token face-down. You also cannot play it face-up since your power (50) is less than tokens[0] (100). */
 console.log(bagOfTokensScore(tokens, power));
+
+const tokens1 = [200, 100],
+    power1 = 150;
+// Output: 1
+/* Explanation: Play token1 (100) face-up, reducing your power to 50 and increasing your score to 1.
+There is no need to play token0, since you cannot play it face-up to add to your score. The maximum score achievable is 1. */
+console.log(bagOfTokensScore(tokens1, power1));
