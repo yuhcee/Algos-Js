@@ -17,6 +17,11 @@
  * Return the **maximum** possible score you can achieve after playing any
  * number of tokens.
  *
+ * **Constraints:**
+ *
+ * - `0 <= tokens.length <= 1000`
+ * - `0 <= tokens[i], power < 104`
+ *
  * @param {number[]} tokens
  * @param {number} power
  * @return {number}
