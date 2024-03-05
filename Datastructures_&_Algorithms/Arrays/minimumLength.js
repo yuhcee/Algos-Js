@@ -42,3 +42,8 @@ const minimumLength = (s) => {
     // The minimum length is the difference between the right and left pointers plus 1
     return right - left + 1;
 };
+
+const s = 'ca';
+// Output: 2
+// Explanation: You can't remove any characters, so the string stays as is.
+console.log(minimumLength(s));
