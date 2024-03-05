@@ -16,6 +16,11 @@
  * Return the **minimum length** of s after performing the above operation
  * any number of times (possibly zero times).
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 105`
+ * - `s` only consists of characters `'a'`, `'b'`, and `'c'`.
+ *
  * Returns the minimum length of string after deleting similar ends.
  * @param {string} s The input string consisting only of characters 'a',
  * 'b', and 'c'.
