@@ -56,3 +56,10 @@ const s1 = 'cabaabac';
 - Take prefix = "b" and suffix = "b" and remove them, s = "aa".
 - Take prefix = "a" and suffix = "a" and remove them, s = "". */
 console.log(minimumLength(s1));
+
+const s2 = 'aabccabba';
+// Output: 3
+/* Explanation: An optimal sequence of operations is:
+- Take prefix = "aa" and suffix = "a" and remove them, s = "bccabb".
+- Take prefix = "b" and suffix = "bb" and remove them, s = "cca". */
+console.log(minimumLength(s2));
