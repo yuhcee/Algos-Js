@@ -26,4 +26,19 @@
  * 'b', and 'c'.
  * @return {number} The minimum length of string after deletion.
  */
-const minimumLength = (s) => {};
+const minimumLength = (s) => {
+    let left = 0,
+        right = s.length - 1;
+
+    // While characters at left and right pointers are equal, move the pointers towards the center
+    while (left < right && s[left] === s[right]) {
+        let current = s[left];
+        // Move the left pointer until it points to a different character
+        while (left <= right && s[left] === current) left++;
+        // Move the right pointer until it points to a different character
+        while (left <= right && s[right] === current) right--;
+    }
+
+    // The minimum length is the difference between the right and left pointers plus 1
+    return right - left + 1;
+};
