@@ -58,3 +58,9 @@ const head = [3, 2, 0, -4],
 // Output: true
 // Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
 console.log(hasCycle(head));
+
+const head1 = [1, 2],
+    pos1 = 0;
+// Output: true
+// Explanation: There is a cycle in the linked list, where the tail connects to the 0th node.
+console.log(hasCycle(head1));
