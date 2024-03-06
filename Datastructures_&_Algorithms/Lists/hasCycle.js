@@ -64,3 +64,9 @@ const head1 = [1, 2],
 // Output: true
 // Explanation: There is a cycle in the linked list, where the tail connects to the 0th node.
 console.log(hasCycle(head1));
+
+const head2 = [1],
+    pos2 = -1;
+// Output: false
+// Explanation: There is no cycle in the linked list.
+console.log(hasCycle(head2));
