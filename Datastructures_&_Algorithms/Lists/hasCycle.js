@@ -30,4 +30,25 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-const hasCycle = function (head) {};
+const hasCycle = function (head) {
+    // If the list is empty or has only one node, there can't be a cycle
+    if (!head || !head.next) {
+        return false;
+    }
+
+    // Initialize slow and fast pointers
+    let slow = head;
+    let fast = head.next;
+
+    // Move slow and fast pointers until they meet or fast reaches the end of the list
+    while (fast && fast.next) {
+        if (slow === fast) {
+            return true; // Cycle detected
+        }
+        slow = slow.next; // Move slow pointer one step
+        fast = fast.next.next; // Move fast pointer two steps
+    }
+
+    // If fast pointer reaches the end of the list, there is no cycle
+    return false;
+};
