@@ -21,4 +21,17 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const middleNode = (head) => {};
+const middleNode = (head) => {
+    // Initialize slow and fast pointers to the head of the list
+    let slow = head;
+    let fast = head;
+
+    // Move fast pointer two steps at a time and slow pointer one step at a time
+    while (fast !== null && fast.next !== null) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+
+    // At this point, slow pointer is at the middle of the list
+    return slow;
+};
