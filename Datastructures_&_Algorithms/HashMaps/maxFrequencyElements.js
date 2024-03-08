@@ -9,6 +9,11 @@
  * The **frequency** of an element is the number of occurrences of that
  * element in the array.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 100`
+ * - `1 <= nums[i] <= 100`
+ *
  * @param {number[]} nums
  * @return {number}
  */
