@@ -17,4 +17,26 @@
  * @param {number[]} nums
  * @return {number}
  */
-const maxFrequencyElements = (nums) => {};
+const maxFrequencyElements = (nums) => {
+    // Create a hashmap to count the frequency of each element
+    const frequencyMap = new Map();
+    for (const num of nums) {
+        frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1);
+    }
+
+    // Find the maximum frequency
+    let maxFrequency = 0;
+    for (const frequency of frequencyMap.values()) {
+        maxFrequency = Math.max(maxFrequency, frequency);
+    }
+
+    // Count the total frequencies of elements having the maximum frequency
+    let count = 0;
+    for (const frequency of frequencyMap.values()) {
+        if (frequency === maxFrequency) {
+            count += frequency;
+        }
+    }
+
+    return count;
+};
