@@ -38,4 +38,10 @@ const nums1 = [1, 2, 3],
     nums2 = [2, 4];
 // Output: 2
 // Explanation: The smallest element common to both arrays is 2, so we return 2.
-console.log(getCommon(nums1,nums 2));
+console.log(getCommon(nums1, nums2));
+
+const nums11 = [1, 2, 3, 6],
+    nums21 = [2, 3, 4, 5];
+// Output: 2
+// Explanation: There are two common elements in the array 2 and 3 out of which 2 is the smallest, so 2 is returned.
+console.log(getCommon(nums11, nums21));
