@@ -28,3 +28,9 @@ const intersection = (nums1, nums2) => {
     // Convert the intersection set to an array and return
     return Array.from(intersectionSet);
 };
+
+const nums1 = [1, 2, 2, 1],
+    nums2 = [2, 2];
+// Output: [2]
+console.log(intersection(nums1, nums2));
+
