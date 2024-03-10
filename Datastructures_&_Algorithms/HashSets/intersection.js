@@ -14,4 +14,17 @@
  * @param {number[]} nums2
  * @return {number[]}
  */
-const intersection = (nums1, nums2) => {};
+const intersection = (nums1, nums2) => {
+    const set = new Set(nums1);
+    const intersectionSet = new Set();
+
+    // Check for common elements in nums2
+    for (let num of nums2) {
+        if (set.has(num)) {
+            intersectionSet.add(num);
+        }
+    }
+
+    // Convert the intersection set to an array and return
+    return Array.from(intersectionSet);
+};
