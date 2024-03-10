@@ -34,3 +34,8 @@ const nums1 = [1, 2, 2, 1],
 // Output: [2]
 console.log(intersection(nums1, nums2));
 
+const nums11 = [4, 9, 5],
+    nums21 = [9, 4, 9, 8, 4];
+// Output: [9,4]
+// Explanation: [4,9] is also accepted.
+console.log(intersection(nums11, nums21));
