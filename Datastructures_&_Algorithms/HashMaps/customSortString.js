@@ -22,4 +22,26 @@
  * @param {string} s
  * @return {string}
  */
-const customSortString = (order, s) => {};
+const customSortString = (order, s) => {
+    // Create a frequency map for characters in string s
+    const frequencyMap = new Map();
+    for (const char of s) {
+        frequencyMap.set(char, (frequencyMap.get(char) || 0) + 1);
+    }
+
+    // Build the resulting string according to the custom order
+    let result = '';
+    for (const char of order) {
+        if (frequencyMap.has(char)) {
+            result += char.repeat(frequencyMap.get(char));
+            frequencyMap.delete(char);
+        }
+    }
+
+    // Append remaining characters not in the custom order
+    for (const [char, count] of frequencyMap) {
+        result += char.repeat(count);
+    }
+
+    return result;
+};
