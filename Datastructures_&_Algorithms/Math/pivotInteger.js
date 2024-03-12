@@ -11,10 +11,27 @@
  * input.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= n <= 1000`
- * 
+ *
  * @param {number} n
  * @return {number}
  */
-const pivotInteger = (n) => {};
+const pivotInteger = (n) => {
+    let low = 1,
+        high = n;
+
+    while (low <= high) {
+        let mid = Math.floor((low + high) / 2);
+        let leftSum = (mid * (mid + 1)) / 2;
+        let rightSum = (n * (n + 1)) / 2 - ((mid - 1) * mid) / 2;
+        if (leftSum === rightSum) {
+            return mid;
+        } else if (leftSum < rightSum) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    return -1;
+};
