@@ -45,3 +45,8 @@ const n1 = 1;
 // Output: 1
 // Explanation: 1 is the pivot integer since: 1 = 1.
 console.log(pivotInteger(n1));
+
+const n2 = 4;
+// Output: -1
+// Explanation: It can be proved that no such integer exist.
+console.log(pivotInteger(n2));
