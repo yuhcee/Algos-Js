@@ -35,3 +35,8 @@ const pivotInteger = (n) => {
     }
     return -1;
 };
+
+const n = 8;
+// Output: 6
+// Explanation: 6 is the pivot integer since: 1 + 2 + 3 + 4 + 5 + 6 = 6 + 7 + 8 = 21.
+console.log(pivotInteger(n));
