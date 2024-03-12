@@ -10,6 +10,10 @@
  * is guaranteed that there will be at most one pivot index for the given
  * input.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= n <= 1000`
+ * 
  * @param {number} n
  * @return {number}
  */
