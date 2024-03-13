@@ -17,6 +17,11 @@
  * (Note that in the examples below, all sequences are serializations of
  * `ListNode` objects.)
  *
+ * **Constraints:**
+ *
+ * - The given linked list will contain between `1` and `1000` nodes.
+ * - Each node in the linked list has -`1000 <= node.val <= 1000`.
+ *
  * @param {ListNode} head
  * @return {ListNode}
  */
