@@ -57,3 +57,7 @@ const head = [1, 2, -3, 3, 1];
 // Output: [3,1]
 // Note: The answer [1,2,1] would also be accepted.
 console.log(removeZeroSumSublists(head));
+
+const head1 = [1, 2, 3, -3, 4];
+// Output: [1,2,4]
+console.log(removeZeroSumSublists(head1));
