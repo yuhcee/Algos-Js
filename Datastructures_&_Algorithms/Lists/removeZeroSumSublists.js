@@ -25,4 +25,30 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const removeZeroSumSublists = (head) => {};
+const removeZeroSumSublists = (head) => {
+    let dummy = new ListNode(0);
+    dummy.next = head;
+    let map = new Map();
+    let sum = 0;
+    map.set(0, dummy);
+
+    while (head) {
+        sum += head.val;
+        if (map.has(sum)) {
+            let prev = map.get(sum);
+            let temp = prev.next;
+            let currSum = sum;
+            while (temp !== head) {
+                currSum += temp.val;
+                map.delete(currSum);
+                temp = temp.next;
+            }
+            prev.next = head.next;
+        } else {
+            map.set(sum, head);
+        }
+        head = head.next;
+    }
+
+    return dummy.next;
+};
