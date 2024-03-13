@@ -61,3 +61,7 @@ console.log(removeZeroSumSublists(head));
 const head1 = [1, 2, 3, -3, 4];
 // Output: [1,2,4]
 console.log(removeZeroSumSublists(head1));
+
+const head2 = [1, 2, 3, -3, -2];
+// Output: [1]
+console.log(removeZeroSumSublists(head2));
