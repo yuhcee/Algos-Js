@@ -52,3 +52,8 @@ const removeZeroSumSublists = (head) => {
 
     return dummy.next;
 };
+
+const head = [1, 2, -3, 3, 1];
+// Output: [3,1]
+// Note: The answer [1,2,1] would also be accepted.
+console.log(removeZeroSumSublists(head));
