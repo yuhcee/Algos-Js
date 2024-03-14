@@ -49,3 +49,7 @@ const productExceptSelf = (nums) => {
 const nums = [1, 2, 3, 4];
 // Output: [24,12,8,6]
 console.log(productExceptSelf(nums));
+
+const nums1 = [-1, 1, 0, -3, 3];
+// Output: [0,0,9,0,0]
+console.log(productExceptSelf(nums1));
