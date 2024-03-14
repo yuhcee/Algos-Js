@@ -42,3 +42,8 @@ const nums = [1, 0, 1, 0, 1],
 [1,0,1,0,1]
 [1,0,1,0,1] */
 console.log(numSubarraysWithSum(nums, goal));
+
+const nums1 = [0, 0, 0, 0, 0],
+    goal1 = 0;
+// Output: 15
+console.log(numSubarraysWithSum(nums1, goal1));
