@@ -6,6 +6,12 @@
  *
  * A **subarray** is a contiguous part of the array.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 3 * 104`
+ * - `nums[i]` is either `0` or `1`.
+ * - `0 <= goal <= nums.length`
+ *
  * @param {number[]} nums
  * @param {number} goal
  * @return {number}
