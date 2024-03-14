@@ -16,4 +16,19 @@
  * @param {number} goal
  * @return {number}
  */
-const numSubarraysWithSum = (nums, goal) => {};
+const numSubarraysWithSum = (nums, goal) => {
+    let count = 0;
+    let prefixSum = 0;
+    let prefixSumCount = new Map();
+    prefixSumCount.set(0, 1);
+
+    for (let num of nums) {
+        prefixSum += num;
+        if (prefixSumCount.has(prefixSum - goal)) {
+            count += prefixSumCount.get(prefixSum - goal);
+        }
+        prefixSumCount.set(prefixSum, (prefixSumCount.get(prefixSum) || 0) + 1);
+    }
+
+    return count;
+};
