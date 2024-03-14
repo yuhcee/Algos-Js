@@ -32,3 +32,13 @@ const numSubarraysWithSum = (nums, goal) => {
 
     return count;
 };
+
+const nums = [1, 0, 1, 0, 1],
+    goal = 2;
+// Output: 4
+/* Explanation: The 4 subarrays are bolded and underlined below:
+[1,0,1,0,1]
+[1,0,1,0,1]
+[1,0,1,0,1]
+[1,0,1,0,1] */
+console.log(numSubarraysWithSum(nums, goal));
