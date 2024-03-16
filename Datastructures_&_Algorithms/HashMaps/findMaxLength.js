@@ -30,3 +30,8 @@ const findMaxLength = function (nums) {
 
     return maxLen;
 };
+
+const nums = [0, 1];
+// Output: 2
+// Explanation: [0, 1] is the longest contiguous subarray with an equal number of 0 and 1.
+console.log(findMaxLength(nums));
