@@ -53,3 +53,11 @@ const insert = (intervals, newInterval) => {
 
     return result;
 };
+
+const intervals = [
+        [1, 3],
+        [6, 9],
+    ],
+    newInterval = [2, 5];
+// Output: [[1,5],[6,9]]
+console.log(insert(intervals, newInterval));
