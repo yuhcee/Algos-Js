@@ -28,4 +28,28 @@
  * @param {number[]} newInterval
  * @return {number[][]}
  */
-const insert = (intervals, newInterval) => {};
+const insert = (intervals, newInterval) => {
+    let result = [];
+    let inserted = false;
+
+    for (let currInterval of intervals) {
+        if (currInterval[1] < newInterval[0]) {
+            result.push(currInterval);
+        } else if (currInterval[0] > newInterval[1]) {
+            if (!inserted) {
+                result.push(newInterval);
+                inserted = true;
+            }
+            result.push(currInterval);
+        } else {
+            newInterval[0] = Math.min(newInterval[0], currInterval[0]);
+            newInterval[1] = Math.max(newInterval[1], currInterval[1]);
+        }
+    }
+
+    if (!inserted) {
+        result.push(newInterval);
+    }
+
+    return result;
+};
