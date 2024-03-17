@@ -15,6 +15,15 @@
  * **Note** that you don't need to modify `intervals` in-place. You can make
  * a new array and return it.
  *
+ * **Constraints:**
+ *
+ * - `0 <= intervals.length <= 104`
+ * - `intervals[i].length == 2`
+ * - `0 <= starti <= endi <= 105`
+ * - `intervals` is sorted by `starti` in **ascending** order.
+ * - `newInterval.length == 2`
+ * - `0 <= start <= end <= 105`
+ *
  * @param {number[][]} intervals
  * @param {number[]} newInterval
  * @return {number[][]}
