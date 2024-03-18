@@ -65,6 +65,7 @@ const points1 = [
     [5, 6],
     [7, 8],
 ];
+
 // Output: 4
 // Explanation: One arrow needs to be shot for each balloon for a total of 4 arrows.
 console.log(findMinArrowShots(points1));
