@@ -12,8 +12,8 @@
  * arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its
  * path.
  *
- * Given the array `points`, return *the **minimum** number of arrows that
- * must be shot to burst all balloons*.
+ * Given the array `points`, return *the **minimum** number of arrows that must be shot to burst all 
+ * balloons*.
  *
  * **Constraints:**
  *
