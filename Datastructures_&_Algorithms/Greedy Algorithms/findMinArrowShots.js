@@ -76,6 +76,7 @@ const points2 = [
     [3, 4],
     [4, 5],
 ];
+
 // Output: 2
 /* Explanation: The balloons can be burst by 2 arrows:
 - Shoot an arrow at x = 2, bursting the balloons [1,2] and [2,3].
