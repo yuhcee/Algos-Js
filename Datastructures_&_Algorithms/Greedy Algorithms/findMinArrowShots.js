@@ -12,7 +12,7 @@
  * arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its
  * path.
  *
- * Given the array `points`, return *the **minimum** number of arrows that must be shot to burst all 
+ * Given the array `points`, return *the **minimum** number of arrows that must be shot to burst all
  * balloons*.
  *
  * **Constraints:**
@@ -25,27 +25,25 @@
  * @return {number}
  */
 const findMinArrowShots = function (points) {
-    if (!points) return 0;
+    if (points.length === 0) return 0;
 
-    // Sort the balloons by their starting x-coordinates
-    points.sort((a, b) => a[0] - b[0]);
+    // Sort the balloons based on their end points
+    points.sort((a, b) => a[1] - b[1]);
 
-    let end = points[0][1];
-    let arrowCount = 1;
+    let arrows = 1;
+    let prevEnd = points[0][1];
 
-    // Keep track of the ending x-coordinate of the current balloon
-    for (let i = 0; i < points.length; i++) {
-        if (points[i][0] <= end) {
-            // The next balloon starts before the ending x-coordinate of the current balloon, so we  update the ending x-coordinate to the minimum of the two
-            end = Math.min(end, points[i][1]);
-        } else {
-            // The next balloon starts after the ending x-coordinate of the current balloon, so we need to shoot a separate arrow for it
-            end = points[i][1];
-            arrowCount += 1;
+    // Iterate through each balloon
+    for (let i = 1; i < points.length; i++) {
+        // If the current balloon's start point is greater than the current end point of the arrow,
+        // it means we need to shoot a new arrow to burst it
+        if (points[i][0] > prevEnd) {
+            arrows++;
+            prevEnd = points[i][1];
         }
     }
 
-    return arrowCount;
+    return arrows;
 };
 
 const points = [
