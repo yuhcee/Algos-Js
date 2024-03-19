@@ -42,3 +42,10 @@ const tasks = ['A', 'A', 'A', 'B', 'B', 'B'],
 /* Explanation: A possible sequence is: A -> B -> idle -> A -> B -> idle -> A -> B.
 After completing task A, you must wait two cycles before doing A again. The same applies to task B. In the 3rd interval, neither A nor B can be done, so you idle. By the 4th cycle, you can do A again as 2 intervals have passed. */
 console.log(leastInterval(tasks, n));
+
+const tasks1 = ['A', 'C', 'A', 'B', 'D', 'B'],
+    n1 = 1;
+// Output: 6
+/* Explanation: A possible sequence is: A -> B -> C -> D -> A -> B.
+With a cooling interval of 1, you can repeat a task after just one other task. */
+console.log(leastInterval(tasks1, n1));
