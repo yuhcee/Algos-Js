@@ -18,4 +18,20 @@
  * @param {number} n
  * @return {number}
  */
-const leastInterval = (tasks, n) => {};
+const leastInterval = (tasks, n) => {
+    // Step 1: Create a frequency map
+    const frequencyMap = {};
+    for (let task of tasks) {
+        frequencyMap[task] = (frequencyMap[task] || 0) + 1;
+    }
+
+    // Step 2: Find the task with the maximum frequency
+    const maxFreq = Math.max(...Object.values(frequencyMap));
+
+    // Step 3: Calculate the number of intervals required
+    let numOfMaxFreqTasks = Object.values(frequencyMap).filter((freq) => freq === maxFreq).length;
+    let intervalsWithoutCooling = (maxFreq - 1) * (n + 1) + numOfMaxFreqTasks;
+
+    // Step 4: Compare with the length of tasks array
+    return Math.max(intervalsWithoutCooling, tasks.length);
+};
