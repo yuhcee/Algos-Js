@@ -35,3 +35,10 @@ const leastInterval = (tasks, n) => {
     // Step 4: Compare with the length of tasks array
     return Math.max(intervalsWithoutCooling, tasks.length);
 };
+
+const tasks = ['A', 'A', 'A', 'B', 'B', 'B'],
+    n = 2;
+// Output: 8
+/* Explanation: A possible sequence is: A -> B -> idle -> A -> B -> idle -> A -> B.
+After completing task A, you must wait two cycles before doing A again. The same applies to task B. In the 3rd interval, neither A nor B can be done, so you idle. By the 4th cycle, you can do A again as 2 intervals have passed. */
+console.log(leastInterval(tasks, n));
