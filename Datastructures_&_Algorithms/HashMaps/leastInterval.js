@@ -49,3 +49,10 @@ const tasks1 = ['A', 'C', 'A', 'B', 'D', 'B'],
 /* Explanation: A possible sequence is: A -> B -> C -> D -> A -> B.
 With a cooling interval of 1, you can repeat a task after just one other task. */
 console.log(leastInterval(tasks1, n1));
+
+const tasks2 = ['A', 'A', 'A', 'B', 'B', 'B'],
+    n2 = 3;
+// Output: 10
+/* Explanation: A possible sequence is: A -> B -> idle -> idle -> A -> B -> idle -> idle -> A -> B.
+There are only two types of tasks, A and B, which need to be separated by 3 intervals. This leads to idling twice between repetitions of these tasks. */
+console.log(leastInterval(tasks2, n2));
