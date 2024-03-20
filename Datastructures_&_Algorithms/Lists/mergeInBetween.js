@@ -28,4 +28,41 @@
  * @param {ListNode} list2
  * @return {ListNode}
  */
-const mergeInBetween = (list1, a, b, list2) => {};
+const mergeInBetween = (list1, a, b, list2) => {
+    let current = list1;
+    let count = 0;
+    let nodeBeforeA = null;
+    let nodeAfterB = null;
+
+    // Find the node before position a
+    while (current !== null && count < a - 1) {
+        current = current.next;
+        count++;
+    }
+    nodeBeforeA = current;
+
+    // Find the node after position b
+    while (current !== null && count < b + 1) {
+        current = current.next;
+        count++;
+    }
+    nodeAfterB = current;
+
+    // Link nodeBeforeA to list2
+    if (nodeBeforeA !== null) {
+        nodeBeforeA.next = list2;
+    } else {
+        list1 = list2;
+    }
+
+    // Traverse list2 to find its last node
+    current = list2;
+    while (current.next !== null) {
+        current = current.next;
+    }
+
+    // Link the last node of list2 to nodeAfterB
+    current.next = nodeAfterB;
+
+    return list1;
+};
