@@ -74,3 +74,11 @@ const list1 = [10, 1, 13, 6, 9, 5],
 // Output: [10,1,13,1000000,1000001,1000002,5]
 // Explanation: We remove the nodes 3 and 4 and put the entire list2 in their place. The blue edges and nodes in the above figure indicate the result.
 console.log(mergeInBetween(list1, a, b, list2));
+
+const list11 = [0, 1, 2, 3, 4, 5, 6],
+    a1 = 2,
+    b1 = 5,
+    list21 = [1000000, 1000001, 1000002, 1000003, 1000004];
+// Output: [0,1,1000000,1000001,1000002,1000003,1000004,6]
+// Explanation: The blue edges and nodes in the above figure indicate the result.
+console.log(mergeInBetween(list11, a1, b1, list21));
