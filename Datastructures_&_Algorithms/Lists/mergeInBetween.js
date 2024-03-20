@@ -16,6 +16,12 @@
  *
  * *Build the result list and return its head.*
  *
+ * **Constraints:**
+ *
+ * - `3 <= list1.length <= 104`
+ * - `1 <= a <= b < list1.length - 1`
+ * - `1 <= list2.length <= 104`
+ *
  * @param {ListNode} list1
  * @param {number} a
  * @param {number} b
