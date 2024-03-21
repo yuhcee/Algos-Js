@@ -32,3 +32,7 @@ const reverseList = function (head) {
 
     return prev;
 };
+
+const head = [1, 2, 3, 4, 5];
+// Output: [5,4,3,2,1]
+console.log(reverseList(head));
