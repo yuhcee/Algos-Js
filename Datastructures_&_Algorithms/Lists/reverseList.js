@@ -40,3 +40,7 @@ console.log(reverseList(head));
 const head1 = [1, 2];
 // Output: [2,1]
 console.log(reverseList(head1));
+
+const head2 = [];
+// Output: []
+console.log(reverseList(head2));
