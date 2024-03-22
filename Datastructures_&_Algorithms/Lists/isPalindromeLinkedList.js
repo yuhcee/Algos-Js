@@ -19,7 +19,7 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-var isPalindromeLinkedList = function (head) {
+const isPalindromeLinkedList = (head) => {
     // init an empty array to store values
     const vals = [];
 
