@@ -43,3 +43,7 @@ console.log(isPalindromeLinkedList(head));
 const head2 = [1, 2];
 // Output: false
 console.log(isPalindromeLinkedList(head2));
+
+const head3 = [1, 2, 2, 1, 2];
+// Output: false
+console.log(isPalindromeLinkedList(head3));
