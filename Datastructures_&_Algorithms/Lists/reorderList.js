@@ -64,3 +64,7 @@ const reorderList = function (head) {
         second = secondNext;
     }
 };
+
+const head = [1, 2, 3, 4];
+// Output: [1,4,2,3]
+console.log(reorderList(head));
