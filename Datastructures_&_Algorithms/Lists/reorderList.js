@@ -68,3 +68,7 @@ const reorderList = function (head) {
 const head = [1, 2, 3, 4];
 // Output: [1,4,2,3]
 console.log(reorderList(head));
+
+const head1 = [1, 2, 3, 4, 5];
+// Output: [1,5,2,4,3]
+console.log(reorderList(head1));
