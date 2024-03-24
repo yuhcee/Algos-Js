@@ -40,7 +40,7 @@ const findDuplicate = function (nums) {
         hare = nums[hare];
     }
 
-    return hare;
+    return tortoise;
 };
 
 const nums = [1, 3, 4, 2, 2];
