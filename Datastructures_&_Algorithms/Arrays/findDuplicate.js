@@ -55,3 +55,6 @@ const nums2 = [2, 1, 2];
 // Output: 2
 console.log(findDuplicate(nums2));
 
+const nums3 = [1, 1];
+// Output: 1
+console.log(findDuplicate(nums3));
