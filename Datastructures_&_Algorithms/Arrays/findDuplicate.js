@@ -50,3 +50,8 @@ console.log(findDuplicate(nums));
 const nums1 = [3, 1, 3, 4, 2];
 // Output: 3
 console.log(findDuplicate(nums1));
+
+const nums2 = [2, 1, 2];
+// Output: 2
+console.log(findDuplicate(nums2));
+
