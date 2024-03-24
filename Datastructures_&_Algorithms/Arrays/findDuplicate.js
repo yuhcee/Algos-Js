@@ -20,6 +20,7 @@
  *
  * @param {number[]} nums
  * @return {number}
+ *
  */
 const findDuplicate = function (nums) {
     // Phase 1: Detecting the loop using Floyd's Tortoise and Hare
