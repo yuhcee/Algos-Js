@@ -18,4 +18,15 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-const findDuplicates = function (nums) {};
+const findDuplicates = function (nums) {
+    const duplicates = [];
+    for (let num of nums) {
+        const index = Math.abs(num) - 1;
+        if (nums[index] < 0) {
+            duplicates.push(index + 1);
+        } else {
+            nums[index] *= -1;
+        }
+    }
+    return duplicates;
+};
