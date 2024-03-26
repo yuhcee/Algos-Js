@@ -45,3 +45,8 @@ const nums1 = [3, 4, -1, 1];
 // Output: 2
 // Explanation: 1 is in the array but 2 is missing.
 console.log(firstMissingPositive(nums1));
+
+const nums2 = [7, 8, 9, 11, 12];
+// Output: 1
+// Explanation: The smallest positive integer 1 is missing.
+console.log(firstMissingPositive(nums2));
