@@ -15,7 +15,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const firstMissingPositive = function (nums) {
+const firstMissingPositive = (nums) => {
     // Perform cyclic sort
     let i = 0;
     while (i < nums.length) {
@@ -35,3 +35,8 @@ const firstMissingPositive = function (nums) {
 
     return nums.length + 1;
 };
+
+const nums = [1, 2, 0];
+// Output: 3
+// Explanation: The numbers in the range [1,2] are all in the array.
+console.log(firstMissingPositive(nums));
