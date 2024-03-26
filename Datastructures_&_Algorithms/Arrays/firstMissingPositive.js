@@ -40,3 +40,8 @@ const nums = [1, 2, 0];
 // Output: 3
 // Explanation: The numbers in the range [1,2] are all in the array.
 console.log(firstMissingPositive(nums));
+
+const nums1 = [3, 4, -1, 1];
+// Output: 2
+// Explanation: 1 is in the array but 2 is missing.
+console.log(firstMissingPositive(nums1));
