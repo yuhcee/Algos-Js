@@ -41,3 +41,8 @@ const nums = [10, 5, 2, 6],
 [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]
 Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k. */
 console.log(numSubarrayProductLessThanK(nums, k));
+
+const nums1 = [1, 2, 3],
+    k1 = 0;
+// Output: 0
+console.log(numSubarrayProductLessThanK(nums1, k1));
