@@ -55,3 +55,10 @@ const nums1 = [1, 2, 1, 2, 1, 2, 1, 2],
 /* Explanation: The longest possible good subarray is [1,2] since the values 1 and 2 occur at most once in this subarray. Note that the subarray [2,1] is also good.
 It can be shown that there are no good subarrays with length more than 2. */
 console.log(maxSubarrayLength(nums1, k1));
+
+const nums2 = [5, 5, 5, 5, 5, 5, 5],
+    k2 = 4;
+// Output: 4
+/* Explanation: The longest possible good subarray is [5,5,5,5] since the value 5 occurs 4 times in this subarray.
+It can be shown that there are no good subarrays with length more than 4. */
+console.log(maxSubarrayLength(nums2, k2));
