@@ -46,3 +46,9 @@ const nums = [1, 3, 2, 3, 3],
 // Output: 6
 // Explanation: The subarrays that contain the element 3 at least 2 times are: [1,3,2,3], [1,3,2,3,3], [3,2,3], [3,2,3,3], [2,3,3] and [3,3].
 console.log(countSubarraysMaxK(nums, k));
+
+const nums1 = [1, 4, 2, 1],
+    k1 = 3;
+// Output: 0
+// Explanation: No subarray contains the element 4 at least 3 times.
+console.log(countSubarraysMaxK(nums1, k1));
