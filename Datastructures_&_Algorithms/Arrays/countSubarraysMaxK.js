@@ -18,4 +18,25 @@
  * @param {number} k
  * @return {number}
  */
-const countSubarraysMaxK = (nums, k) => {};
+const countSubarraysMaxK = (nums, k) => {
+    let maxNum = Math.max(...nums);
+    let count = 0;
+    let n = nums.length;
+
+    let maxIndices = [-1]; // Initialize with -1 to handle edge case
+    for (let i = 0; i < n; i++) {
+        if (nums[i] === maxNum) {
+            maxIndices.push(i);
+        }
+    }
+
+    let indicesSize = maxIndices.length;
+
+    for (let i = 1; i <= indicesSize - k; i++) {
+        let left = maxIndices[i] - maxIndices[i - 1] - 1;
+        let right = n - 1 - maxIndices[i + k - 1];
+        count += (left + 1) * (right + 1);
+    }
+
+    return count;
+};
