@@ -20,7 +20,9 @@
  * @param {number} k
  * @return {number}
  */
-const subarraysWithKDistinct = (nums, k) => {};
+const subarraysWithKDistinct = (nums, k) => {
+    return atMostK(nums, k) - atMostK(nums, k - 1);
+};
 
 const atMostK = function (nums, k) {
     let freq = new Map();
