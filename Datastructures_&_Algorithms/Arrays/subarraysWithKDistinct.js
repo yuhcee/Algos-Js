@@ -49,3 +49,9 @@ const nums = [1, 2, 1, 2, 3],
 // Output: 7
 // Explanation: Subarrays formed with exactly 2 different integers: [1,2], [2,1], [1,2], [2,3], [1,2,1], [2,1,2], [1,2,1,2]
 console.log(subarraysWithKDistinct(nums, k));
+
+const nums1 = [1, 2, 1, 3, 4],
+    k1 = 3;
+// Output: 3
+// Explanation: Subarrays formed with exactly 3 different integers: [1,2,1,3], [2,1,3], [1,3,4].
+console.log(subarraysWithKDistinct(nums1, k1));
