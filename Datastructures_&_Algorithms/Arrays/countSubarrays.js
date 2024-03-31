@@ -3,7 +3,7 @@
  *
  * You are given an integer array nums and two integers minK and maxK.
  *
- * A **fixed-bound** subarray of `nums` is a subarray that satisfies the 
+ * A **fixed-bound** subarray of `nums` is a subarray that satisfies the
  * following conditions:
  *
  * - The **minimum** value in the subarray is equal to `minK`.
@@ -17,14 +17,14 @@
  *
  * - `2 <= nums.length <= 105`
  * - `1 <= nums[i], minK, maxK <= 106`
- * 
+ *
  *
  * @param {number[]} nums
  * @param {number} minK
  * @param {number} maxK
  * @return {number}
  */
-const countSubarrays = function (nums, minK, maxK) {
+const countSubarrays = (nums, minK, maxK) => {
     // left : Index of value out of range
     // min : Index of minimum value in range
     // max : Index of maximum value in range
