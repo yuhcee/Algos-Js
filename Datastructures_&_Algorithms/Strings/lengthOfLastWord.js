@@ -35,3 +35,8 @@ const lengthOfLastWord = function (s) {
     // Return the length of the last word
     return length;
 };
+
+const s = 'Hello World';
+// Output: 5
+// Explanation: The last word is "World" with length 5.
+console.log(lengthOfLastWord(s));
