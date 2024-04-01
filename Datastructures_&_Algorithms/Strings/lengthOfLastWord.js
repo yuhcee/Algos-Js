@@ -45,3 +45,8 @@ const s1 = '   fly me   to   the moon  ';
 // Output: 4
 // Explanation: The last word is "moon" with length 4.
 console.log(lengthOfLastWord(s1));
+
+const s2 = 'luffy is still joyboy';
+// Output: 6
+// Explanation: The last word is "joyboy" with length 6.
+console.log(lengthOfLastWord(s2));
