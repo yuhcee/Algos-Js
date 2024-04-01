@@ -15,4 +15,23 @@
  * @param {string} s
  * @return {number}
  */
-const lengthOfLastWord = function (s) {};
+const lengthOfLastWord = function (s) {
+    // Trim any leading or trailing spaces
+    s = s.trim();
+
+    // Initialize a variable to store the length of the last word
+    let length = 0;
+
+    // Iterate through the string from right to left
+    for (let i = s.length - 1; i >= 0; i--) {
+        // Break the loop when a space is encountered after finding the last word
+        if (s[i] === ' ') {
+            break;
+        }
+        // Increment the length for each character of the last word
+        length++;
+    }
+
+    // Return the length of the last word
+    return length;
+};
