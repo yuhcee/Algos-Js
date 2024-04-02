@@ -10,6 +10,12 @@
  * preserving the order of characters. No two characters may map to the same
  * character, but a character may map to itself.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 5 * 104`
+ * - `t.length == s.length`
+ * - `s` and `t` consist of any valid ascii character.
+ * 
  * @param {string} s
  * @param {string} t
  * @return {boolean}
