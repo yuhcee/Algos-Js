@@ -38,3 +38,8 @@ const isIsomorphic = (s, t) => {
 
     return true;
 };
+
+const s = 'egg',
+    t = 'add';
+// Output: true
+console.log(isIsomorphic(s, t));
