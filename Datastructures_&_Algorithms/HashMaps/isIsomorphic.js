@@ -43,3 +43,8 @@ const s = 'egg',
     t = 'add';
 // Output: true
 console.log(isIsomorphic(s, t));
+
+const s1 = 'foo',
+    t1 = 'bar';
+// Output: false
+console.log(isIsomorphic(s1, t1));
