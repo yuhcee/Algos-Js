@@ -15,9 +15,26 @@
  * - `1 <= s.length <= 5 * 104`
  * - `t.length == s.length`
  * - `s` and `t` consist of any valid ascii character.
- * 
+ *
  * @param {string} s
  * @param {string} t
  * @return {boolean}
  */
-const isIsomorphic = (s, t) => {};
+const isIsomorphic = (s, t) => {
+    const sMap = new Map();
+    const tMap = new Map();
+
+    for (let i = 0; i < s.length; i++) {
+        const sChar = s[i];
+        const tChar = t[i];
+
+        if ((sMap.has(sChar) && sMap.get(sChar) !== tChar) || (tMap.has(tChar) && tMap.get(tChar) !== sChar)) {
+            return false;
+        }
+
+        sMap.set(sChar, tChar);
+        tMap.set(tChar, sChar);
+    }
+
+    return true;
+};
