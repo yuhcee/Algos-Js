@@ -48,3 +48,8 @@ const s1 = 'foo',
     t1 = 'bar';
 // Output: false
 console.log(isIsomorphic(s1, t1));
+
+const s2 = 'paper',
+    t2 = 'title';
+// Output: true
+console.log(isIsomorphic(s2, t2));
