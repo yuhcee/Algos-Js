@@ -62,6 +62,8 @@ const board = [
         ['A', 'D', 'E', 'E'],
     ],
     word = 'ABCB'; // false
+console.log(exist(board, word));
+
 
 const board2 = [
         ['A', 'B', 'C', 'E'],
@@ -69,6 +71,7 @@ const board2 = [
         ['A', 'D', 'E', 'E'],
     ],
     word2 = 'ABCCED'; // true
-
-console.log(exist(board, word));
 console.log(exist(board2, word2));
+
+
+ 
