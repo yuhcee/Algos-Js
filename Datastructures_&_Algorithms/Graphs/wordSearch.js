@@ -15,7 +15,7 @@
  * - `1 <= m, n <= 6`
  * - `1 <= word.length <= 15`
  * - `board` and `word` consists of only lowercase and uppercase English letters.
- * 
+ *
  */
 const dirs = [
     [0, 1],
@@ -23,7 +23,7 @@ const dirs = [
     [0, -1],
     [-1, 0],
 ];
-const exist = function (board, word) {
+const exist = (board, word) => {
     for (let r = 0; r < board.length; r += 1) {
         for (let c = 0; c < board[r].length; c += 1) {
             if (explore(board, r, c, word)) return true;
