@@ -20,32 +20,27 @@
  * **Notice** that an empty string is also good.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= s.length <= 100`
  * - `s` contains only lower and upper case English letters.
  *
  * @param {string} s
  * @return {string}
  */
-const makeGood = function (s) {
-    let str = '';
-    for (let i = 0; i < s.length; i += 1) {
-        if (!str) {
-            str = s[i];
-            continue;
-        }
+const makeGood = (s) => {
+    const stack = [];
 
-        let char = str[str.length - 1];
+    for (let char of s) {
+        const top = stack[stack.length - 1];
 
-        if (char === char.toUpperCase()) {
-            if (s[i] === char.toLowerCase()) str = str.slice(0, str.length - 1);
-            else str += s[i];
+        if (top && Math.abs(top.charCodeAt(0) - char.charCodeAt(0)) === 32) {
+            stack.pop();
         } else {
-            if (s[i] === char.toUpperCase()) str = str.slice(0, str.length - 1);
-            else str += s[i];
+            stack.push(char);
         }
     }
-    return str;
+
+    return stack.join('');
 };
 
 const s = 'leEeetcode';
