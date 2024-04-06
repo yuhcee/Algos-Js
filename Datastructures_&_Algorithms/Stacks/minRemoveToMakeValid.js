@@ -44,3 +44,8 @@ const minRemoveToMakeValid = function (s) {
 
     return result.filter((char) => char !== '').join('');
 };
+
+const s = 'lee(t(c)o)de)';
+// Output: "lee(t(c)o)de"
+// Explanation: "lee(t(co)de)" , "lee(t(c)ode)" would also be accepted.
+console.log(minRemoveToMakeValid(s));
