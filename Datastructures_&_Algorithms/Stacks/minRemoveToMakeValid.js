@@ -14,6 +14,11 @@
  * are valid strings, or
  * - It can be written as `(A)`, where `A` is a valid string.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 105`
+ * - `s[i] is either'(' , ')', or lowercase English letter.`
+ *
  * @param {string} s
  * @return {string}
  */
