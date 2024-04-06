@@ -49,3 +49,7 @@ const s = 'lee(t(c)o)de)';
 // Output: "lee(t(c)o)de"
 // Explanation: "lee(t(co)de)" , "lee(t(c)ode)" would also be accepted.
 console.log(minRemoveToMakeValid(s));
+
+const s1 = 'a)b(c)d';
+// Output: "ab(c)d"
+console.log(minRemoveToMakeValid(s1));
