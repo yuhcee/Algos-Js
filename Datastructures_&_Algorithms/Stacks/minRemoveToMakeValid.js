@@ -22,4 +22,25 @@
  * @param {string} s
  * @return {string}
  */
-const minRemoveToMakeValid = function (s) {};
+const minRemoveToMakeValid = function (s) {
+    const stack = [];
+    const result = s.split('');
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '(') {
+            stack.push(i);
+        } else if (s[i] === ')') {
+            if (stack.length === 0) {
+                result[i] = ''; // Mark unmatched closing parenthesis for removal
+            } else {
+                stack.pop(); // Match closing parenthesis with opening parenthesis
+            }
+        }
+    }
+
+    while (stack.length > 0) {
+        result[stack.pop()] = ''; // Mark unmatched opening parenthesis for removal
+    }
+
+    return result.filter((char) => char !== '').join('');
+};
