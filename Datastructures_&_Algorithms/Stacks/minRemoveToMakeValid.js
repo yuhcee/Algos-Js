@@ -53,3 +53,8 @@ console.log(minRemoveToMakeValid(s));
 const s1 = 'a)b(c)d';
 // Output: "ab(c)d"
 console.log(minRemoveToMakeValid(s1));
+
+const s2 = '))((';
+// Output: ""
+// Explanation: An empty string is also valid.
+console.log(minRemoveToMakeValid(s2));
