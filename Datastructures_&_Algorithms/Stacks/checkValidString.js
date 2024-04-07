@@ -15,6 +15,11 @@
  * - `'*'` could be treated as a single right parenthesis `')'` or a single left
  * parenthesis `'('` or an empty string `""`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 100`
+ * - `s[i]` is `'('`, `')'` or `'*'`.
+ *
  * @param {string} s
  * @return {boolean}
  */
