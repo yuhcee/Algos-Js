@@ -50,3 +50,7 @@ const checkValidString = function (s) {
 const s = '()';
 // Output: true
 console.log(checkValidString(s));
+
+const s1 = '(*)';
+// Output: true
+console.log(checkValidString(s1));
