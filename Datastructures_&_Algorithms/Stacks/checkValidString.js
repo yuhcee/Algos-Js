@@ -23,4 +23,26 @@
  * @param {string} s
  * @return {boolean}
  */
-const checkValidString = function (s) {};
+const checkValidString = function (s) {
+    let minOpen = 0;
+    let maxOpen = 0;
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '(') {
+            minOpen++;
+            maxOpen++;
+        } else if (s[i] === ')') {
+            minOpen = Math.max(0, minOpen - 1);
+            maxOpen--;
+        } else {
+            // '*'
+            minOpen = Math.max(0, minOpen - 1); // Treat '*' as ')'
+            maxOpen++; // Treat '*' as '('
+        }
+
+        // Ensure that maxOpen doesn't go below 0
+        if (maxOpen < 0) return false;
+    }
+
+    return minOpen === 0;
+};
