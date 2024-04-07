@@ -46,3 +46,7 @@ const checkValidString = function (s) {
 
     return minOpen === 0;
 };
+
+const s = '()';
+// Output: true
+console.log(checkValidString(s));
