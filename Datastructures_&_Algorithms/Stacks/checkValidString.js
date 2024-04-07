@@ -54,3 +54,7 @@ console.log(checkValidString(s));
 const s1 = '(*)';
 // Output: true
 console.log(checkValidString(s1));
+
+const s2 = '(*))';
+// Output: true
+console.log(checkValidString(s2));
