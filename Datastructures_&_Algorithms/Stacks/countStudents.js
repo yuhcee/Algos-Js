@@ -67,3 +67,8 @@ const students = [1, 1, 0, 0],
 - Front student takes the top sandwich and leaves the line making students = [] and sandwiches = [].
 Hence all students are able to eat. */
 console.log(countStudents(students, sandwiches));
+
+const students1 = [1, 1, 1, 0, 0, 1],
+    sandwiches1 = [1, 0, 0, 0, 1, 1];
+// Output: 3
+console.log(countStudents(students1, sandwiches1));
