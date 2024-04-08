@@ -24,14 +24,31 @@
  * Return *the number of students that are unable to eat.*
  *
  * **Constraints:**
- * 
+ *
  * - 1 <= students.length, sandwiches.length <= 100`
  * - `students.length == sandwiches.length`
  * - `sandwiches[i]` is `0` or `1`.
  * - `students[i]` is `0` or `1`.
- * 
+ *
  * @param {number[]} students
  * @param {number[]} sandwiches
  * @return {number}
  */
-const countStudents = function (students, sandwiches) {};
+const countStudents = function (students, sandwiches) {
+    const count = [0, 0]; // Count of students who prefer circular and square sandwiches
+    const n = students.length;
+
+    for (const student of students) {
+        count[student]++;
+    }
+
+    for (const sandwich of sandwiches) {
+        if (count[sandwich] === 0) {
+            break; // No more students can take this type of sandwich
+        }
+
+        count[sandwich]--;
+    }
+
+    return count[0] + count[1];
+};
