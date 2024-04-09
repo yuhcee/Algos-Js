@@ -49,3 +49,12 @@ const tickets = [2, 3, 2],
 - In the second pass, everyone in the line buys a ticket and the line becomes [0, 1, 0].
 The person at position 2 has successfully bought 2 tickets and it took 3 + 3 = 6 seconds. */
 console.log(timeRequiredToBuy(tickets, k));
+
+const tickets1 = [5, 1, 1, 1],
+    k1 = 0;
+// Output: 8
+/* Explanation:
+- In the first pass, everyone in the line buys a ticket and the line becomes [4, 0, 0, 0].
+- In the next 4 passes, only the person in position 0 is buying tickets.
+The person at position 0 has successfully bought 5 tickets and it took 4 + 1 + 1 + 1 + 1 = 8 seconds. */
+console.log(timeRequiredToBuy(tickets1, k1));
