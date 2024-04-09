@@ -16,6 +16,13 @@
  * Return *the time taken for the person at position `k` **(0-indexed)** to
  * finish buying tickets.*
  *
+ * **Constraints:**
+ *
+ * - `n == tickets.length`
+ * - `1 <= n <= 100`
+ * - `1 <= tickets[i] <= 100`
+ * - `0 <= k < n`
+ *
  * @param {number[]} tickets
  * @param {number} k
  * @return {number}
