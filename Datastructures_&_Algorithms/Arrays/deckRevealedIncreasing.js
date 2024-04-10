@@ -14,7 +14,11 @@ Return an ordering of the deck that would reveal the cards in increasing order.
 
 Note that the first entry in the answer is considered to be the top of the deck.
 
- * 
+ * **Constraints:**
+1 <= deck.length <= 1000
+1 <= deck[i] <= 106
+All the values of deck are unique.
+
  * @param {number[]} deck
  * @return {number[]}
  */
