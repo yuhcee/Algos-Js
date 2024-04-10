@@ -51,3 +51,7 @@ We reveal 13, and move 17 to the bottom.  The deck is now [17].
 We reveal 17.
 Since all the cards revealed are in increasing order, the answer is correct. */
 console.log(deckRevealedIncreasing(deck));
+
+const deck1 = [1, 1000];
+// Output: [1,1000]
+console.log(deckRevealedIncreasing(deck1));
