@@ -15,4 +15,28 @@
  * @param {number} k
  * @return {string}
  */
-const removeKdigits = function (num, k) {};
+const removeKdigits = function (num, k) {
+    const stack = [];
+
+    for (const digit of num) {
+        while (stack.length && k && stack[stack.length - 1] > digit) {
+            stack.pop();
+            k--;
+        }
+        stack.push(digit);
+    }
+
+    // Handle case where remaining digits to remove
+    while (k--) {
+        stack.pop();
+    }
+
+    // Construct resulting string from stack
+    let result = stack.join('');
+
+    // Remove leading zeros
+    result = result.replace(/^0+/, '');
+
+    // If result is empty, return "0"
+    return result || '0';
+};
