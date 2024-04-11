@@ -46,3 +46,9 @@ const num = '1432219',
 // Output: "1219"
 // Explanation: Remove the three digits 4, 3, and 2 to form the new number 1219 which is the smallest.
 console.log(removeKdigits(num, k));
+
+const num1 = '10200',
+    k1 = 1;
+// Output: "200"
+// Explanation: Remove the leading 1 and the number is 200. Note that the output must not contain leading zeroes.
+console.log(removeKdigits(num1, k1));
