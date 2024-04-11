@@ -52,3 +52,9 @@ const num1 = '10200',
 // Output: "200"
 // Explanation: Remove the leading 1 and the number is 200. Note that the output must not contain leading zeroes.
 console.log(removeKdigits(num1, k1));
+
+const num2 = '10',
+    k2 = 2;
+// Output: "0"
+// Explanation: Remove all the digits from the number and it is left with nothing which is 0.
+console.log(removeKdigits(num2, k2));
