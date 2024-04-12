@@ -15,7 +15,7 @@
  * @return {number}
  *
  */
-const trap = function (height) {
+const trap = (height) => {
     let left = 0,
         right = height.length - 1,
         trappedWater = 0,
