@@ -73,3 +73,7 @@ console.log(maximalRectangle(matrix));
 const matrix1 = [['0']];
 // Output: 0
 console.log(maximalRectangle(matrix1));
+
+const matrix2 = [['1']];
+// Output: 1
+console.log(maximalRectangle(matrix2));
