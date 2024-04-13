@@ -69,3 +69,7 @@ const matrix = [
 // Output: 6
 // Explanation: The maximal rectangle is shown in the above picture.
 console.log(maximalRectangle(matrix));
+
+const matrix1 = [['0']];
+// Output: 0
+console.log(maximalRectangle(matrix1));
