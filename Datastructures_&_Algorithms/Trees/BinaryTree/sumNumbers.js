@@ -21,6 +21,12 @@
  *
  * A **leaf** node is a node with no children.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is in the range `[1, 1000]`.
+ * - `0 <= Node.val <= 9`
+ * - The depth of the tree will not exceed `10`.
+ *
  * @param {TreeNode} root
  * @return {number}
  */
