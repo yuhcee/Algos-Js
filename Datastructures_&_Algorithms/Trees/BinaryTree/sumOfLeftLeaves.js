@@ -22,4 +22,21 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const sumOfLeftLeaves = function (root) {};
+const sumOfLeftLeaves = function (root) {
+    let sum = 0;
+
+    const dfs = (node, isLeft) => {
+        if (!node) return;
+
+        if (!node.left && !node.right && isLeft) {
+            sum += node.val;
+        }
+
+        dfs(node.left, true);
+        dfs(node.right, false);
+    };
+
+    dfs(root, false);
+
+    return sum;
+};
