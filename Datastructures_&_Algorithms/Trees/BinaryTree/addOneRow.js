@@ -29,6 +29,14 @@
  * the new root of the whole original tree, and the original tree is the new
  * root's left subtree.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is in the range `[1, 104]`.
+ * - The depth of the tree is in the range `[1, 104]`.
+ * - `-100 <= Node.val <= 100`
+ * - `-105 <= val <= 105`
+ * - `1 <= depth <= the depth of tree + 1`
+ *
  * @param {TreeNode} root
  * @param {number} val
  * @param {number} depth
