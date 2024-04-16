@@ -42,7 +42,7 @@
  * @param {number} depth
  * @return {TreeNode}
  */
-const addOneRow = function (root, val, depth) {
+const addOneRow = (root, val, depth) => {
     function callDFS(node, dep, dir) {
         if (dep === depth) {
             if (dir === 'L') return new TreeNode(val, node, null);
