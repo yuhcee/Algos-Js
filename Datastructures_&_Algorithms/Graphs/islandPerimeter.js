@@ -43,3 +43,13 @@ const islandPerimeter = function (grid) {
 
     return perimeter;
 };
+
+const grid = [
+    [0, 1, 0, 0],
+    [1, 1, 1, 0],
+    [0, 1, 0, 0],
+    [1, 1, 0, 0],
+];
+// Output: 16
+// Explanation: The perimeter is the 16 yellow stripes in the image above.
+console.log(islandPerimeter(grid));
