@@ -57,3 +57,7 @@ console.log(islandPerimeter(grid));
 const grid1 = [[1]];
 // Output: 4
 console.log(islandPerimeter(grid1));
+
+const grid2 = [[1, 0]];
+// Output: 4
+console.log(islandPerimeter(grid2));
