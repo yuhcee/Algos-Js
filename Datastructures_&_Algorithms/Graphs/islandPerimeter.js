@@ -13,6 +13,14 @@
  * grid is rectangular, width and height don't exceed 100. Determine the
  * perimeter of the island.
  *
+ * **Constraints:**
+ *
+ * - `row == grid.length`
+ * - `col == grid[i].length`
+ * - `1 <= row, col <= 100`
+ * - `grid[i][j] is 0 or 1.`
+ * - There is exactly one island in `grid`.
+ *
  * @param {number[][]} grid
  * @return {number}
  */
