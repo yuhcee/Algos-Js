@@ -32,4 +32,35 @@
  * @param {number[][]} land
  * @return {number[][]}
  */
-const findFarmland = (land) => {};
+const findFarmland = (land) => {
+    const rows = land.length;
+    const cols = land[0].length;
+    const result = [];
+
+    const dfs = (r, c) => {
+        let r2 = r;
+        let c2 = c;
+        while (r2 + 1 < rows && land[r2 + 1][c] === 1) {
+            r2++;
+        }
+        while (c2 + 1 < cols && land[r][c2 + 1] === 1) {
+            c2++;
+        }
+        for (let i = r; i <= r2; i++) {
+            for (let j = c; j <= c2; j++) {
+                land[i][j] = 0; // Mark cell as visited
+            }
+        }
+        result.push([r, c, r2, c2]); // Add current group to result
+    };
+
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            if (land[i][j] === 1) {
+                dfs(i, j); // Start DFS from current cell
+            }
+        }
+    }
+
+    return result;
+};
