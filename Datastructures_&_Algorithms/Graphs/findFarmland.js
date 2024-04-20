@@ -85,3 +85,9 @@ const land1 = [
 /* Explanation:
 The first group has a top left corner at land[0][0] and a bottom right corner at land[1][1]. */
 console.log(findFarmland(land1));
+
+const land2 = [[0]];
+// Output: []
+// Explanation:
+// There are no groups of farmland.
+console.log(findFarmland(land2));
