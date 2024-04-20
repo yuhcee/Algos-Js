@@ -76,3 +76,12 @@ Explanation:land
 The first group has a top left corner at land[0][0] landdd a bottom right corner at land[0][0].
 The second group has a top left corner at land[1][1] and a bottom right corner at land[2][2]. */
 console.log(findFarmland(land));
+
+const land1 = [
+    [1, 1],
+    [1, 1],
+];
+// Output: [[0,0,1,1]]
+/* Explanation:
+The first group has a top left corner at land[0][0] and a bottom right corner at land[1][1]. */
+console.log(findFarmland(land1));
