@@ -33,7 +33,7 @@
  * @return {boolean}
  *
  */
-const validPath = function (n, edges, source, destination) {
+const validPath = (n, edges, source, destination) => {
     // Create an adjacency list to represent the graph
     const graph = new Array(n).fill(null).map(() => []);
     for (const [u, v] of edges) {
