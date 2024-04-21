@@ -13,7 +13,7 @@
  *
  * Given `edges` and the integers `n`, `source`, and `destination`, return
  * *`true` if there is a **valid path** from `source` to `destination`, or
- * `false` otherwise*.
+ * `false` otherwise.*
  *
  * **Constraints:**
  *
@@ -31,8 +31,9 @@
  * @param {number} source
  * @param {number} destination
  * @return {boolean}
+ *
  */
-const validPath = (n, edges, source, destination) => {
+const validPath = function (n, edges, source, destination) {
     // Create an adjacency list to represent the graph
     const graph = new Array(n).fill(null).map(() => []);
     for (const [u, v] of edges) {
