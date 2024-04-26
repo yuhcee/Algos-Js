@@ -17,4 +17,15 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const minFallingPathSum = function (grid) {};
+const minFallingPathSum = function (grid) {
+    const n = grid.length;
+    const dp = [...grid]; // Copy the first row as the initial dp array
+
+    for (let i = 1; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            dp[i][j] += Math.min(...dp[i - 1].filter((_, idx) => idx !== j));
+        }
+    }
+
+    return Math.min(...dp[n - 1]);
+};
