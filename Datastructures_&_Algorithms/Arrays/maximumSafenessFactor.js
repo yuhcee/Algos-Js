@@ -100,3 +100,12 @@ const maximumSafenessFactor = function (grid) {
 
     return low;
 };
+
+const grid = [
+    [1, 0, 0],
+    [0, 0, 0],
+    [0, 0, 1],
+];
+// Output: 0
+// Explanation: All paths from (0, 0) to (n - 1, n - 1) go through the thieves in cells (0, 0) and (n - 1, n - 1).
+console.log(maximumSafenessFactor(grid));
