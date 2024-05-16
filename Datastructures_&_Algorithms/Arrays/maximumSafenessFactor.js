@@ -109,3 +109,14 @@ const grid = [
 // Output: 0
 // Explanation: All paths from (0, 0) to (n - 1, n - 1) go through the thieves in cells (0, 0) and (n - 1, n - 1).
 console.log(maximumSafenessFactor(grid));
+
+const grid1 = [
+    [0, 0, 1],
+    [0, 0, 0],
+    [0, 0, 0],
+];
+// Output: 2
+/* Explanation: The path depicted in the picture above has a safeness factor of 2 since:
+- The closest cell of the path to the thief at cell (0, 2) is cell (0, 0). The distance between them is | 0 - 0 | + | 0 - 2 | = 2.
+It can be shown that there are no other paths with a higher safeness factor. */
+console.log(maximumSafenessFactor(grid1));
