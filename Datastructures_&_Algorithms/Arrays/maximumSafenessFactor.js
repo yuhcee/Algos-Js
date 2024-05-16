@@ -120,3 +120,16 @@ const grid1 = [
 - The closest cell of the path to the thief at cell (0, 2) is cell (0, 0). The distance between them is | 0 - 0 | + | 0 - 2 | = 2.
 It can be shown that there are no other paths with a higher safeness factor. */
 console.log(maximumSafenessFactor(grid1));
+
+const grid2 = [
+    [0, 0, 0, 1],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [1, 0, 0, 0],
+];
+// Output: 2
+/* Explanation: The path depicted in the picture above has a safeness factor of 2 since:
+- The closest cell of the path to the thief at cell (0, 3) is cell (1, 2). The distance between them is | 0 - 1 | + | 3 - 2 | = 2.
+- The closest cell of the path to the thief at cell (3, 0) is cell (3, 2). The distance between them is | 3 - 3 | + | 0 - 2 | = 2.
+It can be shown that there are no other paths with a higher safeness factor. */
+console.log(maximumSafenessFactor(grid2));
