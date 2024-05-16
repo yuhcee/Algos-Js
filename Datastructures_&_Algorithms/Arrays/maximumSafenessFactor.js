@@ -22,6 +22,13 @@
  * The **Manhattan distance** between two cells `(a, b)` and `(x, y)` is equal
  * to `|a - x| + |b - y|`, where `|val|` denotes the absolute value of val.
  *
+ * **Constraints:**
+ *
+ * - `1 <= grid.length == n <= 400`
+ * - `grid[i].length == n`
+ * - `grid[i][j]` is either `0` or `1`.
+ * - There is at least one thief in the `grid`.
+ *
  * @param {number[][]} grid
  * @return {number}
  */
