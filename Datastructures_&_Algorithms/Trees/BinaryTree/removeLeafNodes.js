@@ -26,4 +26,25 @@
  * @param {number} target
  * @return {TreeNode}
  */
-const removeLeafNodes = function (root, target) {};
+const removeLeafNodes = function (root, target) {
+    // Helper function to perform the post-order traversal and remove leaf nodes
+    function removeLeaves(node) {
+        if (node === null) {
+            return null;
+        }
+
+        // Recursively call for left and right children
+        node.left = removeLeaves(node.left);
+        node.right = removeLeaves(node.right);
+
+        // Check if current node is a leaf and if it should be removed
+        if (node.left === null && node.right === null && node.val === target) {
+            return null; // Remove the leaf node
+        }
+
+        return node; // Return the node if it is not removed
+    }
+
+    // Start the recursive removal process from the root
+    return removeLeaves(root);
+};
