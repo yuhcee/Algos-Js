@@ -60,3 +60,9 @@ const root1 = [1, 3, 3, 3, 2],
     target1 = 3;
 // Output: [1,3,null,null,2]
 console.log(removeLeafNodes(root1, target1));
+
+const root2 = [1, 2, null, 2, null, 2],
+    target2 = 2;
+// Output: [1]
+// Explanation: Leaf nodes in green with value (target = 2) are removed at each step.
+console.log(removeLeafNodes(root2, target2));
