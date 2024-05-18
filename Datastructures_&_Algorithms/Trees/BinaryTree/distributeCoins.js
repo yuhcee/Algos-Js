@@ -57,3 +57,8 @@ const distributeCoins = function (root) {
 
     return moves;
 };
+
+const root = [3, 0, 0];
+// Output: 2
+// Explanation: From the root of the tree, we move one coin to its left child, and one coin to its right child.
+console.log(distributeCoins(root));
