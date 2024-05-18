@@ -20,6 +20,13 @@
  * Return *the **minimum** number of moves required to make every node have
  * **exactly** one coin*.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is `n`.
+ * - `1 <= n <= 100`
+ * - `0 <= Node.val <= n`
+ * - The sum of all Node.val is `n`.
+ *
  * @param {TreeNode} root
  * @return {number}
  */
