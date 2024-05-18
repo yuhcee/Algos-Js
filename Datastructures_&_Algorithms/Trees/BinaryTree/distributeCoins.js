@@ -30,4 +30,30 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const distributeCoins = function (root) {};
+const distributeCoins = function (root) {
+    let moves = 0;
+
+    // Helper function to perform post-order DFS and calculate the moves
+    function dfs(node) {
+        if (node === null) {
+            return 0;
+        }
+
+        // Post-order traversal: process left and right children first
+        const leftExcess = dfs(node.left);
+        const rightExcess = dfs(node.right);
+
+        // Current node's excess coins
+        const excess = node.val + leftExcess + rightExcess - 1;
+
+        // Update the total number of moves with the absolute value of excess
+        moves += Math.abs(excess);
+
+        return excess;
+    }
+
+    // Start DFS traversal from the root
+    dfs(root);
+
+    return moves;
+};
