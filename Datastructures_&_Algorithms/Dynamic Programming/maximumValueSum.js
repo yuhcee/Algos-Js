@@ -21,6 +21,16 @@
  * Return *the **maximum** possible sum of the values Alice can achieve by
  * performing the operation **any** number of times.*
  * 
+ * **Constraints:**
+ * 
+ * - `2 <= n == nums.length <= 2 * 104`
+ * - `1 <= k <= 109`
+ * - `0 <= nums[i] <= 109`
+ * - `edges.length == n - 1`
+ * - `edges[i].length == 2`
+ * - `0 <= edges[i][0], edges[i][1] <= n - 1`
+ * - The input is generated such that `edges` represent a valid tree.
+ * 
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
