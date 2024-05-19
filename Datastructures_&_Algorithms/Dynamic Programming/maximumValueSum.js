@@ -20,9 +20,9 @@
  *
  * Return *the **maximum** possible sum of the values Alice can achieve by
  * performing the operation **any** number of times.*
- * 
+ *
  * **Constraints:**
- * 
+ *
  * - `2 <= n == nums.length <= 2 * 104`
  * - `1 <= k <= 109`
  * - `0 <= nums[i] <= 109`
@@ -30,9 +30,29 @@
  * - `edges[i].length == 2`
  * - `0 <= edges[i][0], edges[i][1] <= n - 1`
  * - The input is generated such that `edges` represent a valid tree.
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
  */
-const maximumValueSum = function (nums, k) {};
+const maximumValueSum = function (nums, k) {
+    // Step 1: Calculate the initial sum of node values
+    let initialSum = nums.reduce((x, y) => x + y, 0);
+
+    // Step 2: Calculate the differences when each node value is XOR-ed with k
+    let xorDifferences = nums.map((v) => (v ^ k) - v);
+
+    // Step 3: Sort the differences in descending order
+    xorDifferences.sort((a, b) => b - a);
+
+    // Step 4: Sum the positive differences in pairs
+    let additionalSum = 0;
+    for (let i = 0; i < xorDifferences.length; i += 2) {
+        if (i + 1 < xorDifferences.length && xorDifferences[i] + xorDifferences[i + 1] > 0) {
+            additionalSum += xorDifferences[i] + xorDifferences[i + 1];
+        }
+    }
+
+    // Step 5: Return the final maximum sum
+    return initialSum + additionalSum;
+};
