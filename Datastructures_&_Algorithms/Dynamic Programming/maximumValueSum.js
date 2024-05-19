@@ -79,3 +79,16 @@ const nums1 = [2, 3],
 The total sum of values is 5 + 4 = 9.
 It can be shown that 9 is the maximum achievable sum of values. */
 console.log(maximumValueSum(nums1, k1, edges1));
+
+const nums2 = [7, 7, 7, 7, 7, 7],
+    k2 = 3,
+    edges2 = [
+        [0, 1],
+        [0, 2],
+        [0, 3],
+        [0, 4],
+        [0, 5],
+    ];
+// Output: 42
+// Explanation: The maximum achievable sum is 42 which can be achieved by Alice performing no operations.
+console.log(maximumValueSum(nums2, k2, edges2));
