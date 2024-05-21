@@ -7,6 +7,12 @@
  * The solution set **must not** contain duplicate subsets. Return the solution
  * in **any order**.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 10`
+ * `-10 <= nums[i] <= 10`
+ * - All the numbers of `nums` are **unique**.
+ *
  * @param {number[]} nums
  * @return {number[][]}
  */
