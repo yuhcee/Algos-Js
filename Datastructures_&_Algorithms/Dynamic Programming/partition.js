@@ -41,6 +41,44 @@ function isPalindrome(s) {
     return s === s.split('').reverse().join('');
 } */
 
+const partition = (s) => {
+    const result = [];
+
+    const isPalindrome = (str) => {
+        let left = 0,
+            right = str.length - 1;
+
+        while (left < right) {
+            if (str[left] !== str[right]) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    };
+
+    const backtrack = (start, currentPartition) => {
+        if (start === s.length) {
+            result.push([...currentPartition]);
+            return;
+        }
+
+        for (let end = start; end < s.length; end++) {
+            const substring = s.slice(start, end + 1);
+            if (isPalindrome(substring)) {
+                currentPartition.push(substring);
+                backtrack(end + 1, currentPartition);
+                currentPartition.pop();
+            }
+        }
+    };
+
+    backtrack(0, []);
+
+    return result;
+};
+
 const s = 'aab';
 // Output: [["a","a","b"],["aa","b"]]
 console.log(partition(s));
