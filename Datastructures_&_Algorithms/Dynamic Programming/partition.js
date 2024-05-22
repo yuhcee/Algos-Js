@@ -44,6 +44,7 @@ function isPalindrome(s) {
 const partition = (s) => {
     const result = [];
 
+    // Helper function to check if a string is a palindrome
     const isPalindrome = (str) => {
         let left = 0,
             right = str.length - 1;
@@ -58,6 +59,7 @@ const partition = (s) => {
         return true;
     };
 
+    // Backtracking function to find all palindromic partitions
     const backtrack = (start, currentPartition) => {
         if (start === s.length) {
             result.push([...currentPartition]);
@@ -74,6 +76,7 @@ const partition = (s) => {
         }
     };
 
+    // Start backtracking from the first index with an empty partition
     backtrack(0, []);
 
     return result;
