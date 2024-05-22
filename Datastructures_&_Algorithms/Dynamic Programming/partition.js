@@ -1,9 +1,9 @@
 /**
  * **131. Palindrome Partitioning**
  *
- * Given a string `s`, partition `s` such that every `substring` of the 
+ * Given a string `s`, partition `s` such that every `substring` of the
  * partition is a **palindrome.**
- * 
+ *
  * Return *all possible palindrome partitioning of `s`*.
  *
  * **Constraints:**
@@ -14,12 +14,11 @@
  * @param {string} s
  * @return {string[][]}
  */
-const partition = function (s) {
+/* const partition = function (s) {
     let result = [];
     backtrack(s, [], result);
     return result;
 };
-
 function backtrack(s, temp, result) {
     // base case: if the current string is empty, add the current partition to the result
     if (s.length === 0) {
@@ -37,11 +36,11 @@ function backtrack(s, temp, result) {
         }
     }
 }
-
 function isPalindrome(s) {
     // helper function to check if a string is a palindrome
     return s === s.split('').reverse().join('');
-}
+} */
+
 const s = 'aab';
 // Output: [["a","a","b"],["aa","b"]]
 console.log(partition(s));
