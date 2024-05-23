@@ -35,7 +35,7 @@ const beautifulSubsets = function (nums, k) {
             // Check if adding nums[i] violates the beautiful condition
             let canAdd = true;
             for (let num of subset) {
-                if (Math.abs(num - nums[i] === k)) {
+                if (Math.abs(num - nums[i]) === k) {
                     canAdd = false;
                     break;
                 }
@@ -44,7 +44,7 @@ const beautifulSubsets = function (nums, k) {
             if (canAdd) {
                 subset.push(nums[i]);
                 backtrack(i + 1, subset);
-                subset.pop();
+                subset.pop(); // Backtrack
             }
         }
     };
