@@ -13,6 +13,11 @@
  * (possibly none) elements from `nums`. Two subsets are different if and only
  * if the chosen indices to delete are different.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 20`
+ * - `1 <= nums[i], k <= 1000`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
