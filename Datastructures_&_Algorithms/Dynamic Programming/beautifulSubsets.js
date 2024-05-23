@@ -59,3 +59,10 @@ const nums = [2, 4, 6],
 // Explanation: The beautiful subsets of the array nums are: [2], [4], [6], [2, 6].
 // It can be proved that there are only 4 beautiful subsets in the array [2,4,6].
 console.log(beautifulSubsets(nums, k));
+
+const nums1 = [1],
+    k1 = 1;
+// Output: 1
+// Explanation: The beautiful subset of the array nums is [1].
+// It can be proved that there is only 1 beautiful subset in the array [1].
+console.log(beautifulSubsets(nums1, k1));
