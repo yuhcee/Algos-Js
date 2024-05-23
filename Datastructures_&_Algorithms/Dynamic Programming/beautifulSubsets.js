@@ -22,4 +22,33 @@
  * @param {number} k
  * @return {number}
  */
-const beautifulSubsets = function (nums, k) {};
+const beautifulSubsets = function (nums, k) {
+    let count = 0;
+
+    // Helper function for backtracking
+    const backtrack = (start, subset) => {
+        if (subset.length > 0) {
+            count++;
+        }
+
+        for (let i = start; i < nums.length; i++) {
+            // Check if adding nums[i] violates the beautiful condition
+            let canAdd = true;
+            for (let num of subset) {
+                if (Math.abs(num - nums[i] === k)) {
+                    canAdd = false;
+                    break;
+                }
+            }
+
+            if (canAdd) {
+                subset.push(nums[i]);
+                backtrack(i + 1, subset);
+                subset.pop();
+            }
+        }
+    };
+
+    backtrack(0, []);
+    return count;
+};
