@@ -84,3 +84,13 @@ Score  a=1, c=9, d=5, g=3, o=2
 Given letters, we can form the words "dad" (5+1+5) and "good" (3+2+2+5) with a score of 23.
 Words "dad" and "dog" only get a score of 21. */
 console.log(maxScoreWords(words, letters, score));
+
+const words1 = ['xxxz', 'ax', 'bx', 'cx'],
+    letters1 = ['z', 'a', 'b', 'c', 'x', 'x', 'x'],
+    score1 = [4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 10];
+// Output: 27
+/* Explanation:
+Score  a=4, b=4, c=4, x=5, z=10
+Given letters, we can form the words "ax" (4+5), "bx" (4+5) and "cx" (4+5) with a score of 27.
+Word "xxxz" only get a score of 25. */
+console.log(maxScoreWords(words1, letters1, score1));
