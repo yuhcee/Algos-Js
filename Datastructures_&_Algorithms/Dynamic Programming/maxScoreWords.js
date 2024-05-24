@@ -26,4 +26,51 @@
  * @param {number[]} score
  * @return {number}
  */
-const maxScoreWords = function (words, letters, score) {};
+const maxScoreWords = function (words, letters, score) {
+    // Step 1: Count the frequency of each letter in the letters array
+    let letterCount = new Array(26).fill(0);
+    for (let letter of letters) {
+        letterCount[letter.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+    }
+
+    // Helper function to calculate the score of a word
+    const getWordScore = (word) => {
+        let wordScore = 0;
+        for (let char of word) {
+            wordScore += score[char.charCodeAt(0) - 'a'.charCodeAt(0)];
+        }
+        return wordScore;
+    };
+
+    // Step 2: Define the backtracking function
+    const backtrack = (index, currentCount) => {
+        if (index === words.length) {
+            return 0;
+        }
+
+        // Case 1: Skip the current word
+        let maxScore = backtrack(index + 1, currentCount);
+
+        // Case 2: Include the current word, if possible
+        let canForm = true;
+        let word = words[index];
+        for (let char of word) {
+            if (--currentCount[char.charCodeAt(0) - 'a'.charCodeAt(0)] < 0) {
+                canForm = false;
+            }
+        }
+
+        if (canForm) {
+            maxScore = Math.max(maxScore, getWordScore(word) + backtrack(index + 1, currentCount));
+        }
+
+        // Backtrack: restore the count array
+        for (let char of word) {
+            currentCount[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+        }
+
+        return maxScore;
+    };
+
+    return backtrack(0, letterCount);
+};
