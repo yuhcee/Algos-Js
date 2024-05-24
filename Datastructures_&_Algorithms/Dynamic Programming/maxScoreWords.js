@@ -94,3 +94,11 @@ Score  a=4, b=4, c=4, x=5, z=10
 Given letters, we can form the words "ax" (4+5), "bx" (4+5) and "cx" (4+5) with a score of 27.
 Word "xxxz" only get a score of 25. */
 console.log(maxScoreWords(words1, letters1, score1));
+
+const words2 = ['leetcode'],
+    letters2 = ['l', 'e', 't', 'c', 'o', 'd'],
+    score2 = [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0];
+// Output: 0
+// Explanation:
+// Letter "e" can only be used once.
+console.log(maxScoreWords(words2, letters2, score2));
