@@ -11,6 +11,16 @@
  * only be used once. Score of letters `'a'`, `'b'`, `'c'`, ... ,`'z'` is given
  * by `score[0]`, `score[1]`, ... , `score[25]` respectively.
  *
+ * **Constraints:**
+ *
+ * - `1 <= words.length <= 14`
+ * - `1 <= words[i].length <= 15`
+ * - `1 <= letters.length <= 100`
+ * - `letters[i].length == 1`
+ * - `score.length == 26`
+ * - `0 <= score[i] <= 10`
+ * - `words[i]`, `letters[i]` contains only lower case English letters.
+ *
  * @param {string[]} words
  * @param {character[]} letters
  * @param {number[]} score
