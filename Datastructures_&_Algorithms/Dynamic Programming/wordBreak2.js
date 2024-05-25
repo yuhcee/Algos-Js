@@ -63,3 +63,8 @@ const s1 = 'pineapplepenapple',
 // Output: ["pine apple pen apple","pineapple pen apple","pine applepen apple"]
 // Explanation: Note that you are allowed to reuse a dictionary word.
 console.log(wordBreak(s1, wordDict1));
+
+const s2 = 'catsandog',
+    wordDict2 = ['cats', 'dog', 'sand', 'and', 'cat'];
+// Output: []
+console.log(wordBreak(s2, wordDict2));
