@@ -52,3 +52,8 @@ const wordBreak = function (s, wordDict) {
 
     return backtrack(0);
 };
+
+const s = 'catsanddog',
+    wordDict = ['cat', 'cats', 'and', 'sand', 'dog'];
+// Output: ["cats and dog","cat sand dog"]
+console.log(wordBreak(s, wordDict));
