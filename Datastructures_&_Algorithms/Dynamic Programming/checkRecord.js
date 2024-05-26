@@ -15,6 +15,10 @@
  * length `n` that make a student eligible for an attendance award. The answer
  * may be very large, so return it **modulo** `109 + 7`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 105`
+ *
  * @param {number} n
  * @return {number}
  */
