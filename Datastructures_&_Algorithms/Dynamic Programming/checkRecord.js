@@ -53,3 +53,7 @@ const n = 2;
 // "PP", "AP", "PA", "LP", "PL", "AL", "LA", "LL"
 // Only "AA" is not eligible because there are 2 absences (there need to be fewer than 2).
 console.log(checkRecord(n));
+
+const n1 = 1;
+// Output: 3
+console.log(checkRecord(n1));
