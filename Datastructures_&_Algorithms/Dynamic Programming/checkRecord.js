@@ -46,3 +46,10 @@ const checkRecord = function (n) {
 
     return checkAllRecords(0, 0, 0);
 };
+
+const n = 2;
+// Output: 8
+// Explanation: There are 8 records with length 2 that are eligible for an award:
+// "PP", "AP", "PA", "LP", "PL", "AL", "LA", "LL"
+// Only "AA" is not eligible because there are 2 absences (there need to be fewer than 2).
+console.log(checkRecord(n));
