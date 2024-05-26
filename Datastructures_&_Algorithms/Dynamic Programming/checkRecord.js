@@ -57,3 +57,7 @@ console.log(checkRecord(n));
 const n1 = 1;
 // Output: 3
 console.log(checkRecord(n1));
+
+const n2 = 10101;
+// Output: 183236316
+console.log(checkRecord(n2));
