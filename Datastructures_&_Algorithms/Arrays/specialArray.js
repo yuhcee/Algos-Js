@@ -10,6 +10,11 @@
  * Return *`x` if the array is **special**, otherwise, return `-1`*. It can be
  * proven that if `nums` is special, the value for `x` is **unique**.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 100`
+ * - `0 <= nums[i] <= 1000`
+ *
  * @param {number[]} nums
  * @return {number}
  */
