@@ -37,3 +37,8 @@ const specialArray = function (nums) {
     // If no valid x is found, return -1
     return -1;
 };
+
+const nums = [3, 5];
+// Output: 2
+// Explanation: There are 2 values (3 and 5) that are greater than or equal to 2.
+console.log(specialArray(nums));
