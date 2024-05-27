@@ -51,3 +51,8 @@ If x = 1, there should be 1 number >= x, but there are 0.
 If x = 2, there should be 2 numbers >= x, but there are 0.
 x cannot be greater since there are only 2 numbers in nums. */
 console.log(specialArray(nums1));
+
+const nums2 = [0, 4, 3, 0, 4];
+// Output: 3
+// Explanation: There are 3 values that are greater than or equal to 3.
+console.log(specialArray(nums2));
