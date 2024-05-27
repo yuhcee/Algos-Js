@@ -18,4 +18,22 @@
  * @param {number[]} nums
  * @return {number}
  */
-const specialArray = function (nums) {};
+const specialArray = function (nums) {
+    // Sort the array
+    nums.sort((a, b) => a - b);
+
+    // Iterate over possible values of x
+    for (let x = 0; x <= nums.length; x++) {
+        // Find the count of numbers >= x
+        let count = 0;
+        for (let num of nums) {
+            if (num >= x) count++;
+        }
+
+        // Check if the count matches x
+        if (count === x) return x;
+    }
+
+    // If no valid x is found, return -1
+    return -1;
+};
