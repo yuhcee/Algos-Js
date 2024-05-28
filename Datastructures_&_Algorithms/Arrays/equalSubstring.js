@@ -14,15 +14,34 @@
  * corresponding substring from `t`, return `0`.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= s.length <= 105`
  * - `t.length == s.length`
  * - `0 <= maxCost <= 106`
  * - `s` and `t` consist of only lowercase English letters.
- * 
+ *
  * @param {string} s
  * @param {string} t
  * @param {number} maxCost
  * @return {number}
  */
-const equalSubstring = function (s, t, maxCost) {};
+const equalSubstring = function (s, t, maxCost) {
+    let left = 0;
+    let right = 0;
+    let currentCost = 0;
+    let maxLength = 0;
+
+    while (right < s.length) {
+        currentCost += Math.abs(s.charCodeAt(right) - t.charCodeAt(right));
+
+        while (currentCost > maxCost) {
+            currentCost -= Math.abs(s.charCodeAt(left) - t.charCodeAt(left));
+            left++;
+        }
+
+        maxLength = Math.max(maxLength, right - left + 1);
+        right++;
+    }
+
+    return maxLength;
+};
