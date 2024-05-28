@@ -45,3 +45,11 @@ const equalSubstring = function (s, t, maxCost) {
 
     return maxLength;
 };
+
+const s = 'abcd',
+    t = 'bcdf',
+    maxCost = 3;
+// Output: 3
+/* Explanation: "abc" of s can change to "bcd".
+That costs 3, so the maximum length is 3. */
+console.log(equalSubstring(s, t, maxCost));
