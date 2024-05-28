@@ -60,3 +60,10 @@ const s1 = 'abcd',
 // Output: 1
 // Explanation: Each character in s costs 2 to change to character in t,  so the maximum length is 1.
 console.log(equalSubstring(s1, t1, maxCost1));
+
+const s2 = 'abcd',
+    t2 = 'acde',
+    maxCost2 = 0;
+// Output: 1
+// Explanation: You cannot make any change, so the maximum length is 1.
+console.log(equalSubstring(s2, t2, maxCost2));
