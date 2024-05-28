@@ -13,6 +13,13 @@
  * to `maxCost`. If there is no substring from `s` that can be changed to its
  * corresponding substring from `t`, return `0`.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= s.length <= 105`
+ * - `t.length == s.length`
+ * - `0 <= maxCost <= 106`
+ * - `s` and `t` consist of only lowercase English letters.
+ * 
  * @param {string} s
  * @param {string} t
  * @param {number} maxCost
