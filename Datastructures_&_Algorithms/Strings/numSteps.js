@@ -60,3 +60,7 @@ const s1 = '10';
 /* Explanation: "10" corressponds to number 2 in their decimal representation.
 Step 1) 2 is even, divide by 2 and obtain 1.  */
 console.log(numSteps(s1));
+
+const s2 = '1';
+// Output: 0
+console.log(numSteps(s2));
