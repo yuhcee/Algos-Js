@@ -10,6 +10,12 @@
  *
  * - It is guaranteed that you can always reach one for all test cases.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 500`
+ * - `s` consists of characters '0' or '1'
+ * - `s[0] == '1'`
+ *
  * @param {string} s
  * @return {number}
  */
