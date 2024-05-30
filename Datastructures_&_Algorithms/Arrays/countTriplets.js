@@ -15,6 +15,11 @@
  *
  * Return *the number of triplets (`i`, `j` and `k`) Where `a == b`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= arr.length <= 300`
+ * - `1 <= arr[i] <= 108`
+ *
  * @param {number[]} arr
  * @return {number}
  */
