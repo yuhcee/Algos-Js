@@ -51,3 +51,7 @@ const arr = [2, 3, 1, 6, 7];
 // Output: 4
 // Explanation: The triplets are (0,1,2), (0,2,2), (2,3,4) and (2,4,4)
 console.log(countTriplets(arr));
+
+const arr1 = [1, 1, 1, 1, 1];
+// Output: 10
+console.log(countTriplets(arr1));
