@@ -18,4 +18,28 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-const singleNumber = function (nums) {};
+const singleNumber = function (nums) {
+    // Step 1: XOR all numbers to find xor of the two unique numbers
+    let xor = 0;
+    for (let num of nums) {
+        xor ^= num;
+    }
+
+    // Step 2: Find a bit that is set in the result xor
+    // This bit differentiates the two unique numbers
+    let diff = xor & -xor;
+
+    // Step 3: Divide numbers into two groups based on the found bit
+    let num1 = 0,
+        num2 = 0;
+    for (let num of nums) {
+        if ((num & diff) === 0) {
+            num1 ^= num;
+        } else {
+            num2 ^= num;
+        }
+    }
+
+    // num1 and num2 are the two unique numbers
+    return [num1, num2];
+};
