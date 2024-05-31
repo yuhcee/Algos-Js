@@ -52,3 +52,7 @@ console.log(singleNumber(nums));
 const nums1 = [-1, 0];
 // Output: [-1,0]
 console.log(singleNumber(nums1));
+
+const nums2 = [0, 1];
+// Output: [1,0]
+console.log(singleNumber(nums2));
