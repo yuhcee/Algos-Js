@@ -48,3 +48,7 @@ const nums = [1, 2, 1, 3, 2, 5];
 // Output: [3,5]
 // Explanation:  [5, 3] is also a valid answer.
 console.log(singleNumber(nums));
+
+const nums1 = [-1, 0];
+// Output: [-1,0]
+console.log(singleNumber(nums1));
