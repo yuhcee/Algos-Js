@@ -16,6 +16,10 @@
  * An array `a` is a **subset** of an array `b` if `a` can be obtained from `b`
  * by deleting some (possibly zero) elements of `b`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 12`
+ * - `1 <= nums[i] <= 20`
  *
  * @param {number[]} nums
  * @return {number}
