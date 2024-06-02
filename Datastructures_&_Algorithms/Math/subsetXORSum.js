@@ -68,4 +68,7 @@ const nums1 = [5, 1, 6];
 0 + 5 + 1 + 6 + 4 + 3 + 7 + 2 = 28 */
 console.log(subsetXORSum(nums1));
 
-
+const nums2 = [3, 4, 5, 6, 7, 8];
+// Output: 480
+// Explanation: The sum of all XOR totals for every subset is 480.
+console.log(subsetXORSum(nums2));
