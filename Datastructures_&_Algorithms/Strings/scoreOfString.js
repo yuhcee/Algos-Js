@@ -6,6 +6,11 @@
  *
  * Return *the **score** of `s`*.
  *
+ * **Constraints:**
+ * 
+ * - `2 <= s.length <= 100`
+ * - `s` consists only of lowercase English letters.
+ * 
  * @param {string} s
  * @return {number}
  */
