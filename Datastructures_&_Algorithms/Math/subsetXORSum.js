@@ -24,4 +24,22 @@
  * @param {number[]} nums
  * @return {number}
  */
-const subsetXORSum = function (nums) {};
+const subsetXORSum = function (nums) {
+    let totalSum = 0;
+
+    function backtrack(index, currentXOR) {
+        // Add the current XOR to the total sum
+        totalSum += currentXOR;
+
+        // Explore further elements to form subsets
+        for (let i = index; i < nums.length; i++) {
+            // Include nums[i] in the current subset XOR
+            backtrack(i + 1, currentXOR ^ nums[i]);
+        }
+    }
+
+    // Start backtracking from the first index with initial XOR value 0
+    backtrack(0, 0);
+
+    return totalSum;
+};
