@@ -20,4 +20,18 @@
  * @param {string} t
  * @return {number}
  */
-const appendCharacters = function (s, t) {};
+const appendCharacters = function (s, t) {
+    let i = 0,
+        j = 0;
+
+    // Traverse through both strings
+    while (i < s.length && j < t.length) {
+        if (s[i] === t[j]) {
+            j++; // Move pointer j if characters match
+        }
+        i++; // Always move pointer i
+    }
+
+    // If t is not completely traversed, return the remaining length of t
+    return t.length - j;
+};
