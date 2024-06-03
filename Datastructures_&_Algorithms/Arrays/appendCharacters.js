@@ -35,3 +35,11 @@ const appendCharacters = function (s, t) {
     // If t is not completely traversed, return the remaining length of t
     return t.length - j;
 };
+
+const s = 'coaching',
+    t = 'coding';
+// Output: 4
+/* Explanation: Append the characters "ding" to the end of s so that s = "coachingding".
+Now, t is a subsequence of s ("coachingding").
+It can be shown that appending any 3 characters to the end of s will never make t a subsequence. */
+console.log(appendCharacters(s, t));
