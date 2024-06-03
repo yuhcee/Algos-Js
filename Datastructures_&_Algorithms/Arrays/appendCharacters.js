@@ -43,3 +43,9 @@ const s = 'coaching',
 Now, t is a subsequence of s ("coachingding").
 It can be shown that appending any 3 characters to the end of s will never make t a subsequence. */
 console.log(appendCharacters(s, t));
+
+const s1 = 'abcde',
+    t1 = 'a';
+// Output: 0
+// Explanation: t is already a subsequence of s ("abcde").
+console.log(appendCharacters(s1, t1));
