@@ -49,3 +49,11 @@ const s1 = 'abcde',
 // Output: 0
 // Explanation: t is already a subsequence of s ("abcde").
 console.log(appendCharacters(s1, t1));
+
+const s2 = 'z',
+    t2 = 'abcde';
+// Output: 5
+/* Explanation: Append the characters "abcde" to the end of s so that s = "zabcde".
+Now, t is a subsequence of s ("zabcde").
+It can be shown that appending any 4 characters to the end of s will never make t a subsequence. */
+console.log(appendCharacters(s2, t2));
