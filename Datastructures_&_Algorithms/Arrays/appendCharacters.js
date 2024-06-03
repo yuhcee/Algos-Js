@@ -11,6 +11,11 @@
  * deleting some or no characters without changing the order of the remaining
  * characters.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length, t.length <= 105`
+ * - `s` and `t` consist only of lowercase English letters.
+ *
  * @param {string} s
  * @param {string} t
  * @return {number}
