@@ -14,4 +14,34 @@
  * @param {string[]} words
  * @return {string[]}
  */
-const commonChars = function (words) {};
+const commonChars = function (words) {
+    // Initialize the minFreq array with Infinity
+    let minFreq = new Array(26).fill(Infinity);
+
+    // Iterate through each word in the words array
+    for (let word of words) {
+        // Initialize a frequency array for the current word
+        let freq = new Array(26).fill(0);
+
+        // Count the frequency of each character in the current word
+        for (let char of word) {
+            freq[char.charCodeAt(0) - 97]++;
+        }
+
+        // Update the minFreq array to store the minimum frequency of each character
+        for (let i = 0; i < 26; i++) {
+            minFreq[i] = Math.min(minFreq[i], freq[i]);
+        }
+    }
+
+    // Construct the result array based on the minFreq array
+    let result = [];
+    for (let i = 0; i < 26; i++) {
+        while (minFreq[i] > 0) {
+            result.push(String.fromCharCode(i + 97));
+            minFreq[i]--;
+        }
+    }
+
+    return result;
+};
