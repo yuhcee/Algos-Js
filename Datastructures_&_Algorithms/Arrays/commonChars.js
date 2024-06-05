@@ -5,6 +5,12 @@
  * in all strings within the `words` (including duplicates)*. You may return the
  * answer in **any order**.
  *
+ * **Constraints:**
+ *
+ * - `1 <= words.length <= 100`
+ * - `1 <= words[i].length <= 100`
+ * - `words[i]` consists of lowercase English letters.
+ *
  * @param {string[]} words
  * @return {string[]}
  */
