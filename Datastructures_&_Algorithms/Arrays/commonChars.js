@@ -45,3 +45,7 @@ const commonChars = function (words) {
 
     return result;
 };
+
+const words = ['bella', 'label', 'roller'];
+// Output: ["e","l","l"]
+console.log(commonChars(words));
