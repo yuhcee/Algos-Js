@@ -49,3 +49,7 @@ const commonChars = function (words) {
 const words = ['bella', 'label', 'roller'];
 // Output: ["e","l","l"]
 console.log(commonChars(words));
+
+const words1 = ['cool', 'lock', 'cook'];
+// Output: ["c","o"]
+console.log(commonChars(words1));
