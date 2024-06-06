@@ -9,6 +9,12 @@
  * `ith` card and an integer groupSize, return `true` if she can rearrange the
  * cards, or `false` otherwise.
  *
+ * **Constraints:**
+ *
+ * - `1 <= hand.length <= 104`
+ * - `0 <= hand[i] <= 109`
+ * - `1 <= groupSize <= hand.length`
+ *
  * @param {number[]} hand
  * @param {number} groupSize
  * @return {boolean}
