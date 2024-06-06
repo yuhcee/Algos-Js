@@ -63,3 +63,9 @@ const hand = [1, 2, 3, 6, 2, 3, 4, 7, 8],
 // Output: true
 // Explanation: Alice's hand can be rearranged as [1,2,3],[2,3,4],[6,7,8]
 console.log(isNStraightHand(hand, groupSize));
+
+const hand1 = [1, 2, 3, 4, 5],
+    groupSize1 = 4;
+// Output: false
+// Explanation: Alice's hand can not be rearranged into groups of 4.
+console.log(isNStraightHand(hand, groupSize));
