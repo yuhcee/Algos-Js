@@ -19,4 +19,42 @@
  * @param {number} groupSize
  * @return {boolean}
  */
-const isNStraightHand = function (hand, groupSize) {};
+const isNStraightHand = function (hand, groupSize) {
+    if (hand.length % groupSize !== 0) {
+        return false;
+    }
+
+    // Frequency map to count occurrences of each card
+    let freqMap = {};
+    for (let card of hand) {
+        if (!freqMap[card]) {
+            freqMap[card] = 0;
+        }
+        freqMap[card]++;
+    }
+
+    // Sort the unique card values
+    let uniqueCards = Object.keys(freqMap)
+        .map(Number)
+        .sort((a, b) => a - b);
+
+    for (let card of uniqueCards) {
+        // If the card has been used up in forming previous groups, continue
+        if (freqMap[card] === 0) {
+            continue;
+        }
+
+        let count = freqMap[card];
+
+        // Try to form a group starting from this card
+        for (let i = 0; i < groupSize; i++) {
+            let currentCard = card + i;
+            if (!freqMap[currentCard] || freqMap[currentCard] < count) {
+                return false;
+            }
+            freqMap[currentCard] -= count;
+        }
+    }
+
+    return true;
+};
