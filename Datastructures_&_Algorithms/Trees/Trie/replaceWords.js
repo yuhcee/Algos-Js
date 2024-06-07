@@ -70,4 +70,23 @@ class Trie {
     }
 }
 
-const replaceWords = function (dictionary, sentence) {};
+const replaceWords = function (dictionary, sentence) {
+    let trie = new Trie();
+
+    // Insert all roots into the Trie
+    for (let root of dictionary) {
+        trie.insert(root);
+    }
+
+    let words = sentence.split(' ');
+
+    // Replace words with their shortest root form
+    for (let i = 0; i < words.length; i++) {
+        let root = trie.searchRoot(words[i]);
+        if (root !== null) {
+            words[i] = root;
+        }
+    }
+
+    return words.join(' ');
+};
