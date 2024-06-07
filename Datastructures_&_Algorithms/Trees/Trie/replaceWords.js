@@ -95,3 +95,8 @@ const dictionary = ['cat', 'bat', 'rat'],
     sentence = 'the cattle was rattled by the battery';
 // Output: "the cat was rat by the bat"
 console.log(replaceWords(dictionary, sentence));
+
+const dictionary1 = ['a', 'b', 'c'],
+    sentence1 = 'aadsfasf absbs bbab cadsfafs';
+// Output: "a a b c"
+console.log(replaceWords(dictionary1, sentence1));
