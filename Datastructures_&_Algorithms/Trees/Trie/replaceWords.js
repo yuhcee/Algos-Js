@@ -30,4 +30,44 @@
  * @param {string} sentence
  * @return {string}
  */
+class TrieNode {
+    constructor() {
+        this.children = {};
+        this.isEndOfWord = false;
+    }
+}
+
+class Trie {
+    constructor() {
+        this.root = new TrieNode();
+    }
+
+    insert(word) {
+        let node = this.root;
+        for (let char of word) {
+            if (!node.children[char]) {
+                node.children[char] = new TrieNode();
+            }
+            node = node.children[char];
+        }
+        node.isEndOfWord = true;
+    }
+
+    searchRoot(word) {
+        let node = this.root;
+        let prefix = '';
+        for (let char of word) {
+            if (node.isEndOfWord) {
+                return prefix;
+            }
+            if (!node.children[char]) {
+                return null;
+            }
+            node = node.children[char];
+            prefix += char;
+        }
+        return node.isEndOfWord ? prefix : null;
+    }
+}
+
 const replaceWords = function (dictionary, sentence) {};
