@@ -62,3 +62,11 @@ const evaluateTree = function (root) {
     // In case of invalid value, which should not happen based on constraints
     return false;
 };
+
+const root = [2, 1, 3, null, null, 0, 1];
+// Output: true
+/* Explanation: The above diagram illustrates the evaluation process.
+The AND node evaluates to False AND True = False.
+The OR node evaluates to True OR False = True.
+The root node evaluates to True, so we return true. */
+console.log(evaluateTree(root));
