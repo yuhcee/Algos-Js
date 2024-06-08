@@ -34,6 +34,14 @@
  *
  * A **leaf node** is a node that has zero children.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is in the range `[1, 1000]`.
+ * - `0 <= Node.val <= 3`
+ * - Every node has either `0` or `2` children.
+ * - Leaf nodes have a value of `0` or `1`.
+ * - Non-leaf nodes have a value of `2` or `3`.
+ *
  * @param {TreeNode} root
  * @return {boolean}
  */
