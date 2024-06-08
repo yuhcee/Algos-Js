@@ -70,3 +70,8 @@ The AND node evaluates to False AND True = False.
 The OR node evaluates to True OR False = True.
 The root node evaluates to True, so we return true. */
 console.log(evaluateTree(root));
+
+const root1 = [0];
+// Output: false
+// Explanation: The root node is a leaf node and it evaluates to false, so we return false.
+console.log(evaluateTree(root1));
