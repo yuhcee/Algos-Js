@@ -45,4 +45,20 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-const evaluateTree = function (root) {};
+const evaluateTree = function (root) {
+    if (!root.left && !root.right) {
+        return root.val === 1;
+    }
+
+    const leftValue = evaluateTree(root.left);
+    const rightValue = evaluateTree(root.right);
+
+    if (root.val === 2) {
+        return leftValue || rightValue;
+    } else if (root.val === 3) {
+        return leftValue && rightValue;
+    }
+
+    // In case of invalid value, which should not happen based on constraints
+    return false;
+};
