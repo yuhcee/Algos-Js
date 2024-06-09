@@ -78,3 +78,7 @@ const grid = [
 // Output: 39
 // Explanation: 0b1111 + 0b1001 + 0b1111 = 15 + 9 + 15 = 39
 console.log(matrixScore(grid));
+
+const grid1 = [[0]];
+// Output: 1
+console.log(matrixScore(grid1));
