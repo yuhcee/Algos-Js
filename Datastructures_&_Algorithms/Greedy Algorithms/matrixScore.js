@@ -23,4 +23,49 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const matrixScore = function (grid) {};
+const matrixScore = function (grid) {
+    const m = grid.length;
+    const n = grid[0].length;
+
+    // Step 1: Toggle rows to ensure leftmost digit is 1
+    for (let i = 0; i < m; i++) {
+        if (grid[i][0] === 0) {
+            toggleRow(grid, i);
+        }
+    }
+
+    // Step 2: Toggle columns to maximize score
+    for (let j = 1; j < n; j++) {
+        let countOnes = 0;
+        for (let i = 0; i < m; i++) {
+            if (grid[i][j] === 1) {
+                countOnes++;
+            }
+        }
+        if (countOnes < m / 2) {
+            toggleColumn(grid, j);
+        }
+    }
+
+    // Step 3: Calculate the score
+    let score = 0;
+    for (let i = 0; i < m; i++) {
+        score += parseInt(grid[i].join(''), 2);
+    }
+
+    return score;
+};
+
+// Helper function to toggle a row
+function toggleRow(grid, rowIndex) {
+    for (let j = 0; j < grid[0].length; j++) {
+        grid[rowIndex][j] ^= 1; // Toggle 0 to 1 and 1 to 0
+    }
+}
+
+// Helper function to toggle a column
+function toggleColumn(grid, colIndex) {
+    for (let i = 0; i < grid.length; i++) {
+        grid[i][colIndex] ^= 1; // Toggle 0 to 1 and 1 to 0
+    }
+}
