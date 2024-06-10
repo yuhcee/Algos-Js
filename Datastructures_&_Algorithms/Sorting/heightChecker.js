@@ -12,6 +12,11 @@
  *
  * Return the **number of indices** where `heights[i] != expected[i]`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= heights.length <= 100`
+ * - `1 <= heights[i] <= 100`
+ *
  * @param {number[]} heights
  * @return {number}
  */
