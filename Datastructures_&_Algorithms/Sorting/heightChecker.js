@@ -32,3 +32,13 @@ const heightChecker = function (heights) {
 
     return count;
 };
+
+const heights = [1,1,4,2,1,3]
+// Output: 3
+/* Explanation: 
+heights:  [1,1,4,2,1,3]
+expected: [1,1,1,2,3,4]
+Indices 2, 4, and 5 do not match. */
+console.log(heightChecker(heights));
+
+
