@@ -41,4 +41,11 @@ expected: [1,1,1,2,3,4]
 Indices 2, 4, and 5 do not match. */
 console.log(heightChecker(heights));
 
+const heights1 = [5,1,2,3,4]
+// Output: 5
+/* Explanation:
+heights:  [5,1,2,3,4]
+expected: [1,2,3,4,5]
+All indices do not match. */
+console.log(heightChecker(heights1));
 
