@@ -49,3 +49,10 @@ expected: [1,2,3,4,5]
 All indices do not match. */
 console.log(heightChecker(heights1));
 
+const heights2 = [1,2,3,4,5]
+// Output: 0
+/* Explanation:
+heights:  [1,2,3,4,5]
+expected: [1,2,3,4,5]
+All indices match. */
+console.log(heightChecker(heights2));
