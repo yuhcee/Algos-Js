@@ -19,4 +19,29 @@
  * @param {number[]} arr2
  * @return {number[]}
  */
-const relativeSortArray = function (arr1, arr2) {};
+const relativeSortArray = function (arr1, arr2) {
+    // Create a map to store the order of elements in arr2
+    const orderMap = new Map();
+    for (let i = 0; i < arr2.length; i++) {
+        orderMap.set(arr2[i], i);
+    }
+
+    // Sort arr1 based on the order defined in arr2
+    arr1.sort((a, b) => {
+        // If both elements are in arr2, sort by their order in arr2
+        if (orderMap.has(a) && orderMap.has(b)) {
+            return orderMap.get(a) - orderMap.get(b);
+        }
+        // If only one of the elements is in arr2, the one in arr2 comes first
+        if (orderMap.has(a)) {
+            return -1;
+        }
+        if (orderMap.has(b)) {
+            return 1;
+        }
+        // If neither element is in arr2, sort by their value
+        return a - b;
+    });
+
+    return arr1;
+};
