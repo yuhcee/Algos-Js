@@ -19,4 +19,24 @@
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-const sortColors = function (nums) {};
+const sortColors = function (nums) {
+    let low = 0,
+        mid = 0,
+        high = nums.length - 1;
+
+    while (mid <= high) {
+        if (nums[mid] === 0) {
+            // Swap nums[low] and nums[mid], increment low and mid
+            [nums[low], nums[mid]] = [nums[mid], nums[low]];
+            low++;
+            mid++;
+        } else if (nums[mid] === 1) {
+            // Just move mid to the next element
+            mid++;
+        } else {
+            // Swap nums[mid] and nums[high], decrement high
+            [nums[mid], nums[high]] = [nums[high], nums[mid]];
+            high--;
+        }
+    }
+};
