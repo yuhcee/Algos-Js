@@ -47,3 +47,15 @@ const seats = [3, 1, 5],
 - The third student is moved from from position 4 to position 3 using 1 move.
 In total, 1 + 2 + 1 = 4 moves were used. */
 console.log(minMovesToSeat(seats, students));
+
+const seats1 = [4, 1, 5, 9],
+    students1 = [1, 3, 2, 6];
+// Output: 7
+/* Explanation: The students are moved as follows:
+- The first student is not moved.
+- The second student is moved from from position 3 to position 4 using 1 move.
+- The third student is moved from from position 2 to position 5 using 3 moves.
+- The fourth student is moved from from position 6 to position 9 using 3 moves.
+In total, 0 + 1 + 3 + 3 = 7 moves were used. */
+console.log(minMovesToSeat(seats1, students1));
+
