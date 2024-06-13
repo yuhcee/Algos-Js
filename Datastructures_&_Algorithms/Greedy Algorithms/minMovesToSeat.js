@@ -15,6 +15,12 @@
  *
  * Note that there may be **multiple** seats or students in the **same** position at the beginning.
  *
+ * **Constraints:**
+ *
+ * - `n == seats.length == students.length`
+ * - `1 <= n <= 100`
+ * - `1 <= seats[i], students[j] <= 100`
+ *
  * @param {number[]} seats
  * @param {number[]} students
  * @return {number}
