@@ -17,4 +17,22 @@
  * @param {number[]} nums
  * @return {number}
  */
-const minIncrementForUnique = function (nums) {};
+const minIncrementForUnique = function (nums) {
+    // Sort the array
+    nums.sort((a, b) => a - b);
+
+    let moves = 0;
+    for (let i = 1; i < nums.length; i++) {
+        // If the current number is less than or equal to the previous number
+        if (nums[i] <= nums[i - 1]) {
+            // Calculate the increment needed to make nums[i] unique
+            let increment = nums[i - 1] - nums[i] + 1;
+            // Add the increment to the moves
+            moves += increment;
+            // Update the current number to be unique
+            nums[i] = nums[i - 1] + 1;
+        }
+    }
+
+    return moves;
+};
