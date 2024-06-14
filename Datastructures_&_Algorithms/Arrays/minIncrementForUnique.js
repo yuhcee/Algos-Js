@@ -36,3 +36,8 @@ const minIncrementForUnique = function (nums) {
 
     return moves;
 };
+
+const nums = [1, 2, 2];
+// Output: 1
+// Explanation: After 1 move, the array could be [1, 2, 3].
+console.log(minIncrementForUnique(nums));
