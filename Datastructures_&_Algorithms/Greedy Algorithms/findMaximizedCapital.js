@@ -58,7 +58,7 @@ const findMaximizedCapital = function (k, initialCapital, profits, capital) {
             const project = capitalAscQueue.dequeue().element;
             profitsDescQueue.enqueue(project, project[1]);
         }
-        
+
         // If there are no projects available to invest in, return the current capital
         if (profitsDescQueue.isEmpty()) {
             return initialCapital;
@@ -81,6 +81,7 @@ With capital 1, you can either start the project indexed 1 or the project indexe
 Since you can choose at most 2 projects, you need to finish the project indexed 2 to get the maximum capital.
 Therefore, output the final maximized capital, which is 0 + 1 + 3 = 4. */
 console.log(findMaximizedCapital(k, w, profits, capital));
+
 
 const k1 = 3,
     w1 = 0,
