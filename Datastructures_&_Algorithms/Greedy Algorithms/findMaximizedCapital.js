@@ -82,11 +82,9 @@ Since you can choose at most 2 projects, you need to finish the project indexed 
 Therefore, output the final maximized capital, which is 0 + 1 + 3 = 4. */
 console.log(findMaximizedCapital(k, w, profits, capital));
 
-
 const k1 = 3,
     w1 = 0,
     profits1 = [1, 2, 3],
     capital1 = [0, 1, 2];
 // Output: 6
 console.log(findMaximizedCapital(k1, w1, profits1, capital1));
-
