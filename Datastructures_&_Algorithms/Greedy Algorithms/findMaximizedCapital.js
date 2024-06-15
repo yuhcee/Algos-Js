@@ -33,7 +33,7 @@
  * - `1 <= n <= 105`
  * - `0 <= profits[i] <= 104`
  * - `0 <= capital[i] <= 109`
- * 
+ *
  *
  * @param {number} k - The maximum number of projects that can be performed.
  * @param {number} initialCapital - The initial capital available to invest.
@@ -58,6 +58,7 @@ const findMaximizedCapital = function (k, initialCapital, profits, capital) {
             const project = capitalAscQueue.dequeue().element;
             profitsDescQueue.enqueue(project, project[1]);
         }
+        
         // If there are no projects available to invest in, return the current capital
         if (profitsDescQueue.isEmpty()) {
             return initialCapital;
