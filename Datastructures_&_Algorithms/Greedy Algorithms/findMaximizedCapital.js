@@ -89,3 +89,4 @@ const k1 = 3,
     capital1 = [0, 1, 2];
 // Output: 6
 console.log(findMaximizedCapital(k1, w1, profits1, capital1));
+
