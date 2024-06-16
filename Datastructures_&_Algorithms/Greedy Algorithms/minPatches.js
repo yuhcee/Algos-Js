@@ -17,4 +17,20 @@
  * @param {number} n
  * @return {number}
  */
-const minPatches = function (nums, n) {};
+const minPatches = function (nums, n) {
+    let miss = 1;
+    let i = 0;
+    let patches = 0;
+
+    while (miss <= n) {
+        if (i < nums.length && nums[i] <= miss) {
+            miss += nums[i];
+            i++;
+        } else {
+            miss += miss;
+            patches++;
+        }
+    }
+
+    return patches;
+};
