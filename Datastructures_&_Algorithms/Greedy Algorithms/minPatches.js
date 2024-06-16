@@ -44,3 +44,9 @@ Now if we add/patch 2 to nums, the combinations are: [1], [2], [3], [1,3], [2,3]
 Possible sums are 1, 2, 3, 4, 5, 6, which now covers the range [1, 6].
 So we only need 1 patch. */
 console.log(minPatches(nums, n));
+
+const nums1 = [1, 5, 10],
+    n1 = 20;
+// Output: 2
+// Explanation: The two patches can be [2, 4].
+console.log(minPatches(nums1, n1));
