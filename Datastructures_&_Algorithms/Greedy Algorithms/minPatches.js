@@ -50,3 +50,8 @@ const nums1 = [1, 5, 10],
 // Output: 2
 // Explanation: The two patches can be [2, 4].
 console.log(minPatches(nums1, n1));
+
+const nums2 = [1, 2, 2],
+    n2 = 5;
+// Output: 0
+console.log(minPatches(nums2, n2));
