@@ -6,6 +6,13 @@
  *
  * Return *the minimum number of patches required*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 1000`
+ * - `1 <= nums[i] <= 104`
+ * - `nums` is sorted in **ascending order**.
+ * - `1 <= n <= 231 - 1`
+ *
  * @param {number[]} nums
  * @param {number} n
  * @return {number}
