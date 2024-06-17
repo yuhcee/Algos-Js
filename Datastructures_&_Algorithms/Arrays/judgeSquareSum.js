@@ -28,3 +28,7 @@ const c = 5;
 // Output: true
 // Explanation: 1 * 1 + 2 * 2 = 5
 console.log(judgeSquareSum(c));
+
+const c1 = 3;
+// Output: false
+console.log(judgeSquareSum(c1));
