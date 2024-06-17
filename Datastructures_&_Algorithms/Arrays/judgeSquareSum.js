@@ -23,3 +23,8 @@ const judgeSquareSum = function (c) {
     }
     return false;
 };
+
+const c = 5;
+// Output: true
+// Explanation: 1 * 1 + 2 * 2 = 5
+console.log(judgeSquareSum(c));
