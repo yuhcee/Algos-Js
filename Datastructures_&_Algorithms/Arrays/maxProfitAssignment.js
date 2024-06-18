@@ -71,3 +71,9 @@ const difficulty = [2, 4, 6, 8, 10],
 // Output: 100
 // Explanation: Workers are assigned jobs of difficulty [4,4,6,6] and they get a profit of [20,20,30,30] separately.
 console.log(maxProfitAssignment(difficulty, profit, worker));
+
+const difficulty1 = [85, 47, 57],
+    profit1 = [24, 66, 99],
+    worker1 = [40, 25, 25];
+// Output: 0
+console.log(maxProfitAssignment(difficulty1, profit1, worker1));
