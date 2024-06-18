@@ -32,4 +32,35 @@
  * @param {number[]} worker
  * @return {number}
  */
-const maxProfitAssignment = function (difficulty, profit, worker) {};
+const maxProfitAssignment = function (difficulty, profit, worker) {
+    const jobs = difficulty.map((d, i) => [d, profit[i]]);
+    jobs.sort((a, b) => a[0] - b[0]); // Sort jobs by difficulty
+
+    // Precompute the maximum profit up to each difficulty level
+    let maxProfitAtDifficulty = [];
+    let maxProfitSoFar = 0;
+    for (let i = 0; i < jobs.length; i++) {
+        maxProfitSoFar = Math.max(maxProfitSoFar, jobs[i][1]);
+        maxProfitAtDifficulty.push([jobs[i][0], maxProfitSoFar]);
+    }
+
+    // Sort workers by their ability
+    worker.sort((a, b) => a - b);
+
+    let totalProfit = 0;
+    let jobIndex = 0;
+
+    // For each worker, find the best job they can do
+    for (let i = 0; i < worker.length; i++) {
+        // Move the job index to the maximum difficulty this worker can handle
+        while (jobIndex < jobs.length && jobs[jobIndex][0] <= worker[i]) {
+            jobIndex++;
+        }
+        if (jobIndex > 0) {
+            // Add the profit of the best job this worker can handle
+            totalProfit += maxProfitAtDifficulty[jobIndex - 1][1];
+        }
+    }
+
+    return totalProfit;
+};
