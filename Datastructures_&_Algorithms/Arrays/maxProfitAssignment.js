@@ -19,6 +19,14 @@
  * Return the maximum profit we can achieve after assigning the workers to the
  * jobs.
  *
+ * **Constraints:**
+ *
+ * - `n == difficulty.length`
+ * - `n == profit.length`
+ * - `m == worker.length`
+ * - `1 <= n, m <= 104`
+ * - `1 <= difficulty[i], profit[i], worker[i] <= 105`
+ *
  * @param {number[]} difficulty
  * @param {number[]} profit
  * @param {number[]} worker
