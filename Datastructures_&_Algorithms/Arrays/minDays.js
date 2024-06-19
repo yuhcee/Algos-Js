@@ -73,3 +73,10 @@ After day 1: [x, _, _, _, _]   // we can only make one bouquet.
 After day 2: [x, _, _, _, x]   // we can only make two bouquets.
 After day 3: [x, _, x, _, x]   // we can make 3 bouquets. The answer is 3. */
 console.log(minDays(bloomDay, m, k));
+
+const bloomDay1 = [1, 10, 3, 10, 2],
+    m1 = 3,
+    k1 = 2;
+// Output: -1
+/* Explanation: We need 3 bouquets each has 2 flowers, that means we need 6 flowers. We only have 5 flowers so it is impossible to get the needed bouquets and we return -1. */
+console.log(minDays(bloomDay1, m1, k1));
