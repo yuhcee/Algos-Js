@@ -12,6 +12,14 @@
  * Return *the minimum number of days you need to wait to be able to make `m`
  * bouquets from the garden*. If it is impossible to make m bouquets return `-1`.
  *
+ * **Constraints:**
+ *
+ * - `bloomDay.length == n`
+ * - `1 <= n <= 105`
+ * - `1 <= bloomDay[i] <= 109`
+ * - `1 <= m <= 106`
+ * - `1 <= k <= n`
+ *
  * @param {number[]} bloomDay
  * @param {number} m
  * @param {number} k
