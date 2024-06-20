@@ -67,3 +67,8 @@ const position = [1, 2, 3, 4, 7],
 // Explanation: Distributing the 3 balls into baskets 1, 4 and 7 will make the magnetic force between ball pairs [3, 3, 6]. The minimum magnetic force is 3. We cannot achieve a larger minimum magnetic force than 3.
 console.log(maxDistance(position, m));
 
+const position1 = [5, 4, 3, 2, 1, 1000000000],
+    m1 = 2;
+// Output: 999999999
+// Explanation: We can use baskets 1 and 1000000000.
+console.log(maxDistance(position1, m1));
