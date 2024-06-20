@@ -14,6 +14,14 @@
  * Given the integer array `position` and the integer m. Return the required
  * force.
  *
+ * **Constraints:**
+ *
+ * - `n == position.length`
+ * - `2 <= n <= 105`
+ * - `1 <= position[i] <= 109`
+ * - All integers in `position` are **distinct**.
+ * - `2 <= m <= position.length`
+ *
  * @param {number[]} position
  * @param {number} m
  * @return {number}
