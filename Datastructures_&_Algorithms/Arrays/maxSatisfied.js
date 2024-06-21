@@ -20,6 +20,12 @@
  * Return *the maximum number of customers that can be satisfied throughout the
  * day*.
  *
+ * **Constraints:**
+ *
+ * - `n == customers.length == grumpy.length`
+ * - `1 <= minutes <= n <= 2 * 104`
+ * - `0 <= customers[i] <= 1000`
+ * - `grumpy[i]` is either `0` or `1`.
  *
  * @param {number[]} customers
  * @param {number[]} grumpy
