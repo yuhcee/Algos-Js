@@ -73,3 +73,9 @@ const customers = [1, 0, 1, 2, 1, 1, 7, 5],
 /* Explanation: The bookstore owner keeps themselves not grumpy for the last 3 minutes. 
 The maximum number of customers that can be satisfied = 1 + 1 + 1 + 1 + 7 + 5 = 16. */
 console.log(maxSatisfied(customers, grumpy, minutes));
+
+const customers1 = [1],
+    grumpy1 = [0],
+    minutes1 = 1;
+// Output: 1
+console.log(maxSatisfied(customers1, grumpy1, minutes1));
