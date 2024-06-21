@@ -32,4 +32,36 @@
  * @param {number} minutes
  * @return {number}
  */
-const maxSatisfied = function (customers, grumpy, minutes) {};
+const maxSatisfied = function (customers, grumpy, minutes) {
+    let n = customers.length;
+    let satisfied = 0;
+
+    // Calculate initially satisfied customers
+    for (let i = 0; i < n; i++) {
+        if (!grumpy[i]) {
+            satisfied += customers[i];
+        }
+    }
+
+    // Calculate the initial extra customers that can be satisfied using the technique
+    let extraSatisfied = 0;
+    for (let i = 0; i < minutes; i++) {
+        if (grumpy[i]) {
+            extraSatisfied += customers[i];
+        }
+    }
+
+    // Use a sliding window to find the maximum extra satisfied customers
+    let maxExtraSatisfied = extraSatisfied;
+    for (let i = minutes; i < n; i++) {
+        if (grumpy[i]) {
+            extraSatisfied += customers[i];
+        }
+        if (grumpy[i - minutes]) {
+            extraSatisfied -= customers[i - minutes];
+        }
+        maxExtraSatisfied = Math.max(maxExtraSatisfied, extraSatisfied);
+    }
+
+    return satisfied + maxExtraSatisfied;
+};
