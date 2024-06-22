@@ -51,3 +51,9 @@ const nums = [1, 1, 2, 1, 1],
 // Output: 2
 // Explanation: The only sub-arrays with 3 odd numbers are [1,1,2,1] and [1,2,1,1].
 console.log(numberOfSubarrays(nums, k));
+
+const nums1 = [2, 4, 6],
+    k1 = 1;
+// Output: 0
+// Explanation: There are no odd numbers in the array.
+console.log(numberOfSubarrays(nums1, k1));
