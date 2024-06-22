@@ -57,3 +57,8 @@ const nums1 = [2, 4, 6],
 // Output: 0
 // Explanation: There are no odd numbers in the array.
 console.log(numberOfSubarrays(nums1, k1));
+
+const nums2 = [2, 2, 2, 1, 2, 2, 1, 2, 2, 2],
+    k2 = 2;
+// Output: 16
+console.log(numberOfSubarrays(nums2, k2));
