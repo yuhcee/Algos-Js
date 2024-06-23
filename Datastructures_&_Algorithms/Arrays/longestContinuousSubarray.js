@@ -74,3 +74,8 @@ const nums1 = [10, 1, 2, 4, 7, 2],
 // Output: 4
 // Explanation: The subarray [2,4,7,2] is the longest since the maximum absolute diff is |2-7| = 5 <= 5.
 console.log(longestSubarray(nums1, limit1));
+
+const nums2 = [4, 2, 2, 2, 4, 4, 2, 2],
+    limit2 = 0;
+// Output: 3
+console.log(longestSubarray(nums2, limit2));
