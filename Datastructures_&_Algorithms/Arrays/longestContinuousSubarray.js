@@ -68,3 +68,9 @@ const nums = [8, 2, 4, 7],
 [7] with maximum absolute diff |7-7| = 0 <= 4. 
 Therefore, the size of the longest subarray is 2. */
 console.log(longestSubarray(nums, limit));
+
+const nums1 = [10, 1, 2, 4, 7, 2],
+    limit1 = 5;
+// Output: 4
+// Explanation: The subarray [2,4,7,2] is the longest since the maximum absolute diff is |2-7| = 5 <= 5.
+console.log(longestSubarray(nums1, limit1));
