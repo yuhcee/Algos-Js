@@ -12,6 +12,11 @@
  *
  * A subarray is a **contiguous** part of an array.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `1 <= k <= nums.length`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
