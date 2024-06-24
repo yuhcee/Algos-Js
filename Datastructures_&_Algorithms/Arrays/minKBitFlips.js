@@ -50,3 +50,9 @@ const nums = [0, 1, 0],
 // Output: 2
 // Explanation: Flip nums[0], then flip nums[2].
 console.log(minKBitFlips(nums, k));
+
+const nums1 = [1, 1, 0],
+    k1 = 2;
+// Output: -1
+// Explanation: No matter how we flip subarrays of size 2, we cannot make the array become [1,1,1].
+console.log(minKBitFlips(nums1, k1));
