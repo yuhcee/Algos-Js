@@ -29,18 +29,24 @@ const minKBitFlips = function (nums, k) {
 
     for (let i = 0; i < n; i++) {
         if (i >= k) {
-            flipped ^= flip[i - k];  // Undo the effect of the flip `k` steps ago
+            flipped ^= flip[i - k]; // Undo the effect of the flip `k` steps ago
         }
 
         if (nums[i] === flipped) {
             if (i + k > n) {
-                return -1;  // Not enough space to flip k elements
+                return -1; // Not enough space to flip k elements
             }
             flip[i] = 1;
-            flipped ^= 1;  // Flip the current bit
+            flipped ^= 1; // Flip the current bit
             result++;
         }
     }
 
     return result;
 };
+
+const nums = [0, 1, 0],
+    k = 1;
+// Output: 2
+// Explanation: Flip nums[0], then flip nums[2].
+console.log(minKBitFlips(nums, k));
