@@ -31,4 +31,23 @@
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-const bstToGst = function (root) {};
+const bstToGst = function (root) {
+    let sum = 0;
+
+    const reverseInOrderTraversal = (node) => {
+        if (!node) return;
+
+        // Traverse the right subtree first
+        reverseInOrderTraversal(node.right);
+
+        // Update the current node's value with the running sum
+        sum += node.val;
+        node.val = sum;
+
+        // Traverse the left subtree
+        reverseInOrderTraversal(node.left);
+    };
+
+    reverseInOrderTraversal(root);
+    return root;
+};
