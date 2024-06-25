@@ -22,6 +22,12 @@
  * the node's key.
  * - Both the left and right subtrees must also be binary search trees.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is in the range `[1, 100]`.
+ * - `0 <= Node.val <= 100`
+ * - All the values in the tree are `unique`.
+ *
  * @param {TreeNode} root
  * @return {TreeNode}
  */
