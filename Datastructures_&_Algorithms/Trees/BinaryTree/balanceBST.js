@@ -23,6 +23,7 @@
  *
  * @param {TreeNode} root
  * @return {TreeNode}
+ *
  */
 const balanceBST = function (root) {
     // Step 1: Perform an in-order traversal to get sorted values
@@ -53,6 +54,6 @@ const root = [1, null, 2, null, 3, null, 4, null, null];
 // Explanation: This is not the only correct answer, [3,1,4,null,2] is also correct.
 console.log(balanceBST(root));
 
-const root1 = [2,1,3]
+const root1 = [2, 1, 3];
 // Output: [2,1,3]
 console.log(balanceBST(root1));
