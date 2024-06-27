@@ -32,3 +32,12 @@ const findCenter = function (edges) {
     }
     return v1;
 };
+
+const edges = [
+    [1, 2],
+    [2, 3],
+    [4, 2],
+];
+// Output: 2
+// Explanation: As shown in the figure above, node 2 is connected to every other node, so 2 is the center.
+console.log(findCenter(edges));
