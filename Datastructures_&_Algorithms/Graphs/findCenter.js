@@ -10,6 +10,14 @@
  * ` indicates that there is an edge between the nodes `ui` and `vi`.
  * Return *the center of the given star graph*.
  *
+ * **Constraints:**
+ *
+ * - `3 <= n <= 105`
+ * - `edges.length == n - 1`
+ * - `edges[i].length == 2`
+ * - `1 <= ui, vi <= n`
+ * - `ui != vi`
+ * - The given `edges` represent a valid star graph.
  *
  * @param {number[][]} edges
  * @return {number}
