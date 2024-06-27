@@ -22,4 +22,13 @@
  * @param {number[][]} edges
  * @return {number}
  */
-const findCenter = function (edges) {};
+const findCenter = function (edges) {
+    // The center node must be in the first edge
+    const [u1, v1] = edges[0];
+    // Check if either u1 or v1 is in the second edge
+    const [u2, v2] = edges[1];
+    if (u1 === u2 || u1 === v2) {
+        return u1;
+    }
+    return v1;
+};
