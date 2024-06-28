@@ -76,3 +76,18 @@ const n = 5,
 The total importance of all roads is 6 + 9 + 8 + 7 + 7 + 6 = 43.
 It can be shown that we cannot obtain a greater total importance than 43. */
 console.log(maximumImportance(n, roads));
+
+const n1 = 5,
+    roads1 = [
+        [0, 3],
+        [2, 4],
+        [1, 3],
+    ];
+// Output: 20
+/* Explanation: The figure above shows the country and the assigned values of [4,3,2,5,1].
+- The road (0,3) has an importance of 4 + 5 = 9.
+- The road (2,4) has an importance of 2 + 1 = 3.
+- The road (1,3) has an importance of 3 + 5 = 8.
+The total importance of all roads is 9 + 3 + 8 = 20.
+It can be shown that we cannot obtain a greater total importance than 20. */
+console.log(maximumImportance(n1, roads1));
