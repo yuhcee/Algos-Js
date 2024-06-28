@@ -17,14 +17,14 @@
  * assigning the values optimally*.
  *
  * **Constraints:**
- * 
+ *
  * - `2 <= n <= 5 * 104`
  * - `1 <= roads.length <= 5 * 104`
  * - `roads[i].length == 2`
  * - `0 <= ai, bi <= n - 1`
  * - `ai != bi`
  * - There are no duplicate roads.
- * 
+ *
  * @param {number} n
  * @param {number[][]} roads
  * @return {number}
