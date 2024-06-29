@@ -15,6 +15,16 @@
  * A node `u` is an **ancestor** of another node `v` if `u` can reach `v`
  * via a set of edges.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 1000`
+ * - `0 <= edges.length <= min(2000, n * (n - 1) / 2)`
+ * - `edges[i].length == 2`
+ * - `0 <= fromi, toi <= n - 1`
+ * - `fromi != toi`
+ * - There are no duplicate edges.
+ * - The graph is **directed** and **acyclic**.
+ *
  * @param {number} n
  * @param {number[][]} edges
  * @return {number[][]}
