@@ -89,3 +89,26 @@ The above diagram represents the input graph.
 - Node 6 has five ancestors 0, 1, 2, 3, and 4.
 - Node 7 has four ancestors 0, 1, 2, and 3. */
 console.log(getAncestors(n, edgeList));
+
+const n1 = 5,
+    edgeList1 = [
+        [0, 1],
+        [0, 2],
+        [0, 3],
+        [0, 4],
+        [1, 2],
+        [1, 3],
+        [1, 4],
+        [2, 3],
+        [2, 4],
+        [3, 4],
+    ];
+// Output: [[],[0],[0,1],[0,1,2],[0,1,2,3]]
+/* Explanation:
+The above diagram represents the input graph.
+- Node 0 does not have any ancestor.
+- Node 1 has one ancestor 0.
+- Node 2 has two ancestors 0 and 1.
+- Node 3 has three ancestors 0, 1, and 2.
+- Node 4 has four ancestors 0, 1, 2, and 3. */
+console.log(getAncestors(n1, edgeList1));
