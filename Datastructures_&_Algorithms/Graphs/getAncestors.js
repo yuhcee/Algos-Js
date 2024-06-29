@@ -29,4 +29,40 @@
  * @param {number[][]} edges
  * @return {number[][]}
  */
-const getAncestors = function (n, edges) {};
+const getAncestors = function (n, edges) {
+    // Step 1: Build the graph and in-degree array
+    const graph = Array.from({ length: n }, () => []);
+    const inDegree = Array(n).fill(0);
+
+    for (let [from, to] of edges) {
+        graph[from].push(to);
+        inDegree[to]++;
+    }
+
+    // Step 2: Perform Topological Sort using Kahn's algorithm
+    const queue = [];
+    for (let i = 0; i < n; i++) {
+        if (inDegree[i] === 0) queue.push(i);
+    }
+
+    const ancestors = Array.from({ length: n }, () => new Set());
+
+    while (queue.length > 0) {
+        const node = queue.shift();
+
+        for (let neighbor of graph[node]) {
+            ancestors[neighbor].add(node);
+            for (let ancestor of ancestors[node]) {
+                ancestors[neighbor].add(ancestor);
+            }
+            inDegree[neighbor]--;
+            if (inDegree[neighbor] === 0) {
+                queue.push(neighbor);
+            }
+        }
+    }
+
+    // Convert sets to sorted arrays
+    const result = ancestors.map((ancestorSet) => Array.from(ancestorSet).sort((a, b) => a - b));
+    return result;
+};
