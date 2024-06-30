@@ -34,22 +34,24 @@
 
 class UnionFind {
     constructor(size) {
-        this.parent = Array(size).fill(0).map((_, index) => index);
+        this.parent = Array(size)
+            .fill(0)
+            .map((_, index) => index);
         this.rank = Array(size).fill(1);
         this.componentCount = size;
     }
-    
+
     find(x) {
         if (this.parent[x] !== x) {
             this.parent[x] = this.find(this.parent[x]); // Path compression
         }
         return this.parent[x];
     }
-    
+
     union(x, y) {
         let rootX = this.find(x);
         let rootY = this.find(y);
-        
+
         if (rootX !== rootY) {
             if (this.rank[rootX] > this.rank[rootY]) {
                 this.parent[rootY] = rootX;
@@ -65,4 +67,44 @@ class UnionFind {
         return false;
     }
 }
-const maxNumEdgesToRemove = function (n, edges) {};
+const maxNumEdgesToRemove = function (n, edges) {
+    // Initialize Union-Find structures for Alice and Bob
+    let ufAlice = new UnionFind(n + 1);
+    let ufBob = new UnionFind(n + 1);
+
+    let edgesUsed = 0;
+
+    // First pass: Handle type 3 edges (both Alice and Bob can use)
+    for (let [type, u, v] of edges) {
+        if (type === 3) {
+            if (ufAlice.union(u, v) | ufBob.union(u, v)) {
+                edgesUsed++;
+            }
+        }
+    }
+
+    // Second pass: Handle type 1 edges (Alice only)
+    for (let [type, u, v] of edges) {
+        if (type === 1) {
+            if (ufAlice.union(u, v)) {
+                edgesUsed++;
+            }
+        }
+    }
+
+    // Third pass: Handle type 2 edges (Bob only)
+    for (let [type, u, v] of edges) {
+        if (type === 2) {
+            if (ufBob.union(u, v)) {
+                edgesUsed++;
+            }
+        }
+    }
+
+    // Check if both Alice and Bob can traverse the entire graph
+    if (ufAlice.componentCount > 2 || ufBob.componentCount > 2) {
+        return -1;
+    }
+
+    return edges.length - edgesUsed;
+};
