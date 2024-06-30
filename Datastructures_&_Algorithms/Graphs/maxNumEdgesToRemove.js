@@ -132,3 +132,13 @@ const n1 = 4,
 // Output: 0
 // Explanation: Notice that removing any edge will not make the graph fully traversable by Alice and Bob.
 console.log(maxNumEdgesToRemove(n1, edges1));
+
+const n2 = 4,
+    edges2 = [
+        [3, 2, 3],
+        [1, 1, 2],
+        [2, 3, 4],
+    ];
+// Output: -1
+// Explanation: In the current graph, Alice cannot reach node 4 from the other nodes. Likewise, Bob cannot reach 1. Therefore it's impossible to make the graph fully traversable.
+console.log(maxNumEdgesToRemove(n2, edges2));
