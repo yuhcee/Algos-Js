@@ -31,4 +31,38 @@
  * @param {number[][]} edges
  * @return {number}
  */
+
+class UnionFind {
+    constructor(size) {
+        this.parent = Array(size).fill(0).map((_, index) => index);
+        this.rank = Array(size).fill(1);
+        this.componentCount = size;
+    }
+    
+    find(x) {
+        if (this.parent[x] !== x) {
+            this.parent[x] = this.find(this.parent[x]); // Path compression
+        }
+        return this.parent[x];
+    }
+    
+    union(x, y) {
+        let rootX = this.find(x);
+        let rootY = this.find(y);
+        
+        if (rootX !== rootY) {
+            if (this.rank[rootX] > this.rank[rootY]) {
+                this.parent[rootY] = rootX;
+            } else if (this.rank[rootX] < this.rank[rootY]) {
+                this.parent[rootX] = rootY;
+            } else {
+                this.parent[rootY] = rootX;
+                this.rank[rootX] += 1;
+            }
+            this.componentCount -= 1;
+            return true;
+        }
+        return false;
+    }
+}
 const maxNumEdgesToRemove = function (n, edges) {};
