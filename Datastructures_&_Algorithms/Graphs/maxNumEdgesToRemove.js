@@ -18,6 +18,15 @@
  * Return the maximum number of edges you can remove, or return `-1` if
  * Alice and Bob cannot fully traverse the graph.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 105`
+ * - `1 <= edges.length <= min(105, 3 * n * (n - 1) / 2)`
+ * - `edges[i].length == 3`
+ * - `1 <= typei <= 3`
+ * - `1 <= ui < vi <= n`
+ * - All tuples `(typei, ui, vi)` are distinct.
+ *
  * @param {number} n
  * @param {number[][]} edges
  * @return {number}
