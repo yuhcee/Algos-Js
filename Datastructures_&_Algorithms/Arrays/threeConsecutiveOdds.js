@@ -12,4 +12,12 @@
  * @param {number[]} arr
  * @return {boolean}
  */
-const threeConsecutiveOdds = function (arr) {};
+const threeConsecutiveOdds = function (arr) {
+    for (let i = 0; i < arr.length - 2; i++) {
+        let product = arr[i] * arr[i + 1] * arr[i + 2];
+
+        if (product % 2 === 1) return true;
+    }
+
+    return false;
+};
