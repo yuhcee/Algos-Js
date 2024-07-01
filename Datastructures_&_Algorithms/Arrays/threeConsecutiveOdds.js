@@ -21,3 +21,8 @@ const threeConsecutiveOdds = function (arr) {
 
     return false;
 };
+
+const arr = [2, 6, 4, 1];
+// Output: false
+// Explanation: There are no three consecutive odds.
+console.log(threeConsecutiveOdds(arr));
