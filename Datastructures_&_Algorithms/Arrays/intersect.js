@@ -14,4 +14,23 @@
  * @param {number[]} nums2
  * @return {number[]}
  */
-const intersect = function (nums1, nums2) {};
+const intersect = function (nums1, nums2) {
+    const frequencyTable = {};
+    const intersection = [];
+
+    for (const number of nums1) {
+        if (!(number in frequencyTable)) {
+            frequencyTable[number] = 0;
+        }
+        frequencyTable[number]++;
+    }
+
+    for (const number of nums2) {
+        if (number in frequencyTable && frequencyTable[number] > 0) {
+            intersection.push(number);
+            frequencyTable[number]--;
+        }
+    }
+
+    return intersection;
+};
