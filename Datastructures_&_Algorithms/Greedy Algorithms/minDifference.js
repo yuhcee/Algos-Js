@@ -52,3 +52,12 @@ In the third move, change 14 to 1. nums becomes [1,0,0,0,1].
 After performing 3 moves, the difference between the minimum and maximum is 1 - 0 = 1.
 It can be shown that there is no way to make the difference 0 in 3 moves. */
 console.log(minDifference(nums1));
+
+const nums2 = [3, 100, 20];
+// Output: 0
+/* Explanation: We can make at most 3 moves.
+In the first move, change 100 to 7. nums becomes [3,7,20].
+In the second move, change 20 to 7. nums becomes [3,7,7].
+In the third move, change 3 to 7. nums becomes [7,7,7].
+After performing 3 moves, the difference between the minimum and maximum is 7 - 7 = 0. */
+console.log(minDifference(nums2));
