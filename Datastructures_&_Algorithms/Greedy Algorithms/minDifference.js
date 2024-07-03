@@ -9,6 +9,11 @@
  * Return *the minimum difference between the largest and smallest value of nums
  * **after performing at most three moves***.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `-109 <= nums[i] <= 109`
+ *
  * @param {number[]} nums
  * @return {number}
  */
