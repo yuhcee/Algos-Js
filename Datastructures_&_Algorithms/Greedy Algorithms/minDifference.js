@@ -33,3 +33,12 @@ const minDifference = function (nums) {
 
     return Math.min(scenario1, scenario2, scenario3, scenario4);
 };
+
+const nums = [5, 3, 2, 4];
+// Output: 0
+/* Explanation: We can make at most 3 moves.
+In the first move, change 2 to 3. nums becomes [5,3,3,4].
+In the second move, change 4 to 3. nums becomes [5,3,3,3].
+In the third move, change 5 to 3. nums becomes [3,3,3,3].
+After performing 3 moves, the difference between the minimum and maximum is 3 - 3 = 0. */
+console.log(minDifference(nums));
