@@ -18,6 +18,13 @@
  *
  * Return *the head of the modified linked list*.
  *
+ * **Constraints:**
+ *
+ * - `The number of nodes in the list is in the range `[3, 2 * 105]`.
+ * - `0 <= Node.val <= 1000`
+ * - There are no two consecutive nodes with `Node.val == 0`.
+ * - The **beginning** and **end** of the linked list have `Node.val == 0`.
+ *
  * @param {ListNode} head
  * @return {ListNode}
  */
