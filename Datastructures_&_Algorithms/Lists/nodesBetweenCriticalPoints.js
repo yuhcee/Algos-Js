@@ -34,4 +34,33 @@
  * @param {ListNode} head
  * @return {number[]}
  */
-const nodesBetweenCriticalPoints = function (head) {};
+const nodesBetweenCriticalPoints = function (head) {
+    if (!head || !head.next || !head.next.next) return [-1, -1];
+
+    let positions = [];
+    let index = 1; // Start from the second node
+    let prev = head;
+    let curr = head.next;
+    let next = curr.next;
+
+    while (next) {
+        if ((curr.val > prev.val && curr.val > next.val) || (curr.val < prev.val && curr.val < next.val)) {
+            positions.push(index);
+        }
+        prev = curr;
+        curr = next;
+        next = next.next;
+        index++;
+    }
+
+    if (positions.length < 2) return [-1, -1];
+
+    let minDistance = Infinity;
+    let maxDistance = positions[positions.length - 1] - positions[0];
+
+    for (let i = 1; i < positions.length; i++) {
+        minDistance = Math.min(minDistance, positions[i] - positions[i - 1]);
+    }
+
+    return [minDistance, maxDistance];
+};
