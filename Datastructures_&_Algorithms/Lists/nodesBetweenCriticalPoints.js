@@ -26,6 +26,11 @@
  * **maximum distance** between **any two distinct** critical points. If there
  * are **fewer** than two critical points, return `[-1, -1]`*.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the list is in the range `[2, 105]`.
+ * - `1 <= Node.val <= 105`
+ *
  * @param {ListNode} head
  * @return {number[]}
  */
