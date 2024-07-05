@@ -64,3 +64,8 @@ const nodesBetweenCriticalPoints = function (head) {
 
     return [minDistance, maxDistance];
 };
+
+const head = [3, 1];
+// Output: [-1,-1]
+// Explanation: There are no critical points in [3,1].
+console.log(nodesBetweenCriticalPoints(head));
