@@ -32,3 +32,10 @@ const passThePillow = function (n, time) {
         return 2 * n - 1 - effectiveTime; // Moving backward in the line
     }
 };
+
+const n = 4,
+    time = 5;
+// Output: 2
+/* Explanation: People pass the pillow in the following way: 1 -> 2 -> 3 -> 4 -> 3 -> 2.
+After five seconds, the 2nd person is holding the pillow. */
+console.log(passThePillow(n, time));
