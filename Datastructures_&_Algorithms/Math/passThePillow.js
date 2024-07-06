@@ -39,3 +39,10 @@ const n = 4,
 /* Explanation: People pass the pillow in the following way: 1 -> 2 -> 3 -> 4 -> 3 -> 2.
 After five seconds, the 2nd person is holding the pillow. */
 console.log(passThePillow(n, time));
+
+const n1 = 3,
+    time1 = 2;
+// Output: 3
+/* Explanation: People pass the pillow in the following way: 1 -> 2 -> 3.
+After two seconds, the 3rd person is holding the pillow. */
+console.log(passThePillow(n1, time1));
