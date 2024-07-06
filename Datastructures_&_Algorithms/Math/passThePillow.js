@@ -22,4 +22,13 @@
  * @param {number} time
  * @return {number}
  */
-const passThePillow = function (n, time) {};
+const passThePillow = function (n, time) {
+    const cycleLength = 2 * (n - 1);
+    const effectiveTime = time % cycleLength;
+
+    if (effectiveTime <= n - 1) {
+        return 1 + effectiveTime; // Moving forward in the line
+    } else {
+        return 2 * n - 1 - effectiveTime; // Moving backward in the line
+    }
+};
