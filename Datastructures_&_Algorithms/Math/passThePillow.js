@@ -13,6 +13,11 @@
  * Given the two positive integers `n` and `time`, return *the index of the
  * person holding the pillow after `time` seconds*.
  *
+ * **Constraints:**
+ *
+ * - `2 <= n <= 1000`
+ * - `1 <= time <= 1000`
+ *
  * @param {number} n
  * @param {number} time
  * @return {number}
