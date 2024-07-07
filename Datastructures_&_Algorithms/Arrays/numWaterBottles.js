@@ -10,6 +10,11 @@
  * Given the two integers `numBottles` and `numExchange`, return *the **maximum**
  * number of water bottles you can drink*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= numBottles <= 100`
+ * - `2 <= numExchange <= 100`
+ *
  * @param {number} numBottles
  * @param {number} numExchange
  * @return {number}
