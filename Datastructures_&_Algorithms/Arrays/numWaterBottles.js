@@ -19,4 +19,15 @@
  * @param {number} numExchange
  * @return {number}
  */
-const numWaterBottles = function (numBottles, numExchange) {};
+const numWaterBottles = function (numBottles, numExchange) {
+    let totalDrunk = numBottles;
+    let emptyBottles = numBottles;
+
+    while (emptyBottles >= numExchange) {
+        let newFullBottles = Math.floor(emptyBottles / numExchange);
+        totalDrunk += newFullBottles;
+        emptyBottles = (emptyBottles % numExchange) + newFullBottles;
+    }
+
+    return totalDrunk;
+};
