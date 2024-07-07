@@ -38,3 +38,10 @@ const numBottles = 9,
 /* Explanation: You can exchange 3 empty bottles to get 1 full water bottle.
 Number of water bottles you can drink: 9 + 3 + 1 = 13. */
 console.log(numWaterBottles(numBottles, numExchange));
+
+const numBottles1 = 15,
+    numExchange1 = 4;
+// Output: 19
+/* Explanation: You can exchange 4 empty bottles to get 1 full water bottle. 
+Number of water bottles you can drink: 15 + 3 + 1 = 19. */
+console.log(numWaterBottles(numBottles1, numExchange1));
