@@ -34,4 +34,12 @@
  * @param {number} k
  * @return {number}
  */
-const findTheWinner = function (n, k) {};
+const findTheWinner = function (n, k) {
+    let winner = 0; // Base case: the winner when there's only one person (0-indexed)
+
+    for (let i = 2; i <= n; i++) {
+        winner = (winner + k) % i;
+    }
+
+    return winner + 1; // Convert to 1-indexed result
+};
