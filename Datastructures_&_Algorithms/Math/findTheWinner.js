@@ -26,6 +26,10 @@
  * Given the number of friends, `n`, and an integer `k`, return *the winner of
  * the game*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= k <= n <= 500`
+ *
  * @param {number} n
  * @param {number} k
  * @return {number}
