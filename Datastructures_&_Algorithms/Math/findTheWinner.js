@@ -58,3 +58,9 @@ const n = 5,
 8) Count 2 friends clockwise, which are friends 3 and 5.
 9) Friend 5 leaves the circle. Only friend 3 is left, so they are the winner. */
 console.log(findTheWinner(n, k));
+
+const n1 = 6,
+    k1 = 5;
+// Output: 1
+// Explanation: The friends leave in this order: 5, 4, 6, 2, 3. The winner is friend 1.
+console.log(findTheWinner(n1, k1));
