@@ -17,6 +17,12 @@
  * Return *the **average** waiting time of all customers*. Solutions within
  * `10-5` from the actual answer are considered accepted.
  *
+ * **Constraints:**
+ *
+ * - `1 <= customers.length <= 105`
+ * - `1 <= arrivali, timei <= 104`
+ * - `arrivali <= arrivali+1`
+ *
  * @param {number[][]} customers
  * @return {number}
  */
