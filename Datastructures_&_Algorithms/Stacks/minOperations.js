@@ -56,3 +56,7 @@ console.log(minOperations(logs));
 const logs1 = ['d1/', 'd2/', './', 'd3/', '../', 'd31/'];
 // Output: 3
 console.log(minOperations(logs1));
+
+const logs2 = ['d1/', '../', '../', '../'];
+// Output: 0
+console.log(minOperations(logs2));
