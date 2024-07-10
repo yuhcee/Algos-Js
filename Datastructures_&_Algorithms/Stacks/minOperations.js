@@ -21,6 +21,14 @@
  * Return *the minimum number of operations needed to go back to the main folder
  * after the change folder operations*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= logs.length <= 103`
+ * - `2 <= logs[i].length <= 10`
+ * - `logs[i]` contains lowercase English letters, digits, `'.'`, and `'/'`.
+ * - `logs[i]` follows the format described in the statement.
+ * - Folder names consist of lowercase English letters and digits.
+ *
  * @param {string[]} logs
  * @return {number}
  */
