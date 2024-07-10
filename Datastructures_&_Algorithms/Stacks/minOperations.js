@@ -47,3 +47,8 @@ const minOperations = function (logs) {
 
     return depth;
 };
+
+const logs = ['d1/', 'd2/', '../', 'd21/', './'];
+// Output: 2
+// Explanation: Use this change folder operation "../" 2 times and go back to the main folder.
+console.log(minOperations(logs));
