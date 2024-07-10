@@ -52,3 +52,7 @@ const logs = ['d1/', 'd2/', '../', 'd21/', './'];
 // Output: 2
 // Explanation: Use this change folder operation "../" 2 times and go back to the main folder.
 console.log(minOperations(logs));
+
+const logs1 = ['d1/', 'd2/', './', 'd3/', '../', 'd31/'];
+// Output: 3
+console.log(minOperations(logs1));
