@@ -38,3 +38,7 @@ const reverseParentheses = function (s) {
 
     return stack.join('');
 };
+
+const s = '(abcd)';
+// Output: "dcba"
+console.log(reverseParentheses(s));
