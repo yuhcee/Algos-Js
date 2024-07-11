@@ -42,3 +42,8 @@ const reverseParentheses = function (s) {
 const s = '(abcd)';
 // Output: "dcba"
 console.log(reverseParentheses(s));
+
+const s1 = '(u(love)i)';
+// Output: "iloveu"
+// Explanation: The substring "love" is reversed first, then the whole string is reversed.
+console.log(reverseParentheses(s1));
