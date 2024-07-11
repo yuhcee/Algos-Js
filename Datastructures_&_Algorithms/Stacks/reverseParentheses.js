@@ -47,3 +47,8 @@ const s1 = '(u(love)i)';
 // Output: "iloveu"
 // Explanation: The substring "love" is reversed first, then the whole string is reversed.
 console.log(reverseParentheses(s1));
+
+const s2 = '(ed(et(oc))el)';
+// Output: "leetcode"
+// Explanation: First, we reverse the substring "oc", then "etco", and finally, the whole string.
+console.log(reverseParentheses(s2));
