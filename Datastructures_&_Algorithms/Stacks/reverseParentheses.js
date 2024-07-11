@@ -9,6 +9,12 @@
  *
  * Your result should not contain any brackets.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= s.length <= 2000`
+ * - `s` only contains lower case English characters and parentheses.
+ * - It is guaranteed that all parentheses are balanced.
+
  * @param {string} s
  * @return {string}
  */
