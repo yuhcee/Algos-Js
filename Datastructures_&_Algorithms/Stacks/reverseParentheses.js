@@ -18,4 +18,23 @@
  * @param {string} s
  * @return {string}
  */
-const reverseParentheses = function (s) {};
+const reverseParentheses = function (s) {
+    let stack = [];
+
+    for (let char of s) {
+        if (char === ')') {
+            let queue = [];
+            while (stack[stack.length - 1] !== '(') {
+                queue.push(stack.pop());
+            }
+            stack.pop(); // Remove the '('
+            while (queue.length) {
+                stack.push(queue.shift());
+            }
+        } else {
+            stack.push(char);
+        }
+    }
+
+    return stack.join('');
+};
