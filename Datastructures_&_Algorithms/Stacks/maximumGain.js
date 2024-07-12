@@ -23,4 +23,38 @@
  * @param {number} y
  * @return {number}
  */
-const maximumGain = function (s, x, y) {};
+const maximumGain = function (s, x, y) {
+    const removeAndScore = (s, first, second, score) => {
+        let stack = [];
+        let points = 0;
+
+        for (let char of s) {
+            if (stack.length && stack[stack.length - 1] === first && char === second) {
+                stack.pop();
+                points += score;
+            } else {
+                stack.push(char);
+            }
+        }
+
+        return [stack.join(''), points];
+    };
+
+    let totalScore = 0;
+
+    if (x > y) {
+        // Remove "ab" first if x > y
+        [s, score] = removeAndScore(s, 'a', 'b', x);
+        totalScore += score;
+        [s, score] = removeAndScore(s, 'b', 'a', y);
+        totalScore += score;
+    } else {
+        // Remove "ba" first if y > x
+        [s, score] = removeAndScore(s, 'b', 'a', y);
+        totalScore += score;
+        [s, score] = removeAndScore(s, 'a', 'b', x);
+        totalScore += score;
+    }
+
+    return totalScore;
+};
