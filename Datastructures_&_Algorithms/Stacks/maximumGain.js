@@ -70,3 +70,9 @@ const s = 'cdbcbbaaabab',
 - Remove the "ba" underlined in "cdbcba". Now, s = "cdbc" and 5 points are added to the score.
 Total score = 5 + 4 + 5 + 5 = 19. */
 console.log(maximumGain(s, x, y));
+
+const s1 = 'aabbaaxybbaabb',
+    x1 = 5,
+    y1 = 4;
+// Output: 20
+console.log(maximumGain(s1, x1, y1));
