@@ -58,3 +58,15 @@ const maximumGain = function (s, x, y) {
 
     return totalScore;
 };
+
+const s = 'cdbcbbaaabab',
+    x = 4,
+    y = 5;
+// Output: 19
+/* Explanation:
+- Remove the "ba" underlined in "cdbcbbaaabab". Now, s = "cdbcbbaaab" and 5 points are added to the score.
+- Remove the "ab" underlined in "cdbcbbaaab". Now, s = "cdbcbbaa" and 4 points are added to the score.
+- Remove the "ba" underlined in "cdbcbbaa". Now, s = "cdbcba" and 5 points are added to the score.
+- Remove the "ba" underlined in "cdbcba". Now, s = "cdbc" and 5 points are added to the score.
+Total score = 5 + 4 + 5 + 5 = 19. */
+console.log(maximumGain(s, x, y));
