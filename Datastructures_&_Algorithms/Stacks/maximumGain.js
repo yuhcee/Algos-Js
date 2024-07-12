@@ -12,6 +12,12 @@
  * Return *the maximum points you can gain after applying the above operations on
  * `s`*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 105`
+ * - `1 <= x, y <= 104`
+ * - `s` consists of lowercase English letters.
+ *
  * @param {string} s
  * @param {number} x
  * @param {number} y
