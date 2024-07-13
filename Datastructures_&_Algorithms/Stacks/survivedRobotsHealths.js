@@ -27,4 +27,48 @@ All values in positions are distinct
  * @param {string} directions
  * @return {number[]}
  */
-const survivedRobotsHealths = function(positions, healths, directions) {}
+const survivedRobotsHealths = function(positions, healths, directions) {
+    const robots = positions.map((pos, index) => ({
+        pos,
+        health: healths[index],
+        dir: directions[index],
+        index
+    }));
+
+    // Sort robots based on positions
+    robots.sort((a, b) => a.pos - b.pos);
+
+    const stack = [];
+    const result = [];
+
+    for (const robot of robots) {
+        if (robot.dir === 'R') {
+            stack.push(robot);
+        } else {
+            while (stack.length > 0 && robot.health > 0) {
+                const top = stack[stack.length - 1];
+                if (top.health > robot.health) {
+                    top.health -= 1;
+                    robot.health = 0;
+                } else if (top.health < robot.health) {
+                    robot.health -= 1;
+                    stack.pop();
+                } else {
+                    stack.pop();
+                    robot.health = 0;
+                }
+            }
+            if (robot.health > 0) {
+                result.push(robot);
+            }
+        }
+    }
+
+    while (stack.length > 0) {
+        result.push(stack.pop());
+    }
+
+    result.sort((a, b) => a.index - b.index);
+
+    return result.map(robot => robot.health);
+}
