@@ -91,3 +91,10 @@ const positions = [5, 4, 3, 2, 1],
 // Output: [2,17,9,15,10]
 /* Explanation: No collision occurs in this example, since all robots are moving in the same direction. So, the health of the robots in order from the first robot is returned, [2, 17, 9, 15, 10]. */
 console.log(survivedRobotsHealths(positions, healths, directions));
+
+const positions1 = [3, 5, 2, 6],
+    healths1 = [10, 10, 15, 12],
+    directions1 = 'RLRL';
+// Output: [14]
+/* Explanation: There are 2 collisions in this example. Firstly, robot 1 and robot 2 will collide, and since both have the same health, they will be removed from the line. Next, robot 3 and robot 4 will collide and since robot 4's health is smaller, it gets removed, and robot 3's health becomes 15 - 1 = 14. Only robot 3 remains, so we return [14]. */
+console.log(survivedRobotsHealths(positions1, healths1, directions1));
