@@ -98,3 +98,10 @@ const positions1 = [3, 5, 2, 6],
 // Output: [14]
 /* Explanation: There are 2 collisions in this example. Firstly, robot 1 and robot 2 will collide, and since both have the same health, they will be removed from the line. Next, robot 3 and robot 4 will collide and since robot 4's health is smaller, it gets removed, and robot 3's health becomes 15 - 1 = 14. Only robot 3 remains, so we return [14]. */
 console.log(survivedRobotsHealths(positions1, healths1, directions1));
+
+const positions2 = [1, 2, 5, 6],
+    healths2 = [10, 10, 11, 11],
+    directions2 = 'RLRL';
+// Output: []
+/* Explanation: Robot 1 and robot 2 will collide and since both have the same health, they are both removed. Robot 3 and 4 will collide and since both have the same health, they are both removed. So, we return an empty array, []. */
+console.log(survivedRobotsHealths(positions2, healths2, directions2));
