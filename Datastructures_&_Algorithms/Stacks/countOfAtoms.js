@@ -95,3 +95,8 @@ const formula1 = 'Mg(OH)2';
 // Output: "H2MgO2"
 // Explanation: The count of elements are {'H': 2, 'Mg': 1, 'O': 2}.
 console.log(countOfAtoms(formula1));
+
+const formula2 = 'K4(ON(SO3)2)2';
+// Output: "K4N2O14S4"
+// Explanation: The count of elements are {'K': 4, 'N': 2, 'O': 14, 'S': 4}.
+console.log(countOfAtoms(formula2));
