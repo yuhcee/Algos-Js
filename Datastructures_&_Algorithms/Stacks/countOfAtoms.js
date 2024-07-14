@@ -29,6 +29,12 @@
  * The test cases are generated so that all the values in the output fit in a
  * **32-bit** integer.
  *
+ * **Constraints:**
+ *
+ * - `1 <= formula.length <= 1000`
+ * - `formula` consists of English letters, digits, `'('`, and `')'`.
+ * - `formula` is always valid.
+ *
  * @param {string} formula
  * @return {string}
  */
