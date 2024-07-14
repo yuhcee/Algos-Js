@@ -85,3 +85,8 @@ const countOfAtoms = function (formula) {
 
     return result;
 };
+
+const formula = 'H2O';
+// Output: "H2O"
+// Explanation: The count of elements are {'H': 2, 'O': 1}.
+console.log(countOfAtoms(formula));
