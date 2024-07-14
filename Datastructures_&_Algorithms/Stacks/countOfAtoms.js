@@ -90,3 +90,8 @@ const formula = 'H2O';
 // Output: "H2O"
 // Explanation: The count of elements are {'H': 2, 'O': 1}.
 console.log(countOfAtoms(formula));
+
+const formula1 = 'Mg(OH)2';
+// Output: "H2MgO2"
+// Explanation: The count of elements are {'H': 2, 'Mg': 1, 'O': 2}.
+console.log(countOfAtoms(formula1));
