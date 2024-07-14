@@ -38,4 +38,50 @@
  * @param {string} formula
  * @return {string}
  */
-const countOfAtoms = function (formula) {};
+const countOfAtoms = function (formula) {
+    const stack = [{}];
+    let i = 0;
+    const n = formula.length;
+
+    while (i < n) {
+        if (formula[i] === '(') {
+            stack.push({});
+            i++;
+        } else if (formula[i] === ')') {
+            const top = stack.pop();
+            i++;
+            let start = i;
+            while (i < n && formula[i].match(/\d/)) {
+                i++;
+            }
+            const multiplicand = start < i ? parseInt(formula.slice(start, i)) : 1;
+            const currentDict = stack[stack.length - 1];
+            for (const [element, count] of Object.entries(top)) {
+                currentDict[element] = (currentDict[element] || 0) + count * multiplicand;
+            }
+        } else {
+            let start = i;
+            i++;
+            while (i < n && formula[i].match(/[a-z]/)) {
+                i++;
+            }
+            const element = formula.slice(start, i);
+            start = i;
+            while (i < n && formula[i].match(/\d/)) {
+                i++;
+            }
+            const multiplicand = start < i ? parseInt(formula.slice(start, i)) : 1;
+            const currentDict = stack[stack.length - 1];
+            currentDict[element] = (currentDict[element] || 0) + multiplicand;
+        }
+    }
+
+    const finalCount = stack[0];
+    const sortedElements = Object.keys(finalCount).sort();
+    let result = '';
+    for (const element of sortedElements) {
+        result += element + (finalCount[element] > 1 ? finalCount[element] : '');
+    }
+
+    return result;
+};
