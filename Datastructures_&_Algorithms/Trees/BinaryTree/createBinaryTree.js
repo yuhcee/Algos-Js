@@ -56,3 +56,9 @@ const createBinaryTree = function(descriptions) {
 
     return null;
 }
+
+const descriptions = [[20,15,1],[20,17,0],[50,20,1],[50,80,0],[80,19,1]]
+// Output: [50,20,80,15,17,19]
+/* Explanation: The root node is the node with value 50 since it has no parent.
+The resulting binary tree is shown in the diagram. */
+console.log(createBinaryTree(descriptions));
