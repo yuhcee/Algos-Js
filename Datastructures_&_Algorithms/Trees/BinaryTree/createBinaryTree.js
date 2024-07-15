@@ -15,6 +15,14 @@ function TreeNode(val) {
  * 
  * The test cases will be generated such that the binary tree is **valid**.
  * 
+ * **Constraints:**
+ * 
+ * - `1 <= descriptions.length <= 104`
+ * - `descriptions[i].length == 3`
+ * - `1 <= parenti, childi <= 105`
+ * - `0 <= isLefti <= 1`
+ * - The binary tree described by `descriptions` is valid.
+ * 
  * @param {number[][]} descriptions
  * @return {TreeNode}
  */
