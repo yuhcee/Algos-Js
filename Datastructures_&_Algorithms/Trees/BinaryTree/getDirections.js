@@ -26,6 +26,15 @@
  * Return *the step-by-step directions of the **shortest path** from node `s` to \
  * node `t`.*
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is `n`.
+ * - `2 <= n <= 105`
+ * - `1 <= Node.val <= n`
+ * - All the values in the tree are **unique**.
+ * - `1 <= startValue, destValue <= n`
+ * - `startValue != destValue`
+ *
  * @param {TreeNode} root
  * @param {number} startValue
  * @param {number} destValue
