@@ -84,3 +84,10 @@ const root = [5, 1, 2, 3, null, 6, 4],
 // Output: "UURL"
 // Explanation: The shortest path is: 3 → 1 → 5 → 2 → 6.
 console.log(getDirections(root, startValue, destValue));
+
+const root1 = [2, 1],
+    startValue1 = 2,
+    destValue1 = 1;
+// Output: "L"
+// Explanation: The shortest path is: 2 → 1.
+console.log(getDirections(root1, startValue1, destValue1));
