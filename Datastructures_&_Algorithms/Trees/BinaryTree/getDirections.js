@@ -40,4 +40,40 @@
  * @param {number} destValue
  * @return {string}
  */
-const getDirections = function (root, startValue, destValue) {};
+const getDirections = function (root, startValue, destValue) {
+    // Function to find the LCA of two nodes in the binary tree
+    function findLCA(root, p, q) {
+        if (!root || root.val === p || root.val === q) return root;
+        const left = findLCA(root.left, p, q);
+        const right = findLCA(root.right, p, q);
+        if (left && right) return root;
+        return left || right;
+    }
+
+    // Function to find the path from root to the given value
+    function findPath(root, value, path) {
+        if (!root) return false;
+        if (root.val === value) return true;
+        path.push('L');
+        if (findPath(root.left, value, path)) return true;
+        path.pop();
+        path.push('R');
+        if (findPath(root.right, value, path)) return true;
+        path.pop();
+        return false;
+    }
+
+    // Find the LCA of startValue and destValue
+    const lca = findLCA(root, startValue, destValue);
+
+    // Find the path from LCA to startValue and destValue
+    const pathToStart = [];
+    findPath(lca, startValue, pathToStart);
+    const pathToDest = [];
+    findPath(lca, destValue, pathToDest);
+
+    // Create the final result
+    const result = 'U'.repeat(pathToStart.length) + pathToDest.join('');
+
+    return result;
+};
