@@ -49,3 +49,8 @@ const delNodes = function (root, to_delete) {
     helper(root, true);
     return result;
 };
+
+const root = [1, 2, 3, 4, 5, 6, 7],
+    to_delete = [3, 5];
+// Output: [[1,2,null,4],[6],[7]]
+console.log(delNodes(root, to_delete));
