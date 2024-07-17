@@ -28,4 +28,24 @@
  * @param {number[]} to_delete
  * @return {TreeNode[]}
  */
-const delNodes = function (root, to_delete) {};
+const delNodes = function (root, to_delete) {
+    const toDeleteSet = new Set(to_delete);
+    const result = [];
+
+    function helper(node, isRoot) {
+        if (!node) return null;
+
+        const isDeleted = toDeleteSet.has(node.val);
+        if (isRoot && !isDeleted) {
+            result.push(node);
+        }
+
+        node.left = helper(node.left, isDeleted);
+        node.right = helper(node.right, isDeleted);
+
+        return isDeleted ? null : node;
+    }
+
+    helper(root, true);
+    return result;
+};
