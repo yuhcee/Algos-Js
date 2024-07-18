@@ -66,3 +66,9 @@ const countPairs = function (root, distance) {
     dfs(root);
     return count;
 };
+
+const root = [1, 2, 3, null, 4],
+    distance = 3;
+// Output: 1
+// Explanation: The leaf nodes of the tree are 3 and 4 and the length of the shortest path between them is 3. This is the only good pair.
+console.log(countPairs(root, distance));
