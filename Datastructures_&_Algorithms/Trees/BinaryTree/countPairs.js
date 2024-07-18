@@ -16,6 +16,12 @@
  *
  * Return *the number of good leaf node pairs in the tree*.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the `tree` is in the range `[1, 210]`.
+ * - `1 <= Node.val <= 100`
+ * - `1 <= distance <= 10`
+ *
  * @param {TreeNode} root
  * @param {number} distance
  * @return {number}
