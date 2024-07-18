@@ -78,3 +78,9 @@ const root2 = [1, 2, 3, 4, 5, 6, 7],
 // Output: 2
 // Explanation: The good pairs are [4,5] and [6,7] with shortest path = 2. The pair [4,6] is not good because the length of ther shortest path between them is 4.
 console.log(countPairs(root2, distance2));
+
+const root3 = [7, 1, 4, 6, null, 5, 3, null, null, null, null, null, 2],
+    distance3 = 3;
+// Output: 1
+// Explanation: The only good pair is [2,5].
+console.log(countPairs(root3, distance3));
