@@ -72,3 +72,9 @@ const root = [1, 2, 3, null, 4],
 // Output: 1
 // Explanation: The leaf nodes of the tree are 3 and 4 and the length of the shortest path between them is 3. This is the only good pair.
 console.log(countPairs(root, distance));
+
+const root2 = [1, 2, 3, 4, 5, 6, 7],
+    distance2 = 3;
+// Output: 2
+// Explanation: The good pairs are [4,5] and [6,7] with shortest path = 2. The pair [4,6] is not good because the length of ther shortest path between them is 4.
+console.log(countPairs(root2, distance2));
