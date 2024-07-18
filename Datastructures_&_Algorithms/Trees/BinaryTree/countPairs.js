@@ -26,4 +26,43 @@
  * @param {number} distance
  * @return {number}
  */
-const countPairs = function (root, distance) {};
+const countPairs = function (root, distance) {
+    let count = 0;
+
+    // Helper function to perform DFS
+    function dfs(node) {
+        if (!node) return [];
+
+        if (!node.left && !node.right) {
+            // It's a leaf node, return its distance as 0
+            return [1];
+        }
+
+        // Recursively find leaf distances for left and right children
+        const leftDistances = dfs(node.left);
+        const rightDistances = dfs(node.right);
+
+        // Count pairs between left and right distances
+        for (let l of leftDistances) {
+            for (let r of rightDistances) {
+                if (l + r <= distance) {
+                    count++;
+                }
+            }
+        }
+
+        // Collect all distances from the current node to the leaves in its subtree
+        const distances = [];
+        for (let l of leftDistances) {
+            if (l + 1 <= distance) distances.push(l + 1);
+        }
+        for (let r of rightDistances) {
+            if (r + 1 <= distance) distances.push(r + 1);
+        }
+
+        return distances;
+    }
+
+    dfs(root);
+    return count;
+};
