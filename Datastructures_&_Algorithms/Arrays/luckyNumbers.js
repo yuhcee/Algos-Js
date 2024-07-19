@@ -66,3 +66,11 @@ const matrix1 = [
 // Output: [12]
 // Explanation: 12 is the only lucky number since it is the minimum in its row and the maximum in its column.
 console.log(luckyNumbers(matrix1));
+
+const matrix2 = [
+    [7, 8],
+    [1, 2],
+];
+// Output: [7]
+// Explanation: 7 is the only lucky number since it is the minimum in its row and the maximum in its column.
+console.log(luckyNumbers(matrix2));
