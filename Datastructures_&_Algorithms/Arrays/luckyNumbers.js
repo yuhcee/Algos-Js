@@ -8,14 +8,43 @@
  * minimum element in its row and maximum in its column.
  *
  * **Constraints:**
- * 
+ *
  * - `m == mat.length`
  * - `n == mat[i].length`
  * - `1 <= n, m <= 50`
  * - `1 <= matrix[i][j] <= 105.`
  * - All elements in the matrix are distinct.
- * 
+ *
  * @param {number[][]} matrix
  * @return {number[]}
  */
-const luckyNumbers = function (matrix) {};
+const luckyNumbers = function (matrix) {
+    let luckyNumbers = [];
+    let minRowValues = [];
+
+    // Step 1: Find the minimum element in each row
+    for (let i = 0; i < matrix.length; i++) {
+        let minVal = Math.min(...matrix[i]);
+        minRowValues.push(minVal);
+    }
+
+    // Step 2: Check if the minimum element in each row is the maximum in its column
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            if (matrix[i][j] === minRowValues[i]) {
+                let isMaxInCol = true;
+                for (let k = 0; k < matrix.length; k++) {
+                    if (matrix[k][j] > matrix[i][j]) {
+                        isMaxInCol = false;
+                        break;
+                    }
+                }
+                if (isMaxInCol) {
+                    luckyNumbers.push(matrix[i][j]);
+                }
+            }
+        }
+    }
+
+    return luckyNumbers;
+};
