@@ -57,3 +57,12 @@ const matrix = [
 // Output: [15]
 // Explanation: 15 is the only lucky number since it is the minimum in its row and the maximum in its column.
 console.log(luckyNumbers(matrix));
+
+const matrix1 = [
+    [1, 10, 4, 2],
+    [9, 3, 8, 7],
+    [15, 16, 17, 12],
+];
+// Output: [12]
+// Explanation: 12 is the only lucky number since it is the minimum in its row and the maximum in its column.
+console.log(luckyNumbers(matrix1));
