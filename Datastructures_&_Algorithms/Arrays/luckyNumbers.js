@@ -48,3 +48,12 @@ const luckyNumbers = function (matrix) {
 
     return luckyNumbers;
 };
+
+const matrix = [
+    [3, 7, 8],
+    [9, 11, 13],
+    [15, 16, 17],
+];
+// Output: [15]
+// Explanation: 15 is the only lucky number since it is the minimum in its row and the maximum in its column.
+console.log(luckyNumbers(matrix));
