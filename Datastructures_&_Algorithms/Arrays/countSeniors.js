@@ -14,6 +14,14 @@
  * Return *the number of passengers who are **strictly more than 60 years
  * old***.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= details.length <= 100`
+ * - `details[i].length == 15`
+ * - `details[i]` consists of digits from `'0'` to `'9'`.
+ * - `details[i][10]` is either `'M'` or `'F'` or `'O'`.
+ * - The phone numbers and seat numbers of the passengers are distinct.
+ * 
  * @param {string[]} details
  * @return {number}
  */
