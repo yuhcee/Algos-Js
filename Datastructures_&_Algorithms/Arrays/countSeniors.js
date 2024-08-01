@@ -25,4 +25,17 @@
  * @param {string[]} details
  * @return {number}
  */
-const countSeniors = function (details) {};
+const countSeniors = function (details) {
+    let count = 0;
+
+    for (let i = 0; i < details.length; i++) {
+        // Extract the age part of the string (indices 11 and 12)
+        let age = parseInt(details[i].substring(11, 13));
+        // Check if age is greater than 60
+        if (age > 60) {
+            count++;
+        }
+    }
+
+    return count;
+};
