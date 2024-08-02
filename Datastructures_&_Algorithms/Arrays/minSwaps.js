@@ -65,3 +65,9 @@ const nums1 = [0, 1, 1, 1, 0, 0, 1, 1, 0];
 There is no way to group all 1's together with 0 or 1 swaps.
 Thus, the minimum number of swaps required is 2. */
 console.log(minSwaps(nums1));
+
+const nums2 = [1, 1, 0, 0, 1];
+// Output: 0
+/* Explanation: All the 1's are already grouped together due to the circular property of the array.
+Thus, the minimum number of swaps required is 0. */
+console.log(minSwaps(nums2));
