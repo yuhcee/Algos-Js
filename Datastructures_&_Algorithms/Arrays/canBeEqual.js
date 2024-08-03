@@ -49,3 +49,9 @@ const target1 = [7],
 // Output: true
 // Explanation: arr is equal to target without any reverses.
 console.log(canBeEqual(target1, arr1));
+
+const target2 = [3, 7, 9],
+    arr2 = [3, 7, 11];
+// Output: false
+// Explanation: arr does not have value 9 and it can never be converted to target.
+console.log(canBeEqual(target2, arr2));
