@@ -43,3 +43,9 @@ const target = [1, 2, 3, 4],
 3- Reverse subarray [4,3], arr becomes [1,2,3,4]
 There are multiple ways to convert arr to target, this is not the only way to do so. */
 console.log(canBeEqual(target, arr));
+
+const target1 = [7],
+    arr1 = [7];
+// Output: true
+// Explanation: arr is equal to target without any reverses.
+console.log(canBeEqual(target1, arr1));
