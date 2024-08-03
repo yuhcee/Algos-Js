@@ -8,6 +8,13 @@
  * Return *`true` if you can make `arr` equal to `target` or `false`
  * otherwise*.
  *
+ * **Constraints:**
+ *
+ * - `target.length == arr.length`
+ * - `1 <= target.length <= 1000`
+ * - `1 <= target[i] <= 1000`
+ * - `1 <= arr[i] <= 1000`
+ *
  * @param {number[]} target
  * @param {number[]} arr
  * @return {boolean}
