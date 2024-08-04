@@ -63,3 +63,10 @@ const nums1 = [1, 2, 3, 4],
 // Output: 6
 /* Explanation: The given array is the same as example 1. We have the new array [1, 2, 3, 3, 4, 5, 6, 7, 9, 10]. The sum of the numbers from index le = 3 to ri = 4 is 3 + 3 = 6. */
 console.log(rangeSum(nums1, n1, left1, right1));
+
+const nums2 = [1, 2, 3, 4],
+    n2 = 4,
+    left2 = 1,
+    right2 = 10;
+// Output: 50
+console.log(rangeSum(nums2, n2, left2, right2));
