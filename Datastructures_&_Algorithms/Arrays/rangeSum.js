@@ -23,4 +23,27 @@
  * @param {number} right
  * @return {number}
  */
-const rangeSum = function (nums, n, left, right) {};
+const rangeSum = function (nums, n, left, right) {
+    const MOD = 1e9 + 7;
+    let subarraySums = [];
+
+    // Generate all subarray sums
+    for (let i = 0; i < n; i++) {
+        let currentSum = 0;
+        for (let j = i; j < n; j++) {
+            currentSum += nums[j];
+            subarraySums.push(currentSum);
+        }
+    }
+
+    // Sort the subarray sums
+    subarraySums.sort((a, b) => a - b);
+
+    // Calculate the sum from index left to right (1-based index)
+    let result = 0;
+    for (let k = left - 1; k < right; k++) {
+        result = (result + subarraySums[k]) % MOD;
+    }
+
+    return result;
+};
