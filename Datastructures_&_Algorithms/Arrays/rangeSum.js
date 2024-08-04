@@ -55,3 +55,11 @@ const nums = [1, 2, 3, 4],
 // Output: 13
 /* Explanation: All subarray sums are 1, 3, 6, 10, 2, 5, 9, 3, 7, 4. After sorting them in non-decreasing order we have the new array [1, 2, 3, 3, 4, 5, 6, 7, 9, 10]. The sum of the numbers from index le = 1 to ri = 5 is 1 + 2 + 3 + 3 + 4 = 13. */
 console.log(rangeSum(nums, n, left, right));
+
+const nums1 = [1, 2, 3, 4],
+    n1 = 4,
+    left1 = 3,
+    right1 = 4;
+// Output: 6
+/* Explanation: The given array is the same as example 1. We have the new array [1, 2, 3, 3, 4, 5, 6, 7, 9, 10]. The sum of the numbers from index le = 3 to ri = 4 is 3 + 3 = 6. */
+console.log(rangeSum(nums1, n1, left1, right1));
