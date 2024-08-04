@@ -10,6 +10,13 @@
  * (**indexed from 1**), inclusive, in the new array*. Since the answer
  * can be a huge number return it modulo `109 + 7`.
  *
+ * **Constraints:**
+ *
+ * - `n == nums.length`
+ * - `1 <= nums.length <= 1000`
+ * - `1 <= nums[i] <= 100`
+ * - `1 <= left <= right <= n * (n + 1) / 2`
+ *
  * @param {number[]} nums
  * @param {number} n
  * @param {number} left
