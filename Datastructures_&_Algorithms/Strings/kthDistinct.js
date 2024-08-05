@@ -64,3 +64,10 @@ const arr1 = ['aaa', 'aa', 'a'],
 // Explanation:
 // All strings in arr are distinct, so the 1st string "aaa" is returned.
 console.log(kthDistinct(arr1, k1));
+
+const arr2 = ['a', 'b', 'a'],
+    k2 = 3;
+// Output: ""
+/* Explanation:
+The only distinct string is "b". Since there are fewer than 3 distinct strings, we return an empty string "". */
+console.log(kthDistinct(arr2, k2));
