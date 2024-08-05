@@ -57,3 +57,10 @@ The only distinct strings in arr are "d" and "a".
 "a" appears 2nd, so it is the 2nd distinct string.
 Since k == 2, "a" is returned.  */
 console.log(kthDistinct(arr, k));
+
+const arr1 = ['aaa', 'aa', 'a'],
+    k1 = 1;
+// Output: "aaa"
+// Explanation:
+// All strings in arr are distinct, so the 1st string "aaa" is returned.
+console.log(kthDistinct(arr1, k1));
