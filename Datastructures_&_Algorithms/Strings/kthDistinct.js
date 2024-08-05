@@ -11,6 +11,12 @@
  * Note that the strings are considered in the **order in which they
  * appear** in the array.
  *
+ * **Constraints:**
+ *
+ * - `1 <= k <= arr.length <= 1000`
+ * - `1 <= arr[i].length <= 5`
+ * - `arr[i]` consists of lowercase English letters.
+ *
  * @param {string[]} arr
  * @param {number} k
  * @return {string}
