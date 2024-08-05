@@ -21,4 +21,29 @@
  * @param {number} k
  * @return {string}
  */
-const kthDistinct = function (arr, k) {};
+const kthDistinct = function (arr, k) {
+    // Step 1: Count occurrences of each string
+    let frequency = {};
+    for (let str of arr) {
+        if (frequency[str]) {
+            frequency[str]++;
+        } else {
+            frequency[str] = 1;
+        }
+    }
+
+    // Step 2: Collect distinct strings
+    let distinctStrings = [];
+    for (let str of arr) {
+        if (frequency[str] === 1) {
+            distinctStrings.push(str);
+        }
+    }
+
+    // Step 3: Return the k-th distinct string or an empty string
+    if (distinctStrings.length >= k) {
+        return distinctStrings[k - 1];
+    } else {
+        return '';
+    }
+};
