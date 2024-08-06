@@ -21,6 +21,11 @@
  * An example mapping of letters to keys on a telephone keypad is given
  * below. Note that `1`, `*`, `#`, and `0` do **not** map to any letters.
  *
+ * **Constraints:**
+ *
+ * - `1 <= word.length <= 105`
+ * - `word` consists of lowercase English letters.
+ *
  * @param {string} word
  * @return {number}
  */
