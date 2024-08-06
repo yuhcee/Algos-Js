@@ -29,4 +29,22 @@
  * @param {string} word
  * @return {number}
  */
-const minimumPushes = function (word) {};
+const minimumPushes = function (word) {
+    // Step 1: Calculate the frequency of each character
+    const letterFreq = new Array(26).fill(0);
+    for (let c of word) {
+        letterFreq[c.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+    }
+
+    // Step 2: Sort the frequencies in descending order
+    letterFreq.sort((a, b) => b - a);
+
+    // Step 3: Calculate the minimum number of pushes
+    let totalPresses = 0;
+    for (let i = 0; i < 26; i++) {
+        if (letterFreq[i] === 0) break;
+        totalPresses += Math.floor(i / 8 + 1) * letterFreq[i];
+    }
+
+    return totalPresses;
+};
