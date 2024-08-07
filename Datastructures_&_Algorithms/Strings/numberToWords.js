@@ -63,3 +63,7 @@ const numberToWords = function (num) {
 const num = 123;
 // Output: "One Hundred Twenty Three"
 console.log(numberToWords(num));
+
+const num1 = 12345;
+// Output: "Twelve Thousand Three Hundred Forty Five"
+console.log(numberToWords(num1));
