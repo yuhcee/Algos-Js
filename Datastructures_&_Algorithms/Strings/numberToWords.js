@@ -4,6 +4,10 @@
  * Convert a non-negative integer `num` to its English words
  * representation.
  *
+ * **Constraints:**
+ *
+ * - `0 <= num <= 231 - 1`
+ *
  * @param {number} num
  * @return {string}
  */
