@@ -67,3 +67,7 @@ console.log(numberToWords(num));
 const num1 = 12345;
 // Output: "Twelve Thousand Three Hundred Forty Five"
 console.log(numberToWords(num1));
+
+const num2 = 1234567;
+// Output: "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"
+console.log(numberToWords(num2));
