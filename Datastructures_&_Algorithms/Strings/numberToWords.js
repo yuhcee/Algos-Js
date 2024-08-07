@@ -59,3 +59,7 @@ const numberToWords = function (num) {
 
     return result.trim();
 };
+
+const num = 123;
+// Output: "One Hundred Twenty Three"
+console.log(numberToWords(num));
