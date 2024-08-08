@@ -59,3 +59,10 @@ const spiralMatrixIII = function (rows, cols, rStart, cStart) {
 
     return result;
 };
+
+const rows = 1,
+    cols = 4,
+    rStart = 0,
+    cStart = 0;
+// Output: [[0,0],[0,1],[0,2],[0,3]]
+console.log(spiralMatrixIII(rows, cols, rStart, cStart));
