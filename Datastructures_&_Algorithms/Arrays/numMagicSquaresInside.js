@@ -60,3 +60,11 @@ const numMagicSquaresInside = function (grid) {
 
     return count;
 };
+
+const grid = [
+    [4, 3, 8, 4],
+    [9, 5, 1, 9],
+    [2, 7, 6, 2],
+];
+// Output: 1
+console.log(numMagicSquaresInside(grid));
