@@ -68,3 +68,7 @@ const grid = [
 ];
 // Output: 1
 console.log(numMagicSquaresInside(grid));
+
+const grid1 = [[8]];
+// Output: 0
+console.log(numMagicSquaresInside(grid1));
