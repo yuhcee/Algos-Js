@@ -11,6 +11,13 @@
  * **Note**: while a magic square can only contain numbers from 1 to 9,
  * `grid` may contain numbers up to 15.
  *
+ * **Constraints:**
+ *
+ * - `row == grid.length`
+ * - `col == grid[i].length`
+ * - `1 <= row, col <= 10`
+ * - `0 <= grid[i][j] <= 15`
+ *
  * @param {number[][]} grid
  * @return {number}
  */
