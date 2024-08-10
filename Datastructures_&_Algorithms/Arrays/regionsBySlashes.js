@@ -91,3 +91,7 @@ const regionsBySlashes = function (grid) {
 
     return uf.getCount();
 };
+
+const grid = [' /', '/ '];
+// Output: 2
+console.log(regionsBySlashes(grid));
