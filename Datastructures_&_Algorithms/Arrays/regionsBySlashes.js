@@ -99,3 +99,8 @@ console.log(regionsBySlashes(grid));
 const grid1 = [' /', '  '];
 // Output: 1
 console.log(regionsBySlashes(grid1));
+
+const grid2 = ['/\\', '\\/'];
+// Output: 5
+// Explanation: Recall that because \ characters are escaped, "\\/" refers to \/, and "/\\" refers to /\.
+console.log(regionsBySlashes(grid2));
