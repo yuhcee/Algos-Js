@@ -95,3 +95,7 @@ const regionsBySlashes = function (grid) {
 const grid = [' /', '/ '];
 // Output: 2
 console.log(regionsBySlashes(grid));
+
+const grid1 = [' /', '  '];
+// Output: 1
+console.log(regionsBySlashes(grid1));
