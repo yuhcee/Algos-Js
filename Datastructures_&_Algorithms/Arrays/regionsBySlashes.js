@@ -11,6 +11,12 @@
  * Note that backslash characters are escaped, so a `'\'` is represented as
  * `'\\'`.
  *
+ * **Constraints:**
+ *
+ * - `n == grid.length == grid[i].length`
+ * - `1 <= n <= 30`
+ * - `grid[i][j] is either '/', '\', or ' '.`
+ *
  * @param {string[]} grid
  * @return {number}
  */
