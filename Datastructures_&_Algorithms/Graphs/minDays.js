@@ -109,3 +109,9 @@ const grid = [
 /* Explanation: We need at least 2 days to get a disconnected grid.
 Change land grid[1][1] and grid[0][2] to water and get 2 disconnected island. */
 console.log(minDays(grid));
+
+const grid1 = [[1, 1]];
+// Output: 2
+// Explanation: Grid of full water is also disconnected ([[1,1]] -> [[0,0]]), 0 islands.
+console.log(minDays(grid1));
+
