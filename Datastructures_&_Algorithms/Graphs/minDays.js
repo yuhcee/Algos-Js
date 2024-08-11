@@ -13,6 +13,13 @@
  *
  * Return *the minimum number of days to disconnect the grid*.
  *
+ * **Constraints:**
+ *
+ * - `m == grid.length`
+ * - `n == grid[i].length`
+ * - `1 <= m, n <= 30`
+ * - `grid[i][j]` is either `0` or `1`.
+ *
  * @param {number[][]} grid
  * @return {number}
  */
