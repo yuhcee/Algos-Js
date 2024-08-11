@@ -98,3 +98,14 @@ const minDays = function (grid) {
     // Step 3: If not disconnected with one cell, return 2
     return 2;
 };
+
+const grid = [
+    [0, 1, 1, 0],
+    [0, 1, 1, 0],
+    [0, 0, 0, 0],
+];
+
+// Output: 2
+/* Explanation: We need at least 2 days to get a disconnected grid.
+Change land grid[1][1] and grid[0][2] to water and get 2 disconnected island. */
+console.log(minDays(grid));
