@@ -23,4 +23,78 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const minDays = function (grid) {};
+const minDays = function (grid) {
+    const rows = grid.length;
+    const cols = grid[0].length;
+
+    const directions = [
+        [0, 1],
+        [1, 0],
+        [0, -1],
+        [-1, 0],
+    ];
+
+    // Function to check if a cell is within bounds
+    const inBounds = (r, c) => r >= 0 && r < rows && c >= 0 && c < cols;
+
+    // BFS to explore the island and mark visited cells
+    const bfs = (startR, startC) => {
+        let queue = [[startR, startC]];
+        grid[startR][startC] = 0; // Mark the cell as visited
+
+        while (queue.length > 0) {
+            const [r, c] = queue.shift();
+            for (const [dr, dc] of directions) {
+                const nr = r + dr;
+                const nc = c + dc;
+                if (inBounds(nr, nc) && grid[nr][nc] === 1) {
+                    grid[nr][nc] = 0; // Mark visited
+                    queue.push([nr, nc]);
+                }
+            }
+        }
+    };
+
+    // Function to count islands using BFS
+    const countIslands = () => {
+        let islandCount = 0;
+        for (let r = 0; r < rows; r++) {
+            for (let c = 0; c < cols; c++) {
+                if (grid[r][c] === 1) {
+                    islandCount++;
+                    bfs(r, c);
+                }
+            }
+        }
+        return islandCount;
+    };
+
+    // Restore grid to original state after BFS operation
+    const restoreGrid = (originalGrid) => {
+        for (let r = 0; r < rows; r++) {
+            for (let c = 0; c < cols; c++) {
+                grid[r][c] = originalGrid[r][c];
+            }
+        }
+    };
+
+    // Step 1: Check initial number of islands
+    const originalGrid = grid.map((row) => row.slice());
+    if (countIslands() !== 1) return 0;
+    restoreGrid(originalGrid);
+
+    // Step 2: Check if removing any single cell disconnects the grid
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+            if (grid[r][c] === 1) {
+                grid[r][c] = 0;
+                if (countIslands() !== 1) return 1;
+                grid[r][c] = 1;
+                restoreGrid(originalGrid);
+            }
+        }
+    }
+
+    // Step 3: If not disconnected with one cell, return 2
+    return 2;
+};
