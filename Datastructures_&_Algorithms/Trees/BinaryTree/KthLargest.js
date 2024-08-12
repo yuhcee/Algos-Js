@@ -25,4 +25,31 @@ It is guaranteed that there will be at least k elements in the array when you se
  * @param {number} k
  * @param {number[]} nums
  */
-const KthLargest = function (k, nums) {};
+const KthLargest = function (k, nums) {
+    this.k = k;
+    this.nums = nums.sort((a, b) => b - a).slice(0, k); // Sort the initial numbers and keep only the top k elements
+};
+
+/**
+ * @param {number} val
+ * @return {number}
+ */
+KthLargest.prototype.add = function (val) {
+    if (this.nums.length < this.k) {
+        // If there are less than k elements in the array, simply push the new value and sort the array
+        this.nums.push(val);
+        this.nums.sort((a, b) => b - a);
+    } else if (val > this.nums[this.k - 1]) {
+        // If the new value is larger than the kth largest element, replace it and sort the array
+        this.nums[this.k - 1] = val;
+        this.nums.sort((a, b) => b - a);
+    }
+
+    return this.nums[this.k - 1]; // Return the kth largest element
+};
+
+/**
+ * Your KthLargest object will be instantiated and called as such:
+ * var obj = new KthLargest(k, nums)
+ * var param_1 = obj.add(val)
+ */
