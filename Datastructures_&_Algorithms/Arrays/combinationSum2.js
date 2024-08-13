@@ -19,4 +19,26 @@
  * @param {number} target
  * @return {number[][]}
  */
-const combinationSum2 = function (candidates, target) {};
+const combinationSum2 = function (candidates, target) {
+    const results = [];
+    candidates.sort((a, b) => a - b); // Sort the candidates
+
+    const backtrack = (start, target, path) => {
+        if (target === 0) {
+            results.push([...path]); // Found a valid combination
+            return;
+        }
+
+        for (let i = start; i < candidates.length; i++) {
+            if (i > start && candidates[i] === candidates[i - 1]) continue; // Skip duplicates
+            if (candidates[i] > target) break; // Stop further exploration
+
+            path.push(candidates[i]);
+            backtrack(i + 1, target - candidates[i], path); // Move forward
+            path.pop(); // Backtrack to explore another possibility
+        }
+    };
+
+    backtrack(0, target, []);
+    return results;
+};
