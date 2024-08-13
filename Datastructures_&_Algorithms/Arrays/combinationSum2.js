@@ -9,6 +9,12 @@
  *
  * **Note**: The solution set must not contain duplicate combinations.
  *
+ * **Constraints:**
+ *
+ * - `1 <= candidates.length <= 100`
+ * - `1 <= candidates[i] <= 50`
+ * - `1 <= target <= 30`
+ *
  * @param {number[]} candidates
  * @param {number} target
  * @return {number[][]}
