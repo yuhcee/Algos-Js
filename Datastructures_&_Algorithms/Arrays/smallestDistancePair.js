@@ -52,3 +52,13 @@ const smallestDistancePair = function (nums, k) {
     // The left pointer now points to the k-th smallest distance
     return left;
 };
+
+const nums = [1, 3, 1],
+    k = 1;
+// Output: 0
+/* Explanation: Here are all the pairs:
+(1,3) -> 2
+(1,1) -> 0
+(3,1) -> 2
+Then the 1st smallest distance pair is (1,1), and its distance is 0. */
+console.log(smallestDistancePair(nums, k));
