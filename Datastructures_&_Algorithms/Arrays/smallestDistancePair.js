@@ -19,4 +19,36 @@
  * @param {number} k
  * @return {number}
  */
-const smallestDistancePair = function (nums, k) {};
+const smallestDistancePair = function (nums, k) {
+    // Step 1: Sort the array
+    nums.sort((a, b) => a - b);
+
+    // Step 2: Initialize the binary search boundaries
+    let left = 0;
+    let right = nums[nums.length - 1] - nums[0];
+
+    // Step 3: Binary search on distance
+    while (left < right) {
+        let mid = Math.floor((left + right) / 2);
+
+        // Count how many pairs have a distance less than or equal to mid
+        let count = 0;
+        let j = 0;
+        for (let i = 0; i < nums.length; i++) {
+            while (j < nums.length && nums[j] - nums[i] <= mid) {
+                j++;
+            }
+            count += j - i - 1;
+        }
+
+        // Step 4: Adjust binary search bounds
+        if (count >= k) {
+            right = mid;
+        } else {
+            left = mid + 1;
+        }
+    }
+
+    // The left pointer now points to the k-th smallest distance
+    return left;
+};
