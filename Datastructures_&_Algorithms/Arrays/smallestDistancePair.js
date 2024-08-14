@@ -8,6 +8,13 @@
  * smallest **distance among all the pairs** `nums[i]` and `nums[j]` where
  * `0 <= i < j < nums.length`.
  *
+ * **Constraints:**
+ *
+ * - `n == nums.length`
+ * - `2 <= n <= 104`
+ * - `0 <= nums[i] <= 106`
+ * - `1 <= k <= n * (n - 1) / 2`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
