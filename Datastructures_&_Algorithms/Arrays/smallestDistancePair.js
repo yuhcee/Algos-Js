@@ -63,6 +63,12 @@ const nums = [1, 3, 1],
 Then the 1st smallest distance pair is (1,1), and its distance is 0. */
 console.log(smallestDistancePair(nums, k));
 
-const nums1 = [1,1,1], k1 = 2
+const nums1 = [1, 1, 1],
+    k1 = 2;
 // Output: 0
 console.log(smallestDistancePair(nums1, k1));
+
+const nums2 = [1, 6, 1],
+    k2 = 3;
+// Output: 5
+console.log(smallestDistancePair(nums2, k2));
