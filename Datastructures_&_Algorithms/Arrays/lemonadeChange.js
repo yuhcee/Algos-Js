@@ -13,6 +13,11 @@
  * customer pays, return *`true` if you can provide every customer with the
  * correct change, or `false` otherwise*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= bills.length <= 105`
+ * - `bills[i] is either 5, 10, or 20.`
+ *
  * @param {number[]} bills
  * @return {boolean}
  */
