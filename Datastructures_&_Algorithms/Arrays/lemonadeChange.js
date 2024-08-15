@@ -21,4 +21,32 @@
  * @param {number[]} bills
  * @return {boolean}
  */
-const lemonadeChange = function (bills) {};
+const lemonadeChange = function (bills) {
+    let five = 0,
+        ten = 0;
+
+    for (let bill of bills) {
+        if (bill === 5) {
+            five++; // Collect the $5 bill
+        } else if (bill === 10) {
+            if (five > 0) {
+                five--; // Give one $5 as change
+                ten++; // Collect the $10 bill
+            } else {
+                return false; // Can't provide change
+            }
+        } else {
+            // bill === 20
+            if (ten > 0 && five > 0) {
+                ten--; // Give one $10 as change
+                five--; // Give one $5 as change
+            } else if (five >= 3) {
+                five -= 3; // Give three $5 bills as change
+            } else {
+                return false; // Can't provide change
+            }
+        }
+    }
+
+    return true; // Successfully provided change for all customers
+};
