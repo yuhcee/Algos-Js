@@ -48,3 +48,7 @@ const arrays = [
 // Output: 4
 // Explanation: One way to reach the maximum distance 4 is to pick 1 in the first or third array and pick 5 in the second array.
 console.log(maxDistance(arrays));
+
+const arrays1 = [[1], [1]];
+// Output: 0
+console.log(maxDistance(arrays1));
