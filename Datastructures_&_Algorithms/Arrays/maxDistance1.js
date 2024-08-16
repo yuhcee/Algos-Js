@@ -22,4 +22,20 @@
  * @param {number[][]} arrays
  * @return {number}
  */
-const maxDistance = function (arrays) {};
+const maxDistance = function (arrays) {
+    let minVal = arrays[0][0];
+    let maxVal = arrays[0].at(-1);
+    let maxDistance = 0;
+
+    for (let i = 1; i < arrays.length; i++) {
+        let currentMin = arrays[i][0];
+        let currentMax = arrays[i].at(-1);
+
+        maxDistance = Math.max(maxDistance, Math.abs(currentMax - minVal), Math.abs(maxVal - currentMin));
+
+        minVal = Math.min(currentMin, minVal);
+        minVal = Math.min(currentMax, maxVal);
+    }
+
+    return maxDistance;
+};
