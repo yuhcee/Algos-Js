@@ -9,7 +9,16 @@
  * integers `a` and `b` to be their absolute difference `|a - b|`.
  *
  * Return *the maximum distance*.
- * 
+ *
+ * **Constraints:**
+ *
+ * - `m == arrays.length`
+ * - `2 <= m <= 105`
+ * - `1 <= arrays[i].length <= 500`
+ * - `-104 <= arrays[i][j] <= 104`
+ * - `arrays[i]` is sorted in **ascending** order.
+ * - There will be at most 105 integers in all the arrays.
+ *
  * @param {number[][]} arrays
  * @return {number}
  */
