@@ -18,6 +18,14 @@
  * - `x for x >= 0`.
  * - `-x for x < 0`.
  *
+ * **Constraints:**
+ * 
+ * - `m == points.length`
+ * - `n == points[r].length`
+ * - `1 <= m, n <= 105`
+ * - `1 <= m * n <= 105`
+ * - `0 <= points[r][c] <= 105`
+ * 
  * @param {number[][]} points
  * @return {number}
  */
