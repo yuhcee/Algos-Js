@@ -6,6 +6,10 @@
  *
  * Given an integer `n`, return the `nth` ugly number.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 1690`
+ *
  * @param {number} n
  * @return {number}
  */
