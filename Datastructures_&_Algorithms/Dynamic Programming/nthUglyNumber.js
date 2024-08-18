@@ -49,3 +49,8 @@ const n = 10;
 // Output: 12
 // Explanation: [1, 2, 3, 4, 5, 6, 8, 9, 10, 12] is the sequence of the first 10 ugly numbers.
 console.log(nthUglyNumber(n));
+
+const n1 = 1;
+// Output: 1
+// Explanation: 1 has no prime factors, therefore all of its prime factors are limited to 2, 3, and 5.
+console.log(nthUglyNumber(n1));
