@@ -18,4 +18,17 @@
  * @param {number} n
  * @return {number}
  */
-const minSteps = function (n) {};
+const minSteps = function (n) {
+    let steps = 0;
+    let factor = 2;
+
+    while (n > 1) {
+        while (n % factor === 0) {
+            steps += factor;
+            n /= factor;
+        }
+        factor++;
+    }
+
+    return steps;
+};
