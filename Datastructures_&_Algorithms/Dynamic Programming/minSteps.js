@@ -40,3 +40,7 @@ In step 1, we use Copy All operation.
 In step 2, we use Paste operation to get 'AA'.
 In step 3, we use Paste operation to get 'AAA'. */
 console.log(minSteps(n));
+
+const n1 = 1;
+// Output: 0
+console.log(minSteps(n1));
