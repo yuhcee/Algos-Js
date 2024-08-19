@@ -11,6 +11,10 @@
  * Given an integer `n`, return *the minimum number of operations to get
  * the character `'A'` exactly `n` times on the screen*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 1000`
+ *
  * @param {number} n
  * @return {number}
  */
