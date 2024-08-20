@@ -31,6 +31,7 @@ const stoneGameII = function (piles) {
     const n = piles.length;
     // Create a 2D array to store the maximum number of stones Alice can get
     const dp = new Array(n);
+
     for (let i = 0; i < n; i++) {
         dp[i] = new Array(n);
         dp[i].fill(0);
