@@ -1,21 +1,21 @@
 /**
  * **1140. Stone Game II**
  *
- * Alice and Bob continue their games with piles of stones.  There are 
- * a number of piles **arranged in a row**, and each pile has a 
- * positive integer number of stones `piles[i]`.  The objective of the 
+ * Alice and Bob continue their games with piles of stones.  There are
+ * a number of piles **arranged in a row**, and each pile has a
+ * positive integer number of stones `piles[i]`.  The objective of the
  * game is to end with the most stones.
  *
- * Alice and Bob take turns, with Alice starting first.  Initially, `M 
+ * Alice and Bob take turns, with Alice starting first.  Initially, `M
  * = 1`.
  *
- * On each player's turn, that player can take all the stones in the 
- * first `X` remaining piles, where `1 <= X <= 2M`.  Then, we set `M = 
+ * On each player's turn, that player can take all the stones in the
+ * first `X` remaining piles, where `1 <= X <= 2M`.  Then, we set `M =
  * max(M, X)`.
  *
  * The game continues until all the stones have been taken.
  *
- * Assuming Alice and Bob play optimally, return the maximum number of 
+ * Assuming Alice and Bob play optimally, return the maximum number of
  * stones Alice can get.
  *
  * **Constraints:**
@@ -25,6 +25,7 @@
  *
  * @param {number[]} piles
  * @return {number}
+ *
  */
 const stoneGameII = function (piles) {
     const n = piles.length;
@@ -66,7 +67,6 @@ const stoneGameII = function (piles) {
 
             // Calculate the maximum number of stones Alice can get in the current turn
             const aliceStones = suffixSum[i] - otherPlayerStones;
-
 
             // Update the maximum number of stones Alice can get
             maxStones = Math.max(maxStones, aliceStones);
