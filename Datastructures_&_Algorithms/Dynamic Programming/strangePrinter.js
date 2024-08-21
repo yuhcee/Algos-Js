@@ -28,6 +28,7 @@ const strangePrinter = function (s) {
     const dp = Array.from({ length: n }, () => Array(n).fill(0));
 
     // The base case is that the printer needs one turn for each character (single character substring)
+
     for (let i = 0; i < n; i++) {
         dp[i][i] = 1;
     }
