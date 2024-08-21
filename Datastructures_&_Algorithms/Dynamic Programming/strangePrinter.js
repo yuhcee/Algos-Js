@@ -19,6 +19,7 @@
  *
  * @param {string} s
  * @return {number}
+ *
  */
 const strangePrinter = function (s) {
     const n = s.length;
