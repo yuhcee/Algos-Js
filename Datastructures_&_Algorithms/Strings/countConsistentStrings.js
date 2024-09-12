@@ -57,3 +57,9 @@ const allowed1 = 'abc',
 // Output: 7
 // Explanation: All strings are consistent.
 console.log(countConsistentStrings(allowed1, words1));
+
+const allowed2 = 'cad',
+    words2 = ['cc', 'acd', 'b', 'ba', 'bac', 'bad', 'ac', 'd'];
+// Output: 4
+// Explanation: Strings "cc", "acd", "ac", and "d" are consistent.
+console.log(countConsistentStrings(allowed2, words2));
