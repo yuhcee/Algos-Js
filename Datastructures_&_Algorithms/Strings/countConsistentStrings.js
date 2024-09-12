@@ -45,3 +45,9 @@ const countConsistentStrings = function (allowed, words) {
     // Step 5: Return the total number of consistent strings
     return count;
 };
+
+const allowed = 'ab',
+    words = ['ad', 'bd', 'aaab', 'baa', 'badab'];
+// Output: 2
+// Explanation: Strings "aaab" and "baa" are consistent since they only contain characters 'a' and 'b'.
+console.log(countConsistentStrings(allowed, words));
