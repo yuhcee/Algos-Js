@@ -20,4 +20,28 @@
  * @param {string[]} words
  * @return {number}
  */
-const countConsistentStrings = function (allowed, words) {};
+const countConsistentStrings = function (allowed, words) {
+    // Step 1: Create a set of allowed characters for quick lookup
+    const allowedSet = new Set(allowed);
+    let count = 0;
+
+    // Step 2: Iterate through each word in the words array
+    for (let word of words) {
+        // Step 3: Check if all characters in the word are in the allowed set
+        let isConsistent = true;
+        for (let char of word) {
+            if (!allowedSet.has(char)) {
+                isConsistent = false;
+                break;
+            }
+        }
+
+        // Step 4: If the word is consistent, increment the counter
+        if (isConsistent) {
+            count++;
+        }
+    }
+
+    // Step 5: Return the total number of consistent strings
+    return count;
+};
