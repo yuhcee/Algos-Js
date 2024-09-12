@@ -8,6 +8,14 @@
  *
  * Return *the number of consistent strings in the array `words`*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= words.length <= 104`
+ * - `1 <= allowed.length <= 26`
+ * - `1 <= words[i].length <= 10`
+ * - The characters in `allowed` are **distinct**.
+ * - `words[i]` and `allowed` contain only lowercase English letters.
+ *
  * @param {string} allowed
  * @param {string[]} words
  * @return {number}
