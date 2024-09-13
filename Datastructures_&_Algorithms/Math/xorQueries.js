@@ -22,4 +22,26 @@
  * @param {number[][]} queries
  * @return {number[]}
  */
-const xorQueries = function (arr, queries) {};
+const xorQueries = function (arr, queries) {
+    // Step 1: Build the prefixXOR array
+    const n = arr.length;
+    const prefixXOR = new Array(n);
+    prefixXOR[0] = arr[0];
+
+    for (let i = 1; i < n; i++) {
+        prefixXOR[i] = prefixXOR[i - 1] ^ arr[i];
+    }
+
+    // Step 2: Answer the queries using the prefixXOR array
+    const result = [];
+
+    for (const [left, right] of queries) {
+        if (left === 0) {
+            result.push(prefixXOR[right]);
+        } else {
+            result.push(prefixXOR[right] ^ prefixXOR[left - 1]);
+        }
+    }
+
+    return result;
+};
