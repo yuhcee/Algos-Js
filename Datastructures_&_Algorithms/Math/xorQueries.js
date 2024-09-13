@@ -66,3 +66,13 @@ The XOR values for queries are:
 [0,3] = 1 xor 3 xor 4 xor 8 = 14 
 [3,3] = 8 */
 console.log(xorQueries(arr, queries));
+
+const arr1 = [4, 8, 2, 10],
+    queries1 = [
+        [2, 3],
+        [1, 3],
+        [0, 0],
+        [0, 3],
+    ];
+// Output: [8,0,4,4]
+console.log(xorQueries(arr1, queries1));
