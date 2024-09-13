@@ -11,6 +11,13 @@
  * Return an array `answer` where `answer[i]` is the answer to the `ith`
  * query.
  *
+ * **Constraints:**
+ *
+ * - `1 <= arr.length, queries.length <= 3 * 104`
+ * - `1 <= arr[i] <= 109`
+ * - `queries[i].length == 2`
+ * - `0 <= lefti <= righti < arr.length`
+ *
  * @param {number[]} arr
  * @param {number[][]} queries
  * @return {number[]}
