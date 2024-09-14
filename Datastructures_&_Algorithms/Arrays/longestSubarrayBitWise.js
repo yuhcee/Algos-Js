@@ -18,11 +18,32 @@
  * A **subarray** is a contiguous sequence of elements within an array.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= nums.length <= 105`
  * - `1 <= nums[i] <= 106`
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
-const longestSubarray = function (nums) {};
+const longestSubarray = function (nums) {
+    // Step 1: Find the maximum number in the array
+    const maxNum = Math.max(...nums);
+
+    // Step 2: Find the longest subarray with elements equal to maxNum
+    let longest = 0;
+    let currentLength = 0;
+
+    for (let num of nums) {
+        if (num === maxNum) {
+            currentLength++;
+        } else {
+            longest = Math.max(longest, currentLength);
+            currentLength = 0; // Reset the length since we encountered a different number
+        }
+    }
+
+    // After the loop, check once more in case the longest subarray ends at the last element
+    longest = Math.max(longest, currentLength);
+
+    return longest;
+};
