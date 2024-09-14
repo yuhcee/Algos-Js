@@ -17,6 +17,11 @@
  *
  * A **subarray** is a contiguous sequence of elements within an array.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 106`
+ * 
  * @param {number[]} nums
  * @return {number}
  */
