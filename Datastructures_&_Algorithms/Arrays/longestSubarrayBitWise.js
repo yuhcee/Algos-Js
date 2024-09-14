@@ -54,3 +54,10 @@ const nums = [1, 2, 3, 3, 2, 2];
 The maximum possible bitwise AND of a subarray is 3.
 The longest subarray with that value is [3,3], so we return 2. */
 console.log(longestSubarray(nums));
+
+const nums1 = [1, 2, 3, 4];
+// Output: 1
+/* Explanation:
+The maximum possible bitwise AND of a subarray is 4.
+The longest subarray with that value is [4], so we return 1. */
+console.log(longestSubarray(nums1));
