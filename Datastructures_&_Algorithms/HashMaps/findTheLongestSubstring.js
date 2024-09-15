@@ -46,3 +46,8 @@ const findTheLongestSubstring = function (s) {
 
     return maxLength;
 };
+
+const s = 'eleetminicoworoep';
+// Output: 13
+// Explanation: The longest substring is "leetminicowor" which contains two each of the vowels: e, i and o and zero of the vowels: a and u.
+console.log(findTheLongestSubstring(s));
