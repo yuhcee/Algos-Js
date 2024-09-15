@@ -13,4 +13,36 @@
  * @param {string} s
  * @return {number}
  */
-const findTheLongestSubstring = function (s) {};
+const findTheLongestSubstring = function (s) {
+    const vowelMap = {
+        a: 0,
+        e: 1,
+        i: 2,
+        o: 3,
+        u: 4,
+    };
+
+    let state = 0; // Bitmask representing the current parity of vowels
+    const statePos = { 0: -1 }; // To store the first occurrence of each state
+    let maxLength = 0;
+
+    for (let i = 0; i < s.length; i++) {
+        const char = s[i];
+
+        // If the character is a vowel, toggle its corresponding bit
+        if (char in vowelMap) {
+            const bit = vowelMap[char];
+            state ^= 1 << bit; // Toggle the bit corresponding to the vowel
+        }
+
+        // If the state has been seen before, calculate the length of the valid substring
+        if (state in statePos) {
+            maxLength = Math.max(maxLength, i - statePos[state]);
+        } else {
+            // Otherwise, record the first occurrence of this state
+            statePos[state] = i;
+        }
+    }
+
+    return maxLength;
+};
