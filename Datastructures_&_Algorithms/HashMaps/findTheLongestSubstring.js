@@ -5,6 +5,11 @@
  * containing each vowel an even number of times. That is, 'a', 'e', 'i',
  * 'o', and 'u' must appear an even number of times.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 5 x 10^5`
+ * - `s` contains only lowercase English letters.
+ *
  * @param {string} s
  * @return {number}
  */
