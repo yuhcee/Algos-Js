@@ -56,3 +56,8 @@ const s1 = 'leetcodeisgreat';
 // Output: 5
 // Explanation: The longest substring is "leetc" which contains two e's.
 console.log(findTheLongestSubstring(s1));
+
+const s2 = 'bcbcbc';
+// Output: 6
+// Explanation: In this case, the given string "bcbcbc" is the longest because all vowels: a, e, i, o and u appear zero times.
+console.log(findTheLongestSubstring(s2));
