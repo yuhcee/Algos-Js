@@ -5,6 +5,11 @@
  * *the minimum **minutes** difference between any two time-points in the
  * list*.
  *
+ * **Constraints:**
+ *
+ * - `2 <= timePoints.length <= 2 * 104`
+ * - `timePoints[i]` is in the format **"HH:MM"**.
+ *
  * @param {string[]} timePoints
  * @return {number}
  */
