@@ -41,3 +41,7 @@ const findMinDifference = function (timePoints) {
 const timePoints = ['23:59', '00:00'];
 // Output: 1
 console.log(findMinDifference(timePoints));
+
+const timePoints1 = ['00:00', '23:59', '00:00'];
+// Output: 0
+console.log(findMinDifference(timePoints1));
