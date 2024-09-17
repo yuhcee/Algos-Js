@@ -32,3 +32,10 @@ const uncommonFromSentences = function (s1, s2) {
 
     return Object.keys(wordCount).filter((word) => wordCount[word] === 1);
 };
+
+const s1 = 'this apple is sweet',
+    s2 = 'this apple is sour';
+
+// Output: ["sweet","sour"]
+// Explanation: The word "sweet" appears only in s1, while the word "sour" appears only in s2.
+console.log(uncommonFromSentences(s1, s2));
