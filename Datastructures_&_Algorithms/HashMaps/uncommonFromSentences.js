@@ -21,4 +21,14 @@
  * @param {string} s2
  * @return {string[]}
  */
-const uncommonFromSentences = function (s1, s2) {};
+const uncommonFromSentences = function (s1, s2) {
+    const wordCount = {};
+
+    const combinedWords = [...s1.split(' '), ...s2.split(' ')];
+
+    for (let word of combinedWords) {
+        wordCount[word] = (wordCount[word] || 0) + 1;
+    }
+
+    return Object.keys(wordCount).filter((word) => wordCount[word] === 1);
+};
