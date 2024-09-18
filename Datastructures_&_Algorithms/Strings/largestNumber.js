@@ -28,3 +28,7 @@ const largestNumber = function (nums) {
     // Handle the case where all numbers are zero
     return result[0] === '0' ? '0' : result;
 };
+
+const nums = [10, 2];
+// Output: "210"
+console.log(largestNumber(nums));
