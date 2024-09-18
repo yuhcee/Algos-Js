@@ -32,3 +32,7 @@ const largestNumber = function (nums) {
 const nums = [10, 2];
 // Output: "210"
 console.log(largestNumber(nums));
+
+const nums1 = [3, 30, 34, 5, 9];
+// Output: "9534330"
+console.log(largestNumber(nums1));
