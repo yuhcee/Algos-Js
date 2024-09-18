@@ -8,11 +8,23 @@
  * instead of an integer.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= nums.length <= 100`
  * - `0 <= nums[i] <= 109`
- * 
+ *
  * @param {number[]} nums
  * @return {string}
  */
-const largestNumber = function (nums) {};
+const largestNumber = function (nums) {
+    // Convert numbers to strings for comparison
+    nums = nums.map(String);
+
+    // Sort based on the custom comparator
+    nums.sort((a, b) => b + a - (a + b));
+
+    // Join sorted numbers to form the largest number
+    const result = nums.join('');
+
+    // Handle the case where all numbers are zero
+    return result[0] === '0' ? '0' : result;
+};
