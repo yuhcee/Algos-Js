@@ -7,6 +7,11 @@
  * Since the result may be very large, so you need to return a string
  * instead of an integer.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= nums.length <= 100`
+ * - `0 <= nums[i] <= 109`
+ * 
  * @param {number[]} nums
  * @return {string}
  */
