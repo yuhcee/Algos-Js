@@ -73,3 +73,13 @@ const expression = '2-1-1';
 ((2-1)-1) = 0 
 (2-(1-1)) = 2 */
 console.log(diffWaysToCompute(expression));
+
+const expression1 = '2*3-4*5';
+// Output: [-34,-14,-10,-10,10]
+/* Explanation:
+(2*(3-(4*5))) = -34 
+((2*3)-(4*5)) = -14 
+((2*(3-4))*5) = -10 
+(2*((3-4)*5)) = -10 
+(((2*3)-4)*5) = 10 */
+console.log(diffWaysToCompute(expression1));
