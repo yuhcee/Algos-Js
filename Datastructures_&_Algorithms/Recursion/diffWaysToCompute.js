@@ -10,6 +10,16 @@
  * 32-bit integer and the number of different results does not exceed
  * `104`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= expression.length <= 20`
+ * - `expression` consists of digits and the operator `'+'`, `'-'`, and
+ * `'*'`.
+ * - All the integer values in the input expression are in the range `[0,
+ * 99]`.
+ * - The integer values in the input expression do not have a leading
+ * `'-'` or `'+'` denoting the sign.
+ *
  * @param {string} expression
  * @return {number[]}
  */
