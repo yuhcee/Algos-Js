@@ -45,3 +45,7 @@ const shortestPalindrome = function (s) {
 
     return toAdd + s;
 };
+
+const s = "aacecaaa"
+// Output: "aaacecaaa"
+console.log(shortestPalindrome(s));
