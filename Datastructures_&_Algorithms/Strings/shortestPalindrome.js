@@ -7,6 +7,11 @@
  * Return *the shortest palindrome you can find by performing this
  * transformation*.
  *
+ * **Constraints:**
+ *
+ * - `0 <= s.length <= 5 * 104`
+ * - `s` consists of lowercase English letters only.
+ *
  * @param {string} s
  * @return {string}
  */
