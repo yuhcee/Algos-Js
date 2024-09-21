@@ -39,3 +39,7 @@ const lexicalOrder = function (n) {
 const n = 13;
 // Output: [1,10,11,12,13,2,3,4,5,6,7,8,9]
 console.log(lexicalOrder(n));
+
+const n1 = 2;
+// Output: [1,2]
+console.log(lexicalOrder(n1));
