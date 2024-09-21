@@ -7,6 +7,10 @@
  * You must write an algorithm that runs in `O(n)` time and uses `O(1)`
  * extra space.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 5 * 104`
+ *
  * @param {number} n
  * @return {number[]}
  */
