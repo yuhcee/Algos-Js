@@ -54,3 +54,8 @@ const n = 13,
 // Output: 10
 // Explanation: The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10.
 console.log(findKthNumber(n, k));
+
+const n1 = 1,
+    k1 = 1;
+// Output: 1
+console.log(findKthNumber(n1, k1));
