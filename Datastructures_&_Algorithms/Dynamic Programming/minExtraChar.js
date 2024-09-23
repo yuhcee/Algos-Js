@@ -10,14 +10,14 @@
  * Return *the **minimum** number of extra characters left over if you
  * break up `s` optimally.
  *
- * Constraints:**
- * 
+ * **Constraints:**
+ *
  * - `1 <= s.length <= 50`
  * - `1 <= dictionary.length <= 50`
  * - `1 <= dictionary[i].length <= 50`
  * - `dictionary[i]` and `s` consists of only lowercase English letters
  * - `dictionary` contains distinct words
- * 
+ *
  * @param {string} s
  * @param {string[]} dictionary
  * @return {number}
