@@ -21,6 +21,7 @@
  * @param {string} s
  * @param {string[]} dictionary
  * @return {number}
+ *
  */
 function minExtraChar(s, dictionary) {
     // Create a DP array with the size of the string length + 1,
