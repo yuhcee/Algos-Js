@@ -23,40 +23,27 @@
  * @return {number}
  *
  */
-function minExtraChar(s, dictionary) {
-    // Create a DP array with the size of the string length + 1,
-    // initialized to Infinity.
-    // dp[i] represents the minimum number of extra characters
-    // considering the first i characters of the string s.
-    const dp = new Array(s.length + 1).fill(Infinity);
+const minExtraChar = function (s, dictionary) {
+    const dictSet = new Set(dictionary); // Convert dictionary to a set for O(1) lookups
+    const n = s.length;
+    const dp = new Array(n + 1).fill(Infinity); // Initialize dp array with Infinity
+    dp[0] = 0; // Base case: no extra characters before the string starts
 
-    // For the base case, if no characters are considered from string s,
-    // then no extra characters are there.
-    dp[0] = 0;
-
-    // Loop through the string, for each index i
-    for (let i = 0; i <= s.length; i++) {
-        // For each word in the dictionary
-        for (const w of dictionary) {
-            // If the current word can be placed in s starting from index i
-            if (i + w.length <= s.length && s.slice(i, i + w.length) === w) {
-                // Update the DP array at the position where the word ends
-                // to be the minimum of its current value or dp[i].
-                // The intuition here is that if we can place the word starting from
-                // index i, then the number of extra characters remains the same.
-                dp[i + w.length] = Math.min(dp[i + w.length], dp[i]);
+    // Iterate over the string s
+    for (let i = 1; i <= n; i++) {
+        // Try every possible starting point j for substring s[j...i-1]
+        for (let j = 0; j < i; j++) {
+            const substring = s.slice(j, i);
+            if (dictSet.has(substring)) {
+                dp[i] = Math.min(dp[i], dp[j]); // No extra characters for this substring
+            } else {
+                dp[i] = Math.min(dp[i], dp[j] + i - j); // Add extra characters
             }
         }
-
-        // If we don't choose any word from the dictionary that starts at index i,
-        // then we just increment the number of extra characters by 1 from the
-        // previous count.
-        dp[i + 1] = Math.min(dp[i + 1], dp[i] + 1);
     }
 
-    // Return the minimum number of extra characters for the entire string.
-    return dp[s.length];
-}
+    return dp[n]; // Minimum extra characters for the entire string
+};
 const s = 'leetscode',
     dictionary = ['leet', 'code', 'leetcode'];
 // Output: 1
