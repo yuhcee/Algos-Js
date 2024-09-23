@@ -44,6 +44,7 @@ const minExtraChar = function (s, dictionary) {
 
     return dp[n]; // Minimum extra characters for the entire string
 };
+
 const s = 'leetscode',
     dictionary = ['leet', 'code', 'leetcode'];
 // Output: 1
