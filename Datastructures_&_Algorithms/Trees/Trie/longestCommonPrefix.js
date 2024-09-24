@@ -28,4 +28,19 @@
  * @param {number[]} arr2
  * @return {number}
  */
-const longestCommonPrefix = function (arr1, arr2) {};
+const longestCommonPrefix = function (arr1, arr2) {
+    // Step 1: Build the Trie with the elements of arr1
+    const trie = new Trie();
+    for (let num of arr1) {
+        trie.insert(num);
+    }
+
+    let maxLength = 0;
+
+    // Step 2: Find the longest common prefix in arr2
+    for (let num of arr2) {
+        maxLength = Math.max(maxLength, trie.getLongestPrefix(num));
+    }
+
+    return maxLength;
+};
