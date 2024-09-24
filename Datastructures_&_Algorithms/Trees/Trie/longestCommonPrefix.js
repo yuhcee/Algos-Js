@@ -19,6 +19,11 @@
  * Return *the length of the **longest** common prefix among all pairs. If
  * no common prefix exists among them, return `0`*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= arr1.length, arr2.length <= 5 * 104`
+ * - `1 <= arr1[i], arr2[i] <= 108`
+ *
  * @param {number[]} arr1
  * @param {number[]} arr2
  * @return {number}
