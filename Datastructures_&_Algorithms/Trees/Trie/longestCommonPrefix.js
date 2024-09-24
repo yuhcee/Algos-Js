@@ -44,3 +44,37 @@ const longestCommonPrefix = function (arr1, arr2) {
 
     return maxLength;
 };
+
+class TrieNode {
+    constructor() {
+        this.children = {};
+    }
+}
+
+class Trie {
+    constructor() {
+        this.root = new TrieNode();
+    }
+
+    insert(number) {
+        let node = this.root;
+        const str = number.toString();
+        for (let char of str) {
+            if (!node.children[char]) {
+                node.children[char] = new TrieNode();
+            }
+            node = node.children[char];
+        }
+    }
+
+    getLongestPrefix(number) {
+        let node = this.root;
+        const str = number.toString();
+        let i = 0;
+        while (i < str.length && node.children[str[i]]) {
+            node = node.children[str[i]];
+            i++;
+        }
+        return i; // Length of the longest prefix
+    }
+}
