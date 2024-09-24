@@ -88,3 +88,10 @@ const arr1 = [1, 10, 100],
 - The longest common prefix of (100, 1000) is 100.
 The longest common prefix is 100 with a length of 3. */
 console.log(longestCommonPrefix(arr1, arr2));
+
+const arr11 = [1, 2, 3],
+    arr22 = [4, 4, 4];
+// Output: 0
+/* Explanation: There exists no common prefix for any pair (arr1[i], arr2[j]), hence we return 0.
+Note that common prefixes between elements of the same array do not count. */
+console.log(longestCommonPrefix(arr11, arr22));
