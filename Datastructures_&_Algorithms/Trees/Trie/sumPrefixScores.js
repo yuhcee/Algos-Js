@@ -15,6 +15,12 @@
  *
  * **Note** that a string is considered as a prefix of itself.
  *
+ * **Constraints:**
+ *
+ * - `1 <= words.length <= 1000`
+ * - `1 <= words[i].length <= 1000`
+ * - `words[i]` consists of lowercase English letters.
+ *
  * @param {string[]} words
  * @return {number[]}
  */
