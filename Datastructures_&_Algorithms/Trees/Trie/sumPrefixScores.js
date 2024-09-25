@@ -25,3 +25,41 @@
  * @return {number[]}
  */
 const sumPrefixScores = function (words) {};
+
+class TrieNode {
+    constructor() {
+        this.children = {};
+        this.count = 0; // Keeps track of how many words have this prefix
+    }
+}
+
+class Trie {
+    constructor() {
+        this.root = new TrieNode();
+    }
+
+    // Insert a word into the Trie
+    insert(word) {
+        let node = this.root;
+        for (let char of word) {
+            if (!node.children[char]) {
+                node.children[char] = new TrieNode();
+            }
+            node = node.children[char];
+            node.count += 1; // Increment the count for this prefix
+        }
+    }
+
+    // Get the sum of prefix scores for a word
+    getPrefixScore(word) {
+        let node = this.root;
+        let score = 0;
+        for (let char of word) {
+            if (node.children[char]) {
+                node = node.children[char];
+                score += node.count; // Add the count of this prefix
+            }
+        }
+        return score;
+    }
+}
