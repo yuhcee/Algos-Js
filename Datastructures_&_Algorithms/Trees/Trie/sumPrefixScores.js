@@ -24,7 +24,22 @@
  * @param {string[]} words
  * @return {number[]}
  */
-const sumPrefixScores = function (words) {};
+const sumPrefixScores = function (words) {
+    const trie = new Trie();
+    const result = [];
+
+    // Step 1: Insert all words into the Trie
+    for (let word of words) {
+        trie.insert(word);
+    }
+
+    // Step 2: Calculate the sum of prefix scores for each word
+    for (let word of words) {
+        result.push(trie.getPrefixScore(word));
+    }
+
+    return result;
+};
 
 class TrieNode {
     constructor() {
