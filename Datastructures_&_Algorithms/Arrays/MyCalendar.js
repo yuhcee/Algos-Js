@@ -23,6 +23,11 @@ var MyCalendar = function () {
  * booking**. Otherwise, return false and do not add the event to the 
  * calendar.
  *
+ * **Constraints:**
+ * 
+ * - `0 <= start < end <= 109`
+ * - `At most `1000` calls will be made to `book`.
+ * 
  * @param {number} start
  * @param {number} end
  * @return {boolean}
