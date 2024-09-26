@@ -52,8 +52,7 @@ MyCalendar.prototype.book = function (start, end) {
  */
 
 const input = ['MyCalendar', 'book', 'book', 'book'][([], [10, 20], [15, 25], [20, 30])];
-// Output
-// [null, true, false, true]
+// Output [null, true, false, true]
 
 /* Explanation
 MyCalendar myCalendar = new MyCalendar();
