@@ -28,5 +28,9 @@
  * @param {number} end
  * @return {boolean}
  */
+var MyCalendarTwo = function () {
+    this.bookings = []; // Stores single bookings
+    this.overlaps = []; // Stores double bookings
+};
 
 MyCalendarTwo.prototype.book = function (start, end) {};
