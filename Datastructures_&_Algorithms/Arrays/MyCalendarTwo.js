@@ -33,4 +33,29 @@ var MyCalendarTwo = function () {
     this.overlaps = []; // Stores double bookings
 };
 
-MyCalendarTwo.prototype.book = function (start, end) {};
+MyCalendarTwo.prototype.book = function (start, end) {
+    // Check for triple booking by comparing with double bookings
+    for (let [overlapStart, overlapEnd] of this.overlaps) {
+        if (start < overlapEnd && end > overlapStart) {
+            return false; // Triple booking detected
+        }
+    }
+
+    // Check for overlaps with single bookings and update double bookings
+    for (let [bookedStart, bookedEnd] of this.bookings) {
+        if (start < bookedEnd && end > bookedStart) {
+            // Record the overlap in the "double bookings" array
+            this.overlaps.push([Math.max(start, bookedStart), Math.min(end, bookedEnd)]);
+        }
+    }
+
+    // Add the new booking to the list of single bookings
+    this.bookings.push([start, end]);
+    return true; // Successfully booked
+};
+
+/**
+ * Your MyCalendarTwo object will be instantiated and called as such:
+ * var obj = new MyCalendarTwo()
+ * var param_1 = obj.book(start,end)
+ */
