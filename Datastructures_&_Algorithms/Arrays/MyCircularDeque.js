@@ -33,4 +33,10 @@
  *
  * @param {number} k
  */
-const MyCircularDeque = function (k) {};
+const MyCircularDeque = function (k) {
+    this.k = k; // Maximum size of the deque
+    this.size = 0; // Current size of the deque
+    this.data = new Array(k); // Array to store the deque elements
+    this.front = 0; // Pointer to the front of the deque
+    this.rear = k - 1; // Pointer to the rear of the deque
+};
