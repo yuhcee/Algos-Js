@@ -9,7 +9,7 @@
  * `k`.
  * - `boolean insertFront()` Adds an item at the front of Deque. Returns
  * `true` if the operation is successful, or `false` otherwise.
- * - `boolean insertLast()` Adds an item at the rear of Deque. Returns 
+ * - `boolean insertLast()` Adds an item at the rear of Deque. Returns
  * `true` if the operation is successful, or `false` otherwise.
  * - `boolean deleteFront()` Deletes an item from the front of Deque.
  * Returns `true` if the operation is successful, or `false` otherwise.
@@ -23,6 +23,13 @@
  * otherwise.
  * - `boolean isFull()` Returns `true` if the deque is full, or `false`
  * otherwise.
+ *
+ * **Constraints:**
+ *
+ * - `1 <= k <= 1000`
+ * - `0 <= value <= 1000`
+ * - At most `2000` calls will be made to `insertFront`, `insertLast`,
+ * `deleteFront`, `deleteLast`, `getFront`, `getRear`, `isEmpty`, `isFull`.
  *
  * @param {number} k
  */
