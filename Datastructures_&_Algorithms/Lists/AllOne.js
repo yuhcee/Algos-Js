@@ -172,3 +172,16 @@ AllOne.prototype.getMinKey = function () {
  * var maxKey = obj.getMaxKey()
  * var minKey = obj.getMinKey()
  */
+
+const Input = ['AllOne', 'inc', 'inc', 'getMaxKey', 'getMinKey', 'inc', 'getMaxKey', 'getMinKey'][([], ['hello'], ['hello'], [], [], ['leet'], [], [])];
+// Output[(null, null, null, 'hello', 'hello', null, 'hello', 'leet')];
+
+/* Explanation
+AllOne allOne = new AllOne();
+allOne.inc("hello");
+allOne.inc("hello");
+allOne.getMaxKey(); // return "hello"
+allOne.getMinKey(); // return "hello"
+allOne.inc("leet");
+allOne.getMaxKey(); // return "hello"
+allOne.getMinKey(); // return "leet" */
