@@ -21,6 +21,14 @@
  * - **Note** that each function must run in `O(1)` average time
  * complexity.
  *
+ * **Constraints:
+ *
+ * - `1 <= key.length <= 10`
+ * - `key` consists of lowercase English letters.
+ * - It is guaranteed that for each call to `dec`, `key` is existing in
+ * the data structure.
+ * - At most `5 * 104` calls will be made to `inc`, `dec`, `getMaxKey`,
+ * and `getMinKey`.
  *
  */
 const DoublyLinkedListNode = function (frequency, key, previous, next) {
