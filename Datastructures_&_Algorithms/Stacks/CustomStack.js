@@ -15,6 +15,13 @@
  * stack by `val`. If there are less than `k` elements in the stack, increment
  * all the elements in the stack.
  *
+ * **Constraints:**
+ *
+ * - `1 <= maxSize, x, k <= 1000`
+ * - `0 <= val <= 100`
+ * - At most `1000` calls will be made to each method of `increment`, `push` and `pop` each
+ * separately.
+ *
  * @param {number} maxSize
  */
 const CustomStack = function (maxSize) {};
