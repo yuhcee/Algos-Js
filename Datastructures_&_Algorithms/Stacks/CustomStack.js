@@ -24,4 +24,61 @@
  *
  * @param {number} maxSize
  */
-const CustomStack = function (maxSize) {};
+const CustomStack = function (maxSize) {
+    this.stack = []; // Array to represent the stack
+    this.maxSize = maxSize; // Maximum size of the stack
+    this.incrementTracker = []; // Tracks the incremental additions to elements
+};
+
+/**
+ * @param {number} x
+ * @return {void}
+ */
+CustomStack.prototype.push = function (x) {
+    // Push only if the current size is less than maxSize
+    if (this.stack.length < this.maxSize) {
+        this.stack.push(x);
+        this.incrementTracker.push(0); // Initialize the increment tracker for the new element
+    }
+};
+
+/**
+ * @return {number}
+ */
+CustomStack.prototype.pop = function () {
+    // Pop and return the top element or -1 if the stack is empty
+    if (this.stack.length === 0) {
+        return -1;
+    }
+
+    let index = this.stack.length - 1;
+
+    // Apply the increment to the current top element
+    if (index > 0) {
+        this.incrementTracker[index - 1] += this.incrementTracker[index];
+    }
+
+    let poppedValue = this.stack.pop() + this.incrementTracker.pop(); // Add the incremental value to the popped value
+    return poppedValue;
+};
+
+/**
+ * @param {number} k
+ * @param {number} val
+ * @return {void}
+ */
+CustomStack.prototype.increment = function (k, val) {
+    // Increment the bottom k elements
+    let limit = Math.min(k, this.stack.length); // Apply the increment to at most the stack's size
+    if (limit > 0) {
+        this.incrementTracker[limit - 1] += val; // Add val to the last element in the range of bottom k elements
+    }
+};
+
+/**
+ * Your CustomStack object will be instantiated and called as such:
+ * var obj = new CustomStack(maxSize)
+ * obj.push(x)
+ * var param_2 = obj.pop()
+ * obj.increment(k,val)
+ */
