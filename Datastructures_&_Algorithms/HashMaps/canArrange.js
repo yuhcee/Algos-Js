@@ -54,3 +54,9 @@ const arr1 = [1, 2, 3, 4, 5, 6],
 // Output: true
 // Explanation: Pairs are (1,6),(2,5) and(3,4).
 console.log(canArrange(arr1, k1));
+
+const arr2 = [1, 2, 3, 4, 5, 6],
+    k2 = 10;
+// Output: false
+// Explanation: You can try all possible pairs to see that there is no way to divide arr into 3 pairs each with sum divisible by 10.
+console.log(canArrange(arr2, k2));
