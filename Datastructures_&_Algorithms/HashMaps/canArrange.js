@@ -8,6 +8,14 @@
  *
  * Return *`true` If you can find a way to do that or `false` otherwise*.
  *
+ * **Constraints:**
+ *
+ * - `arr.length == n`
+ * - `1 <= n <= 105`
+ * - `n` is even.
+ * - `-109 <= arr[i] <= 109`
+ * - `1 <= k <= 105`
+ *
  * @param {number[]} arr
  * @param {number} k
  * @return {boolean}
