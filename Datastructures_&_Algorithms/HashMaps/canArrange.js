@@ -48,3 +48,9 @@ const arr = [1, 2, 3, 4, 5, 10, 6, 7, 8, 9],
 // Output: true
 // Explanation: Pairs are (1,9),(2,8),(3,7),(4,6) and (5,10).
 console.log(canArrange(arr, k));
+
+const arr1 = [1, 2, 3, 4, 5, 6],
+    k1 = 7;
+// Output: true
+// Explanation: Pairs are (1,6),(2,5) and(3,4).
+console.log(canArrange(arr1, k1));
