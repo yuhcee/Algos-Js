@@ -10,6 +10,11 @@
  * the same.
  * - Rank should be as small as possible.
  *
+ * **Constraints:**
+ *
+ * - `0 <= arr.length <= 105`
+ * - `-109 <= arr[i] <= 109`
+ *
  * @param {number[]} arr
  * @return {number[]}
  */
