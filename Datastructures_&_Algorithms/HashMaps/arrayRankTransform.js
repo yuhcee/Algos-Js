@@ -18,4 +18,16 @@
  * @param {number[]} arr
  * @return {number[]}
  */
-const arrayRankTransform = function (arr) {};
+const arrayRankTransform = function (arr) {
+    if (arr.length === 0) return 0;
+
+    const sortedUnique = [...new Set(arr)].sort((a, b) => a - b);
+
+    const rankMap = new Map();
+
+    sortedUnique.forEach((value, index) => {
+        rankMap.set(value, index + 1);
+    });
+
+    return arr.map((value) => rankMap.get(value));
+};
