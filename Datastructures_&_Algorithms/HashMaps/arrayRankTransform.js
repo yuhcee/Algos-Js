@@ -36,3 +36,8 @@ const arr = [40, 10, 20, 30];
 // Output: [4,1,2,3]
 // Explanation: 40 is the largest element. 10 is the smallest. 20 is the second smallest. 30 is the third smallest.
 console.log(arrayRankTransform(arr));
+
+const arr1 = [100, 100, 100];
+// Output: [1,1,1]
+// Explanation: Same elements share the same rank.
+console.log(arrayRankTransform(arr1));
