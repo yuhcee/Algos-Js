@@ -10,6 +10,12 @@
  *
  * A **subarray** is defined as a contiguous block of elements in the array.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 109`
+ * - `1 <= p <= 109`
+ * 
  * @param {number[]} nums
  * @param {number} p
  * @return {number}
