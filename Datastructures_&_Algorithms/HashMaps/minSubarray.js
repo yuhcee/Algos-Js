@@ -64,3 +64,8 @@ const nums1 = [6, 3, 5, 2],
 // Explanation: We cannot remove a single element to get a sum divisible by 9. The best way is to remove the subarray [5,2], leaving us with [6,3] with sum 9.
 console.log(minSubarray(nums1, p1));
 
+const nums2 = [1, 2, 3],
+    p2 = 3;
+// Output: 0
+// Explanation: Here the sum is 6. which is already divisible by 3. Thus we do not need to remove anything.
+console.log(minSubarray(nums2, p2));
