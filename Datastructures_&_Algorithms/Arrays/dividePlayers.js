@@ -56,3 +56,11 @@ const skill = [3, 2, 5, 1, 3, 4];
 Divide the players into the following teams: (1, 5), (2, 4), (3, 3), where each team has a total skill of 6.
 The sum of the chemistry of all the teams is: 1 * 5 + 2 * 4 + 3 * 3 = 5 + 8 + 9 = 22. */
 console.log(dividePlayers(skill));
+
+const skill1 = [3, 4];
+// Output: 12
+/* Explanation: 
+The two players form a team with a total skill of 7.
+The chemistry of the team is 3 * 4 = 12.
+ */
+console.log(dividePlayers(skill1));
