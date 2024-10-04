@@ -64,3 +64,9 @@ The two players form a team with a total skill of 7.
 The chemistry of the team is 3 * 4 = 12.
  */
 console.log(dividePlayers(skill1));
+
+const skill2 = [1, 1, 2, 3];
+// Output: -1
+/* Explanation: 
+There is no way to divide the players into teams such that the total skill of each team is equal. */
+console.log(dividePlayers(skill2));
