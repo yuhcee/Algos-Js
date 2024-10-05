@@ -1,15 +1,15 @@
 /**
  * **567. Permutation in String**
  *
- * Given two strings `s1` and `s2`, return *`true` if `s2` contains a 
+ * Given two strings `s1` and `s2`, return *`true` if `s2` contains a
  * permutation of s1, or `false`
  * otherwise*.
  *
- * In other words, return `true` if one of `s1`'s permutations is the 
+ * In other words, return `true` if one of `s1`'s permutations is the
  * substring of `s2`.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= s1.length, s2.length <= 104`
  * - `s1` and `s2` consist of lowercase English letters`.
  *
@@ -18,40 +18,33 @@
  * @return {boolean}
  */
 const checkInclusion = (s1, s2) => {
-    // Get the length of s1 and s2
-    let s1Len = s1.length;
-    let s2Len = s2.length;
+    if (s1.length > s2.length) return false;
 
-    // Create an array to store the frequency of characters in s1
-    let s1Freq = new Array(26).fill(0);
+    const s1Count = new Array(26).fill(0); // to store frequency of characters in s1
+    const s2Count = new Array(26).fill(0); // to store frequency of current window in s2
 
-    // Loop through s1 and increase the frequency of each character in s1Freq
-    for (let i = 0; i < s1Len; i++) {
-        s1Freq[s1.charCodeAt(i) - 97]++;
+    // Fill the frequency array for s1 and the first window of s2
+    for (let i = 0; i < s1.length; i++) {
+        s1Count[s1.charCodeAt(i) - 97]++;
+        s2Count[s2.charCodeAt(i) - 97]++;
     }
 
-    // Create a window of size s1Len in s2 and check if the frequency of characters in the window matches the frequency in s1Freq
-    for (let i = 0; i <= s2Len - s1Len; i++) {
-        let s2Freq = new Array(26).fill(0);
-        for (let j = 0; j < s1Len; j++) {
-            s2Freq[s2.charCodeAt(i + j) - 97]++;
-        }
-        if (matches(s1Freq, s2Freq)) {
-            return true;
+    // Check if the two frequency arrays are equal initially
+    const matches = () => s1Count.every((count, index) => count === s2Count[index]);
+
+    // Sliding window over s2
+    for (let i = 0; i <= s2.length - s1.length; i++) {
+        if (matches()) return true;
+
+        // Slide the window: remove the character at the left and add the one at the right
+        if (i + s1.length < s2.length) {
+            s2Count[s2.charCodeAt(i) - 97]--; // remove left char
+            s2Count[s2.charCodeAt(i + s1.length) - 97]++; // add right char
         }
     }
-    return false;
+
+    return matches();
 };
-
-// Helper function to check if the frequency of characters in two arrays match
-function matches(s1Freq, s2Freq) {
-    for (let i = 0; i < 26; i++) {
-        if (s1Freq[i] !== s2Freq[i]) {
-            return false;
-        }
-    }
-    return true;
-}
 
 const s1 = 'ab',
     s2 = 'eidbaooo';
