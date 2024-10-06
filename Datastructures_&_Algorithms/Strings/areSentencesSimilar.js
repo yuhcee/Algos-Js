@@ -65,3 +65,10 @@ const sentence1 = 'My name is Haley',
 /* Explanation:
 sentence2 can be turned to sentence1 by inserting "name is" between "My" and "Haley". */
 console.log(areSentencesSimilar(sentence1, sentence2));
+
+const sentence11 = 'of',
+    sentence21 = 'A lot of words';
+// Output: false
+/* Explanation:
+No single sentence can be inserted inside one of the sentences to make it equal to the other. */
+console.log(areSentencesSimilar(sentence11, sentence21));
