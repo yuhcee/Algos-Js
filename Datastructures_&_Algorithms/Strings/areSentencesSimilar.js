@@ -58,3 +58,10 @@ const areSentencesSimilar = function (sentence1, sentence2) {
     // If all words from one sentence are matched, return true
     return i + j === Math.min(words1.length, words2.length);
 };
+
+const sentence1 = 'My name is Haley',
+    sentence2 = 'My Haley';
+// Output: true
+/* Explanation:
+sentence2 can be turned to sentence1 by inserting "name is" between "My" and "Haley". */
+console.log(areSentencesSimilar(sentence1, sentence2));
