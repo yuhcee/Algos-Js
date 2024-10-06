@@ -72,3 +72,10 @@ const sentence11 = 'of',
 /* Explanation:
 No single sentence can be inserted inside one of the sentences to make it equal to the other. */
 console.log(areSentencesSimilar(sentence11, sentence21));
+
+const sentence12 = 'Eating right now',
+    sentence22 = 'Eating';
+// Output: true
+/* Explanation:
+sentence2 can be turned to sentence1 by inserting "right now" at the end of the sentence. */
+console.log(areSentencesSimilar(sentence12, sentence22));
