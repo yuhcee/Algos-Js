@@ -26,6 +26,14 @@
  * `sentence1` and `sentence2` are **similar**. Otherwise, return
  * **false**.
  *
+ * **Constraints:**
+ *
+ * - `1 <= sentence1.length, sentence2.length <= 100`
+ * - `sentence1` and `sentence2` consist of lowercase and uppercase
+ * English letters and spaces.
+ * - The words in `sentence1` and `sentence2` are separated by a
+ * single space.
+ *
  * @param {string} sentence1
  * @param {string} sentence2
  * @return {boolean}
