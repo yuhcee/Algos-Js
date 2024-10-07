@@ -14,6 +14,11 @@
  * **Note** that the string concatenates after removing the
  * substring and could produce new `"AB"` or `"CD"` substrings.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 100`
+ * - `s` consists only of uppercase English letters.
+ *
  * @param {string} s
  * @return {number}
  */
