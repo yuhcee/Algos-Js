@@ -48,3 +48,8 @@ const s = 'ABFCACDB';
 So the resulting length of the string is 2.
 It can be shown that it is the minimum length that we can obtain. */
 console.log(minLength(s));
+
+const s1 = 'ACBBD';
+// Output: 5
+/* Explanation: We cannot do any operations on the string so the length remains the same. */
+console.log(minLength(s1));
