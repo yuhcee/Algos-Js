@@ -22,4 +22,19 @@
  * @param {string} s
  * @return {number}
  */
-const minLength = function (s) {};
+const minLength = function (s) {
+    let stack = [];
+
+    for (let char of s) {
+        if (stack.length > 0 && ((stack[stack.length - 1] === 'A' && char === 'B') || (stack[stack.length - 1] === 'C' && char === 'D'))) {
+            // Pop the last element from stack because we found a removable pattern
+            stack.pop();
+        } else {
+            // Otherwise, push the current character onto the stack
+            stack.push(char);
+        }
+    }
+
+    // The remaining length of the stack is the minimum length of the string
+    return stack.length;
+};
