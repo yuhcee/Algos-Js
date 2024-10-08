@@ -64,3 +64,8 @@ const s1 = ']]][[[';
 - Swap index 1 with index 5. s = "[[][]]".
 The resulting string is "[[][]]". */
 console.log(minSwaps(s1));
+
+const s2 = '[]';
+// Output: 0
+// Explanation: The string is already balanced.
+console.log(minSwaps(s1));
