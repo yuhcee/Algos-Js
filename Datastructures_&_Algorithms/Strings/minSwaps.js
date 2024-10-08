@@ -29,4 +29,24 @@
  * @param string s
  * @return number**
  */
-const minSwaps = function (s) {};
+const minSwaps = function (s) {
+    let imbalance = 0; // To track the current balance of brackets
+    let maxImbalance = 0; // Track the maximum imbalance encountered
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '[') {
+            imbalance++; // Increase balance for each opening bracket
+        } else {
+            imbalance--; // Decrease balance for each closing bracket
+        }
+
+        // If the imbalance goes negative, we have more closing brackets than opening
+        if (imbalance < 0) {
+            maxImbalance = Math.max(maxImbalance, -imbalance);
+        }
+    }
+
+    // Minimum number of swaps needed to balance the string
+    // Each swap can fix two unbalanced brackets (one closing and one opening)
+    return Math.ceil(maxImbalance / 2);
+};
