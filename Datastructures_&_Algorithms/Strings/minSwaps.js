@@ -50,3 +50,9 @@ const minSwaps = function (s) {
     // Each swap can fix two unbalanced brackets (one closing and one opening)
     return Math.ceil(maxImbalance / 2);
 };
+
+const s = '][][';
+// Output: 1
+/* Explanation: You can make the string balanced by swapping index 0 with index 3.
+The resulting string is "[[]]". */
+console.log(minSwaps(s));
