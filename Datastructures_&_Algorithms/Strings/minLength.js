@@ -26,7 +26,7 @@ const minLength = function (s) {
     let stack = [];
 
     for (let char of s) {
-        if (stack.length > 0 && ((stack[stack.length - 1] === 'A' && char === 'B') || (stack[stack.length - 1] === 'C' && char === 'D'))) {
+        if (stack.length > 0 && ((stack.at(-1) === 'A' && char === 'B') || (stack.at(-1) === 'C' && char === 'D'))) {
             // Pop the last element from stack because we found a removable pattern
             stack.pop();
         } else {
