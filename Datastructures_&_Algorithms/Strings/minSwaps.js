@@ -17,6 +17,15 @@
  *
  * Return *the **minimum** number of swaps to make s **balanced***.
  *
+ * **Constraints:**
+ *
+ * - `n == s.length`
+ * - `2 <= n <= 106`
+ * - `n` is even.
+ * - `s[i]` is either `'['` or `']'`.
+ * - The number of opening brackets `'['` equals `n / 2`, and the number
+ * of closing brackets `']'` equals `n / 2`.
+ *
  * @param string s
  * @return number**
  */
