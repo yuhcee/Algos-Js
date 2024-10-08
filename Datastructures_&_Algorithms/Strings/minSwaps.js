@@ -56,3 +56,11 @@ const s = '][][';
 /* Explanation: You can make the string balanced by swapping index 0 with index 3.
 The resulting string is "[[]]". */
 console.log(minSwaps(s));
+
+const s1 = ']]][[[';
+// Output: 2
+/* Explanation: You can do the following to make the string balanced:
+- Swap index 0 with index 4. s = "[]][][".
+- Swap index 1 with index 5. s = "[[][]]".
+The resulting string is "[[][]]". */
+console.log(minSwaps(s1));
