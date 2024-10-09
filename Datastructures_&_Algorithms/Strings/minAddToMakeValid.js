@@ -29,3 +29,7 @@ const minAddToMakeValid = function (s) {};
 const s = '())';
 // Output: 1
 console.log(minAddToMakeValid(s));
+
+const s1 = '(((';
+// Output: 3
+console.log(minAddToMakeValid(s1));
