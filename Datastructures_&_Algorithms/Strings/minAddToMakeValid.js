@@ -24,7 +24,25 @@
  * @param string s
  * @return number
  */
-const minAddToMakeValid = function (s) {};
+const minAddToMakeValid = function (s) {
+    let balance = 0; // Keeps track of unmatched opening brackets '('
+    let unmatchedClosing = 0; // Tracks unmatched closing brackets ')'
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '(') {
+            balance++; // Opening bracket, needs a closing bracket
+        } else {
+            if (balance > 0) {
+                balance--; // A closing bracket matches an opening one
+            } else {
+                unmatchedClosing++; // No opening bracket to match, so it's unmatched
+            }
+        }
+    }
+
+    // The total number of additions needed is unmatched opening + unmatched closing
+    return balance + unmatchedClosing;
+};
 
 const s = '())';
 // Output: 1
