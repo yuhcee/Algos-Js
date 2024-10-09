@@ -21,7 +21,11 @@
  * - `1 <= s.length <= 1000`
  * - `s[i]` is either `'('` or `')'`.
  *
- * @param {string} s
- * @return {number}
+ * @param string s
+ * @return number
  */
 const minAddToMakeValid = function (s) {};
+
+const s = '())';
+// Output: 1
+console.log(minAddToMakeValid(s));
