@@ -15,4 +15,25 @@
  * @param {number[]} nums
  * @return {number}
  */
-const maxWidthRamp = function (nums) {};
+const maxWidthRamp = function (nums) {
+    let stack = [];
+    let maxWidth = 0;
+
+    // Step 1: Build a decreasing stack with indices of nums
+    for (let i = 0; i < nums.length; i++) {
+        if (stack.length === 0 || nums[stack[stack.length - 1]] > nums[i]) {
+            stack.push(i);
+        }
+    }
+
+    // Step 2: Traverse from the end and check for ramps
+    for (let j = nums.length - 1; j >= 0; j--) {
+        // Find the farthest i such that nums[i] <= nums[j]
+        while (stack.length > 0 && nums[stack[stack.length - 1]] <= nums[j]) {
+            let i = stack.pop();
+            maxWidth = Math.max(maxWidth, j - i);
+        }
+    }
+
+    return maxWidth;
+};
