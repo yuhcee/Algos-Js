@@ -21,6 +21,15 @@
  * Return the **chair number** that the friend numbered targetFriend will sit
  * on.
  *
+ * **Constraints:**
+ *
+ * - `n == times.length`
+ * - `2 <= n <= 104`
+ * - `times[i].length == 2`
+ * - `1 <= arrivali < leavingi <= 105`
+ * - `0 <= targetFriend <= n - 1`
+ * - Each `arrivali` time is **distinct**.
+ *
  * @param {number[][]} times
  * @param {number} targetFriend
  * @return {number}
