@@ -155,3 +155,20 @@ const times = [
 - Friend 2 arrives at time 4 and sits on chair 0.
 Since friend 1 sat on chair 1, we return 1. */
 console.log(smallestChair(times, targetFriend));
+
+const times1 = [
+        [3, 10],
+        [1, 5],
+        [2, 6],
+    ],
+    targetFriend1 = 0;
+// Output: 2
+/* Explanation: 
+- Friend 1 arrives at time 1 and sits on chair 0.
+- Friend 2 arrives at time 2 and sits on chair 1.
+- Friend 0 arrives at time 3 and sits on chair 2.
+- Friend 1 leaves at time 5 and chair 0 becomes empty.
+- Friend 2 leaves at time 6 and chair 1 becomes empty.
+- Friend 0 leaves at time 10 and chair 2 becomes empty.
+Since friend 0 sat on chair 2, we return 2. */
+console.log(smallestChair(times1, targetFriend1));
