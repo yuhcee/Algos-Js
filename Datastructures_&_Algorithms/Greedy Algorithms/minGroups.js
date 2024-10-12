@@ -60,3 +60,13 @@ const intervals = [
 - Group 3: [1, 10].
 It can be proven that it is not possible to divide the intervals into fewer than 3 groups. */
 console.log(minGroups(intervals));
+
+const intervals1 = [
+    [1, 3],
+    [5, 6],
+    [8, 10],
+    [11, 13],
+];
+// Output: 1
+// Explanation: None of the intervals overlap, so we can put all of them in one group.
+console.log(minGroups(intervals1));
