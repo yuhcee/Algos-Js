@@ -13,6 +13,12 @@
  * Two intervals **intersect** if there is at least one common number between
  * them. For example, the intervals `[1, 5]` and `[5, 8]` intersect.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= intervals.length <= 105`
+ * - `intervals[i].length == 2`
+ * - `1 <= lefti <= righti <= 106`
+ * 
  * @param {number[][]} intervals
  * @return {number}
  */
