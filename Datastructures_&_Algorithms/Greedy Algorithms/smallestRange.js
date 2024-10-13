@@ -63,3 +63,11 @@ List 1: [4, 10, 15, 24,26], 24 is in range [20,24].
 List 2: [0, 9, 12, 20], 20 is in range [20,24].
 List 3: [5, 18, 22, 30], 22 is in range [20,24]. */
 console.log(smallestRange(nums));
+
+const nums1 = [
+    [1, 2, 3],
+    [1, 2, 3],
+    [1, 2, 3],
+];
+// Output: [1,1]
+console.log(smallestRange(nums1));
