@@ -8,6 +8,14 @@
  * We define the range `[a, b]` is smaller than range `[c, d]` if `b - a < d -
  * c` **or** `a < c` if `b - a == d - c`.
  *
+ * **Constraints:**
+ *
+ * - `nums.length == k`
+ * - `1 <= k <= 3500`
+ * - `1 <= nums[i].length <= 50`
+ * - `-105 <= nums[i][j] <= 105`
+ * - `nums[i]` is sorted in **non-decreasing** order.
+ *
  * @param {number[][]} nums
  * @return {number[]}
  */
