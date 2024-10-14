@@ -50,3 +50,9 @@ const maxKelements = function (nums, k) {
 
     return score;
 };
+
+const nums = [10, 10, 10, 10, 10],
+    k = 5;
+// Output: 50
+/* Explanation: Apply the operation to each array element exactly once. The final score is 10 + 10 + 10 + 10 + 10 = 50. */
+console.log(maxKelements(nums, k));
