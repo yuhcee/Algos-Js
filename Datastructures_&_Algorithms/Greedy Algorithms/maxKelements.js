@@ -15,6 +15,11 @@
  * The ceiling function `ceil(val)` is the least integer greater than or equal
  * to `val`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length, k <= 105`
+ * - `1 <= nums[i] <= 109`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
