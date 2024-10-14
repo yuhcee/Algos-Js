@@ -24,4 +24,29 @@
  * @param {number} k
  * @return {number}
  */
-const maxKelements = function (nums, k) {};
+const maxKelements = function (nums, k) {
+    // Create a max heap by pushing negative values since PriorityQueue is a min-heap
+    const heap = new MaxPriorityQueue({ priority: (x) => x });
+
+    // Push all elements into the max-heap
+    for (const num of nums) {
+        heap.enqueue(num);
+    }
+
+    let score = 0;
+
+    // Perform k operations
+    for (let i = 0; i < k; i++) {
+        // Get the largest element from the heap
+        let largest = heap.dequeue().element;
+
+        // Add the largest element to the score
+        score += largest;
+
+        // Replace the largest element with ceil(largest / 3) and push back to the heap
+        let newVal = Math.ceil(largest / 3);
+        heap.enqueue(newVal);
+    }
+
+    return score;
+};
