@@ -56,3 +56,13 @@ const nums = [10, 10, 10, 10, 10],
 // Output: 50
 /* Explanation: Apply the operation to each array element exactly once. The final score is 10 + 10 + 10 + 10 + 10 = 50. */
 console.log(maxKelements(nums, k));
+
+const nums1 = [1, 10, 3, 3, 3],
+    k1 = 3;
+// Output: 17
+/* Explanation: You can do the following operations:
+Operation 1: Select i = 1, so nums becomes [1,4,3,3,3]. Your score increases by 10.
+Operation 2: Select i = 1, so nums becomes [1,2,3,3,3]. Your score increases by 4.
+Operation 3: Select i = 2, so nums becomes [1,1,1,3,3]. Your score increases by 3.
+The final score is 10 + 4 + 3 = 17. */
+console.log(maxKelements(nums1, k1));
