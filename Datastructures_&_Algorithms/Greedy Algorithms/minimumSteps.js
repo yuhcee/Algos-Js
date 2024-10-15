@@ -11,6 +11,11 @@
  * Return *the **minimum** number of steps to group all the black balls to the
  * right and all the white balls to the left*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n == s.length <= 105`
+ * - `s[i]` is either `'0'` or `'1'`.
+ *
  * @param {string} s
  * @return {number}
  */
