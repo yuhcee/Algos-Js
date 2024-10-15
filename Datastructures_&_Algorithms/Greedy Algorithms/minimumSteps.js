@@ -48,3 +48,8 @@ const s1 = '100';
 - Swap s[1] and s[2], s = "001".
 It can be proven that the minimum number of steps needed is 2. */
 console.log(minimumSteps(s1));
+
+const s2 = '0111';
+// Output: 0
+// Explanation: All the black balls are already grouped to the right.
+console.log(minimumSteps(s2));
