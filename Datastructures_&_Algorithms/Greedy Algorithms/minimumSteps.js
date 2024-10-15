@@ -19,4 +19,17 @@
  * @param {string} s
  * @return {number}
  */
-const minimumSteps = function (s) {};
+const minimumSteps = function (s) {
+    let onesCount = 0;
+    let totalSwaps = 0;
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '0') {
+            totalSwaps += onesCount;
+        } else {
+            onesCount++;
+        }
+    }
+
+    return totalSwaps;
+};
