@@ -40,3 +40,11 @@ const s = '101';
 - Swap s[0] and s[1], s = "011".
 Initially, 1s are not grouped together, requiring at least 1 step to group them to the right. */
 console.log(minimumSteps(s));
+
+const s1 = '100';
+// Output: 2
+/* Explanation: We can group all the black balls to the right in the following way:
+- Swap s[0] and s[1], s = "010".
+- Swap s[1] and s[2], s = "001".
+It can be proven that the minimum number of steps needed is 2. */
+console.log(minimumSteps(s1));
