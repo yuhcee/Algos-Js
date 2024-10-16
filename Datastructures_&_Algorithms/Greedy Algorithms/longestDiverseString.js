@@ -69,3 +69,10 @@ const longestDiverseString = function (a, b, c) {
 
     return result.join('');
 };
+
+const a = 1,
+    b = 1,
+    c = 7;
+// Output: "ccaccbcc"
+// Explanation: "ccbccacc" would also be a correct answer.
+console.log(longestDiverseString(a, b, c));
