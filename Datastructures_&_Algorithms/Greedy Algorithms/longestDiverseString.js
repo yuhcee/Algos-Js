@@ -76,3 +76,10 @@ const a = 1,
 // Output: "ccaccbcc"
 // Explanation: "ccbccacc" would also be a correct answer.
 console.log(longestDiverseString(a, b, c));
+
+const a1 = 7,
+    b1 = 1,
+    c1 = 0;
+// Output: "aabaa"
+// Explanation: It is the only correct answer in this case.
+console.log(longestDiverseString(a1, b1, c1));
