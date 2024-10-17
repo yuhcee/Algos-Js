@@ -6,6 +6,10 @@
  *
  * Return **the maximum valued number you can get**.
  *
+ * **Constraints:**
+ *
+ * - `0 <= num <= 108`
+ *
  * @param {number} num
  * @return {number}
  */
