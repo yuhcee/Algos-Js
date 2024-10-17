@@ -48,3 +48,8 @@ const num = 2736;
 // Output: 7236
 // Explanation: Swap the number 2 and the number 7.
 console.log(maximumSwap(num));
+
+const num1 = 9973;
+// Output: 9973
+// Explanation: No swap.
+console.log(maximumSwap(num1));
