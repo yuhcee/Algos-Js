@@ -56,3 +56,8 @@ const nums = [3, 1];
 - [3]
 - [3,1] */
 console.log(countMaxOrSubsets(nums));
+
+const nums1 = [2, 2, 2];
+// Output: 7
+/* Explanation: All non-empty subsets of [2,2,2] have a bitwise OR of 2. There are 23 - 1 = 7 total subsets. */
+console.log(countMaxOrSubsets(nums1));
