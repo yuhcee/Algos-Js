@@ -49,3 +49,10 @@ const countMaxOrSubsets = function (nums) {
 
     return count;
 };
+
+const nums = [3, 1];
+// Output: 2
+/* Explanation: The maximum possible bitwise OR of a subset is 3. There are 2 subsets with a bitwise OR of 3:
+- [3]
+- [3,1] */
+console.log(countMaxOrSubsets(nums));
