@@ -13,6 +13,11 @@
  * The bitwise OR of an array `a` is equal to `a[0] OR a[1] OR ... OR a
  * [a.length - 1]` **(0-indexed)**.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 16`
+ * - `1 <= nums[i] <= 105`
+ *
  * @param {number[]} nums
  * @return {number}
  */
