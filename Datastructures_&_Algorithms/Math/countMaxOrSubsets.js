@@ -21,4 +21,31 @@
  * @param {number[]} nums
  * @return {number}
  */
-const countMaxOrSubsets = function (nums) {};
+const countMaxOrSubsets = function (nums) {
+    let maxOr = 0;
+    let count = 0;
+
+    // Helper function to calculate bitwise OR of a subset
+    function backtrack(i, currentOr) {
+        // Base case: if we've considered all elements
+        if (i === nums.length) {
+            // Check if the current OR is the maximum
+            if (currentOr > maxOr) {
+                maxOr = currentOr;
+                count = 1; // Reset count as we found a new maximum
+            } else if (currentOr === maxOr) {
+                count++; // Increment count for this max OR subset
+            }
+            return;
+        }
+
+        // Recursive case: Include or exclude the current element
+        backtrack(i + 1, currentOr | nums[i]); // Include nums[i]
+        backtrack(i + 1, currentOr); // Exclude nums[i]
+    }
+
+    // Start the backtracking process from the first element with an initial OR of 0
+    backtrack(0, 0);
+
+    return count;
+};
