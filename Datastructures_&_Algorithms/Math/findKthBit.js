@@ -58,3 +58,10 @@ const n = 3,
 /* Explanation: S3 is "0111001".
 The 1st bit is "0". */
 console.log(findKthBit(n, k));
+
+const n1 = 4,
+    k1 = 11;
+// Output: "1"
+/* Explanation: S4 is "011100110110001".
+The 11th bit is "1". */
+console.log(findKthBit(n1, k1));
