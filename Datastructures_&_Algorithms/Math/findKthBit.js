@@ -21,6 +21,11 @@
  * Return *the `kth` bit in `Sn`. It is guaranteed that `k` is valid
  * for the given `n`*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 20`
+ * - `1 <= k <= 2n - 1`
+ *
  * @param {number} n
  * @param {number} k
  * @return {character}
