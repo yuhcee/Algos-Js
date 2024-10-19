@@ -51,3 +51,10 @@ const findKthBit = function (n, k) {
     // Start the recursion
     return findBit(n, k);
 };
+
+const n = 3,
+    k = 1;
+// Output: "0"
+/* Explanation: S3 is "0111001".
+The 1st bit is "0". */
+console.log(findKthBit(n, k));
