@@ -30,4 +30,24 @@
  * @param {number} k
  * @return {character}
  */
-const findKthBit = function (n, k) {};
+const findKthBit = function (n, k) {
+    // Recursive helper function to find the kth bit in the nth binary string
+    const findBit = (n, k) => {
+        if (n === 1) return '0'; // Base case: S1 is "0"
+
+        const mid = 1 << (n - 1); // Calculate the middle index of Sn (2^(n-1))
+
+        if (k === mid) {
+            return '1'; // The middle bit is always '1'
+        } else if (k < mid) {
+            return findBit(n - 1, k); // The first half corresponds to Sn-1
+        } else {
+            // The second half corresponds to the reverse and invert of Sn-1
+            const bit = findBit(n - 1, mid - (k - mid)); // Calculate corresponding bit in Sn-1
+            return bit === '0' ? '1' : '0'; // Invert the bit
+        }
+    };
+
+    // Start the recursion
+    return findBit(n, k);
+};
