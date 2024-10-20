@@ -74,3 +74,10 @@ const expression1 = '|(f,f,f,t)';
 // Output: true
 // Explanation: The evaluation of (false OR false OR false OR true) is true.
 console.log(parseBoolExpr(expression1));
+
+const expression2 = '!(&(f,t))';
+// Output: true
+/* Explanation: 
+First, evaluate &(f,t) --> (false AND true) --> false --> f. The expression is now "!(f)".
+Then, evaluate !(f) --> NOT false --> true. We return true. */
+console.log(parseBoolExpr(expression2));
