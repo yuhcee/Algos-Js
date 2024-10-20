@@ -69,3 +69,8 @@ First, evaluate |(f) --> f. The expression is now "&(f)".
 Then, evaluate &(f) --> f. The expression is now "f".
 Finally, return false. */
 console.log(parseBoolExpr(expression));
+
+const expression1 = '|(f,f,f,t)';
+// Output: true
+// Explanation: The evaluation of (false OR false OR false OR true) is true.
+console.log(parseBoolExpr(expression1));
