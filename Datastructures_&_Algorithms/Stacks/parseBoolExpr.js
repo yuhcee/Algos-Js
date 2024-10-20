@@ -61,3 +61,11 @@ const parseBoolExpr = function (expression) {
     // The result should be the only value left in the stack
     return stack[0] === 't';
 };
+
+const expression = '&(|(f))';
+// Output: false
+/* Explanation: 
+First, evaluate |(f) --> f. The expression is now "&(f)".
+Then, evaluate &(f) --> f. The expression is now "f".
+Finally, return false. */
+console.log(parseBoolExpr(expression));
