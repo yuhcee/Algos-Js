@@ -30,4 +30,34 @@
  * @param {string} expression
  * @return {boolean}
  */
-const parseBoolExpr = function (expression) {};
+const parseBoolExpr = function (expression) {
+    let stack = [];
+
+    for (let char of expression) {
+        if (char === ',' || char === '(') {
+            continue; // Ignore commas and opening parenthesis
+        } else if (char === ')') {
+            // Pop the current boolean values until we hit the operator
+            let booleans = [];
+            while (stack[stack.length - 1] !== '!' && stack[stack.length - 1] !== '&' && stack[stack.length - 1] !== '|') {
+                booleans.push(stack.pop());
+            }
+            let operator = stack.pop(); // Pop the operator
+
+            // Apply the operator to the boolean values
+            if (operator === '!') {
+                stack.push(booleans[0] === 'f' ? 't' : 'f');
+            } else if (operator === '&') {
+                stack.push(booleans.every((val) => val === 't') ? 't' : 'f');
+            } else if (operator === '|') {
+                stack.push(booleans.some((val) => val === 't') ? 't' : 'f');
+            }
+        } else {
+            // Push everything else (t, f, !, &, |) onto the stack
+            stack.push(char);
+        }
+    }
+
+    // The result should be the only value left in the stack
+    return stack[0] === 't';
+};
