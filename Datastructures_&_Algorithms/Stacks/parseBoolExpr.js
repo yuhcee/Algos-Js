@@ -21,6 +21,12 @@
  * It is **guaranteed** that the given expression is valid and follows the
  * given rules.
  *
+ * **Constraints:**
+ *
+ * - `1 <= expression.length <= 2 * 104`
+ * - `expression[i]` is one following characters: '`(', ')', '&', '|',
+ * '!', 't', 'f', and ','`.
+ *
  * @param {string} expression
  * @return {boolean}
  */
