@@ -58,3 +58,8 @@ const s1 = 'aba';
 // Output: 2
 // Explanation: One way to split maximally is ['a', 'ba'].
 console.log(maxUniqueSplit(s1));
+
+const s2 = 'aa';
+// Output: 1
+// Explanation: It is impossible to split the string any further.
+console.log(maxUniqueSplit(s2));
