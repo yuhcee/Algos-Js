@@ -21,4 +21,30 @@
  * @param {string} s
  * @return {number}
  */
-const maxUniqueSplit = function (s) {};
+const maxUniqueSplit = function (s) {
+    let maxCount = 0;
+
+    const backtrack = (index, uniqueSet) => {
+        if (index === s.length) {
+            // Update the maximum count when we reach the end of the string
+            maxCount = Math.max(maxCount, uniqueSet.size);
+            return;
+        }
+
+        // Try every possible substring starting from the current index
+        for (let i = index + 1; i <= s.length; i++) {
+            const substring = s.slice(index, i);
+
+            // If the substring is not already in the set, consider it
+            if (!uniqueSet.has(substring)) {
+                uniqueSet.add(substring); // Add to the set
+                backtrack(i, uniqueSet); // Recur to process the rest of the string
+                uniqueSet.delete(substring); // Backtrack (remove from set)
+            }
+        }
+    };
+
+    backtrack(0, new Set());
+
+    return maxCount;
+};
