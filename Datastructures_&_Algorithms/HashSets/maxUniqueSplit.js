@@ -48,3 +48,8 @@ const maxUniqueSplit = function (s) {
 
     return maxCount;
 };
+
+const s = 'ababccc';
+// Output: 5
+/* Explanation: One way to split maximally is ['a', 'b', 'ab', 'c', 'cc']. Splitting like ['a', 'b', 'a', 'b', 'c', 'cc'] is not valid as you have 'a' and 'b' multiple times. */
+console.log(maxUniqueSplit(s));
