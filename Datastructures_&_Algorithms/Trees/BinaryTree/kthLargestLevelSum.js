@@ -22,6 +22,13 @@
  * **Note** that two nodes are on the same level if they have the same
  * distance from the root.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is `n`.
+ * - `2 <= n <= 105`
+ * - `1 <= Node.val <= 106`
+ * - `1 <= k <= n`
+ *
  * @param {TreeNode} root
  * @param {number} k
  * @return {number}
