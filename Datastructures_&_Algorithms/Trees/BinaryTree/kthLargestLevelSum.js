@@ -33,4 +33,39 @@
  * @param {number} k
  * @return {number}
  */
-const kthLargestLevelSum = function (root, k) {};
+const kthLargestLevelSum = function (root, k) {
+    if (!root) return -1;
+
+    let levelSums = [];
+    let queue = [root];
+
+    // Perform BFS to calculate level sums
+    while (queue.length > 0) {
+        let levelSize = queue.length;
+        let levelSum = 0;
+
+        // Process all nodes at the current level
+        for (let i = 0; i < levelSize; i++) {
+            let node = queue.shift();
+            levelSum += node.val;
+
+            // Add children to the queue for the next level
+            if (node.left) queue.push(node.left);
+            if (node.right) queue.push(node.right);
+        }
+
+        // Add the sum of the current level to the levelSums array
+        levelSums.push(levelSum);
+    }
+
+    // Sort the level sums in descending order
+    levelSums.sort((a, b) => b - a);
+
+    // Check if there are enough levels for k
+    if (k > levelSums.length) {
+        return -1;
+    }
+
+    // Return the kth largest level sum (1-based index)
+    return levelSums[k - 1];
+};
