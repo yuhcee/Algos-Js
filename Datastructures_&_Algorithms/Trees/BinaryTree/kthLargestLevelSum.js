@@ -80,3 +80,9 @@ const root = [5, 8, 9, 2, 1, 3, 7, 4, 6],
 - Level 4: 4 + 6 = 10.
 The 2nd largest level sum is 13. */
 console.log(kthLargestLevelSum(root, k));
+
+const root1 = [1, 2, null, 3],
+    k1 = 1;
+// Output: 3
+// Explanation: The largest level sum is 3.
+console.log(kthLargestLevelSum(root1, k1));
