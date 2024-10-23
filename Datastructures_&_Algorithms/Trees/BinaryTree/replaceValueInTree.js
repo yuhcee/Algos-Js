@@ -29,4 +29,40 @@
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-const replaceValueInTree = function (root) {};
+const replaceValueInTree = function (root) {
+    if (!root) return null;
+
+    let queue = [root];
+    root.val = 0; // The root has no cousins
+
+    while (queue.length > 0) {
+        let levelSize = queue.length;
+        let currentLevel = [];
+
+        // Collect the nodes of the current level
+        for (let i = 0; i < levelSize; i++) {
+            let node = queue.shift();
+            currentLevel.push(node);
+
+            // Add child nodes to the queue for the next level
+            if (node.left) queue.push(node.left);
+            if (node.right) queue.push(node.right);
+        }
+
+        // Calculate the total sum of values at this level
+        let totalSum = currentLevel.reduce((sum, node) => sum + (node.left ? node.left.val : 0) + (node.right ? node.right.val : 0), 0);
+
+        // Update each node's value by the cousin sum (total sum - sibling sum)
+        for (let node of currentLevel) {
+            let siblingSum = 0;
+            if (node.left) siblingSum += node.left.val;
+            if (node.right) siblingSum += node.right.val;
+
+            // Update the values of the children with the cousin sum
+            if (node.left) node.left.val = totalSum - siblingSum;
+            if (node.right) node.right.val = totalSum - siblingSum;
+        }
+    }
+
+    return root;
+};
