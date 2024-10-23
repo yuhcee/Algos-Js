@@ -77,3 +77,11 @@ const root = [5, 4, 9, 1, 10, null, 7];
 - Node with value 10 has a cousin with value 7 so its sum is 7.
 - Node with value 7 has cousins with values 1 and 10 so its sum is 11. */
 console.log(replaceValueInTree(root));
+
+const root1 = [3, 1, 2];
+// Output: [0,0,0]
+/* Explanation: The diagram above shows the initial binary tree and the binary tree after changing the value of each node.
+- Node with value 3 does not have any cousins so its sum is 0.
+- Node with value 1 does not have any cousins so its sum is 0.
+- Node with value 2 does not have any cousins so its sum is 0. */
+console.log(replaceValueInTree(root1));
