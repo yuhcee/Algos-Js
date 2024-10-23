@@ -21,6 +21,11 @@
  * **Note** that the depth of a node is the number of edges in the path
  * from the root node to it.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is in the range `[1, 105]`.
+ * - `1 <= Node.val <= 104`
+ *
  * @param {TreeNode} root
  * @return {TreeNode}
  */
