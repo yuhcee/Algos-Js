@@ -56,3 +56,8 @@ const root11 = [],
     root21 = [];
 // Output: true
 console.log(flipEquiv(root11, root21));
+
+const root12 = [],
+    root22 = [1];
+// Output: false
+console.log(flipEquiv(root12, root22));
