@@ -29,4 +29,19 @@
  * @param {TreeNode} root2
  * @return {boolean}
  */
-const flipEquiv = function (root1, root2) {};
+const flipEquiv = function (root1, root2) {
+    // Base case 1: Both nodes are null, they are flip equivalent
+    if (!root1 && !root2) return true;
+
+    // Base case 2: One is null but the other isn't, not flip equivalent
+    if (!root1 || !root2) return false;
+
+    // Base case 3: Values of current nodes don't match, not flip equivalent
+    if (root1.val !== root2.val) return false;
+
+    // Check both possibilities: either without flip or with flip
+    const withoutFlip = flipEquiv(root1.left, root2.left) && flipEquiv(root1.right, root2.right);
+    const withFlip = flipEquiv(root1.left, root2.right) && flipEquiv(root1.right, root2.left);
+
+    return withoutFlip || withFlip;
+};
