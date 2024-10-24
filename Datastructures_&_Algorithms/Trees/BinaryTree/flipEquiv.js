@@ -20,6 +20,11 @@
  * Given the roots of two binary trees `root1` and `root2`, return `true`
  * if the two trees are flip equivalent or `false` otherwise.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in each tree is in the range `[0, 100]`.
+ * - Each tree will have unique node values in the range `[0, 99]`.
+ *
  * @param {TreeNode} root1
  * @param {TreeNode} root2
  * @return {boolean}
