@@ -51,3 +51,8 @@ const root1 = [1, 2, 3, 4, 5, 6, null, null, null, 7, 8],
 // Output: true
 // Explanation: We flipped at nodes with values 1, 3, and 5.
 console.log(flipEquiv(root1, root2));
+
+const root11 = [],
+    root21 = [];
+// Output: true
+console.log(flipEquiv(root11, root21));
