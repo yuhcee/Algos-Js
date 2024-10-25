@@ -27,4 +27,23 @@
  * @param {string[]} folder
  * @return {string[]}
  */
-const removeSubfolders = function (folder) {};
+const removeSubfolders = function (folder) {
+    // Sort the folders lexicographically
+    folder.sort();
+
+    const result = [];
+
+    for (const f of folder) {
+        // Check if f is not a subfolder of the last folder in result
+        if (result.length === 0 || !f.startsWith(result[result.length - 1] + '/')) {
+            result.push(f);
+        }
+    }
+
+    return result;
+};
+
+const folder = ['/a', '/a/b', '/c/d', '/c/d/e', '/c/f'];
+// Output: ["/a","/c/d","/c/f"]
+/* Explanation: Folders "/a/b" is a subfolder of "/a" and "/c/d/e" is inside of folder "/c/d" in our filesystem. */
+console.log(removeSubfolders(folder));
