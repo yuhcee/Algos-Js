@@ -16,6 +16,14 @@
  * For example, `"/leetcode"` and `"/leetcode/problems"` are valid paths
  * while an empty string and `"/"` are not.
  *
+ * **Constraints:**
+ *
+ * - `1 <= folder.length <= 4 * 104`
+ * - `2 <= folder[i].length <= 100`
+ * - `folder[i]` contains only lowercase letters and `'/'`.
+ * - `folder[i]` always starts with the character `'/'`.
+ * - Each folder name is **unique**.
+ *
  * @param {string[]} folder
  * @return {string[]}
  */
