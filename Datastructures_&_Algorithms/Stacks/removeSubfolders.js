@@ -53,3 +53,6 @@ const folder1 = ['/a', '/a/b/c', '/a/b/d'];
 /* Explanation: Folders "/a/b/c" and "/a/b/d" will be removed because they are subfolders of "/a". */
 console.log(removeSubfolders(folder1));
 
+const folder2 = ['/a/b/c', '/a/b/ca', '/a/b/d'];
+// Output: ["/a/b/c","/a/b/ca","/a/b/d"]
+console.log(removeSubfolders(folder2));
