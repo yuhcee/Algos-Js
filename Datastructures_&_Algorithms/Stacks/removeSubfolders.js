@@ -47,3 +47,9 @@ const folder = ['/a', '/a/b', '/c/d', '/c/d/e', '/c/f'];
 // Output: ["/a","/c/d","/c/f"]
 /* Explanation: Folders "/a/b" is a subfolder of "/a" and "/c/d/e" is inside of folder "/c/d" in our filesystem. */
 console.log(removeSubfolders(folder));
+
+const folder1 = ['/a', '/a/b/c', '/a/b/d'];
+// Output: ["/a"]
+/* Explanation: Folders "/a/b/c" and "/a/b/d" will be removed because they are subfolders of "/a". */
+console.log(removeSubfolders(folder1));
+
