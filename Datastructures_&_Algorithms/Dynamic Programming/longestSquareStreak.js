@@ -23,4 +23,21 @@
  * @param {number[]} nums
  * @return {number}
  */
-const longestSquareStreak = function (nums) {};
+const longestSquareStreak = function (nums) {
+    nums.sort((a, b) => a - b);
+    const numSet = new Set(nums);
+    let maxStreak = -1;
+
+    for (let num of nums) {
+        let count = 0;
+
+        while (numSet.has(num)) {
+            count++;
+
+            num *= num;
+        }
+        if (count >= 2) maxStreak = Math.max(maxStreak, count);
+    }
+
+    return maxStreak;
+};
