@@ -15,6 +15,11 @@
  * by deleting some or no elements without changing the order of the
  * remaining elements.
  *
+ * **Constraints:**
+ *
+ * - `2 <= nums.length <= 105`
+ * - `2 <= nums[i] <= 105`
+ *
  * @param {number[]} nums
  * @return {number}
  */
