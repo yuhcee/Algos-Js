@@ -50,3 +50,8 @@ const nums = [4, 3, 6, 16, 8, 2];
 Therefore, [4,16,2] is a square streak.
 It can be shown that every subsequence of length 4 is not a square streak. */
 console.log(longestSquareStreak(nums));
+
+const nums1 = [2, 3, 5, 6, 7];
+// Output: -1
+// Explanation: There is no square streak in nums so return -1.
+console.log(longestSquareStreak(nums1));
