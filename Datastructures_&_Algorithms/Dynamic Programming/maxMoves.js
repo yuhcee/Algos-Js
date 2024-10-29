@@ -15,6 +15,14 @@
  *
  * Return *the **maximum** number of **moves** that you can perform*.
  *
+ * **Constraints:**
+ *
+ * - `m == grid.length`
+ * - `n == grid[i].length`
+ * - `2 <= m, n <= 1000`
+ * - `4 <= m * n <= 105`
+ * - `1 <= grid[i][j] <= 106`
+ *
  * @param {number[][]} grid
  * @return {number}
  */
