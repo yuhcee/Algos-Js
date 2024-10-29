@@ -22,4 +22,37 @@
  * @param {number[]} nums
  * @return {number}
  */
-const minimumMountainRemovals = function (nums) {};
+const minimumMountainRemovals = function (nums) {
+    const n = nums.length;
+    const incr = Array(n).fill(1);
+    const decr = Array(n).fill(1);
+
+    // Calculate longest increasing subsequence ending at each index
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < i; j++) {
+            if (nums[i] > nums[j]) {
+                incr[i] = Math.max(incr[i], incr[j] + 1);
+            }
+        }
+    }
+
+    // Calculate longest decreasing subsequence starting at each index
+    for (let i = n - 1; i >= 0; i--) {
+        for (let j = n - 1; j > i; j--) {
+            if (nums[i] > nums[j]) {
+                decr[i] = Math.max(decr[i], decr[j] + 1);
+            }
+        }
+    }
+
+    // Calculate the longest mountain array
+    let longestMountainLength = 0;
+    for (let i = 1; i < n - 1; i++) {
+        if (incr[i] > 1 && decr[i] > 1) {
+            longestMountainLength = Math.max(longestMountainLength, incr[i] + decr[i] - 1);
+        }
+    }
+
+    // Minimum removals to get the mountain array
+    return n - longestMountainLength;
+};
