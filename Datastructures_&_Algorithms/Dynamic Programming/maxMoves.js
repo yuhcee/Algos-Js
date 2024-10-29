@@ -74,3 +74,12 @@ const grid = [
 - (1, 2) -> (2, 3).
 It can be shown that it is the maximum number of moves that can be made. */
 console.log(maxMoves(grid));
+
+const grid1 = [
+    [3, 2, 4],
+    [2, 1, 9],
+    [1, 1, 7],
+];
+// Output: 0
+/* Explanation: Starting from any cell in the first column we cannot perform any moves. */
+console.log(maxMoves(grid1));
