@@ -26,4 +26,37 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const maxMoves = function (grid) {};
+const maxMoves = function (grid) {
+    const m = grid.length;
+    const n = grid[0].length;
+    const memo = Array.from({ length: m }, () => Array(n).fill(-1));
+
+    // Helper function for DFS with memoization
+    const dfs = (row, col) => {
+        if (memo[row][col] !== -1) return memo[row][col];
+
+        let maxMove = 0;
+        const directions = [
+            [row - 1, col + 1], // top-right
+            [row, col + 1], // right
+            [row + 1, col + 1], // bottom-right
+        ];
+
+        for (const [nextRow, nextCol] of directions) {
+            if (nextRow >= 0 && nextRow < m && nextCol < n && grid[nextRow][nextCol] > grid[row][col]) {
+                maxMove = Math.max(maxMove, 1 + dfs(nextRow, nextCol));
+            }
+        }
+
+        memo[row][col] = maxMove;
+        return maxMove;
+    };
+
+    // Calculate max moves from each cell in the first column
+    let maxMoves = 0;
+    for (let row = 0; row < m; row++) {
+        maxMoves = Math.max(maxMoves, dfs(row, 0));
+    }
+
+    return maxMoves;
+};
