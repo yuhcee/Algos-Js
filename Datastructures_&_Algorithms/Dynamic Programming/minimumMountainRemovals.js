@@ -13,6 +13,12 @@
  * Given an integer array `nums`​​​, return *the **minimum** number of
  * elements to remove to make nums​​​ a **mountain array***.
  *
+ * **Constraints:**
+ *
+ * - `3 <= nums.length <= 1000`
+ * - `1 <= nums[i] <= 109`
+ * - It is guaranteed that you can make a mountain array out of `nums`.
+ *
  * @param {number[]} nums
  * @return {number}
  */
