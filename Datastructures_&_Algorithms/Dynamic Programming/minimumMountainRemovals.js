@@ -56,3 +56,8 @@ const minimumMountainRemovals = function (nums) {
     // Minimum removals to get the mountain array
     return n - longestMountainLength;
 };
+
+const nums = [1, 3, 1];
+// Output: 0
+// Explanation: The array itself is a mountain array so we do not need to remove any elements.
+console.log(minimumMountainRemovals(nums));
