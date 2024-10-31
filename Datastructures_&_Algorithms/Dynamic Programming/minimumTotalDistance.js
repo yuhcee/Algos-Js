@@ -48,4 +48,28 @@
  * @param {number[][]} factory
  * @return {number}
  */
-const minimumTotalDistance = function (robot, factory) {};
+const minimumTotalDistance = function (robot, factory) {
+    robot.sort((a, b) => a - b);
+    factory.sort((a, b) => a[0] - b[0]);
+
+    const n = robot.length;
+    const m = factory.length;
+
+    const dp = Array.from({ length: n + 1 }, () => Array(m + 1).fill(Infinity));
+    dp[0][0] = 0; // No robots and no factories require no distance.
+
+    for (let j = 1; j <= m; j++) {
+        dp[0][j] = 0; // Zero robots require zero distance.
+        for (let i = 1; i <= n; i++) {
+            let sum = 0;
+            dp[i][j] = dp[i][j - 1]; // Initialize to previous factory's solution.
+
+            for (let k = 1; k <= Math.min(i, factory[j - 1][1]); k++) {
+                sum += Math.abs(robot[i - k] - factory[j - 1][0]);
+                dp[i][j] = Math.min(dp[i][j], dp[i - k][j - 1] + sum);
+            }
+        }
+    }
+
+    return dp[n][m];
+};
