@@ -35,6 +35,15 @@
  * - If the robot moved from a position `x` to a position `y`, the
  * distance it moved is `|y - x|`.
  *
+ * **Constraints:
+ *
+ * - `1 <= robot.length, factory.length <= 100`
+ * - `factory[j].length == 2`
+ * - `-109 <= robot[i], positionj <= 109`
+ * - `0 <= limitj <= robot.length`
+ * - The input will be generated such that it is always possible to repair
+ * every robot.
+ *
  * @param {number[]} robot
  * @param {number[][]} factory
  * @return {number}
