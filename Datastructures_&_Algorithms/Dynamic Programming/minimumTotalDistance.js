@@ -88,3 +88,17 @@ The limit of the first factory is 2, and it fixed 2 robots.
 The limit of the second factory is 2, and it fixed 1 robot.
 The total distance is |2 - 0| + |2 - 4| + |6 - 6| = 4. It can be shown that we cannot achieve a better total distance than 4. */
 console.log(minimumTotalDistance(robot, factory));
+
+const robot1 = [1, -1],
+    factory1 = [
+        [-2, 1],
+        [2, 1],
+    ];
+// Output: 2
+/* Explanation: As shown in the figure:
+- The first robot at position 1 moves in the positive direction. It will be repaired at the second factory.
+- The second robot at position -1 moves in the negative direction. It will be repaired at the first factory.
+The limit of the first factory is 1, and it fixed 1 robot.
+The limit of the second factory is 1, and it fixed 1 robot.
+The total distance is |2 - 1| + |(-2) - (-1)| = 2. It can be shown that we cannot achieve a better total distance than 2. */
+console.log(minimumTotalDistance(robot1, factory1));
