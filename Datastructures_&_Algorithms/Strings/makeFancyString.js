@@ -11,11 +11,22 @@
  * answer will always be **unique**.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= s.length <= 105`
  * - `s` consists only of lowercase English letters.
- * 
+ *
  * @param {string} s
  * @return {string}
  */
-const makeFancyString = function (s) {};
+const makeFancyString = function (s) {
+    let result = '';
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === s[i + 1] && result.slice(-1) === s[i]) {
+            result = result.slice(0, -1);
+        }
+        result += s[i];
+    }
+
+    return result;
+};
