@@ -10,6 +10,11 @@
  * Return the final string after the deletion. It can be shown that the
  * answer will always be **unique**.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= s.length <= 105`
+ * - `s` consists only of lowercase English letters.
+ * 
  * @param {string} s
  * @return {string}
  */
