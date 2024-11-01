@@ -45,3 +45,8 @@ Remove an 'a' from the first group of 'a's to create "aabaaaa".
 Remove two 'a's from the second group of 'a's to create "aabaa".
 No three consecutive characters are equal, so return "aabaa". */
 console.log(makeFancyString(s1));
+
+const s2 = 'aab';
+// Output: "aab"
+// Explanation: No three consecutive characters are equal, so return "aab".
+console.log(makeFancyString(s2));
