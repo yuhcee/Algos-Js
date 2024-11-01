@@ -30,3 +30,10 @@ const makeFancyString = function (s) {
 
     return result;
 };
+
+const s = 'leeetcode';
+// Output: "leetcode"
+/* Explanation:
+Remove an 'e' from the first group of 'e's to create "leetcode".
+No three consecutive characters are equal, so return "leetcode". */
+console.log(makeFancyString(s));
