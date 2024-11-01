@@ -37,3 +37,11 @@ const s = 'leeetcode';
 Remove an 'e' from the first group of 'e's to create "leetcode".
 No three consecutive characters are equal, so return "leetcode". */
 console.log(makeFancyString(s));
+
+const s1 = 'aaabaaaa';
+// Output: "aabaa"
+/* Explanation:
+Remove an 'a' from the first group of 'a's to create "aabaaaa".
+Remove two 'a's from the second group of 'a's to create "aabaa".
+No three consecutive characters are equal, so return "aabaa". */
+console.log(makeFancyString(s1));
