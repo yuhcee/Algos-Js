@@ -60,3 +60,10 @@ const sentence = 'leetcode exercises sound delightful';
 - delightful's last character is equal to leetcode's first character.
 The sentence is circular. */
 console.log(isCircularSentence(sentence));
+
+const sentence1 = 'eetcode';
+// Output: true
+/* Explanation: The words in sentence are ["eetcode"].
+- eetcode's last character is equal to eetcode's first character.
+The sentence is circular. */
+console.log(isCircularSentence(sentence1));
