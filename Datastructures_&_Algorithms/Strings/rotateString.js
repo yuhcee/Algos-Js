@@ -24,3 +24,8 @@ const rotateString = function (s, goal) {
 
     return (s + s).includes(goal);
 };
+
+const s = 'abcde',
+    goal = 'cdeab';
+// Output: true
+console.log(rotateString(s, goal));
