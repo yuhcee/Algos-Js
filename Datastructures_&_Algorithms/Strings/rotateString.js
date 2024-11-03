@@ -10,6 +10,11 @@
  * For example, if `s = "abcde"`, then it will be `"bcdea"` after one
  * shift.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length, goal.length <= 100`
+ * - `s` and `goal` consist of lowercase English letters.
+ *
  * @param {string} s
  * @param {string} goal
  * @return {boolean}
