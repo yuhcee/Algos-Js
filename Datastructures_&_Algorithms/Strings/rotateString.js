@@ -29,3 +29,8 @@ const s = 'abcde',
     goal = 'cdeab';
 // Output: true
 console.log(rotateString(s, goal));
+
+const s1 = 'abcde',
+    goal1 = 'abced';
+// Output: false
+console.log(rotateString(s1, goal1));
