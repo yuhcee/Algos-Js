@@ -19,4 +19,20 @@
  * @param {string} word
  * @return {string}
  */
-const compressedString = function (word) {};
+const compressedString = function (word) {
+    let comp = '';
+    let i = 0;
+
+    while (i < word.length) {
+        let count = 1;
+        while (i < word.length && word[i] === word[i + count] && count < 9) {
+            count++;
+        }
+
+        comp += count + word[i];
+
+        i += count;
+    }
+
+    return comp;
+};
