@@ -11,6 +11,11 @@
  *
  * Return the string `comp`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= word.length <= 2 * 105`
+ * - `word` consists only of lowercase English letters.
+ *
  * @param {string} word
  * @return {string}
  */
