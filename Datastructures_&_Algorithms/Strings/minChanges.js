@@ -50,3 +50,8 @@ const s1 = '10';
 It can be seen that the string "11" is beautiful because we can partition it into "11".
 It can be proven that 1 is the minimum number of changes needed to make the string beautiful. */
 console.log(minChanges(s1));
+
+const s2 = '0000';
+// Output: 0
+// Explanation: We don't need to make any changes as the string "0000" is beautiful already.
+console.log(minChanges(s2));
