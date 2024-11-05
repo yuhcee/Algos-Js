@@ -43,3 +43,10 @@ const s = '1001';
 It can be seen that the string "1100" is beautiful because we can partition it into "11|00".
 It can be proven that 2 is the minimum number of changes needed to make the string beautiful. */
 console.log(minChanges(s));
+
+const s1 = '10';
+// Output: 1
+/* Explanation: We change s[1] to 1 to get string "11".
+It can be seen that the string "11" is beautiful because we can partition it into "11".
+It can be proven that 1 is the minimum number of changes needed to make the string beautiful. */
+console.log(minChanges(s1));
