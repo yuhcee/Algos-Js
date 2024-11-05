@@ -16,12 +16,23 @@
  * string `s` beautiful.
  *
  * **Constraints:**
- * 
+ *
  * - `2 <= s.length <= 105`
  * - `s` has an even length.
  * - `s[i]` is either `'0'` or `'1'`.
- * 
+ *
  * @param {string} s
  * @return {number}
  */
-const minChanges = function (s) {};
+const minChanges = function (s) {
+    let changes = 0;
+
+    for (let i = 0; i < s.length; i += 2) {
+        // If the current character doesn't match the next one, we need to change one of them
+        if (s[i] !== s[i + 1]) {
+            changes++;
+        }
+    }
+
+    return changes;
+};
