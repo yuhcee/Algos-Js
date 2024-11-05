@@ -15,6 +15,12 @@
  * Return the **minimum** number of changes required to make the
  * string `s` beautiful.
  *
+ * **Constraints:**
+ * 
+ * - `2 <= s.length <= 105`
+ * - `s` has an even length.
+ * - `s[i]` is either `'0'` or `'1'`.
+ * 
  * @param {string} s
  * @return {number}
  */
