@@ -13,6 +13,11 @@
  * Return *`true` if you can sort the array, else
  * return `false`*.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= nums.length <= 100`
+ * - `1 <= nums[i] <= 28`
+ * 
  * @param {number[]} nums
  * @return {boolean}
  */
