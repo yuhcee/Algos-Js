@@ -74,3 +74,8 @@ const nums1 = [1, 2, 3, 4, 5];
 // Output: true
 // Explanation: The array is already sorted, hence we return true.
 console.log(canSortArray(nums1));
+
+const nums2 = [3, 16, 8, 4, 2];
+// Output: false
+// Explanation: It can be shown that it is not possible to sort the input array using any number of operations.
+console.log(canSortArray(nums2));
