@@ -69,3 +69,8 @@ We can sort the array using 4 operations:
 The array has become sorted, hence we return true.
 Note that there may be other sequences of operations which also sort the array. */
 console.log(canSortArray(nums));
+
+const nums1 = [1, 2, 3, 4, 5];
+// Output: true
+// Explanation: The array is already sorted, hence we return true.
+console.log(canSortArray(nums1));
