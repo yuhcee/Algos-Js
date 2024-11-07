@@ -28,4 +28,19 @@
  * @param {number[]} candidates
  * @return {number}
  */
-const largestCombination = function (candidates) {};
+const largestCombination = function (candidates) {
+    const bitCounts = Array(24).fill(0); // Since 2^24 is greater than 10^7
+
+    // Count `1`s for each bit position
+    for (const num of candidates) {
+        for (let i = 0; i < 24; i++) {
+            if ((num & (1 << i)) !== 0) {
+                // Check if the ith bit is set
+                bitCounts[i]++;
+            }
+        }
+    }
+
+    // The result is the maximum count in any bit position
+    return Math.max(...bitCounts);
+};
