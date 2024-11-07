@@ -53,3 +53,9 @@ It can be shown that no combination with a size greater than 4 has a bitwise AND
 Note that more than one combination may have the largest size.
 For example, the combination [62,12,24,14] has a bitwise AND of 62 & 12 & 24 & 14 = 8 > 0 */
 console.log(largestCombination(candidates));
+
+const candidates1 = [8, 8];
+// Output: 2
+/* Explanation: The largest combination [8,8] has a bitwise AND of 8 & 8 = 8 > 0.
+The size of the combination is 2, so we return 2. */
+console.log(largestCombination(candidates1));
