@@ -20,6 +20,11 @@
  * of candidates with a bitwise AND **greater**
  * than `0`*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= candidates.length <= 105`
+ * - `1 <= candidates[i] <= 107`
+ *
  * @param {number[]} candidates
  * @return {number}
  */
