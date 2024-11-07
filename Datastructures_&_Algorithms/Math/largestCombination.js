@@ -44,3 +44,12 @@ const largestCombination = function (candidates) {
     // The result is the maximum count in any bit position
     return Math.max(...bitCounts);
 };
+
+const candidates = [16, 17, 71, 62, 12, 24, 14];
+// Output: 4
+/* Explanation: The combination [16,17,62,24] has a bitwise AND of 16 & 17 & 62 & 24 = 16 > 0.
+The size of the combination is 4.
+It can be shown that no combination with a size greater than 4 has a bitwise AND greater than 0.
+Note that more than one combination may have the largest size.
+For example, the combination [62,12,24,14] has a bitwise AND of 62 & 12 & 24 & 14 = 8 > 0 */
+console.log(largestCombination(candidates));
