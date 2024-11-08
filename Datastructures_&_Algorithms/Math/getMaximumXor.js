@@ -63,3 +63,8 @@ const nums1 = [2, 3, 4, 7],
 3rd query: nums = [2,3], k = 6 since 2 XOR 3 XOR 6 = 7.
 4th query: nums = [2], k = 5 since 2 XOR 5 = 7. */
 console.log(getMaximumXor(nums1, maximumBit1));
+
+const nums2 = [0, 1, 2, 2, 5, 7],
+    maximumBit2 = 3;
+// Output: [4,3,6,4,6,7]
+console.log(getMaximumXor(nums2, maximumBit2));
