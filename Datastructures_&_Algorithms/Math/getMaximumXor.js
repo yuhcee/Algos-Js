@@ -23,4 +23,23 @@
  * @param {number} maximumBit
  * @return {number[]}
  */
-const getMaximumXor = function (nums, maximumBit) {};
+const getMaximumXor = function (nums, maximumBit) {
+    const maxVal = (1 << maximumBit) - 1; // Max value with 'maximumBit' bits set to 1
+    let xor = 0;
+
+    // Calculate XOR of all elements in nums
+    for (const num of nums) {
+        xor ^= num;
+    }
+
+    const result = [];
+    for (let i = nums.length - 1; i >= 0; i--) {
+        // k is the complement of the current XOR, limited to maximumBit bits
+        result.push(xor ^ maxVal);
+
+        // Remove the last element's contribution from XOR for the next query
+        xor ^= nums[i];
+    }
+
+    return result;
+};
