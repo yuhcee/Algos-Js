@@ -11,6 +11,14 @@
  *
  * Return an array `answer`, where `answer[i]` is the answer to the `ith` query.
  *
+ * **Constraints:**
+ *
+ * - `nums.length == n`
+ * - `1 <= n <= 105`
+ * - `1 <= maximumBit <= 20`
+ * - `0 <= nums[i] < 2maximumBit`
+ * - `nums`​​​ is sorted in ascending order.
+ *
  * @param {number[]} nums
  * @param {number} maximumBit
  * @return {number[]}
