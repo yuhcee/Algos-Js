@@ -38,3 +38,9 @@ const n = 3,
 // Output: 6
 // Explanation: nums can be [4,5,6] and its last element is 6.
 console.log(minEnd(n, x));
+
+const n1 = 2,
+    x1 = 7;
+// Output: 15
+// Explanation: nums can be [7,15] and its last element is 15.
+console.log(minEnd(n1, x1));
