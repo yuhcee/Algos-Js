@@ -32,3 +32,9 @@ const minEnd = function (n, x) {
 
     return Number(result);
 };
+
+const n = 3,
+    x = 4;
+// Output: 6
+// Explanation: nums can be [4,5,6] and its last element is 6.
+console.log(minEnd(n, x));
