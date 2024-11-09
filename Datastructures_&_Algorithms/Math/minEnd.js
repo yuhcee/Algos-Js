@@ -7,6 +7,10 @@
  *
  * Return the **minimum** possible value of `nums[n - 1]`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n, x <= 108`
+ *
  * @param {number} n
  * @param {number} x
  * @return {number}
