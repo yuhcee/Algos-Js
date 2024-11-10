@@ -67,3 +67,9 @@ const nums1 = [2, 1, 8],
 // Output: 3
 // Explanation: The subarray [2,1,8] has OR value of 11. Hence, we return 3.
 console.log(minimumSubarrayLength(nums1, k1));
+
+const nums2 = [1, 2],
+    k2 = 0;
+// Output: 1
+// Explanation: The subarray [1] has OR value of 1. Hence, we return 1.
+console.log(minimumSubarrayLength(nums2, k2));
