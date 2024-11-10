@@ -18,4 +18,40 @@
  * @param {number} k
  * @return {number}
  */
-const minimumSubarrayLength = (nums, k) => {};
+const minimumSubarrayLength = (nums, k) => {
+    const updateOr = (ors, num, count) => {
+        for (let i = 0; i < 30; i++) {
+            if ((num >> i) & 1 && ++count[i] === 1) {
+                ors |= 1 << i;
+            }
+        }
+        return ors;
+    };
+
+    const undoOr = (ors, num, count) => {
+        for (let i = 0; i < 30; i++) {
+            if ((num >> i) & 1 && --count[i] === 0) {
+                ors ^= 1 << i;
+            }
+        }
+        return ors;
+    };
+
+    let ans = Infinity;
+    let ors = 0;
+    let count = new Array(30).fill(0);
+    let left = 0;
+
+    // Using Array.prototype.reduce() for functional iteration over the nums array
+    nums.forEach((num, right) => {
+        ors = updateOr(ors, num, count);
+
+        while (ors >= k && left <= right) {
+            ans = Math.min(ans, right - left + 1);
+            ors = undoOr(ors, nums[left], count);
+            left++;
+        }
+    });
+
+    return ans === Infinity ? -1 : ans;
+};
