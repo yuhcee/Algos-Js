@@ -60,4 +60,10 @@ const nums = [1, 2, 3],
     k = 2;
 // Output: 1
 // Explanation: The subarray [3] has OR value of 3. Hence, we return 1.
-console.log(minimumSubarrayLength(nums.k));
+console.log(minimumSubarrayLength(nums, k));
+
+const nums1 = [2, 1, 8],
+    k1 = 10;
+// Output: 3
+// Explanation: The subarray [2,1,8] has OR value of 11. Hence, we return 3.
+console.log(minimumSubarrayLength(nums1, k1));
