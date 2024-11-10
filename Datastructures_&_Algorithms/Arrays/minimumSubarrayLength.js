@@ -55,3 +55,9 @@ const minimumSubarrayLength = (nums, k) => {
 
     return ans === Infinity ? -1 : ans;
 };
+
+const nums = [1, 2, 3],
+    k = 2;
+// Output: 1
+// Explanation: The subarray [3] has OR value of 3. Hence, we return 1.
+console.log(minimumSubarrayLength(nums.k));
