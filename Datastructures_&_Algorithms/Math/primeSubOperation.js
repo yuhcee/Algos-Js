@@ -14,6 +14,12 @@
  * A **strictly increasing array** is an array whose each element is strictly greater than its preceding
  * element.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 1000`
+ * - `1 <= nums[i] <= 1000`
+ * - `nums.length == n`
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
