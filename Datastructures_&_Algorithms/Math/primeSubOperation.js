@@ -88,3 +88,8 @@ const nums1 = [6, 8, 11, 12];
 // Output: true
 // Explanation: Initially nums is sorted in strictly increasing order, so we don't need to make any operations.
 console.log(primeSubOperation(nums1));
+
+const nums2 = [5, 8, 3];
+// Output: false
+/* Explanation: It can be proven that there is no way to perform operations to make nums sorted in strictly increasing order, so the answer is false. */
+console.log(primeSubOperation(nums2));
