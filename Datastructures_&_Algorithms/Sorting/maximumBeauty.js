@@ -81,3 +81,9 @@ const items1 = [
 /* Explanation: The price of every item is equal to 1, so we choose the item with the maximum beauty 4. 
 Note that multiple items can have the same price and/or beauty. */
 console.log(maximumBeauty(items1, queries1));
+
+const items2 = [[10, 1000]],
+    queries2 = [5];
+// Output: [0]
+/* Explanation: No item has a price less than or equal to 5, so no item can be chosen.
+Hence, the answer to the query is 0. */
