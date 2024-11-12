@@ -69,3 +69,15 @@ const items = [
 - For queries[4]=5 and queries[5]=6, all items can be considered.
   Hence, the answer for them is the maximum beauty of all items, i.e., 6. */
 console.log(maximumBeauty(items, queries));
+
+const items1 = [
+        [1, 2],
+        [1, 2],
+        [1, 3],
+        [1, 4],
+    ],
+    queries1 = [1];
+// Output: [4]
+/* Explanation: The price of every item is equal to 1, so we choose the item with the maximum beauty 4. 
+Note that multiple items can have the same price and/or beauty. */
+console.log(maximumBeauty(items1, queries1));
