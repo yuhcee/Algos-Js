@@ -21,4 +21,32 @@
  * @param {number[]} queries
  * @return {number[]}
  */
-const maximumBeauty = function (items, queries) {};
+const maximumBeauty = function (items, queries) {
+    // Step 1: Sort items by price, then queries with their original indices
+    items.sort((a, b) => a[0] - b[0]);
+    const sortedQueries = queries.map((query, index) => [query, index]).sort((a, b) => a[0] - b[0]);
+
+    // Step 2: Process items to get maximum beauty at each price
+    let maxBeautySoFar = 0;
+    const beautyAtPrice = [];
+    for (let [price, beauty] of items) {
+        maxBeautySoFar = Math.max(maxBeautySoFar, beauty);
+        beautyAtPrice.push([price, maxBeautySoFar]);
+    }
+
+    // Step 3: Answer each query using binary search
+    const result = new Array(queries.length).fill(0);
+    let j = 0;
+
+    for (let [query, originalIndex] of sortedQueries) {
+        // Find the rightmost item with price <= query using the sliding pointer approach
+        while (j < beautyAtPrice.length && beautyAtPrice[j][0] <= query) {
+            j++;
+        }
+
+        // If we have at least one valid item
+        result[originalIndex] = j > 0 ? beautyAtPrice[j - 1][1] : 0;
+    }
+
+    return result;
+};
