@@ -11,6 +11,12 @@
  * Return *an `array` answer of the same length as `queries` where `answer[j]` is the answer to the `jth`
  * query*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= items.length, queries.length <= 105`
+ * - `items[i].length == 2`
+ * - `1 <= pricei, beautyi, queries[j] <= 109`
+ *
  * @param {number[][]} items
  * @param {number[]} queries
  * @return {number[]}
