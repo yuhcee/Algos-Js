@@ -56,3 +56,10 @@ const nums = [0, 1, 7, 4, 4, 5],
 // Output: 6
 // Explanation: There are 6 fair pairs: (0,3), (0,4), (0,5), (1,3), (1,4), and (1,5).
 console.log(countFairPairs(nums, lower, upper));
+
+const nums1 = [1, 7, 9, 2, 5],
+    lower1 = 11,
+    upper1 = 11;
+// Output: 1
+// Explanation: There is a single fair pair: (2,3).
+console.log(countFairPairs(nums1, lower1, upper1));
