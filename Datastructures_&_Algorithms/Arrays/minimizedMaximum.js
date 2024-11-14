@@ -25,4 +25,32 @@
  * @param {number[]} quantities
  * @return {number}
  */
-const minimizedMaximum = function (n, quantities) {};
+const minimizedMaximum = function (n, quantities) {
+    // Define binary search bounds
+    let left = 1,
+        right = Math.max(...quantities);
+
+    // Helper function to check if a given maximum load x is feasible
+    const canDistribute = (x) => {
+        let storesNeeded = 0;
+        for (let q of quantities) {
+            // Calculate number of stores needed for each product type at load x
+            storesNeeded += Math.ceil(q / x);
+            // Early exit if storesNeeded exceeds available stores
+            if (storesNeeded > n) return false;
+        }
+        return storesNeeded <= n;
+    };
+
+    // Perform binary search
+    while (left < right) {
+        const mid = Math.floor((left + right) / 2);
+        if (canDistribute(mid)) {
+            right = mid; // Try for a smaller max load
+        } else {
+            left = mid + 1; // Increase the max load
+        }
+    }
+
+    return left;
+};
