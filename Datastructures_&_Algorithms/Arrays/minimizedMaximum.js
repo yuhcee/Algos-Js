@@ -73,3 +73,11 @@ const n1 = 7,
 - The 10 products of type 2 are distributed to the last two stores in these amounts: 5, 5
 The maximum number of products given to any store is max(5, 5, 5, 5, 5, 5, 5) = 5. */
 console.log(minimizedMaximum(n1, quantities1));
+
+const n2 = 1,
+    quantities2 = [100000];
+// Output: 100000
+/* Explanation: The only optimal way is:
+- The 100000 products of type 0 are distributed to the only store.
+The maximum number of products given to any store is max(100000) = 100000. */
+console.log(minimizedMaximum(n2, quantities2));
