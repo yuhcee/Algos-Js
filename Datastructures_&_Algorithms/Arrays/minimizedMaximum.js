@@ -63,3 +63,13 @@ const n = 6,
 - The 6 products of type 1 are distributed to the other two stores in these amounts: 3, 3
 The maximum number of products given to any store is max(2, 3, 3, 3, 3, 3) = 3. */
 console.log(minimizedMaximum(n, quantities));
+
+const n1 = 7,
+    quantities1 = [15, 10, 10];
+// Output: 5
+/* Explanation: One optimal way is:
+- The 15 products of type 0 are distributed to the first three stores in these amounts: 5, 5, 5
+- The 10 products of type 1 are distributed to the next two stores in these amounts: 5, 5
+- The 10 products of type 2 are distributed to the last two stores in these amounts: 5, 5
+The maximum number of products given to any store is max(5, 5, 5, 5, 5, 5, 5) = 5. */
+console.log(minimizedMaximum(n1, quantities1));
