@@ -54,3 +54,12 @@ const minimizedMaximum = function (n, quantities) {
 
     return left;
 };
+
+const n = 6,
+    quantities = [11, 6];
+// Output: 3
+/* Explanation: One optimal way is:
+- The 11 products of type 0 are distributed to the first four stores in these amounts: 2, 3, 3, 3
+- The 6 products of type 1 are distributed to the other two stores in these amounts: 3, 3
+The maximum number of products given to any store is max(2, 3, 3, 3, 3, 3) = 3. */
+console.log(minimizedMaximum(n, quantities));
