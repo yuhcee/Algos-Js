@@ -64,3 +64,8 @@ const arr1 = [5, 4, 3, 2, 1];
 // Output: 4
 /* Explanation: Since the array is strictly decreasing, we can only keep a single element. Therefore we need to remove a subarray of length 4, either [5,4,3,2] or [4,3,2,1]. */
 console.log(findLengthOfShortestSubarray(arr1));
+
+const arr2 = [1, 2, 3];
+// Output: 0
+// Explanation: The array is already non-decreasing. We do not need to remove any elements.
+console.log(findLengthOfShortestSubarray(arr2));
