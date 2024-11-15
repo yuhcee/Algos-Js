@@ -8,6 +8,11 @@
  *
  * A **subarray** is a contiguous subsequence of the array.
  *
+ * **Constraints:**
+ *
+ * - `1 <= arr.length <= 105`
+ * - `0 <= arr[i] <= 109`
+ *
  * @param {number[]} arr
  * @return {number}
  */
