@@ -16,4 +16,40 @@
  * @param {number[]} arr
  * @return {number}
  */
-const findLengthOfShortestSubarray = function (arr) {};
+const findLengthOfShortestSubarray = function (arr) {
+    const n = arr.length;
+
+    // Step 1: Find the longest non-decreasing prefix
+    let left = 0;
+    while (left < n - 1 && arr[left] <= arr[left + 1]) {
+        left++;
+    }
+
+    // If the entire array is sorted, return 0
+    if (left === n - 1) {
+        return 0;
+    }
+
+    // Step 2: Find the longest non-decreasing suffix
+    let right = n - 1;
+    while (right > 0 && arr[right - 1] <= arr[right]) {
+        right--;
+    }
+
+    // Step 3: Initialize the result as removing all elements between prefix and suffix
+    let result = Math.min(n - left - 1, right);
+
+    // Step 4: Merge prefix and suffix
+    let i = 0,
+        j = right;
+    while (i <= left && j < n) {
+        if (arr[i] <= arr[j]) {
+            result = Math.min(result, j - i - 1);
+            i++;
+        } else {
+            j++;
+        }
+    }
+
+    return result;
+};
