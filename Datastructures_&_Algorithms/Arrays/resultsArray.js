@@ -48,3 +48,15 @@ const resultsArray = function (nums, k) {
 
     return results;
 };
+
+const nums = [1, 2, 3, 4, 3, 2, 5],
+    k = 3;
+// Output: [3,4,-1,-1,-1]
+/* Explanation:
+There are 5 subarrays of nums of size 3:
+[1, 2, 3] with the maximum element 3.
+[2, 3, 4] with the maximum element 4.
+[3, 4, 3] whose elements are not consecutive.
+[4, 3, 2] whose elements are not sorted.
+[3, 2, 5] whose elements are not consecutive. */
+console.log(resultsArray(nums, k));
