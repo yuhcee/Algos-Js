@@ -23,4 +23,28 @@
  * @param {number} k
  * @return {number[]}
  */
-const resultsArray = function (nums, k) {};
+const resultsArray = function (nums, k) {
+    const n = nums.length;
+    const results = [];
+
+    for (let i = 0; i <= n - k; i++) {
+        let isSortedAndConsecutive = true;
+
+        // Check if the subarray is sorted and consecutive
+        for (let j = i + 1; j < i + k; j++) {
+            if (nums[j] !== nums[j - 1] + 1) {
+                isSortedAndConsecutive = false;
+                break;
+            }
+        }
+
+        // Append the maximum if valid, otherwise -1
+        if (isSortedAndConsecutive) {
+            results.push(nums[i + k - 1]); // Maximum element in this case
+        } else {
+            results.push(-1);
+        }
+    }
+
+    return results;
+};
