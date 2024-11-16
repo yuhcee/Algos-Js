@@ -13,6 +13,12 @@
  * Return an integer array `results` of size `n - k + 1`, where `results[i]` is the power of `nums[i..(i + k
  * - 1)]`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n == nums.length <= 500`
+ * - `1 <= nums[i] <= 105`
+ * - `1 <= k <= n`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number[]}
