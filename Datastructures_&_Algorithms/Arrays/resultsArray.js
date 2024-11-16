@@ -65,3 +65,7 @@ const nums1 = [2, 2, 2, 2, 2],
     k1 = 4;
 // Output: [-1,-1]
 console.log(resultsArray(nums1, k1));
+
+const nums2 = [3,2,3,2,3,2], k2 = 2
+// Output: [-1,3,-1,3,-1]
+console.log(resultsArray(nums2, k2));
