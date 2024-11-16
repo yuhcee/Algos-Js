@@ -60,3 +60,8 @@ There are 5 subarrays of nums of size 3:
 [4, 3, 2] whose elements are not sorted.
 [3, 2, 5] whose elements are not consecutive. */
 console.log(resultsArray(nums, k));
+
+const nums1 = [2, 2, 2, 2, 2],
+    k1 = 4;
+// Output: [-1,-1]
+console.log(resultsArray(nums1, k1));
