@@ -43,3 +43,8 @@ const shortestSubarray = function (nums, k) {
 
     return minLength === Infinity ? -1 : minLength;
 };
+
+const nums = [1],
+    k = 1;
+// Output: 1
+console.log(shortestSubarray(nums, k));
