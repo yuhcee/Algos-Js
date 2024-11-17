@@ -48,3 +48,8 @@ const nums = [1],
     k = 1;
 // Output: 1
 console.log(shortestSubarray(nums, k));
+
+const nums1 = [1, 2],
+    k1 = 4;
+// Output: -1
+console.log(shortestSubarray(nums1, k1));
