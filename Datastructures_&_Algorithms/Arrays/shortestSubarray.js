@@ -53,3 +53,8 @@ const nums1 = [1, 2],
     k1 = 4;
 // Output: -1
 console.log(shortestSubarray(nums1, k1));
+
+const nums2 = [2, -1, 2],
+    k2 = 3;
+// Output: 3
+console.log(shortestSubarray(nums2, k2));
