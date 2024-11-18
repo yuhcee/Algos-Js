@@ -15,6 +15,13 @@
  *
  * Given the **circular** array code and an integer key `k`, return *the decrypted code to defuse the bomb!*
  *
+ * **Constraints:**
+ *
+ * - `n == code.length`
+ * - `1 <= n <= 100`
+ * - `1 <= code[i] <= 100`
+ * - `-(n - 1) <= k <= n - 1`
+ *
  * @param {number[]} code
  * @param {number} k
  * @return {number[]}
