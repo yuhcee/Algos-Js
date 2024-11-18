@@ -26,4 +26,25 @@
  * @param {number} k
  * @return {number[]}
  */
-const decrypt = function (code, k) {};
+const decrypt = function (code, k) {
+    const n = code.length;
+    if (k === 0) return new Array(n).fill(0); // Case when k = 0
+
+    const result = new Array(n).fill(0);
+    const extendedCode = [...code, ...code]; // Create a circular array by doubling it
+
+    for (let i = 0; i < n; i++) {
+        if (k > 0) {
+            for (let j = 1; j <= k; j++) {
+                result[i] += extendedCode[i + j];
+            }
+        } else {
+            // k < 0
+            for (let j = 1; j <= Math.abs(k); j++) {
+                result[i] += extendedCode[i + n - j];
+            }
+        }
+    }
+
+    return result;
+};
