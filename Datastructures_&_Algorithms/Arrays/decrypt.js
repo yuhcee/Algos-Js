@@ -60,3 +60,9 @@ const code1 = [1, 2, 3, 4],
 // Output: [0,0,0,0]
 // Explanation: When k is zero, the numbers are replaced by 0.
 console.log(decrypt(code1, k1));
+
+const code2 = [2, 4, 9, 3],
+    k2 = -2;
+// Output: [12,5,6,13]
+// Explanation: The decrypted code is [3+9, 2+3, 4+2, 9+4]. Notice that the numbers wrap around again. If k is negative, the sum is of the previous numbers.
+console.log(decrypt(code2, k2));
