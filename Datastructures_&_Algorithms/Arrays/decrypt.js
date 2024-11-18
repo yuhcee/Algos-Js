@@ -54,3 +54,9 @@ const code = [5, 7, 1, 4],
 // Output: [12,10,16,13]
 /* Explanation: Each number is replaced by the sum of the next 3 numbers. The decrypted code is [7+1+4, 1+4+5, 4+5+7, 5+7+1]. Notice that the numbers wrap around. */
 console.log(decrypt(code, k));
+
+const code1 = [1, 2, 3, 4],
+    k1 = 0;
+// Output: [0,0,0,0]
+// Explanation: When k is zero, the numbers are replaced by 0.
+console.log(decrypt(code1, k1));
