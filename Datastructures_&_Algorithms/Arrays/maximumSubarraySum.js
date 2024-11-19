@@ -61,3 +61,11 @@ const nums = [1, 5, 4, 2, 9, 9, 9],
 - [9,9,9] which does not meet the requirements because the element 9 is repeated.
 We return 15 because it is the maximum subarray sum of all the subarrays that meet the conditions */
 console.log(maximumSubarraySum(nums, k));
+
+const nums1 = [4, 4, 4],
+    k1 = 3;
+// Output: 0
+/* Explanation: The subarrays of nums with length 3 are:
+- [4,4,4] which does not meet the requirements because the element 4 is repeated.
+We return 0 because no subarrays meet the conditions. */
+console.log(maximumSubarraySum(nums1, k1));
