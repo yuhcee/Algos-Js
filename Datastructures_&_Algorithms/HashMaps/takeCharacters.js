@@ -8,6 +8,12 @@
  * Return *the **minimum** number of minutes needed for you to take **at least** `k` of each character, or
  * return `-1` if it is not possible to take `k` of each character.*
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 105`
+ * - `s` consists of only the letters `'a'`, `'b'`, and `'c'`.
+ * - `0 <= k <= s.length`
+ *
  * @param {string} s
  * @param {number} k
  * @return {number}
