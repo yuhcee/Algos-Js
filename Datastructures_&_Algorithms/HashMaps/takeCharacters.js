@@ -63,3 +63,9 @@ Take five characters from the right of s. You now have four 'a' characters, two 
 A total of 3 + 5 = 8 minutes is needed.
 It can be proven that 8 is the minimum number of minutes needed. */
 console.log(takeCharacters(s, k));
+
+const s1 = 'a',
+    k1 = 1;
+// Output: -1
+// Explanation: It is not possible to take one 'b' or 'c' so return -1.
+console.log(takeCharacters(s1, k1));
