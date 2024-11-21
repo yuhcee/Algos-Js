@@ -90,3 +90,17 @@ const m = 4,
 /* Explanation: The guarded and unguarded cells are shown in red and green respectively in the above diagram.
 There are a total of 7 unguarded cells, so we return 7. */
 console.log(countUnguarded(m, n, guards, walls));
+
+const m1 = 3,
+    n1 = 3,
+    guards1 = [[1, 1]],
+    walls1 = [
+        [0, 1],
+        [1, 0],
+        [2, 1],
+        [1, 2],
+    ];
+// Output: 4
+/* Explanation: The unguarded cells are shown in green in the above diagram.
+There are a total of 4 unguarded cells, so we return 4. */
+console.log(countUnguarded(m1, n1, guards1, walls1));
