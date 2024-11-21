@@ -30,4 +30,46 @@
  * @param {number[][]} walls
  * @return {number}
  */
-const countUnguarded = function (m, n, guards, walls) {};
+const countUnguarded = function (m, n, guards, walls) {
+    const grid = Array.from({ length: m }, () => Array(n).fill(0));
+
+    // Constants for marking grid
+    const GUARD = 1,
+        WALL = 2,
+        GUARDED = 3;
+
+    // Mark guards and walls on the grid
+    for (const [r, c] of guards) grid[r][c] = GUARD;
+    for (const [r, c] of walls) grid[r][c] = WALL;
+
+    // Directions: [rowDelta, colDelta]
+    const directions = [
+        [0, 1],
+        [1, 0],
+        [0, -1],
+        [-1, 0],
+    ];
+
+    // Simulate guard surveillance
+    for (const [r, c] of guards) {
+        for (const [dr, dc] of directions) {
+            let x = r + dr,
+                y = c + dc;
+            while (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] !== WALL && grid[x][y] !== GUARD) {
+                if (grid[x][y] === 0) grid[x][y] = GUARDED;
+                x += dr;
+                y += dc;
+            }
+        }
+    }
+
+    // Count unguarded cells
+    let unguarded = 0;
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (grid[i][j] === 0) unguarded++;
+        }
+    }
+
+    return unguarded;
+};
