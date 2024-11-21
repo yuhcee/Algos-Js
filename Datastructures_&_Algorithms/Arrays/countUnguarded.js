@@ -13,6 +13,17 @@
  *
  * Return *the number of unoccupied cells that are **not guarded***.
  *
+ * **Constraints:**
+ *
+ * - `1 <= m, n <= 105`
+ * - `2 <= m * n <= 105`
+ * - `1 <= guards.length, walls.length <= 5 * 104`
+ * - `2 <= guards.length + walls.length <= m * n`
+ * - `guards[i].length == walls[j].length == 2`
+ * - `0 <= rowi, rowj < m`
+ * - `0 <= coli, colj < n`
+ * - All the positions in guards and walls are unique.
+ *
  * @param {number} m
  * @param {number} n
  * @param {number[][]} guards
