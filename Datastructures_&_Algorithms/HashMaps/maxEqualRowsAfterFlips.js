@@ -35,3 +35,11 @@ const maxEqualRowsAfterFlips = function (matrix) {
     // Return the maximum count of equivalent rows
     return Math.max(...rowPatterns.values());
 };
+
+const matrix = [
+    [0, 1],
+    [1, 1],
+];
+// Output: 1
+// Explanation: After flipping no values, 1 row has all values equal.
+console.log(maxEqualRowsAfterFlips(matrix));
