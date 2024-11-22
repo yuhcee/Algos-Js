@@ -43,3 +43,11 @@ const matrix = [
 // Output: 1
 // Explanation: After flipping no values, 1 row has all values equal.
 console.log(maxEqualRowsAfterFlips(matrix));
+
+const matrix1 = [
+    [0, 1],
+    [1, 0],
+];
+// Output: 2
+// Explanation: After flipping values in the first column, both rows have equal values.
+console.log(maxEqualRowsAfterFlips(matrix1));
