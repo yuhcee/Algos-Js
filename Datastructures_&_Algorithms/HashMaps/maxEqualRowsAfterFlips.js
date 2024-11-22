@@ -51,3 +51,12 @@ const matrix1 = [
 // Output: 2
 // Explanation: After flipping values in the first column, both rows have equal values.
 console.log(maxEqualRowsAfterFlips(matrix1));
+
+const matrix2 = [
+    [0, 0, 0],
+    [0, 0, 1],
+    [1, 1, 0],
+];
+// Output: 2
+// Explanation: After flipping values in the first two columns, the last two rows have equal values.
+console.log(maxEqualRowsAfterFlips(matrix2));
