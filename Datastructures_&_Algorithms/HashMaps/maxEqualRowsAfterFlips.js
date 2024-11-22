@@ -20,4 +20,18 @@
  * @param {number[][]} matrix
  * @return {number}
  */
-const maxEqualRowsAfterFlips = function (matrix) {};
+const maxEqualRowsAfterFlips = function (matrix) {
+    const rowPatterns = new Map();
+
+    for (const row of matrix) {
+        // Normalize the row by making it start with `0` if possible
+        const normalized = row.map((val) => val ^ row[0]);
+        const key = normalized.join(',');
+
+        // Count rows with the same normalized pattern
+        rowPatterns.set(key, (rowPatterns.get(key) || 0) + 1);
+    }
+
+    // Return the maximum count of equivalent rows
+    return Math.max(...rowPatterns.values());
+};
