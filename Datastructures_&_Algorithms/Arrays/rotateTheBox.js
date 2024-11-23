@@ -58,3 +58,7 @@ const rotateTheBox = function (box) {
 
     return rotated;
 };
+
+const box = [['#', '.', '#']];
+// Output: [['.'], ['#'], ['#']];
+console.log(rotateTheBox(box));
