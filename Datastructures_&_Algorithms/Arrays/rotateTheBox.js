@@ -20,6 +20,13 @@
  * Return *an `n x m` matrix representing the box after the rotation described
  * above.*
  *
+ * **Constraints:**
+ *
+ * - `m == box.length`
+ * - `n == box[i].length`
+ * - `1 <= m, n <= 500`
+ * - `box[i][j]` is either `'#'`, `'*'`, or `'.'`.
+ *
  * @param {character[][]} box
  * @return {character[][]}
  */
