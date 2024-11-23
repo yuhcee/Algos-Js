@@ -30,4 +30,31 @@
  * @param {character[][]} box
  * @return {character[][]}
  */
-const rotateTheBox = function (box) {};
+const rotateTheBox = function (box) {
+    const m = box.length;
+    const n = box[0].length;
+
+    // Step 1: Apply gravity to each row
+    for (let row = 0; row < m; row++) {
+        let emptyIndex = n - 1; // Position where the next stone should fall
+        for (let col = n - 1; col >= 0; col--) {
+            if (box[row][col] === '*') {
+                emptyIndex = col - 1; // Stones can't fall past an obstacle
+            } else if (box[row][col] === '#') {
+                box[row][col] = '.';
+                box[row][emptyIndex] = '#';
+                emptyIndex--;
+            }
+        }
+    }
+
+    // Step 2: Rotate the box 90 degrees clockwise
+    const rotated = Array.from({ length: n }, () => Array(m).fill('.'));
+    for (let row = 0; row < m; row++) {
+        for (let col = 0; col < n; col++) {
+            rotated[col][m - 1 - row] = box[row][col];
+        }
+    }
+
+    return rotated;
+};
