@@ -62,3 +62,15 @@ const rotateTheBox = function (box) {
 const box = [['#', '.', '#']];
 // Output: [['.'], ['#'], ['#']];
 console.log(rotateTheBox(box));
+
+const box1 = [
+    ['#', '.', '*', '.'],
+    ['#', '#', '*', '.'],
+];
+/* Output: [
+    ['#', '.'],
+    ['#', '#'],
+    ['*', '*'],
+    ['.', '.'],
+]; */
+console.log(rotateTheBox(box1));
