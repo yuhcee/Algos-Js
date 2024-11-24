@@ -14,6 +14,12 @@
  * *the **maximum** sum of the matrix's elements using the operation mentioned
  * above*.
  *
+ * **Constraints:**
+ *
+ * - `n == matrix.length == matrix[i].length`
+ * - `2 <= n <= 250`
+ * - `-105 <= matrix[i][j] <= 105`
+ *
  * @param {number[][]} matrix
  * @return {number}
  */
