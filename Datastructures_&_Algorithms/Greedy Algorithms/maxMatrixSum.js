@@ -46,3 +46,13 @@ const maxMatrixSum = function (matrix) {
 
     return totalSum;
 };
+
+const matrix = [
+    [1, -1],
+    [-1, 1],
+];
+// Output: 4
+/* Explanation: We can follow the following steps to reach sum equals 4:
+- Multiply the 2 elements in the first row by -1.
+- Multiply the 2 elements in the first column by -1. */
+console.log(maxMatrixSum(matrix));
