@@ -23,4 +23,26 @@
  * @param {number[][]} matrix
  * @return {number}
  */
-const maxMatrixSum = function (matrix) {};
+const maxMatrixSum = function (matrix) {
+    let totalSum = 0; // Sum of absolute values
+    let negativeCount = 0; // Count of negative numbers
+    let minAbsoluteValue = Infinity; // Smallest absolute value in the matrix
+
+    const n = matrix.length;
+
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            const value = matrix[i][j];
+            totalSum += Math.abs(value);
+            if (value < 0) negativeCount++;
+            minAbsoluteValue = Math.min(minAbsoluteValue, Math.abs(value));
+        }
+    }
+
+    // If negative count is odd, subtract twice the smallest absolute value
+    if (negativeCount % 2 === 1) {
+        totalSum -= 2 * minAbsoluteValue;
+    }
+
+    return totalSum;
+};
