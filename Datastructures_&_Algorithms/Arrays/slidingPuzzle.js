@@ -68,3 +68,11 @@ const board = [
 // Output: 1
 // Explanation: Swap the 0 and the 5 in one move.
 console.log(slidingPuzzle(board));
+
+const board1 = [
+    [1, 2, 3],
+    [5, 4, 0],
+];
+// Output: -1
+// Explanation: No number of moves will make the board solved.
+console.log(slidingPuzzle(board1));
