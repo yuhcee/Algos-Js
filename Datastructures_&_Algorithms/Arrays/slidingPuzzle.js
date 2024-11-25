@@ -60,3 +60,11 @@ const slidingPuzzle = function (board) {
 
     return -1; // If no solution is found
 };
+
+const board = [
+    [1, 2, 3],
+    [4, 0, 5],
+];
+// Output: 1
+// Explanation: Swap the 0 and the 5 in one move.
+console.log(slidingPuzzle(board));
