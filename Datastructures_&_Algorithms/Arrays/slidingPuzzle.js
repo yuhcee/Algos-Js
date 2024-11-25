@@ -22,4 +22,41 @@
  * @param {number[][]} board
  * @return {number}
  */
-const slidingPuzzle = function (board) {};
+const slidingPuzzle = function (board) {
+    const target = '123450'; // Target state
+    const start = board.flat().join(''); // Initial state as a string
+
+    // Possible moves for each index in a 2x3 grid
+    const moves = [
+        [1, 3], // Index 0: Move right (1) or down (3)
+        [0, 2, 4], // Index 1: Move left (0), right (2), or down (4)
+        [1, 5], // Index 2: Move left (1) or down (5)
+        [0, 4], // Index 3: Move up (0) or right (4)
+        [1, 3, 5], // Index 4: Move up (1), left (3), or right (5)
+        [2, 4], // Index 5: Move up (2) or left (4)
+    ];
+
+    const queue = [[start, start.indexOf('0'), 0]]; // [state, index of 0, move count]
+    const visited = new Set([start]);
+
+    while (queue.length > 0) {
+        const [state, zeroIndex, movesCount] = queue.shift();
+
+        // Check if we've reached the target state
+        if (state === target) return movesCount;
+
+        // Generate all possible states by moving the zero
+        for (const nextIndex of moves[zeroIndex]) {
+            const newState = state.split('');
+            [newState[zeroIndex], newState[nextIndex]] = [newState[nextIndex], newState[zeroIndex]];
+            const newStringState = newState.join('');
+
+            if (!visited.has(newStringState)) {
+                visited.add(newStringState);
+                queue.push([newStringState, nextIndex, movesCount + 1]);
+            }
+        }
+    }
+
+    return -1; // If no solution is found
+};
