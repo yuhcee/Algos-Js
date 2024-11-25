@@ -12,6 +12,13 @@
  * so that the state of the board is solved.* If it is impossible for the state
  * of the board to be solved, return `-1`.
  *
+ * **Constraints:**
+ *
+ * - `board.length == 2`
+ * - `board[i].length == 3`
+ * - `0 <= board[i][j] <= 5`
+ * - Each value `board[i][j]` is unique.
+ *
  * @param {number[][]} board
  * @return {number}
  */
