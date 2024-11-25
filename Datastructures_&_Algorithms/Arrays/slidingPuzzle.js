@@ -76,3 +76,18 @@ const board1 = [
 // Output: -1
 // Explanation: No number of moves will make the board solved.
 console.log(slidingPuzzle(board1));
+
+const board2 = [
+    [4, 1, 2],
+    [5, 0, 3],
+];
+// Output: 5
+/* Explanation: 5 is the smallest number of moves that solves the board.
+An example path:
+After move 0: [[4,1,2],[5,0,3]]
+After move 1: [[4,1,2],[0,5,3]]
+After move 2: [[0,1,2],[4,5,3]]
+After move 3: [[1,0,2],[4,5,3]]
+After move 4: [[1,2,0],[4,5,3]]
+After move 5: [[1,2,3],[4,5,0]] */
+console.log(slidingPuzzle(board2));
