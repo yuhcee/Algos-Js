@@ -43,4 +43,25 @@
  * @param {number[][]} edges
  * @return {number}
  */
-const findChampion = function (n, edges) {};
+const findChampion = function (n, edges) {
+    const inDegree = Array(n).fill(0); // Array to track incoming edges for each node
+
+    // Calculate in-degree for each node
+    for (const [u, v] of edges) {
+        inDegree[v]++;
+    }
+
+    // Find nodes with in-degree 0
+    let champion = -1;
+    for (let i = 0; i < n; i++) {
+        if (inDegree[i] === 0) {
+            if (champion !== -1) {
+                // More than one node with in-degree 0
+                return -1;
+            }
+            champion = i;
+        }
+    }
+
+    return champion;
+};
