@@ -65,3 +65,12 @@ const findChampion = function (n, edges) {
 
     return champion;
 };
+
+const n = 3,
+    edges = [
+        [0, 1],
+        [1, 2],
+    ];
+// Output: 0
+// Explanation: Team 1 is weaker than team 0. Team 2 is weaker than team 1. So the champion is team 0.
+console.log(findChampion(n, edges));
