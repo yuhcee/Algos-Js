@@ -26,6 +26,19 @@
  * every `i` in the range `[1, n]`.
  * - A **DAG** is a directed graph that does not have any **cycle**.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 100`
+ * - `m == edges.length`
+ * - `0 <= m <= n * (n - 1) / 2`
+ * - `edges[i].length == 2`
+ * - `0 <= edge[i][j] <= n - 1`
+ * - `edges[i][0] != edges[i][1]`
+ * - The input is generated such that if team `a` is stronger than team `b`,
+ * team `b` is not stronger than team `a`.
+ * - The input is generated such that if team `a` is stronger than team `b` and
+ * team `b` is stronger than team `c`, then team `a` is stronger than team `c`.
+ *
  * @param {number} n
  * @param {number[][]} edges
  * @return {number}
