@@ -74,3 +74,13 @@ const n = 3,
 // Output: 0
 // Explanation: Team 1 is weaker than team 0. Team 2 is weaker than team 1. So the champion is team 0.
 console.log(findChampion(n, edges));
+
+const n = 4,
+    edges = [
+        [0, 2],
+        [1, 3],
+        [1, 2],
+    ];
+// Output: -1
+// Explanation: Team 2 is weaker than team 0 and team 1. Team 3 is weaker than team 1. But team 1 and team 0 are not weaker than any other teams. So the answer is -1.
+console.log(findChampion(n, edges));
