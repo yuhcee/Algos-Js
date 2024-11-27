@@ -87,3 +87,14 @@ After the addition of the road from 2 to 4, the length of the shortest path from
 After the addition of the road from 0 to 2, the length of the shortest path from 0 to 4 is 2.
 After the addition of the road from 0 to 4, the length of the shortest path from 0 to 4 is 1. */
 console.log(shortestDistanceAfterQueries(n, queries));
+
+const n1 = 4,
+    queries1 = [
+        [0, 3],
+        [0, 2],
+    ];
+// Output: [1,1]
+/* Explanation:
+After the addition of the road from 0 to 3, the length of the shortest path from 0 to 3 is 1.
+After the addition of the road from 0 to 2, the length of the shortest path remains 1. */
+console.log(shortestDistanceAfterQueries(n1, queries1));
