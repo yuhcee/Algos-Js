@@ -74,3 +74,16 @@ const shortestDistanceAfterQueries = function (n, queries) {
 
     return result;
 };
+
+const n = 5,
+    queries = [
+        [2, 4],
+        [0, 2],
+        [0, 4],
+    ];
+// Output: [3,2,1]
+/* Explanation:
+After the addition of the road from 2 to 4, the length of the shortest path from 0 to 4 is 3.
+After the addition of the road from 0 to 2, the length of the shortest path from 0 to 4 is 2.
+After the addition of the road from 0 to 4, the length of the shortest path from 0 to 4 is 1. */
+console.log(shortestDistanceAfterQueries(n, queries));
