@@ -15,6 +15,15 @@
  * - 1]`, `answer[i]` is the *length of the shortest path* from city `0` to
  * city `n - 1` after processing the **first** `i + 1` queries.
  *
+ * **Constraints:**
+ *
+ * - `3 <= n <= 500`
+ * - `1 <= queries.length <= 500`
+ * - `queries[i].length == 2`
+ * - `0 <= queries[i][0] < queries[i][1] < n`
+ * - `1 < queries[i][1] - queries[i][0]`
+ * - There are no repeated roads among the queries.
+ *
  * @param {number} n
  * @param {number[][]} queries
  * @return {number[]}
