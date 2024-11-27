@@ -28,4 +28,49 @@
  * @param {number[][]} queries
  * @return {number[]}
  */
-const shortestDistanceAfterQueries = function (n, queries) {};
+const shortestDistanceAfterQueries = function (n, queries) {
+    const INF = Infinity;
+
+    // Build initial graph as adjacency list
+    const graph = Array.from({ length: n }, () => []);
+    for (let i = 0; i < n - 1; i++) {
+        graph[i].push([i + 1, 1]); // Initial roads with weight 1
+    }
+
+    // Dijkstra's algorithm to find shortest path from src to all other nodes
+    const dijkstra = (src, target) => {
+        const dist = Array(n).fill(INF);
+        const pq = new MinPriorityQueue({ priority: (x) => x[0] }); // [distance, node]
+
+        dist[src] = 0;
+        pq.enqueue([0, src]);
+
+        while (!pq.isEmpty()) {
+            const [currDist, currNode] = pq.dequeue().element;
+
+            // Skip if we already found a shorter path to currNode
+            if (currDist > dist[currNode]) continue;
+
+            for (const [nextNode, weight] of graph[currNode]) {
+                const newDist = currDist + weight;
+                if (newDist < dist[nextNode]) {
+                    dist[nextNode] = newDist;
+                    pq.enqueue([newDist, nextNode]);
+                }
+            }
+        }
+
+        return dist[target] === INF ? -1 : dist[target];
+    };
+
+    const result = [];
+    for (const [u, v] of queries) {
+        // Add the new road
+        graph[u].push([v, 1]);
+
+        // Compute shortest path from 0 to n - 1
+        result.push(dijkstra(0, n - 1));
+    }
+
+    return result;
+};
