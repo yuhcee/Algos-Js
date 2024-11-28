@@ -13,15 +13,55 @@
  * from the upper left corner (0, 0) to the lower right corner (m - 1, n - 1).
  *
  * **Constraints:**
- * 
+ *
  * - `m == grid.length`
  * - `n == grid[i].length`
  * - `1 <= m, n <= 105`
  * - `2 <= m * n <= 105`
  * - `grid[i][j]` is either `0` or `1`.
  * - `grid[0][0] == grid[m - 1][n - 1] == 0`
- * 
+ *
  * @param {number[][]} grid
  * @return {number}
  */
-const minimumObstacles = function (grid) {};
+const minimumObstacles = function (grid) {
+    const m = grid.length,
+        n = grid[0].length;
+    const directions = [
+        [0, 1],
+        [1, 0],
+        [0, -1],
+        [-1, 0],
+    ];
+
+    // Priority queue: [obstaclesRemoved, x, y]
+    const pq = new MinPriorityQueue({ priority: (x) => x[0] });
+    const dist = Array.from({ length: m }, () => Array(n).fill(Infinity));
+
+    // Start from (0, 0) with 0 obstacles removed
+    pq.enqueue([0, 0, 0]);
+    dist[0][0] = 0;
+
+    while (!pq.isEmpty()) {
+        const [currCost, x, y] = pq.dequeue().element;
+
+        // If we reached the bottom-right corner
+        if (x === m - 1 && y === n - 1) return currCost;
+
+        // Explore neighbors
+        for (const [dx, dy] of directions) {
+            const nx = x + dx,
+                ny = y + dy;
+
+            if (nx >= 0 && ny >= 0 && nx < m && ny < n) {
+                const newCost = currCost + grid[nx][ny];
+                if (newCost < dist[nx][ny]) {
+                    dist[nx][ny] = newCost;
+                    pq.enqueue([newCost, nx, ny]);
+                }
+            }
+        }
+    }
+
+    return -1; // Should never reach here
+};
