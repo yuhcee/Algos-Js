@@ -76,3 +76,12 @@ const grid = [
 It can be shown that we need to remove at least 2 obstacles, so we return 2.
 Note that there may be other ways to remove 2 obstacles to create a path. */
 console.log(minimumObstacles(grid));
+
+const grid1 = [
+    [0, 1, 0, 0, 0],
+    [0, 1, 0, 1, 0],
+    [0, 0, 0, 1, 0],
+];
+// Output: 0
+// Explanation: We can move from (0, 0) to (2, 4) without removing any obstacles, so we return 0.
+console.log(minimumObstacles(grid1));
