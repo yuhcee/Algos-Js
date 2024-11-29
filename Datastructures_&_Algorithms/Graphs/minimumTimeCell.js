@@ -92,3 +92,12 @@ const grid = [
 - at t = 7, we move to the cell (2,3). It is possible because grid[2][3] <= 7.
 The final time is 7. It can be shown that it is the minimum time possible. */
 console.log(minimumTimeCell(grid));
+
+const grid1 = [
+    [0, 2, 4],
+    [3, 2, 1],
+    [1, 0, 4],
+];
+// Output: -1
+// Explanation: There is no path from the top left to the bottom-right cell.
+console.log(minimumTimeCell(grid1));
