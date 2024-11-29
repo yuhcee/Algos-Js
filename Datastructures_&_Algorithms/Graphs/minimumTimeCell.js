@@ -15,6 +15,15 @@
  * bottom-right cell of the matrix*. If you cannot visit the bottom-right cell,
  * then return -1.
  *
+ * **Constraints:**
+ *
+ * - `m == grid.length`
+ * - `n == grid[i].length`
+ * - `2 <= m, n <= 1000`
+ * - `4 <= m * n <= 105`
+ * - `0 <= grid[i][j] <= 105`
+ * - `grid[0][0] == 0`
+ *
  * @param {number[][]} grid
  * @return {number}
  */
