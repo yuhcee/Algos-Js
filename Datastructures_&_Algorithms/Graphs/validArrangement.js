@@ -83,3 +83,17 @@ end0 = 9 == 9 = start1
 end1 = 4 == 4 = start2
 end2 = 5 == 5 = start3 */
 console.log(validArrangement(pairs));
+
+const pairs1 = [
+    [1, 3],
+    [3, 2],
+    [2, 1],
+];
+// Output: [[1,3],[3,2],[2,1]]
+/* Explanation:
+This is a valid arrangement since endi-1 always equals starti.
+end0 = 3 == 3 = start1
+end1 = 2 == 2 = start2
+The arrangements [[2,1],[1,3],[3,2]] and [[3,2],[2,1],[1,3]] are also valid. */
+console.log(validArrangement(pairs1));
+
