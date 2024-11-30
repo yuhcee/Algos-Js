@@ -10,6 +10,15 @@
  * **Note:** The inputs will be generated such that there exists a **valid**
  * arrangement of pairs.
  *
+ * **Constraints:**
+ *
+ * - `1 <= pairs.length <= 105`
+ * - `pairs[i].length == 2`
+ * - `0 <= starti, endi <= 109`
+ * - `starti != endi`
+ * - No two pairs are exactly the same.
+ * - There **exists** a valid arrangement of `pairs`.
+ *
  * @param {number[][]} pairs
  * @return {number[][]}
  */
