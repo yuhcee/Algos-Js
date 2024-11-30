@@ -97,3 +97,14 @@ end1 = 2 == 2 = start2
 The arrangements [[2,1],[1,3],[3,2]] and [[3,2],[2,1],[1,3]] are also valid. */
 console.log(validArrangement(pairs1));
 
+const pairs2 = [
+    [1, 2],
+    [1, 3],
+    [2, 1],
+];
+// Output: [[1,2],[2,1],[1,3]]
+/* Explanation:
+This is a valid arrangement since endi-1 always equals starti.
+end0 = 2 == 2 = start1
+end1 = 1 == 1 = start2 */
+console.log(validArrangement(pairs2));
