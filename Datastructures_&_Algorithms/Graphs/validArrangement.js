@@ -69,3 +69,17 @@ const validArrangement = function (pairs) {
 
     return result;
 };
+
+const pairs = [
+    [5, 1],
+    [4, 5],
+    [11, 9],
+    [9, 4],
+];
+// Output: [[11,9],[9,4],[4,5],[5,1]]
+/* Explanation:
+This is a valid arrangement since endi-1 always equals starti.
+end0 = 9 == 9 = start1 
+end1 = 4 == 4 = start2
+end2 = 5 == 5 = start3 */
+console.log(validArrangement(pairs));
