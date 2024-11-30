@@ -22,4 +22,50 @@
  * @param {number[][]} pairs
  * @return {number[][]}
  */
-const validArrangement = function (pairs) {};
+const validArrangement = function (pairs) {
+    const graph = new Map();
+    const inDegree = new Map();
+    const outDegree = new Map();
+
+    // Build the graph and track in/out degrees
+    for (const [u, v] of pairs) {
+        if (!graph.has(u)) graph.set(u, []);
+        graph.get(u).push(v);
+
+        outDegree.set(u, (outDegree.get(u) || 0) + 1);
+        inDegree.set(v, (inDegree.get(v) || 0) + 1);
+    }
+
+    // Find the starting node for Eulerian path
+    let start = pairs[0][0];
+    for (const [node, out] of outDegree.entries()) {
+        const inDeg = inDegree.get(node) || 0;
+        if (out > inDeg) {
+            start = node;
+            break;
+        }
+    }
+
+    // Hierholzer's algorithm to find the Eulerian path
+    const stack = [start];
+    const path = [];
+
+    while (stack.length > 0) {
+        const node = stack[stack.length - 1];
+        if (graph.has(node) && graph.get(node).length > 0) {
+            const next = graph.get(node).pop();
+            stack.push(next);
+        } else {
+            path.push(stack.pop());
+        }
+    }
+
+    // Convert path to pairs and reverse
+    path.reverse();
+    const result = [];
+    for (let i = 0; i < path.length - 1; i++) {
+        result.push([path[i], path[i + 1]]);
+    }
+
+    return result;
+};
