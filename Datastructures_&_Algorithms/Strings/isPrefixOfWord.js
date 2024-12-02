@@ -23,4 +23,14 @@
  * @param {string} searchWord
  * @return {number}
  */
-const isPrefixOfWord = function (sentence, searchWord) {};
+const isPrefixOfWord = function (sentence, searchWord) {
+    const words = sentence.split(' ');
+
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].startsWith(searchWord)) {
+            return i + 1; // Return 1-indexed position
+        }
+    }
+
+    return -1; // No matching word found
+};
