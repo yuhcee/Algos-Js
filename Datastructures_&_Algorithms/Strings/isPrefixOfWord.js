@@ -40,3 +40,9 @@ const sentence = 'i love eating burger',
 // Output: 4
 // Explanation: "burg" is prefix of "burger" which is the 4th word in the sentence.
 console.log(isPrefixOfWord(sentence, searchWord));
+
+const sentence1 = 'this problem is an easy problem',
+    searchWord1 = 'pro';
+// Output: 2
+// Explanation: "pro" is prefix of "problem" which is the 2nd and the 6th word in the sentence, but we return 2 as it's the minimal index.
+console.log(isPrefixOfWord(sentence1, searchWord1));
