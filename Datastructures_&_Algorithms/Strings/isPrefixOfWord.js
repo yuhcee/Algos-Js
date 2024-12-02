@@ -46,3 +46,9 @@ const sentence1 = 'this problem is an easy problem',
 // Output: 2
 // Explanation: "pro" is prefix of "problem" which is the 2nd and the 6th word in the sentence, but we return 2 as it's the minimal index.
 console.log(isPrefixOfWord(sentence1, searchWord1));
+
+const sentence2 = 'i am tired',
+    searchWord2 = 'you';
+// Output: -1
+// Explanation: "you" is not a prefix of any word in the sentence.
+console.log(isPrefixOfWord(sentence2, searchWord2));
