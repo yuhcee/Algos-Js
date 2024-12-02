@@ -34,3 +34,9 @@ const isPrefixOfWord = function (sentence, searchWord) {
 
     return -1; // No matching word found
 };
+
+const sentence = 'i love eating burger',
+    searchWord = 'burg';
+// Output: 4
+// Explanation: "burg" is prefix of "burger" which is the 4th word in the sentence.
+console.log(isPrefixOfWord(sentence, searchWord));
