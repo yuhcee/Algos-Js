@@ -12,6 +12,13 @@
  *
  * **prefix** of a string `s` is any leading contiguous substring of `s`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= sentence.length <= 100`
+ * - `1 <= searchWord.length <= 10`
+ * - `sentence` consists of lowercase English letters and spaces.
+ * - `searchWord` consists of lowercase English letters.
+ *
  * @param {string} sentence
  * @param {string} searchWord
  * @return {number}
