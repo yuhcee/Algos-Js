@@ -49,3 +49,11 @@ The indices 8, 13, and 15 correspond to the underlined characters in "LeetcodeHe
 We then place spaces before those characters.
  */
 console.log(addSpaces(s, spaces));
+
+const s1 = 'icodeinpython',
+    spaces1 = [1, 5, 7, 9];
+// Output: "i code in py thon"
+/* Explanation:
+The indices 1, 5, 7, and 9 correspond to the underlined characters in "icodeinpython".
+We then place spaces before those characters. */
+console.log(addSpaces(s1, spaces1));
