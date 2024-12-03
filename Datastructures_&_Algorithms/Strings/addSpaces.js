@@ -12,6 +12,14 @@
  *
  * Return *the modified string **after** the spaces have been added.*
  *
+ * **Constraints:**
+ * 
+ * - `1 <= s.length <= 3 * 105`
+ * - `s` consists only of lowercase and uppercase English letters.
+ * - `1 <= spaces.length <= 3 * 105`
+ * - `0 <= spaces[i] <= s.length - 1`
+ * - All the values of `spaces` are strictly increasing.
+ * 
  * @param {string} s
  * @param {number[]} spaces
  * @return {string}
