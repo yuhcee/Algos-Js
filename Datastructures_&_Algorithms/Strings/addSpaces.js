@@ -57,3 +57,10 @@ const s1 = 'icodeinpython',
 The indices 1, 5, 7, and 9 correspond to the underlined characters in "icodeinpython".
 We then place spaces before those characters. */
 console.log(addSpaces(s1, spaces1));
+
+const s2 = 'spacing',
+    spaces2 = [0, 1, 2, 3, 4, 5, 6];
+// Output: " s p a c i n g"
+/* Explanation:
+We are also able to place spaces before the first character of the string. */
+console.log(addSpaces(s2, spaces2));
