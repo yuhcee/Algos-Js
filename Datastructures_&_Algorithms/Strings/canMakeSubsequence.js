@@ -48,3 +48,12 @@ Increment str1[2] to become 'd'.
 Hence, str1 becomes "abd" and str2 is now a subsequence. Therefore, true is returned.
  */
 console.log(canMakeSubsequence(str1, str2));
+
+const str1 = 'zc',
+    str2 = 'ad';
+// Output: true
+/* Explanation: Select indices 0 and 1 in str1. 
+Increment str1[0] to become 'a'. 
+Increment str1[1] to become 'd'. 
+Hence, str1 becomes "ad" and str2 is now a subsequence. Therefore, true is returned. */
+console.log(canMakeSubsequence(str11, str21));
