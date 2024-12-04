@@ -16,13 +16,27 @@
  * disturbing the relative positions of the remaining characters.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= str1.length <= 105`
  * - `1 <= str2.length <= 105`
  * - `str1` and `str2` consist of only lowercase English letters.
- * 
+ *
  * @param {string} str1
  * @param {string} str2
  * @return {boolean}
  */
-const canMakeSubsequence = function (str1, str2) {};
+const canMakeSubsequence = function (str1, str2) {
+    let i = 0; // Pointer for str1
+    let j = 0; // Pointer for str2
+
+    while (i < str1.length && j < str2.length) {
+        // Check if str1[i] matches str2[j]
+        if (str1[i] === str2[j] || String.fromCharCode(((str1[i].charCodeAt(0) - 97 + 1) % 26) + 97) === str2[j]) {
+            j++; // Move the pointer in str2 if there is a match
+        }
+        i++; // Always move the pointer in str1
+    }
+
+    // If we've matched all of str2, return true
+    return j === str2.length;
+};
