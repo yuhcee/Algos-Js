@@ -15,6 +15,12 @@
  * original string by deleting some (possibly none) of the characters without
  * disturbing the relative positions of the remaining characters.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= str1.length <= 105`
+ * - `1 <= str2.length <= 105`
+ * - `str1` and `str2` consist of only lowercase English letters.
+ * 
  * @param {string} str1
  * @param {string} str2
  * @return {boolean}
