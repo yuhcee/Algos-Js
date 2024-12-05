@@ -73,3 +73,9 @@ const start1 = 'R_L_',
 /* Explanation: The 'R' piece in the string start can move one step to the right to obtain "_RL_".
 After that, no pieces can move anymore, so it is impossible to obtain the string target from start. */
 console.log(canChange(start1, target1));
+
+const start2 = '_R',
+    target2 = 'R_';
+// Output: false
+/* Explanation: The piece in the string start can move only to the right, so it is impossible to obtain the string target from start. */
+console.log(canChange(start2, target2));
