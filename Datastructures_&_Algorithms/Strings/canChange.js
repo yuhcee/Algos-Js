@@ -56,3 +56,13 @@ const canChange = function (start, target) {
 
     return true;
 };
+
+const start = '_L__R__R_',
+    target = 'L______RR';
+// Output: true
+/* Explanation: We can obtain the string target from start by doing the following moves:
+- Move the first piece one step to the left, start becomes equal to "L___R__R_".
+- Move the last piece one step to the right, start becomes equal to "L___R___R".
+- Move the second piece three steps to the right, start becomes equal to "L______RR".
+Since it is possible to get the string target from start, we return true. */
+console.log(canChange(start, target));
