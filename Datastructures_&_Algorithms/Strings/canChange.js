@@ -15,6 +15,12 @@
  * pieces of the string `start` **any** number of times. Otherwise, return
  * `false`*.
  *
+ * **Constraints:**
+ *
+ * - `n == start.length == target.length`
+ * - `1 <= n <= 105`
+ * - `start` and `target` consist of the characters `'L'`, `'R'`, and `'_'`.
+ *
  * @param {string} start
  * @param {string} target
  * @return {boolean}
