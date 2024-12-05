@@ -25,4 +25,34 @@
  * @param {string} target
  * @return {boolean}
  */
-const canChange = function (start, target) {};
+const canChange = function (start, target) {
+    // Remove all the '_' characters from both strings
+    const startPieces = start.replace(/_/g, '');
+    const targetPieces = target.replace(/_/g, '');
+
+    // If the sequence of 'L' and 'R' doesn't match, return false
+    if (startPieces !== targetPieces) return false;
+
+    let i = 0,
+        j = 0;
+
+    // Iterate through both strings to check movement rules
+    while (i < start.length && j < target.length) {
+        // Skip blanks in both strings
+        while (i < start.length && start[i] === '_') i++;
+        while (j < target.length && target[j] === '_') j++;
+
+        // If both pointers are within bounds
+        if (i < start.length && j < target.length) {
+            // Check if movement rules are violated
+            if (start[i] === 'L' && i < j) return false; // 'L' can't move right
+            if (start[i] === 'R' && i > j) return false; // 'R' can't move left
+
+            // Move to the next piece
+            i++;
+            j++;
+        }
+    }
+
+    return true;
+};
