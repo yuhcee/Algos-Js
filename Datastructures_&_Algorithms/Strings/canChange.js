@@ -66,3 +66,10 @@ const start = '_L__R__R_',
 - Move the second piece three steps to the right, start becomes equal to "L______RR".
 Since it is possible to get the string target from start, we return true. */
 console.log(canChange(start, target));
+
+const start1 = 'R_L_',
+    target1 = '__LR';
+// Output: false
+/* Explanation: The 'R' piece in the string start can move one step to the right to obtain "_RL_".
+After that, no pieces can move anymore, so it is impossible to obtain the string target from start. */
+console.log(canChange(start1, target1));
