@@ -59,3 +59,10 @@ const banned = [1, 6, 5],
 /* Explanation: You can choose the integers 2 and 4.
 2 and 4 are from the range [1, 5], both did not appear in banned, and their sum is 6, which did not exceed maxSum. */
 console.log(maxCount(banned, n, maxSum));
+
+const banned1 = [1, 2, 3, 4, 5, 6, 7],
+    n1 = 8,
+    maxSum1 = 1;
+// Output: 0
+/* Explanation: You cannot choose any integer while following the mentioned conditions. */
+console.log(maxCount(banned1, n1, maxSum1));
