@@ -12,6 +12,12 @@
  * Return *the **maximum** number of integers you can choose following the
  * mentioned rules.*
  *
+ * **Constraints:**
+ *
+ * - `1 <= banned.length <= 104`
+ * - `1 <= banned[i], n <= 104`
+ * - `1 <= maxSum <= 109`
+ *
  * @param {number[]} banned
  * @param {number} n
  * @param {number} maxSum
