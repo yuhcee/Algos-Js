@@ -23,4 +23,31 @@
  * @param {number} maxSum
  * @return {number}
  */
-const maxCount = function (banned, n, maxSum) {};
+const maxCount = function (banned, n, maxSum) {
+    // Create a set of banned numbers for O(1) lookups
+    const bannedSet = new Set(banned);
+
+    // Filter valid numbers in range [1, n]
+    const validNumbers = [];
+    for (let i = 1; i <= n; i++) {
+        if (!bannedSet.has(i)) {
+            validNumbers.push(i);
+        }
+    }
+
+    // Sort valid numbers
+    validNumbers.sort((a, b) => a - b);
+
+    // Pick numbers while maintaining maxSum constraint
+    let count = 0,
+        currentSum = 0;
+    for (const num of validNumbers) {
+        if (currentSum + num > maxSum) {
+            break;
+        }
+        currentSum += num;
+        count++;
+    }
+
+    return count;
+};
