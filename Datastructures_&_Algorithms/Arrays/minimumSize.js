@@ -62,3 +62,14 @@ const nums = [9],
 - Divide the bag with 6 balls into two bags of sizes 3 and 3. [6,3] -> [3,3,3].
 The bag with the most number of balls has 3 balls, so your penalty is 3 and you should return 3. */
 console.log(minimumSize(nums, maxOperations));
+
+const nums1 = [2, 4, 8, 2],
+    maxOperations1 = 4;
+// Output: 2
+/* Explanation:
+- Divide the bag with 8 balls into two bags of sizes 4 and 4. [2,4,8,2] -> [2,4,4,4,2].
+- Divide the bag with 4 balls into two bags of sizes 2 and 2. [2,4,4,4,2] -> [2,2,2,4,4,2].
+- Divide the bag with 4 balls into two bags of sizes 2 and 2. [2,2,2,4,4,2] -> [2,2,2,2,2,4,2].
+- Divide the bag with 4 balls into two bags of sizes 2 and 2. [2,2,2,2,2,4,2] -> [2,2,2,2,2,2,2,2].
+The bag with the most number of balls has 2 balls, so your penalty is 2, and you should return 2. */
+console.log(minimumSize(nums1, maxOperations1));
