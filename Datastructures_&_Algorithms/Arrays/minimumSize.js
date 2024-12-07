@@ -16,8 +16,15 @@
  *
  * Return *the minimum possible penalty after performing the operations.*
  *
+ * **Constraints:**
+ * 
+ * - `1 <= nums.length <= 105`
+ * - `1 <= maxOperations, nums[i] <= 109`
+ * 
  * @param {number[]} nums
  * @param {number} maxOperations
  * @return {number}
  */
-const minimumSize = function (nums, maxOperations) {};
+const minimumSize = function (nums, maxOperations) {
+    
+};
