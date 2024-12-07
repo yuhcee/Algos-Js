@@ -17,14 +17,39 @@
  * Return *the minimum possible penalty after performing the operations.*
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= nums.length <= 105`
  * - `1 <= maxOperations, nums[i] <= 109`
- * 
+ *
  * @param {number[]} nums
  * @param {number} maxOperations
  * @return {number}
  */
 const minimumSize = function (nums, maxOperations) {
-    
+    // Helper function to determine if a penalty is feasible
+    const canDivide = (penalty) => {
+        let operations = 0;
+        for (const balls of nums) {
+            operations += Math.ceil(balls / penalty) - 1;
+            if (operations > maxOperations) return false;
+        }
+        return true;
+    };
+
+    // Binary search range for penalty
+    let left = 1,
+        right = Math.max(...nums);
+    let result = right;
+
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        if (canDivide(mid)) {
+            result = mid; // Update result if feasible
+            right = mid - 1; // Try smaller penalties
+        } else {
+            left = mid + 1; // Try larger penalties
+        }
+    }
+
+    return result;
 };
