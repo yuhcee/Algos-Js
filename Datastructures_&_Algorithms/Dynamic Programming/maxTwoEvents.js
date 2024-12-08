@@ -14,6 +14,13 @@
  * time. More specifically, if you attend an event with end time `t`, the next
  * event must start at or after `t + 1`.
  *
+ * **Constraints:**
+ *
+ * - `2 <= events.length <= 105`
+ * - `events[i].length == 3`
+ * - `1 <= startTimei <= endTimei <= 109`
+ * - `1 <= valuei <= 106`
+ *
  * @param {number[][]} events
  * @return {number}
  */
