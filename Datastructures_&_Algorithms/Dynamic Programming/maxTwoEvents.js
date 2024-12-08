@@ -83,3 +83,12 @@ const events1 = [
 // Output: 5
 // Explanation: Choose event 2 for a sum of 5.
 console.log(maxTwoEvents(events1));
+
+const events2 = [
+    [1, 5, 3],
+    [1, 5, 1],
+    [6, 6, 5],
+];
+// Output: 8
+// Explanation: Choose events 0 and 2 for a sum of 3 + 5 = 8.
+console.log(maxTwoEvents(events2));
