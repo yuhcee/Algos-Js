@@ -74,3 +74,12 @@ const events = [
 // Output: 4
 // Explanation: Choose the green events, 0 and 1 for a sum of 2 + 2 = 4.
 console.log(maxTwoEvents(events));
+
+const events1 = [
+    [1, 3, 2],
+    [4, 5, 2],
+    [1, 5, 5],
+];
+// Output: 5
+// Explanation: Choose event 2 for a sum of 5.
+console.log(maxTwoEvents(events1));
