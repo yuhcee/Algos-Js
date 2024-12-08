@@ -24,4 +24,44 @@
  * @param {number[][]} events
  * @return {number}
  */
-const maxTwoEvents = function (events) {};
+const maxTwoEvents = function (events) {
+    // Sort events by end time
+    events.sort((a, b) => a[1] - b[1]);
+
+    let maxVal = 0; // To store the maximum value encountered so far
+    let result = 0; // Final result
+
+    // Array to store the maximum value up to each event
+    const maxValues = new Array(events.length).fill(0);
+
+    // Iterate through events
+    for (let i = 0; i < events.length; i++) {
+        const [start, end, value] = events[i];
+
+        // Binary search for the last event that ends before the current event starts
+        let low = 0,
+            high = i - 1,
+            lastNonOverlap = -1;
+        while (low <= high) {
+            const mid = Math.floor((low + high) / 2);
+            if (events[mid][1] < start) {
+                lastNonOverlap = mid;
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+
+        // Calculate max value including the current event
+        const currentMax = value + (lastNonOverlap >= 0 ? maxValues[lastNonOverlap] : 0);
+
+        // Update the result
+        result = Math.max(result, currentMax);
+
+        // Update max value seen so far
+        maxVal = Math.max(maxVal, value);
+        maxValues[i] = maxVal;
+    }
+
+    return result;
+};
