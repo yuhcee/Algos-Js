@@ -23,4 +23,29 @@
  * @param {number[][]} queries
  * @return {boolean[]}
  */
-const isArraySpecial = function (nums, queries) {};
+const isArraySpecial = function (nums, queries) {
+    const n = nums.length();
+    const parity = new Array(n).fill(0);
+
+    // Step 1: Compute parity violations
+    for (let i = 1; i < n; i++) {
+        if (nums[i] % 2 === nums[i - 1] % 2) {
+            parity[i] = 1; // Same pariity
+        }
+    }
+
+    // Step 2: Compute prefix sum of parity
+    const prefixParity = new Array(n).fill(0);
+    for (let i = 1; i < n; i++) {
+        prefixParity[i] = prefixParity[i - 1] + parity[i];
+    }
+
+    // Step 3: Answer queries
+    const result = [];
+    for (const [from, to] of queries) {
+        const violations = prefixParity[to] - (from > 0 ? prefixParity[from] : 0);
+        result.push(violations === 0);
+    }
+
+    return result;
+};
