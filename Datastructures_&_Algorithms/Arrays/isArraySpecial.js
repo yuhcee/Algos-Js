@@ -11,6 +11,14 @@
  * Return an array of booleans `answer` such that `answer[i]` is `true` if `nums
  * [fromi..toi]` is special.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 105`
+ * - `1 <= queries.length <= 105`
+ * - `queries[i].length == 2`
+ * - `0 <= queries[i][0] <= queries[i][1] <= nums.length - 1`
+ *
  * @param {number[]} nums
  * @param {number[][]} queries
  * @return {boolean[]}
