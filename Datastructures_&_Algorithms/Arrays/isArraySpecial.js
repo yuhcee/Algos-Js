@@ -49,3 +49,9 @@ const isArraySpecial = function (nums, queries) {
 
     return result;
 };
+
+const nums = [3, 4, 1, 2, 6],
+    queries = [[0, 4]];
+// Output: [false]
+// Explanation: The subarray is [3,4,1,2,6]. 2 and 6 are both even.
+console.log(isArraySpecial(nums, ));
