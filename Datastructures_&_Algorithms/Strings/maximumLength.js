@@ -60,3 +60,9 @@ const s1 = 'abcdef';
 // Output: -1
 // Explanation: There exists no special substring which occurs at least thrice. Hence return -1.
 console.log(maximumLength(s1));
+
+const s2 = 'abcaba';
+// Output: 1
+/* Explanation: The longest special substring which occurs thrice is "a": substrings "abcaba", "abcaba", and "abcaba".
+It can be shown that the maximum length achievable is 1. */
+console.log(maximumLength(s2));
