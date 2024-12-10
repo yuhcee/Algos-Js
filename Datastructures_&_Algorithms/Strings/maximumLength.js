@@ -50,3 +50,8 @@ const maximumLength = function (s) {
     // No valid substring found
     return -1;
 };
+const s = 'aaaa';
+// Output: 2
+/* Explanation: The longest special substring which occurs thrice is "aa": substrings "aaaa", "aaaa", and "aaaa".
+It can be shown that the maximum length achievable is 2. */
+console.log(maximumLength(s));
