@@ -21,4 +21,32 @@
  * @param {string} s
  * @return {number}
  */
-const maximumLength = function (s) {};
+const maximumLength = function (s) {
+    const n = s.length;
+
+    // Helper function to check if a string is special
+    const isSpecial = (str) => str.split('').every((ch) => ch === str[0]);
+
+    // Iterate over lengths in descending order
+    for (let len = n; len >= 1; len--) {
+        const substringCount = new Map();
+
+        // Sliding window to generate substrings of length `len`
+        for (let i = 0; i <= n - len; i++) {
+            const substring = s.slice(i, i + len);
+
+            if (!isSpecial(substring)) continue;
+
+            // Count occurrences of special substrings
+            substringCount.set(substring, (substringCount.get(substring) || 0) + 1);
+
+            // If any substring occurs at least 3 times, return its length
+            if (substringCount.get(substring) >= 3) {
+                return len;
+            }
+        }
+    }
+
+    // No valid substring found
+    return -1;
+};
