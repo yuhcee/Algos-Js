@@ -23,6 +23,11 @@
  * array by deleting some elements (possibly none) without changing the order
  * of the remaining elements.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `0 <= nums[i], k <= 105`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
