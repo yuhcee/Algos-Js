@@ -32,4 +32,23 @@
  * @param {number} k
  * @return {number}
  */
-const maximumBeauty = function (nums, k) {};
+const maximumBeauty = function (nums, k) {
+    // Sort the array to simplify range checks
+    nums.sort((a, b) => a - b);
+
+    let maxBeauty = 0;
+    let start = 0;
+
+    // Sliding window approach
+    for (let end = 0; end < nums.length; end++) {
+        // Ensure the range is valid
+        while (nums[end] > nums[start] + 2 * k) {
+            start++;
+        }
+
+        // Update maximum beauty
+        maxBeauty = Math.max(maxBeauty, end - start + 1);
+    }
+
+    return maxBeauty;
+};
