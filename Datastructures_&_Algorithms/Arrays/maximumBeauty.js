@@ -62,3 +62,10 @@ const nums = [4, 6, 1, 2],
 After the applied operations, the beauty of the array nums is 3 (subsequence consisting of indices 0, 1, and 3).
 It can be proven that 3 is the maximum possible length we can achieve. */
 console.log(maximumBeauty(nums, k));
+
+const nums1 = [1, 1, 1, 1],
+    k1 = 10;
+// Output: 4
+/* Explanation: In this example we don't have to apply any operations.
+The beauty of the array nums is 4 (whole array). */
+console.log(maximumBeauty(nums1, k1));
