@@ -29,6 +29,8 @@ const pickGifts = function (gifts, k) {
         const maxIndex = gifts.indexOf(max(...gifts));
 
         gifts[maxIndex] = floor(sqrt(gifts[maxIndex]));
+
+        k--;
     }
 
     const sum = gifts.reduce((acc, val) => acc + val, 0);
