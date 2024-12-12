@@ -47,3 +47,12 @@ The gifts are taken in the following way:
 - Finally, the last pile is chosen again and 3 gifts are left behind.
 The final remaining gifts are [5,8,9,4,3], so the total number of gifts remaining is 29. */
 console.log(pickGifts(gifts, k));
+
+const gifts1 = [1, 1, 1, 1],
+    k1 = 4;
+// Output: 4
+/* Explanation: 
+In this case, regardless which pile you choose, you have to leave behind 1 gift in each pile. 
+That is, you can't take any pile with you. 
+So, the total gifts remaining are 4. */
+console.log(pickGifts(gifts1, k1));
