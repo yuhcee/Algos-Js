@@ -22,4 +22,16 @@
  * @param {number} k
  * @return {number}
  */
-const pickGifts = function (gifts, k) {};
+const pickGifts = function (gifts, k) {
+    const { max, sqrt, floor } = Math;
+
+    while (k > 0) {
+        const maxIndex = gifts.indexOf(max(...gifts));
+
+        gifts[maxIndex] = floor(sqrt(gifts[maxIndex]));
+    }
+
+    const sum = gifts.reduce((acc, val) => acc + val, 0);
+
+    return sum;
+};
