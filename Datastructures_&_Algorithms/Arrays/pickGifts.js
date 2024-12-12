@@ -12,6 +12,12 @@
  *
  * Return the number of gifts remaining after k seconds.
  *
+ * **Constraints:**
+ *
+ * - `1 <= gifts.length <= 103`
+ * - `1 <= gifts[i] <= 109`
+ * - `1 <= k <= 103`
+ *
  * @param {number[]} gifts
  * @param {number} k
  * @return {number}
