@@ -65,3 +65,12 @@ Thereare no subarrys of size 4.
 Total continuous subarrays = 4 + 3 + 1 = 8.
 It can be shown that there are no more continuous subarrays. */
 console.log(continuousSubarrays(nums));
+
+const nums1 = [1, 2, 3];
+// Output: 6
+/* Explanation: 
+Continuous subarray of size 1: [1], [2], [3].
+Continuous subarray of size 2: [1,2], [2,3].
+Continuous subarray of size 3: [1,2,3].
+Total continuous subarrays = 3 + 2 + 1 = 6. */
+console.log(continuousSubarrays(nums1));
