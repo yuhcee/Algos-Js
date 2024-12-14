@@ -47,3 +47,12 @@ const findScore = function (nums) {
 
     return score;
 };
+
+const nums = [2, 1, 3, 4, 5, 2];
+// Output: 7
+/* Explanation: We mark the elements as follows:
+- 1 is the smallest unmarked element, so we mark it and its two adjacent elements: [2,1,3,4,5,2].
+- 2 is the smallest unmarked element, so we mark it and its left adjacent element: [2,1,3,4,5,2].
+- 4 is the only remaining unmarked element, so we mark it: [2,1,3,4,5,2].
+Our score is 1 + 2 + 4 = 7. */
+console.log(findScore(nums));
