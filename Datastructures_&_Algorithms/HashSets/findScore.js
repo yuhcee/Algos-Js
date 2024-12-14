@@ -13,6 +13,11 @@
  *
  * Return *the score you get after applying the above algorithm.*
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 106`
+ *
  * @param {number[]} nums
  * @return {number}
  */
