@@ -21,4 +21,29 @@
  * @param {number[]} nums
  * @return {number}
  */
-const findScore = function (nums) {};
+const findScore = function (nums) {
+    // Pair elements with their indices
+    const indexedNums = nums.map((num, index) => [num, index]);
+
+    // Sort by value, then by index
+    indexedNums.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+
+    // Set to track marked indices
+    const marked = new Set();
+    let score = 0;
+
+    for (const [value, index] of indexedNums) {
+        // If the current index is already marked, skip it
+        if (marked.has(index)) continue;
+
+        // Add value to the score
+        score += value;
+
+        // Mark the current index and adjacent indices
+        marked.add(index);
+        if (index > 0) marked.add(index - 1);
+        if (index < nums.length - 1) marked.add(index + 1);
+    }
+
+    return score;
+};
