@@ -132,3 +132,13 @@ const classes = [
 // Output: 0.78333
 /* Explanation: You can assign the two extra students to the first class. The average pass ratio will be equal to (3/4 + 3/5 + 2/2) / 3 = 0.78333. */
 console.log(maxAverageRatio(classes, extraStudents));
+
+const classes1 = [
+        [2, 4],
+        [3, 9],
+        [4, 5],
+        [2, 10],
+    ],
+    extraStudents1 = 4;
+// Output: 0.53485
+console.log(maxAverageRatio(classes1, extraStudents1));
