@@ -122,3 +122,13 @@ class MaxHeap {
         this.heap[j] = temp;
     }
 }
+
+const classes = [
+        [1, 2],
+        [3, 5],
+        [2, 2],
+    ],
+    extraStudents = 2;
+// Output: 0.78333
+/* Explanation: You can assign the two extra students to the first class. The average pass ratio will be equal to (3/4 + 3/5 + 2/2) / 3 = 0.78333. */
+console.log(maxAverageRatio(classes, extraStudents));
