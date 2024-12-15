@@ -33,7 +33,38 @@
  * @param {number} extraStudents
  * @return {number}
  */
-const maxAverageRatio = function (classes, extraStudents) {};
+const maxAverageRatio = function (classes, extraStudents) {
+    // Custom comparator for the max heap.
+    // We want to maximize the increase in pass ratio by adding one student.
+    const compare = (a, b) => {
+        const improvementA = (a.passed + 1) / (a.total + 1) - a.passed / a.total;
+        const improvementB = (b.passed + 1) / (b.total + 1) - b.passed / b.total;
+        return improvementB - improvementA; // for max heap, reverse subtraction
+    };
+
+    // Use a max heap to always get the class where adding a student gives maximum improvement
+    const pq = new MaxHeap(compare);
+
+    for (const [passed, total] of classes) {
+        pq.push({ passed, total });
+    }
+
+    // Distribute extra students
+    for (let i = 0; i < extraStudents; i++) {
+        const bestClass = pq.pop();
+        bestClass.passed++;
+        bestClass.total++;
+        pq.push(bestClass);
+    }
+
+    // Calculate the average pass ratio
+    let totalRatio = 0;
+    for (const cls of pq.heap) {
+        totalRatio += cls.passed / cls.total;
+    }
+
+    return totalRatio / classes.length;
+};
 
 // Simple MaxHeap implementation for illustration
 class MaxHeap {
