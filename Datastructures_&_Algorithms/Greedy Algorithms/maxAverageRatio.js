@@ -22,6 +22,13 @@
  * `extraStudents` students. Answers within `10-5` of the actual answer will be
  * accepted.
  *
+ * **Constraints:**
+ *
+ * - `1 <= classes.length <= 105`
+ * - `classes[i].length == 2`
+ * - `1 <= passi <= totali <= 105`
+ * - `1 <= extraStudents <= 105`
+ *
  * @param {number[][]} classes
  * @param {number} extraStudents
  * @return {number}
