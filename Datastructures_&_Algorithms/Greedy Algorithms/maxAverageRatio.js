@@ -34,3 +34,60 @@
  * @return {number}
  */
 const maxAverageRatio = function (classes, extraStudents) {};
+
+// Simple MaxHeap implementation for illustration
+class MaxHeap {
+    constructor(comparator) {
+        this.heap = [];
+        this.comparator = comparator;
+    }
+
+    push(item) {
+        this.heap.push(item);
+        this._bubbleUp(this.heap.length - 1);
+    }
+
+    pop() {
+        if (this.heap.length === 0) return null;
+        if (this.heap.length === 1) return this.heap.pop();
+
+        const result = this.heap[0];
+        this.heap[0] = this.heap.pop();
+        this._bubbleDown(0);
+        return result;
+    }
+
+    _bubbleUp(index) {
+        while (index > 0) {
+            const parentIndex = Math.floor((index - 1) / 2);
+            if (this.comparator(this.heap[parentIndex], this.heap[index]) <= 0) break;
+            this._swap(parentIndex, index);
+            index = parentIndex;
+        }
+    }
+
+    _bubbleDown(index) {
+        const lastIndex = this.heap.length - 1;
+        while (true) {
+            let smallestIndex = index;
+            const leftChildIndex = 2 * index + 1;
+            const rightChildIndex = 2 * index + 2;
+
+            if (leftChildIndex <= lastIndex && this.comparator(this.heap[smallestIndex], this.heap[leftChildIndex]) > 0) {
+                smallestIndex = leftChildIndex;
+            }
+            if (rightChildIndex <= lastIndex && this.comparator(this.heap[smallestIndex], this.heap[rightChildIndex]) > 0) {
+                smallestIndex = rightChildIndex;
+            }
+            if (smallestIndex === index) break;
+            this._swap(index, smallestIndex);
+            index = smallestIndex;
+        }
+    }
+
+    _swap(i, j) {
+        const temp = this.heap[i];
+        this.heap[i] = this.heap[j];
+        this.heap[j] = temp;
+    }
+}
