@@ -14,6 +14,13 @@
  * Return *an integer array denoting the final state of `nums` after
  * performing all `k` operations*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 100`
+ * - `1 <= nums[i] <= 100`
+ * - `1 <= k <= 10`
+ * - `1 <= multiplier <= 5`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @param {number} multiplier
