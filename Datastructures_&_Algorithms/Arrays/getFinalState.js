@@ -26,4 +26,14 @@
  * @param {number} multiplier
  * @return {number[]}
  */
-const getFinalState = function (nums, k, multiplier) {};
+const getFinalState = function (nums, k, multiplier) {
+    while (k > 0) {
+        const minIndex = nums.indexOf(Math.min(...nums));
+
+        nums[minIndex] = nums[minIndex] * multiplier;
+
+        k--;
+    }
+
+    return nums;
+};
