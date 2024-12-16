@@ -50,3 +50,14 @@ After operation 3	[4, 4, 3, 5, 6]
 After operation 4	[4, 4, 6, 5, 6]
 After operation 5	[8, 4, 6, 5, 6] */
 console.log(getFinalState(nums, k, multiplier));
+
+const nums1 = [1, 2],
+    k1 = 3,
+    multiplier1 = 4;
+// Output: [16,8]
+/* Explanation:
+Operation	Result
+After operation 1	[4, 2]
+After operation 2	[4, 8]
+After operation 3	[16, 8] */
+console.log(getFinalState(nums1, k1, multiplier1));
