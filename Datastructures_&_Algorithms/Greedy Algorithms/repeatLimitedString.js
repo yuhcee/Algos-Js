@@ -72,3 +72,14 @@ Hence, no letter appears more than repeatLimit times in a row and the string is 
 The string is the lexicographically largest repeatLimitedString possible so we return "zzcccac".
 Note that the string "zzcccca" is lexicographically larger but the letter 'c' appears more than 3 times in a row, so it is not a valid repeatLimitedString. */
 console.log(repeatLimitedString(s, repeatLimit));
+
+const s1 = 'aababab',
+    repeatLimit1 = 2;
+// Output: "bbabaa"
+/* Explanation: We use only some of the characters from s to construct the repeatLimitedString "bbabaa". 
+The letter 'a' appears at most 2 times in a row.
+The letter 'b' appears at most 2 times in a row.
+Hence, no letter appears more than repeatLimit times in a row and the string is a valid repeatLimitedString.
+The string is the lexicographically largest repeatLimitedString possible so we return "bbabaa".
+Note that the string "bbabaaa" is lexicographically larger but the letter 'a' appears more than 2 times in a row, so it is not a valid repeatLimitedString. */
+console.log(repeatLimitedString(s1, repeatLimit1));
