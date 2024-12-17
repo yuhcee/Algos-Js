@@ -15,8 +15,15 @@
  * the first `min(a.length, b.length)` characters do not differ, then the
  * longer string is the lexicographically larger one.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= repeatLimit <= s.length <= 105`
+ * - `s` consists of lowercase English letters.
+ * 
  * @param {string} s
  * @param {number} repeatLimit
  * @return {string}
  */
-const repeatLimitedString = function (s, repeatLimit) {};
+const repeatLimitedString = function (s, repeatLimit) {
+    
+};
