@@ -21,4 +21,19 @@
  * @param {number[]} prices
  * @return {number[]}
  */
-const finalPrices = function (prices) {};
+const finalPrices = function (prices) {
+    const n = prices.length;
+    const answer = Array(n).fill(0);
+
+    for (let i = 0; i < n; i++) {
+        answer[i] = prices[i]; // Set the initial price
+        for (let j = i + 1; j < n; j++) {
+            if (prices[j] <= prices[i]) {
+                answer[i] -= prices[j]; // Apply the discount
+                break;
+            }
+        }
+    }
+
+    return answer;
+};
