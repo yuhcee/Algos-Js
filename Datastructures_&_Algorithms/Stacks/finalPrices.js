@@ -46,3 +46,8 @@ For item 1 with price[1]=4 you will receive a discount equivalent to prices[3]=2
 For item 2 with price[2]=6 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 6 - 2 = 4.
 For items 3 and 4 you will not receive any discount at all. */
 console.log(finalPrices(prices));
+
+const prices1 = [1, 2, 3, 4, 5];
+// Output: [1,2,3,4,5]
+/* Explanation: In this case, for all items, you will not receive any discount at all. */
+console.log(finalPrices(prices1));
