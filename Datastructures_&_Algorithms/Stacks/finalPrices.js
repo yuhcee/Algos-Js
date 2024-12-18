@@ -13,6 +13,11 @@
  * you will pay for the `ith` item of the shop, considering the special
  * discount.
  *
+ * **Constraints:**
+ *
+ * - `1 <= prices.length <= 500`
+ * - `1 <= prices[i] <= 1000`
+ *
  * @param {number[]} prices
  * @return {number[]}
  */
