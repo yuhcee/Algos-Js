@@ -51,3 +51,7 @@ const prices1 = [1, 2, 3, 4, 5];
 // Output: [1,2,3,4,5]
 /* Explanation: In this case, for all items, you will not receive any discount at all. */
 console.log(finalPrices(prices1));
+
+const prices2 = [10, 1, 1, 6];
+// Output: [9,0,1,6]
+console.log(finalPrices(prices2));
