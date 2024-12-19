@@ -20,3 +20,10 @@
  * @return {number}
  */
 const maxChunksToSorted = function (arr) {};
+
+const arr = [4, 3, 2, 1, 0];
+// Output: 1
+/* Explanation:
+Splitting into two or more chunks will not return the required result.
+For example, splitting into [4, 3], [2, 1, 0] will result in [3, 4, 0, 1, 2], which isn't sorted. */
+console.log(maxChunksToSorted(arr));
