@@ -19,7 +19,18 @@
  * @param {number[]} arr
  * @return {number}
  */
-const maxChunksToSorted = function (arr) {};
+const maxChunksToSorted = function (arr) {
+    let chunks = 0;
+    let max = 0;
+    for (let i = 0; i < arr.length; i++) {
+        max = Math.max(max, arr[i]);
+        if (max === i) {
+            chunks++;
+        }
+    }
+
+    return chunks;
+};
 
 const arr = [4, 3, 2, 1, 0];
 // Output: 1
