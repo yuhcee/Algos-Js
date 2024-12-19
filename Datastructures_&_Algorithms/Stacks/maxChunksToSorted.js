@@ -45,3 +45,9 @@ const arr1 = [1, 0, 2, 3, 4];
 We can split into two chunks, such as [1, 0], [2, 3, 4].
 However, splitting into [1, 0], [2], [3], [4] is the highest number of chunks possible. */
 console.log(maxChunksToSorted(arr1));
+
+const arr2 = [0, 1, 2, 3, 4];
+// Output: 5
+/* Explanation:
+The array is already sorted, so we can split it into five chunks. */
+console.log(maxChunksToSorted(arr2));
