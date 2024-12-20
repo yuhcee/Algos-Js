@@ -33,7 +33,23 @@
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-const reverseOddLevels = function (root) {};
+const reverseOddLevels = function (root) {
+    const reverse = (node, level) => {
+        if (!node) return;
+
+        if (level % 2 === 1) {
+            const temp = node.left.val;
+            node.left.val = node.right.val;
+            node.right.val = temp;
+        }
+
+        reverse(node.left, level + 1);
+        reverse(node.right, level + 1);
+    };
+
+    reverse(root, 1);
+    return root;
+};
 
 const root = [2, 3, 5, 8, 13, 21, 34];
 // Output: [2,5,3,8,13,21,34]
