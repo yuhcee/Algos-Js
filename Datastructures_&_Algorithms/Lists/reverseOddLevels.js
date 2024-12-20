@@ -42,3 +42,9 @@ The tree has only one odd level.
 The nodes at level 1 are 3, 5 respectively, which are reversed and become 5, 3.
  */
 console.log(reverseOddLevels(root));
+
+const root1 = [7, 13, 11];
+// Output: [7,11,13]
+/* Explanation: 
+The nodes at level 1 are 13, 11, which are reversed and become 11, 13. */
+console.log(reverseOddLevels(root1));
