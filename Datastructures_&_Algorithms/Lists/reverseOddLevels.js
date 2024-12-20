@@ -48,3 +48,11 @@ const root1 = [7, 13, 11];
 /* Explanation: 
 The nodes at level 1 are 13, 11, which are reversed and become 11, 13. */
 console.log(reverseOddLevels(root1));
+
+const root2 = [0, 1, 2, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2];
+// Output: [0,2,1,0,0,0,0,2,2,2,2,1,1,1,1]
+/* Explanation: 
+The odd levels have non-zero values.
+The nodes at level 1 were 1, 2, and are 2, 1 after the reversal.
+The nodes at level 3 were 1, 1, 1, 1, 2, 2, 2, 2, and are 2, 2, 2, 2, 1, 1, 1, 1 after the reversal. */
+console.log(reverseOddLevels(root2));
