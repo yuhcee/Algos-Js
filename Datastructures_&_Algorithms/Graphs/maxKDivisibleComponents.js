@@ -32,7 +32,39 @@
  * @param {number} k
  * @return {number}
  */
-const maxKDivisibleComponents = function (n, edges, values, k) {};
+const maxKDivisibleComponents = function (n, edges, values, k) {
+    // Build the adjacency list for the tree
+    const adjList = Array.from({ length: n }, () => []);
+    for (const [u, v] of edges) {
+        adjList[u].push(v);
+        adjList[v].push(u);
+    }
+
+    let components = 0;
+
+    // DFS to traverse the tree and compute the k-divisible components
+    const dfs = (node, parent) => {
+        let sum = values[node];
+
+        for (const neighbor of adjList[node]) {
+            if (neighbor === parent) continue;
+            sum += dfs(neighbor, node);
+        }
+
+        // If the sum of the subtree rooted at this node is divisible by k,
+        // we can form a valid component
+        if (sum % k === 0) {
+            components++;
+            return 0; // Return 0 because we "cut" this subtree
+        }
+
+        return sum;
+    };
+
+    dfs(0, -1); // Start DFS from the root (node 0)
+
+    return components;
+};
 
 const n = 5,
     edges = [
