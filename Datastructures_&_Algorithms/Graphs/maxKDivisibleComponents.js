@@ -49,3 +49,22 @@ const n = 5,
 - The value of the component containing nodes 0, 2, and 4 is values[0] + values[2] + values[4] = 6.
 It can be shown that no other valid split has more than 2 connected components. */
 console.log(maxKDivisibleComponents(n, edges, values, k));
+
+const n1 = 7,
+    edges1 = [
+        [0, 1],
+        [0, 2],
+        [1, 3],
+        [1, 4],
+        [2, 5],
+        [2, 6],
+    ],
+    values1 = [3, 0, 6, 1, 5, 2, 1],
+    k1 = 3;
+// Output: 3
+/* Explanation: We remove the edge connecting node 0 with 2, and the edge connecting node 0 with 1. The resulting split is valid because:
+- The value of the component containing node 0 is values[0] = 3.
+- The value of the component containing nodes 2, 5, and 6 is values[2] + values[5] + values[6] = 9.
+- The value of the component containing nodes 1, 3, and 4 is values[1] + values[3] + values[4] = 6.
+It can be shown that no other valid split has more than 3 connected components. */
+console.log(maxKDivisibleComponents(n1, edges1, values1, k1));
