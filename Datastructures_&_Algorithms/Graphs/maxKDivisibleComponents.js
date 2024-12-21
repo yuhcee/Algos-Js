@@ -14,6 +14,18 @@
  *
  * Return *the **maximum number of components** in any valid split.*
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 3 * 104`
+ * - `edges.length == n - 1`
+ * - `edges[i].length == 2`
+ * - `0 <= ai, bi < n`
+ * - `values.length == n`
+ * - `0 <= values[i] <= 109`
+ * - `1 <= k <= 109`
+ * - Sum of `values` is divisible by `k`.
+ * - The input is generated such that `edges` represents a valid tree.
+ *
  * @param {number} n
  * @param {number[][]} edges
  * @param {number[]} values
