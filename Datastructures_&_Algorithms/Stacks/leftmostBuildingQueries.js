@@ -37,3 +37,21 @@ In the fifth query, Alice and Bob are already in the same building.
 For ans[i] != -1, It can be shown that ans[i] is the leftmost building where Alice and Bob can meet.
 For ans[i] == -1, It can be shown that there is no building where Alice and Bob can meet. */
 console.log(leftmostBuildingQueries(heights, queries));
+
+const heights1 = [5, 3, 8, 2, 6, 1, 4, 6],
+    queries1 = [
+        [0, 7],
+        [3, 5],
+        [5, 2],
+        [3, 0],
+        [1, 6],
+    ];
+// Output: [7,6,-1,4,6]
+/* Explanation: In the first query, Alice can directly move to Bob's building since heights[0] < heights[7].
+In the second query, Alice and Bob can move to building 6 since heights[3] < heights[6] and heights[5] < heights[6].
+In the third query, Alice cannot meet Bob since Bob cannot move to any other building.
+In the fourth query, Alice and Bob can move to building 4 since heights[3] < heights[4] and heights[0] < heights[4].
+In the fifth query, Alice can directly move to Bob's building since heights[1] < heights[6].
+For ans[i] != -1, It can be shown that ans[i] is the leftmost building where Alice and Bob can meet.
+For ans[i] == -1, It can be shown that there is no building where Alice and Bob can meet. */
+console.log(leftmostBuildingQueries(heights1, queries1));
