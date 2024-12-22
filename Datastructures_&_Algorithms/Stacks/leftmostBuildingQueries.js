@@ -18,7 +18,77 @@
  * @param {number[][]} queries
  * @return {number[]}
  */
-const leftmostBuildingQueries = function (heights, queries) {};
+const leftmostBuildingQueries = function (heights, queries) {
+    const n = heights.length;
+
+    // Sparse table for range maximum queries
+    const st = Array.from({ length: n }, () => Array(20).fill(0));
+    const log = Array(n + 1).fill(0);
+
+    // Precompute log values
+    log[0] = -1; // To handle log[1] correctly
+    for (let i = 1; i <= n; i++) {
+        log[i] = log[i >> 1] + 1;
+    }
+
+    // Initialize sparse table with heights
+    for (let i = 0; i < n; i++) {
+        st[i][0] = heights[i];
+    }
+
+    // Build sparse table using dynamic programming
+    for (let j = 1; j < 20; j++) {
+        for (let i = 0; i + (1 << j) <= n; i++) {
+            st[i][j] = Math.max(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
+        }
+    }
+
+    const result = [];
+
+    // Process each query
+    for (const [start, end] of queries) {
+        let l = Math.min(start, end);
+        let r = Math.max(start, end);
+
+        // Case 1: Alice and Bob are already in the same building
+        if (l === r) {
+            result.push(l);
+            continue;
+        }
+
+        // Case 2: Bob's building is taller than Alice's
+        if (heights[r] > heights[l]) {
+            result.push(r);
+            continue;
+        }
+
+        // Case 3: Find the leftmost building that is taller
+        const maxHeight = Math.max(heights[l], heights[r]);
+        let left = r + 1,
+            right = n,
+            mid;
+
+        while (left < right) {
+            mid = Math.floor((left + right) / 2);
+
+            // Use sparse table to find the maximum height in the range [r, mid]
+            const range = mid - r + 1;
+            const k = log[range];
+            const maxInRange = Math.max(st[r][k], st[mid - (1 << k) + 1][k]);
+
+            if (maxInRange > maxHeight) {
+                right = mid; // Move left to find the smallest index
+            } else {
+                left = mid + 1; // Move right
+            }
+        }
+
+        // If no valid building is found, append -1
+        result.push(left === n ? -1 : left);
+    }
+
+    return result;
+};
 
 const heights = [6, 4, 8, 5, 2, 7],
     queries = [
