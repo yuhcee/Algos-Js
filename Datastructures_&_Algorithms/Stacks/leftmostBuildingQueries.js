@@ -14,6 +14,14 @@
  * building** where Alice and Bob can meet on the `ith` query.* If Alice and Bob
  * cannot move to a common building on query `i`, set `ans[i]` to `-1`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= heights.length <= 5 * 104`
+ * - `1 <= heights[i] <= 109`
+ * - `1 <= queries.length <= 5 * 104`
+ * - `queries[i] = [ai, bi]`
+ * - `0 <= ai, bi <= heights.length - 1`
+ *
  * @param {number[]} heights
  * @param {number[][]} queries
  * @return {number[]}
