@@ -108,3 +108,13 @@ We used 3 operations so return 3.
 It can be proven that 3 is the minimum number of operations needed.
  */
 console.log(minimumOperations(root));
+
+const root1 = [1, 3, 2, 7, 6, 5, 4];
+// Output: 3
+/* Explanation:
+- Swap 3 and 2. The 2nd level becomes [2,3].
+- Swap 7 and 4. The 3rd level becomes [4,6,5,7].
+- Swap 6 and 5. The 3rd level becomes [4,5,6,7].
+We used 3 operations so return 3.
+It can be proven that 3 is the minimum number of operations needed. */
+console.log(minimumOperations(root1));
