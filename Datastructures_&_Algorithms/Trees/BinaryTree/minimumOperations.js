@@ -21,6 +21,12 @@
  * The **level** of a node is the number of edges along the path between it and
  * the root node.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the tree is in the range `[1, 105]`.
+ * - `1 <= Node.val <= 105`
+ * - All the values of the tree are **unique**.
+ *
  * @param {TreeNode} root
  * @return {number}
  */
