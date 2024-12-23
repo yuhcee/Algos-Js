@@ -118,3 +118,8 @@ const root1 = [1, 3, 2, 7, 6, 5, 4];
 We used 3 operations so return 3.
 It can be proven that 3 is the minimum number of operations needed. */
 console.log(minimumOperations(root1));
+
+const root2 = [1, 2, 3, 4, 5, 6];
+// Output: 0
+// Explanation: Each level is already sorted in increasing order so return 0.
+console.log(minimumOperations(root2));
