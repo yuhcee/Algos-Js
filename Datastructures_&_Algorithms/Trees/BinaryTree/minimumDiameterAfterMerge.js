@@ -106,3 +106,25 @@ const edges1 = [
 // Output: 3
 /* Explanation: We can obtain a tree of diameter 3 by connecting node 0 from the first tree with any node from the second tree. */
 console.log(minimumDiameterAfterMerge(edges1, edges2));
+
+const edges11 = [
+        [0, 1],
+        [0, 2],
+        [0, 3],
+        [2, 4],
+        [2, 5],
+        [3, 6],
+        [2, 7],
+    ],
+    edges21 = [
+        [0, 1],
+        [0, 2],
+        [0, 3],
+        [2, 4],
+        [2, 5],
+        [3, 6],
+        [2, 7],
+    ];
+// Output: 5
+// Explanation: We can obtain a tree of diameter 5 by connecting node 0 from the first tree with node 0 from the second tree.
+console.log(minimumDiameterAfterMerge(edges11, edges21));
