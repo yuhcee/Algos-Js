@@ -17,6 +17,19 @@
  * The **diameter** of a tree is the length of the longest path between any two
  * nodes in the tree.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n, m <= 105`
+ * - `edges1.length == n - 1`
+ * - `edges2.length == m - 1`
+ * - `edges1[i].length == edges2[i].length == 2`
+ * - `edges1[i] = [ai, bi]`
+ * - `0 <= ai, bi < n`
+ * - `edges2[i] = [ui, vi]`
+ * - `0 <= ui, vi < m`
+ * - The input is generated such that `edges1` and `edges2` represent valid
+ * trees.
+ *
  * @param {number[][]} edges1
  * @param {number[][]} edges2
  * @return {number}
