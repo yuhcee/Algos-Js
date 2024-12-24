@@ -96,3 +96,13 @@ const minimumDiameterAfterMerge = function (edges1, edges2) {
     // Calculate the minimum possible diameter after merging the trees
     return Math.max(d1, d2, Math.floor((d1 + 1) / 2) + Math.floor((d2 + 1) / 2) + 1);
 };
+
+const edges1 = [
+        [0, 1],
+        [0, 2],
+        [0, 3],
+    ],
+    edges2 = [[0, 1]];
+// Output: 3
+/* Explanation: We can obtain a tree of diameter 3 by connecting node 0 from the first tree with any node from the second tree. */
+console.log(minimumDiameterAfterMerge(edges1, edges2));
