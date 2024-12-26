@@ -36,3 +36,8 @@ const nums = [1, 1, 1, 1, 1],
 +1 + 1 + 1 - 1 + 1 = 3
 +1 + 1 + 1 + 1 - 1 = 3 */
 console.log(findTargetSumWays(nums, target));
+
+const nums1 = [1],
+    target1 = 1;
+// Output: 1
+console.log(findTargetSumWays(nums1, target1));
