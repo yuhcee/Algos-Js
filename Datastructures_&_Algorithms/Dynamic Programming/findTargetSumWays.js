@@ -24,7 +24,26 @@
  * @param {number} target
  * @return {number}
  */
-const findTargetSumWays = function (nums, target) {};
+const findTargetSumWays = function (nums, target) {
+    // Dictionary to store current sums and their counts
+    let dp = { 0: 1 };
+
+    for (const num of nums) {
+        const next = {};
+        for (const [sum, count] of Object.entries(dp)) {
+            const positive = +sum + num; // Add the current number
+            const negative = +sum - num; // Subtract the current number
+
+            // Update counts for the new sums
+            next[positive] = (next[positive] || 0) + count;
+            next[negative] = (next[negative] || 0) + count;
+        }
+        dp = next; // Move to the next state
+    }
+
+    // Return the count of ways to achieve the target sum
+    return dp[target] || 0;
+};
 
 const nums = [1, 1, 1, 1, 1],
     target = 3;
