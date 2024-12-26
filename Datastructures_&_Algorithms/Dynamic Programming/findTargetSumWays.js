@@ -13,6 +13,13 @@
  * Return the number of different **expressions** that you can build, which
  * evaluates to target.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= nums.length <= 20`
+ * - `0 <= nums[i] <= 1000`
+ * - `0 <= sum(nums[i]) <= 1000`
+ * - `-1000 <= target <= 1000`
+ * 
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
