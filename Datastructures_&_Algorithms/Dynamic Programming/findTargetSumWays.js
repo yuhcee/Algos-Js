@@ -14,14 +14,25 @@
  * evaluates to target.
  *
  * **Constraints:**
- * 
+ *
  * - `1 <= nums.length <= 20`
  * - `0 <= nums[i] <= 1000`
  * - `0 <= sum(nums[i]) <= 1000`
  * - `-1000 <= target <= 1000`
- * 
+ *
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
  */
 const findTargetSumWays = function (nums, target) {};
+
+const nums = [1, 1, 1, 1, 1],
+    target = 3;
+// Output: 5
+/* Explanation: There are 5 ways to assign symbols to make the sum of nums be target 3.
+-1 + 1 + 1 + 1 + 1 = 3
++1 - 1 + 1 + 1 + 1 = 3
++1 + 1 - 1 + 1 + 1 = 3
++1 + 1 + 1 - 1 + 1 = 3
++1 + 1 + 1 + 1 - 1 = 3 */
+console.log(findTargetSumWays(nums, target));
