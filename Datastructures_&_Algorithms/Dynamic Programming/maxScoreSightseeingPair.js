@@ -13,11 +13,24 @@
  * Return *the maximum score of a pair of sightseeing spots.*
  *
  * **Constraints:**
- * 
+ *
  * - `2 <= values.length <= 5 * 104`
  * - `1 <= values[i] <= 1000`
- * 
+ *
  * @param {number[]} values
  * @return {number}
  */
-const maxScoreSightseeingPair = function (values) {};
+const maxScoreSightseeingPair = function (values) {
+    let maxScore = 0; // Maximum score found so far
+    let maxLeft = values[0]; // Best value for (values[i] + i) seen so far
+
+    for (let j = 1; j < values.length; j++) {
+        // Compute the current score
+        maxScore = Math.max(maxScore, maxLeft + values[j] - j);
+
+        // Update the maxLeft for the next iteration
+        maxLeft = Math.max(maxLeft, values[j] + j);
+    }
+
+    return maxScore;
+};
