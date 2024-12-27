@@ -39,3 +39,7 @@ const values = [8, 1, 5, 2, 6];
 // Output: 11
 // Explanation: i = 0, j = 2, values[i] + values[j] + i - j = 8 + 5 + 0 - 2 = 11
 console.log(maxScoreSightseeingPair(values));
+
+const values1 = [1,2]
+// Output: 2
+console.log(maxScoreSightseeingPair(values1));
