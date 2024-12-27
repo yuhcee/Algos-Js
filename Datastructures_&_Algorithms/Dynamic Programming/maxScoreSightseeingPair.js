@@ -12,6 +12,11 @@
  *
  * Return *the maximum score of a pair of sightseeing spots.*
  *
+ * **Constraints:**
+ * 
+ * - `2 <= values.length <= 5 * 104`
+ * - `1 <= values[i] <= 1000`
+ * 
  * @param {number[]} values
  * @return {number}
  */
