@@ -87,3 +87,10 @@ const nums1 = [1, 2, 1, 2, 1, 2, 1, 2, 1],
 /* Explanation: Subarrays [1, 2], [1, 2], [1, 2] correspond to the starting indices [0, 2, 4].
  */
 console.log(maxSumOfThreeSubarrays(nums1, k1));
+
+const nums2 = [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    k2 = 3;
+// Output: [0,3,6]
+/* Explanation: Subarrays [1, 2, 3], [4, 5, 6], [7, 8, 9] correspond to the starting indices [0, 3, 6].
+ */
+console.log(maxSumOfThreeSubarrays(nums2, k2));
