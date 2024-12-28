@@ -8,6 +8,12 @@
  * each interval (**0-indexed**). If there are multiple answers, return the
  * lexicographically smallest one.
  *
+ * **Constraints:**
+ * 
+ * - `1 <= nums.length <= 2 * 104`
+ * - `1 <= nums[i] < 216`
+ * - `1 <= k <= floor(nums.length / 3)`
+ * 
  * @param {number[]} nums
  * @param {number} k
  * @return {number[]}
