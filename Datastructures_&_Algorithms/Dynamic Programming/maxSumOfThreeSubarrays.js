@@ -27,3 +27,10 @@ const nums = [1, 2, 1, 2, 6, 7, 5, 1],
 We could have also taken [2, 1], but an answer of [1, 3, 5] would be lexicographically larger.
  */
 console.log(maxSumOfThreeSubarrays(nums, k));
+
+const nums1 = [1, 2, 1, 2, 1, 2, 1, 2, 1],
+    k1 = 2;
+// Output: [0,2,4]
+/* Explanation: Subarrays [1, 2], [1, 2], [1, 2] correspond to the starting indices [0, 2, 4].
+ */
+console.log(maxSumOfThreeSubarrays(nums1, k1));
