@@ -54,7 +54,7 @@ const numWays = function (words, target) {
         }
 
         // loop through each character in the target string backwards
-        for (let j = target.length - 1; j >= 0; --j) {
+        for (let j = target.length - 1; j >= 0; j--) {
             // calculate the number of ways to form the target string up to the j-th character
             // using characters from the i-th position in the words
             result[j + 1] += (result[j] * count[target.charCodeAt(j) - 97]) % mod;
