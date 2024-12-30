@@ -34,7 +34,7 @@ const countGoodStrings = function (low, high, zero, one) {
     const mod = 1000000007;
 
     // Calculate the dynamic programming array
-    for (let end = 1; end <= high; ++end) {
+    for (let end = 1; end <= high; end++) {
         // Calculate the count for the current length
         if (end >= zero) {
             dp[end] += dp[end - zero]; // Append '0'
@@ -47,7 +47,7 @@ const countGoodStrings = function (low, high, zero, one) {
 
     let answer = 0;
     // Sum up the counts within the range [low, high]
-    for (let i = low; i <= high; ++i) {
+    for (let i = low; i <= high; i++) {
         answer += dp[i];
         answer %= mod;
     }
