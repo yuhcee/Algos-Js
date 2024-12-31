@@ -13,11 +13,11 @@
  *
  * The passes allow that many days of consecutive travel.
  *
- * - For example, if we get a **7-day** pass on day `2`, then we can travel for `7`
- * days: `2`, `3`, `4`, `5`, `6`, `7`, and `8`.
+ * - For example, if we get a **7-day** pass on day `2`, then we can travel for 
+ * `7` days: `2`, `3`, `4`, `5`, `6`, `7`, and `8`.
  *
- * Return *the minimum number of dollars you need to travel every day in the given
- * list of days*.
+ * Return *the minimum number of dollars you need to travel every day in the 
+ * given list of days*.
  *
  * **Constraints:**
  *
