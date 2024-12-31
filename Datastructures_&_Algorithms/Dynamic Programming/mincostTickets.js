@@ -27,7 +27,6 @@
  * - `costs.length == 3`
  * - `1 <= costs[i] <= 1000`
  *
- *
  * @param {number[]} days
  * @param {number[]} costs
  * @return {number}
