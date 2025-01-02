@@ -26,7 +26,30 @@
  * @param {number[][]} queries
  * @return {number[]}
  */
-const vowelStrings = function (words, queries) {};
+const vowelStrings = function (words, queries) {
+    const isVowel = (ch) => "aeiou".includes(ch);
+
+    // Build a prefix sum array for vowel strings
+    const n = words.length;
+    const prefixSum = new Array(n + 1).fill(0);
+
+    for (let i = 0; i < n; i++) {
+        const word = words[i];
+        if (isVowel(word[0]) && isVowel(word[word.length - 1])) {
+            prefixSum[i + 1] = prefixSum[i] + 1;
+        } else {
+            prefixSum[i + 1] = prefixSum[i];
+        }
+    }
+
+    // Answer each query using the prefix sum array
+    const result = [];
+    for (const [li, ri] of queries) {
+        result.push(prefixSum[ri + 1] - prefixSum[li]);
+    }
+
+    return result;
+};
 
 const words = ['aba', 'bcb', 'ece', 'aa', 'e'],
     queries = [
