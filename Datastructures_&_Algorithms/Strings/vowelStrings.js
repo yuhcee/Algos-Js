@@ -41,3 +41,13 @@ to query [1,4] is 3 (strings "ece", "aa", "e").
 to query [1,1] is 0.
 We return [2,3,0]. */
 console.log(vowelStrings(words, queries));
+
+const words1 = ['a', 'e', 'i'],
+    queries1 = [
+        [0, 2],
+        [0, 1],
+        [2, 2],
+    ];
+// Output: [3,2,1]
+// Explanation: Every string satisfies the conditions, so we return [3,2,1].
+console.log(vowelStrings(words1, queries1));
