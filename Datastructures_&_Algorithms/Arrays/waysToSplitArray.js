@@ -12,6 +12,11 @@
  *
  * Return *the number of **valid splits** in nums*.
  *
+ * **Constraints:**
+ *
+ * - `2 <= nums.length <= 105`
+ * - `-105 <= nums[i] <= 105`
+ *
  * @param {number[]} nums
  * @return {number}
  */
