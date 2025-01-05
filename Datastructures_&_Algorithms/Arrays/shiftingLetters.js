@@ -61,3 +61,13 @@ const s = 'abc',
 Secondly, shift the characters from index 1 to index 2 forward. Now s = "zbd".
 Finally, shift the characters from index 0 to index 2 forward. Now s = "ace". */
 console.log(shiftingLetters(s, shifts));
+
+const s1 = 'dztz',
+    shifts1 = [
+        [0, 0, 0],
+        [1, 1, 1],
+    ];
+// Output: "catz"
+/* Explanation: Firstly, shift the characters from index 0 to index 0 backward. Now s = "cztz".
+Finally, shift the characters from index 1 to index 1 forward. Now s = "catz". */
+console.log(shiftingLetters(s1, shifts1));
