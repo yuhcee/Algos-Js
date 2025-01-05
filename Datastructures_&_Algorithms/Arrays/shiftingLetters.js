@@ -26,4 +26,26 @@
  * @param {number[][]} shifts
  * @return {string}
  */
-const shiftingLetters = function (s, shifts) {};
+const shiftingLetters = function (s, shifts) {
+    const n = s.length;
+    const diff = Array(n + 1).fill(0); // Difference array for range updates
+
+    // Apply each shift to the difference array
+    for (const [start, end, direction] of shifts) {
+        const shiftValue = direction === 1 ? 1 : -1;
+        diff[start] += shiftValue;
+        diff[end + 1] -= shiftValue;
+    }
+
+    // Calculate the prefix sum to get net shifts
+    let netShift = 0;
+    const result = Array(n);
+    for (let i = 0; i < n; i++) {
+        netShift += diff[i];
+        // Adjust the character with wrapping
+        const newCharCode = ((((s.charCodeAt(i) - 97 + netShift) % 26) + 26) % 26) + 97;
+        result[i] = String.fromCharCode(newCharCode);
+    }
+
+    return result.join('');
+};
