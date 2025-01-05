@@ -49,3 +49,15 @@ const shiftingLetters = function (s, shifts) {
 
     return result.join('');
 };
+
+const s = 'abc',
+    shifts = [
+        [0, 1, 0],
+        [1, 2, 1],
+        [0, 2, 1],
+    ];
+// Output: "ace"
+/* Explanation: Firstly, shift the characters from index 0 to index 1 backward. Now s = "zac".
+Secondly, shift the characters from index 1 to index 2 forward. Now s = "zbd".
+Finally, shift the characters from index 0 to index 2 forward. Now s = "ace". */
+console.log(shiftingLetters(s, shifts));
