@@ -14,6 +14,13 @@
  *
  * Return *the final string after all such shifts to s are applied*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length, shifts.length <= 5 * 104`
+ * - `shifts[i].length == 3`
+ * - `0 <= starti <= endi < s.length`
+ * - `0 <= directioni <= 1`
+ * - `s` consists of lowercase English letters.
  *
  * @param {string} s
  * @param {number[][]} shifts
