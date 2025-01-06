@@ -25,7 +25,9 @@
  * @param {string} boxes
  * @return {number[]}
  */
-const minOperations = function (boxes) {};
+const minOperations = function (boxes) {
+    
+};
 
 const boxes = '110';
 // Output: [1,1,3]
@@ -34,3 +36,14 @@ const boxes = '110';
 2) Second box: you will have to move one ball from the first box to the second box in one operation.
 3) Third box: you will have to move one ball from the first box to the third box in two operations, and move one ball from the second box to the third box in one operation. */
 console.log(minOperations(boxes));
+
+const boxes1 = '001011';
+// Output: [11,8,5,4,3,4]
+/* Explanation: The answer for each box is as follows:
+1) First box: you will have to move one ball from the third box to the first box in one operation.
+2) Second box: you will have to move one ball from the first box to the second box in one operation.
+3) Third box: you will have to move one ball from the first box to the third box in two operations.
+4) Fourth box: you will have to move one ball from the third box to the fourth box in one operation.
+5) Fifth box: you will have to move one ball from the third box to the fifth box in one operation.
+6) Sixth box: you will have to move one ball from the third box to the sixth box in two operations. */
+console.log(minOperations(boxes1));
