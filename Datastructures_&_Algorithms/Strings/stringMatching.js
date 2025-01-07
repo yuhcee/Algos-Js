@@ -7,6 +7,13 @@
  *
  * A **substring** is a contiguous sequence of characters within a string
  *
+ * **Constraints:**
+ *
+ * - `1 <= words.length <= 100`
+ * - `1 <= words[i].length <= 30`
+ * - `words[i]` contains only lowercase English letters.
+ * - All the strings of `words` are **unique**.
+ *
  * @param {string[]} words
  * @return {string[]}
  */
