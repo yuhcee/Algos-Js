@@ -24,3 +24,8 @@ const words = ['mass', 'as', 'hero', 'superhero'];
 /* Explanation: "as" is substring of "mass" and "hero" is substring of "superhero".
 ["hero","as"] is also a valid answer. */
 console.log(stringMatching(words));
+
+const words1 = ['leetcode', 'et', 'code'];
+// Output: ["et","code"]
+// Explanation: "et", "code" are substring of "leetcode".
+console.log(stringMatching(words1));
