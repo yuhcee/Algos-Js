@@ -18,3 +18,9 @@
  * @return {string[]}
  */
 const stringMatching = function (words) {};
+
+const words = ['mass', 'as', 'hero', 'superhero'];
+// Output: ["as","hero"]
+/* Explanation: "as" is substring of "mass" and "hero" is substring of "superhero".
+["hero","as"] is also a valid answer. */
+console.log(stringMatching(words));
