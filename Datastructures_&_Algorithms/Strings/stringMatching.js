@@ -17,7 +17,18 @@
  * @param {string[]} words
  * @return {string[]}
  */
-const stringMatching = function (words) {};
+const stringMatching = function (words) {
+    const result = [];
+    const allWords = words.join(' ');
+
+    for (const word of words) {
+        if (allWords.indexOf(word) !== allWords.lastIndexOf(word)) {
+            result.push(word);
+        }
+    }
+
+    return result;
+};
 
 const words = ['mass', 'as', 'hero', 'superhero'];
 // Output: ["as","hero"]
