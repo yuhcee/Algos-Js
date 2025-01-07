@@ -29,3 +29,8 @@ const words1 = ['leetcode', 'et', 'code'];
 // Output: ["et","code"]
 // Explanation: "et", "code" are substring of "leetcode".
 console.log(stringMatching(words1));
+
+const words2 = ['blue', 'green', 'bu'];
+// Output: []
+// Explanation: No string of words is substring of another string.
+console.log(stringMatching(words2));
