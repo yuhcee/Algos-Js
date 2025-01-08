@@ -26,7 +26,25 @@
  * @param {string[]} words
  * @return {number}
  */
-const countPrefixSuffixPairs = function (words) {};
+const countPrefixSuffixPairs = function (words) {
+    let count = 0;
+
+    function isPrefixAndSuffix(str1, str2) {
+        if (str2.startsWith(str1) && str2.endsWith(str1)) {
+            return true;
+        }
+    }
+
+    for (let i = 0; i < words.length; i++) {
+        for (let j = i + 1; j < words.length; j++) {
+            if (isPrefixAndSuffix(words[i], words[j])) {
+                count++;
+            }
+        }
+    }
+
+    return count;
+};
 
 const words = ['a', 'aba', 'ababa', 'aa'];
 // Output: 4
