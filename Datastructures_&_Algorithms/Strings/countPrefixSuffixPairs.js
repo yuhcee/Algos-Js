@@ -27,3 +27,13 @@
  * @return {number}
  */
 const countPrefixSuffixPairs = function (words) {};
+
+const words = ['a', 'aba', 'ababa', 'aa'];
+// Output: 4
+/* Explanation: In this example, the counted index pairs are:
+i = 0 and j = 1 because isPrefixAndSuffix("a", "aba") is true.
+i = 0 and j = 2 because isPrefixAndSuffix("a", "ababa") is true.
+i = 0 and j = 3 because isPrefixAndSuffix("a", "aa") is true.
+i = 1 and j = 2 because isPrefixAndSuffix("aba", "ababa") is true.
+Therefore, the answer is 4. */
+console.log(countPrefixSuffixPairs(words));
