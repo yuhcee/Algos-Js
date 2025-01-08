@@ -17,6 +17,12 @@
  * Return *an integer denoting the **number** of index pairs `(i, j)` such
  * that `i < j`, and `isPrefixAndSuffix(words[i], words[j])` is `true`.*
  *
+ * **Constraints:**
+ *
+ * - `1 <= words.length <= 50`
+ * - `1 <= words[i].length <= 10`
+ * - `words[i]` consists only of lowercase English letters.
+ *
  * @param {string[]} words
  * @return {number}
  */
