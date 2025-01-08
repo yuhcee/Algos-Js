@@ -45,3 +45,9 @@ i = 0 and j = 1 because isPrefixAndSuffix("pa", "papa") is true.
 i = 2 and j = 3 because isPrefixAndSuffix("ma", "mama") is true.
 Therefore, the answer is 2. */
 console.log(countPrefixSuffixPairs(words1));
+
+const words2 = ['abab', 'ab'];
+// Output: 0
+/* Explanation: In this example, the only valid index pair is i = 0 and j = 1, and isPrefixAndSuffix("abab", "ab") is false.
+Therefore, the answer is 0. */
+console.log(countPrefixSuffixPairs(words2));
