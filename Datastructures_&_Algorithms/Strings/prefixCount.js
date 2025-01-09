@@ -19,3 +19,9 @@
  * @return {number}
  */
 const prefixCount = function (words, pref) {};
+
+const words = ['pay', 'attention', 'practice', 'attend'],
+    pref = 'at';
+// Output: 2
+// Explanation: The 2 strings that contain "at" as a prefix are: "attention" and "attend".
+console.log(prefixCount(words, pref));
