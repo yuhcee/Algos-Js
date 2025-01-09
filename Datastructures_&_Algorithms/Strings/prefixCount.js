@@ -31,3 +31,9 @@ const words1 = ['leetcode', 'win', 'loops', 'success'],
 // Output: 0
 // Explanation: There are no strings that contain "code" as a prefix.
 console.log(prefixCount(words1, pref1));
+
+const words2 = ['blue', 'green', 'bu'],
+    pref2 = 'b';
+// Output: 3
+// Explanation: All 3 strings contain "b" as a prefix.
+console.log(prefixCount(words2, pref2));
