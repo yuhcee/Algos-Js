@@ -25,3 +25,9 @@ const words = ['pay', 'attention', 'practice', 'attend'],
 // Output: 2
 // Explanation: The 2 strings that contain "at" as a prefix are: "attention" and "attend".
 console.log(prefixCount(words, pref));
+
+const words1 = ['leetcode', 'win', 'loops', 'success'],
+    pref1 = 'code';
+// Output: 0
+// Explanation: There are no strings that contain "code" as a prefix.
+console.log(prefixCount(words1, pref1));
