@@ -26,4 +26,40 @@
  * @param {string[]} words2
  * @return {string[]}
  */
-const wordSubsets = function (words1, words2) {};
+const wordSubsets = function (words1, words2) {
+    // Helper function to count character frequencies
+    const getFrequency = (word) => {
+        const freq = Array(26).fill(0);
+        for (const char of word) {
+            freq[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+        }
+        return freq;
+    };
+
+    // Step 1: Create the combined frequency map for words2
+    const maxFreq = Array(26).fill(0);
+    for (const word of words2) {
+        const freq = getFrequency(word);
+        for (let i = 0; i < 26; i++) {
+            maxFreq[i] = Math.max(maxFreq[i], freq[i]);
+        }
+    }
+
+    // Step 2: Find all universal strings in words1
+    const result = [];
+    for (const word of words1) {
+        const freq = getFrequency(word);
+        let isUniversal = true;
+        for (let i = 0; i < 26; i++) {
+            if (freq[i] < maxFreq[i]) {
+                isUniversal = false;
+                break;
+            }
+        }
+        if (isUniversal) {
+            result.push(word);
+        }
+    }
+
+    return result;
+};
