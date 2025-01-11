@@ -43,3 +43,9 @@ const s = 'annabelle',
 /* Explanation: You can construct two palindromes using all characters in s.
 Some possible constructions "anna" + "elble", "anbna" + "elle", "anellena" + "b" */
 console.log(canConstruct(s, k));
+
+const s1 = 'leetcode',
+    k1 = 3;
+// Output: false
+/* Explanation: It is impossible to construct 3 palindromes using all the characters of s. */
+console.log(canConstruct(s1, k1));
