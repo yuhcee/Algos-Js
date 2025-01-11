@@ -49,3 +49,9 @@ const s1 = 'leetcode',
 // Output: false
 /* Explanation: It is impossible to construct 3 palindromes using all the characters of s. */
 console.log(canConstruct(s1, k1));
+
+const s2 = 'true',
+    k2 = 4;
+// Output: true
+// Explanation: The only possible solution is to put each character in a separate string.
+console.log(canConstruct(s2, k2));
