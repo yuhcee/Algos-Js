@@ -36,3 +36,10 @@ const canConstruct = function (s, k) {
     // Check if we can form k palindromes
     return oddCount <= k;
 };
+
+const s = 'annabelle',
+    k = 2;
+// Output: true
+/* Explanation: You can construct two palindromes using all characters in s.
+Some possible constructions "anna" + "elble", "anbna" + "elle", "anellena" + "b" */
+console.log(canConstruct(s, k));
