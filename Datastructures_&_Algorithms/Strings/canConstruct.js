@@ -15,4 +15,24 @@
  * @param {number} k
  * @return {boolean}
  */
-const canConstruct = function (s, k) {};
+const canConstruct = function (s, k) {
+    // If k is greater than the length of s, it's impossible
+    if (k > s.length) return false;
+
+    // Count character frequencies
+    const freq = {};
+    for (const char of s) {
+        freq[char] = (freq[char] || 0) + 1;
+    }
+
+    // Count characters with odd frequencies
+    let oddCount = 0;
+    for (const count of Object.values(freq)) {
+        if (count % 2 !== 0) {
+            oddCount++;
+        }
+    }
+
+    // Check if we can form k palindromes
+    return oddCount <= k;
+};
