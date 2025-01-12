@@ -73,3 +73,10 @@ const s1 = '()()',
 // Output: true
 // Explanation: We do not need to make any changes because s is already valid.
 console.log(canBeValid(s1, locked1));
+
+const s2 = ')',
+    locked2 = '0';
+// Output: false
+/* Explanation: locked permits us to change s[0]. 
+Changing s[0] to either '(' or ')' will not make s valid. */
+console.log(canBeValid(s2, locked2));
