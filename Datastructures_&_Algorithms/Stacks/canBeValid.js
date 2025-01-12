@@ -67,3 +67,9 @@ const s = '))()))',
 /* Explanation: locked[1] == '1' and locked[3] == '1', so we cannot change s[1] or s[3].
 We change s[0] and s[4] to '(' while leaving s[2] and s[5] unchanged to make s valid. */
 console.log(canBeValid(s, locked));
+
+const s1 = '()()',
+    locked1 = '0000';
+// Output: true
+// Explanation: We do not need to make any changes because s is already valid.
+console.log(canBeValid(s1, locked1));
