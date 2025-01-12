@@ -31,4 +31,33 @@
  * @param {string} locked
  * @return {boolean}
  */
-const canBeValid = function (s, locked) {};
+const canBeValid = function (s, locked) {
+    // If length is odd, it's impossible to balance
+    if (s.length % 2 !== 0) return false;
+
+    let balance = 0;
+
+    // Left-to-right pass
+    for (let i = 0; i < s.length; i++) {
+        if (locked[i] === '0' || s[i] === '(') {
+            balance++;
+        } else {
+            balance--;
+        }
+        if (balance < 0) return false; // Too many unmatched ')'
+    }
+
+    balance = 0;
+
+    // Right-to-left pass
+    for (let i = s.length - 1; i >= 0; i--) {
+        if (locked[i] === '0' || s[i] === ')') {
+            balance++;
+        } else {
+            balance--;
+        }
+        if (balance < 0) return false; // Too many unmatched '('
+    }
+
+    return true;
+};
