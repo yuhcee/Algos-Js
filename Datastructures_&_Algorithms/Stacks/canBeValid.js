@@ -20,6 +20,13 @@
  * Return *`true` if you can make `s` a valid parentheses string*.
  * Otherwise, return `false`.
  *
+ * **Constraints:**
+ *
+ * - `n == s.length == locked.length`
+ * - `1 <= n <= 105`
+ * - `s[i]` is either `'('` or `')'`.
+ * - `locked[i]` is either `'0'` or `'1'`.
+ *
  * @param {string} s
  * @param {string} locked
  * @return {boolean}
