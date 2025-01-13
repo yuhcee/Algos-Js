@@ -23,4 +23,21 @@
  * @param {string} s
  * @return {number}
  */
-const minimumLength = function (s) {};
+const minimumLength = function (s) {
+    const charFrequencyMap = new Map();
+
+    for (const char of s) {
+        charFrequencyMap.set(char, (charFrequencyMap.get(char) || 0) + 1);
+    }
+
+    let deleteCount = 0;
+    for (const frequency of charFrequencyMap.values()) {
+        if (frequency % 2 === 1) {
+            deleteCount += frequency - 1;
+        } else {
+            deleteCount += frequency - 2;
+        }
+    }
+
+    return s.length - deleteCount;
+};
