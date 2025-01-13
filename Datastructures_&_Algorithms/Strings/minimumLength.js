@@ -56,3 +56,5 @@ const s1 = 'aa';
 We cannot perform any operations, so we return the length of the original string. */
 console.log(minimumLength(s1));
 
+const s2 = 'abaaacbcbb';
+console.log(minimumLength(s2));
