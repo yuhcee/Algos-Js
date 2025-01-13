@@ -15,6 +15,11 @@
  *
  * Return the **minimum** length of the final string s that you can achieve.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 2 * 105`
+ * - `s` consists only of lowercase English letters.
+ *
  * @param {string} s
  * @return {number}
  */
