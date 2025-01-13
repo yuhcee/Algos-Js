@@ -49,3 +49,10 @@ Choose index 2, then remove the characters at indices 0 and 3. The resulting str
 Choose index 3, then remove the characters at indices 0 and 5. The resulting string is s = "acbcb".
  */
 console.log(minimumLength(s));
+
+const s1 = 'aa';
+// Output: 2
+/* Explanation:
+We cannot perform any operations, so we return the length of the original string. */
+console.log(minimumLength(s1));
+
