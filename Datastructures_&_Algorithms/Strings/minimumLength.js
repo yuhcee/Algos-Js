@@ -41,3 +41,11 @@ const minimumLength = function (s) {
 
     return s.length - deleteCount;
 };
+const s = 'abaacbcbb';
+// Output: 5
+/* Explanation:
+We do the following operations:
+Choose index 2, then remove the characters at indices 0 and 3. The resulting string is s = "bacbcbb".
+Choose index 3, then remove the characters at indices 0 and 5. The resulting string is s = "acbcb".
+ */
+console.log(minimumLength(s));
