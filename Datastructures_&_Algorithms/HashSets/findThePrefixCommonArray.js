@@ -67,3 +67,11 @@ const A1 = [2, 3, 1],
 At i = 1: only 3 is common in A and B, so C[1] = 1.
 At i = 2: 1, 2, and 3 are common in A and B, so C[2] = 3. */
 console.log(findThePrefixCommonArray(A1, B1));
+
+const A2 = [1, 2, 3],
+    B2 = [1, 2, 3];
+// Output: [1,2,3]
+/* Explanation: At i = 0: only 1 is common in A and B, so C[0] = 1.
+At i = 1: 1 and 2 are common in A and B, so C[1] = 2.
+At i = 2: 1, 2, and 3 are common in A and B, so C[2] = 3. */
+console.log(findThePrefixCommonArray(A2, B2));
