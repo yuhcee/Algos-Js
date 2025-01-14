@@ -24,4 +24,29 @@
  * @param {number[]} B
  * @return {number[]}
  */
-const findThePrefixCommonArray = function (A, B) {};
+const findThePrefixCommonArray = function (A, B) {
+    const n = A.length;
+    const seen = new Set();
+    const result = [];
+    let commonCount = 0;
+
+    for (let i = 0; i < n; i++) {
+        if (seen.has(A[i])) {
+            commonCount++;
+        }
+
+        if (seen.has(B[i])) {
+            commonCount++;
+        }
+
+        if (A[i] === B[i]) {
+            commonCount++;
+        }
+
+        seen.add(A[i]);
+        seen.add(B[i]);
+        result.push(commonCount);
+    }
+
+    return result;
+};
