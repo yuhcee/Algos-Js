@@ -13,6 +13,13 @@
  * A sequence of `n` integers is called a **permutation** if it contains
  * all integers from `1` to `n` exactly once.
  *
+ * **Constraints:**
+ *
+ * - `1 <= A.length == B.length == n <= 50`
+ * - `1 <= A[i], B[i] <= n`
+ * - It is guaranteed that `A` and `B` are both a permutation of `n`
+ * integers.
+ *
  * @param {number[]} A
  * @param {number[]} B
  * @return {number[]}
