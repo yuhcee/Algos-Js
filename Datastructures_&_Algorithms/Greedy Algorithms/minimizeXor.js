@@ -64,3 +64,11 @@ const num11 = 1,
 The binary representations of num1 and num2 are 0001 and 1100, respectively.
 The integer 3 has the same number of set bits as num2, and the value 3 XOR 1 = 2 is minimal. */
 console.log(minimizeXor(num11, num21));
+
+const num12 = 8,
+    num22 = 3;
+// Output: 3
+/* Explanation:
+The binary representations of num1 and num2 are 1000 and 0011, respectively.
+The integer 3 has the same number of set bits as num2, and the value 3 XOR 8 = 11 is minimal. */
+console.log(minimizeXor(num12, num22));
