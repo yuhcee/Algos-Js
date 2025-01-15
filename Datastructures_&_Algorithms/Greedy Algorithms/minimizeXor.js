@@ -15,6 +15,10 @@
  * The number of **set bits** of an integer is the number of `1`'s in its
  * binary representation.
  *
+ * **Constraints:**
+ *
+ * - `1 <= num1, num2 <= 109`
+ *
  * @param {number} num1
  * @param {number} num2
  * @return {number}
