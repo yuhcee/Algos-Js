@@ -23,4 +23,28 @@
  * @param {number} num2
  * @return {number}
  */
-const minimizeXor = function (num1, num2) {};
+const minimizeXor = function (num1, num2) {
+    // Count the number of 1's in the binary representation of num2
+    const num2Bits = num2.toString(2).split('1').length - 1;
+
+    let result = 0;
+    let setBits = 0;
+
+    // Use the bits of num1 to try to create the smallest value for result
+    for (let i = 31; i >= 0 && setBits < num2Bits; i--) {
+        if ((num1 & (1 << i)) !== 0) {
+            result |= 1 << i;
+            setBits++;
+        }
+    }
+
+    // If more bits are needed, set the smallest available bits
+    for (let i = 0; i < 32 && setBits < num2Bits; i++) {
+        if ((result & (1 << i)) === 0) {
+            result |= 1 << i;
+            setBits++;
+        }
+    }
+
+    return result;
+};
