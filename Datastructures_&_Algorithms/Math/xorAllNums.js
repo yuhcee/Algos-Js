@@ -9,6 +9,11 @@
  *
  * Return the **bitwise XOR** of all integers in nums3.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums1.length, nums2.length <= 105`
+ * - `0 <= nums1[i], nums2[j] <= 109`
+ *
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number}
