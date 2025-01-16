@@ -18,4 +18,30 @@
  * @param {number[]} nums2
  * @return {number}
  */
-const xorAllNums = function (nums1, nums2) {};
+const xorAllNums = function (nums1, nums2) {
+    let xorNums1 = 0,
+        xorNums2 = 0;
+
+    // XOR all elements in nums1
+    for (const num of nums1) {
+        xorNums1 ^= num;
+    }
+
+    // XOR all elements in nums2
+    for (const num of nums2) {
+        xorNums2 ^= num;
+    }
+
+    // Determine the final result based on the lengths
+    const n1 = nums1.length,
+        n2 = nums2.length;
+    let result = 0;
+    if (n1 % 2 !== 0) {
+        result ^= xorNums2;
+    }
+    if (n2 % 2 !== 0) {
+        result ^= xorNums1;
+    }
+
+    return result;
+};
