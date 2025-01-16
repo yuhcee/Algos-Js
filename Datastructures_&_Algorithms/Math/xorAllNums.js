@@ -45,3 +45,11 @@ const xorAllNums = function (nums1, nums2) {
 
     return result;
 };
+
+const nums1 = [2, 1, 3],
+    nums2 = [10, 2, 5, 0];
+// Output: 13
+/* Explanation:
+A possible nums3 array is [8,0,7,2,11,3,4,1,9,1,6,3].
+The bitwise XOR of all these numbers is 13, so we return 13. */
+console.log(xorAllNums(nums1, nums2));
