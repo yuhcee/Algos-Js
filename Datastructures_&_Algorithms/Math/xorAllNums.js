@@ -53,3 +53,13 @@ const nums1 = [2, 1, 3],
 A possible nums3 array is [8,0,7,2,11,3,4,1,9,1,6,3].
 The bitwise XOR of all these numbers is 13, so we return 13. */
 console.log(xorAllNums(nums1, nums2));
+
+const nums11 = [1, 2],
+    nums21 = [3, 4];
+// Output: 0
+/* Explanation:
+All possible pairs of bitwise XORs are nums1[0] ^ nums2[0], nums1[0] ^ nums2[1], nums1[1] ^ nums2[0],
+and nums1[1] ^ nums2[1].
+Thus, one possible nums3 array is [2,5,1,6].
+2 ^ 5 ^ 1 ^ 6 = 0, so we return 0. */
+console.log(xorAllNums(nums11, nums21));
