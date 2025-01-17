@@ -16,6 +16,12 @@
  *
  * - A binary array is an array containing only **0's** and **1's**
  *
+ * **Constraints:**
+ *
+ * - `n == derived.length`
+ * - `1 <= n <= 105`
+ * - The values in `derived` are either **0's** or **1's**
+ *
  * @param {number[]} derived
  * @return {boolean}
  */
