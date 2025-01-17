@@ -25,4 +25,20 @@
  * @param {number[]} derived
  * @return {boolean}
  */
-const doesValidArrayExist = function (derived) {};
+const doesValidArrayExist = function (derived) {
+    const n = derived.length;
+
+    const isValid = (start) => {
+        const original = new Array(n);
+        original[0] = start;
+
+        for (let i = 1; i < n; i++) {
+            original[i] = derived[i - 1] ^ original[i - 1];
+        }
+        // Check the circular condition
+        return (original[n - 1] ^ original[0]) === derived[n - 1];
+    };
+
+    // Try both starting values for original[0]
+    return isValid(0) || isValid(1);
+};
