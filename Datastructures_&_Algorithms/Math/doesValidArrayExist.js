@@ -50,3 +50,10 @@ derived[0] = original[0] ⊕ original[1] = 0 ⊕ 1 = 1
 derived[1] = original[1] ⊕ original[2] = 1 ⊕ 0 = 1
 derived[2] = original[2] ⊕ original[0] = 0 ⊕ 0 = 0 */
 console.log(doesValidArrayExist(derived));
+
+const derived1 = [1, 1];
+// Output: true
+/* Explanation: A valid original array that gives derived is [0,1].
+derived[0] = original[0] ⊕ original[1] = 1
+derived[1] = original[1] ⊕ original[0] = 1 */
+console.log(doesValidArrayExist(derived1));
