@@ -57,3 +57,8 @@ const derived1 = [1, 1];
 derived[0] = original[0] ⊕ original[1] = 1
 derived[1] = original[1] ⊕ original[0] = 1 */
 console.log(doesValidArrayExist(derived1));
+
+const derived2 = [1, 0];
+// Output: false
+// Explanation: There is no valid original array that gives derived.
+console.log(doesValidArrayExist(derived2));
