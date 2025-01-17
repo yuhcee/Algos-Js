@@ -42,3 +42,11 @@ const doesValidArrayExist = function (derived) {
     // Try both starting values for original[0]
     return isValid(0) || isValid(1);
 };
+
+const derived = [1, 1, 0];
+// Output: true
+/* Explanation: A valid original array that gives derived is [0,1,0].
+derived[0] = original[0] ⊕ original[1] = 0 ⊕ 1 = 1 
+derived[1] = original[1] ⊕ original[2] = 1 ⊕ 0 = 1
+derived[2] = original[2] ⊕ original[0] = 0 ⊕ 0 = 0 */
+console.log(doesValidArrayExist(derived));
