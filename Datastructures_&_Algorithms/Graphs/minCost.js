@@ -105,3 +105,10 @@ const grid1 = [
 // Output: 0
 // Explanation: You can follow the path from (0, 0) to (2, 2).
 console.log(minCost(grid1));
+
+const grid2 = [
+    [1, 2],
+    [4, 3],
+];
+// Output: 1
+console.log(minCost(grid2));
