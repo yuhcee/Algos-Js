@@ -28,13 +28,59 @@
  * Return *the minimum cost to make the grid have at least one valid path.*
  *
  * **Constraints:**
- * 
+ *
  * - `m == grid.length`
  * - `n == grid[i].length`
  * - `1 <= m, n <= 100`
  * - `1 <= grid[i][j] <= 4`
- * 
+ *
  * @param {number[][]} grid
  * @return {number}
  */
-const minCost = function (grid) {};
+const minCost = function (grid) {
+    const m = grid.length;
+    const n = grid[0].length;
+
+    const directions = {
+        1: [0, 1], // right
+        2: [0, -1], // left
+        3: [1, 0], // down
+        4: [-1, 0], // up
+    };
+
+    const deque = [];
+    const visited = Array.from({ length: m }, () => Array(n).fill(false));
+    deque.push([0, 0, 0]); // Start at (0, 0) with cost 0
+
+    while (deque.length) {
+        const [row, col, cost] = deque.shift();
+
+        // If already visited, skip
+        if (visited[row][col]) continue;
+        visited[row][col] = true;
+
+        // If we reach the bottom-right corner, return the cost
+        if (row === m - 1 && col === n - 1) return cost;
+
+        // Explore all four directions
+        for (let dir = 1; dir <= 4; dir++) {
+            const [dr, dc] = directions[dir];
+            const newRow = row + dr;
+            const newCol = col + dc;
+
+            // Check if within bounds
+            if (newRow >= 0 && newRow < m && newCol >= 0 && newCol < n) {
+                const newCost = cost + (grid[row][col] === dir ? 0 : 1);
+                if (!visited[newRow][newCol]) {
+                    if (grid[row][col] === dir) {
+                        deque.unshift([newRow, newCol, newCost]); // Cost 0
+                    } else {
+                        deque.push([newRow, newCol, newCost]); // Cost 1
+                    }
+                }
+            }
+        }
+    }
+
+    return -1; // This line should never be reached
+};
