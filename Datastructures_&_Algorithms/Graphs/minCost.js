@@ -96,3 +96,12 @@ const grid = [
 The path to (3, 3) is as follows. (0, 0) --> (0, 1) --> (0, 2) --> (0, 3) change the arrow to down with cost = 1 --> (1, 3) --> (1, 2) --> (1, 1) --> (1, 0) change the arrow to down with cost = 1 --> (2, 0) --> (2, 1) --> (2, 2) --> (2, 3) change the arrow to down with cost = 1 --> (3, 3)
 The total cost = 3. */
 console.log(minCost(grid));
+
+const grid1 = [
+    [1, 1, 3],
+    [3, 2, 2],
+    [1, 1, 4],
+];
+// Output: 0
+// Explanation: You can follow the path from (0, 0) to (2, 2).
+console.log(minCost(grid1));
