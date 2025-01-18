@@ -27,6 +27,13 @@
  *
  * Return *the minimum cost to make the grid have at least one valid path.*
  *
+ * **Constraints:**
+ * 
+ * - `m == grid.length`
+ * - `n == grid[i].length`
+ * - `1 <= m, n <= 100`
+ * - `1 <= grid[i][j] <= 4`
+ * 
  * @param {number[][]} grid
  * @return {number}
  */
