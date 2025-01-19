@@ -83,3 +83,13 @@ const heightMap = [
 We have two small ponds 1 and 3 units trapped.
 The total volume of water trapped is 4. */
 console.log(trapRainWater(heightMap));
+
+const heightMap1 = [
+    [3, 3, 3, 3, 3],
+    [3, 2, 2, 2, 3],
+    [3, 2, 1, 2, 3],
+    [3, 2, 2, 2, 3],
+    [3, 3, 3, 3, 3],
+];
+// Output: 10
+console.log(trapRainWater(heightMap1));
