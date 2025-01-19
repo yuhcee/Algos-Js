@@ -72,3 +72,14 @@ const trapRainWater = function (heightMap) {
 
     return waterTrapped;
 };
+
+const heightMap = [
+    [1, 4, 3, 1, 3, 2],
+    [3, 2, 1, 3, 2, 4],
+    [2, 3, 3, 2, 3, 1],
+];
+// Output: 4
+/* Explanation: After the rain, water is trapped between the blocks.
+We have two small ponds 1 and 3 units trapped.
+The total volume of water trapped is 4. */
+console.log(trapRainWater(heightMap));
