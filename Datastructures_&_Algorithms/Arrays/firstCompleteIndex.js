@@ -58,3 +58,12 @@ const firstCompleteIndex = function (arr, mat) {
 
     return -1; // This should never happen based on constraints
 };
+
+const arr = [1, 3, 4, 2],
+    mat = [
+        [1, 4],
+        [2, 3],
+    ];
+// Output: 2
+/* Explanation: The moves are shown in order, and both the first row and second column of the matrix become fully painted at arr[2]. */
+console.log(firstCompleteIndex(arr, mat));
