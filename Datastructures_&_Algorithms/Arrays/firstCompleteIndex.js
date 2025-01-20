@@ -26,4 +26,35 @@
  * @param {number[][]} mat
  * @return {number}
  */
-const firstCompleteIndex = function (arr, mat) {};
+const firstCompleteIndex = function (arr, mat) {
+    const m = mat.length;
+    const n = mat[0].length;
+
+    // Map each value in mat to its (row, col) position
+    const valueToPosition = new Map();
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            valueToPosition.set(mat[i][j], [i, j]);
+        }
+    }
+
+    // Initialize row and column counts
+    const rowCounts = Array(m).fill(0);
+    const colCounts = Array(n).fill(0);
+
+    // Iterate through arr and simulate the painting
+    for (let i = 0; i < arr.length; i++) {
+        const [row, col] = valueToPosition.get(arr[i]);
+
+        // Increment row and column counts
+        rowCounts[row]++;
+        colCounts[col]++;
+
+        // Check if the row or column is fully painted
+        if (rowCounts[row] === n || colCounts[col] === m) {
+            return i;
+        }
+    }
+
+    return -1; // This should never happen based on constraints
+};
