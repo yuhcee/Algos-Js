@@ -67,3 +67,13 @@ const arr = [1, 3, 4, 2],
 // Output: 2
 /* Explanation: The moves are shown in order, and both the first row and second column of the matrix become fully painted at arr[2]. */
 console.log(firstCompleteIndex(arr, mat));
+
+const arr1 = [2, 8, 7, 4, 1, 3, 5, 6, 9],
+    mat1 = [
+        [3, 2, 5],
+        [1, 4, 6],
+        [8, 7, 9],
+    ];
+// Output: 3
+// Explanation: The second column becomes fully painted at arr[3].
+console.log(firstCompleteIndex(arr1, mat1));
