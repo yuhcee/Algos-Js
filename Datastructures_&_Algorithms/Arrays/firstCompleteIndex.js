@@ -11,6 +11,17 @@
  * Return *the smallest index `i` at which either a row or a column will be
  * completely painted in `mat`.*
  *
+ * **Constraints:**
+ *
+ * - `m == mat.length`
+ * - `n = mat[i].length`
+ * - `arr.length == m * n`
+ * - `1 <= m, n <= 105`
+ * - `1 <= m * n <= 105`
+ * - `1 <= arr[i], mat[r][c] <= m * n`
+ * - All the integers of `arr` are unique.
+ * - All the integers of `mat` are unique.
+ *
  * @param {number[]} arr
  * @param {number[][]} mat
  * @return {number}
