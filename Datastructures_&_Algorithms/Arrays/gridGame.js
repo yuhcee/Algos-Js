@@ -21,6 +21,13 @@
  * **optimally**, return *the **number of points** collected by the
  * **second** robot.*
  *
+ * **Constraints:**
+ *
+ * - `grid.length == 2`
+ * - `n == grid[r].length`
+ * - `1 <= n <= 5 * 104`
+ * - `1 <= grid[r][c] <= 105`
+ *
  * @param {number[][]} grid
  * @return {number}
  */
