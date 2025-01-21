@@ -68,3 +68,13 @@ const grid = [
 The cells visited by the first robot are set to 0.
 The second robot will collect 0 + 0 + 4 + 0 = 4 points. */
 console.log(gridGame(grid));
+
+const grid1 = [
+    [3, 3, 1],
+    [8, 5, 2],
+];
+// Output: 4
+/* Explanation: The optimal path taken by the first robot is shown in red, and the optimal path taken by the second robot is shown in blue.
+The cells visited by the first robot are set to 0.
+The second robot will collect 0 + 3 + 1 + 0 = 4 points. */
+console.log(gridGame(grid1));
