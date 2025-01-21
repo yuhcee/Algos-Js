@@ -31,4 +31,30 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const gridGame = function (grid) {};
+const gridGame = function (grid) {
+    const n = grid[0].length;
+
+    // Compute suffix sums for the top row
+    const topSum = Array(n).fill(0);
+    topSum[n - 1] = grid[0][n - 1];
+    for (let i = n - 2; i >= 0; i--) {
+        topSum[i] = topSum[i + 1] + grid[0][i];
+    }
+
+    // Compute prefix sums for the bottom row
+    const bottomSum = Array(n).fill(0);
+    bottomSum[0] = grid[1][0];
+    for (let i = 1; i < n; i++) {
+        bottomSum[i] = bottomSum[i - 1] + grid[1][i];
+    }
+
+    // Minimize the maximum points the second robot can collect
+    let result = Infinity;
+    for (let i = 0; i < n; i++) {
+        const above = i + 1 < n ? topSum[i + 1] : 0; // Points remaining in the top row
+        const below = i - 1 >= 0 ? bottomSum[i - 1] : 0; // Points remaining in the bottom row
+        result = Math.min(result, Math.max(above, below));
+    }
+
+    return result;
+};
