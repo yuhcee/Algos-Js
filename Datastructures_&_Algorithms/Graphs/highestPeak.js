@@ -34,4 +34,53 @@
  * @param {number[][]} isWater
  * @return {number[][]}
  */
-const highestPeak = function (isWater) {};
+const highestPeak = function (isWater) {
+    const m = isWater.length;
+    const n = isWater[0].length;
+    let height = Array(m)
+        .fill()
+        .map(() => Array(n).fill(-1));
+    let queue = [];
+
+    // Directions for adjacent cells
+    const directions = [
+        [-1, 0],
+        [1, 0],
+        [0, -1],
+        [0, 1],
+    ];
+
+    // Add all water cells to the queue initially
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (isWater[i][j] === 1) {
+                height[i][j] = 0;
+                queue.push([i, j]);
+            }
+        }
+    }
+
+    // BFS using two arrays for queue to avoid shift() performance issues
+    let currentLevel = queue;
+    let nextLevel = [];
+    let currentHeight = 0;
+
+    while (currentLevel.length > 0) {
+        nextLevel = [];
+        for (let [i, j] of currentLevel) {
+            for (let [di, dj] of directions) {
+                let newI = i + di,
+                    newJ = j + dj;
+                if (newI >= 0 && newI < m && newJ >= 0 && newJ < n && height[newI][newJ] === -1) {
+                    height[newI][newJ] = currentHeight + 1;
+                    nextLevel.push([newI, newJ]);
+                }
+            }
+        }
+        // Swap arrays for the next level
+        currentLevel = nextLevel;
+        currentHeight++;
+    }
+
+    return height;
+};
