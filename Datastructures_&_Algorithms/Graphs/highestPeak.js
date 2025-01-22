@@ -23,6 +23,14 @@
  * cell `(i, j)`'s height. If there are multiple solutions, return **any**
  * of them*.
  *
+ * **Constraints:**
+ *
+ * - `m == isWater.length`
+ * - `n == isWater[i].length`
+ * - `1 <= m, n <= 1000`
+ * - `isWater[i][j]` is `0` or `1`.
+ * - There is at least **one** water cell.
+ *
  * @param {number[][]} isWater
  * @return {number[][]}
  */
