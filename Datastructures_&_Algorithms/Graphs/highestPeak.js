@@ -93,3 +93,13 @@ const isWater = [
 /* Explanation: The image shows the assigned heights of each cell.
 The blue cell is the water cell, and the green cells are the land cells. */
 console.log(highestPeak(isWater));
+
+const isWater1 = [
+    [0, 0, 1],
+    [1, 0, 0],
+    [0, 0, 0],
+];
+// Output: [[1,1,0],[0,1,1],[1,2,2]]
+/* Explanation: A height of 2 is the maximum possible height of any assignment.
+Any height assignment that has a maximum height of 2 while still meeting the rules will also be accepted. */
+console.log(highestPeak(isWater1));
