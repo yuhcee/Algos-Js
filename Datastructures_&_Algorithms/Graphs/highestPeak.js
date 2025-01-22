@@ -84,3 +84,12 @@ const highestPeak = function (isWater) {
 
     return height;
 };
+
+const isWater = [
+    [0, 1],
+    [0, 0],
+];
+// Output: [[1,0],[2,1]]
+/* Explanation: The image shows the assigned heights of each cell.
+The blue cell is the water cell, and the green cells are the land cells. */
+console.log(highestPeak(isWater));
