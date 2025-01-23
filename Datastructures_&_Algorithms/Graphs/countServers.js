@@ -19,4 +19,31 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const countServers = function (grid) {};
+const countServers = function (grid) {
+    let rows = grid.length;
+    let cols = grid[0].length;
+    let rowCount = new Array(rows).fill(0);
+    let colCount = new Array(cols).fill(0);
+    let count = 0;
+
+    // Count servers in rows and columns
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            if (grid[i][j] === 1) {
+                rowCount[i]++;
+                colCount[j]++;
+            }
+        }
+    }
+
+    // Count valid servers
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            if (grid[i][j] === 1 && (rowCount[i] > 1 || colCount[j] > 1)) {
+                count++;
+            }
+        }
+    }
+
+    return count;
+};
