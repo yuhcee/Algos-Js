@@ -55,3 +55,11 @@ const grid = [
 // Output: 0
 // Explanation: No servers can communicate with others.
 console.log(countServers(grid));
+
+const grid1 = [
+    [1, 0],
+    [1, 1],
+];
+// Output: 3
+// Explanation: All three servers can communicate with at least one other server.
+console.log(countServers(grid1));
