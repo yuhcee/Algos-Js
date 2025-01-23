@@ -47,3 +47,11 @@ const countServers = function (grid) {
 
     return count;
 };
+
+const grid = [
+    [1, 0],
+    [0, 1],
+];
+// Output: 0
+// Explanation: No servers can communicate with others.
+console.log(countServers(grid));
