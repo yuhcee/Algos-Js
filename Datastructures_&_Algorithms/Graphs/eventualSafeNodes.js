@@ -26,4 +26,44 @@
  * @param {number[][]} graph
  * @return {number[]}
  */
-const eventualSafeNodes = function (graph) {};
+const eventualSafeNodes = function (graph) {
+    const n = graph.length;
+    const reverseGraph = Array.from({ length: n }, () => []);
+    const inDegree = new Array(n).fill(0);
+
+    // Step 1: Build the reverse graph and calculate in-degrees
+    for (let u = 0; u < n; u++) {
+        for (const v of graph[u]) {
+            reverseGraph[v].push(u); // Reverse edge: v -> u
+            inDegree[u]++; // Increment in-degree for u
+        }
+    }
+
+    // Step 2: Initialize queue with all terminal nodes (in-degree 0 nodes)
+    const queue = [];
+    for (let i = 0; i < n; i++) {
+        if (inDegree[i] === 0) queue.push(i);
+    }
+
+    // Step 3: Perform BFS
+    const safeNodes = new Array(n).fill(false);
+    while (queue.length > 0) {
+        const node = queue.shift();
+        safeNodes[node] = true; // Mark as safe
+
+        for (const neighbor of reverseGraph[node]) {
+            inDegree[neighbor]--;
+            if (inDegree[neighbor] === 0) {
+                queue.push(neighbor);
+            }
+        }
+    }
+
+    // Step 4: Collect and sort safe nodes
+    const result = [];
+    for (let i = 0; i < n; i++) {
+        if (safeNodes[i]) result.push(i);
+    }
+
+    return result;
+};
