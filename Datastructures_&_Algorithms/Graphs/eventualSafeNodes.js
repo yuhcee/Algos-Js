@@ -67,3 +67,10 @@ const eventualSafeNodes = function (graph) {
 
     return result;
 };
+const graph = [[1, 2], [2, 3], [5], [0], [5], [], []];
+// Output: [2,4,5,6]
+/* Explanation: The given graph is shown above.
+Nodes 5 and 6 are terminal nodes as there are no outgoing edges from either of them.
+Every path starting at nodes 2, 4, 5, and 6 all lead to either node 5 or 6.
+ */
+console.log(eventualSafeNodes(graph));
