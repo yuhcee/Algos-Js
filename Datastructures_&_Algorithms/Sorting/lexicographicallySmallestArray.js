@@ -16,6 +16,12 @@
  * [2,10,3]` is lexicographically smaller than the array `[10,2,3]` because
  * they differ at index `0` and `2 < 10`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 109`-
+ * - `1 <= limit <= 109`
+ *
  * @param {number[]} nums
  * @param {number} limit
  * @return {number[]}
