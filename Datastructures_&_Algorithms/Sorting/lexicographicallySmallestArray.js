@@ -64,3 +64,13 @@ const nums = [1, 5, 3, 9, 8],
 We cannot obtain a lexicographically smaller array by applying any more operations.
 Note that it may be possible to get the same result by doing different operations. */
 console.log(lexicographicallySmallestArray(nums, limit));
+
+const nums1 = [1, 7, 6, 18, 2, 1],
+    limit1 = 3;
+// Output: [1,6,7,18,1,2]
+/* Explanation: Apply the operation 3 times:
+- Swap nums[1] with nums[2]. The array becomes [1,6,7,18,2,1]
+- Swap nums[0] with nums[4]. The array becomes [2,6,7,18,1,1]
+- Swap nums[0] with nums[5]. The array becomes [1,6,7,18,1,2]
+We cannot obtain a lexicographically smaller array by applying any more operations. */
+console.log(lexicographicallySmallestArray(nums1, limit1));
