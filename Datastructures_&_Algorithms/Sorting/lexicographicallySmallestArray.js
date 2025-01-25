@@ -74,3 +74,9 @@ const nums1 = [1, 7, 6, 18, 2, 1],
 - Swap nums[0] with nums[5]. The array becomes [1,6,7,18,1,2]
 We cannot obtain a lexicographically smaller array by applying any more operations. */
 console.log(lexicographicallySmallestArray(nums1, limit1));
+
+const nums2 = [1, 7, 28, 19, 10],
+    limit2 = 3;
+// Output: [1,7,28,19,10]
+/* Explanation: [1,7,28,19,10] is the lexicographically smallest array we can obtain because we cannot apply the operation on any two indices. */
+console.log(lexicographicallySmallestArray(nums2, limit2));
