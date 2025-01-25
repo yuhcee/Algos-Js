@@ -26,4 +26,31 @@
  * @param {number} limit
  * @return {number[]}
  */
-const lexicographicallySmallestArray = function (nums, limit) {};
+const lexicographicallySmallestArray = function (nums, limit) {
+    const n = nums.length;
+    const indexedNums = nums.map((num, index) => [num, index]);
+    indexedNums.sort((a, b) => a[0] - b[0]); // Sort by value
+
+    const result = new Array(n).fill(0);
+    let start = 0;
+
+    while (start < n) {
+        let end = start + 1;
+        while (end < n && indexedNums[end][0] - indexedNums[end - 1][0] <= limit) {
+            end++;
+        }
+
+        // Sort indices within this segment
+        const segmentIndices = indexedNums.slice(start, end).map((item) => item[1]);
+        segmentIndices.sort((a, b) => a - b);
+
+        // Place numbers in result array based on sorted indices
+        for (let i = 0; i < segmentIndices.length; i++) {
+            result[segmentIndices[i]] = indexedNums[start + i][0];
+        }
+
+        start = end; // Move to the next segment
+    }
+
+    return result;
+};
