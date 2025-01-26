@@ -98,3 +98,12 @@ The seating arrangement will be the same as that in the figure given in example 
 - Employee 2 will sit between employees 1 and 0.
 The maximum number of employees that can be invited to the meeting is 3. */
 console.log(maximumInvitations(favorite1));
+
+const favorite2 = [3, 0, 1, 4, 1];
+// Output: 4
+/* Explanation:
+The above figure shows how the company will invite employees 0, 1, 3, and 4, and seat them at the round table.
+Employee 2 cannot be invited because the two spots next to their favorite employee 1 are taken.
+So the company leaves them out of the meeting.
+The maximum number of employees that can be invited to the meeting is 4. */
+console.log(maximumInvitations(favorite2));
