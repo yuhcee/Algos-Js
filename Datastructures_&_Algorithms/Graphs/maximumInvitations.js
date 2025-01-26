@@ -14,6 +14,13 @@
  * denotes the favorite person of the `ith` employee, return the **maximum
  * number of employees** that can be invited to the meeting.
  *
+ * **Constraints:**
+ *
+ * - `n == favorite.length`
+ * - `2 <= n <= 105`
+ * - `0 <= favorite[i] <= n - 1`
+ * - `favorite[i] != i`
+ *
  * @param {number[]} favorite
  * @return {number}
  */
