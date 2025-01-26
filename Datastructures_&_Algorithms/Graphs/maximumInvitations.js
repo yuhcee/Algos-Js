@@ -87,3 +87,14 @@ All employees cannot be invited because employee 2 cannot sit beside employees 0
 Note that the company can also invite employees 1, 2, and 3, and give them their desired seats.
 The maximum number of employees that can be invited to the meeting is 3. */
 console.log(maximumInvitations(favorite));
+
+const favorite1 = [1, 2, 0];
+// Output: 3
+/* Explanation: 
+Each employee is the favorite person of at least one other employee, and the only way the company can invite them is if they invite every employee.
+The seating arrangement will be the same as that in the figure given in example 1:
+- Employee 0 will sit between employees 2 and 1.
+- Employee 1 will sit between employees 0 and 2.
+- Employee 2 will sit between employees 1 and 0.
+The maximum number of employees that can be invited to the meeting is 3. */
+console.log(maximumInvitations(favorite1));
