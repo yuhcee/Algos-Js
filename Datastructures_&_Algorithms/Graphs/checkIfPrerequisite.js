@@ -89,3 +89,16 @@ const numCourses1 = 2,
 // Output: [false,false]
 // Explanation: There are no prerequisites, and each course is independent.
 console.log(checkIfPrerequisite(numCourses1, prerequisites1, queries1));
+
+const numCourses2 = 3,
+    prerequisites2 = [
+        [1, 2],
+        [1, 0],
+        [2, 0],
+    ],
+    queries2 = [
+        [1, 0],
+        [1, 2],
+    ];
+// Output: [true,true]
+console.log(checkIfPrerequisite(numCourses2, prerequisites2, queries2));
