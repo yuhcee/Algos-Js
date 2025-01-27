@@ -37,4 +37,34 @@
  * @param {number[][]} queries
  * @return {boolean[]}
  */
-const checkIfPrerequisite = function (numCourses, prerequisites, queries) {};
+const checkIfPrerequisite = function (numCourses, prerequisites, queries) {
+    // Build adjacency list
+    const adj = new Array(numCourses).fill().map(() => []);
+    for (const [a, b] of prerequisites) {
+        adj[a].push(b);
+    }
+
+    // Precompute reachable matrix using BFS for each node
+    const reachable = new Array(numCourses).fill().map(() => new Array(numCourses).fill(false));
+
+    for (let u = 0; u < numCourses; u++) {
+        const queue = [u];
+        const visited = new Array(numCourses).fill(false);
+        visited[u] = true;
+        reachable[u][u] = true;
+
+        while (queue.length > 0) {
+            const current = queue.shift();
+            for (const neighbor of adj[current]) {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    reachable[u][neighbor] = true;
+                    queue.push(neighbor);
+                }
+            }
+        }
+    }
+
+    // Process queries
+    return queries.map(([u, v]) => reachable[u][v]);
+};
