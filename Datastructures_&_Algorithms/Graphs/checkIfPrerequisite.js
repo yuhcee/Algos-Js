@@ -79,3 +79,13 @@ const numCourses = 2,
 /* Explanation: The pair [1, 0] indicates that you have to take course 1 before you can take course 0.
 Course 0 is not a prerequisite of course 1, but the opposite is true. */
 console.log(checkIfPrerequisite(numCourses, prerequisites, queries));
+
+const numCourses1 = 2,
+    prerequisites1 = [],
+    queries1 = [
+        [1, 0],
+        [0, 1],
+    ];
+// Output: [false,false]
+// Explanation: There are no prerequisites, and each course is independent.
+console.log(checkIfPrerequisite(numCourses1, prerequisites1, queries1));
