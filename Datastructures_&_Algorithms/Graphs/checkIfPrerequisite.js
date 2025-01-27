@@ -19,6 +19,19 @@
  * Return *a boolean array `answer`, where `answer[j]` is the answer to the
  * `jth` query*.
  *
+ * **Constraints:**
+ *
+ * - `2 <= numCourses <= 100`
+ * - `0 <= prerequisites.length <= (numCourses * (numCourses - 1) / 2)`
+ * - `prerequisites[i].length == 2`
+ * - `0 <= ai, bi <= numCourses - 1`
+ * - `ai != bi`
+ * - All the pairs `[ai, bi]` are unique.
+ * - The prerequisites graph has no cycles.
+ * - `1 <= queries.length <= 104`
+ * - `0 <= ui, vi <= numCourses - 1`
+ * - `ui != vi`
+ *
  * @param {number} numCourses
  * @param {number[][]} prerequisites
  * @param {number[][]} queries
