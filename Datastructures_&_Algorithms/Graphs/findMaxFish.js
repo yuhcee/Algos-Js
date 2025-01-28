@@ -79,3 +79,13 @@ const grid = [
 // Output: 7
 // Explanation: The fisher can start at cell (1,3) and collect 3 fish, then move to cell (2,3) and collect 4 fish.
 console.log(findMaxFish(grid));
+
+const grid1 = [
+    [1, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 1],
+];
+// Output: 1
+// Explanation: The fisher can start at cells (0,0) or (3,3) and collect a single fish.
+console.log(findMaxFish(grid1));
