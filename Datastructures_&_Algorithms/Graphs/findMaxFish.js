@@ -29,4 +29,43 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const findMaxFish = function (grid) {};
+const findMaxFish = function (grid) {
+    const m = grid.length;
+    const n = grid[0].length;
+    let maxFish = 0;
+
+    // Directions for adjacent cells
+    const directions = [
+        [-1, 0],
+        [1, 0],
+        [0, -1],
+        [0, 1],
+    ];
+
+    // Helper function for DFS
+    function dfs(i, j) {
+        if (i < 0 || j < 0 || i >= m || j >= n || grid[i][j] === 0) return 0;
+
+        let fishCount = grid[i][j];
+        grid[i][j] = 0; // Mark as visited to avoid counting twice
+
+        for (let [di, dj] of directions) {
+            let newI = i + di;
+            let newJ = j + dj;
+            fishCount += dfs(newI, newJ);
+        }
+
+        return fishCount;
+    }
+
+    // Traverse grid to find maximum fish catch from any starting point
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (grid[i][j] > 0) {
+                maxFish = Math.max(maxFish, dfs(i, j));
+            }
+        }
+    }
+
+    return maxFish;
+};
