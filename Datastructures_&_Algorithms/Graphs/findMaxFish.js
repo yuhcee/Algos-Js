@@ -18,7 +18,14 @@
  *
  * An **adjacent** cell of the cell `(r, c)`, is one of the cells `(r, c +
  * 1)`, `(r, c - 1)`, `(r + 1, c)` or `(r - 1, c)` if it exists.
- * 
+ *
+ * **Constraints:**
+ *
+ * - `m == grid.length`
+ * - `n == grid[i].length`
+ * - `1 <= m, n <= 10`
+ * - `0 <= grid[i][j] <= 10`
+ *
  * @param {number[][]} grid
  * @return {number}
  */
