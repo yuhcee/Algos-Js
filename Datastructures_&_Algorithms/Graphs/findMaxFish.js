@@ -89,3 +89,13 @@ const grid1 = [
 // Output: 1
 // Explanation: The fisher can start at cells (0,0) or (3,3) and collect a single fish.
 console.log(findMaxFish(grid1));
+
+const grid2 = [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+];
+// Output: 0
+// Explanation: There are no water cells in the grid.
+console.log(findMaxFish(grid2));
