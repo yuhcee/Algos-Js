@@ -79,3 +79,13 @@ const edges = [
 ];
 // Output: [2,3]
 console.log(findRedundantConnection(edges));
+
+const edges1 = [
+    [1, 2],
+    [2, 3],
+    [3, 4],
+    [1, 4],
+    [1, 5],
+];
+// Output: [1,4]
+console.log(findRedundantConnection(edges1));
