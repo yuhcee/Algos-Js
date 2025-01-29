@@ -28,4 +28,46 @@
  * @param {number[][]} edges
  * @return {number[]}
  */
-const findRedundantConnection = function (edges) {};
+const findRedundantConnection = function (edges) {
+    // Helper function to find the parent of a node with path compression
+    function find(parent, i) {
+        if (parent[i] !== i) {
+            parent[i] = find(parent, parent[i]); // Path compression
+        }
+        return parent[i];
+    }
+
+    // Union function to connect two sets
+    function union(parent, rank, x, y) {
+        let xroot = find(parent, x);
+        let yroot = find(parent, y);
+
+        // Attach smaller rank tree under root of high rank tree
+        if (rank[xroot] < rank[yroot]) {
+            parent[xroot] = yroot;
+        } else if (rank[xroot] > rank[yroot]) {
+            parent[yroot] = xroot;
+        } else {
+            parent[yroot] = xroot;
+            rank[xroot]++;
+        }
+    }
+
+    let n = edges.length;
+    let parent = Array(n + 1)
+        .fill(0)
+        .map((_, i) => i);
+    let rank = Array(n + 1).fill(0);
+
+    for (let [u, v] of edges) {
+        // If the roots of u and v are the same, there's a cycle; this edge is redundant
+        if (find(parent, u) === find(parent, v)) {
+            return [u, v];
+        }
+        // Union the sets containing u and v
+        union(parent, rank, u, v);
+    }
+
+    // This line should not be reached if the input is valid, but included for completeness
+    return [];
+};
