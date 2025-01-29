@@ -15,6 +15,16 @@
  * tree of `n` nodes*. If there are multiple answers, return the answer
  * that occurs last in the input.
  *
+ * **Constraints:**
+ *
+ * - `n == edges.length`
+ * - `3 <= n <= 1000`
+ * - `edges[i].length == 2`
+ * - `1 <= ai < bi <= edges.length`
+ * - `ai != bi`
+ * - There are no repeated edges.
+ * - The given graph is connected.
+ *
  * @param {number[][]} edges
  * @return {number[]}
  */
