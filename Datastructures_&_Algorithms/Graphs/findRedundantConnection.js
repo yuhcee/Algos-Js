@@ -71,3 +71,11 @@ const findRedundantConnection = function (edges) {
     // This line should not be reached if the input is valid, but included for completeness
     return [];
 };
+
+const edges = [
+    [1, 2],
+    [1, 3],
+    [2, 3],
+];
+// Output: [2,3]
+console.log(findRedundantConnection(edges));
