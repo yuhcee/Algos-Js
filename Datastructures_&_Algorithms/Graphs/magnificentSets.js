@@ -143,3 +143,14 @@ const n = 6,
 We can see that every edge is satisfied.
 It can be shown that that if we create a fifth group and move any node from the third or fourth group to it, at least on of the edges will not be satisfied. */
 console.log(magnificentSets(n, edges));
+
+const n1 = 3,
+    edges1 = [
+        [1, 2],
+        [2, 3],
+        [3, 1],
+    ];
+// Output: -1
+/* Explanation: If we add node 1 to the first group, node 2 to the second group, and node 3 to the third group to satisfy the first two edges, we can see that the third edge will not be satisfied.
+It can be shown that no grouping is possible. */
+console.log(magnificentSets(n1, edges1));
