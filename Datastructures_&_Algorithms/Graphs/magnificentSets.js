@@ -19,6 +19,15 @@
  * can divide the nodes. Return `-1` if it is impossible to group the nodes
  * with the given conditions.*
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 500`
+ * - `1 <= edges.length <= 104`
+ * - `edges[i].length == 2`
+ * - `1 <= ai, bi <= n`
+ * - `ai != bi`
+ * - There is at most one edge between any pair of vertices.
+ *
  * @param {number} n
  * @param {number[][]} edges
  * @return {number}
