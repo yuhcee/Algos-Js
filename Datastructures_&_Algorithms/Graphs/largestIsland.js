@@ -86,3 +86,11 @@ const grid = [
 // Output: 3
 // Explanation: Change one 0 to 1 and connect two 1s, then we get an island with area = 3.
 console.log(largestIsland(grid));
+
+const grid1 = [
+    [1, 1],
+    [1, 0],
+];
+// Output: 4
+// Explanation: Change the 0 to 1 and make the island bigger, only one island with area = 4.
+console.log(largestIsland(grid1));
