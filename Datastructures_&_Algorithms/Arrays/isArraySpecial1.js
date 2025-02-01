@@ -26,3 +26,8 @@ const isArraySpecial = function (nums) {
 
     return true;
 };
+const nums = [1];
+/* Output: true
+Explanation:
+There is only one element. So the answer is true. */
+console.log(isArraySpecial(nums));
