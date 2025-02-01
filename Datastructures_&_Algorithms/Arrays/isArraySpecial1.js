@@ -36,3 +36,10 @@ const nums1 = [2, 1, 4];
 /* Output: true
 Explanation:
 There is only two pairs: (2,1) and (1,4), and both of them contain numbers with different parity. So the answer is true. */
+console.log(isArraySpecial(nums1));
+
+const nums2 = [4,3,1,6]
+/* Output: false
+Explanation:
+nums[1] and nums[2] are both odd. So the answer is false. */
+console.log(isArraySpecial(nums2));
