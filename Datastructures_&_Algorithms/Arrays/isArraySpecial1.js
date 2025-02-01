@@ -7,6 +7,11 @@
  * You are given an array of integers `nums`. Return `true` if `nums` is a
  * **special** array, otherwise, return `false`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 100`
+ * - `1 <= nums[i] <= 100`
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
