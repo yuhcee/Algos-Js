@@ -42,3 +42,9 @@ const nums1 = [2, 1, 3, 4];
 // Output: false
 // Explanation: There is no sorted array once rotated that can make nums.
 console.log(check(nums1));
+
+const nums2 = [1, 2, 3];
+/* Output: true
+Explanation: [1,2,3] is the original sorted array.
+You can rotate the array by x = 0 positions (i.e. no rotation) to make nums. */
+console.log(check(nums2));
