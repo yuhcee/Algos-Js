@@ -31,3 +31,9 @@ const check = function (nums) {
 
     return count <= 1;
 };
+
+const nums = [3, 4, 5, 1, 2];
+/* Output: true
+Explanation: [1,2,3,4,5] is the original sorted array.
+You can rotate the array by x = 3 positions to begin on the the element of value 3: [3,4,5,1,2]. */
+console.log(check(nums));
