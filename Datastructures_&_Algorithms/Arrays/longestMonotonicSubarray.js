@@ -50,3 +50,11 @@ The strictly increasing subarrays of nums are [3], [3], [3], and [3].
 The strictly decreasing subarrays of nums are [3], [3], [3], and [3].
 Hence, we return 1. */
 console.log(longestMonotonicSubarray(nums1));
+
+const nums2 = [3, 2, 1];
+/* Output: 3
+Explanation:
+The strictly increasing subarrays of nums are [3], [2], and [1].
+The strictly decreasing subarrays of nums are [3], [2], [1], [3,2], [2,1], and [3,2,1].
+Hence, we return 3. */
+console.log(longestMonotonicSubarray(nums2));
