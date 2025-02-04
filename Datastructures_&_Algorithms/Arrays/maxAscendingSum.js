@@ -42,3 +42,8 @@ const nums1 = [10, 20, 30, 40, 50];
 // Output: 150
 // Explanation: [10,20,30,40,50] is the ascending subarray with the maximum sum of 150.
 console.log(maxAscendingSum(nums1));
+
+const nums2 = [12, 17, 15, 13, 10, 11, 12];
+// Output: 33
+// Explanation: [10,11,12] is the ascending subarray with the maximum sum of 33.
+console.log(maxAscendingSum(nums2));
