@@ -33,3 +33,7 @@ const maxAscendingSum = function (nums) {
 
     return maxSum;
 };
+const nums = [10, 20, 30, 5, 10, 50];
+// Output: 65
+// Explanation: [5,10,50] is the ascending subarray with the maximum sum of 65.
+console.log(maxAscendingSum(nums));
