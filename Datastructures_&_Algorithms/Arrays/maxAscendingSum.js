@@ -10,6 +10,11 @@
  * for all i where l <= i < r, numsi  < numsi+1. Note that a subarray of
  * size 1 is **ascending**.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 100`
+ * - `1 <= nums[i] <= 100`
+ *
  * @param {number[]} nums
  * @return {number}
  */
