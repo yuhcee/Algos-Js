@@ -18,4 +18,18 @@
  * @param {number[]} nums
  * @return {number}
  */
-const maxAscendingSum = function (nums) {};
+const maxAscendingSum = function (nums) {
+    let maxSum = nums[0]; // Store maximum sum found
+    let currentSum = nums[0]; // Track current ascending sum
+
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] > nums[i - 1]) {
+            currentSum += nums[i]; // Continue ascending subarray
+        } else {
+            currentSum = nums[i]; // Start a new subarray
+        }
+        maxSum = Math.max(maxSum, currentSum);
+    }
+
+    return maxSum;
+};
