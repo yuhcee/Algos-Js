@@ -9,6 +9,12 @@
  * **at most one string swap** on **exactly one** of the strings.
  * Otherwise, return `false`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s1.length, s2.length <= 100`
+ * - `s1.length == s2.length`
+ * - `s1` and `s2` consist of only lowercase English letters.
+ *
  * @param {string} s1
  * @param {string} s2
  * @return {boolean}
