@@ -41,3 +41,9 @@ const s1 = 'bank',
 // Output: true
 // Explanation: For example, swap the first character with the last character of s2 to make "bank".
 console.log(areAlmostEqual(s1, s2));
+
+const s11 = 'attack',
+    s21 = 'defend';
+// Output: false
+// Explanation: It is impossible to make them equal with one string swap.
+console.log(areAlmostEqual(s11, s21));
