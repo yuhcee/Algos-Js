@@ -35,3 +35,9 @@ const areAlmostEqual = function (s1, s2) {
     // If exactly 2 differences, check if swapping makes them equal
     return diff.length === 2 && s1[diff[0]] === s2[diff[1]] && s1[diff[1]] === s2[diff[0]];
 };
+
+const s1 = 'bank',
+    s2 = 'kanb';
+// Output: true
+// Explanation: For example, swap the first character with the last character of s2 to make "bank".
+console.log(areAlmostEqual(s1, s2));
