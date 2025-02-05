@@ -47,3 +47,9 @@ const s11 = 'attack',
 // Output: false
 // Explanation: It is impossible to make them equal with one string swap.
 console.log(areAlmostEqual(s11, s21));
+
+const s12 = 'kelb',
+    s22 = 'kelb';
+// Output: true
+// Explanation: The two strings are already equal, so no string swap operation is required.
+console.log(areAlmostEqual(s12, s22));
