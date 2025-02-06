@@ -14,4 +14,25 @@
  * @param {number[]} nums
  * @return {number}
  */
-const tupleSameProduct = function (nums) {};
+const tupleSameProduct = function (nums) {
+    let productCount = new Map();
+    let n = nums.length;
+    let result = 0;
+
+    // Store product pairs
+    for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+            let product = nums[i] * nums[j];
+            productCount.set(product, (productCount.get(product) || 0) + 1);
+        }
+    }
+
+    // Calculate valid tuples
+    for (let count of productCount.values()) {
+        if (count > 1) {
+            result += ((count * (count - 1)) / 2) * 8; // 8 permutations per valid tuple
+        }
+    }
+
+    return result;
+};
