@@ -52,3 +52,18 @@ const queryResults = function (limit, queries) {
 
     return result;
 };
+
+const limit = 4,
+    queries = [
+        [1, 4],
+        [2, 5],
+        [1, 3],
+        [3, 4],
+    ];
+// Output: [1,2,2,3]
+/* Explanation:
+After query 0, ball 1 has color 4.
+After query 1, ball 1 has color 4, and ball 2 has color 5.
+After query 2, ball 1 has color 3, and ball 2 has color 5.
+After query 3, ball 1 has color 3, ball 2 has color 5, and ball 3 has color 4. */
+const result = queryResults(limit, queries);
