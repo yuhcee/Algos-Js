@@ -28,4 +28,27 @@
  * @param {number[][]} queries
  * @return {number[]}
  */
-const queryResults = function (limit, queries) {};
+const queryResults = function (limit, queries) {
+    let ballColors = new Map();
+    let colorCount = new Map();
+    let distinctColors = new Set();
+    let result = [];
+
+    for (let [ball, color] of queries) {
+        if (ballColors.has(ball)) {
+            let oldColor = ballColors.get(ball);
+            colorCount.set(oldColor, colorCount.get(oldColor) - 1);
+            if (colorCount.get(oldColor) === 0) {
+                distinctColors.delete(oldColor);
+            }
+        }
+
+        ballColors.set(ball, color);
+        colorCount.set(color, (colorCount.get(color) || 0) + 1);
+        distinctColors.add(color);
+
+        result.push(distinctColors.size);
+    }
+
+    return result;
+};
