@@ -16,6 +16,14 @@
  * **Note** that when answering a query, lack of a color will not be
  * considered as a color.
  *
+ * **Constraints:**
+ *
+ * - `1 <= limit <= 109`
+ * - `1 <= n == queries.length <= 105`
+ * - `queries[i].length == 2`
+ * - `0 <= queries[i][0] <= limit`
+ * - `1 <= queries[i][1] <= 109`
+ *
  * @param {number} limit
  * @param {number[][]} queries
  * @return {number[]}
