@@ -15,8 +15,12 @@
  * - `int find(int number)` Returns the smallest index for the given
  * `number`, or `-1` if there is no index that is filled by number in the
  * system.
+ *
+ * **Constraints:**
+ *
+ * - `1 <= index, number <= 10^9`
+ * - At most `10^5` calls will be made **in total** to `change` and `find`.
  */
-
 const NumberContainers = function () {
     this.indexToNumber = new Map(); // Maps index to number
     this.numberToIndices = new Map(); // Maps number to a sorted list of indices
