@@ -60,3 +60,17 @@ NumberContainers.prototype.change = function (index, number) {
     }
     newIndices.splice(insertPos, 0, index);
 };
+
+/**
+ * @param {number} number
+ * @return {number}
+ */
+NumberContainers.prototype.find = function (number) {
+    if (this.numberToIndices.has(number)) {
+        const indices = this.numberToIndices.get(number);
+        if (indices.length > 0) {
+            return indices[0];
+        }
+    }
+    return -1;
+};
