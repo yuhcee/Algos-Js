@@ -48,3 +48,8 @@ The pair (1, 2) is a bad pair since 2 - 1 != 3 - 1, 1 != 2.
 The pair (2, 3) is a bad pair since 3 - 2 != 3 - 3, 1 != 0.
 There are a total of 5 bad pairs, so we return 5. */
 console.log(countBadPairs(nums));
+
+const nums1 = [1, 2, 3, 4, 5];
+// Output: 0
+// Explanation: There are no bad pairs.
+console.log(countBadPairs(nums1));
