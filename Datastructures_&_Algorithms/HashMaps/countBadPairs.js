@@ -14,4 +14,27 @@
  * @param {number[]} nums
  * @return {number}
  */
-const countBadPairs = function (nums) {};
+const countBadPairs = function (nums) {
+    const n = nums.length;
+    const transformed = nums.map((num, i) => num - i); // Transform the array
+    const freq = new Map(); // To store frequency of each transformed value
+
+    // Count frequency of each transformed value
+    for (const val of transformed) {
+        freq.set(val, (freq.get(val) || 0) + 1);
+    }
+
+    // Calculate total number of good pairs
+    let goodPairs = 0;
+    for (const count of freq.values()) {
+        if (count >= 2) {
+            goodPairs += (count * (count - 1)) / 2;
+        }
+    }
+
+    // Total pairs is n * (n - 1) / 2
+    const totalPairs = (n * (n - 1)) / 2;
+
+    // Bad pairs = total pairs - good pairs
+    return totalPairs - goodPairs;
+};
