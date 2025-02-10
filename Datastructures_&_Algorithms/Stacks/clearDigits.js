@@ -9,6 +9,12 @@
  * *left*.
  * Return *the resulting string after removing all digits*.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 100`
+ * - `s` consists only of lowercase English letters and digits.
+ * - The input is generated such that it is possible to delete all digits.
+ *
  * @param {string} s
  * @return {string}
  */
