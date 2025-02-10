@@ -46,3 +46,7 @@ const s1 = 'cb34';
 First, we apply the operation on s[2], and s becomes "c4".
 Then we apply the operation on s[1], and s becomes "". */
 console.log(clearDigits(s1));
+
+const s2 = 'a1b2c3d4e';
+// Output: "e"
+console.log(clearDigits(s2));
