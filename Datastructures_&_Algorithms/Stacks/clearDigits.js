@@ -35,4 +35,7 @@ const clearDigits = function (s) {
     return stack.join('');
 };
 
-
+const s = 'abc';
+// Output: "abc"
+// Explanation:There is no digit in the string.
+console.log(clearDigits(s));
