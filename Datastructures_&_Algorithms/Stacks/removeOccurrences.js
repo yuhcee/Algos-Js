@@ -39,3 +39,14 @@ const s = 'daabcbaabcbc',
 - s = "dababc", remove "abc" starting at index 3, so s = "dab".
 Now s has no occurrences of "abc". */
 console.log(removeOccurrences(s, part));
+
+const s1 = 'axxxxyyyyb',
+    part1 = 'xy';
+// Output: "ab"
+/* Explanation: The following operations are done:
+- s = "axxxxyyyyb", remove "xy" starting at index 4 so s = "axxxyyyb".
+- s = "axxxyyyb", remove "xy" starting at index 3 so s = "axxyyb".
+- s = "axxyyb", remove "xy" starting at index 2 so s = "axyb".
+- s = "axyb", remove "xy" starting at index 1 so s = "ab".
+Now s has no occurrences of "xy". */
+console.log(removeOccurrences(s1, part1));
