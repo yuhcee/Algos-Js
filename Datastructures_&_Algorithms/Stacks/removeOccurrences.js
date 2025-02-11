@@ -21,4 +21,11 @@
  * @param {string} part
  * @return {string}
  */
-const removeOccurrences = function (s, part) {};
+const removeOccurrences = function (s, part) {
+    const partLen = part.length;
+    while (s.includes(part)) {
+        const index = s.indexOf(part);
+        s = s.slice(0, index) + s.slice(index + partLen);
+    }
+    return s;
+};
