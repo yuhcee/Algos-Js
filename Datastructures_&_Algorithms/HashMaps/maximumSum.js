@@ -9,6 +9,11 @@
  * Return the **maximum** value of `nums[i] + nums[j]` that you can obtain
  * over all possible indices `i` and `j` that satisfy the conditions.*
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 109`
+ *
  * @param {number[]} nums
  * @return {number}
  */
