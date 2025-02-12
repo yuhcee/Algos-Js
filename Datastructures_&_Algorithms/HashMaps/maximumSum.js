@@ -58,3 +58,8 @@ const nums = [18, 43, 36, 13, 7];
 - (1, 4), both numbers have a sum of digits equal to 7, and their sum is 43 + 7 = 50.
 So the maximum sum that we can obtain is 54. */
 console.log(maximumSum(nums));
+
+const nums1 = [10, 12, 19, 14];
+// Output: -1
+// Explanation: There are no two numbers that satisfy the conditions, so we return -1.
+console.log(maximumSum(nums1));
