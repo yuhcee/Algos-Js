@@ -15,6 +15,15 @@
  * Return the **minimum** number of operations needed so that all elements
  * of the array are greater than or equal to `k`.
  *
+ * **Constraints:**
+ *
+ * - `2 <= nums.length <= 2 * 105`
+ * - `1 <= nums[i] <= 109`
+ * - `1 <= k <= 109`
+ * - The input is generated such that an answer always exists. That is,
+ * there exists some sequence of operations after which all elements of the
+ * array are greater than or equal to `k`.
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
