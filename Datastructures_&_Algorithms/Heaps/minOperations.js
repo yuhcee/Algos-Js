@@ -122,3 +122,15 @@ In the second operation, we remove elements 3 and 4, then add 3 * 2 + 4 to nums.
 At this stage, all the elements of nums are greater than or equal to 10 so we can stop. 
 It can be shown that 2 is the minimum number of operations needed so that all elements of the array are greater than or equal to 10. */
 console.log(minOperations(nums, k));
+
+const nums1 = [1, 1, 2, 4, 9],
+    k1 = 20;
+// Output: 4
+/* Explanation:
+After one operation, nums becomes equal to [2, 4, 9, 3]. 
+After two operations, nums becomes equal to [7, 4, 9]. 
+After three operations, nums becomes equal to [15, 9]. 
+After four operations, nums becomes equal to [33].
+At this stage, all the elements of nums are greater than 20 so we can stop. 
+It can be shown that 4 is the minimum number of operations needed so that all elements of the array are greater than or equal to 20. */
+console.log(minOperations(nums1, k1));
