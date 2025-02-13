@@ -28,4 +28,30 @@
  * @param {number} k
  * @return {number}
  */
-const minOperations = function (nums, k) {};
+const minOperations = function (nums, k) {
+    // Use a min-heap to efficiently find and remove the smallest elements
+    const heap = new MinHeap();
+    for (const num of nums) {
+        heap.insert(num);
+    }
+
+    let operations = 0;
+
+    // Perform operations until all elements are >= k
+    while (heap.size() > 1 && heap.peek() < k) {
+        const x = heap.extractMin();
+        const y = heap.extractMin();
+        const newElement = Math.min(x, y) * 2 + Math.max(x, y);
+        heap.insert(newElement);
+        operations++;
+    }
+
+    // If the last element is still less than k, we need one more operation
+    if (heap.size() === 1 && heap.peek() < k) {
+        operations++;
+    }
+
+    return operations;
+};
+
+
