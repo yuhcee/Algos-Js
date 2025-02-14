@@ -1,4 +1,6 @@
-var ProductOfNumbers = function () {};
+var ProductOfNumbers = function () {
+    this.prefixProducts = [1]; // Initialize with 1 to handle the first product calculation
+};
 
 /**
  * **1352. Product of the Last K Numbers**
@@ -29,7 +31,9 @@ var ProductOfNumbers = function () {};
  * @param {number} num
  * @return {void}
  */
-ProductOfNumbers.prototype.add = function (num) {};
+ProductOfNumbers.prototype.add = function (num) {
+    
+};
 
 /**
  * @param {number} k
