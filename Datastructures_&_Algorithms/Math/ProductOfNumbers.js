@@ -18,6 +18,14 @@ var ProductOfNumbers = function () {};
  * contiguous sequence of numbers will fit into a single 32-bit integer
  * without overflowing.
  *
+ * **Constraints:**
+ *
+ * - `0 <= num <= 100`
+ * - `1 <= k <= 4 * 10^4`
+ * - At most `4 * 10^4` calls will be made to `add` and `getProduct`.
+ * - The product of the stream at any point in time will fit in a
+ * **32-bit** integer.
+ *
  * @param {number} num
  * @return {void}
  */
