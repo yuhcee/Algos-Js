@@ -32,7 +32,13 @@ var ProductOfNumbers = function () {
  * @return {void}
  */
 ProductOfNumbers.prototype.add = function (num) {
-    
+    if (num === 0) {
+        // Reset the prefix products array
+        this.prefixProducts = [1];
+    } else {
+        // Multiply the last prefix product by the new number
+        this.prefixProducts.push(this.prefixProducts[this.prefixProducts.length - 1] * num);
+    }
 };
 
 /**
