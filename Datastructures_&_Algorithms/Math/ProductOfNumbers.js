@@ -45,7 +45,15 @@ ProductOfNumbers.prototype.add = function (num) {
  * @param {number} k
  * @return {number}
  */
-ProductOfNumbers.prototype.getProduct = function (k) {};
+ProductOfNumbers.prototype.getProduct = function (k) {
+    const n = this.prefixProducts.length;
+    if (k >= n) {
+        // If k is greater than or equal to the length of prefixProducts, it means there was a zero in the last k elements
+        return 0;
+    }
+    // Calculate the product of the last k elements
+    return this.prefixProducts[n - 1] / this.prefixProducts[n - 1 - k];
+};
 
 /**
  * Your ProductOfNumbers object will be instantiated and called as such:
