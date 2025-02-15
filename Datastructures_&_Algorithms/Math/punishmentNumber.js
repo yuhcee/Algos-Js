@@ -20,3 +20,15 @@
  * @return {number}
  */
 const punishmentNumber = function (n) {};
+
+function canPartition(s, target) {
+    if (s.length === 0) return target === 0;
+    for (let i = 1; i <= s.length; i++) {
+        const current = parseInt(s.substring(0, i), 10);
+        if (current > target) break;
+        if (canPartition(s.substring(i), target - current)) {
+            return true;
+        }
+    }
+    return false;
+}
