@@ -19,7 +19,16 @@
  * @param {number} n
  * @return {number}
  */
-const punishmentNumber = function (n) {};
+const punishmentNumber = function (n) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        const square = i * i;
+        if (canPartition(square.toString(), i)) {
+            sum += square;
+        }
+    }
+    return sum;
+};
 
 function canPartition(s, target) {
     if (s.length === 0) return target === 0;
