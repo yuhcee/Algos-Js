@@ -22,6 +22,10 @@
  * 5,6]` because the first position they differ is at the third number,
  * and `9` is greater than `5`.
  *
+ * **Constraints:**
+ *
+ * 1 <= n <= 20
+ *
  * @param {number} n
  * @return {number[]}
  */
