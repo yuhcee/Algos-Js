@@ -70,3 +70,8 @@ const constructDistancedSequence = function (n) {
     backtrack(0);
     return result;
 };
+
+const n = 3;
+// Output: [3,1,2,3,2]
+// Explanation: [2,3,2,1,3] is also a valid sequence, but [3,1,2,3,2] is the lexicographically largest valid sequence.
+console.log(constructDistancedSequence(n));
