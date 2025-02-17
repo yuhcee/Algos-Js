@@ -42,3 +42,7 @@ const tiles = 'AAB';
 // Output: 8
 // Explanation: The possible sequences are "A", "B", "AA", "AB", "BA", "AAB", "ABA", "BAA".
 console.log(numTilePossibilities(tiles));
+
+const tiles2 = 'AAABBC';
+// Output: 188
+console.log(numTilePossibilities(tiles2));
