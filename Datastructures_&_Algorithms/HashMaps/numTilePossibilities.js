@@ -7,6 +7,11 @@
  * Return *the number of possible non-empty sequences of letters* you
  * can make using the letters printed on those `tiles`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= tiles.length <= 7`
+ * - `tiles` consists of uppercase English letters.
+ *
  * @param {string} tiles
  * @return {number}
  */
