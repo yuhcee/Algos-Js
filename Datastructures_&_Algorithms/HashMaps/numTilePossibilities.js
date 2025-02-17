@@ -46,3 +46,7 @@ console.log(numTilePossibilities(tiles));
 const tiles2 = 'AAABBC';
 // Output: 188
 console.log(numTilePossibilities(tiles2));
+
+const tiles3 = 'V';
+// Output: 1
+console.log(numTilePossibilities(tiles3));
