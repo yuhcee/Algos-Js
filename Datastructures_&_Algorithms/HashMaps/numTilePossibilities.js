@@ -37,3 +37,8 @@ const numTilePossibilities = function (tiles) {
     backtrack();
     return result;
 };
+
+const tiles = 'AAB';
+// Output: 8
+// Explanation: The possible sequences are "A", "B", "AA", "AB", "BA", "AAB", "ABA", "BAA".
+console.log(numTilePossibilities(tiles));
