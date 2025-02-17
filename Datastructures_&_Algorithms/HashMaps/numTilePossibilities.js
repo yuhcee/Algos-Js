@@ -15,4 +15,25 @@
  * @param {string} tiles
  * @return {number}
  */
-const numTilePossibilities = function (tiles) {};
+const numTilePossibilities = function (tiles) {
+    const count = {};
+    for (const tile of tiles) {
+        count[tile] = (count[tile] || 0) + 1;
+    }
+
+    let result = 0;
+
+    const backtrack = () => {
+        for (const letter in count) {
+            if (count[letter] > 0) {
+                result++;
+                count[letter]--;
+                backtrack();
+                count[letter]++;
+            }
+        }
+    };
+
+    backtrack();
+    return result;
+};
