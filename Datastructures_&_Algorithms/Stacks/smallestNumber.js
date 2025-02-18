@@ -52,3 +52,10 @@ Some possible values of num are "245639871", "135749862", and "123849765".
 It can be proven that "123549876" is the smallest possible num that meets the conditions.
 Note that "123414321" is not possible because the digit '1' is used more than once. */
 console.log(smallestNumber(pattern));
+
+const pattern1 = 'DDD';
+// Output: '4321';
+/* Explanation:
+Some possible values of num are "9876", "7321", and "8742".
+It can be proven that "4321" is the smallest possible num that meets the conditions. */
+console.log(smallestNumber(pattern1));
