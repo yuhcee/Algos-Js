@@ -16,6 +16,11 @@
  * Return the lexicographically **smallest** possible string `num` that
  * meets the conditions.
  *
+ * **Constraints:**
+ *
+ * - `1 <= pattern.length <= 8`
+ * - `pattern` consists of only the letters `'I'` and `'D'`.
+ *
  * @param {string} pattern
  * @return {string}
  */
