@@ -24,4 +24,21 @@
  * @param {string} pattern
  * @return {string}
  */
-const smallestNumber = function (pattern) {};
+const smallestNumber = function (pattern) {
+    const n = pattern.length;
+    const result = new Array(n + 1);
+    const stack = [];
+    let num = 1;
+
+    for (let i = 0; i <= n; i++) {
+        stack.push(i);
+        if (i === n || pattern[i] === 'I') {
+            while (stack.length > 0) {
+                const index = stack.pop();
+                result[index] = num++;
+            }
+        }
+    }
+
+    return result.join('');
+};
