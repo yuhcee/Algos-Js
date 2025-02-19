@@ -27,4 +27,23 @@
  * @param {number} k
  * @return {string}
  */
-const getHappyString = function (n, k) {};
+const getHappyString = function (n, k) {
+    const result = [];
+    const chars = ['a', 'b', 'c'];
+
+    function backtrack(current, lastChar) {
+        if (current.length === n) {
+            result.push(current);
+            return;
+        }
+
+        for (let char of chars) {
+            if (char !== lastChar) {
+                backtrack(current + char, char);
+            }
+        }
+    }
+
+    backtrack('', '');
+    return result.length >= k ? result[k - 1] : '';
+};
