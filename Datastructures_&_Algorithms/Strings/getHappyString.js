@@ -1,5 +1,5 @@
 /**
- * **1415. The k-th Lexicographical String of All Happy Strings of 
+ * **1415. The k-th Lexicographical String of All Happy Strings of
  * Length n**
  *
  * A **happy string** is a string that:
@@ -17,6 +17,11 @@
  *
  * Return *the kth string* of this list or return an **empty string** if
  * there are less than `k` happy strings of length `n`.
+ *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 10`
+ * - `1 <= k <= 100`
  *
  * @param {number} n
  * @param {number} k
