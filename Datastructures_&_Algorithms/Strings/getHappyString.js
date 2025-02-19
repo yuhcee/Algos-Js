@@ -59,3 +59,9 @@ const n1 = 1,
 // Output: ""
 // Explanation: There are only 3 happy strings of length 1.
 console.log(getHappyString(n1, k1));
+
+const n2 = 3,
+    k2 = 9;
+// Output: "cab"
+/* Explanation: There are 12 different happy string of length 3 ["aba", "abc", "aca", "acb", "bab", "bac", "bca", "bcb", "cab", "cac", "cba", "cbc"]. You will find the 9th string = "cab" */
+console.log(getHappyString(n2, k2));
