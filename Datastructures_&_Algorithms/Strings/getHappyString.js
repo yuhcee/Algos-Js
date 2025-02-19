@@ -47,3 +47,9 @@ const getHappyString = function (n, k) {
     backtrack('', '');
     return result.length >= k ? result[k - 1] : '';
 };
+
+const n = 1,
+    k = 3;
+// Output: "c"
+/* Explanation: The list ["a", "b", "c"] contains all happy strings of length 1. The third string is "c". */
+console.log(getHappyString(n, k));
