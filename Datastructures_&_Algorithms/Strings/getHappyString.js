@@ -53,3 +53,9 @@ const n = 1,
 // Output: "c"
 /* Explanation: The list ["a", "b", "c"] contains all happy strings of length 1. The third string is "c". */
 console.log(getHappyString(n, k));
+
+const n1 = 1,
+    k1 = 4;
+// Output: ""
+// Explanation: There are only 3 happy strings of length 1.
+console.log(getHappyString(n1, k1));
