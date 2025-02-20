@@ -79,3 +79,9 @@ const mapping1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
 // Output: [123,456,789]
 // Explanation: 789 maps to 789, 456 maps to 456, and 123 maps to 123. Thus, the sorted array is [123,456,789].
 console.log(sortJumbled(mapping1, nums1));
+
+const mapping2 = [1, 0, 2, 3, 4, 5, 6, 7, 8, 9],
+    nums2 = [789, 456, 123];
+// Output: [123,456,789]
+// Explanation: 789 maps to 789, 456 maps to 456, and 123 maps to 123. Thus, the sorted array is [123,456,789].
+console.log(sortJumbled(mapping2, nums2));
