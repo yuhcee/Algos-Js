@@ -32,4 +32,30 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-const sortJumbled = function (mapping, nums) {};
+const sortJumbled = function (mapping, nums) {
+    // Function to map a number to its mapped value
+    const mapNumber = (num) => {
+        if (num === 0) return mapping[0];
+        let mapped = 0;
+        let power = 1;
+        while (num > 0) {
+            const digit = num % 10;
+            mapped += mapping[digit] * power;
+            power *= 10;
+            num = Math.floor(num / 10);
+        }
+        return mapped;
+    };
+
+    // Create an array of objects containing the original number and its mapped value
+    const numsWithMapped = nums.map((num) => ({
+        original: num,
+        mapped: mapNumber(num),
+    }));
+
+    // Sort the array based on the mapped value
+    numsWithMapped.sort((a, b) => a.mapped - b.mapped);
+
+    // Extract the original numbers in the sorted order
+    return numsWithMapped.map((item) => item.original);
+};
