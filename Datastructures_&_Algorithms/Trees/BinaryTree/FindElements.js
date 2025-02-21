@@ -64,10 +64,21 @@ FindElements.prototype.find = function (target) {
  * var obj = new FindElements(root)
  * var param_1 = obj.find(target)
  */
-Input ['FindElements', 'find', 'find'][([[-1, null, -1]], [1], [2])];
+// Input ['FindElements', 'find', 'find']
+// [([[-1, null, -1]], [1], [2])];
 /* Output
 [null,false,true]
 Explanation
 FindElements findElements = new FindElements([-1,null,-1]); 
 findElements.find(1); // return False 
 findElements.find(2); // return True  */
+
+// Input ["FindElements","find","find","find"]
+// [[[-1,-1,-1,-1,-1]],[1],[3],[5]]
+// Output
+// [null,true,true,false]
+/* Explanation
+FindElements findElements = new FindElements([-1,-1,-1,-1,-1]);
+findElements.find(1); // return True
+findElements.find(3); // return True
+findElements.find(5); // return False */
