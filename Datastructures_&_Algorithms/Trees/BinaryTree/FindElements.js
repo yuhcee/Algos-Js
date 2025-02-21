@@ -82,3 +82,14 @@ FindElements findElements = new FindElements([-1,-1,-1,-1,-1]);
 findElements.find(1); // return True
 findElements.find(3); // return True
 findElements.find(5); // return False */
+
+// Input ["FindElements","find","find","find","find"]
+// [[[-1,null,-1,-1,null,-1]],[2],[3],[4],[5]]
+// Output
+// [null,true,false,false,true]
+/* Explanation
+FindElements findElements = new FindElements([-1,null,-1,-1,null,-1]);
+findElements.find(2); // return True
+findElements.find(3); // return False
+findElements.find(4); // return False
+findElements.find(5); // return True */
