@@ -28,6 +28,14 @@
  * - `bool find(int target)` Returns `true` if the `target` value exists in
  * the recovered binary tree.
  *
+ * **Constraints:**
+ *
+ * - `TreeNode.val == -1`
+ * - The height of the binary tree is less than or equal to `20`
+ * - The total number of nodes is between `[1, 104]`
+ * - Total calls of `find()` is between `[1, 104]`
+ * - `0 <= target <= 106`
+ *
  * @param {TreeNode} root
  */
 const FindElements = function (root) {};
