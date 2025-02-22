@@ -74,3 +74,7 @@ const recoverFromPreorder = function (traversal) {
 
     return stack[0];
 };
+
+const traversal = '1-2--3--4-5--6--7';
+// Output: [1,2,5,3,4,6,7]
+console.log(recoverFromPreorder(traversal));
