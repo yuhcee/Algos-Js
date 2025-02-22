@@ -31,4 +31,46 @@
  * @param {string} traversal
  * @return {TreeNode}
  */
-const recoverFromPreorder = function (traversal) {};
+const recoverFromPreorder = function (traversal) {
+    if (!traversal) return null;
+
+    const stack = [];
+    let i = 0;
+
+    while (i < traversal.length) {
+        // Determine the depth of the current node
+        let depth = 0;
+        while (i < traversal.length && traversal[i] === '-') {
+            depth++;
+            i++;
+        }
+
+        // Determine the value of the current node
+        let val = '';
+        while (i < traversal.length && traversal[i] !== '-') {
+            val += traversal[i];
+            i++;
+        }
+        const node = new TreeNode(Number(val));
+
+        // If the stack is empty, this is the root node
+        if (stack.length === 0) {
+            stack.push(node);
+        } else {
+            // Pop nodes from the stack until we find the correct parent
+            while (stack.length > depth) {
+                stack.pop();
+            }
+            // The current node is a child of the node at the top of the stack
+            const parent = stack[stack.length - 1];
+            if (parent.left === null) {
+                parent.left = node;
+            } else {
+                parent.right = node;
+            }
+            stack.push(node);
+        }
+    }
+
+    return stack[0];
+};
