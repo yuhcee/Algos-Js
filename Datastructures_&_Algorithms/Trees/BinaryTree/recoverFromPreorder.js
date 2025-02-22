@@ -78,3 +78,7 @@ const recoverFromPreorder = function (traversal) {
 const traversal = '1-2--3--4-5--6--7';
 // Output: [1,2,5,3,4,6,7]
 console.log(recoverFromPreorder(traversal));
+
+const traversal2 = '1-2--3---4-5--6---7';
+// Output: [1,2,5,3,null,6,null,4,null,7]
+console.log(recoverFromPreorder(traversal2));
