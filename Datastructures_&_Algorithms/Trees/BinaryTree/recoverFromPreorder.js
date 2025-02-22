@@ -23,6 +23,11 @@
  * Given the output `traversal` of this traversal, recover the tree and
  * return *its `root`*.
  *
+ * **Constraints:**
+ *
+ * - The number of nodes in the original tree is in the range `[1, 1000]`.
+ * - `1 <= Node.val <= 10^9`
+ *
  * @param {string} traversal
  * @return {TreeNode}
  */
