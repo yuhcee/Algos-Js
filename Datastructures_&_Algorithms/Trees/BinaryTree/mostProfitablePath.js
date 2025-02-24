@@ -132,3 +132,12 @@ The above diagram represents the given tree. The game goes as follows:
 Now, neither Alice nor Bob can make any further moves, and the game ends.
 It is not possible for Alice to get a higher net income. */
 console.log(mostProfitablePath(edges, bob, amount));
+
+const edges1 = [[0, 1]],
+    bob1 = 1,
+    amount1 = [-7280, 2350];
+// Output: -7280
+/* Explanation: 
+Alice follows the path 0->1 whereas Bob follows the path 1->0.
+Thus, Alice opens the gate at node 0 only. Hence, her net income is -7280.  */
+console.log(mostProfitablePath(edges1, bob1, amount1));
