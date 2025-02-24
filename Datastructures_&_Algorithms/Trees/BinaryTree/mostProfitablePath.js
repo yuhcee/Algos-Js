@@ -31,7 +31,20 @@
  * reaches node 0, he stops moving. Note that these events are 
  * **independent** of each other.
  * 
- * Return the **maximum** net income Alice can have if she travels towards the optimal leaf node.
+ * Return the **maximum** net income Alice can have if she travels towards 
+ * the optimal leaf node.
+ *
+ * **Constraints:**
+ * 
+ * - `2 <= n <= 105`
+ * - `edges.length == n - 1`
+ * - `edges[i].length == 2`
+ * - `0 <= ai, bi < n`
+ * - `ai != bi`
+ * - `edges` represents a valid tree.
+ * - `1 <= bob < n`
+ * - `amount.length == n`
+ * - `amount[i]` is an **even** integer in the range `[-104, 104].`
  *
  * @param {number[][]} edges
  * @param {number} bob
