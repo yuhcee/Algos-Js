@@ -34,3 +34,9 @@ const numOfSubarrays = function (arr) {
 
     return result;
 };
+const arr = [1, 3, 5];
+// Output: 4
+/* Explanation: All subarrays are [[1],[1,3],[1,3,5],[3],[3,5],[5]]
+All sub-arrays sum are [1,4,9,3,8,5].
+Odd sums are [1,9,3,5] so the answer is 4. */
+console.log(numOfSubarrays(arr));
