@@ -14,4 +14,23 @@
  * @param {number[]} arr
  * @return {number}
  */
-const numOfSubarrays = function (arr) {};
+const numOfSubarrays = function (arr) {
+    const MOD = 1e9 + 7;
+    let prefixSum = 0;
+    let countOdd = 0;
+    let countEven = 1; // prefixSum[0] = 0, which is even
+    let result = 0;
+
+    for (const num of arr) {
+        prefixSum += num;
+        if (prefixSum % 2 === 1) {
+            result = (result + countEven) % MOD;
+            countOdd++;
+        } else {
+            result = (result + countOdd) % MOD;
+            countEven++;
+        }
+    }
+
+    return result;
+};
