@@ -6,6 +6,11 @@
  *
  * Since the answer can be very large, return it modulo `10^9 + 7`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= arr.length <= 105`
+ * - `1 <= arr[i] <= 100`
+ *
  * @param {number[]} arr
  * @return {number}
  */
