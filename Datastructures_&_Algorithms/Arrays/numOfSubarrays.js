@@ -47,3 +47,7 @@ const arr1 = [2, 4, 6];
 All sub-arrays sum are [2,6,12,4,10,6].
 All sub-arrays have even sum and the answer is 0. */
 console.log(numOfSubarrays(arr1));
+
+const arr2 = [1, 2, 3, 4, 5, 6, 7];
+// Output: 16
+console.log(numOfSubarrays(arr2));
