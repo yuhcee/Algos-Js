@@ -40,3 +40,10 @@ const arr = [1, 3, 5];
 All sub-arrays sum are [1,4,9,3,8,5].
 Odd sums are [1,9,3,5] so the answer is 4. */
 console.log(numOfSubarrays(arr));
+
+const arr1 = [2, 4, 6];
+// Output: 0
+/* Explanation: All subarrays are [[2],[2,4],[2,4,6],[4],[4,6],[6]]
+All sub-arrays sum are [2,6,12,4,10,6].
+All sub-arrays have even sum and the answer is 0. */
+console.log(numOfSubarrays(arr1));
