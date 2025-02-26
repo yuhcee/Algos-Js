@@ -39,3 +39,8 @@ const maxAbsoluteSum = function (nums) {
     // The maximum absolute sum is the maximum of |maxSum| and |minSum|
     return Math.max(Math.abs(maxSum), Math.abs(minSum));
 };
+
+const nums = [1, -3, 2, 3, -4];
+// Output: 5
+// Explanation: The subarray [2,3] has absolute sum = abs(2+3) = abs(5) = 5.
+console.log(maxAbsoluteSum(nums));
