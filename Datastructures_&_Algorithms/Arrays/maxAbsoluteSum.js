@@ -21,4 +21,21 @@
  * @param {number[]} nums
  * @return {number}
  */
-const maxAbsoluteSum = function (nums) {};
+const maxAbsoluteSum = function (nums) {
+    let maxSum = 0;
+    let minSum = 0;
+    let currentMax = 0;
+    let currentMin = 0;
+
+    for (const num of nums) {
+        // Update currentMax and currentMin using Kadane's algorithm
+        currentMax = Math.max(num, currentMax + num);
+        currentMin = Math.min(num, currentMin + num);
+
+        maxSum = Math.max(maxSum, currentMax);
+        minSum = Math.min(minSum, currentMin);
+    }
+
+    // The maximum absolute sum is the maximum of |maxSum| and |minSum|
+    return Math.max(Math.abs(maxSum), Math.abs(minSum));
+};
