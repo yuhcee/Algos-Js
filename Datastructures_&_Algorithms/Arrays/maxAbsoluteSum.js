@@ -13,6 +13,11 @@
  * If `x` is a negative integer, then `abs(x) = -x`.
  * If `x` is a non-negative integer, then `abs(x) = x`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `-104 <= nums[i] <= 104`
+ *
  * @param {number[]} nums
  * @return {number}
  */
