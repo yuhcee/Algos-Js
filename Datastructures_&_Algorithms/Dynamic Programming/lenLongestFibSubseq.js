@@ -46,3 +46,8 @@ const lenLongestFibSubseq = function (arr) {
 
     return maxLen >= 3 ? maxLen : 0;
 };
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// Output: 5
+// Explanation: The longest subsequence that is fibonacci-like: [1,2,3,5,8].
+console.log(lenLongestFibSubseq(arr));
