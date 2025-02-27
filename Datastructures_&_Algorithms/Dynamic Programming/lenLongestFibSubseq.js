@@ -23,4 +23,26 @@
  * @param {number[]} arr
  * @return {number}
  */
-const lenLongestFibSubseq = function (arr) {};
+const lenLongestFibSubseq = function (arr) {
+    const n = arr.length;
+    const indexMap = new Map();
+    for (let i = 0; i < n; i++) {
+        indexMap.set(arr[i], i);
+    }
+
+    const dp = new Array(n).fill().map(() => new Array(n).fill(2));
+    let maxLen = 0;
+
+    for (let j = 1; j < n; j++) {
+        for (let i = 0; i < j; i++) {
+            const prev = arr[j] - arr[i];
+            if (prev < arr[i] && indexMap.has(prev)) {
+                const k = indexMap.get(prev);
+                dp[i][j] = dp[k][i] + 1;
+                maxLen = Math.max(maxLen, dp[i][j]);
+            }
+        }
+    }
+
+    return maxLen >= 3 ? maxLen : 0;
+};
