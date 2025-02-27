@@ -15,6 +15,11 @@
  * order of the remaining elements. For example, `[3, 5, 8]` is a
  * subsequence of `[3, 4, 5, 6, 7, 8]`.
  *
+ * **Constraints:**
+ *
+ * - `3 <= arr.length <= 1000`
+ * - `1 <= arr[i] < arr[i + 1] <= 109`
+ *
  * @param {number[]} arr
  * @return {number}
  */
