@@ -76,3 +76,8 @@ str1 = "abac" is a subsequence of "cabac" because we can delete the first "c".
 str2 = "cab" is a subsequence of "cabac" because we can delete the last "ac".
 The answer provided is the shortest such string that satisfies these properties. */
 console.log(shortestCommonSupersequence(str1, str2));
+
+const str11 = 'aaaaaaaa',
+    str21 = 'aaaaaaaa';
+// Output: "aaaaaaaa"
+console.log(shortestCommonSupersequence(str11, str21));
