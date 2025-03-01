@@ -17,6 +17,11 @@
  *
  * **Note** that the operations are applied **sequentially**, not all at once.
  *
+ * **Constraints:**
+ *
+ * - `2 <= nums.length <= 2000`
+ * - `0 <= nums[i] <= 1000`
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
