@@ -69,3 +69,7 @@ const nums1 = [0, 1];
 // Output: [1,0]
 // Explanation: No operation can be applied, we just shift the 0 to the end.
 console.log(applyOperations(nums1));
+
+const nums2 = [1, 0, 2, 0, 0, 1];
+// Output: [ 1, 2, 1, 0, 0, 0 ]
+console.log(applyOperations(nums2));
