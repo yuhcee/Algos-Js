@@ -25,4 +25,31 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-const applyOperations = function (nums) {};
+const applyOperations = function (nums) {
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === nums[i + 1]) {
+            nums[i] = nums[i] * 2;
+            nums[i + 1] = 0;
+        }
+    }
+
+    var moveZeroes = function (nums) {
+        let insertPos = 0; // Position to insert non-zero elements
+
+        // Move all non-zero elements to the beginning
+        for (let num of nums) {
+            if (num !== 0) {
+                nums[insertPos++] = num;
+            }
+        }
+
+        // Fill the rest with zeros
+        while (insertPos < nums.length) {
+            nums[insertPos++] = 0;
+        }
+    };
+
+    moveZeroes(nums);
+
+    return nums;
+};
