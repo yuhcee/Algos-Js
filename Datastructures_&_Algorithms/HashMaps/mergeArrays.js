@@ -34,12 +34,30 @@ const mergeArrays = function (nums1, nums2) {
     const map = new Map();
 
     for (let [id, val] of nums1) {
-        map.set(id, map.get(id) || 0) + val;
+        map.set(id, (map.get(id) || 0) + val);
     }
 
     for (let [id, val] of nums2) {
-        map.set(id, map.get(id) || 0) || +val;
+        map.set(id, (map.get(id) || 0) + val);
     }
 
-    return [...map.entires].sort((a, b) => a[0] - b[0]);
+    return [...map.entries()].sort((a, b) => a[0] - b[0]);
 };
+
+const nums1 = [
+        [1, 2],
+        [2, 3],
+        [4, 5],
+    ],
+    nums2 = [
+        [1, 4],
+        [3, 2],
+        [4, 1],
+    ];
+// Output: [[1,6],[2,3],[3,2],[4,6]]
+/* Explanation: The resulting array contains the following:
+- id = 1, the value of this id is 2 + 4 = 6.
+- id = 2, the value of this id is 3.
+- id = 3, the value of this id is 2.
+- id = 4, the value of this id is 5 + 1 = 6. */
+console.log(mergeArrays(nums1, nums2));
