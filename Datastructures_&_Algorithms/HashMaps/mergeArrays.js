@@ -61,3 +61,16 @@ const nums1 = [
 - id = 3, the value of this id is 2.
 - id = 4, the value of this id is 5 + 1 = 6. */
 console.log(mergeArrays(nums1, nums2));
+
+const nums11 = [
+        [2, 4],
+        [3, 6],
+        [5, 5],
+    ],
+    nums21 = [
+        [1, 3],
+        [4, 3],
+    ];
+// Output: [[1,3],[2,4],[3,6],[4,3],[5,5]]
+// Explanation: There are no common ids, so we just include each id with its value in the resulting list.
+console.log(mergeArrays(nums11, nums21));
