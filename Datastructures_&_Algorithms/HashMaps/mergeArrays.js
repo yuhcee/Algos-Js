@@ -30,4 +30,16 @@
  * @param {number[][]} nums2
  * @return {number[][]}
  */
-const mergeArrays = function (nums1, nums2) {};
+const mergeArrays = function (nums1, nums2) {
+    const map = new Map();
+
+    for (let [id, val] of nums1) {
+        map.set(id, map.get(id) || 0) + val;
+    }
+
+    for (let [id, val] of nums2) {
+        map.set(id, map.get(id) || 0) || +val;
+    }
+
+    return [...map.entires].sort((a, b) => a[0] - b[0]);
+};
