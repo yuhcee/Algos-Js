@@ -15,6 +15,12 @@
  *
  * Return `nums` after the rearrangement.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `-106 <= nums[i] <= 106`
+ * - `pivot` equals to an element of `nums`.
+ *
  * @param {number[]} nums
  * @param {number} pivot
  * @return {number[]}
