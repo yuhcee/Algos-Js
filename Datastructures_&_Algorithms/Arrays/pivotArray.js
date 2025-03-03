@@ -25,4 +25,18 @@
  * @param {number} pivot
  * @return {number[]}
  */
-const pivotArray = function (nums, pivot) {};
+const pivotArray = function (nums, pivot) {
+    const left = [],
+        middle = [],
+        right = [];
+
+    for (let num of nums) {
+        if (num < pivot) {
+            left.push(num);
+        } else if (num === pivot) {
+            middle.push(num);
+        } else {
+            right.push(num);
+        }
+    }
+};
