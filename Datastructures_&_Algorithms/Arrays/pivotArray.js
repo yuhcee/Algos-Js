@@ -39,6 +39,7 @@ const pivotArray = function (nums, pivot) {
             right.push(num);
         }
     }
+
     return [...left, ...middle, ...right];
 };
 
@@ -50,3 +51,12 @@ The elements 9, 5, and 3 are less than the pivot so they are on the left side of
 The elements 12 and 14 are greater than the pivot so they are on the right side of the array.
 The relative ordering of the elements less than and greater than pivot is also maintained. [9, 5, 3] and [12, 14] are the respective orderings. */
 console.log(pivotArray(nums, pivot));
+
+const nums1 = [-3, 4, 3, 2],
+    pivot1 = 2;
+// Output: [-3,2,4,3]
+/* Explanation: 
+The element -3 is less than the pivot so it is on the left side of the array.
+The elements 4 and 3 are greater than the pivot so they are on the right side of the array.
+The relative ordering of the elements less than and greater than pivot is also maintained. [-3] and [4, 3] are the respective orderings. */
+console.log(pivotArray(nums1, pivot1));
