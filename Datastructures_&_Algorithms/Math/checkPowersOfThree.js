@@ -30,3 +30,7 @@ const n1 = 91;
 // Output: true
 // Explanation: 91 = 30 + 32 + 34
 console.log(checkPowersOfThree(n1));
+
+const n2 = 21;
+// Output: false
+console.log(checkPowersOfThree(n2));
