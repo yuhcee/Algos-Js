@@ -20,3 +20,8 @@ const checkPowersOfThree = function (n) {
     }
     return true;
 };
+
+const n = 12;
+// Output: true
+// Explanation: 12 = 31 + 32
+console.log(checkPowersOfThree(n));
