@@ -18,4 +18,6 @@
  * @param {number} n
  * @return {number}
  */
-const coloredCells = function (n) {};
+const coloredCells = function (n) {
+    return 2 * n * (n - 1) + 1;
+};
