@@ -21,3 +21,8 @@
 const coloredCells = function (n) {
     return 2 * n * (n - 1) + 1;
 };
+
+const n = 1;
+// Output: 1
+// Explanation: After 1 minute, there is only 1 blue cell, so we return 1.
+console.log(coloredCells(n));
