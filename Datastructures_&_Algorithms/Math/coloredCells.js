@@ -31,3 +31,6 @@ const n1 = 2;
 // Output: 5
 // Explanation: After 2 minutes, there are 4 colored cells on the boundary and 1 in the center, so we return 5.
 console.log(coloredCells(n1));
+
+const n2 = 3;
+console.log(coloredCells(n2));
