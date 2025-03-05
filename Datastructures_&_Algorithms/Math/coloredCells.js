@@ -9,6 +9,12 @@
  *
  * Below is a pictorial representation of the state of the grid after minutes 1, 2, and 3.
  *
+ * Return *the number of **colored cells** at the end of `n` minutes*.
+ *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 105`
+ *
  * @param {number} n
  * @return {number}
  */
