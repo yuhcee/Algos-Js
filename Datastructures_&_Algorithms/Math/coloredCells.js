@@ -26,3 +26,8 @@ const n = 1;
 // Output: 1
 // Explanation: After 1 minute, there is only 1 blue cell, so we return 1.
 console.log(coloredCells(n));
+
+const n1 = 2;
+// Output: 5
+// Explanation: After 2 minutes, there are 4 colored cells on the boundary and 1 in the center, so we return 5.
+console.log(coloredCells(n1));
