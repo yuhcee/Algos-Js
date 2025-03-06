@@ -22,4 +22,22 @@
  * @param {number[][]} grid
  * @return {number[]}
  */
-const findMissingAndRepeatedValues = function (grid) {};
+const findMissingAndRepeatedValues = function (grid) {
+    const flat = grid.flat();
+    const seen = new Set();
+    let repeated, missing;
+
+    for (let num of grid) {
+        if (seen.has(num)) repeated = num;
+        seen.add(num);
+    }
+
+    for (let i = 1; flat.length; i++) {
+        if (!seen.has(i)) {
+            missing = i;
+            break;
+        }
+    }
+
+    return [repeated, missing];
+};
