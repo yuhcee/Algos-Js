@@ -27,7 +27,7 @@ const findMissingAndRepeatedValues = function (grid) {
     const seen = new Set();
     let repeated, missing;
 
-    for (let num of grid) {
+    for (let num of flat) {
         if (seen.has(num)) repeated = num;
         seen.add(num);
     }
@@ -41,3 +41,11 @@ const findMissingAndRepeatedValues = function (grid) {
 
     return [repeated, missing];
 };
+
+const grid = [
+    [1, 3],
+    [2, 2],
+];
+// Output: [2,4]
+// Explanation: Number 2 is repeated and number 4 is missing so the answer is [2,4].
+console.log(findMissingAndRepeatedValues(grid));
