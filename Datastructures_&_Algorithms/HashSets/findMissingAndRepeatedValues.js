@@ -8,6 +8,17 @@
  * Return *a **0-indexed** integer array `ans` of size `2` where `ans[0]` equals to `a` and `ans[1]`
  * equals to `b`*.
  *
+ * **Constraints:**
+ *
+ * - `2 <= n == grid.length == grid[i].length <= 50`
+ * - `1 <= grid[i][j] <= n * n`
+ * - For all `x` that `1 <= x <= n * n` there is exactly one `x` that is not equal to any of the grid
+ * members.
+ * - For all `x` that `1 <= x <= n * n` there is exactly one `x` that is equal to exactly two of the
+ * grid members.
+ * - For all `x` that `1 <= x <= n * n` except two of them there is exatly one pair of `i, j` that `0
+ * <= i, j <= n - 1` and `grid[i][j] == x`.
+ *
  * @param {number[][]} grid
  * @return {number[]}
  */
