@@ -22,7 +22,40 @@
  * @return {number[]}
  */
 const closestPrimes = function (left, right) {
-    
+    // Sieve of Eratosthenes to fiind all primes up to right
+    const sieveSize = right + 1;
+    const sieve = Array(sieveSize).fill(true);
+    sieve[0] = sieve[1] = false;
+
+    for (let i = 2; i * i <= right; i++) {
+        if (sieve[i]) {
+            for (let j = i * i; j <= right; j += i) {
+                sieve[j] = false;
+            }
+        }
+    }
+
+    // Collect primes in the range [left, right]
+    const primes = [];
+    for (let i = left; i <= right; i++) {
+        if (sieve[i]) primes.push(i);
+    }
+
+    // If fewer than 2 primes in the range, return [-1, -1]
+    if (primes.length < 2) return [-1, -1];
+
+    // Find the pair with the smallest difference
+    let minDiff = Infinity;
+    let result = [-1, -1];
+    for (let i = 1; i < primes.length; i++) {
+        const diff = primes[i] - primes[i - 1];
+        if (diff < minDiff) {
+            minDiff = diff;
+            result = [primes[i - 1], primes[i]];
+        }
+    }
+
+    return result;
 };
 const left = 10,
     right = 19;
