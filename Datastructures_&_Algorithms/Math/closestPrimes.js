@@ -52,3 +52,9 @@ const left = 10,
 The closest gap between any pair is 2, which can be achieved by [11,13] or [17,19].
 Since 11 is smaller than 17, we return the first pair. */
 console.log(closestPrimes(left, right));
+
+const left1 = 4,
+    right1 = 6;
+// Output: [-1,-1]
+// Explanation: There exists only one prime number in the given range, so the conditions cannot be satisfied.
+console.log(closestPrimes(left1, right1));
