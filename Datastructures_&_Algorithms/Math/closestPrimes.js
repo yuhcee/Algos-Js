@@ -45,3 +45,10 @@ const closestPrimes = function (left, right) {
 
     return [num1, num2];
 };
+const left = 10,
+    right = 19;
+// Output: [11,13]
+/* Explanation: The prime numbers between 10 and 19 are 11, 13, 17, and 19.
+The closest gap between any pair is 2, which can be achieved by [11,13] or [17,19].
+Since 11 is smaller than 17, we return the first pair. */
+console.log(closestPrimes(left, right));
