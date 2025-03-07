@@ -22,28 +22,7 @@
  * @return {number[]}
  */
 const closestPrimes = function (left, right) {
-    const isPrime = (num) => {
-        if (num < 2) return false;
-        for (let i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i === 0) return false;
-        }
-        return true;
-    };
-
-    let num1 = -1,
-        num2 = -1,
-        minDiff = Infinity;
-    for (let i = left; i < right; i++) {
-        if (isPrime(i) && isPrime(i + 1)) {
-            if (i + 1 - i < minDiff) {
-                num1 = i;
-                num2 = i + 1;
-                minDiff = i + 1 - i;
-            }
-        }
-    }
-
-    return [num1, num2];
+    
 };
 const left = 10,
     right = 19;
@@ -58,3 +37,10 @@ const left1 = 4,
 // Output: [-1,-1]
 // Explanation: There exists only one prime number in the given range, so the conditions cannot be satisfied.
 console.log(closestPrimes(left1, right1));
+
+const left2 = 12854,
+    right2 = 130337;
+// Output: [11,13]
+// Explanation: The prime numbers between 8 and 10 are 11 and 13.
+// The closest gap between any pair is 2, which can be achieved by [11,13].
+console.log(closestPrimes(left2, right2));
