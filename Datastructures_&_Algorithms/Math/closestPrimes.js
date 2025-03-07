@@ -13,6 +13,10 @@
  * satisfying these conditions, return the one with the **smallest** num1 value. If no
  * such numbers exist, return `[-1, -1]`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= left <= right <= 106`
+ *
  * @param {number} left
  * @param {number} right
  * @return {number[]}
