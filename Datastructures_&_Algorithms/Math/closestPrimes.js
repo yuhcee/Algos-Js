@@ -21,4 +21,27 @@
  * @param {number} right
  * @return {number[]}
  */
-const closestPrimes = function (left, right) {};
+const closestPrimes = function (left, right) {
+    const isPrime = (num) => {
+        if (num < 2) return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) return false;
+        }
+        return true;
+    };
+
+    let num1 = -1,
+        num2 = -1,
+        minDiff = Infinity;
+    for (let i = left; i < right; i++) {
+        if (isPrime(i) && isPrime(i + 1)) {
+            if (i + 1 - i < minDiff) {
+                num1 = i;
+                num2 = i + 1;
+                minDiff = i + 1 - i;
+            }
+        }
+    }
+
+    return [num1, num2];
+};
