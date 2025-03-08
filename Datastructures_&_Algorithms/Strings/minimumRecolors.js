@@ -25,4 +25,22 @@
  * @param {number} k
  * @return {number}
  */
-const minimumRecolors = function (blocks, k) {};
+const minimumRecolors = function (blocks, k) {
+    let minOperations = Infinity;
+    let countWOccurences = 0;
+
+    for (let i = 0; i < k; i++) {
+        if (blocks[i] === 'W') countWOccurences++;
+    }
+
+    minOperations = countWOccurences;
+
+    for (let i = k; i < blocks.length; i++) {
+        if (blocks[i - k] === 'W') countWOccurences--;
+        if (blocks[i] === 'W') countWOccurences++;
+
+        minOperations = Math.min(minOperations, countWOccurences);
+    }
+
+    return minOperations;
+};
