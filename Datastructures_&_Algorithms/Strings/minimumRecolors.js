@@ -62,3 +62,12 @@ const blocks1 = 'WBWBBBW',
 No changes need to be made, since 2 consecutive black blocks already exist.
 Therefore, we return 0. */
 console.log(minimumRecolors(blocks1, k1));
+
+const blocks2 = 'WBBWWWBWBWBW',
+    k2 = 9;
+// Output: 1
+/* Explanation:
+One way to achieve 3 consecutive black blocks is to recolor the 0th block so that blocks = "BBWBBBW".
+It can be shown that there is no way to achieve 3 consecutive black blocks in less than 1 operation.
+Therefore, we return 1. */
+console.log(minimumRecolors(blocks2, k2));
