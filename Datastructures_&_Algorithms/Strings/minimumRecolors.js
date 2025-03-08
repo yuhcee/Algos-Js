@@ -14,6 +14,13 @@
  * Return *the **minimum** number of operations needed such that there is at least
  * **one** occurrence of k consecutive black blocks*.
  *
+ * **Constraints:**
+ *
+ * - `n == blocks.length`
+ * - `1 <= n <= 100`
+ * - `blocks[i]` is either `'W'` or `'B'`.
+ * - `1 <= k <= n`
+ *
  * @param {string} blocks
  * @param {number} k
  * @return {number}
