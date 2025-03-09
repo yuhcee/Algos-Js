@@ -62,3 +62,8 @@ const numberOfAlternatingGroups = function (colors, k) {
 
     return result;
 };
+
+const colors = [0, 1, 0, 1, 0],
+    k = 3;
+// Output: 3
+console.log(numberOfAlternatingGroups(colors, k));
