@@ -16,6 +16,12 @@
  * **Note** that since colors represents a **circle**, the **first** and the **last**
  * tiles are considered to be next to each other.
  *
+ * **Constraints:**
+ *
+ * - `3 <= colors.length <= 105`
+ * - `0 <= colors[i] <= 1`
+ * - `3 <= k <= colors.length`
+ *
  * @param {number[]} colors
  * @param {number} k
  * @return {number}
