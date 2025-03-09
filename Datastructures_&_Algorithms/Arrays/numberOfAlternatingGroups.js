@@ -72,3 +72,8 @@ const colors1 = [0, 1, 0, 0, 1, 0, 1],
     k1 = 6;
 // Output: 2
 console.log(numberOfAlternatingGroups(colors1, k1));
+
+const colors2 = [1, 1, 0, 1],
+    k2 = 4;
+// Output: 0
+console.log(numberOfAlternatingGroups(colors2, k2));
