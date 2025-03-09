@@ -26,4 +26,39 @@
  * @param {number} k
  * @return {number}
  */
-const numberOfAlternatingGroups = function (colors, k) {};
+const numberOfAlternatingGroups = function (colors, k) {
+    const n = colors.length;
+    // Extend the array by appending the first k-1 elements
+    const extendedColors = colors.concat(colors.slice(0, k - 1));
+    let result = 0;
+    let count = 0;
+
+    // Initialize count for the first window (positions 0 to k-1)
+    for (let j = 0; j < k - 1; j++) {
+        if (extendedColors[j] === extendedColors[j + 1]) {
+            count++;
+        }
+    }
+    // Check if the first window is alternating
+    if (count === 0) {
+        result++;
+    }
+
+    // Slide the window from position 1 to n-1
+    for (let i = 1; i < n; i++) {
+        // Remove the pair that leaves the window (j = i-1)
+        if (extendedColors[i - 1] === extendedColors[i]) {
+            count--;
+        }
+        // Add the new pair that enters the window (j = i+k-2)
+        if (extendedColors[i + k - 2] === extendedColors[i + k - 1]) {
+            count++;
+        }
+        // Check if the current window is alternating
+        if (count === 0) {
+            result++;
+        }
+    }
+
+    return result;
+};
