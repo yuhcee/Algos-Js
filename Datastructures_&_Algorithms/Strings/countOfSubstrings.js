@@ -74,3 +74,9 @@ const word = 'aeioqq',
 // Output: 0
 // Explanation: There is no substring with every vowel.
 console.log(countOfSubstrings(word, k));
+
+const word1 = 'aeiou',
+    k1 = 0;
+// Output: 1
+// Explanation: The only substring with every vowel and zero consonants is word[0..4], which is "aeiou".
+console.log(countOfSubstrings(word1, k1));
