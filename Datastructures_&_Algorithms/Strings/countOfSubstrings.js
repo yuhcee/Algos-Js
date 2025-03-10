@@ -68,3 +68,9 @@ const countOfSubstrings = function (word, k) {
     // Step 4: Compute substrings with exactly k consonants
     return k === 0 ? countWithAtMostM(0) : countWithAtMostM(k) - countWithAtMostM(k - 1);
 };
+
+const word = 'aeioqq',
+    k = 1;
+// Output: 0
+// Explanation: There is no substring with every vowel.
+console.log(countOfSubstrings(word, k));
