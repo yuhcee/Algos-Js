@@ -80,3 +80,13 @@ const word1 = 'aeiou',
 // Output: 1
 // Explanation: The only substring with every vowel and zero consonants is word[0..4], which is "aeiou".
 console.log(countOfSubstrings(word1, k1));
+
+const word2 = 'ieaouqqieaouqq',
+    k2 = 1;
+Output: 3;
+/* Explanation: The substrings with every vowel and one consonant are:
+word[0..5], which is "ieaouq".
+word[6..11], which is "qieaou".
+word[7..12], which is "ieaouq".
+ */
+console.log(countOfSubstrings(word2, k2));
