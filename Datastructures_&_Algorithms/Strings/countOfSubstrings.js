@@ -6,6 +6,12 @@
  * Return the total number of substrings of `word` that contain every vowel (`'a'`,
  * `'e'`, `'i'`, `'o'`, and `'u'`) **at least** once and **exactly** `k` consonants.
  *
+ * **Constraints:**
+ *
+ * - `5 <= word.length <= 2 * 105`
+ * - `word` consists only of lowercase English letters.
+ * - `0 <= k <= word.length - 5`
+ *
  * @param {string} word
  * @param {number} k
  * @return {number}
