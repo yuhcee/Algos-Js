@@ -40,3 +40,7 @@ const nums1 = [-3, -2, -1, 0, 0, 1, 2];
 // Example 3:
 console.log(maximumCount(nums1));
 
+const nums2 = [5, 20, 66, 1314];
+// Output: 4
+// Explanation: There are 4 positive integers and 0 negative integers. The maximum count among them is 4.
+console.log(maximumCount(nums2));
