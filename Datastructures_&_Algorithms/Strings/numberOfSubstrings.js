@@ -45,3 +45,8 @@ const s = 'abcabc';
 // Output: 10
 // Explanation: The substrings containing at least one occurrence of the characters a, b and c are "abc", "abca", "abcab", "abcabc", "bca", "bcab", "bcabc", "cab", "cabc" and "abc" (again).
 console.log(numberOfSubstrings(s));
+
+const s1 = 'aaacb';
+// Output: 3
+// Explanation: The substrings containing at least one occurrence of the characters a, b and c are "aaacb", "aacb" and "acb".
+console.log(numberOfSubstrings(s1));
