@@ -27,3 +27,9 @@ const maximumCount = function (nums) {
     }
     return Math.max(negativeCount, positiveCount);
 };
+
+const nums = [-2, -1, -1, 1, 2, 3];
+// Output: 3
+// Explanation: There are 3 positive integers and 3 negative integers. The maximum count among them is 3.
+// Example 2:
+console.log(maximumCount(nums));
