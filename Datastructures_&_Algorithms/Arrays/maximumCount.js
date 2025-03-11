@@ -9,6 +9,12 @@
  *
  * **Note** that `0` is neither positive nor negative.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 2000`
+ * - `-2000 <= nums[i] <= 2000`
+ * - `nums` is sorted in a **non-decreasing** order.
+ *
  * @param {number[]} nums
  * @return {number}
  */
