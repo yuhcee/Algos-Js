@@ -109,3 +109,13 @@ Decrement values at indices [0, 1, 2] by [1, 1, 0] respectively.
 The array will become [3, 0, 0, 0], which is not a Zero Array.
  */
 console.log(minZeroArray(nums1, queries1));
+
+const nums2 = [1, 2, 3, 4, 5],
+    queries2 = [
+        [0, 4, 1],
+        [0, 4, 2],
+        [0, 4, 3],
+        [0, 4, 4],
+        [0, 4, 5],
+    ];
+console.log(minZeroArray(nums2, queries2));
