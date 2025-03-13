@@ -26,4 +26,52 @@
  * @param {number[][]} queries
  * @return {number}
  */
-const minZeroArray = function (nums, queries) {};
+const minZeroArray = function (nums, queries) {
+    const n = nums.length;
+    const q = queries.length;
+
+    // If nums is already all zero, no query is needed.
+    if (nums.every((x) => x === 0)) return 0;
+
+    // Function to check if after processing first k queries,
+    // each index i has total capacity (from queries) >= nums[i]
+    const isFeasible = (k) => {
+        // Create a difference array for range updates, length n+1
+        let diff = new Array(n + 1).fill(0);
+
+        // Process first k queries
+        for (let j = 0; j < k; j++) {
+            const [l, r, val] = queries[j];
+            diff[l] += val;
+            if (r + 1 < n) {
+                diff[r + 1] -= val;
+            }
+        }
+
+        // Convert the difference array to a prefix sum (capacity array)
+        let sum = 0,
+            minDiff = Infinity;
+        for (let i = 0; i < n; i++) {
+            sum += diff[i];
+            // difference = capacity - required amount
+            minDiff = Math.min(minDiff, sum - nums[i]);
+        }
+        return minDiff >= 0;
+    };
+
+    // Binary search for minimal k in [0, q]
+    let low = 0,
+        high = q,
+        ans = -1;
+    while (low <= high) {
+        let mid = Math.floor((low + high) / 2);
+        if (isFeasible(mid)) {
+            ans = mid;
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    return ans;
+};
