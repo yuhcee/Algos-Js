@@ -13,6 +13,15 @@
  * Return the **minimum** possible **non-negative** value of `k`, such that after processing the first `k` queries
  * in **sequence**, nums becomes a **Zero Array**. If no such `k` exists, return -1.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `0 <= nums[i] <= 5 * 105`
+ * - `1 <= queries.length <= 105`
+ * - `queries[i].length == 3`
+ * - `0 <= li <= ri < nums.length`
+ * - `1 <= vali <= 5`
+ *
  * @param {number[]} nums
  * @param {number[][]} queries
  * @return {number}
