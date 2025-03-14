@@ -11,6 +11,12 @@
  *
  * Return the **maximum number of candies** each child can get.
  *
+ * **Constraints:**
+ *
+ * - `1 <= candies.length <= 105`
+ * - `1 <= candies[i] <= 107`
+ * - `1 <= k <= 1012`
+ *
  * @param {number[]} candies
  * @param {number} k
  * @return {number}
