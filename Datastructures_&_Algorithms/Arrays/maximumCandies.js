@@ -21,4 +21,27 @@
  * @param {number} k
  * @return {number}
  */
-const maximumCandies = function (candies, k) {};
+const maximumCandies = function (candies, k) {
+    let lo = 1;
+    let hi = Math.max(...candies);
+    let ans = 0;
+
+    while (lo <= hi) {
+        let mid = Math.floor((lo + hi) / 2);
+        let count = 0;
+        // Calculate total number of sub-piles of size mid
+        for (let candy of candies) {
+            count += Math.floor(candy / mid);
+        }
+
+        // If we can form at least k piles, mid is a valid candidate.
+        if (count >= k) {
+            ans = mid;
+            lo = mid + 1; // Try for a larger x
+        } else {
+            hi = mid - 1; // Try a smaller x
+        }
+    }
+
+    return ans;
+};
