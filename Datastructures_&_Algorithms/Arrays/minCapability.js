@@ -66,3 +66,8 @@ There are three ways to rob at least 2 houses:
 - Rob the houses at indices 1 and 3. Capability is max(nums[1], nums[3]) = 9.
 Therefore, we return min(5, 9, 9) = 5. */
 console.log(minCapability(nums, k));
+
+const nums1 = [2,7,9,3,1], k1 = 2
+// Output: 2
+// Explanation: There are 7 ways to rob the houses. The way which leads to minimum capability is to rob the house at index 0 and 4. Return max(nums[0], nums[4]) = 2.
+console.log(minCapability(nums1, k1));
