@@ -14,6 +14,12 @@
  * 
  * Return the **minimum** capability of the robber out of all the possible ways to steal at least `k` houses.
  * 
+ * **Constraints:**
+ * 
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 109`
+ * - `1 <= k <= (nums.length + 1)/2`
+ * 
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
