@@ -59,3 +59,13 @@ const ranks = [4, 2, 3, 1],
 - The fourth mechanic will repair four cars. The time required is 1 * 4 * 4 = 16 minutes.
 It can be proved that the cars cannot be repaired in less than 16 minutes.​​​​​ */
 console.log(repairCars(ranks, cars));
+
+const ranks1 = [5, 1, 8],
+    cars1 = 6;
+// Output: 16
+/* Explanation: 
+- The first mechanic will repair one car. The time required is 5 * 1 * 1 = 5 minutes.
+- The second mechanic will repair four cars. The time required is 1 * 4 * 4 = 16 minutes.
+- The third mechanic will repair one car. The time required is 8 * 1 * 1 = 8 minutes.
+It can be proved that the cars cannot be repaired in less than 16 minutes. */
+console.log(repairCars(ranks1, cars1));
