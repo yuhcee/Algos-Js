@@ -20,4 +20,31 @@
  * @param {number} cars
  * @return {number}
  */
-const repairCars = function (ranks, cars) {};
+const repairCars = function (ranks, cars) {
+    let lo = 0;
+    let hi = Math.max(...ranks) * cars * cars; // Upper bound on time
+    let ans = hi;
+
+    // Function to check if time T is sufficient to repair at least 'cars' cars.
+    const canRepair = (T) => {
+        let totalCars = 0;
+        for (let r of ranks) {
+            totalCars += Math.floor(Math.sqrt(T / r));
+            if (totalCars >= cars) return true;
+        }
+        return totalCars >= cars;
+    };
+
+    // Binary search for the minimal time T
+    while (lo <= hi) {
+        let mid = Math.floor((lo + hi) / 2);
+        if (canRepair(mid)) {
+            ans = mid;
+            hi = mid - 1;
+        } else {
+            lo = mid + 1;
+        }
+    }
+
+    return ans;
+};
