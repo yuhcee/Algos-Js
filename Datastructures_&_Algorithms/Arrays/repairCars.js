@@ -10,6 +10,12 @@
  *
  * **Note:** All the mechanics can repair the cars simultaneously.
  *
+ * **Constraints:**
+ *
+ * - `1 <= ranks.length <= 105`
+ * - `1 <= ranks[i] <= 100`
+ * - `1 <= cars <= 106`
+ *
  * @param {number[]} ranks
  * @param {number} cars
  * @return {number}
