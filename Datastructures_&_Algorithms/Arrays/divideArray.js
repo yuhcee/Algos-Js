@@ -10,6 +10,12 @@
  *
  * Return *`true` if nums can be divided into `n` pairs, otherwise return `false`*.
  *
+ * **Constraints:**
+ *
+ * - `nums.length == 2 * n`
+ * - `1 <= n <= 500`
+ * - `1 <= nums[i] <= 500`
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
