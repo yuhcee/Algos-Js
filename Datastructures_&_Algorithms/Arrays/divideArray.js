@@ -49,3 +49,9 @@ const nums1 = [1, 2, 3, 4];
 /* Explanation: 
 There is no way to divide nums into 4 / 2 = 2 pairs such that the pairs satisfy every condition. */
 console.log(divideArray(nums1));
+
+const nums2 = [1, 1, 1, 1, 2, 2, 2, 2];
+// Output: true
+/* Explanation:
+If nums is divided into the pairs (1, 1), (1, 1), (2, 2), and (2, 2), it will satisfy all the conditions. */
+console.log(divideArray(nums2));
