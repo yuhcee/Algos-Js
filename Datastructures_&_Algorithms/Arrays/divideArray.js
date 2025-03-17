@@ -19,4 +19,20 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-const divideArray = function (nums) {};
+const divideArray = function (nums) {
+    let count = new Array(501).fill(0); // Since 1 ≤ nums[i] ≤ 500
+
+    // Count occurrences of each number
+    for (let num of nums) {
+        count[num]++;
+    }
+
+    // Check if all counts are even
+    for (let freq of count) {
+        if (freq % 2 !== 0) {
+            return false;
+        }
+    }
+
+    return true;
+};
