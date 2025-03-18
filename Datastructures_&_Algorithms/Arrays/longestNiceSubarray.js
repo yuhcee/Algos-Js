@@ -50,3 +50,8 @@ const nums = [1, 3, 8, 48, 10];
 - 8 AND 48 = 0.
 It can be proven that no longer nice subarray can be obtained, so we return 3. */
 console.log(longestNiceSubarray(nums));
+
+const nums1 = [3, 1, 5, 11, 13];
+// Output: 1
+// Explanation: The length of the longest nice subarray is 1. Any subarray of length 1 can be chosen.
+console.log(longestNiceSubarray(nums1));
