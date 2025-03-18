@@ -12,6 +12,11 @@
  *
  * **Note** that subarrays of length 1 are always considered nice.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 109`
+ *
  * @param {number[]} nums
  * @return {number}
  */
