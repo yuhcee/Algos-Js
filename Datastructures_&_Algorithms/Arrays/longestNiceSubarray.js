@@ -41,3 +41,12 @@ const longestNiceSubarray = function (nums) {
 
     return maxLen;
 };
+
+const nums = [1, 3, 8, 48, 10];
+// Output: 3
+/* Explanation: The longest nice subarray is [3,8,48]. This subarray satisfies the conditions:
+- 3 AND 8 = 0.
+- 3 AND 48 = 0.
+- 8 AND 48 = 0.
+It can be proven that no longer nice subarray can be obtained, so we return 3. */
+console.log(longestNiceSubarray(nums));
