@@ -55,3 +55,7 @@ const nums1 = [3, 1, 5, 11, 13];
 // Output: 1
 // Explanation: The length of the longest nice subarray is 1. Any subarray of length 1 can be chosen.
 console.log(longestNiceSubarray(nums1));
+
+const nums2 = [2, 4, 6, 8, 10];
+// Output: 2
+console.log(longestNiceSubarray(nums2));
