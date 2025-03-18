@@ -20,4 +20,24 @@
  * @param {number[]} nums
  * @return {number}
  */
-const longestNiceSubarray = function (nums) {};
+const longestNiceSubarray = function (nums) {
+    let maxLen = 0;
+    let left = 0;
+    let occupied = 0;
+
+    for (let right = 0; right < nums.length; right++) {
+        // Shrink window while there's a conflict
+        while ((nums[right] & occupied) !== 0) {
+            occupied &= ~nums[left];
+            left++;
+        }
+
+        // Include the current number
+        occupied |= nums[right];
+
+        // Update maximum length
+        maxLen = Math.max(maxLen, right - left + 1);
+    }
+
+    return maxLen;
+};
