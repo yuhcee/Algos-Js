@@ -12,6 +12,11 @@
  * Return the **minimum** number of operations required to make all elements in `nums` equal to 1. If it is impossible,
  * return `-1`.
  *
+ * **Constraints:**
+ *
+ * - `3 <= nums.length <= 105`
+ * - `0 <= nums[i] <= 1`
+ *
  * @param {number[]} nums
  * @return {number}
  */
