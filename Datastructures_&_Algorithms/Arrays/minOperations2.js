@@ -51,3 +51,8 @@ Choose the elements at indices 1, 2 and 3. The resulting array is nums = [1,1,1,
 Choose the elements at indices 3, 4 and 5. The resulting array is nums = [1,1,1,1,1,1].
  */
 console.log(minOperations(nums));
+
+const nums1 = [0, 1, 1, 1];
+// Output: -1
+// Explanation: It is impossible to make all elements equal to 1.
+console.log(minOperations(nums1));
