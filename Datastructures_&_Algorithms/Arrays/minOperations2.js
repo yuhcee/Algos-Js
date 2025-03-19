@@ -20,4 +20,24 @@
  * @param {number[]} nums
  * @return {number}
  */
-const minOperations = function (nums) {};
+const minOperations = function (nums) {
+    let n = nums.length;
+    let operations = 0;
+
+    for (let i = 0; i <= n - 3; i++) {
+        if (nums[i] === 0) {
+            // Flip the current 3 elements
+            nums[i] ^= 1;
+            nums[i + 1] ^= 1;
+            nums[i + 2] ^= 1;
+            operations++;
+        }
+    }
+
+    // If any zero remains, return -1
+    for (let num of nums) {
+        if (num === 0) return -1;
+    }
+
+    return operations;
+};
