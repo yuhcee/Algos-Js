@@ -41,3 +41,13 @@ const minOperations = function (nums) {
 
     return operations;
 };
+
+const nums = [0, 1, 1, 1, 0, 0];
+// Output: 3
+/* Explanation:
+We can do the following operations:
+Choose the elements at indices 0, 1 and 2. The resulting array is nums = [1,0,0,1,0,0].
+Choose the elements at indices 1, 2 and 3. The resulting array is nums = [1,1,1,0,0,0].
+Choose the elements at indices 3, 4 and 5. The resulting array is nums = [1,1,1,1,1,1].
+ */
+console.log(minOperations(nums));
