@@ -101,3 +101,16 @@ Explanation:
 To achieve the cost of 1 in the first query, we need to move on the following edges: 0->1 (weight 7), 1->2 (weight 1), 2->1 (weight 1), 1->3 (weight 7).
 In the second query, there is no walk between nodes 3 and 4, so the answer is -1. */
 console.log(minimumCost(n, edges, query));
+
+const n1 = 3,
+    edges1 = [
+        [0, 2, 7],
+        [0, 1, 15],
+        [1, 2, 6],
+        [1, 2, 1],
+    ],
+    query1 = [[1, 2]];
+/* Output: [0]
+Explanation:
+To achieve the cost of 0 in the first query, we need to move on the following edges: 1->2 (weight 1), 2->1 (weight 6), 1->2 (weight 1). */
+console.log(minimumCost(n1, edges1, query1));
