@@ -38,4 +38,50 @@
  * @param {number[][]} query
  * @return {number[]}
  */
-const minimumCost = function (n, edges, query) {};
+const minimumCost = function (n, edges, query) {
+    // Initialize DSU arrays
+    let parent = Array.from({ length: n }, (_, i) => i);
+    let rank = Array(n).fill(1);
+    let component_AND = Array(n).fill(-1); // -1 acts as identity for &
+
+    // Find function with path compression
+    function find(x) {
+        if (parent[x] !== x) {
+            parent[x] = find(parent[x]); // Path compression
+        }
+        return parent[x];
+    }
+
+    // Process all edges to build components and compute AND values
+    for (let [u, v, w] of edges) {
+        let rootU = find(u);
+        let rootV = find(v);
+        if (rootU === rootV) {
+            // Same component: update AND with current edge weight
+            component_AND[rootU] &= w;
+        } else {
+            // Different components: union by rank
+            if (rank[rootU] > rank[rootV]) {
+                parent[rootV] = rootU;
+                component_AND[rootU] &= component_AND[rootV] & w;
+            } else if (rank[rootU] < rank[rootV]) {
+                parent[rootU] = rootV;
+                component_AND[rootV] &= component_AND[rootU] & w;
+            } else {
+                parent[rootU] = rootV;
+                component_AND[rootV] &= component_AND[rootU] & w;
+                rank[rootV]++;
+            }
+        }
+    }
+
+    // Process queries
+    let answer = [];
+    for (let [s, t] of query) {
+        let rootS = find(s);
+        let rootT = find(t);
+        answer.push(rootS === rootT ? component_AND[rootS] : -1);
+    }
+
+    return answer;
+};
