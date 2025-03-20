@@ -20,6 +20,19 @@
  *
  * Return the array `answer`, where `answer[i]` denotes the **minimum** cost of a walk for query `i`.
  *
+ * **Constraints:**
+ *
+ * - `2 <= n <= 105`
+ * - `0 <= edges.length <= 105`
+ * - `edges[i].length == 3`
+ * - `0 <= ui, vi <= n - 1`
+ * - `ui != vi`
+ * - `0 <= wi <= 105`
+ * - `1 <= query.length <= 105`
+ * - `query[i].length == 2`
+ * - `0 <= si, ti <= n - 1`
+ * - `si != ti`
+ *
  * @param {number} n
  * @param {number[][]} edges
  * @param {number[][]} query
