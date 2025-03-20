@@ -114,3 +114,15 @@ const n1 = 3,
 Explanation:
 To achieve the cost of 0 in the first query, we need to move on the following edges: 1->2 (weight 1), 2->1 (weight 6), 1->2 (weight 1). */
 console.log(minimumCost(n1, edges1, query1));
+
+const n2 = 5,
+    edges2 = [],
+    query2 = [
+        [0, 1],
+        [1, 2],
+        [2, 3],
+        [3, 4],
+    ];
+// Output: [-1,-1,-1,-1]
+// Explanation: There is no edge in the graph, so there is no walk between any two nodes.
+console.log(minimumCost(n2, edges2, query2));
