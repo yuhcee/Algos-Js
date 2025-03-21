@@ -134,3 +134,17 @@ const recipes1 = ['bread', 'sandwich'],
 We can create "bread" since we have the ingredients "yeast" and "flour".
 We can create "sandwich" since we have the ingredient "meat" and can create the ingredient "bread". */
 console.log(findAllRecipes(recipes1, ingredients1, supplies1));
+
+const recipes2 = ['bread', 'sandwich', 'burger'],
+    ingredients2 = [
+        ['yeast', 'flour'],
+        ['bread', 'meat'],
+        ['sandwich', 'meat', 'bread'],
+    ],
+    supplies2 = ['yeast', 'flour', 'meat'];
+// Output: ["bread","sandwich","burger"]
+E; /* xplanation:
+We can create "bread" since we have the ingredients "yeast" and "flour".
+We can create "sandwich" since we have the ingredient "meat" and can create the ingredient "bread".
+We can create "burger" since we have the ingredient "meat" and can create the ingredients "bread" and "sandwich". */
+console.log(findAllRecipes(recipes2, ingredients2, supplies2));
