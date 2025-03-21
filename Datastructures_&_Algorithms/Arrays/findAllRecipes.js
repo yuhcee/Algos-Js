@@ -13,6 +13,16 @@
  *
  * Note that two recipes may contain each other in their ingredients.
  *
+ * **Constraints:**
+ *
+ * - `n == recipes.length == ingredients.length`
+ * - `1 <= n <= 100`
+ * - `1 <= ingredients[i].length, supplies.length <= 100`
+ * - `1 <= recipes[i].length, ingredients[i][j].length, supplies[k].length <= 10`
+ * - `recipes[i], ingredients[i][j]`, and `supplies[k]` consist only of lowercase English letters.
+ * - All the values of `recipes` and `supplies` combined are unique.
+ * - Each `ingredients[i]` does not contain any duplicate values.
+ *
  * @param {string[]} recipes
  * @param {string[][]} ingredients
  * @param {string[]} supplies
