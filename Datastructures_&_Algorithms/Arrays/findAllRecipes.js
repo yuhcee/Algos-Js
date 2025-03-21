@@ -28,4 +28,90 @@
  * @param {string[]} supplies
  * @return {string[]}
  */
-const findAllRecipes = function (recipes, ingredients, supplies) {};
+const findAllRecipes = function (recipes, ingredients, supplies) {
+    const n = recipes.length;
+    const suppliesSet = new Set(supplies); // For O(1) lookup of supplies
+    const recipeSet = new Set(recipes); // For O(1) lookup of recipes
+
+    // Build graph: ingredient recipe -> dependent recipes
+    const graph = new Map();
+    const indegree = new Map();
+    const ingredientMap = new Map(); // Store ingredients for each recipe
+    for (let i = 0; i < n; i++) {
+        const recipe = recipes[i];
+        graph.set(recipe, []);
+        indegree.set(recipe, 0);
+        ingredientMap.set(recipe, ingredients[i]);
+    }
+
+    // Construct graph and compute in-degree
+    for (let i = 0; i < n; i++) {
+        const recipe = recipes[i];
+        const ings = ingredients[i];
+        for (const ing of ings) {
+            if (recipeSet.has(ing)) {
+                graph.get(ing).push(recipe);
+                indegree.set(recipe, (indegree.get(recipe) || 0) + 1);
+            }
+        }
+    }
+
+    // Initialize queue with recipes that have no recipe dependencies
+    // and all non-recipe ingredients in supplies
+    const queue = [];
+    const made = new Set(); // Track made recipes
+    for (let i = 0; i < n; i++) {
+        const recipe = recipes[i];
+        if (indegree.get(recipe) === 0) {
+            const ings = ingredients[i];
+            let canMake = true;
+            for (const ing of ings) {
+                if (!recipeSet.has(ing) && !suppliesSet.has(ing)) {
+                    canMake = false;
+                    break;
+                }
+            }
+            if (canMake) {
+                queue.push(recipe);
+            }
+        }
+    }
+
+    // BFS to process recipes
+    const result = [];
+    while (queue.length > 0) {
+        const current = queue.shift();
+        result.push(current);
+        made.add(current);
+
+        // Process dependent recipes
+        for (const dependent of graph.get(current)) {
+            indegree.set(dependent, indegree.get(dependent) - 1);
+            if (indegree.get(dependent) === 0) {
+                // Check if all ingredients are satisfied
+                const ings = ingredientMap.get(dependent);
+                let canMake = true;
+                for (const ing of ings) {
+                    if (!recipeSet.has(ing)) {
+                        // Non-recipe ingredient must be in supplies
+                        if (!suppliesSet.has(ing)) {
+                            canMake = false;
+                            break;
+                        }
+                    } else {
+                        // Recipe ingredient must be made
+                        if (!made.has(ing)) {
+                            canMake = false;
+                            break;
+                        }
+                    }
+                }
+                if (canMake) {
+                    queue.push(dependent);
+                }
+            }
+        }
+    }
+
+    return result;
+};
