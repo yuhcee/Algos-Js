@@ -115,3 +115,10 @@ const findAllRecipes = function (recipes, ingredients, supplies) {
 
     return result;
 };
+
+const recipes = ['bread'],
+    ingredients = [['yeast', 'flour']],
+    supplies = ['yeast', 'flour', 'corn'];
+// Output: ["bread"]
+// Explanation: We can create "bread" since we have the ingredients "yeast" and "flour".
+console.log(findAllRecipes(recipes, ingredients, supplies));
