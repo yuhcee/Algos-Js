@@ -102,3 +102,14 @@ const n1 = 6,
 // Output: 1
 /* Explanation: The component containing vertices 0, 1, and 2 is complete since there is an edge between every pair of two vertices. On the other hand, the component containing vertices 3, 4, and 5 is not complete since there is no edge between vertices 4 and 5. Thus, the number of complete components in this graph is 1. */
 console.log(countCompleteComponents(n1, edges1));
+
+const n2 = 5,
+    edges2 = [
+        [0, 1],
+        [1, 2],
+        [2, 3],
+        [3, 4],
+    ];
+// Output: 0
+// Explanation: None of the components of this graph are complete.
+console.log(countCompleteComponents(n2, edges2));
