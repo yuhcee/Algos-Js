@@ -79,3 +79,8 @@ const countCompleteComponents = function (n, edges) {
 
     return completeCount;
 };
+
+const n = 6, edges = [[0,1],[0,2],[1,2],[3,4]]
+// Output: 3
+// Explanation: From the picture above, one can see that all of the components of this graph are complete.
+console.log(countCompleteComponents(n, edges));
