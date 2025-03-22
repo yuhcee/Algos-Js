@@ -25,4 +25,57 @@
  * @param {number[][]} edges
  * @return {number}
  */
-const countCompleteComponents = function (n, edges) {};
+const countCompleteComponents = function (n, edges) {
+    let adj = new Map();
+
+    // Initialize adjacency list for each node
+    for (let i = 0; i < n; i++) {
+        adj.set(i, new Set());
+    }
+
+    // Fill adjacency list
+    for (let [a, b] of edges) {
+        adj.get(a).add(b);
+        adj.get(b).add(a);
+    }
+
+    let visited = new Set();
+    let completeCount = 0;
+
+    // Helper function to explore a component using DFS
+    const dfs = (node, componentNodes) => {
+        visited.add(node);
+        componentNodes.push(node);
+        for (let neighbor of adj.get(node)) {
+            if (!visited.has(neighbor)) {
+                dfs(neighbor, componentNodes);
+            }
+        }
+    };
+
+    // Explore each component
+    for (let i = 0; i < n; i++) {
+        if (!visited.has(i)) {
+            let componentNodes = [];
+            dfs(i, componentNodes);
+
+            let size = componentNodes.length;
+            let edgeCount = 0;
+
+            // Count edges in this component
+            for (let node of componentNodes) {
+                edgeCount += adj.get(node).size;
+            }
+
+            // Each edge was counted twice, so divide by 2
+            edgeCount /= 2;
+
+            // Check if component is complete
+            if (edgeCount === (size * (size - 1)) / 2) {
+                completeCount++;
+            }
+        }
+    }
+
+    return completeCount;
+};
