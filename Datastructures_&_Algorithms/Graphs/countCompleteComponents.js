@@ -12,6 +12,15 @@
  *
  * A connected component is said to be **complete** if there exists an edge between every pair of its vertices.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 50`
+ * - `0 <= edges.length <= n * (n - 1) / 2`
+ * - `edges[i].length == 2`
+ * - `0 <= ai, bi <= n - 1`
+ * - `ai != bi`
+ * - There are no repeated edges.
+ *
  * @param {number} n
  * @param {number[][]} edges
  * @return {number}
