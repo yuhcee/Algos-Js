@@ -80,7 +80,25 @@ const countCompleteComponents = function (n, edges) {
     return completeCount;
 };
 
-const n = 6, edges = [[0,1],[0,2],[1,2],[3,4]]
+const n = 6,
+    edges = [
+        [0, 1],
+        [0, 2],
+        [1, 2],
+        [3, 4],
+    ];
 // Output: 3
 // Explanation: From the picture above, one can see that all of the components of this graph are complete.
 console.log(countCompleteComponents(n, edges));
+
+const n1 = 6,
+    edges1 = [
+        [0, 1],
+        [0, 2],
+        [1, 2],
+        [3, 4],
+        [3, 5],
+    ];
+// Output: 1
+/* Explanation: The component containing vertices 0, 1, and 2 is complete since there is an edge between every pair of two vertices. On the other hand, the component containing vertices 3, 4, and 5 is not complete since there is no edge between vertices 4 and 5. Thus, the number of complete components in this graph is 1. */
+console.log(countCompleteComponents(n1, edges1));
