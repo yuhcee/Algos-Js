@@ -97,3 +97,16 @@ const n1 = 2,
     roads1 = [[1, 0, 10]];
 // Output: 1
 // Explanation: There is only one way to go from intersection 0 to intersection 1, and it takes 10 minutes.
+console.log(countPaths(n1, roads1));
+
+const n2 = 4,
+    roads2 = [
+        [1, 0, 10],
+        [2, 0, 10],
+        [3, 0, 1],
+        [3, 2, 1],
+    ];
+// Output: 1
+// Explanation: There are two ways to go from intersection 0 to intersection 3, and they take 10 or 11 minutes.
+// However, since the time it takes to travel is the same, there is only one way to get there in the shortest amount of time.
+console.log(countPaths(n2, roads2));
