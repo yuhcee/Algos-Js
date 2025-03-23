@@ -12,6 +12,17 @@
  * Return *the **number of ways** you can arrive at your destination in the **shortest amount of time**.* Since the
  * answer may be large, return it **modulo** `109 + 7`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= n <= 200`
+ * - `n - 1 <= roads.length <= n * (n - 1) / 2`
+ * - `roads[i].length == 3`
+ * - `0 <= ui, vi <= n - 1`
+ * - `1 <= timei <= 109`
+ * - `ui != vi`
+ * - There is at most one road connecting any two intersections.
+ * - You can reach any intersection from any other intersection.
+ *
  * @param {number} n
  * @param {number[][]} roads
  * @return {number}
