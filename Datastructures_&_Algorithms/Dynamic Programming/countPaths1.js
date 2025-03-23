@@ -27,4 +27,46 @@
  * @param {number[][]} roads
  * @return {number}
  */
-const countPaths = function (n, roads) {};
+const countPaths = function (n, roads) {
+    const mod = 1e9 + 7;
+
+    // Build graph as an adjacency list.
+    const graph = Array.from({ length: n }, () => []);
+    for (const [u, v, t] of roads) {
+        graph[u].push([v, t]);
+        graph[v].push([u, t]);
+    }
+
+    // Initialize distances and ways arrays.
+    const dist = Array(n).fill(Infinity);
+    const ways = Array(n).fill(0);
+    dist[0] = 0;
+    ways[0] = 1;
+
+    // Priority queue: we'll use a simple array and sort it.
+    // Each element is [distance, node].
+    const pq = [[0, 0]];
+
+    while (pq.length > 0) {
+        // Extract the node with the smallest distance.
+        pq.sort((a, b) => a[0] - b[0]);
+        const [d, u] = pq.shift();
+
+        // If this distance is outdated, skip.
+        if (d > dist[u]) continue;
+
+        // Relax edges out of u.
+        for (const [v, t] of graph[u]) {
+            const nd = d + t;
+            if (nd < dist[v]) {
+                dist[v] = nd;
+                ways[v] = ways[u];
+                pq.push([nd, v]);
+            } else if (nd === dist[v]) {
+                ways[v] = (ways[v] + ways[u]) % mod;
+            }
+        }
+    }
+
+    return ways[n - 1];
+};
