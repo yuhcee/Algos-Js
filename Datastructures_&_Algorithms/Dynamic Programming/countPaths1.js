@@ -92,3 +92,8 @@ The four ways to get there in 7 minutes are:
 - 0 ➝ 1 ➝ 2 ➝ 5 ➝ 6
 - 0 ➝ 1 ➝ 3 ➝ 5 ➝ 6 */
 console.log(countPaths(n, roads));
+
+const n1 = 2,
+    roads1 = [[1, 0, 10]];
+// Output: 1
+// Explanation: There is only one way to go from intersection 0 to intersection 1, and it takes 10 minutes.
