@@ -20,4 +20,33 @@
  * @param {number[][]} meetings
  * @return {number}
  */
-const countDays = function (days, meetings) {};
+const countDays = function (days, meetings) {
+    // Sort meetings by start time
+    meetings.sort((a, b) => a[0] - b[0]);
+
+    let totalMeetingDays = 0;
+    let currentStart = meetings[0][0];
+    let currentEnd = meetings[0][1];
+
+    // Merge overlapping intervals
+    for (let i = 1; i < meetings.length; i++) {
+        let [start, end] = meetings[i];
+        // Check if this meeting overlaps or touches the current interval
+        if (start <= currentEnd + 1) {
+            // Extend the current interval if needed
+            currentEnd = Math.max(currentEnd, end);
+        } else {
+            // Add the length of the current interval
+            totalMeetingDays += currentEnd - currentStart + 1;
+            // Start a new interval
+            currentStart = start;
+            currentEnd = end;
+        }
+    }
+
+    // Add the last interval's days
+    totalMeetingDays += currentEnd - currentStart + 1;
+
+    // Days without meetings is total days minus the days covered by meetings
+    return days - totalMeetingDays;
+};
