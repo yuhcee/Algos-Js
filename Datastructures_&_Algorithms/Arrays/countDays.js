@@ -60,3 +60,12 @@ const days = 10,
 // Output: 2
 // Explanation:There is no meeting scheduled on the 4th and 8th days.
 console.log(countDays(days, meetings));
+
+const days1 = 5,
+    meetings1 = [
+        [2, 4],
+        [1, 3],
+    ];
+// Output: 1
+// Explanation:There is no meeting scheduled on the 5th day.
+console.log(countDays(days1, meetings1));
