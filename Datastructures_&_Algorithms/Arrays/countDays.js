@@ -69,3 +69,9 @@ const days1 = 5,
 // Output: 1
 // Explanation:There is no meeting scheduled on the 5th day.
 console.log(countDays(days1, meetings1));
+
+const days2 = 6,
+    meetings2 = [[1, 6]];
+// Output: 0
+// Explanation:Meetings are scheduled for all working days.
+console.log(countDays(days2, meetings2));
