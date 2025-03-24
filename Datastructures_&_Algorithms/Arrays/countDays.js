@@ -50,3 +50,13 @@ const countDays = function (days, meetings) {
     // Days without meetings is total days minus the days covered by meetings
     return days - totalMeetingDays;
 };
+
+const days = 10,
+    meetings = [
+        [5, 7],
+        [1, 3],
+        [9, 10],
+    ];
+// Output: 2
+// Explanation:There is no meeting scheduled on the 4th and 8th days.
+console.log(countDays(days, meetings));
