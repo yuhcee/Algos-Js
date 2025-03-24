@@ -9,6 +9,13 @@
  *
  * **Note**: The meetings may overlap.
  *
+ * **Constraints:**
+ *
+ * - `1 <= days <= 109`
+ * - `1 <= meetings.length <= 105`
+ * - `meetings[i].length == 2`
+ * - `1 <= meetings[i][0] <= meetings[i][1] <= days`
+ *
  * @param {number} days
  * @param {number[][]} meetings
  * @return {number}
