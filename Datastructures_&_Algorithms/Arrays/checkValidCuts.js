@@ -49,3 +49,14 @@ function canCut(rectangles, axis) {
 
     return false;
 }
+
+const n = 5,
+    rectangles = [
+        [1, 0, 5, 2],
+        [0, 2, 2, 4],
+        [3, 2, 5, 3],
+        [0, 4, 4, 5],
+    ];
+// Output: true
+// Explanation: The grid is shown in the diagram. We can make horizontal cuts at y = 2 and y = 4. Hence, output is true.
+console.log(checkValidCuts(n, rectangles));
