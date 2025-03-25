@@ -72,3 +72,16 @@ const n1 = 4,
 /* Explanation:
 We can make vertical cuts at x = 2 and x = 3. Hence, output is true. */
 console.log(checkValidCuts(n1, rectangles1));
+
+const n2 = 4,
+    rectangles2 = [
+        [0, 2, 2, 4],
+        [1, 0, 3, 2],
+        [2, 2, 3, 4],
+        [3, 0, 4, 2],
+        [3, 2, 4, 4],
+    ];
+// Output: false
+/* Explanation:
+We cannot make two horizontal or two vertical cuts that satisfy the conditions. Hence, output is false. */
+console.log(checkValidCuts(n2, rectangles2));
