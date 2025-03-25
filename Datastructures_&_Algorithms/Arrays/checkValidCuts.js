@@ -16,6 +16,15 @@
  *
  * Return `true` if such cuts can be made; otherwise, return `false`.
  *
+ *
+ * **Constraints:**
+ *
+ * - `3 <= n <= 109`
+ * - `3 <= rectangles.length <= 105`
+ * - `0 <= rectangles[i][0] < rectangles[i][2] <= n`
+ * - `0 <= rectangles[i][1] < rectangles[i][3] <= n`
+ * - No two rectangles overlap.
+ *
  * @param {number} n
  * @param {number[][]} rectangles
  * @return {boolean}
