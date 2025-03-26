@@ -8,6 +8,14 @@
  *
  * Return the **minimum** number of operations to make the grid **uni-value**. If it is not possible, return `-1`.
  *
+ * **Constraints:
+ *
+ * - `m == grid.length`
+ * - `n == grid[i].length`
+ * - `1 <= m, n <= 105`
+ * - `1 <= m * n <= 105`
+ * - `1 <= x, grid[i][j] <= 104`
+ *
  * @param {number[][]} grid
  * @param {number} x
  * @return {number}
