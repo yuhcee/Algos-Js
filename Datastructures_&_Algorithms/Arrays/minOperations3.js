@@ -20,4 +20,27 @@
  * @param {number} x
  * @return {number}
  */
-const minOperations = function (grid, x) {};
+const minOperations = function (grid, x) {
+    // Flatten the grid
+    const arr = grid.flat();
+
+    // Check feasibility: all numbers must have the same remainder modulo x.
+    const base = arr[0] % x;
+    for (const num of arr) {
+        if (num % x !== base) {
+            return -1;
+        }
+    }
+
+    // Sort the flattened array to find the median.
+    arr.sort((a, b) => a - b);
+    const mid = arr[Math.floor(arr.length / 2)];
+
+    // Calculate the total number of operations needed.
+    let operations = 0;
+    for (const num of arr) {
+        operations += Math.abs(num - mid) / x;
+    }
+
+    return operations;
+};
