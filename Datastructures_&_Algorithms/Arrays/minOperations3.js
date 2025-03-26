@@ -57,3 +57,12 @@ const grid = [
 - Subtract x from 8 twice.
 A total of 4 operations were used. */
 console.log(minOperations(grid, x));
+
+const grid1 = [
+        [1, 5],
+        [2, 3],
+    ],
+    x1 = 1;
+// Output: 5
+// Explanation: We can make every element equal to 3.
+console.log(minOperations(grid1, x1));
