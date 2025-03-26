@@ -66,3 +66,12 @@ const grid1 = [
 // Output: 5
 // Explanation: We can make every element equal to 3.
 console.log(minOperations(grid1, x1));
+
+const grid2 = [
+        [1, 2],
+        [3, 4],
+    ],
+    x2 = 2;
+// Output: -1
+// Explanation: It is impossible to make every element equal.
+console.log(minOperations(grid2, x2));
