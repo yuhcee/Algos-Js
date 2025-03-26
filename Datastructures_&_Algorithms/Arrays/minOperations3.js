@@ -44,3 +44,16 @@ const minOperations = function (grid, x) {
 
     return operations;
 };
+
+const grid = [
+        [2, 4],
+        [6, 8],
+    ],
+    x = 2;
+// Output: 4
+/* Explanation: We can make every element equal to 4 by doing the following: 
+- Add x to 2 once.
+- Subtract x from 6 once.
+- Subtract x from 8 twice.
+A total of 4 operations were used. */
+console.log(minOperations(grid, x));
