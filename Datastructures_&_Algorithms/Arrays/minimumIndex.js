@@ -17,6 +17,12 @@
  *
  * Return the **minimum** index of a **valid split**. If no valid split exists, return `-1`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length <= 105`
+ * - `1 <= nums[i] <= 109`
+ * - `nums` has exactly one dominant element.
+ *
  * @param {number[]} nums
  * @return {number}
  */
