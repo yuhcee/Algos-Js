@@ -26,4 +26,41 @@
  * @param {number[]} nums
  * @return {number}
  */
-const minimumIndex = function (nums) {};
+const minimumIndex = function (nums) {
+    const n = nums.length;
+
+    // Find the dominant element (appears more than n/2 times)
+    let freq = new Map();
+    for (let num of nums) {
+        freq.set(num, (freq.get(num) || 0) + 1);
+    }
+
+    let dominant = null;
+    for (let [num, count] of freq.entries()) {
+        if (count > n / 2) {
+            dominant = num;
+            break;
+        }
+    }
+
+    if (dominant === null) return -1; // Shouldn't happen as per problem statement.
+
+    let total = freq.get(dominant); // Total occurrences of dominant element.
+    let leftCount = 0;
+
+    // Iterate through possible split indices (0 <= i < n - 1)
+    for (let i = 0; i < n - 1; i++) {
+        if (nums[i] === dominant) {
+            leftCount++;
+        }
+        let leftLength = i + 1;
+        let rightLength = n - leftLength;
+
+        // Check dominant condition for left and right subarrays.
+        if (leftCount > leftLength / 2 && total - leftCount > rightLength / 2) {
+            return i;
+        }
+    }
+
+    return -1;
+};
