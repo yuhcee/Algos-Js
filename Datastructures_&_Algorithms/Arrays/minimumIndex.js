@@ -82,3 +82,8 @@ In array [1,7,1,2,1], element 1 is dominant since it occurs thrice in the array 
 Both [2,1,3,1,1] and [1,7,1,2,1] have the same dominant element as nums, so this is a valid split.
 It can be shown that index 4 is the minimum index of a valid split. */
 console.log(minimumIndex(nums1));
+
+const nums2 = [3, 3, 3, 3, 7, 2, 2];
+// Output: -1
+// Explanation: It can be shown that there is no valid split.
+console.log(minimumIndex(nums2));
