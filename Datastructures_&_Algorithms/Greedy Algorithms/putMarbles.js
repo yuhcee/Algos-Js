@@ -63,3 +63,10 @@ The distribution [1],[3,5,1] results in the minimal score of (1+1) + (3+1) = 6.
 The distribution [1,3],[5,1], results in the maximal score of (1+3) + (5+1) = 10. 
 Thus, we return their difference 10 - 6 = 4. */
 console.log(putMarbles(weights, k));
+
+const weights1 = [1, 3],
+    k1 = 2;
+// Output: 0
+/* Explanation: The only distribution possible is [1],[3]. 
+Since both the maximal and minimal score are the same, we return 0. */
+console.log(putMarbles(weights1, k1));
