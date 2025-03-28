@@ -140,3 +140,12 @@ const grid1 = [
 // Output: [0]
 // Explanation: We can not get any points because the value of the top left cell is already greater than or equal to 3.
 console.log(maxPoints(grid1, queries1)); // [0]
+
+const grid2 = [
+        [1, 2],
+        [3, 4],
+    ],
+    queries2 = [2, 3, 4, 5];
+// Output: [1, 2, 3, 4]
+// For query 4, we can visit cells (0,0), (1,0), (0,1) and (1,1).
+console.log(maxPoints(grid2, queries2)); // [1, 2, 3, 4]
