@@ -70,3 +70,10 @@ const weights1 = [1, 3],
 /* Explanation: The only distribution possible is [1],[3]. 
 Since both the maximal and minimal score are the same, we return 0. */
 console.log(putMarbles(weights1, k1));
+
+const weights2 = [1, 5, 3, 2],
+    k2 = 3;
+// Output: 3
+/* Explanation: The only distribution possible is [1],[3]. 
+Since both the maximal and minimal score are the same, we return 0. */
+console.log(putMarbles(weights2, k2));
