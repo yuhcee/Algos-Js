@@ -14,8 +14,13 @@
  *
  * The **score** after distributing the marbles is the sum of the costs of all the `k` bags.
  *
- * Return the **difference** between the **maximum** and **minimum** scores among marble
- * distributions.
+ * Return *the **difference** between the **maximum** and **minimum** scores among marble
+ * distributions*.
+ *
+ * **Constraints:**
+ *
+ * - `1 <= k <= weights.length <= 105`
+ * - `1 <= weights[i] <= 109`
  *
  * @param {number[]} weights
  * @param {number} k
