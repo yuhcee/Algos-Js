@@ -131,3 +131,12 @@ const grid = [
 // Output: [5,8,1]
 // Explanation: The diagrams above show which cells we visit to get points for each query.
 console.log(maxPoints(grid, queries)); // [5, 8, 1]
+
+const grid1 = [
+        [5, 2, 1],
+        [1, 1, 2],
+    ],
+    queries1 = [3];
+// Output: [0]
+// Explanation: We can not get any points because the value of the top left cell is already greater than or equal to 3.
+console.log(maxPoints(grid1, queries1)); // [0]
