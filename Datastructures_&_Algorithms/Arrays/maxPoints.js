@@ -121,3 +121,13 @@ const maxPoints = function (grid, queries) {
 
     return res;
 };
+
+const grid = [
+        [1, 2, 3],
+        [2, 5, 7],
+        [3, 5, 1],
+    ],
+    queries = [5, 6, 2];
+// Output: [5,8,1]
+// Explanation: The diagrams above show which cells we visit to get points for each query.
+console.log(maxPoints(grid, queries)); // [5, 8, 1]
