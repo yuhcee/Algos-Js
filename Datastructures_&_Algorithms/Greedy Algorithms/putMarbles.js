@@ -26,4 +26,31 @@
  * @param {number} k
  * @return {number}
  */
-const putMarbles = function (weights, k) {};
+const putMarbles = function (weights, k) {
+    const n = weights.length;
+    if (k === n) return 0; // Each marble in its own bag, all scores equal
+    if (k === 1) return 0; // All marbles in one bag, only one possible score
+
+    // Create array of adjacent pair sums
+    const pairSums = [];
+    for (let i = 0; i < n - 1; i++) {
+        pairSums.push(weights[i] + weights[i + 1]);
+    }
+
+    // Sort the pair sums
+    pairSums.sort((a, b) => a - b);
+
+    // For minimum score: take k-1 smallest pair sums
+    let minScore = weights[0] + weights[n - 1]; // First and last elements always included
+    for (let i = 0; i < k - 1; i++) {
+        minScore += pairSums[i];
+    }
+
+    // For maximum score: take k-1 largest pair sums
+    let maxScore = weights[0] + weights[n - 1]; // First and last elements always included
+    for (let i = 0; i < k - 1; i++) {
+        maxScore += pairSums[n - 2 - i];
+    }
+
+    return maxScore - minScore;
+};
