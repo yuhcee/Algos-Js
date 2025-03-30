@@ -53,3 +53,7 @@ The partition is "ababcbaca", "defegde", "hijhklij".
 This is a partition so that each letter appears in at most one part.
 A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits s into less parts. */
 console.log(partitionLabels(s)); // [9, 7, 8]
+
+const s1 = 'eccbbbbdec';
+// Output: [10]
+console.log(partitionLabels(s1)); // [10]
