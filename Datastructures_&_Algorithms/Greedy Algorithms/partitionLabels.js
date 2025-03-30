@@ -45,3 +45,11 @@ const partitionLabels = function (s) {
 
     return result;
 };
+
+const s = 'ababcbacadefegdehijhklij';
+// Output: [9,7,8]
+/* Explanation:
+The partition is "ababcbaca", "defegde", "hijhklij".
+This is a partition so that each letter appears in at most one part.
+A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits s into less parts. */
+console.log(partitionLabels(s)); // [9, 7, 8]
