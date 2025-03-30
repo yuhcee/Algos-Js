@@ -12,6 +12,11 @@
  *
  * Return a list of integers representing the size of these parts.
  *
+ * **Constraints:**
+ *
+ * - `1 <= s.length <= 500`
+ * - `s` consists of lowercase English letters.
+ *
  * @param {string} s
  * @return {number[]}
  */
