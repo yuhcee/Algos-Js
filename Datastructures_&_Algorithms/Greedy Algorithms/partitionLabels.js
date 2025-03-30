@@ -57,3 +57,11 @@ console.log(partitionLabels(s)); // [9, 7, 8]
 const s1 = 'eccbbbbdec';
 // Output: [10]
 console.log(partitionLabels(s1)); // [10]
+
+const s2 = 'caedbdedda';
+// Output: [1, 9]
+/* Explanation:
+The partition is "caedb", "dedda".
+This is a partition so that each letter appears in at most one part.
+A partition like "caedbded", "da" is incorrect, because it splits s into less parts. */
+console.log(partitionLabels(s2)); // [1, 9]
