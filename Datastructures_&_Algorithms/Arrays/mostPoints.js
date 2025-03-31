@@ -15,4 +15,12 @@
  *
  * Return *the **maximum** points you can earn for the exam*.
  *
- 
+ * **Constraints:**
+ *
+ * - `1 <= questions.length <= 105`
+ * - `questions[i].length == 2`
+ * - `1 <= pointsi, brainpoweri <= 105`
+ *
+ * @param {number[][]} questions
+ * @return {number}
+ */
