@@ -81,3 +81,12 @@ const questions1 = [
 - Solve question 4: Earn 5 points
 Total points earned: 2 + 5 = 7. There is no other way to earn 7 or more points. */
 console.log(mostPoints(questions1)); // 7
+
+const questions2 = [
+    [1, 2],
+    [2, 4],
+    [3, 2],
+    [4, 1],
+];
+// Output: 5
+console.log(mostPoints(questions2)); // 5
