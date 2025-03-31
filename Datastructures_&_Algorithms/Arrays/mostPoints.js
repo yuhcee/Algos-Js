@@ -24,3 +24,30 @@
  * @param {number[][]} questions
  * @return {number}
  */
+const mostPoints = function (questions) {
+    const n = questions.length;
+    // dp[i] represents the maximum points we can earn from index i to the end
+    const dp = new Array(n + 1).fill(0); // Extra slot for beyond the last question
+
+    // Work backwards from the last question
+    for (let i = n - 1; i >= 0; i--) {
+        const points = questions[i][0]; // Points for solving current question
+        const brainpower = questions[i][1]; // Questions to skip if solved
+
+        // Option 1: Skip the current question
+        const skip = dp[i + 1];
+
+        // Option 2: Solve the current question
+        // If we solve, we earn points[i] and skip brainpower[i] questions
+        // Next solvable question is at i + brainpower + 1
+        const nextIndex = Math.min(n, i + brainpower + 1);
+        const solve = points + dp[nextIndex];
+
+        // Take the maximum of solving or skipping
+        dp[i] = Math.max(solve, skip);
+    }
+
+    // Return the maximum points starting from question 0
+    return dp[0];
+};
+
