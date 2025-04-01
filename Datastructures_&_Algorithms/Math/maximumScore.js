@@ -20,6 +20,12 @@
  *
  * Since the answer may be large, return it modulo `109 + 7`.
  *
+ * **Constraints:**
+ *
+ * - `1 <= nums.length == n <= 105`
+ * - `1 <= nums[i] <= 105`
+ * - `1 <= k <= min(n * (n + 1) / 2, 109)`
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
