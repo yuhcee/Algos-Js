@@ -132,3 +132,14 @@ const nums1 = [19, 12, 14, 6, 10, 18],
 - Choose subarray nums[2, ..., 3]. Both nums[2] and nums[3] have a prime score of 2, but nums[2] has the smaller index. Hence, we multipy the score by nums[2]. The score becomes 342 * 14 = 4788.
 It can be proven that 4788 is the highest score one can obtain. */
 console.log(maximumScore(nums1, k1)); // 4788
+
+const nums2 = [1, 1, 1, 1],
+    k2 = 4;
+// Output: 1
+/* Explanation: To get a score of 1, we can apply the following operations:
+- Choose subarray nums[0, ..., 0]. nums[0] is the only element in this subarray. Hence, we multiply the score by nums[0]. The score becomes 1 * 1 = 1.
+- Choose subarray nums[1, ..., 1]. nums[1] is the only element in this subarray. Hence, we multiply the score by nums[1]. The score becomes 1 * 1 = 1.
+- Choose subarray nums[2, ..., 2]. nums[2] is the only element in this subarray. Hence, we multiply the score by nums[2]. The score becomes 1 * 1 = 1.
+- Choose subarray nums[3, ..., 3]. nums[3] is the only element in this subarray. Hence, we multiply the score by nums[3]. The score becomes 1 * 1 = 1.
+It can be proven that 1 is the highest score one can obtain. */
+console.log(maximumScore(nums2, k2)); // 1
