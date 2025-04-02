@@ -15,4 +15,20 @@
  * @param {number[]} nums
  * @return {number}
  */
-const maximumTripletValue = function (nums) {};
+const maximumTripletValue = function (nums) {
+    let maxValue = 0;
+    const n = nums.length;
+
+    // Try all possible combinations of i, j, k
+    for (let i = 0; i < n - 2; i++) {
+        for (let j = i + 1; j < n - 1; j++) {
+            for (let k = j + 1; k < n; k++) {
+                const currentValue = (nums[i] - nums[j]) * nums[k];
+                maxValue = Math.max(maxValue, currentValue);
+            }
+        }
+    }
+
+    // Return 0 if maxValue is negative, otherwise return maxValue
+    return maxValue < 0 ? 0 : maxValue;
+};
