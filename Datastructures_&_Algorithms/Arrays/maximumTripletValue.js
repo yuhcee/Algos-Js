@@ -7,6 +7,11 @@
  *
  * The **value of a triplet of indices** `(i, j, k)` is equal to `(nums[i] - nums[j]) * nums[k]`.
  *
+ * **Constraints:**
+ *
+ * - `3 <= nums.length <= 100`
+ * - `1 <= nums[i] <= 106`
+ *
  * @param {number[]} nums
  * @return {number}
  */
