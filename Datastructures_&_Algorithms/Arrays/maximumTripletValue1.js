@@ -37,3 +37,9 @@ const maximumTripletValue = function (nums) {
 
     return maxValue;
 };
+
+const nums = [12, 6, 1, 2, 7];
+// Output: 77
+/* Explanation: The value of the triplet (0, 2, 4) is (nums[0] - nums[2]) * nums[4] = 77.
+It can be shown that there are no ordered triplets of indices with a value greater than 77. */
+console.log(maximumTripletValue(nums));
