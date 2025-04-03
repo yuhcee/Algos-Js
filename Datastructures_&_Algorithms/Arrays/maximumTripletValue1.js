@@ -43,3 +43,10 @@ const nums = [12, 6, 1, 2, 7];
 /* Explanation: The value of the triplet (0, 2, 4) is (nums[0] - nums[2]) * nums[4] = 77.
 It can be shown that there are no ordered triplets of indices with a value greater than 77. */
 console.log(maximumTripletValue(nums));
+
+const nums1 = [1, 10, 3, 4, 19];
+// Output: 133
+/* Explanation: The value of the triplet (1, 2, 4) is (nums[1] - nums[2]) * nums[4] = 133.
+It can be shown that there are no ordered triplets of indices with a value greater than 133.
+ */
+console.log(maximumTripletValue(nums1));
