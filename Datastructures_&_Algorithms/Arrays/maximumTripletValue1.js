@@ -50,3 +50,8 @@ const nums1 = [1, 10, 3, 4, 19];
 It can be shown that there are no ordered triplets of indices with a value greater than 133.
  */
 console.log(maximumTripletValue(nums1));
+
+const nums2 = [1, 2, 3];
+// Output: 0
+/* Explanation: The only ordered triplet of indices (0, 1, 2) has a negative value of (nums[0] - nums[1]) * nums[2] = -3. Hence, the answer would be 0. */
+console.log(maximumTripletValue(nums2));
